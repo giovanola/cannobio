@@ -7,17 +7,17 @@
 <meta name="description" content="Wettervorhersage, Luftqualität, Webcams und Unwetterwarnungen für Cannobio am Lago Maggiore. Prognose 7 Tage, UV-Index, ARPA Piemonte.">
 <meta name="keywords" content="Wetter Cannobio, Meteo Cannobio, Lago Maggiore, Wettervorhersage, previsioni meteo">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://giovanola.github.io/Cannobio/meteo/">
-<link rel="alternate" hreflang="de" href="https://giovanola.github.io/Cannobio/meteo/?lang=de">
-<link rel="alternate" hreflang="it" href="https://giovanola.github.io/Cannobio/meteo/?lang=it">
-<link rel="alternate" hreflang="en" href="https://giovanola.github.io/Cannobio/meteo/?lang=en">
-<link rel="alternate" hreflang="x-default" href="https://giovanola.github.io/Cannobio/meteo/">
+<link rel="canonical" href="https://giovanola.github.io/cannobio/meteo/">
+<link rel="alternate" hreflang="de" href="https://giovanola.github.io/cannobio/meteo/?lang=de">
+<link rel="alternate" hreflang="it" href="https://giovanola.github.io/cannobio/meteo/?lang=it">
+<link rel="alternate" hreflang="en" href="https://giovanola.github.io/cannobio/meteo/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://giovanola.github.io/cannobio/meteo/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Meteo Cannobio – Lago Maggiore">
 <meta property="og:description" content="Previsioni meteo, qualità dell'aria, webcam e allerte per Cannobio sul Lago Maggiore. Katharina ed Ettore avrebbero avuto grande gioia nel vederlo.">
-<meta property="og:url" content="https://giovanola.github.io/Cannobio/meteo/">
-<meta property="og:image" content="https://giovanola.github.io/Cannobio/cannobio-2026.jpg">
+<meta property="og:url" content="https://giovanola.github.io/cannobio/meteo/">
+<meta property="og:image" content="https://giovanola.github.io/cannobio/cannobio-2026.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="900">
 <meta property="og:image:alt" content="Cannobio, Lago Maggiore">
@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Meteo Cannobio – Lago Maggiore">
 <meta name="twitter:description" content="Katharina und Ettore hätten große Freude daran gehabt. · Previsioni meteo, qualità dell'aria e webcam per Cannobio.">
-<meta name="twitter:image" content="https://giovanola.github.io/Cannobio/cannobio-2026.jpg">
+<meta name="twitter:image" content="https://giovanola.github.io/cannobio/cannobio-2026.jpg">
 <meta name="twitter:image:alt" content="Cannobio, Lago Maggiore">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,10 +98,14 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary)
 .current-left .label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.65;margin-bottom:6px}
 .current-left .temp-big{font-family:var(--font-display);font-size:clamp(48px,10vw,72px);font-weight:300;line-height:1;letter-spacing:-.03em}
 .current-left .condition{font-size:15px;font-weight:300;opacity:.8;margin-top:6px}
-.current-meta{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:12px}
+.current-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 24px}
 .current-meta-item{text-align:center}
 .current-meta-item .val{font-family:var(--font-display);font-size:22px;font-weight:300;letter-spacing:-.02em}
 .current-meta-item .lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.6;margin-top:2px}
+@media(min-width:640px){
+  .current-meta{grid-template-columns:repeat(4,1fr)}
+  .current-card{flex-wrap:nowrap}
+}
 
 /* UV PROTECTION BLOCK */
 .uv-block{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);padding:16px 20px;margin-bottom:12px}
