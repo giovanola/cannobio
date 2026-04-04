@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cannobio – Lago Maggiore</title>
+<meta name="description" content="Informazioni utili per Cannobio sul Lago Maggiore: meteo, previsioni, raccolta rifiuti e calendario 2026.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giovanola.github.io/Cannobio/">
+<link rel="alternate" hreflang="it" href="https://giovanola.github.io/Cannobio/?lang=it">
+<link rel="alternate" hreflang="de" href="https://giovanola.github.io/Cannobio/?lang=de">
+<link rel="alternate" hreflang="en" href="https://giovanola.github.io/Cannobio/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://giovanola.github.io/Cannobio/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cannobio – Lago Maggiore">
+<meta property="og:description" content="Informazioni utili per residenti e ospiti a Cannobio sul Lago Maggiore: meteo, raccolta rifiuti 2026 e Isola Ecologica.">
+<meta property="og:url" content="https://giovanola.github.io/Cannobio/">
+<meta property="og:image" content="https://giovanola.github.io/Cannobio/cannobio-2026.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Cannobio, Lago Maggiore">
+<meta property="og:site_name" content="Cannobio">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="en_GB">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cannobio – Lago Maggiore">
+<meta name="twitter:description" content="Meteo, raccolta rifiuti 2026 e Isola Ecologica. Informazioni utili per Cannobio sul Lago Maggiore.">
+<meta name="twitter:image" content="https://giovanola.github.io/Cannobio/cannobio-2026.jpg">
+<meta name="twitter:image:alt" content="Cannobio, Lago Maggiore">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #FAFAF9; --surface: #FFFFFF; --border: #E8E6E1;
+  --text-primary: #1A1A18; --text-secondary: #6B6860; --text-tertiary: #9B9890;
+  --accent: #1B6B45; --accent-light: #28A062; --accent-pale: #EBF7F1;
+  --sky: #1565C0; --sky-pale: #E3F2FD;
+  --gold: #B7791F; --gold-pale: #FFFBEB;
+  --radius-md: 12px; --radius-lg: 20px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06); --shadow-md: 0 4px 16px rgba(0,0,0,0.07);
+  --font-display: 'Fraunces', Georgia, serif; --font-body: 'Inter', system-ui, sans-serif;
+  --max-w: 900px; --transition: 200ms cubic-bezier(0.4,0,0.2,1);
+}
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text-primary); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+
+/* TOPBAR */
+.topbar { position: sticky; top: 0; z-index: 100; background: rgba(250,250,249,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 clamp(16px, 4vw, 24px); }
+.topbar-inner { max-width: var(--max-w); margin: 0 auto; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+.topbar-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.topbar-icon { width: 28px; height: 28px; background: var(--accent); border-radius: 7px; display: flex; align-items: center; justify-content: center; }
+.topbar-icon svg { width: 16px; height: 16px; fill: #fff; }
+.topbar-name { font-family: var(--font-display); font-size: 15px; font-weight: 300; color: var(--text-primary); }
+.lang-switcher { display: flex; gap: 2px; background: var(--border); border-radius: 8px; padding: 2px; }
+.lang-btn { padding: 4px 10px; border-radius: 6px; border: none; background: transparent; color: var(--text-secondary); font-family: var(--font-body); font-size: 12px; font-weight: 500; cursor: pointer; transition: all var(--transition); }
+.lang-btn.active { background: var(--surface); color: var(--text-primary); box-shadow: var(--shadow-sm); }
+
+/* HERO */
+.hero { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: clamp(40px, 6vw, 80px) clamp(16px, 4vw, 24px) 32px; max-width: var(--max-w); margin: 0 auto; width: 100%; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+.hero-eyebrow::before { content: ''; width: 20px; height: 1px; background: var(--accent); }
+.hero h1 { font-family: var(--font-display); font-size: clamp(40px, 7vw, 68px); font-weight: 300; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 16px; }
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero-sub { font-size: 16px; color: var(--text-secondary); font-weight: 300; max-width: 440px; line-height: 1.7; margin-bottom: 56px; }
+
+/* CARDS */
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+
+.card { display: block; text-decoration: none; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); padding: clamp(16px, 3vw, 24px); transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition); position: relative; overflow: hidden; }
+.card::before { content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity var(--transition); }
+.card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.card-meteo::before { background: linear-gradient(135deg, var(--sky-pale) 0%, transparent 60%); }
+.card-rifiuti::before { background: linear-gradient(135deg, var(--accent-pale) 0%, transparent 60%); }
+.card:hover::before { opacity: 1; }
+.card-meteo:hover { border-color: #90CAF9; }
+.card-rifiuti:hover { border-color: #A5D6A7; }
+
+.card-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 22px; position: relative; }
+.card-meteo .card-icon { background: var(--sky-pale); }
+.card-rifiuti .card-icon { background: var(--accent-pale); }
+
+.card-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 6px; }
+.card-title { font-family: var(--font-display); font-size: 24px; font-weight: 300; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 8px; line-height: 1.2; }
+.card-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+.card-arrow { position: absolute; bottom: 24px; right: 24px; font-size: 18px; color: var(--text-tertiary); transition: transform var(--transition), color var(--transition); }
+.card:hover .card-arrow { transform: translate(3px, -3px); }
+.card-meteo:hover .card-arrow { color: var(--sky); }
+.card-rifiuti:hover .card-arrow { color: var(--accent); }
+
+/* FOOTER */
+footer { border-top: 1px solid var(--border); padding: 20px 24px; text-align: center; }
+footer p { font-size: 11px; color: var(--text-tertiary); }
+footer a { color: var(--text-secondary); text-decoration: none; }
+
+/* SEO CONTENT */
+.seo-content { border-top: 1px solid var(--border); padding: clamp(32px,5vw,56px) clamp(16px,4vw,24px); }
+.seo-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+@media (max-width: 600px) { .seo-inner { grid-template-columns: 1fr; gap: 24px; } }
+.seo-col h2 { font-family: var(--font-display); font-size: 18px; font-weight: 300; color: var(--text-primary); margin-bottom: 10px; letter-spacing: -0.01em; }
+.seo-col p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.hero-eyebrow { animation: fadeUp 0.4s ease both; }
+.hero h1 { animation: fadeUp 0.4s 0.05s ease both; }
+.hero-sub { animation: fadeUp 0.4s 0.1s ease both; }
+.card:nth-child(1) { animation: fadeUp 0.4s 0.15s ease both; }
+.card:nth-child(2) { animation: fadeUp 0.4s 0.2s ease both; }
+
+@media (max-width: 600px) {
+  .topbar { padding: 0 16px; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="./">
+      <div class="topbar-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <span class="topbar-name" id="t-brand">Cannobio</span>
+    </a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn active" data-lang="it">IT</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="hero-eyebrow" id="t-eyebrow">Lago Maggiore · 46.06° N</div>
+    <h1 id="t-h1">Benvenuti a<br><em>Cannobio</em></h1>
+    <p class="hero-sub" id="t-sub">Informazioni utili per residenti e ospiti sul Lago Maggiore.</p>
+
+    <div class="cards">
+      <a class="card card-meteo" href="meteo/" id="link-meteo">
+        <div class="card-icon">☀️</div>
+        <div class="card-label" id="t-label-meteo">Previsioni</div>
+        <div class="card-title" id="t-title-meteo">Meteo</div>
+        <div class="card-desc" id="t-desc-meteo">Prognosi, qualità dell'aria, webcam e avvisi meteo per Cannobio.</div>
+        <div class="card-arrow">↗</div>
+      </a>
+
+      <a class="card card-rifiuti" href="rifiuti/" id="link-rifiuti">
+        <div class="card-icon">♻️</div>
+        <div class="card-label" id="t-label-rifiuti">Calendario 2026</div>
+        <div class="card-title" id="t-title-rifiuti">Raccolta Rifiuti</div>
+        <div class="card-desc" id="t-desc-rifiuti">Orari di raccolta, differenziata e informazioni sull'Isola Ecologica.</div>
+        <div class="card-arrow">↗</div>
+      </a>
+    </div>
+  </div>
+</main>
+
+<section class="seo-content" aria-label="Informazioni su Cannobio">
+  <div class="seo-inner" id="seo-text">
+    <div class="seo-col">
+      <h2 id="t-seo-h2a">Cannobio sul Lago Maggiore</h2>
+      <p id="t-seo-p1">Cannobio è un comune italiano di circa 5.000 abitanti sulla sponda piemontese del Lago Maggiore, in provincia del Verbano-Cusio-Ossola. Situata a 214 m s.l.m., è una delle destinazioni turistiche più apprezzate del nord Italia per il suo centro storico medievale, il lungolago e il microclima mite.</p>
+    </div>
+    <div class="seo-col">
+      <h2 id="t-seo-h2b">Servizi per residenti e ospiti</h2>
+      <p id="t-seo-p2">Questo portale offre informazioni aggiornate sui servizi comunali: previsioni meteo locali con dati Open-Meteo e MeteoSwiss, calendario raccolta rifiuti 2026 con orari e tipologie, e informazioni sull'Isola Ecologica di Via Madonna delle Grazie. Disponibile in italiano, tedesco e inglese.</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>Cannobio, Lago Maggiore &nbsp;·&nbsp; <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">comune.cannobio.vb.it</a></p>
+</footer>
+
+<script>
+const T = {
+  it: {
+    brand:'Cannobio', eyebrow:'Lago Maggiore · 46.06° N',
+    h1:'Benvenuti a<br><em>Cannobio</em>',
+    sub:'Informazioni utili per residenti e ospiti sul Lago Maggiore.',
+    labelMeteo:'Previsioni', titleMeteo:'Meteo',
+    descMeteo:'Prognosi, qualità dell\'aria, webcam e avvisi meteo per Cannobio.',
+    labelRifiuti:'Calendario 2026', titleRifiuti:'Raccolta Rifiuti',
+    descRifiuti:'Orari di raccolta, differenziata e informazioni sull\'Isola Ecologica.',
+    seoH2a:'Cannobio sul Lago Maggiore',
+    seoP1:'Cannobio è un comune di circa 5.000 abitanti sulla sponda piemontese del Lago Maggiore, in provincia del Verbano-Cusio-Ossola. Apprezzata per il centro storico medievale, il lungolago e il microclima mite.',
+    seoH2b:'Servizi per residenti e ospiti',
+    seoP2:'Previsioni meteo locali, calendario raccolta rifiuti 2026 e informazioni sull\'Isola Ecologica di Via Madonna delle Grazie. Disponibile in italiano, tedesco e inglese.',
+  },
+  de: {
+    brand:'Cannobio', eyebrow:'Lago Maggiore · 46.06° N',
+    h1:'Willkommen in<br><em>Cannobio</em>',
+    sub:'Nützliche Informationen für Einwohner und Gäste am Lago Maggiore.',
+    labelMeteo:'Wetter', titleMeteo:'Wettervorschau',
+    descMeteo:'Prognose, Luftqualität, Webcams und Unwetterwarnungen für Cannobio.',
+    labelRifiuti:'Kalender 2026', titleRifiuti:'Abfallkalender',
+    descRifiuti:'Abholzeiten, Mülltrennung und Informationen zum Recyclinghof.',
+    seoH2a:'Cannobio am Lago Maggiore',
+    seoP1:'Cannobio ist eine Gemeinde mit rund 5.000 Einwohnern am piemontesischen Ufer des Lago Maggiore, Provinz Verbano-Cusio-Ossola. Bekannt für die mittelalterliche Altstadt, die Seepromenade und das milde Mikroklima.',
+    seoH2b:'Dienste für Einwohner und Gäste',
+    seoP2:'Lokale Wettervorhersage, Abfallkalender 2026 mit Abholzeiten und Informationen zum Recyclinghof Via Madonna delle Grazie. Auf Italienisch, Deutsch und Englisch verfügbar.',
+  },
+  en: {
+    brand:'Cannobio', eyebrow:'Lake Maggiore · 46.06° N',
+    h1:'Welcome to<br><em>Cannobio</em>',
+    sub:'Useful information for residents and visitors on Lake Maggiore.',
+    labelMeteo:'Forecast', titleMeteo:'Weather',
+    descMeteo:'Forecast, air quality, webcams and weather alerts for Cannobio.',
+    labelRifiuti:'Calendar 2026', titleRifiuti:'Waste Collection',
+    descRifiuti:'Collection times, recycling guide and Recycling Centre information.',
+    seoH2a:'Cannobio on Lake Maggiore',
+    seoP1:'Cannobio is an Italian municipality of around 5,000 inhabitants on the Piedmontese shore of Lake Maggiore. Renowned for its medieval old town, lakeside promenade and mild microclimate.',
+    seoH2b:'Services for residents and visitors',
+    seoP2:'Local weather forecasts, 2026 waste collection calendar and information on the Recycling Centre at Via Madonna delle Grazie. Available in Italian, German and English.',
+  }
+};
+
+let lang = 'it';
+
+function applyLang(l) {
+  lang = l;
+  const t = T[l];
+  document.documentElement.lang = l;
+  document.title = t.brand + ' – Lago Maggiore';
+  document.getElementById('t-brand').textContent = t.brand;
+  document.getElementById('t-eyebrow').textContent = t.eyebrow;
+  document.getElementById('t-h1').innerHTML = t.h1;
+  document.getElementById('t-sub').textContent = t.sub;
+  document.getElementById('t-label-meteo').textContent = t.labelMeteo;
+  document.getElementById('t-title-meteo').textContent = t.titleMeteo;
+  document.getElementById('t-desc-meteo').textContent = t.descMeteo;
+  document.getElementById('t-label-rifiuti').textContent = t.labelRifiuti;
+  document.getElementById('t-title-rifiuti').textContent = t.titleRifiuti;
+  document.getElementById('t-desc-rifiuti').textContent = t.descRifiuti;
+  if(t.seoH2a) document.getElementById('t-seo-h2a').textContent = t.seoH2a;
+  if(t.seoP1)  document.getElementById('t-seo-p1').textContent  = t.seoP1;
+  if(t.seoH2b) document.getElementById('t-seo-h2b').textContent = t.seoH2b;
+  if(t.seoP2)  document.getElementById('t-seo-p2').textContent  = t.seoP2;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+}
+
+document.querySelector('.lang-switcher').addEventListener('click', e => {
+  const btn = e.target.closest('.lang-btn');
+  if (btn) applyLang(btn.dataset.lang);
+});
+
+// Detect lang from URL param
+const urlLang = new URLSearchParams(window.location.search).get('lang');
+if (urlLang && T[urlLang]) applyLang(urlLang);
+</script>
+</body>
+</html>

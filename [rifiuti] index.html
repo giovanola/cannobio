@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO: dynamisch per JS gesetzt -->
+<title>Calendario Raccolta Rifiuti 2026 – Cannobio</title>
+<meta name="description" content="Calendario ufficiale raccolta rifiuti 2026 per il Comune di Cannobio. Orari, tipologie e informazioni sull'Isola Ecologica.">
+<meta name="keywords" content="raccolta rifiuti Cannobio 2026, calendario rifiuti, isola ecologica Cannobio, Conservco VCO">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://giovanola.github.io/Cannobio/rifiuti/">
+
+<!-- hreflang -->
+<link rel="alternate" hreflang="it" href="https://giovanola.github.io/Cannobio/rifiuti/?lang=it">
+<link rel="alternate" hreflang="de" href="https://giovanola.github.io/Cannobio/rifiuti/?lang=de">
+<link rel="alternate" hreflang="en" href="https://giovanola.github.io/Cannobio/rifiuti/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://giovanola.github.io/Cannobio/rifiuti/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calendario Raccolta Rifiuti 2026 – Cannobio">
+<meta property="og:description" content="Calendario raccolta rifiuti 2026 per Cannobio. Organico, plastica, vetro, carta e indifferenziato. Orari Isola Ecologica e contatti Conservco VCO. Katharina ed Ettore avrebbero avuto grande gioia.">
+<meta property="og:url" content="https://giovanola.github.io/Cannobio/rifiuti/">
+<meta property="og:image" content="https://giovanola.github.io/Cannobio/cannobio-rifiuti.jpeg">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+<meta property="og:site_name" content="Cannobio">
+<meta property="og:image:alt" content="Raccolta rifiuti Cannobio 2026">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="Cannobio Rifiuti 2026">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calendario Raccolta Rifiuti 2026 – Cannobio">
+<meta name="twitter:description" content="Abfallkalender 2026 Cannobio · Raccolta Rifiuti 2026 · Waste Collection 2026. Katharina und Ettore hätten große Freude daran gehabt.">
+<meta name="twitter:image" content="https://giovanola.github.io/Cannobio/cannobio-rifiuti.jpeg">
+<meta name="twitter:image:alt" content="Raccolta rifiuti Cannobio 2026">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GovernmentService",
+  "name": "Raccolta Rifiuti Cannobio 2026",
+  "description": "Servizio di raccolta rifiuti del Comune di Cannobio 2026",
+  "provider": {
+    "@type": "Organization",
+    "name": "ConSer VCO SpA",
+    "url": "https://www.conservco.it"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Cannobio",
+    "addressCountry": "IT"
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "servicePhone": "+390323738206"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #FAFAF9;
+  --surface: #FFFFFF;
+  --border: #E8E6E1;
+  --border-strong: #D1CEC8;
+  --text-primary: #1A1A18;
+  --text-secondary: #6B6860;
+  --text-tertiary: #9B9890;
+  --accent: #1B6B45;
+  --accent-light: #28A062;
+  --accent-pale: #EBF7F1;
+  --gold: #B7791F;
+  --gold-pale: #FFFBEB;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.07), 0 2px 6px rgba(0,0,0,0.04);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --max-w: 900px;
+  --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text-primary); line-height: 1.6; min-height: 100vh; }
+
+/* ── TOPBAR ── */
+.topbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250,250,249,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 clamp(16px, 4vw, 24px);
+}
+.topbar-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.topbar-left { display: flex; align-items: center; gap: 16px; }
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.topbar-icon {
+  width: 28px; height: 28px;
+  background: var(--accent);
+  border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.topbar-icon svg { width: 16px; height: 16px; fill: #fff; }
+.topbar-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+/* Page nav */
+.topbar-nav { display: flex; gap: 2px; }
+.topbar-nav-btn {
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.topbar-nav-btn:hover { background: var(--accent-pale); color: var(--accent); }
+.topbar-nav-btn.active { background: var(--accent-pale); color: var(--accent); font-weight: 600; }
+.topbar-nav-btn .nav-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+.topbar-right { display: flex; align-items: center; gap: 8px; }
+
+/* Language switcher */
+.lang-switcher { display: flex; gap: 2px; background: var(--border); border-radius: 8px; padding: 2px; }
+.lang-btn {
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.lang-btn.active { background: var(--surface); color: var(--text-primary); box-shadow: var(--shadow-sm); }
+
+/* ── SITE NAV ── */
+.site-nav { display: flex; gap: 2px; background: var(--border); border-radius: 8px; padding: 2px; }
+.site-nav-link { padding: 4px 12px; border-radius: 6px; font-family: var(--font-body); font-size: 12px; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: all var(--transition); white-space: nowrap; }
+.site-nav-link:hover { color: var(--text-primary); }
+.site-nav-active { background: var(--surface); color: var(--text-primary); box-shadow: var(--shadow-sm); }
+
+/* ── HERO ── */
+.hero {
+  padding: clamp(40px, 5vw, 72px) clamp(16px, 4vw, 24px) 32px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 20px; height: 1px;
+  background: var(--accent);
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 6vw, 54px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  max-width: 640px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.hero-sub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  font-weight: 300;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+/* ── MAIN CONTENT ── */
+.content { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(16px, 4vw, 24px) 60px; }
+
+/* ── SECTION LABEL ── */
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 16px;
+}
+
+/* ── WHAT GOES WHERE ── */
+.whatwhere { margin-bottom: 64px; }
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+.cat-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.cat-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+.cat-card-top {
+  padding: 14px 16px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.cat-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.cat-name { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+.cat-card-body { padding: 12px 16px 14px; }
+.cat-rule { font-size: 13px; color: var(--text-primary); line-height: 1.5; margin-bottom: 8px; }
+.cat-rule strong { font-weight: 600; }
+.cat-ex-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); display: block; margin-bottom: 4px; }
+.cat-ex { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+
+/* Category colors – offizielle Mülltrennung-Farben */
+.cat-org .cat-dot   { background: #8B5A2B; }
+.cat-carta .cat-dot { background: #1E88E5; }
+.cat-plast .cat-dot { background: #FFD600; }
+.cat-vetro .cat-dot { background: #2E7D32; }
+.cat-ind .cat-dot   { background: #7A7A7A; }
+
+/* ── CALENDAR SECTION ── */
+.calendar-section { margin-bottom: 64px; }
+
+/* Month tabs */
+.tabs-wrap { margin-bottom: 20px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px; }
+.tabs-wrap::-webkit-scrollbar { display: none; }
+.tabs {
+  display: flex;
+  gap: 6px;
+  width: max-content;
+  padding-bottom: 2px;
+}
+.tab {
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition);
+}
+.tab:hover { border-color: var(--accent-light); color: var(--accent); background: #EBF7F1; }
+.tab.active { background: #1B6B45; border-color: #1B6B45; color: #fff; font-weight: 600; letter-spacing: 0.01em; }
+.tab-week {
+  background: var(--gold-pale);
+  border-color: #D4A017;
+  color: var(--gold);
+  font-weight: 600;
+}
+.tab-week:hover { background: #FEF3C7; }
+.tab-week.active { background: var(--gold); border-color: var(--gold); color: #fff; }
+
+/* Month block */
+.month-block {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+}
+.month-head {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+.month-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+.month-year { font-size: 12px; color: var(--text-tertiary); font-weight: 400; }
+
+/* Calendar table */
+.cal-table { width: 100%; border-collapse: collapse; }
+.cal-table thead th {
+  padding: 8px 16px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  text-align: left;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.cal-table thead th:first-child { width: 44px; }
+.cal-table thead th:nth-child(2) { width: 36px; }
+.cal-table tbody tr { border-bottom: 1px solid var(--border); transition: background var(--transition); }
+.cal-table tbody tr:last-child { border-bottom: none; }
+.cal-table tbody tr:hover { background: #F4F3F0; }
+.cal-table tbody tr.is-weekend { background: #F7F6F3; }
+.cal-table tbody tr.is-festa { background: var(--gold-pale); }
+.cal-table tbody tr.is-week {
+  background: #EBF7F1;
+  box-shadow: inset 3px 0 0 #28A062;
+  font-weight: 500;
+}
+.cal-table tbody tr.is-week:hover { background: #DDF0E8; }
+.cal-table tbody tr.is-today {
+  background: #1B6B45;
+  box-shadow: inset 3px 0 0 #0D4A2E;
+}
+.cal-table tbody tr.is-today td { color: #fff; }
+.cal-table tbody tr.is-today .day-name { color: rgba(255,255,255,0.65); }
+.cal-table tbody tr.is-today:hover { background: var(--accent-light); }
+.cal-table td { padding: 11px 16px; vertical-align: middle; }
+.day-num {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.today-dot {
+  display: inline-block;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #fff;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.day-name { font-size: 11px; color: var(--text-tertiary); font-weight: 400; }
+.badges { display: flex; flex-wrap: wrap; gap: 5px; }
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+.badge .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.b-org   { background: #F5EDE6; color: #5C3A1E; border-color: #C49A6C; } .b-org .dot   { background: #8B5A2B; }
+.b-carta { background: #E8F1FC; color: #0D47A1; border-color: #90CAF9; } .b-carta .dot { background: #1E88E5; }
+.b-plast { background: #FFFDE7; color: #6D5F00; border-color: #FFF176; } .b-plast .dot { background: #FFD600; }
+.b-vetro { background: #E8F5E9; color: #1B5E20; border-color: #A5D6A7; } .b-vetro .dot { background: #2E7D32; }
+.b-ind   { background: #F5F5F5; color: #424242; border-color: #BDBDBD; } .b-ind .dot   { background: #7A7A7A; }
+.b-festa { background: var(--gold-pale); color: var(--gold); border-color: #FDE68A; } .b-festa .dot { background: var(--gold); }
+
+/* Prep accordion */
+.cat-prep { margin: 8px 0; }
+.cat-prep summary {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.cat-prep summary::-webkit-details-marker { display: none; }
+.cat-prep summary::before {
+  content: '+';
+  font-size: 13px;
+  color: var(--text-tertiary);
+  transition: transform var(--transition);
+  display: inline-block;
+  width: 12px;
+}
+.cat-prep[open] summary::before { content: '−'; }
+.cat-prep-body {
+  margin-top: 6px;
+  padding: 8px 10px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  border: 1px solid var(--border);
+}
+/* Maps link in info card */
+.info-row-val a[href*="maps"] { color: var(--accent); font-weight: 500; }
+
+/* Today badges inverted */
+.is-today .badge { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.25); color: #fff; }
+.is-today .badge .dot { background: rgba(255,255,255,0.8); }
+
+/* ── INFO CARDS ── */
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 64px; }
+@media (max-width: 600px) { .info-grid { grid-template-columns: 1fr; } }
+.info-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.info-card-head {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 300;
+  color: #1B6B45;
+  background: #EBF7F1;
+  letter-spacing: -0.01em;
+}
+.info-card-body { padding: 16px 18px; }
+.info-row { display: flex; gap: 12px; margin-bottom: 14px; font-size: 13px; line-height: 1.6; }
+.info-row:last-child { margin-bottom: 0; }
+.info-row-icon { font-size: 14px; flex-shrink: 0; margin-top: 2px; opacity: 0.7; }
+.info-row-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 2px; }
+.info-row-val { color: var(--text-primary); }
+.info-row-val a { color: var(--accent); text-decoration: none; }
+.info-row-val a:hover { text-decoration: underline; }
+.info-row-val strong { font-weight: 600; }
+.info-alert {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: var(--gold-pale);
+  border: 1px solid #FDE68A;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: #78350F;
+  line-height: 1.5;
+}
+
+/* ── FOOTER ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 24px;
+  text-align: center;
+}
+.footer-inner { max-width: var(--max-w); margin: 0 auto; }
+.footer-source { font-size: 13px; color: var(--text-secondary); }
+.footer-source a { color: var(--accent); text-decoration: none; }
+.footer-source a:hover { text-decoration: underline; }
+.footer-disclaimer { font-size: 11px; color: var(--text-tertiary); margin-top: 6px; line-height: 1.5; }
+
+/* ── MOBILE ── */
+@media (max-width: 640px) {
+  .hero { padding: 48px 20px 40px; }
+  .content { padding: 0 20px 60px; }
+  .topbar { padding: 0 16px; }
+  .topbar-name { display: none; }
+  .topbar-nav-btn span:last-child { display: none; }
+  .topbar-nav-btn { padding: 5px 8px; }
+  .cal-table thead { display: none; }
+  .cal-table tbody tr { display: flex; flex-wrap: wrap; padding: 10px 14px; gap: 6px; align-items: center; border-left: none; }
+  .cal-table td { display: contents; }
+  .day-num { font-size: 15px; min-width: 24px; }
+  .day-name { color: var(--text-tertiary); font-size: 11px; }
+  .badges { flex: 1; }
+  .month-block { border-radius: var(--radius-md); }
+  .cat-grid { grid-template-columns: 1fr; }
+  .info-grid { grid-template-columns: 1fr; }
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero { animation: fadeUp 0.5s ease both; }
+.content > * { animation: fadeUp 0.5s ease both; }
+.content > *:nth-child(1) { animation-delay: 0.05s; }
+.content > *:nth-child(2) { animation-delay: 0.1s; }
+.content > *:nth-child(3) { animation-delay: 0.15s; }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar" role="banner">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <a class="topbar-brand" href="../" aria-label="Home">
+        <div class="topbar-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+        </div>
+        <span class="topbar-name">Cannobio</span>
+      </a>
+      <nav class="topbar-nav" aria-label="Pages">
+        <a class="topbar-nav-btn active" href="../">
+          <span class="nav-dot" style="background:#1B6B45"></span>
+          <span data-t="nav_rifiuti">Rifiuti</span>
+        </a>
+        <a class="topbar-nav-btn" href="../meteo/">
+          <span class="nav-dot" style="background:#1565C0"></span>
+          <span data-t="nav_meteo">Meteo</span>
+        </a>
+      </nav>
+    </div>
+    <div class="topbar-right">
+      <nav class="site-nav" aria-label="Seitennavigation">
+        <a class="site-nav-link" href="../meteo/" id="nav-wetter">Wetter</a>
+        <a class="site-nav-link site-nav-active" href="../" id="nav-rifiuti">Rifiuti</a>
+      </nav>
+      <div class="lang-switcher" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
+        <button class="lang-btn active" data-lang="it" aria-label="Italiano">IT</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-eyebrow" data-t="eyebrow">Comune di Cannobio</div>
+  <h1 id="hero-title" data-t="h1">Calendario<br><em>Raccolta Rifiuti</em><br>2026</h1>
+  <p class="hero-sub" data-t="sub">Orari, tipologie e informazioni per la raccolta differenziata nel Comune di Cannobio. Gestito da ConSer VCO.</p>
+</section>
+
+<!-- MAIN -->
+<main class="content" id="main">
+
+  <!-- WHAT GOES WHERE -->
+  <section class="whatwhere" aria-labelledby="whatwhere-title">
+    <div class="section-label" data-t="whatwhere_label">Differenziata</div>
+    <h2 id="whatwhere-title" style="font-family:var(--font-display);font-size:22px;font-weight:300;margin-bottom:20px;letter-spacing:-0.01em;" data-t="whatwhere_title">Cosa va dove</h2>
+    <div class="cat-grid" id="cat-grid"></div>
+  </section>
+
+  <!-- CALENDAR -->
+  <section class="calendar-section" aria-labelledby="cal-title">
+    <div class="section-label" data-t="cal_label">2026</div>
+    <h2 id="cal-title" style="font-family:var(--font-display);font-size:22px;font-weight:300;margin-bottom:20px;letter-spacing:-0.01em;" data-t="cal_title">Calendario raccolta</h2>
+    <nav class="tabs-wrap" aria-label="Mesi">
+      <div class="tabs" id="tabs" role="tablist">
+        <button class="tab active" data-month="all" role="tab" data-t="tab_all">Tutti i mesi</button>
+        <button class="tab tab-week" data-month="week" role="tab" data-t="tab_week">Settimana corrente</button>
+        <button class="tab" data-month="1"  role="tab" data-t="m1">Gennaio</button>
+        <button class="tab" data-month="2"  role="tab" data-t="m2">Febbraio</button>
+        <button class="tab" data-month="3"  role="tab" data-t="m3">Marzo</button>
+        <button class="tab" data-month="4"  role="tab" data-t="m4">Aprile</button>
+        <button class="tab" data-month="5"  role="tab" data-t="m5">Maggio</button>
+        <button class="tab" data-month="6"  role="tab" data-t="m6">Giugno</button>
+        <button class="tab" data-month="7"  role="tab" data-t="m7">Luglio</button>
+        <button class="tab" data-month="8"  role="tab" data-t="m8">Agosto</button>
+        <button class="tab" data-month="9"  role="tab" data-t="m9">Settembre</button>
+        <button class="tab" data-month="10" role="tab" data-t="m10">Ottobre</button>
+        <button class="tab" data-month="11" role="tab" data-t="m11">Novembre</button>
+        <button class="tab" data-month="12" role="tab" data-t="m12">Dicembre</button>
+      </div>
+    </nav>
+    <div id="calendar" role="region" aria-live="polite"></div>
+  </section>
+
+  <!-- INFO -->
+  <section aria-labelledby="info-title">
+    <div class="section-label" data-t="info_label">Contatti</div>
+    <h2 id="info-title" style="font-family:var(--font-display);font-size:22px;font-weight:300;margin-bottom:20px;letter-spacing:-0.01em;" data-t="info_title">Informazioni utili</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-card-head" data-t="isola_title">Isola Ecologica</div>
+        <div class="info-card-body">
+          <div class="info-row">
+            <div class="info-row-icon">&#x1F4CD;</div>
+            <div>
+              <div class="info-row-label" data-t="addr_label">Indirizzo</div>
+              <div class="info-row-val">
+                <a href="https://maps.app.goo.gl/sjdZmadYzUMCcyej8" target="_blank" rel="noopener">Via Madonna delle Grazie, 1<br>28822 Cannobio (VB)</a>
+              </div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon">&#x1F4DE;</div>
+            <div>
+              <div class="info-row-label" data-t="phone_label">Telefono</div>
+              <div class="info-row-val"><a href="tel:+390323706830">+39 0323 70683</a></div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon">&#x1F550;</div>
+            <div>
+              <div class="info-row-label" data-t="hours_label">Orari</div>
+              <div class="info-row-val">
+                <strong data-t="monfri">Lun &ndash; Ven</strong> &nbsp;08:30&ndash;11:45<br>
+                <strong data-t="sat">Sabato</strong> &nbsp;08:30&ndash;11:45 &nbsp;&middot;&nbsp; 14:00&ndash;17:00
+              </div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon">&#x1F194;</div>
+            <div>
+              <div class="info-row-label" data-t="isola_access_label">Accesso</div>
+              <div class="info-row-val" data-t="isola_access">Solo residenti / contribuenti TARI. Portare: documento d&rsquo;identit&agrave; + carta rifiuti.</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon">&#x1F69B;</div>
+            <div>
+              <div class="info-row-label" data-t="isola_howto_label">Come consegnare</div>
+              <div class="info-row-val" data-t="isola_howto">Separare i rifiuti prima. Niente rifiuti misti. Preferibilmente sfuso. Elettrodomestici interi. Solo quantit&agrave; domestiche.</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon">&#x2139;&#xFE0F;</div>
+            <div>
+              <div class="info-row-label" data-t="isola_onsite_label">Sul posto</div>
+              <div class="info-row-val" data-t="isola_onsite">Seguire le istruzioni. Inserire i rifiuti personalmente nei giusti contenitori.</div>
+            </div>
+          </div>
+          <div class="info-alert" data-t="isola_alert">Chiusa nei giorni festivi, allerta meteo arancione/rossa, 25 dic, 1 gen, 1 mag e festa patronale (8 gen).</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head" data-t="contacts_title">Contatti</div>
+        <div class="info-card-body">
+          <div class="info-row">
+            <div class="info-row-icon">&#x1F7E2;</div>
+            <div>
+              <div class="info-row-label" data-t="verde_label">Numero verde</div>
+              <div class="info-row-val"><a href="tel:800335060"><strong>800 33 50 60</strong></a><br><span data-t="verde_hours">Lun&ndash;Ven 09:00&ndash;13:00 / 14:30&ndash;17:00</span></div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon">&#x1F4E7;</div>
+            <div>
+              <div class="info-row-label">Email</div>
+              <div class="info-row-val"><a href="mailto:segreteria@conservco.it">segreteria@conservco.it</a></div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon">&#x1F3DB;</div>
+            <div>
+              <div class="info-row-label" data-t="tributi_label">Ufficio Tributi &ndash; TaRi</div>
+              <div class="info-row-val">
+                Piazza Vittorio Emanuele III 2<br>
+                <a href="tel:03237382060">0323 738206</a> &nbsp;·&nbsp; <a href="mailto:ufficiotributi@cannobio.net">ufficiotributi@cannobio.net</a><br>
+                <span data-t="tributi_hours">Mer/Gio/Sab 10:00&ndash;12:00 &nbsp;·&nbsp; Gio 16:30&ndash;17:30</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-row-icon">&#x1F69A;</div>
+            <div>
+              <div class="info-row-label" data-t="bulk_label">Ingombranti</div>
+              <div class="info-row-val" data-t="bulk_val">Su prenotazione al numero verde. Max 5 pezzi, piano strada.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- SEO CONTENT -->
+<section class="seo-rifiuti" aria-label="Informazioni raccolta rifiuti">
+  <div class="seo-rifiuti-inner">
+    <div class="seo-rifiuti-col"><h2 id="t-seo-r1"></h2><p id="t-seo-r1p"></p></div>
+    <div class="seo-rifiuti-col"><h2 id="t-seo-r2"></h2><p id="t-seo-r2p"></p></div>
+    <div class="seo-rifiuti-col"><h2 id="t-seo-r3"></h2><p id="t-seo-r3p"></p></div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-source" data-t="footer_source">
+      Fonte: <a href="https://www.conservco.it/it/calendari-raccolta-2026/" target="_blank" rel="noopener">Calendario Raccolta Rifiuti 2026, ConSer VCO SpA</a>
+    </div>
+    <div class="footer-disclaimer" data-t="footer_disc">Nessuna garanzia sulla validit&agrave; e sull&rsquo;attualit&agrave; dei dati. Fare sempre riferimento al calendario originale ufficiale.</div>
+  </div>
+</footer>
+
+<script>
+// ── TRANSLATIONS ──
+const T = {
+  it: {
+    brand:"Cannobio · Rifiuti 2026",
+    eyebrow:"Comune di Cannobio",
+    h1:"Calendario<br><em>Raccolta Rifiuti</em><br>2026",
+    sub:"Orari, tipologie e informazioni per la raccolta differenziata nel Comune di Cannobio. Gestito da ConSer VCO.",
+    whatwhere_label:"Differenziata", whatwhere_title:"Cosa va dove",
+    cal_label:"2026", cal_title:"Calendario raccolta",
+    tab_all:"Tutti i mesi", tab_week:"Settimana attuale",
+    nav_wetter:"Meteo", nav_rifiuti:"Rifiuti",
+    m1:"Gennaio",m2:"Febbraio",m3:"Marzo",m4:"Aprile",m5:"Maggio",m6:"Giugno",
+    m7:"Luglio",m8:"Agosto",m9:"Settembre",m10:"Ottobre",m11:"Novembre",m12:"Dicembre",
+    MONTHS:["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"],
+    DAYS:["Dom","Lun","Mar","Mer","Gio","Ven","Sab"],
+    col_day:"Giorno", col_collect:"Raccolta", today:"Oggi",
+    info_label:"Contatti", info_title:"Informazioni utili",
+    isola_title:"Isola Ecologica",
+    addr_label:"Indirizzo", phone_label:"Telefono", hours_label:"Orari",
+    monfri:"Lun \u2013 Ven", sat:"Sabato",
+    isola_alert:"Chiusa nei giorni festivi, allerta meteo arancione/rossa, 25 dic, 1 gen, 1 mag e festa patronale (8 gen).",
+    contacts_title:"Contatti", verde_label:"Numero verde",
+    verde_hours:"Lun\u2013Ven 09:00\u201313:00 / 14:30\u201317:00",
+    tributi_label:"Ufficio Tributi \u2013 TaRi",
+    tributi_hours:"Mer/Gio/Sab 10:00\u201312:00 \u00b7 Gio 16:30\u201317:30",
+    bulk_label:"Ingombranti", bulk_val:"Su prenotazione al numero verde. Max 5 pezzi, piano strada.",
+    prep_label:"Preparazione",
+    isola_access_label:"Accesso",isola_access:"Solo residenti / contribuenti TARI. Portare: documento d\u2019identit\u00e0 + carta rifiuti.",
+    isola_howto_label:"Come consegnare",isola_howto:"Separare i rifiuti prima (legno, metallo, elettrico ecc.). Niente rifiuti misti. Preferibilmente sfuso, non in sacchi chiusi. Elettrodomestici interi, non smontati. Solo quantit\u00e0 domestiche.",
+    isola_onsite_label:"Sul posto",isola_onsite:"Seguire le istruzioni. Inserire i rifiuti personalmente nei giusti contenitori.",
+    footer_source:'Fonte: <a href="https://www.conservco.it/it/calendari-raccolta-2026/" target="_blank" rel="noopener">Calendario Raccolta Rifiuti 2026, ConSer VCO SpA</a>',
+    footer_disc:"Nessuna garanzia sulla validit\u00e0 e sull\u2019attualit\u00e0 dei dati. Fare sempre riferimento al calendario originale ufficiale.",
+    cats:[
+      {cls:"cat-plast",dot:"#FFD600",name:"Plastica e Metallo",rule:"Solo <strong>pulito, vuoto, sortenrein</strong>, in sacchetti <em>trasparenti</em>.",prep:"Sciacquare, separare i coperchi, non impilare.",exLabel:"Esempi",ex:"Bottiglie, imballaggi, vasetti yogurt, lattine, stagnola."},
+      {cls:"cat-org",  dot:"#8B5A2B",name:"Organico",rule:"Solo <strong>rifiuti organici</strong>, in sacchetti <em>compostabili</em>.",prep:"Niente buste di plastica, chiudere bene.",exLabel:"Esempi",ex:"Avanzi di cibo, bucce di frutta e verdura, fondi di caff\u00e8."},
+      {cls:"cat-vetro",dot:"#2E7D32",name:"Vetro",rule:"Solo <strong>vetro senza coperchi</strong>, sfuso, <em>non in sacchi</em>.",prep:"Rimuovere i coperchi. Non mettere in sacchetti.",exLabel:"Esempi",ex:"Bottiglie e vasetti. Niente ceramica o porcellana."},
+      {cls:"cat-ind",  dot:"#7A7A7A",name:"Indifferenziato",rule:"Solo <strong>rifiuti non differenziabili</strong>.",prep:"Chiudere bene prima di conferire.",exLabel:"Esempi",ex:"Articoli igienici, imballaggi sporchi, materiali non riciclabili."},
+      {cls:"cat-carta",dot:"#1E88E5",name:"Carta e Cartone",rule:"Solo <strong>pulita, asciutta, sortenrein</strong>, <em>in scatole schiacciate</em>.",prep:"Niente plastica, niente sporco. Schiacciare i cartoni.",exLabel:"Esempi",ex:"Giornali, cartoni, imballaggi senza plastica."},
+    ],
+    BADGE:{ORG:"Organico",CARTA:"Carta e Cartone",PLAST:"Plastica e Metallo",VETRO:"Vetro",IND:"Indifferenziato",FESTA:"Festa"},
+    docTitle:"Calendario Raccolta Rifiuti 2026 \u2013 Cannobio",
+    docDesc:"Calendario ufficiale raccolta rifiuti 2026 per il Comune di Cannobio.",
+    nav_rifiuti:"Rifiuti", nav_meteo:"Meteo",
+    seoR1:"Raccolta differenziata a Cannobio",
+    seoR1p:"Il Comune di Cannobio effettua la raccolta porta a porta per organico, plastica e metallo, vetro, carta e indifferenziato, gestita da ConSer VCO. I rifiuti vanno esposti entro le 06:00 del giorno di raccolta.",
+    seoR2:"Isola Ecologica Cannobio",
+    seoR2p:"Via Madonna delle Grazie 1, aperta Lun-Ven 08:30-11:45, Sab 08:30-11:45 e 14:00-17:00. Accesso per residenti e contribuenti TARI con documento di identita e carta rifiuti.",
+    seoR3:"Come separare i rifiuti",
+    seoR3p:"Plastica e metallo: sacchetti trasparenti vuoti e puliti. Organico: sacchetti compostabili. Vetro: sfuso senza coperchi. Carta: asciutta in scatole. Indifferenziato: solo cio che non e separabile.",
+  },
+  de: {
+    brand:"Cannobio · Abfall 2026",
+    eyebrow:"Gemeinde Cannobio",
+    h1:"Abfall-<br><em>kalender</em><br>2026",
+    sub:"Abholzeiten, Abfallarten und Informationen zur Mülltrennung in der Gemeinde Cannobio. Verwaltet von ConSer VCO.",
+    whatwhere_label:"Mülltrennung", whatwhere_title:"Was kommt wohin",
+    cal_label:"2026", cal_title:"Abholkalender",
+    tab_all:"Alle Monate", tab_week:"Aktuelle Woche",
+    nav_wetter:"Wetter", nav_rifiuti:"Abfall",
+    m1:"Januar",m2:"Februar",m3:"M\u00e4rz",m4:"April",m5:"Mai",m6:"Juni",
+    m7:"Juli",m8:"August",m9:"September",m10:"Oktober",m11:"November",m12:"Dezember",
+    MONTHS:["Januar","Februar","M\u00e4rz","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"],
+    DAYS:["So","Mo","Di","Mi","Do","Fr","Sa"],
+    col_day:"Tag", col_collect:"Abholung", today:"Heute",
+    info_label:"Kontakt", info_title:"N\u00fctzliche Informationen",
+    isola_title:"Recyclinghof",
+    addr_label:"Adresse", phone_label:"Telefon", hours_label:"\u00d6ffnungszeiten",
+    monfri:"Mo \u2013 Fr", sat:"Samstag",
+    isola_alert:"Geschlossen an Feiertagen, oranger/roter Wetterwarnung, 25.12, 1.1, 1.5 und Patronatsfest (8.1).",
+    contacts_title:"Kontakte", verde_label:"Kostenlose Hotline",
+    verde_hours:"Mo\u2013Fr 09:00\u201313:00 / 14:30\u201317:00",
+    tributi_label:"Steueramt \u2013 TaRi",
+    tributi_hours:"Mi/Do/Sa 10:00\u201312:00 \u00b7 Do 16:30\u201317:30",
+    bulk_label:"Sperrmüll", bulk_val:"Auf Anfrage unter der Hotline. Max. 5 Teile, ebenerdig.",
+    prep_label:"Vorbereitung",
+    isola_access_label:"Zugang",isola_access:"Nur Einwohner / TARI-Zahler. Mitbringen: Ausweis + M\u00fcllkarte (carta rifiuti).",
+    isola_howto_label:"Selbst anliefern",isola_howto:"M\u00fcll vorher trennen (Holz, Metall, Elektro usw.). Kein gemischter M\u00fcll. M\u00f6glichst lose, nicht in geschlossenen S\u00e4cken. Elektroger\u00e4te komplett, nicht zerlegen. Nur haushalts\u00fcbliche Mengen.",
+    isola_onsite_label:"Vor Ort",isola_onsite:"Anweisungen befolgen. M\u00fcll selbst in die richtigen Container legen.",
+    footer_source:'Quelle: <a href="https://www.conservco.it/it/calendari-raccolta-2026/" target="_blank" rel="noopener">Abfallkalender 2026, ConSer VCO SpA</a>',
+    footer_disc:"Keine Gew\u00e4hr f\u00fcr Richtigkeit und Aktualit\u00e4t. Ma\u00dfgeblich ist stets der offizielle Originalkalender.",
+    cats:[
+      {cls:"cat-plast",dot:"#FFD600",name:"Kunststoff und Metall",rule:"Nur <strong>sauber, leer, sortenrein</strong>, in <em>durchsichtigen S\u00e4cken</em>.",prep:"Ausp\u00fclen, Deckel trennen, nicht ineinander stapeln.",exLabel:"Beispiele",ex:"Plastikflaschen, Joghurtbecher, Verpackungen, Dosen, Alufolie."},
+      {cls:"cat-org",  dot:"#8B5A2B",name:"Biom\u00fcll",rule:"Nur <strong>Bioabf\u00e4lle</strong>, in <em>kompostierbaren Beuteln</em>.",prep:"Keine Plastikt\u00fcten, gut verschlie\u00dfen.",exLabel:"Beispiele",ex:"Essensreste, Obst- und Gem\u00fcseschalen, Kaffeesatz."},
+      {cls:"cat-vetro",dot:"#2E7D32",name:"Glas",rule:"Nur <strong>Glas ohne Deckel, sortenrein</strong>, <em>nicht in S\u00e4cken</em>.",prep:"Deckel entfernen, lose einwerfen, nicht einpacken.",exLabel:"Beispiele",ex:"Flaschen und Gl\u00e4ser. Kein Porzellan oder Keramik."},
+      {cls:"cat-ind",  dot:"#7A7A7A",name:"Restm\u00fcll",rule:"Nur <strong>Restm\u00fcll</strong>, was nicht getrennt werden kann.",prep:"Gut verschlossen entsorgen.",exLabel:"Beispiele",ex:"Hygieneartikel, verschmutzte Verpackungen, nicht recycelbare Materialien."},
+      {cls:"cat-carta",dot:"#1E88E5",name:"Papier und Karton",rule:"Nur <strong>sauber, trocken, sortenrein</strong>, <em>flach gedr\u00fcckt in Kartons</em>.",prep:"Kein Plastik, kein Schmutz. Kartons flach dr\u00fccken.",exLabel:"Beispiele",ex:"Zeitungen, Kartons, Papierverpackungen."},
+    ],
+    BADGE:{ORG:"Biom\u00fcll",CARTA:"Papier",PLAST:"Kunststoff/Metall",VETRO:"Glas",IND:"Restm\u00fcll",FESTA:"Feiertag"},
+    docTitle:"Abfallkalender 2026 \u2013 Cannobio",
+    docDesc:"Offizieller Abfallkalender 2026 f\u00fcr die Gemeinde Cannobio mit Abholzeiten und Recyclinghof-Infos.",
+    nav_rifiuti:"Abfall", nav_meteo:"Wetter",
+    seoR1:"Mülltrennung in Cannobio",
+    seoR1p:"Die Gemeinde Cannobio führt eine Haustuer-Muelltrennung durch für Biomüll, Kunststoff und Metall, Glas, Papier und Restmüll, verwaltet von ConSer VCO. Müll muss bis 06:00 Uhr bereitgestellt werden.",
+    seoR2:"Recyclinghof Cannobio",
+    seoR2p:"Via Madonna delle Grazie 1. Geöffnet Mo-Fr 08:30-11:45, Sa 08:30-11:45 und 14:00-17:00. Zugang nur für Einwohner und TARI-Zahler mit Ausweis und Müllkarte.",
+    seoR3:"Richtige Mülltrennung",
+    seoR3p:"Kunststoff/Metall: durchsichtige Säcke, leer und sauber. Biomüll: kompostierbare Beutel. Glas: lose ohne Deckel. Papier: trocken in Kartons. Restmüll: nur nicht Trennbares.",
+  },
+  en: {
+    brand:"Cannobio · Waste 2026",
+    eyebrow:"Municipality of Cannobio",
+    h1:"Waste Collection<br><em>Calendar</em><br>2026",
+    sub:"Collection times, waste types and information for the Municipality of Cannobio. Managed by ConSer VCO.",
+    whatwhere_label:"Recycling", whatwhere_title:"What goes where",
+    cal_label:"2026", cal_title:"Collection calendar",
+    tab_all:"All months", tab_week:"Current week",
+    nav_wetter:"Weather", nav_rifiuti:"Waste",
+    m1:"January",m2:"February",m3:"March",m4:"April",m5:"May",m6:"June",
+    m7:"July",m8:"August",m9:"September",m10:"October",m11:"November",m12:"December",
+    MONTHS:["January","February","March","April","May","June","July","August","September","October","November","December"],
+    DAYS:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+    col_day:"Day", col_collect:"Collection", today:"Today",
+    info_label:"Contact", info_title:"Useful information",
+    isola_title:"Recycling Centre",
+    addr_label:"Address", phone_label:"Phone", hours_label:"Opening hours",
+    monfri:"Mon \u2013 Fri", sat:"Saturday",
+    isola_alert:"Closed on public holidays, orange/red weather alerts, 25 Dec, 1 Jan, 1 May and patron saint\u2019s day (8 Jan).",
+    contacts_title:"Contacts", verde_label:"Freephone",
+    verde_hours:"Mon\u2013Fri 09:00\u201313:00 / 14:30\u201317:00",
+    tributi_label:"Tax Office \u2013 TaRi",
+    tributi_hours:"Wed/Thu/Sat 10:00\u201312:00 \u00b7 Thu 16:30\u201317:30",
+    bulk_label:"Bulky waste", bulk_val:"On request via freephone. Max. 5 items, street level.",
+    prep_label:"Preparation",
+    isola_access_label:"Access",isola_access:"Residents and TARI payers only. Bring: ID + waste card (carta rifiuti).",
+    isola_howto_label:"Drop-off guide",isola_howto:"Sort waste beforehand (wood, metal, electrical etc.). No mixed waste. Loose where possible, not in sealed bags. Electrical appliances intact, do not disassemble. Household quantities only.",
+    isola_onsite_label:"On site",isola_onsite:"Follow staff instructions. Place waste in the correct containers yourself.",
+    footer_source:'Source: <a href="https://www.conservco.it/it/calendari-raccolta-2026/" target="_blank" rel="noopener">Waste Collection Calendar 2026, ConSer VCO SpA</a>',
+    footer_disc:"No guarantee of accuracy or currency. Always refer to the official original calendar.",
+    cats:[
+      {cls:"cat-plast",dot:"#FFD600",name:"Plastic and Metal",rule:"Only <strong>clean, empty, single-material</strong>, in <em>transparent bags</em>.",prep:"Rinse, remove lids, do not nest items.",exLabel:"Examples",ex:"Plastic bottles, yoghurt cups, packaging, cans, aluminium foil."},
+      {cls:"cat-org",  dot:"#8B5A2B",name:"Organic",rule:"Only <strong>organic waste</strong>, in <em>compostable bags</em>.",prep:"No plastic bags. Seal tightly.",exLabel:"Examples",ex:"Food scraps, fruit and vegetable peelings, coffee grounds."},
+      {cls:"cat-vetro",dot:"#2E7D32",name:"Glass",rule:"Only <strong>glass without lids, single-material</strong>, <em>not in bags</em>.",prep:"Remove lids. Place loose, do not bag.",exLabel:"Examples",ex:"Bottles and jars. No ceramics or porcelain."},
+      {cls:"cat-ind",  dot:"#7A7A7A",name:"Residual Waste",rule:"Only <strong>non-recyclable waste</strong> that cannot be separated.",prep:"Seal well before disposal.",exLabel:"Examples",ex:"Hygiene products, soiled packaging, non-recyclable materials."},
+      {cls:"cat-carta",dot:"#1E88E5",name:"Paper and Cardboard",rule:"Only <strong>clean, dry, single-material</strong>, <em>flattened in boxes</em>.",prep:"No plastic, no dirt. Flatten all boxes.",exLabel:"Examples",ex:"Newspapers, cardboard, paper packaging."},
+    ],
+    BADGE:{ORG:"Organic",CARTA:"Paper",PLAST:"Plastic/Metal",VETRO:"Glass",IND:"Residual",FESTA:"Holiday"},
+    docTitle:"Waste Collection Calendar 2026 \u2013 Cannobio",
+    docDesc:"Official waste collection calendar 2026 for the Municipality of Cannobio, Italy.",
+    nav_rifiuti:"Waste", nav_meteo:"Weather",
+    seoR1:"Waste collection in Cannobio",
+    seoR1p:"Cannobio provides door-to-door collection for organic, plastic and metal, glass, paper and residual waste, managed by ConSer VCO. Waste must be placed out by 06:00 on collection day.",
+    seoR2:"Recycling Centre Cannobio",
+    seoR2p:"Via Madonna delle Grazie 1. Open Mon-Fri 08:30-11:45, Sat 08:30-11:45 and 14:00-17:00. Access for residents and TARI payers with ID and waste card.",
+    seoR3:"How to sort your waste",
+    seoR3p:"Plastic/metal: transparent bags, empty and clean. Organic: compostable bags. Glass: loose, no lids. Paper: dry in boxes. Residual: only what cannot be separated.",
+  }
+};
+
+const DATA=[
+  [1,1,["FESTA"]],[1,2,["IND","CARTA","VETRO"]],[1,3,["ORG"]],[1,5,["IND"]],[1,6,["PLAST"]],[1,7,["ORG"]],[1,8,["VETRO"]],[1,9,["IND","CARTA"]],[1,10,["ORG"]],[1,12,["IND"]],[1,13,["PLAST"]],[1,14,["ORG"]],[1,15,["VETRO"]],[1,16,["IND","CARTA"]],[1,17,["ORG"]],[1,19,["IND"]],[1,20,["PLAST"]],[1,21,["ORG"]],[1,22,["VETRO"]],[1,23,["IND","CARTA"]],[1,24,["ORG"]],[1,26,["IND"]],[1,27,["PLAST"]],[1,28,["ORG"]],[1,29,["VETRO"]],[1,30,["IND","CARTA"]],[1,31,["ORG"]],
+  [2,2,["IND"]],[2,3,["PLAST"]],[2,4,["ORG"]],[2,5,["VETRO"]],[2,6,["IND","CARTA"]],[2,7,["ORG"]],[2,9,["IND"]],[2,10,["PLAST"]],[2,11,["ORG"]],[2,12,["VETRO"]],[2,13,["IND","CARTA"]],[2,14,["ORG"]],[2,16,["IND"]],[2,17,["PLAST"]],[2,18,["ORG"]],[2,19,["VETRO"]],[2,20,["IND","CARTA"]],[2,21,["ORG"]],[2,23,["IND"]],[2,24,["PLAST"]],[2,25,["ORG"]],[2,26,["VETRO"]],[2,27,["IND","CARTA"]],[2,28,["ORG"]],
+  [3,2,["IND"]],[3,3,["PLAST"]],[3,4,["ORG"]],[3,5,["VETRO"]],[3,6,["IND","CARTA"]],[3,7,["ORG"]],[3,9,["IND"]],[3,10,["PLAST"]],[3,11,["ORG"]],[3,12,["VETRO"]],[3,13,["IND","CARTA"]],[3,14,["ORG"]],[3,16,["IND"]],[3,17,["PLAST"]],[3,18,["ORG"]],[3,19,["VETRO"]],[3,20,["IND","CARTA"]],[3,21,["ORG"]],[3,23,["IND"]],[3,24,["PLAST"]],[3,25,["ORG"]],[3,26,["VETRO"]],[3,27,["IND","CARTA"]],[3,28,["ORG"]],[3,30,["IND"]],[3,31,["PLAST"]],
+  [4,1,["ORG"]],[4,2,["VETRO"]],[4,3,["IND","CARTA"]],[4,4,["ORG"]],[4,6,["IND"]],[4,7,["PLAST"]],[4,8,["ORG"]],[4,9,["VETRO"]],[4,10,["IND","CARTA"]],[4,11,["ORG"]],[4,13,["IND"]],[4,14,["PLAST"]],[4,15,["ORG"]],[4,16,["VETRO"]],[4,17,["IND","CARTA"]],[4,18,["ORG"]],[4,20,["IND"]],[4,21,["PLAST"]],[4,22,["ORG"]],[4,23,["VETRO"]],[4,24,["IND","CARTA"]],[4,25,["ORG"]],[4,27,["IND"]],[4,28,["PLAST"]],[4,29,["ORG"]],[4,30,["VETRO"]],
+  [5,1,["FESTA"]],[5,2,["IND","CARTA"]],[5,4,["IND"]],[5,5,["PLAST"]],[5,6,["ORG"]],[5,7,["VETRO"]],[5,8,["IND","CARTA"]],[5,9,["ORG"]],[5,11,["IND"]],[5,12,["PLAST"]],[5,13,["ORG"]],[5,14,["VETRO"]],[5,15,["IND","CARTA"]],[5,16,["ORG"]],[5,18,["IND"]],[5,19,["PLAST"]],[5,20,["ORG"]],[5,21,["VETRO"]],[5,22,["IND","CARTA"]],[5,23,["ORG"]],[5,25,["IND"]],[5,26,["PLAST"]],[5,27,["ORG"]],[5,28,["VETRO"]],[5,29,["CARTA"]],[5,30,["ORG"]],
+  [6,1,["IND"]],[6,2,["PLAST"]],[6,3,["ORG"]],[6,4,["VETRO"]],[6,5,["IND","CARTA"]],[6,6,["ORG"]],[6,8,["IND"]],[6,9,["PLAST"]],[6,10,["ORG"]],[6,11,["VETRO"]],[6,12,["IND","CARTA"]],[6,13,["ORG"]],[6,15,["IND"]],[6,16,["PLAST"]],[6,17,["ORG"]],[6,18,["VETRO"]],[6,19,["IND","CARTA"]],[6,20,["ORG"]],[6,22,["IND"]],[6,23,["PLAST"]],[6,24,["ORG"]],[6,25,["VETRO"]],[6,26,["IND","CARTA"]],[6,27,["ORG"]],[6,29,["IND"]],[6,30,["PLAST"]],
+  [7,1,["ORG"]],[7,2,["VETRO"]],[7,3,["IND","CARTA"]],[7,4,["ORG"]],[7,6,["IND"]],[7,7,["PLAST"]],[7,8,["ORG"]],[7,9,["VETRO"]],[7,10,["IND","CARTA"]],[7,11,["ORG"]],[7,13,["IND"]],[7,14,["PLAST"]],[7,15,["ORG"]],[7,16,["VETRO"]],[7,17,["IND","CARTA"]],[7,18,["ORG"]],[7,20,["IND"]],[7,21,["PLAST"]],[7,22,["ORG"]],[7,23,["VETRO"]],[7,24,["IND","CARTA"]],[7,25,["ORG"]],[7,27,["IND"]],[7,28,["PLAST"]],[7,29,["ORG"]],[7,30,["VETRO"]],[7,31,["IND","CARTA"]],
+  [8,1,["ORG"]],[8,3,["IND"]],[8,4,["PLAST"]],[8,5,["ORG"]],[8,6,["VETRO"]],[8,7,["IND","CARTA"]],[8,8,["ORG"]],[8,10,["IND"]],[8,11,["PLAST"]],[8,12,["ORG"]],[8,13,["VETRO"]],[8,14,["IND","CARTA"]],[8,15,["ORG"]],[8,17,["IND"]],[8,18,["PLAST"]],[8,19,["ORG"]],[8,20,["VETRO"]],[8,21,["IND","CARTA"]],[8,22,["ORG"]],[8,24,["IND"]],[8,25,["PLAST"]],[8,26,["ORG"]],[8,27,["VETRO"]],[8,28,["IND","CARTA"]],[8,29,["ORG"]],[8,31,["IND"]],
+  [9,1,["PLAST"]],[9,2,["ORG"]],[9,3,["VETRO"]],[9,4,["IND","CARTA"]],[9,5,["ORG"]],[9,7,["IND"]],[9,8,["PLAST"]],[9,9,["ORG"]],[9,10,["VETRO"]],[9,11,["IND","CARTA"]],[9,12,["ORG"]],[9,14,["IND"]],[9,15,["PLAST"]],[9,16,["ORG"]],[9,17,["VETRO"]],[9,18,["IND","CARTA"]],[9,19,["ORG"]],[9,21,["IND"]],[9,22,["PLAST"]],[9,23,["ORG"]],[9,24,["VETRO"]],[9,25,["IND","CARTA"]],[9,26,["ORG"]],[9,28,["IND"]],[9,29,["PLAST"]],[9,30,["ORG"]],
+  [10,1,["VETRO"]],[10,2,["IND","CARTA"]],[10,3,["ORG"]],[10,5,["IND"]],[10,6,["PLAST"]],[10,7,["ORG"]],[10,8,["VETRO"]],[10,9,["IND","CARTA"]],[10,10,["ORG"]],[10,12,["IND"]],[10,13,["PLAST"]],[10,14,["ORG"]],[10,15,["VETRO"]],[10,16,["IND","CARTA"]],[10,17,["ORG"]],[10,19,["IND"]],[10,20,["PLAST"]],[10,21,["ORG"]],[10,22,["VETRO"]],[10,23,["IND","CARTA"]],[10,24,["ORG"]],[10,26,["IND"]],[10,27,["PLAST"]],[10,28,["ORG"]],[10,29,["VETRO"]],[10,30,["IND","CARTA"]],[10,31,["ORG"]],
+  [11,2,["IND"]],[11,3,["PLAST"]],[11,4,["ORG"]],[11,5,["VETRO"]],[11,6,["IND","CARTA"]],[11,7,["ORG"]],[11,9,["IND"]],[11,10,["PLAST"]],[11,11,["ORG"]],[11,12,["VETRO"]],[11,13,["IND","CARTA"]],[11,14,["ORG"]],[11,16,["IND"]],[11,17,["PLAST"]],[11,18,["ORG"]],[11,19,["VETRO"]],[11,20,["IND","CARTA"]],[11,21,["ORG"]],[11,23,["IND"]],[11,24,["PLAST"]],[11,25,["ORG"]],[11,26,["VETRO"]],[11,27,["IND","CARTA"]],[11,28,["ORG"]],[11,30,["IND"]],
+  [12,1,["PLAST"]],[12,2,["ORG"]],[12,3,["VETRO"]],[12,4,["IND","CARTA"]],[12,5,["ORG"]],[12,7,["IND"]],[12,8,["PLAST"]],[12,9,["ORG"]],[12,10,["VETRO"]],[12,11,["IND","CARTA"]],[12,12,["ORG"]],[12,14,["IND"]],[12,15,["PLAST"]],[12,16,["ORG"]],[12,17,["VETRO"]],[12,18,["IND","CARTA"]],[12,19,["ORG"]],[12,21,["IND"]],[12,22,["PLAST"]],[12,23,["ORG"]],[12,24,["VETRO"]],[12,25,["FESTA"]],[12,26,["IND","CARTA"]],[12,28,["IND"]],[12,29,["PLAST"]],[12,30,["ORG"]],[12,31,["VETRO"]]
+];
+
+const CLS={ORG:"b-org",CARTA:"b-carta",PLAST:"b-plast",VETRO:"b-vetro",IND:"b-ind",FESTA:"b-festa"};
+const lookup={};
+DATA.forEach(([m,d,t])=>{lookup[m+'-'+d]=t;});
+
+const now=new Date();
+const tY=now.getFullYear(),tM=now.getMonth()+1,tD=now.getDate();
+function wkBounds(date){const d=new Date(date),day=d.getDay();const mon=new Date(d);mon.setDate(d.getDate()+(day===0?-6:1-day));const sun=new Date(mon);sun.setDate(mon.getDate()+6);return{mon,sun};}
+const{mon:wkMon,sun:wkSun}=wkBounds(now);
+function inWk(y,m,d){const dt=new Date(y,m-1,d);return dt>=wkMon&&dt<=wkSun;}
+function isToday(y,m,d){return y===tY&&m===tM&&d===tD;}
+
+let lang='it';
+
+function badge(key,t){
+  return'<span class="badge '+CLS[key]+'"><span class="dot"></span>'+t.BADGE[key]+'</span>';
+}
+
+function renderCats(t){
+  return t.cats.map(c=>`
+    <article class="cat-card ${c.cls}">
+      <div class="cat-card-top"><span class="cat-dot" style="background:${c.dot}"></span><span class="cat-name">${c.name}</span></div>
+      <div class="cat-card-body">
+        <div class="cat-rule">${c.rule}</div>
+        <details class="cat-prep">
+          <summary>${t.prep_label||'Vorbereitung'}</summary>
+          <div class="cat-prep-body">${c.prep}</div>
+        </details>
+        <div class="cat-ex"><span class="cat-ex-label">${c.exLabel}</span>${c.ex}</div>
+      </div>
+    </article>`).join('');
+}
+
+function renderMonth(mi,t){
+  const m=mi+1,days=new Date(2026,m,0).getDate();
+  let rows='';
+  for(let d=1;d<=days;d++){
+    const dow=new Date(2026,m-1,d).getDay();
+    const types=lookup[m+'-'+d]||[];
+    const tf=isToday(2026,m,d),wf=!tf&&inWk(2026,m,d);
+    const isFesta=types.includes('FESTA'),isWE=dow===0||dow===6;
+    const cls=tf?'is-today':wf?'is-week':isFesta?'is-festa':isWE?'is-weekend':'';
+    const dot=tf?'<span class="today-dot" aria-hidden="true"></span>':'';
+    const col=types.length?'<div class="badges">'+types.map(k=>badge(k,t)).join('')+'</div>':'<span style="color:var(--text-tertiary)">–</span>';
+    rows+=`<tr class="${cls}" data-week="${inWk(2026,m,d)?1:0}" data-today="${tf?1:0}" role="row">
+      <td><div class="day-num">${d}${dot}</div></td>
+      <td><div class="day-name">${t.DAYS[dow]}</div></td>
+      <td>${col}</td></tr>`;
+  }
+  return`<div class="month-block" data-month="${m}" role="tabpanel">
+    <div class="month-head">
+      <span class="month-name">${t.MONTHS[mi]}</span>
+      <span class="month-year">2026</span>
+    </div>
+    <table class="cal-table" aria-label="${t.MONTHS[mi]} 2026">
+      <thead><tr><th scope="col">${t.col_day}</th><th scope="col"></th><th scope="col">${t.col_collect}</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>`;
+}
+
+function applyFilter(m){
+  if(m==='week'){
+    document.querySelectorAll('.month-block').forEach(el=>{el.style.display=el.querySelector('tr[data-week="1"]')?'':'none';});
+    document.querySelectorAll('.cal-table tbody tr').forEach(tr=>{tr.style.display=tr.dataset.week==='1'?'':'none';});
+    setTimeout(()=>{const t=document.querySelector('tr.is-today')||document.querySelector('tr[data-week="1"]');if(t)t.scrollIntoView({behavior:'smooth',block:'center'});},80);
+  } else {
+    document.querySelectorAll('.cal-table tbody tr').forEach(tr=>tr.style.display='');
+    document.querySelectorAll('.month-block').forEach(el=>{el.style.display=(m==='all'||el.dataset.month===m)?'':'none';});
+    if(m!=='all'){setTimeout(()=>{const t=document.querySelector('tr.is-today');if(t)t.scrollIntoView({behavior:'smooth',block:'center'});},80);}
+  }
+}
+
+function rebuild(){
+  const t=T[lang];
+  // Cats
+  document.getElementById('cat-grid').innerHTML=renderCats(t);
+  // Calendar
+  let html='';for(let i=0;i<12;i++)html+=renderMonth(i,t);
+  document.getElementById('calendar').innerHTML=html;
+  // Translations
+  document.querySelectorAll('[data-t]').forEach(el=>{const k=el.dataset.t;if(t[k]!==undefined)el.innerHTML=t[k];});
+  // Lang buttons
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+  // Tab labels
+  document.querySelectorAll('.tab[data-t]').forEach(btn=>{const k=btn.dataset.t;if(t[k])btn.textContent=t[k];});
+  // nav labels
+  const nw=document.getElementById('nav-wetter'); if(nw)nw.textContent=t.nav_wetter;
+  const nr=document.getElementById('nav-rifiuti'); if(nr)nr.textContent=t.nav_rifiuti;
+  // SEO
+  document.title=t.docTitle;
+  document.querySelector('meta[name="description"]').setAttribute('content',t.docDesc);
+  document.documentElement.lang=lang;
+  // URL param (nur auf echter Domain)
+  try {
+    const url=new URL(window.location);url.searchParams.set('lang',lang);history.replaceState({},'',url);
+  } catch(e) {}
+  // SEO
+  const ss=(id,k)=>{const el=document.getElementById(id);if(el&&t[k])el.textContent=t[k];};
+  ss('t-seo-r1','seoR1');ss('t-seo-r1p','seoR1p');ss('t-seo-r2','seoR2');ss('t-seo-r2p','seoR2p');ss('t-seo-r3','seoR3');ss('t-seo-r3p','seoR3p');
+  // Re-apply active filter
+  const active=document.querySelector('.tab.active');if(active)applyFilter(active.dataset.month);
+}
+
+document.getElementById('tabs').addEventListener('click',e=>{
+  const btn=e.target.closest('.tab');if(!btn)return;
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilter(btn.dataset.month);
+});
+
+document.querySelector('.lang-switcher').addEventListener('click',e=>{
+  const btn=e.target.closest('.lang-btn');if(!btn)return;
+  lang=btn.dataset.lang;rebuild();
+});
+
+// Init: detect lang from URL param
+const urlLang=new URLSearchParams(window.location.search).get('lang');
+if(urlLang&&T[urlLang])lang=urlLang;
+rebuild();
+if(tY===2026)document.querySelector('.tab-week').click();
+</script>
+</body>
+</html>
