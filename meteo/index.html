@@ -319,6 +319,8 @@ footer a{color:var(--text-secondary);text-decoration:none}
     </div>
     <div class="current-meta">
       <div class="current-meta-item"><div class="val" id="cur-high">—°</div><div class="lbl" id="t-lbl-high">Tageshoch</div></div>
+      <div class="current-meta-item"><div class="val" id="cur-low">—°</div><div class="lbl" id="t-lbl-low">Tagestief</div></div>
+      <div class="current-meta-item"><div class="val" id="cur-night">—°</div><div class="lbl" id="t-lbl-night">Nachttief</div></div>
       <div class="current-meta-item"><div class="val" id="cur-hum">—%</div><div class="lbl" id="t-lbl-hum">Feuchte</div></div>
       <div class="current-meta-item"><div class="val" id="cur-rain">—%</div><div class="lbl" id="t-lbl-rain">Regenrisiko</div></div>
       <div class="current-meta-item"><div class="val" id="cur-sun">—h</div><div class="lbl" id="t-lbl-sun">Sonne heute</div></div>
@@ -432,7 +434,7 @@ const T = {
     h1:'Wettervorschau<br><em>Cannobio</em>',
     sub:'Prognose, Luftqualit\u00e4t, Warnungen und Nachrichten f\u00fcr Cannobio am Lago Maggiore.',
     navWetter:'Wetter',navRifiuti:'Abfall',
-    curLabel:'Aktuell',lblHigh:'Tageshoch',lblHum:'Feuchte',lblRain:'Regenrisiko',lblSun:'Sonne heute',
+    curLabel:'Aktuell',lblHigh:'Tageshoch',lblLow:'Tagestief',lblNight:'Nachttief',lblHum:'Feuchte',lblRain:'Regenrisiko',lblSun:'Sonne heute',
     forecastLabel:'Prognose',btn3:'3 Tage',btn7:'7 Tage',
     relTitle:'Prognosegenauigkeit',
     relRows:[
@@ -470,7 +472,7 @@ const T = {
     h1:'Previsioni meteo<br><em>Cannobio</em>',
     sub:'Previsioni, qualit\u00e0 dell\u2019aria, allerte e notizie per Cannobio sul Lago Maggiore.',
     navWetter:'Meteo',navRifiuti:'Rifiuti',
-    curLabel:'Attuale',lblHigh:'Massima',lblHum:'Umidit\u00e0',lblRain:'Rischio pioggia',lblSun:'Sole oggi',
+    curLabel:'Attuale',lblHigh:'Massima',lblLow:'Minima giorno',lblNight:'Minima notte',lblHum:'Umidit\u00e0',lblRain:'Rischio pioggia',lblSun:'Sole oggi',
     forecastLabel:'Previsioni',btn3:'3 giorni',btn7:'7 giorni',
     relTitle:'Attendibilit\u00e0 previsionale',
     relRows:[
@@ -508,7 +510,7 @@ const T = {
     h1:'Weather forecast<br><em>Cannobio</em>',
     sub:'Forecast, air quality, alerts and local news for Cannobio on Lake Maggiore.',
     navWetter:'Weather',navRifiuti:'Waste',
-    curLabel:'Current',lblHigh:'Day high',lblHum:'Humidity',lblRain:'Rain risk',lblSun:'Sun today',
+    curLabel:'Current',lblHigh:'Day high',lblLow:'Day low',lblNight:'Night low',lblHum:'Humidity',lblRain:'Rain risk',lblSun:'Sun today',
     forecastLabel:'Forecast',btn3:'3 days',btn7:'7 days',
     relTitle:'Forecast reliability',
     relRows:[
@@ -567,7 +569,7 @@ function setLang(l){
 function applyT(){
   const id=(id,k,html)=>{ const el=document.getElementById(id); if(el){html?el.innerHTML=tr(k):el.textContent=tr(k);} };
   id('t-brand','brand'); id('t-eyebrow','eyebrow'); id('t-h1','h1',true); id('t-sub','sub');
-  id('t-cur-label','curLabel'); id('t-lbl-high','lblHigh'); id('t-lbl-hum','lblHum');
+  id('t-cur-label','curLabel'); id('t-lbl-high','lblHigh'); id('t-lbl-low','lblLow'); id('t-lbl-night','lblNight'); id('t-lbl-hum','lblHum');
   id('t-lbl-rain','lblRain'); id('t-lbl-sun','lblSun'); id('t-lbl-uv','lblUv');
   id('t-lbl-rise','lblRise'); id('t-lbl-set','lblSet');
   id('t-uv-block-title','uvBlockTitle'); id('t-uv-none','uvNone'); id('t-uv-spf30','uvSpf30'); id('t-uv-spf50','uvSpf50');
@@ -639,7 +641,7 @@ async function loadWeather(){
   try{
     const url=`https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}`
       +`&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,windspeed_10m_max,sunshine_duration,weathercode,uv_index_max,sunrise,sunset`
-      +`&hourly=relativehumidity_2m&current_weather=true&timezone=${TZ}&forecast_days=7`;
+      +`&hourly=relativehumidity_2m,temperature_2m&current_weather=true&timezone=${TZ}&forecast_days=7`;
     const data=await(await fetch(url)).json();
     globalData=data;
     renderCurrent(data); renderCards(data,activeView);
@@ -653,14 +655,28 @@ function renderCurrent(d){
   document.getElementById('cur-temp').textContent=Math.round(cw.temperature)+'°';
   document.getElementById('cur-cond').textContent=wxLabel(cw.weathercode);
   document.getElementById('cur-high').textContent=Math.round(da.temperature_2m_max[0])+'°';
-  document.getElementById('cur-rain').textContent=(da.precipitation_probability_max[0]||0)+'%';
+  // Day low from daily min
+  document.getElementById('cur-low').textContent=Math.round(da.temperature_2m_min[0])+'°';
+  // Night low: min of hourly temps for tonight 22:00 – tomorrow 06:00
+  if(h&&h.temperature_2m&&h.time){
+    const today=new Date().toISOString().slice(0,10);
+    const tomorrow=new Date(Date.now()+86400000).toISOString().slice(0,10);
+    const nightTemps=h.time.reduce((acc,t,i)=>{
+      const isTonight=(t.startsWith(today)&&parseInt(t.slice(11,13))>=22);
+      const isTomMorn=(t.startsWith(tomorrow)&&parseInt(t.slice(11,13))<=6);
+      if((isTonight||isTomMorn)&&h.temperature_2m[i]!=null) acc.push(h.temperature_2m[i]);
+      return acc;
+    },[]);
+    const nightLow=nightTemps.length?Math.round(Math.min(...nightTemps)):null;
+    document.getElementById('cur-night').textContent=nightLow!==null?nightLow+'°':'—';
+  }
   const sH=da.sunshine_duration?Math.round(da.sunshine_duration[0]/3600*10)/10:null;
   document.getElementById('cur-sun').textContent=sH!==null?sH+'h':'—';
   // UV index + sun protection
   const uv=da.uv_index_max?Math.round(da.uv_index_max[0]*10)/10:null;
   document.getElementById('cur-uv').textContent=uv!==null?uv:'—';
   renderUVProtection(uv);
-  // Sunrise / Sunset (ISO string "2026-04-03T06:33")
+  // Sunrise / Sunset
   if(da.sunrise&&da.sunrise[0]){
     document.getElementById('cur-rise').textContent=da.sunrise[0].substring(11,16);
     document.getElementById('cur-set').textContent=da.sunset[0].substring(11,16);
@@ -670,6 +686,7 @@ function renderCurrent(d){
     const idx=h.time.findIndex(t=>t.startsWith(nowH));
     document.getElementById('cur-hum').textContent=(h.relativehumidity_2m[idx>=0?idx:0]||'—')+'%';
   }
+  document.getElementById('cur-rain').textContent=(da.precipitation_probability_max[0]||0)+'%';
 }
 
 function renderUVProtection(uvi){
@@ -742,6 +759,8 @@ function renderFallback(){
   const fb={current_weather:{temperature:14,weathercode:1},daily:{time:['2026-04-03','2026-04-04','2026-04-05','2026-04-06','2026-04-07','2026-04-08','2026-04-09'],temperature_2m_max:[17,19,19,21,21,18,17],temperature_2m_min:[8,9,10,11,11,9,8],precipitation_probability_max:[0,0,10,10,0,30,40],windspeed_10m_max:[12,14,18,14,11,20,24],sunshine_duration:[32400,36000,25200,21600,36000,14400,10800],weathercode:[0,0,2,2,0,3,61],uv_index_max:[4.2,5.1,3.8,3.2,5.4,2.1,1.8],sunrise:['2026-04-03T06:33','2026-04-04T06:31','2026-04-05T06:29','2026-04-06T06:27','2026-04-07T06:25','2026-04-08T06:23','2026-04-09T06:21'],sunset:['2026-04-03T19:51','2026-04-04T19:53','2026-04-05T19:54','2026-04-06T19:56','2026-04-07T19:57','2026-04-08T19:59','2026-04-09T20:01']},hourly:{time:[],relativehumidity_2m:[]}};
   globalData=fb; renderCurrent(fb); renderCards(fb,activeView);
   document.getElementById('cur-hum').textContent='48%';
+  document.getElementById('cur-low').textContent='9°';
+  document.getElementById('cur-night').textContent='6°';
   const bar=document.getElementById('data-chip-bar'); bar.classList.add('visible');
   const chip=document.getElementById('data-chip-text'); chip.dataset.mode='offline'; chip.textContent=tr('offlineChip');
 }
