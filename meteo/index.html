@@ -621,7 +621,7 @@ function applyT(){
       ogDesc:  "Cannobio weather with forecast, UV index, air quality and live webcams. Reliable overview for Lago Maggiore."
     }
   };
-  const s = SEO[l] || SEO.de;
+  const s = SEO[lang] || SEO.de;
   document.title = s.title;
   const metaDesc = document.querySelector('meta[name="description"]');
   if(metaDesc) metaDesc.setAttribute('content', s.desc);
@@ -1037,6 +1037,13 @@ loadWeather();
 loadAirQuality();
 loadWarnings();
 buildCams();
+
+// Auto-refresh alle 10 Minuten
+setInterval(() => {
+  loadWeather();
+  loadAirQuality();
+  loadWarnings();
+}, 10 * 60 * 1000);
 function showAqiInfo(key) {
   const ln = lang || 'de';
   const info = window._AQI_INFO?.[key];
