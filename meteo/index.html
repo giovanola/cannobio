@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wetter Cannobio – Lago Maggiore</title>
-<meta name="description" content="Wettervorhersage, Luftqualität, Webcams und Unwetterwarnungen für Cannobio am Lago Maggiore. Prognose 7 Tage, UV-Index, ARPA Piemonte.">
+<title>Wetter Cannobio heute | Lago Maggiore Prognose, UV &amp; Luftqualität</title>
+<meta name="description" content="Aktuelle Wetterprognose für Cannobio am Lago Maggiore mit Temperatur, Niederschlag, UV-Index und Luftqualität. Inklusive 7-Tage-Trend und Live-Webcams.">
 <meta name="keywords" content="Wetter Cannobio, Meteo Cannobio, Lago Maggiore, Wettervorhersage, previsioni meteo">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://giovanola.github.io/cannobio/meteo/">
@@ -14,7 +14,7 @@
 <link rel="alternate" hreflang="x-default" href="https://giovanola.github.io/cannobio/meteo/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Meteo Cannobio – Lago Maggiore">
+<meta property="og:title" content="Wetter Cannobio heute am Lago Maggiore">
 <meta property="og:description" content="Previsioni meteo, qualità dell'aria, webcam e allerte per Cannobio sul Lago Maggiore. Katharina ed Ettore avrebbero avuto grande gioia nel vederlo.">
 <meta property="og:url" content="https://giovanola.github.io/cannobio/meteo/">
 <meta property="og:image" content="https://giovanola.github.io/cannobio/cannobio-2026.jpg">
@@ -22,12 +22,12 @@
 <meta property="og:image:height" content="900">
 <meta property="og:image:alt" content="Cannobio, Lago Maggiore">
 <meta property="og:site_name" content="Cannobio">
-<meta property="og:locale" content="it_IT">
+<meta property="og:locale" content="de_DE">
 <meta property="og:locale:alternate" content="de_DE">
 <meta property="og:locale:alternate" content="en_GB">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Meteo Cannobio – Lago Maggiore">
+<meta name="twitter:title" content="Wetter Cannobio heute am Lago Maggiore">
 <meta name="twitter:description" content="Katharina und Ettore hätten große Freude daran gehabt. · Previsioni meteo, qualità dell'aria e webcam per Cannobio.">
 <meta name="twitter:image" content="https://giovanola.github.io/cannobio/cannobio-2026.jpg">
 <meta name="twitter:image:alt" content="Cannobio, Lago Maggiore">
@@ -248,6 +248,21 @@ footer{border-top:1px solid var(--border);padding:24px;text-align:center}
 footer p{font-size:12px;color:var(--text-tertiary)}
 footer a{color:var(--text-secondary);text-decoration:none}
 
+/* AQI INFO POPUP */
+.aqi-item { position: relative; }
+.aqi-info-btn { display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1px solid var(--text-tertiary); background: transparent; color: var(--text-tertiary); font-size: 9px; font-weight: 700; cursor: pointer; margin-left: 4px; vertical-align: middle; flex-shrink: 0; transition: all var(--transition); }
+.aqi-info-btn:hover { background: var(--text-tertiary); color: #fff; }
+.aqi-item-name-row { display: flex; align-items: center; margin-top: 4px; }
+.aqi-item-desc { font-size: 10px; color: var(--text-secondary); margin-top: 3px; line-height: 1.4; }
+.aqi-popup { display: none; position: fixed; z-index: 500; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 20px; max-width: 320px; width: calc(100vw - 48px); }
+.aqi-popup.open { display: block; }
+.aqi-popup-overlay { display: none; position: fixed; inset: 0; z-index: 499; background: rgba(0,0,0,0.3); backdrop-filter: blur(2px); }
+.aqi-popup-overlay.open { display: block; }
+.aqi-popup-title { font-family: var(--font-display); font-size: 18px; font-weight: 300; margin-bottom: 8px; color: var(--text-primary); }
+.aqi-popup-body { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
+.aqi-popup-source { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-tertiary); }
+.aqi-popup-source a { color: var(--sky); text-decoration: none; }
+.aqi-popup-close { position: absolute; top: 12px; right: 14px; background: none; border: none; font-size: 18px; cursor: pointer; color: var(--text-tertiary); line-height: 1; }
 /* HOVER */
 @media(hover:hover){
   .day-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
@@ -288,6 +303,7 @@ footer a{color:var(--text-secondary);text-decoration:none}
       <nav class="site-nav">
         <a class="site-nav-link site-nav-active" href="../meteo/" id="nav-wetter">Wetter</a>
         <a class="site-nav-link" href="../rifiuti/" id="nav-rifiuti">Rifiuti</a>
+        <a class="site-nav-link" href="../gotthard/" id="nav-gotthard">Gotthard</a>
       </nav>
       <span class="update-chip" id="update-time"></span>
       <div class="lang-switcher">
@@ -305,7 +321,7 @@ footer a{color:var(--text-secondary);text-decoration:none}
 
 <section class="hero">
   <div class="hero-eyebrow" id="t-eyebrow">Lago Maggiore &middot; 46.06&deg; N</div>
-  <h1 id="t-h1">Wettervorschau<br><em>Cannobio</em></h1>
+  <h1 id="t-h1">Wettervorhersage<br><em>Cannobio</em></h1>
   <p class="hero-sub" id="t-sub">Prognose, Luftqualität, Warnungen und Nachrichten für Cannobio am Lago Maggiore.</p>
 </section>
 
@@ -431,9 +447,10 @@ footer a{color:var(--text-secondary);text-decoration:none}
 const T = {
   de:{
     brand:'Cannobio Wetter',eyebrow:'Lago Maggiore \u00b7 46.06\u00b0 N',
-    h1:'Wettervorschau<br><em>Cannobio</em>',
+    h1:'Wettervorhersage<br><em>Cannobio</em>',
     sub:'Prognose, Luftqualit\u00e4t, Warnungen und Nachrichten f\u00fcr Cannobio am Lago Maggiore.',
     navWetter:'Wetter',navRifiuti:'Abfall',
+    navGotthard:'Gotthard',
     curLabel:'Aktuell',lblHigh:'Tageshoch',lblLow:'Tagestief',lblNight:'Nachttief',lblHum:'Feuchte',lblRain:'Regenrisiko',lblSun:'Sonne heute',
     forecastLabel:'Prognose',btn3:'3 Tage',btn7:'7 Tage',
     relTitle:'Prognosegenauigkeit',
@@ -456,7 +473,7 @@ const T = {
     today:'Heute',statSun:'Sonne',statRain:'Regen',statHum:'Feuchte',statWind:'Wind',statAcc:'Genauigkeit',lblUv:'UV-Index',
     lblRise:'Aufgang',lblSet:'Untergang',
     uvBlockTitle:'Sonnenschutz heute',uvNone:'Ohne Schutz',uvSpf30:'LSF\u00a030',uvSpf50:'LSF\u00a050',
-    uvNote:'Richtwert f\u00fcr Hauttyp II (hell, gelegentlich Sonnenbrand). Basierend auf WHO-Standard (MED\u00a0200\u00a0J/m\u00b2). Gilt f\u00fcr Mittagsstunden mit h\u00f6chstem UV-Index.',
+    uvNote:'Richtwert f\u00fcr Hauttyp II mit korrektem Eincremen (2\u00a0mg/cm\u00b2). LSF\u00a030: max.\u00a02\u00a0h Mittagssonne, dann Nachcremen. LSF\u00a050: max.\u00a03\u00a0h, dann Nachcremen und Schatten suchen. Quelle: WHO, Bundesamt f\u00fcr Strahlenschutz.',
     relNotes:['Kurzzeitprognose, sehr verl\u00e4sslich','Tendenz gesichert, Timing unsicher','Grosswetterlage, Details unsicher'],
     info:'Wetterdaten: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY\u00a04.0), MeteoSwiss ICON-CH. Luftqualit\u00e4t: European AQI, Copernicus CAMS. Warnungen: <a href="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa/allerta/" target="_blank" rel="noopener">ARPA Piemonte</a>, Provinz VCO. Nachrichten: <a href="https://www.ecorisveglio.it/?s=cannobio" target="_blank" rel="noopener">ecorisveglio.it</a>. Webcams: <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a>.',
     camLocs:{lungolago:'Seepromenade Cannobio',piazza:'Dorfplatz am See',maccagno:'N\u00f6rdlicher Lago Maggiore',castelli:'SeeSchl\u00f6sser Cannero'},
@@ -472,6 +489,7 @@ const T = {
     h1:'Previsioni meteo<br><em>Cannobio</em>',
     sub:'Previsioni, qualit\u00e0 dell\u2019aria, allerte e notizie per Cannobio sul Lago Maggiore.',
     navWetter:'Meteo',navRifiuti:'Rifiuti',
+    navGotthard:'Gottardo',
     curLabel:'Attuale',lblHigh:'Massima',lblLow:'Minima giorno',lblNight:'Minima notte',lblHum:'Umidit\u00e0',lblRain:'Rischio pioggia',lblSun:'Sole oggi',
     forecastLabel:'Previsioni',btn3:'3 giorni',btn7:'7 giorni',
     relTitle:'Attendibilit\u00e0 previsionale',
@@ -494,7 +512,7 @@ const T = {
     today:'Oggi',statSun:'Sole',statRain:'Pioggia',statHum:'Umidit\u00e0',statWind:'Vento',statAcc:'Attendibilit\u00e0',lblUv:'Indice UV',
     lblRise:'Alba',lblSet:'Tramonto',
     uvBlockTitle:'Protezione solare oggi',uvNone:'Senza protezione',uvSpf30:'SPF\u00a030',uvSpf50:'SPF\u00a050',
-    uvNote:'Indicazione per fototipo II (chiaro, a volte scottature). Basato sullo standard WHO (DEM\u00a0200\u00a0J/m\u00b2). Valido per le ore centrali con UV massimo.',
+    uvNote:'Valori indicativi per fototipo II con applicazione corretta (2\u00a0mg/cm\u00b2). SPF\u00a030: max.\u00a02\u00a0h di sole a picco, poi riapplicare. SPF\u00a050: max.\u00a03\u00a0h, poi riapplicare e cercare ombra. Fonte: WHO, BfS.',
     relNotes:['Previsione a breve termine, molto affidabile','Tendenza sicura, dettagli orari incerti','Quadro sinottico, dettagli poco affidabili'],
     info:'Dati meteo: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY\u00a04.0), modello MeteoSvizzera ICON-CH. Qualit\u00e0 dell\u2019aria: AQI europeo, Copernicus CAMS. Allerte: <a href="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa/allerta/" target="_blank" rel="noopener">ARPA Piemonte</a>, Provincia VCO. Notizie: <a href="https://www.ecorisveglio.it/?s=cannobio" target="_blank" rel="noopener">ecorisveglio.it</a>. Webcam: <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a>.',
     camLocs:{lungolago:'Lungolago Cannobio',piazza:'Piazza sul lago',maccagno:'Lago Maggiore nord',castelli:'Castelli di Cannero'},
@@ -510,6 +528,7 @@ const T = {
     h1:'Weather forecast<br><em>Cannobio</em>',
     sub:'Forecast, air quality, alerts and local news for Cannobio on Lake Maggiore.',
     navWetter:'Weather',navRifiuti:'Waste',
+    navGotthard:'Gotthard',
     curLabel:'Current',lblHigh:'Day high',lblLow:'Day low',lblNight:'Night low',lblHum:'Humidity',lblRain:'Rain risk',lblSun:'Sun today',
     forecastLabel:'Forecast',btn3:'3 days',btn7:'7 days',
     relTitle:'Forecast reliability',
@@ -532,7 +551,7 @@ const T = {
     today:'Today',statSun:'Sun',statRain:'Rain',statHum:'Humidity',statWind:'Wind',statAcc:'Reliability',lblUv:'UV index',
     lblRise:'Sunrise',lblSet:'Sunset',
     uvBlockTitle:'Sun protection today',uvNone:'No protection',uvSpf30:'SPF\u00a030',uvSpf50:'SPF\u00a050',
-    uvNote:'Guideline for skin type II (fair, occasional sunburn). Based on WHO standard (MED\u00a0200\u00a0J/m\u00b2). Applies to midday hours with highest UV index.',
+    uvNote:'Guideline for skin type II with correct application (2\u00a0mg/cm\u00b2). SPF\u00a030: max.\u00a02\u00a0h midday sun, then reapply. SPF\u00a050: max.\u00a03\u00a0h, then reapply and seek shade. Source: WHO, BfS.',
     relNotes:['Short-range, highly reliable','Trend confirmed, timing uncertain','Synoptic pattern, details unreliable'],
     info:'Weather data: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY\u00a04.0), MeteoSwiss ICON-CH. Air quality: European AQI, Copernicus CAMS. Alerts: <a href="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa/allerta/" target="_blank" rel="noopener">ARPA Piemonte</a>, Province VCO. News: <a href="https://www.ecorisveglio.it/?s=cannobio" target="_blank" rel="noopener">ecorisveglio.it</a>. Webcams: <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a>.',
     camLocs:{lungolago:'Lakeside promenade',piazza:'Village square',maccagno:'Northern Lake Maggiore',castelli:'Cannero lake castles'},
@@ -581,9 +600,43 @@ function applyT(){
   // SEO
   const sm=(id,k)=>{const el=document.getElementById(id);if(el&&T[lang][k])el.textContent=T[lang][k];};
   sm('t-seo-m1','seoM1');sm('t-seo-m1p','seoM1p');sm('t-seo-m2','seoM2');sm('t-seo-m2p','seoM2p');sm('t-seo-m3','seoM3');sm('t-seo-m3p','seoM3p');
+  // Dynamic SEO meta per language
+  const SEO = {
+    de: {
+      title: "Wetter Cannobio heute | Lago Maggiore Prognose, UV & Luftqualität",
+      desc:  "Aktuelle Wetterprognose für Cannobio am Lago Maggiore mit Temperatur, Niederschlag, UV-Index und Luftqualität. Inklusive 7-Tage-Trend und Live-Webcams.",
+      ogTitle: "Wetter Cannobio heute am Lago Maggiore",
+      ogDesc:  "Wetter in Cannobio mit Prognose, UV-Index, Luftqualität und Live-Webcams. Verlässlicher Überblick für den Lago Maggiore."
+    },
+    it: {
+      title: "Meteo Cannobio oggi | Lago Maggiore previsioni, UV e qualità aria",
+      desc:  "Previsioni meteo per Cannobio sul Lago Maggiore con temperatura, pioggia, indice UV e qualità dell'aria. Include trend 7 giorni e webcam live.",
+      ogTitle: "Meteo Cannobio oggi sul Lago Maggiore",
+      ogDesc:  "Meteo Cannobio con previsioni, indice UV, qualità dell'aria e webcam live. Panoramica affidabile sul Lago Maggiore."
+    },
+    en: {
+      title: "Cannobio Weather Today | Lago Maggiore Forecast, UV Index & Air Quality",
+      desc:  "Weather forecast for Cannobio at Lago Maggiore with temperature, precipitation, UV index and air quality. Includes 7-day outlook and live webcams.",
+      ogTitle: "Cannobio Weather Today at Lago Maggiore",
+      ogDesc:  "Cannobio weather with forecast, UV index, air quality and live webcams. Reliable overview for Lago Maggiore."
+    }
+  };
+  const s = SEO[l] || SEO.de;
+  document.title = s.title;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if(metaDesc) metaDesc.setAttribute('content', s.desc);
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if(ogTitle) ogTitle.setAttribute('content', s.ogTitle);
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if(ogDesc) ogDesc.setAttribute('content', s.ogDesc);
+  const twTitle = document.querySelector('meta[name="twitter:title"]');
+  if(twTitle) twTitle.setAttribute('content', s.ogTitle);
+  const twDesc = document.querySelector('meta[name="twitter:description"]');
+  if(twDesc) twDesc.setAttribute('content', s.ogDesc);
   // nav labels
   const nw=document.getElementById('nav-wetter'); if(nw)nw.textContent=tr('navWetter');
   const nr=document.getElementById('nav-rifiuti'); if(nr)nr.textContent=tr('navRifiuti');
+  const ng=document.getElementById('nav-gotthard'); if(ng)ng.textContent=tr('navGotthard')||'Gotthard';
   // offline chip
   const chip=document.getElementById('data-chip-text');
   if(chip&&chip.dataset.mode==='offline')chip.textContent=tr('offlineChip');
@@ -691,24 +744,31 @@ function renderCurrent(d){
 
 function renderUVProtection(uvi){
   const block=document.getElementById('uv-block');
-  if(!uvi||uvi<0.5){
-    block.style.display='none'; return;
-  }
+  if(!uvi||uvi<0.5){ block.style.display='none'; return; }
   block.style.display='';
-  // MED for skin type II = 200 J/m², UV dose per hour = UVI × 25 J/m²/h (WHO)
-  const MED=200,dosePerH=uvi*25;
-  const fmtH=mins=>{
-    if(mins>=480)return '8h+';
-    if(mins<60)return Math.round(mins)+'min';
-    const h=Math.floor(mins/60),m=Math.round(mins%60);
-    return m>0?`${h}h\u00a0${m}min`:`${h}h`;
+
+  // Basis: MED Hauttyp II = 200 J/m², UV-Dosis pro Stunde = UVI × 25 J/m²/h (WHO)
+  // Ohne Schutz: theoretische Zeit bis Sonnenbrand
+  const MED=200, dosePerH=uvi*25;
+  const noneMin = Math.round(MED / dosePerH * 60);
+
+  // LSF-Werte: Theoretische Verlängerung × Effizienzfaktor (0.5–0.6)
+  // Grund: LSF-Wert gilt nur bei korrektem Auftrag (2 mg/cm²), der in der Praxis selten erreicht wird.
+  // Quelle: Bundesamt für Strahlenschutz, AAD (American Academy of Dermatology)
+  // Zusätzlich: Maximale Empfehlung für ununterbrochenen Aufenthalt in der Mittagssonne:
+  // LSF 30 → max. 2h, LSF 50 → max. 3h, dann Nachcremen und Schatten suchen
+  const spf30Min = Math.min(Math.round(noneMin * 30 * 0.5), 120); // max 2h
+  const spf50Min = Math.min(Math.round(noneMin * 50 * 0.5), 180); // max 3h
+
+  const fmtH = mins => {
+    if(mins < 60) return Math.round(mins) + '\u00a0min';
+    const h = Math.floor(mins/60), m = Math.round(mins%60);
+    return m > 0 ? `${h}h\u00a0${m}min` : `${h}h`;
   };
-  const noneMin=MED/dosePerH*60;
-  const spf30Min=Math.min(noneMin*30,480);
-  const spf50Min=Math.min(noneMin*50,480);
-  document.getElementById('uv-none-val').textContent=fmtH(noneMin);
-  document.getElementById('uv-spf30-val').textContent=fmtH(spf30Min);
-  document.getElementById('uv-spf50-val').textContent=fmtH(spf50Min);
+
+  document.getElementById('uv-none-val').textContent = fmtH(noneMin);
+  document.getElementById('uv-spf30-val').textContent = fmtH(spf30Min);
+  document.getElementById('uv-spf50-val').textContent = fmtH(spf50Min);
 }
 
 function renderCards(data,numDays){
@@ -789,8 +849,49 @@ async function loadAirQuality(){
     badge.textContent=`AQI ${aqi} – ${names[idx]||names[names.length-1]}`;
     badge.className=`aqi-badge ${lvl.cls}`;
     document.getElementById('aqi-sub').textContent=tr('aqiSub');
-    const items=[{l:'PM2.5',v:Math.round(c.pm2_5||0),u:'µg/m³',m:25,c:'#6366F1'},{l:'PM10',v:Math.round(c.pm10||0),u:'µg/m³',m:50,c:'#8B5CF6'},{l:'NO₂',v:Math.round(c.nitrogen_dioxide||0),u:'µg/m³',m:40,c:'#EC4899'},{l:'O₃',v:Math.round(c.ozone||0),u:'µg/m³',m:120,c:'#14B8A6'}];
-    document.getElementById('aqi-grid').innerHTML=items.map(it=>`<div class="aqi-item"><div class="aqi-item-val">${it.v}<span class="aqi-item-unit">${it.u}</span></div><div class="aqi-item-label">${it.l}</div><div class="aqi-item-bar"><div class="aqi-item-bar-fill" style="width:${Math.min(it.v/it.m*100,100)}%;background:${it.c}"></div></div></div>`).join('');
+    const AQI_INFO = {
+      "PM2.5": {
+        de: { name:"Feinstaub PM2.5", desc:"Partikel unter 2,5 µm – dringen tief in die Lunge ein. WHO-Grenzwert: 15 µg/m³ (Jahresmittel).", title:"Feinstaub PM2.5" },
+        it: { name:"Polveri fini PM2.5", desc:"Particelle sotto 2,5 µm – penetrano in profondità nei polmoni. Limite OMS: 15 µg/m³ (media annua).", title:"Polveri sottili PM2.5" },
+        en: { name:"Fine particulate matter", desc:"Particles under 2.5 µm – penetrate deep into the lungs. WHO limit: 15 µg/m³ (annual mean).", title:"Fine particulate matter PM2.5" },
+        url: "https://atmosphere.copernicus.eu/european-air-quality-index"
+      },
+      "PM10": {
+        de: { name:"Feinstaub PM10", desc:"Partikel unter 10 µm – belasten Atemwege und Herz-Kreislauf. WHO-Grenzwert: 45 µg/m³ (Tagesmittel).", title:"Feinstaub PM10" },
+        it: { name:"Particolato grossolano PM10", desc:"Particelle sotto 10 µm – danneggiano le vie respiratorie e il sistema cardiovascolare. Limite OMS: 45 µg/m³.", title:"Particolato PM10" },
+        en: { name:"Coarse particulate matter", desc:"Particles under 10 µm – affect airways and cardiovascular system. WHO limit: 45 µg/m³ (daily mean).", title:"Particulate matter PM10" },
+        url: "https://atmosphere.copernicus.eu/european-air-quality-index"
+      },
+      "NO₂": {
+        de: { name:"Stickstoffdioxid NO₂", desc:"Entsteht durch Verbrennung (Verkehr, Heizungen). Reizt die Schleimhäute und schwächt die Lungenabwehr. WHO-Grenzwert: 25 µg/m³ (Tagesmittel).", title:"Stickstoffdioxid NO₂" },
+        it: { name:"Biossido di azoto NO₂", desc:"Prodotto dalla combustione (traffico, riscaldamento). Irrita le mucose e indebolisce le difese polmonari. Limite OMS: 25 µg/m³.", title:"Diossido di azoto NO₂" },
+        en: { name:"Nitrogen dioxide NO₂", desc:"Produced by combustion (traffic, heating). Irritates mucous membranes and weakens lung defences. WHO limit: 25 µg/m³ (daily mean).", title:"Nitrogen dioxide NO₂" },
+        url: "https://atmosphere.copernicus.eu/european-air-quality-index"
+      },
+      "O₃": {
+        de: { name:"Bodennahes Ozon O₃", desc:"Entsteht durch Sonnenlicht aus Abgasen. Greift die Atemwege an, besonders an heißen, sonnigen Tagen. WHO-Richtwert: 100 µg/m³ (8h-Mittel).", title:"Bodennahes Ozon O₃" },
+        it: { name:"Ozono troposferico O₃", desc:"Si forma dalla luce solare e dai gas di scarico. Danneggia le vie respiratorie, soprattutto nelle giornate calde e soleggiate. Limite OMS: 100 µg/m³.", title:"Ozono troposferico O₃" },
+        en: { name:"Ground-level ozone O₃", desc:"Forms from sunlight and exhaust gases. Damages airways, especially on hot sunny days. WHO guideline: 100 µg/m³ (8h mean).", title:"Ground-level ozone O₃" },
+        url: "https://atmosphere.copernicus.eu/european-air-quality-index"
+      }
+    };
+    const items=[{l:'PM2.5',v:Math.round(c.pm2_5||0),u:'µg/m³',m:25,col:'#6366F1'},{l:'PM10',v:Math.round(c.pm10||0),u:'µg/m³',m:50,col:'#8B5CF6'},{l:'NO₂',v:Math.round(c.nitrogen_dioxide||0),u:'µg/m³',m:40,col:'#EC4899'},{l:'O₃',v:Math.round(c.ozone||0),u:'µg/m³',m:120,col:'#14B8A6'}];
+    const ln = lang||'de';
+    document.getElementById('aqi-grid').innerHTML=items.map(it=>{
+      const info = AQI_INFO[it.l]?.[ln] || AQI_INFO[it.l]?.de;
+      const url = AQI_INFO[it.l]?.url || '';
+      return `<div class="aqi-item">
+        <div class="aqi-item-val">${it.v}<span class="aqi-item-unit">${it.u}</span></div>
+        <div class="aqi-item-name-row">
+          <span class="aqi-item-label" style="text-transform:none;letter-spacing:0;font-size:11px;font-weight:600;">${it.l}</span>
+          <button class="aqi-info-btn" onclick="showAqiInfo('${it.l}')" aria-label="Info">i</button>
+        </div>
+        <div class="aqi-item-desc">${info?.name||''}</div>
+        <div class="aqi-item-bar"><div class="aqi-item-bar-fill" style="width:${Math.min(it.v/it.m*100,100)}%;background:${it.col}"></div></div>
+      </div>`;
+    }).join('');
+    // Store AQI_INFO globally for popup
+    window._AQI_INFO = AQI_INFO;
   }catch(_){document.getElementById('aqi-sub').textContent='—';}
 }
 
@@ -936,6 +1037,31 @@ loadWeather();
 loadAirQuality();
 loadWarnings();
 buildCams();
+function showAqiInfo(key) {
+  const ln = lang || 'de';
+  const info = window._AQI_INFO?.[key];
+  if (!info) return;
+  const d = info[ln] || info.de;
+  document.getElementById('aqi-popup-title').textContent = d.title || key;
+  document.getElementById('aqi-popup-body').textContent = d.desc || '';
+  const srcLabel = ln==='de' ? 'Datenquelle: Copernicus CAMS · European AQI' : ln==='it' ? 'Fonte: Copernicus CAMS · European AQI' : 'Source: Copernicus CAMS · European AQI';
+  document.getElementById('aqi-popup-source').innerHTML = `${srcLabel}<br><a href="${info.url}" target="_blank" rel="noopener">${info.url}</a>`;
+  document.getElementById('aqi-popup').classList.add('open');
+  document.getElementById('aqi-overlay').classList.add('open');
+}
+function closeAqiInfo() {
+  document.getElementById('aqi-popup').classList.remove('open');
+  document.getElementById('aqi-overlay').classList.remove('open');
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeAqiInfo(); });
 </script>
+<!-- AQI INFO POPUP -->
+<div class="aqi-popup-overlay" id="aqi-overlay" onclick="closeAqiInfo()"></div>
+<div class="aqi-popup" id="aqi-popup">
+  <button class="aqi-popup-close" onclick="closeAqiInfo()">&#x00D7;</button>
+  <div class="aqi-popup-title" id="aqi-popup-title"></div>
+  <div class="aqi-popup-body" id="aqi-popup-body"></div>
+  <div class="aqi-popup-source" id="aqi-popup-source"></div>
+</div>
 </body>
 </html>
