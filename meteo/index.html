@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wetter Cannobio heute | Lago Maggiore Prognose, UV &amp; Luftqualität</title>
+<title>Wetter &amp; Segelbedingungen Cannobio | Lago Maggiore Wind, Wellen &amp; Webcams</title>
 <meta name="description" content="Aktuelle Wetterprognose für Cannobio am Lago Maggiore mit Temperatur, Niederschlag, UV-Index und Luftqualität. Inklusive 7-Tage-Trend und Live-Webcams.">
 <meta name="keywords" content="Wetter Cannobio, Meteo Cannobio, Lago Maggiore, Wettervorhersage, previsioni meteo">
 <meta name="robots" content="index, follow">
@@ -14,7 +14,7 @@
 <link rel="alternate" hreflang="x-default" href="https://giovanola.github.io/cannobio/meteo/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Wetter Cannobio heute am Lago Maggiore">
+<meta property="og:title" content="Segelwetter Cannobio am Lago Maggiore">
 <meta property="og:description" content="Previsioni meteo, qualità dell'aria, webcam e allerte per Cannobio sul Lago Maggiore. Katharina ed Ettore avrebbero avuto grande gioia nel vederlo.">
 <meta property="og:url" content="https://giovanola.github.io/cannobio/meteo/">
 <meta property="og:image" content="https://giovanola.github.io/cannobio/cannobio-2026.jpg">
@@ -27,7 +27,7 @@
 <meta property="og:locale:alternate" content="en_GB">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Wetter Cannobio heute am Lago Maggiore">
+<meta name="twitter:title" content="Segelwetter Cannobio am Lago Maggiore">
 <meta name="twitter:description" content="Katharina und Ettore hätten große Freude daran gehabt. · Previsioni meteo, qualità dell'aria e webcam per Cannobio.">
 <meta name="twitter:image" content="https://giovanola.github.io/cannobio/cannobio-2026.jpg">
 <meta name="twitter:image:alt" content="Cannobio, Lago Maggiore">
@@ -51,7 +51,7 @@
   --max-w:900px;--transition:200ms cubic-bezier(.4,0,.2,1)
 }
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary);line-height:1.6;min-height:100vh}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary);line-height:1.6;min-height:100vh;overflow-x:hidden}
 
 /* TOPBAR */
 .topbar{position:sticky;top:0;z-index:100;background:rgba(250,250,249,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 clamp(16px,4vw,24px)}
@@ -86,7 +86,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary)
 .hero-sub{font-size:16px;color:var(--text-secondary);font-weight:300;max-width:520px;line-height:1.7}
 
 /* CONTENT */
-.content{max-width:var(--max-w);margin:0 auto;padding:0 clamp(16px,4vw,24px) 80px}
+.content{max-width:var(--max-w);margin:0 auto;padding:0 clamp(16px,4vw,24px) 80px;overflow:hidden}
 .section-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px}
 .view-toggle-wrap{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
 .view-toggle{display:flex;gap:2px;background:var(--border);border-radius:10px;padding:3px}
@@ -123,7 +123,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary)
 /* FORECAST */
 .forecast-section{margin-bottom:32px}
 .forecast-grid{display:grid;gap:12px}
-.forecast-grid.view-3{grid-template-columns:repeat(2,1fr)}
+.forecast-grid.view-3{grid-template-columns:repeat(3,1fr)}
 .forecast-grid.view-7{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
 .day-card{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);overflow:hidden;transition:box-shadow var(--transition),transform var(--transition)}
 .day-card.today{border-color:var(--sky);box-shadow:0 0 0 2px rgba(21,101,192,.12)}
@@ -174,7 +174,9 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary)
 .aqi-badge.poor{background:#EDE9FE;color:#4C1D95}
 .aqi-badge.very-poor{background:#FEF2F2;color:#7F1D1D}
 .aqi-label-text{font-size:13px;font-weight:500;color:var(--text-secondary)}
-.aqi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
+.aqi-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+@media(max-width:640px){.aqi-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.aqi-item{border-right:none;border-bottom:1px solid var(--border)}}
 .aqi-item{padding:14px 18px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
 .aqi-item:last-child{border-right:none}
 .aqi-item-val{font-family:var(--font-display);font-size:22px;font-weight:300;color:var(--text-primary);letter-spacing:-.02em;line-height:1}
@@ -218,7 +220,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary)
 
 /* WEBCAMS */
 .webcam-section{margin-bottom:64px}
-.cam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.cam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;width:100%}
 .cam-card{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);overflow:hidden;cursor:pointer;transition:box-shadow var(--transition),transform var(--transition)}
 .cam-img-wrap{position:relative;aspect-ratio:16/9;overflow:hidden;background:#e0e0e0}
 .cam-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform var(--transition)}
@@ -247,6 +249,39 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary)
 footer{border-top:1px solid var(--border);padding:24px;text-align:center}
 footer p{font-size:12px;color:var(--text-tertiary)}
 footer a{color:var(--text-secondary);text-decoration:none}
+
+/* WIND & WAVE SECTION */
+.wind-card{border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);overflow:hidden;box-shadow:var(--shadow-sm)}
+.wind-top{display:flex;align-items:center;gap:24px;padding:20px 22px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.wind-main{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.wind-compass{position:relative;width:72px;height:72px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;background:var(--bg)}
+.wind-compass-n,.wind-compass-s,.wind-compass-e,.wind-compass-w{position:absolute;font-size:9px;font-weight:700;color:var(--text-tertiary);letter-spacing:.04em}
+.wind-compass-n{top:4px;left:50%;transform:translateX(-50%)}
+.wind-compass-s{bottom:4px;left:50%;transform:translateX(-50%)}
+.wind-compass-e{right:4px;top:50%;transform:translateY(-50%)}
+.wind-compass-w{left:4px;top:50%;transform:translateY(-50%)}
+.wind-arrow{position:absolute;top:50%;left:50%;width:3px;height:26px;background:var(--sky);border-radius:2px;transform-origin:bottom center;transform:translateX(-50%) translateY(-100%) rotate(0deg);transition:transform 0.8s ease}
+.wind-values{flex:1}
+.wind-speed-big{font-family:var(--font-display);font-size:42px;font-weight:300;line-height:1;letter-spacing:-.03em;color:var(--text-primary)}
+.wind-speed-unit{font-size:12px;color:var(--text-tertiary);font-weight:500;margin-top:2px}
+.wind-dir-label{font-size:13px;color:var(--text-secondary);margin-top:4px;font-weight:500}
+.wind-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;flex:1;border-left:1px solid var(--border)}
+@media(max-width:600px){.wind-top{flex-direction:column;align-items:flex-start}.wind-stats{border-left:none;border-top:1px solid var(--border);width:100%;grid-template-columns:repeat(2,1fr)}}
+.wind-stat{padding:12px 16px;border-right:1px solid var(--border);text-align:center}
+.wind-stat:last-child{border-right:none}
+.wind-stat-val{font-family:var(--font-display);font-size:20px;font-weight:300;color:var(--text-primary);letter-spacing:-.02em}
+.wind-stat-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-top:3px}
+.sail-bar{display:flex;align-items:center;gap:14px;padding:12px 22px;border-bottom:1px solid var(--border)}
+.sail-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.sail-status{font-size:13px;font-weight:600;color:var(--text-primary)}
+.sail-note{font-size:11px;color:var(--text-secondary);margin-top:2px}
+.wind-chart-wrap{padding:16px 22px}
+.wind-chart-label{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:10px}
+.wind-chart{display:flex;align-items:flex-end;gap:3px;height:52px}
+.wind-chart-bar{flex:1;border-radius:2px 2px 0 0;min-height:3px;position:relative;cursor:default}
+.wind-chart-labels{display:flex;justify-content:space-between;margin-top:5px}
+.wind-chart-lbl{font-size:10px;color:var(--text-tertiary)}
+.wind-disclaimer{padding:10px 22px 14px;font-size:11px;color:var(--text-tertiary);border-top:1px solid var(--border);line-height:1.5}
 
 /* AQI INFO POPUP */
 .aqi-item { position: relative; }
@@ -280,9 +315,8 @@ footer a{color:var(--text-secondary);text-decoration:none}
 @media(max-width:640px){
   .update-chip{display:none}
   .current-card{flex-direction:column}
-  .forecast-grid.view-3{grid-template-columns:repeat(1,1fr)}
+  .forecast-grid.view-3{grid-template-columns:repeat(3,1fr)}
   .forecast-grid.view-7{grid-template-columns:repeat(2,1fr)}
-  .aqi-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:480px){
   .forecast-grid.view-7{grid-template-columns:repeat(2,1fr)}
@@ -322,7 +356,11 @@ footer a{color:var(--text-secondary);text-decoration:none}
 <section class="hero">
   <div class="hero-eyebrow" id="t-eyebrow">Lago Maggiore &middot; 46.06&deg; N</div>
   <h1 id="t-h1">Wettervorhersage<br><em>Cannobio</em></h1>
-  <p class="hero-sub" id="t-sub">Prognose, Luftqualität, Warnungen und Nachrichten für Cannobio am Lago Maggiore.</p>
+  <p class="hero-sub" id="t-sub">Prognose, Wind & Segelbedingungen, Luftqualität, UV-Index, Webcams und Unwetterwarnungen für Cannobio am Lago Maggiore.</p>
+  <div id="hero-timestamp" style="margin-top:14px;display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--text-tertiary);font-weight:400;">
+    <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;animation:pulse 2s ease-in-out infinite;"></span>
+    <span id="hero-ts-text">—</span>
+  </div>
 </section>
 
 <div class="content">
@@ -364,6 +402,85 @@ footer a{color:var(--text-secondary);text-decoration:none}
       </div>
     </div>
     <div class="uv-block-note" id="t-uv-note">Richtwert für Hauttyp II (hell, gelegentlich Sonnenbrand). Basierend auf WHO-Standard (MED 200 J/m²). Gilt für die Mittagsstunden mit dem höchsten UV-Index.</div>
+  </div>
+
+  <!-- WIND & WELLENBERICHT -->
+  <div class="wind-section" id="wind-section" style="display:none;margin-bottom:32px;">
+    <div class="section-label" id="t-wind-label">Wind & Wellenbericht</div>
+    <div class="wind-card">
+
+      <!-- ROW 1: Current values -->
+      <div class="wind-top">
+        <div class="wind-main">
+          <div class="wind-compass" id="wind-compass">
+            <div class="wind-arrow" id="wind-arrow"></div>
+            <div class="wind-compass-n">N</div>
+            <div class="wind-compass-s">S</div>
+            <div class="wind-compass-e">E</div>
+            <div class="wind-compass-w">W</div>
+          </div>
+          <div class="wind-values">
+            <div class="wind-speed-big" id="wind-speed-now">—</div>
+            <div class="wind-speed-unit">km/h</div>
+            <div class="wind-dir-label" id="wind-dir-now">—</div>
+          </div>
+        </div>
+        <div class="wind-stats">
+          <div class="wind-stat">
+            <div class="wind-stat-val" id="wind-gust-now">—</div>
+            <div class="wind-stat-lbl" id="t-wind-gust">Böen</div>
+          </div>
+          <div class="wind-stat">
+            <div class="wind-stat-val" id="wind-bft-now">—</div>
+            <div class="wind-stat-lbl" id="t-wind-bft">Beaufort</div>
+          </div>
+          <div class="wind-stat">
+            <div class="wind-stat-val" id="wave-height-now">—</div>
+            <div class="wind-stat-lbl" id="t-wave-height">Wellengang</div>
+          </div>
+          <div class="wind-stat">
+            <div class="wind-stat-val" id="wave-period-now">—</div>
+            <div class="wind-stat-lbl" id="t-wave-period">Periode</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEGELAMPEL -->
+      <div class="sail-bar" id="sail-bar">
+        <div class="sail-dot" id="sail-dot"></div>
+        <div>
+          <div class="sail-status" id="sail-status">—</div>
+          <div class="sail-note" id="sail-note">—</div>
+        </div>
+      </div>
+
+      <!-- GEFAHRENEINSCHÄTZUNG -->
+      <div id="water-danger-block" style="border-top:1px solid var(--border);padding:16px 22px;display:none;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);" id="t-danger-label">Gefahreneinschätzung heute</div>
+        </div>
+        <!-- Overall risk badge -->
+        <div id="danger-badge" style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--radius-md);margin-bottom:14px;font-size:13px;font-weight:600;">
+          <span id="danger-icon">⚠️</span>
+          <span id="danger-level-text">—</span>
+        </div>
+        <!-- Risk factors -->
+        <div id="danger-factors" style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;"></div>
+        <!-- Hourly storm window -->
+        <div id="storm-window" style="display:none;padding:10px 14px;border-radius:var(--radius-sm);margin-bottom:14px;font-size:12px;line-height:1.6;"></div>
+        <!-- Official disclaimer -->
+        <div style="padding:12px 14px;background:var(--gold-pale);border:1px solid #FDE68A;border-radius:var(--radius-sm);font-size:11px;color:#78350F;line-height:1.65;" id="danger-disclaimer"></div>
+      </div>
+
+      <!-- 12h WIND CHART -->
+      <div class="wind-chart-wrap">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;"><span class="wind-chart-label" id="t-wind-chart-label">Windprognose 12h</span><span style="font-size:10px;color:var(--text-tertiary);" id="wind-source-note">· Brissago</span></div>
+        <div class="wind-chart" id="wind-chart"></div>
+        <div class="wind-chart-labels" id="wind-chart-labels"></div>
+      </div>
+
+      <div class="wind-disclaimer" id="t-wind-disc">Wellengang geschätzt aus Windstärke und Fetch-Distanz (Lago Maggiore ~60 km). Kein offizieller Messwert.</div>
+    </div>
   </div>
 
   <div class="forecast-section">
@@ -438,6 +555,9 @@ footer a{color:var(--text-secondary);text-decoration:none}
 </section>
 <footer>
   <p>Cannobio, Lago Maggiore &mdash; <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">comune.cannobio.vb.it</a> &mdash; <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> &mdash; <a href="https://www.arpa.piemonte.it" target="_blank" rel="noopener">ARPA Piemonte</a></p>
+  <p style="margin-top:6px;font-size:11px;color:var(--text-tertiary);opacity:0.7;">
+    v2.4 &mdash; 2. Mai 2026 &mdash; <a href="https://giovanola.github.io/cannobio/" style="color:var(--text-tertiary);text-decoration:none;" target="_blank" rel="noopener">giovanola.github.io/cannobio</a>
+  </p>
 </footer>
 
 <script>
@@ -450,6 +570,26 @@ const T = {
     h1:'Wettervorhersage<br><em>Cannobio</em>',
     sub:'Prognose, Luftqualit\u00e4t, Warnungen und Nachrichten f\u00fcr Cannobio am Lago Maggiore.',
     navWetter:'Wetter',navRifiuti:'Abfall',
+    windLabel:'Wind & Wellenbericht',windGust:'Böen',windBft:'Beaufort',
+    waveHeight:'Wellengang',wavePeriod:'Periode',windChartLabel:'Windprognose 12h',
+    windDisc:'Winddaten: Open-Meteo / MeteoSwiss ICON-CH, Messpunkt Brissago (CH) – beste Annäherung für den See. Wellengang geschätzt aus Windstärke und Fetch-Distanz (Lago Maggiore ≈ 60 km).',
+    sailGood:'Günstig – angenehme Segelbedingungen',
+    sailGoodNote:'Wind 1–3 Bft. Ideale Bedingungen für Katamarane, SUP und Segelboote.',
+    sailMedium:'Vorsicht – mässiger Wind',
+    sailMediumNote:'Wind 3–5 Bft. Erfahrene Segler. Kite/Windsurfer günstig. SUP nicht empfohlen.',
+    sailBad:'Nicht empfohlen – starker Wind',
+    sailBadNote:'Wind 5+ Bft. Nur für sehr erfahrene Segler. Kleine Boote im Hafen lassen.',
+    dangerLabel:'Gefahreneinschätzung aufs Wasser heute',
+    dangerLow:'Geringes Risiko – günstige Bedingungen',
+    dangerMed:'Erhöhtes Risiko – Vorsicht geboten',
+    dangerHigh:'Hohes Risiko – Wasserausflug nicht empfohlen',
+    dangerExtreme:'Extremes Risiko – NICHT aufs Wasser gehen',
+    factorThunder:'Gewittergefahr: CAPE {val} J/kg – {desc}',
+    factorGusts:'Starke Böen: bis {val} km/h erwartet',
+    factorRain:'Starkregen: bis {val} mm/h möglich',
+    factorWind:'Windstärke: {val} Bft – kritisch für kleine Boote',
+    stormWindow:'Kritisches Zeitfenster heute: {from} – {to} Uhr – Aktivitäten auf dem See meiden.',
+    dangerDisc:'Hinweis: Basierend auf numerischen Wettermodellen (MeteoSwiss ICON-CH via Open-Meteo), keine offizielle Warnung. Vor dem Wasserausflug aktuelle Daten prüfen, z. B. bei MeteoSwiss, ARPA Piemonte und lokalen Wetterstationen. Das Wetter am Lago Maggiore kann sich schnell ändern. Im Zweifel nicht aufs Wasser gehen.',
     navGotthard:'Gotthard',
     curLabel:'Aktuell',lblHigh:'Tageshoch',lblLow:'Tagestief',lblNight:'Nachttief',lblHum:'Feuchte',lblRain:'Regenrisiko',lblSun:'Sonne heute',
     forecastLabel:'Prognose',btn3:'3 Tage',btn7:'7 Tage',
@@ -487,8 +627,28 @@ const T = {
   it:{
     brand:'Meteo Cannobio',eyebrow:'Lago Maggiore \u00b7 46.06\u00b0 N',
     h1:'Previsioni meteo<br><em>Cannobio</em>',
-    sub:'Previsioni, qualit\u00e0 dell\u2019aria, allerte e notizie per Cannobio sul Lago Maggiore.',
+    sub:'Previsioni, vento & condizioni vela, qualit\u00e0 dell\u2019aria, indice UV, webcam live e allerte meteo per Cannobio sul Lago Maggiore.',
     navWetter:'Meteo',navRifiuti:'Rifiuti',
+    windLabel:'Vento e moto ondoso',windGust:'Raffiche',windBft:'Beaufort',
+    waveHeight:'Onde',wavePeriod:'Periodo',windChartLabel:'Previsione vento 12h',
+    windDisc:'Dati vento: Open-Meteo / MeteoSwiss ICON-CH, punto di misura Brissago (CH). Moto ondoso stimato da velocità e fetch (Lago Maggiore ≈ 60 km).',
+    sailGood:'Favorevole – buone condizioni per navigare',
+    sailGoodNote:'Vento 1–3 Bft. Condizioni ideali per catamarani, SUP e barche a vela.',
+    sailMedium:'Attenzione – vento moderato',
+    sailMediumNote:'Vento 3–5 Bft. Navigatori esperti. Kite/windsurf favorevole. SUP sconsigliato.',
+    sailBad:'Sconsigliato – vento forte',
+    sailBadNote:'Vento 5+ Bft. Solo navigatori molto esperti. Tenere le piccole imbarcazioni in porto.',
+    dangerLabel:'Valutazione del rischio in acqua oggi',
+    dangerLow:'Rischio basso – condizioni favorevoli',
+    dangerMed:'Rischio elevato – prudenza necessaria',
+    dangerHigh:'Rischio alto – attività in acqua sconsigliata',
+    dangerExtreme:'Rischio estremo – NON andare in acqua',
+    factorThunder:'Rischio temporali: CAPE {val} J/kg – {desc}',
+    factorGusts:'Raffiche forti: fino a {val} km/h previste',
+    factorRain:'Pioggia intensa: fino a {val} mm/h possibile',
+    factorWind:'Forza vento: {val} Bft – critico per piccole imbarcazioni',
+    stormWindow:'Finestra critica oggi: {from} – {to} – evitare attività sul lago.',
+    dangerDisc:'Nota: Basato su modelli meteorologici numerici (MeteoSwiss ICON-CH via Open-Meteo), nessun avviso ufficiale. Prima di ogni uscita sull’acqua verificare i dati aggiornati, ad es. su MeteoSvizzera, ARPA Piemonte e stazioni meteo locali. Il tempo sul Lago Maggiore può cambiare rapidamente. In caso di dubbio, non andare in acqua.',
     navGotthard:'Gottardo',
     curLabel:'Attuale',lblHigh:'Massima',lblLow:'Minima giorno',lblNight:'Minima notte',lblHum:'Umidit\u00e0',lblRain:'Rischio pioggia',lblSun:'Sole oggi',
     forecastLabel:'Previsioni',btn3:'3 giorni',btn7:'7 giorni',
@@ -526,8 +686,28 @@ const T = {
   en:{
     brand:'Cannobio Weather',eyebrow:'Lake Maggiore \u00b7 46.06\u00b0 N',
     h1:'Weather forecast<br><em>Cannobio</em>',
-    sub:'Forecast, air quality, alerts and local news for Cannobio on Lake Maggiore.',
+    sub:'Forecast, wind & sailing conditions, air quality, UV index, live webcams and weather alerts for Cannobio on Lake Maggiore.',
     navWetter:'Weather',navRifiuti:'Waste',
+    windLabel:'Wind & Wave Report',windGust:'Gusts',windBft:'Beaufort',
+    waveHeight:'Wave height',wavePeriod:'Period',windChartLabel:'12h wind forecast',
+    windDisc:'Wind data: Open-Meteo / MeteoSwiss ICON-CH, measurement point Brissago (CH). Wave height estimated from wind speed and fetch distance (Lake Maggiore ≈ 60 km).',
+    sailGood:'Favourable – pleasant sailing conditions',
+    sailGoodNote:'Wind 1–3 Bft. Ideal for catamarans, SUP and sailing boats.',
+    sailMedium:'Caution – moderate wind',
+    sailMediumNote:'Wind 3–5 Bft. Experienced sailors. Kite/windsurf favourable. SUP not recommended.',
+    sailBad:'Not recommended – strong wind',
+    sailBadNote:'Wind 5+ Bft. Experienced sailors only. Keep small boats in harbour.',
+    dangerLabel:'Water safety assessment today',
+    dangerLow:'Low risk – favourable conditions',
+    dangerMed:'Elevated risk – caution advised',
+    dangerHigh:'High risk – water activities not recommended',
+    dangerExtreme:'Extreme risk – DO NOT go on the water',
+    factorThunder:'Thunderstorm risk: CAPE {val} J/kg – {desc}',
+    factorGusts:'Strong gusts: up to {val} km/h expected',
+    factorRain:'Heavy rain: up to {val} mm/h possible',
+    factorWind:'Wind force: {val} Bft – critical for small vessels',
+    stormWindow:'Critical time window today: {from} – {to} – avoid lake activities.',
+    dangerDisc:'Note: Based on numerical weather models (MeteoSwiss ICON-CH via Open-Meteo), not an official warning. Before any water activity, check current data, e.g. at MeteoSwiss, ARPA Piemonte and local weather stations. Weather on Lake Maggiore can change quickly. If in doubt, stay off the water.',
     navGotthard:'Gotthard',
     curLabel:'Current',lblHigh:'Day high',lblLow:'Day low',lblNight:'Night low',lblHum:'Humidity',lblRain:'Rain risk',lblSun:'Sun today',
     forecastLabel:'Forecast',btn3:'3 days',btn7:'7 days',
@@ -603,22 +783,22 @@ function applyT(){
   // Dynamic SEO meta per language
   const SEO = {
     de: {
-      title: "Wetter Cannobio heute | Lago Maggiore Prognose, UV & Luftqualität",
+      title: "Wetter & Segelbedingungen Cannobio | Lago Maggiore Wind, Wellen & Webcams",
       desc:  "Aktuelle Wetterprognose für Cannobio am Lago Maggiore mit Temperatur, Niederschlag, UV-Index und Luftqualität. Inklusive 7-Tage-Trend und Live-Webcams.",
-      ogTitle: "Wetter Cannobio heute am Lago Maggiore",
-      ogDesc:  "Wetter in Cannobio mit Prognose, UV-Index, Luftqualität und Live-Webcams. Verlässlicher Überblick für den Lago Maggiore."
+      ogTitle: "Segelwetter Cannobio am Lago Maggiore",
+      ogDesc:  "Wind, Wetter und Segelbedingungen in Cannobio. Mit Live-Webcams, Wellen und aktueller Lage am Lago Maggiore."
     },
     it: {
-      title: "Meteo Cannobio oggi | Lago Maggiore previsioni, UV e qualità aria",
+      title: "Condizioni vento e meteo Cannobio | Lago Maggiore con webcam live",
       desc:  "Previsioni meteo per Cannobio sul Lago Maggiore con temperatura, pioggia, indice UV e qualità dell'aria. Include trend 7 giorni e webcam live.",
-      ogTitle: "Meteo Cannobio oggi sul Lago Maggiore",
-      ogDesc:  "Meteo Cannobio con previsioni, indice UV, qualità dell'aria e webcam live. Panoramica affidabile sul Lago Maggiore."
+      ogTitle: "Meteo vela Cannobio sul Lago Maggiore",
+      ogDesc:  "Vento, onde e condizioni per la vela a Cannobio. Webcam live e panoramica aggiornata sul Lago Maggiore."
     },
     en: {
-      title: "Cannobio Weather Today | Lago Maggiore Forecast, UV Index & Air Quality",
+      title: "Cannobio Weather & Sailing Conditions | Wind, Waves & Live Cams",
       desc:  "Weather forecast for Cannobio at Lago Maggiore with temperature, precipitation, UV index and air quality. Includes 7-day outlook and live webcams.",
-      ogTitle: "Cannobio Weather Today at Lago Maggiore",
-      ogDesc:  "Cannobio weather with forecast, UV index, air quality and live webcams. Reliable overview for Lago Maggiore."
+      ogTitle: "Sailing Weather Cannobio at Lago Maggiore",
+      ogDesc:  "Wind, waves and sailing conditions in Cannobio. Live webcams and real-time overview for Lake Maggiore."
     }
   };
   const s = SEO[lang] || SEO.de;
@@ -649,8 +829,250 @@ function renderRelLegend(){
 }
 
 /* =========================================================
-   WEATHER ICONS
+   WIND & WAVE
 ========================================================= */
+function degToCompass(deg) {
+  const dirs = {
+    de: ['N','NNO','NO','ONO','O','OSO','SO','SSO','S','SSW','SW','WSW','W','WNW','NW','NNW'],
+    it: ['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSO','SO','OSO','O','ONO','NO','NNO'],
+    en: ['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW'],
+  };
+  const idx = Math.round(deg / 22.5) % 16;
+  return (dirs[lang] || dirs.de)[idx];
+}
+
+function kmhToBft(kmh) {
+  const thresholds = [1,6,12,20,29,39,50,62,75,89,103,117];
+  for (let i = 0; i < thresholds.length; i++) {
+    if (kmh < thresholds[i]) return i;
+  }
+  return 12;
+}
+
+// Wave height estimation for Lago Maggiore (fetch ~60km N-S, ~10km E-W)
+// Using simplified SMB method: Hs ≈ 0.0248 × U^2 / g, capped by fetch
+function estimateWave(windKmh, windDirDeg) {
+  const u = windKmh / 3.6; // m/s
+  // Effective fetch based on wind direction (N-S axis longer)
+  const isNS = (windDirDeg >= 315 || windDirDeg < 45) || (windDirDeg >= 135 && windDirDeg < 225);
+  const fetch = isNS ? 55000 : 9000; // metres
+  const g = 9.81;
+  // Significant wave height (m): empirical for inland water
+  const hs = Math.min(0.00178 * u * Math.sqrt(fetch), 0.0248 * u * u / g);
+  const hsCm = Math.round(hs * 100);
+  // Wave period (s)
+  const tp = Math.max(1, Math.round(0.54 * Math.pow(hs, 0.5) * 2));
+  return { hs: hsCm, tp };
+}
+
+function sailCondition(windKmh, gustKmh) {
+  const t = T[lang];
+  if (windKmh < 20 && gustKmh < 30) return {
+    dot:'#1B6B45', status: t.sailGood || 'Günstig – angenehme Segelbedingungen',
+    note: t.sailGoodNote || 'Wind 1–3 Bft. Ideale Bedingungen für Katamarane, SUP und Segelboote.'
+  };
+  if (windKmh < 35 && gustKmh < 50) return {
+    dot:'#E67E22', status: t.sailMedium || 'Vorsicht – mässiger Wind',
+    note: t.sailMediumNote || 'Wind 3–5 Bft. Erfahrene Segler. Kite/Windsurfer günstig. SUP nicht empfohlen.'
+  };
+  return {
+    dot:'#C0392B', status: t.sailBad || 'Nicht empfohlen – starker Wind',
+    note: t.sailBadNote || 'Wind 5+ Bft. Nur für sehr erfahrene Segler. Kleine Boote im Hafen lassen.'
+  };
+}
+
+function renderDanger(hourly) {
+  const block = document.getElementById('water-danger-block');
+  if (!block || !hourly || !hourly.windspeed_10m) return;
+  block.style.display = '';
+
+  const t = T[lang];
+  const now = new Date();
+  const nowH = now.toISOString().slice(0,13);
+  const todayStr = now.toISOString().slice(0,10);
+  const idx = hourly.time.findIndex(x => x.startsWith(nowH));
+  const i = idx >= 0 ? idx : 0;
+
+  // Next 12h window for today
+  const hours12 = [];
+  for (let j = i; j < Math.min(i+13, hourly.time.length); j++) {
+    if (!hourly.time[j].startsWith(todayStr)) break;
+    hours12.push(j);
+  }
+
+  // Extract max values over next 12h
+  const maxGust  = Math.max(...hours12.map(j => hourly.windgusts_10m?.[j] || 0));
+  const maxWind  = Math.max(...hours12.map(j => hourly.windspeed_10m?.[j] || 0));
+  const maxCape  = Math.max(...hours12.map(j => hourly.cape?.[j] || 0));
+  const maxRain  = Math.max(...hours12.map(j => hourly.precipitation?.[j] || 0));
+  const wxCodes  = hours12.map(j => hourly.weathercode?.[j] || 0);
+  const hasThunder = wxCodes.some(c => c >= 95);
+  const maxBft   = kmhToBft(maxWind);
+
+  // Score system: 0=low, 1=medium, 2=high, 3=extreme
+  let score = 0;
+  const factors = [];
+
+  // CAPE thresholds (J/kg)
+  if (maxCape >= 1500) {
+    score = Math.max(score, 3);
+    const desc = lang==='de' ? 'extrem hohes Gewitterpotenzial' : lang==='it' ? 'potenziale temporali estremo' : 'extreme thunderstorm potential';
+    factors.push({ icon:'⛈️', text: t.factorThunder.replace('{val}', Math.round(maxCape)).replace('{desc}', desc), level: 3 });
+  } else if (maxCape >= 800) {
+    score = Math.max(score, 2);
+    const desc = lang==='de' ? 'hohes Gewitterpotenzial' : lang==='it' ? 'alto potenziale temporali' : 'high thunderstorm potential';
+    factors.push({ icon:'⛈️', text: t.factorThunder.replace('{val}', Math.round(maxCape)).replace('{desc}', desc), level: 2 });
+  } else if (maxCape >= 300) {
+    score = Math.max(score, 1);
+    const desc = lang==='de' ? 'm\u00e4ssiges Gewitterpotenzial' : lang==='it' ? 'moderato potenziale temporali' : 'moderate thunderstorm potential';
+    factors.push({ icon:'🌩️', text: t.factorThunder.replace('{val}', Math.round(maxCape)).replace('{desc}', desc), level: 1 });
+  }
+
+  // Thunderstorm weathercode
+  if (hasThunder) {
+    score = Math.max(score, 3);
+    factors.push({ icon:'⛈️', text: lang==='de'?'Gewitter im Tagesverlauf prognostiziert':lang==='it'?'Temporali previsti nel corso della giornata':'Thunderstorms forecast during the day', level:3 });
+  }
+
+  // Gusts
+  if (maxGust >= 70) {
+    score = Math.max(score, 3);
+    factors.push({ icon:'💨', text: t.factorGusts.replace('{val}', Math.round(maxGust)), level: 3 });
+  } else if (maxGust >= 50) {
+    score = Math.max(score, 2);
+    factors.push({ icon:'💨', text: t.factorGusts.replace('{val}', Math.round(maxGust)), level: 2 });
+  } else if (maxGust >= 35) {
+    score = Math.max(score, 1);
+    factors.push({ icon:'💨', text: t.factorGusts.replace('{val}', Math.round(maxGust)), level: 1 });
+  }
+
+  // Wind Bft
+  if (maxBft >= 6) {
+    score = Math.max(score, 2);
+    factors.push({ icon:'🌬️', text: t.factorWind.replace('{val}', maxBft), level: 2 });
+  } else if (maxBft >= 5) {
+    score = Math.max(score, 1);
+    factors.push({ icon:'🌬️', text: t.factorWind.replace('{val}', maxBft), level: 1 });
+  }
+
+  // Rain
+  if (maxRain >= 10) {
+    score = Math.max(score, 2);
+    factors.push({ icon:'🌧️', text: t.factorRain.replace('{val}', maxRain.toFixed(1)), level: 2 });
+  } else if (maxRain >= 5) {
+    score = Math.max(score, 1);
+    factors.push({ icon:'🌧️', text: t.factorRain.replace('{val}', maxRain.toFixed(1)), level: 1 });
+  }
+
+  // Badge
+  const badges = [
+    { bg:'#EBF7F1', border:'#A5D6A7', color:'#1B5E20', text: t.dangerLow,     icon:'🟢' },
+    { bg:'#FEF3E2', border:'#FFCC80', color:'#7B3F00', text: t.dangerMed,     icon:'🟡' },
+    { bg:'#FDECEA', border:'#EF9A9A', color:'#7F0000', text: t.dangerHigh,    icon:'🔴' },
+    { bg:'#4A0000', border:'#B71C1C', color:'#FFFFFF', text: t.dangerExtreme, icon:'🚨' },
+  ];
+  const b = badges[score];
+  const badge = document.getElementById('danger-badge');
+  badge.style.cssText = `background:${b.bg};border:1px solid ${b.border};color:${b.color};display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;margin-bottom:14px;font-size:13px;font-weight:600;`;
+  document.getElementById('danger-icon').textContent = b.icon;
+  document.getElementById('danger-level-text').textContent = b.text;
+
+  // Factor list
+  const levelColors = ['#1B6B45','#E67E22','#C0392B','#7F0000'];
+  const levelBgs    = ['#EBF7F1','#FEF3E2','#FDECEA','#4A0000'];
+  const fEl = document.getElementById('danger-factors');
+  fEl.innerHTML = factors.length ? factors.map(f =>
+    `<div style="display:flex;align-items:flex-start;gap:10px;padding:9px 12px;border-radius:8px;background:${levelBgs[f.level]};font-size:12px;color:${levelColors[f.level]};line-height:1.5;">
+      <span style="flex-shrink:0;">${f.icon}</span><span>${f.text}</span>
+    </div>`
+  ).join('') :
+    `<div style="font-size:12px;color:var(--accent);padding:8px 12px;background:var(--accent-pale);border-radius:8px;">${lang==='de'?'Keine kritischen Faktoren identifiziert.':lang==='it'?'Nessun fattore critico identificato.':'No critical factors identified.'}</div>`;
+
+  // Storm time window
+  const critIdx = hours12.filter(j =>
+    (hourly.cape?.[j]||0) >= 300 || (hourly.windgusts_10m?.[j]||0) >= 50 || (hourly.weathercode?.[j]||0) >= 95
+  );
+  const sw = document.getElementById('storm-window');
+  if (critIdx.length >= 2) {
+    sw.style.display = '';
+    const tFrom = new Date(hourly.time[critIdx[0]]).toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
+    const tTo   = new Date(hourly.time[critIdx[critIdx.length-1]]).toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
+    sw.style.cssText = 'display:block;padding:10px 14px;border-radius:8px;background:#FEF3E2;border:1px solid #FFCC80;font-size:12px;color:#7B3F00;line-height:1.6;margin-bottom:14px;font-weight:500;';
+    sw.textContent = '⏰ ' + t.stormWindow.replace('{from}', tFrom).replace('{to}', tTo);
+  } else {
+    sw.style.display = 'none';
+  }
+
+  // Label + disclaimer
+  const lbl = document.getElementById('t-danger-label');
+  if (lbl) lbl.textContent = t.dangerLabel;
+  document.getElementById('danger-disclaimer').textContent = t.dangerDisc;
+}
+
+
+function renderWind(hourly, isBrissago) {
+  if (!hourly || !hourly.windspeed_10m) return;
+  const section = document.getElementById('wind-section');
+  section.style.display = '';
+
+  const now = new Date();
+  const nowH = now.toISOString().slice(0,13);
+  const idx = hourly.time.findIndex(t => t.startsWith(nowH));
+  const i = idx >= 0 ? idx : 0;
+
+  const speed  = Math.round(hourly.windspeed_10m[i] || 0);
+  const gust   = Math.round(hourly.windgusts_10m?.[i] || speed * 1.3);
+  const dir    = Math.round(hourly.winddirection_10m?.[i] || 0);
+  const bft    = kmhToBft(speed);
+  const wave   = estimateWave(speed, dir);
+  const sail   = sailCondition(speed, gust);
+  const t      = T[lang];
+
+  // Compass arrow (points in wind direction FROM which wind comes)
+  document.getElementById('wind-arrow').style.transform =
+    `translateX(-50%) translateY(-100%) rotate(${dir}deg)`;
+  document.getElementById('wind-speed-now').textContent = speed;
+  document.getElementById('wind-dir-now').textContent = degToCompass(dir) + ' · ' + dir + '°';
+  document.getElementById('wind-gust-now').textContent = gust + ' km/h';
+  document.getElementById('wind-bft-now').textContent = 'Bft ' + bft;
+  document.getElementById('wave-height-now').textContent = wave.hs + ' cm';
+  document.getElementById('wave-period-now').textContent = wave.tp + ' s';
+
+  // Labels
+  const sl = (id, key) => { const el=document.getElementById(id); if(el&&t[key]) el.textContent=t[key]; };
+  sl('t-wind-label','windLabel'); sl('t-wind-gust','windGust'); sl('t-wind-bft','windBft');
+  sl('t-wave-height','waveHeight'); sl('t-wave-period','wavePeriod');
+  sl('t-wind-chart-label','windChartLabel'); sl('t-wind-disc','windDisc');
+
+  // Sail bar
+  const dot = document.getElementById('sail-dot');
+  dot.style.background = sail.dot;
+  document.getElementById('sail-status').textContent = sail.status;
+  document.getElementById('sail-note').textContent = sail.note;
+  document.getElementById('sail-bar').style.background =
+    sail.dot === '#1B6B45' ? 'var(--accent-pale)' :
+    sail.dot === '#E67E22' ? '#FEF3E2' : '#FDECEA';
+
+  // 12h wind chart
+  const chart = document.getElementById('wind-chart');
+  const labelsEl = document.getElementById('wind-chart-labels');
+  const maxSpeed = Math.max(...hourly.windspeed_10m.slice(i, i+13).filter(Boolean), 1);
+  let chartHTML = '', labelsHTML = '';
+  for (let j = 0; j < 13; j++) {
+    const s2 = Math.round(hourly.windspeed_10m[i+j] || 0);
+    const g2 = Math.round(hourly.windgusts_10m?.[i+j] || s2);
+    const pct = Math.max(6, Math.round(s2 / maxSpeed * 100));
+    const color = s2 < 20 ? '#1B6B45' : s2 < 35 ? '#E67E22' : '#C0392B';
+    const t2 = new Date(now.getTime() + j*3600000);
+    const tStr = t2.toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
+    chartHTML += `<div class="wind-chart-bar" style="height:${pct}%;background:${color};opacity:${j===0?1:0.75}" title="${tStr}: ${s2} km/h, Böen ${g2} km/h"></div>`;
+    if (j === 0 || j === 6 || j === 12) labelsHTML += `<span class="wind-chart-lbl">${tStr}</span>`;
+  }
+  chart.innerHTML = chartHTML;
+  labelsEl.innerHTML = labelsHTML;
+}
+
+
 const SVG={
   sun:`<svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="4.5"/><line x1="12" y1="19.5" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.99" y2="5.99"/><line x1="18.01" y1="18.01" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4.5" y2="12"/><line x1="19.5" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.99" y2="18.01"/><line x1="18.01" y1="5.99" x2="19.78" y2="4.22"/></svg>`,
   few:`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="3.5" stroke="#F59E0B"/><line x1="8.5" y1="2" x2="8.5" y2="3.5" stroke="#F59E0B"/><line x1="2" y1="8.5" x2="3.5" y2="8.5" stroke="#F59E0B"/><path d="M19 17H8a5 5 0 0 1 0-10 5 5 0 0 1 .5.03A5.5 5.5 0 0 1 19 11.5a4.5 4.5 0 0 1 0 5.5z" stroke="#90A4AE"/></svg>`,
@@ -689,17 +1111,34 @@ function rel(i){
    WEATHER API
 ========================================================= */
 const LAT=46.0624,LON=8.6977,TZ='Europe%2FRome';
+const LAT_WIND=46.1176,LON_WIND=8.7055; // Brissago – meilleure position pour le lac
 
 async function loadWeather(){
   try{
     const url=`https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}`
       +`&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,windspeed_10m_max,sunshine_duration,weathercode,uv_index_max,sunrise,sunset`
-      +`&hourly=relativehumidity_2m,temperature_2m&current_weather=true&timezone=${TZ}&forecast_days=7`;
+      +`&hourly=relativehumidity_2m,temperature_2m,windspeed_10m,windgusts_10m,winddirection_10m&current_weather=true&timezone=${TZ}&forecast_days=7`;
     const data=await(await fetch(url)).json();
     globalData=data;
     renderCurrent(data); renderCards(data,activeView);
+    // Fetch wind separately for Brissago (closer to open lake, same ICON-CH model as SRF)
+    try {
+      const windUrl = `https://api.open-meteo.com/v1/forecast?latitude=${LAT_WIND}&longitude=${LON_WIND}`
+        +`&hourly=windspeed_10m,windgusts_10m,winddirection_10m,cape,precipitation,weathercode&timezone=${TZ}&forecast_days=2&models=icon_seamless`;
+      const windData = await (await fetch(windUrl)).json();
+      renderWind(windData.hourly, true);
+      renderDanger(windData.hourly);
+    } catch(_) {
+      if(data.hourly) renderWind(data.hourly, false);
+      if(data.hourly) renderDanger(data.hourly);
+    }
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
+    const dateStr = now.toLocaleDateString(lang==='it'?'it-IT':lang==='en'?'en-GB':'de-CH',{weekday:'long',day:'numeric',month:'long'});
     document.getElementById('update-time').textContent=
-      tr('standChip')+' '+new Date().toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'})+' '+tr('standUhr');
+      tr('standChip')+' '+timeStr+' '+tr('standUhr');
+    const heroTs = document.getElementById('hero-ts-text');
+    if(heroTs) heroTs.textContent = (lang==='de'?'Daten von ':lang==='it'?'Dati del ':' Updated ')+dateStr+', '+timeStr+' · Open-Meteo';
   }catch(_){renderFallback();}
 }
 
