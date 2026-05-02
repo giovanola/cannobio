@@ -78,7 +78,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 
 /* PORTAL CARDS */
 .portal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
-@media (max-width: 560px) { .portal-grid { grid-template-columns: 1fr; } }
+@media (max-width: 400px) { .portal-grid { grid-template-columns: 1fr; } }
 .portal-card { border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); overflow: hidden; box-shadow: var(--shadow-sm); }
 .portal-card-head { padding: 14px 18px 12px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
 .portal-name { font-size: 13px; font-weight: 600; color: var(--text-primary); }
@@ -213,6 +213,64 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 
 <div class="content">
 
+  <div class="section">
+    <div class="section-label" id="t-trend-label">Prognose 90 Minuten</div>
+    <div class="trend-section">
+      <div class="trend-head">
+        <span class="trend-title" id="t-trend-title">Nordportal – nächste 90 Minuten</span>
+        <span class="trend-subtitle" id="t-trend-sub">Historisches Muster · Wochentag &amp; Uhrzeit</span>
+      </div>
+      <div class="trend-body">
+
+        <!-- KEY NUMBERS ROW -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px;">
+          <div style="text-align:center;padding:14px 10px;background:var(--bg);border-radius:var(--radius-md);border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px;" id="t-now-label">Jetzt</div>
+            <div style="font-family:var(--font-display);font-size:32px;font-weight:300;line-height:1;letter-spacing:-0.03em;" id="trend-now-val">—</div>
+            <div style="font-size:11px;color:var(--text-tertiary);margin-top:4px;" id="t-min-unit">min</div>
+          </div>
+          <div style="text-align:center;padding:14px 10px;background:var(--bg);border-radius:var(--radius-md);border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px;" id="t-in45-label">In 45 min</div>
+            <div style="font-family:var(--font-display);font-size:32px;font-weight:300;line-height:1;letter-spacing:-0.03em;" id="trend-45-val">—</div>
+            <div style="font-size:11px;color:var(--text-tertiary);margin-top:4px;" id="t-min-unit2">min</div>
+          </div>
+          <div style="text-align:center;padding:14px 10px;background:var(--bg);border-radius:var(--radius-md);border:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px;" id="t-in90-label">In 90 min</div>
+            <div style="font-family:var(--font-display);font-size:32px;font-weight:300;line-height:1;letter-spacing:-0.03em;" id="trend-90-val">—</div>
+            <div style="font-size:11px;color:var(--text-tertiary);margin-top:4px;" id="t-min-unit3">min</div>
+          </div>
+        </div>
+
+        <!-- TREND DIRECTION -->
+        <div id="trend-direction-card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:var(--radius-md);border:1px solid var(--border);margin-bottom:16px;background:var(--surface);">
+          <div id="trend-arrow" style="font-size:28px;flex-shrink:0;">→</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:600;color:var(--text-primary);" id="trend-direction-text">—</div>
+            <div style="font-size:12px;color:var(--text-secondary);margin-top:3px;" id="trend-probability-text">—</div>
+          </div>
+          <div style="text-align:right;flex-shrink:0;">
+            <div style="font-family:var(--font-display);font-size:24px;font-weight:300;" id="trend-prob-pct">—%</div>
+            <div style="font-size:10px;color:var(--text-tertiary);font-weight:600;letter-spacing:.06em;text-transform:uppercase;" id="t-prob-label">Wahrscheinlichkeit</div>
+          </div>
+        </div>
+
+        <!-- RECOMMENDATION -->
+        <div id="trend-recommendation" style="padding:12px 16px;border-radius:var(--radius-md);font-size:13px;font-weight:500;display:flex;align-items:center;gap:10px;">
+          <span id="trend-rec-icon" style="font-size:18px;flex-shrink:0;">💡</span>
+          <span id="trend-rec-text">—</span>
+        </div>
+
+        <!-- MINI CHART -->
+        <div style="margin-top:16px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:8px;" id="t-chart-label">Verlauf</div>
+          <div class="trend-chart" id="trend-chart"></div>
+          <div class="trend-labels" id="trend-labels"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- LIVE STATUS -->
   <div class="section">
     <div class="section-label" id="t-live-label">Live-Situation</div>
@@ -229,9 +287,9 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
         <div class="portal-card-head">
           <div>
             <div class="portal-name" id="t-north-name">Nordportal Göschenen</div>
-            <div class="portal-direction" id="t-north-dir">Richtung Süd (Airolo)</div>
+            <div class="portal-direction" id="t-north-dir">in Richtung Süden</div>
           </div>
-          <span style="font-size:10px;font-weight:600;color:var(--gold);background:var(--gold-pale);padding:2px 8px;border-radius:10px;" id="t-est-badge">Schätzung</span>
+
         </div>
         <div class="portal-card-body">
           <div style="display:flex;align-items:baseline;gap:6px;">
@@ -248,9 +306,9 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
         <div class="portal-card-head">
           <div>
             <div class="portal-name" id="t-south-name">Südportal Airolo</div>
-            <div class="portal-direction" id="t-south-dir">Richtung Nord (Göschenen)</div>
+            <div class="portal-direction" id="t-south-dir">in Richtung Norden</div>
           </div>
-          <span style="font-size:10px;font-weight:600;color:var(--gold);background:var(--gold-pale);padding:2px 8px;border-radius:10px;" id="t-est-badge2">Schätzung</span>
+
         </div>
         <div class="portal-card-body">
           <div style="display:flex;align-items:baseline;gap:6px;">
@@ -326,65 +384,6 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
     <div id="disruptions-section" style="display:none;margin-top:12px;">
       <div class="section-label" id="t-disrupt-label" style="margin-top:16px;">Verkehrsstörungen</div>
       <div id="disruptions-list"></div>
-    </div>
-  </div>
-
-
-  <div class="section">
-    <div class="section-label" id="t-trend-label">Prognose 90 Minuten</div>
-    <div class="trend-section">
-      <div class="trend-head">
-        <span class="trend-title" id="t-trend-title">Nordportal – nächste 90 Minuten</span>
-        <span class="trend-subtitle" id="t-trend-sub">Historisches Muster · Wochentag &amp; Uhrzeit</span>
-      </div>
-      <div class="trend-body">
-
-        <!-- KEY NUMBERS ROW -->
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px;">
-          <div style="text-align:center;padding:14px 10px;background:var(--bg);border-radius:var(--radius-md);border:1px solid var(--border);">
-            <div style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px;" id="t-now-label">Jetzt</div>
-            <div style="font-family:var(--font-display);font-size:32px;font-weight:300;line-height:1;letter-spacing:-0.03em;" id="trend-now-val">—</div>
-            <div style="font-size:11px;color:var(--text-tertiary);margin-top:4px;" id="t-min-unit">min</div>
-          </div>
-          <div style="text-align:center;padding:14px 10px;background:var(--bg);border-radius:var(--radius-md);border:1px solid var(--border);">
-            <div style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px;" id="t-in45-label">In 45 min</div>
-            <div style="font-family:var(--font-display);font-size:32px;font-weight:300;line-height:1;letter-spacing:-0.03em;" id="trend-45-val">—</div>
-            <div style="font-size:11px;color:var(--text-tertiary);margin-top:4px;" id="t-min-unit2">min</div>
-          </div>
-          <div style="text-align:center;padding:14px 10px;background:var(--bg);border-radius:var(--radius-md);border:1px solid var(--border);">
-            <div style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px;" id="t-in90-label">In 90 min</div>
-            <div style="font-family:var(--font-display);font-size:32px;font-weight:300;line-height:1;letter-spacing:-0.03em;" id="trend-90-val">—</div>
-            <div style="font-size:11px;color:var(--text-tertiary);margin-top:4px;" id="t-min-unit3">min</div>
-          </div>
-        </div>
-
-        <!-- TREND DIRECTION -->
-        <div id="trend-direction-card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:var(--radius-md);border:1px solid var(--border);margin-bottom:16px;background:var(--surface);">
-          <div id="trend-arrow" style="font-size:28px;flex-shrink:0;">→</div>
-          <div style="flex:1;">
-            <div style="font-size:13px;font-weight:600;color:var(--text-primary);" id="trend-direction-text">—</div>
-            <div style="font-size:12px;color:var(--text-secondary);margin-top:3px;" id="trend-probability-text">—</div>
-          </div>
-          <div style="text-align:right;flex-shrink:0;">
-            <div style="font-family:var(--font-display);font-size:24px;font-weight:300;" id="trend-prob-pct">—%</div>
-            <div style="font-size:10px;color:var(--text-tertiary);font-weight:600;letter-spacing:.06em;text-transform:uppercase;" id="t-prob-label">Wahrscheinlichkeit</div>
-          </div>
-        </div>
-
-        <!-- RECOMMENDATION -->
-        <div id="trend-recommendation" style="padding:12px 16px;border-radius:var(--radius-md);font-size:13px;font-weight:500;display:flex;align-items:center;gap:10px;">
-          <span id="trend-rec-icon" style="font-size:18px;flex-shrink:0;">💡</span>
-          <span id="trend-rec-text">—</span>
-        </div>
-
-        <!-- MINI CHART -->
-        <div style="margin-top:16px;">
-          <div style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:8px;" id="t-chart-label">Verlauf</div>
-          <div class="trend-chart" id="trend-chart"></div>
-          <div class="trend-labels" id="trend-labels"></div>
-        </div>
-
-      </div>
     </div>
   </div>
 
@@ -577,8 +576,8 @@ const T = {
     eyebrow:'Schweizer Alpen · A2 Autobahn',
     h1:'Gotthard<br><em>Verkehr</em>',
     sub:'Aktuelle Lage am Tunnel und am Pass. Wartezeiten, Sperrungen und Prognose für die nächsten 5 Tage.',
-    liveLabel:'Live-Situation', northName:'Nordportal', northDir:'Göschenen → Süd (Airolo)',
-    southName:'Südportal', southDir:'Airolo → Nord (Göschenen)',
+    liveLabel:'Live-Situation', northName:'Nordportal', northDir:'in Richtung Süden',
+    southName:'Südportal', southDir:'in Richtung Norden',
     minUnit:'min', trendLabel:'Prognose 90 Minuten',
     trendTitle:'Nordportal – nächste 90 Minuten', trendSub:'Historisches Muster · Wochentag & Uhrzeit',
     trendNow:'Jetzt', trendIn45:'In 45 min', trendIn90:'In 90 min',
@@ -627,8 +626,8 @@ const T = {
     eyebrow:'Alpi Svizzere · Autostrada A2',
     h1:'Gottardo<br><em>Traffico</em>',
     sub:'Situazione attuale al tunnel e al passo. Tempi di attesa, chiusure e previsioni per i prossimi 5 giorni.',
-    liveLabel:'Situazione live', northName:'Portale Nord', northDir:'Göschenen → Sud (Airolo)',
-    southName:'Portale Sud', southDir:'Airolo → Nord (Göschenen)',
+    liveLabel:'Situazione live', northName:'Portale Nord', northDir:'in direzione Sud',
+    southName:'Portale Sud', southDir:'in Richtung Norden',
     minUnit:'min', trendLabel:'Previsione 90 minuti',
     trendTitle:'Portale Nord – prossimi 90 minuti', trendSub:'Schema storico · giorno & ora',
     trendNow:'Adesso', trendIn45:'Fra 45 min', trendIn90:'Fra 90 min',
@@ -677,8 +676,8 @@ const T = {
     eyebrow:'Swiss Alps · A2 Motorway',
     h1:'Gotthard<br><em>Traffic</em>',
     sub:'Current situation at the tunnel and pass. Waiting times, closures and forecast for the next 5 days.',
-    liveLabel:'Live situation', northName:'North Portal', northDir:'Göschenen → South (Airolo)',
-    southName:'South Portal', southDir:'Airolo → North (Göschenen)',
+    liveLabel:'Live situation', northName:'North Portal', northDir:'southbound',
+    southName:'South Portal', southDir:'northbound',
     minUnit:'min', trendLabel:'90-minute forecast',
     trendTitle:'North Portal – next 90 minutes', trendSub:'Historical pattern · weekday & time',
     trendNow:'Now', trendIn45:'In 45 min', trendIn90:'In 90 min',
