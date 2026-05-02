@@ -400,6 +400,75 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
     </div>
   </div>
 
+
+  <!-- A2 STAUMELDUNGEN -->
+  <div class="section">
+    <div class="section-label" id="t-traffic-label">A2 Verkehrsmeldungen – Basel bis Bellinzona</div>
+
+    <!-- FETCH ATTEMPT -->
+    <div id="traffic-loading" style="padding:16px;text-align:center;font-size:13px;color:var(--text-tertiary);">
+      <span id="traffic-loading-text">Staumeldungen werden geladen…</span>
+    </div>
+
+    <!-- RESULTS -->
+    <div id="traffic-results" style="display:none;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+        <!-- RICHTUNG SÜD -->
+        <div style="border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);overflow:hidden;box-shadow:var(--shadow-sm);">
+          <div style="padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div style="font-size:13px;font-weight:600;color:var(--text-primary);" id="t-dir-south">Richtung Süden ↓</div>
+              <div style="font-size:11px;color:var(--text-tertiary);">Basel → Bellinzona</div>
+            </div>
+            <div id="traffic-south-badge" style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;background:var(--accent-pale);color:var(--accent);">—</div>
+          </div>
+          <div id="traffic-south-list" style="padding:8px 0;min-height:60px;"></div>
+        </div>
+        <!-- RICHTUNG NORD -->
+        <div style="border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);overflow:hidden;box-shadow:var(--shadow-sm);">
+          <div style="padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div style="font-size:13px;font-weight:600;color:var(--text-primary);" id="t-dir-north">Richtung Norden ↑</div>
+              <div style="font-size:11px;color:var(--text-tertiary);">Bellinzona → Basel</div>
+            </div>
+            <div id="traffic-north-badge" style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;background:var(--accent-pale);color:var(--accent);">—</div>
+          </div>
+          <div id="traffic-north-list" style="padding:8px 0;min-height:60px;"></div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:var(--text-tertiary);margin-top:4px;" id="traffic-updated"></div>
+    </div>
+
+    <!-- FALLBACK: Direct links when fetch fails -->
+    <div id="traffic-fallback" style="display:none;">
+      <div style="padding:14px 16px;background:var(--sky-pale);border:1px solid #BBDEFB;border-radius:var(--radius-md);margin-bottom:12px;font-size:13px;color:var(--sky);" id="traffic-fallback-text">
+        Echtzeit-Staumeldungen direkt abrufen:
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <a href="https://www.viasuisse.ch/de/strecke?from=Basel&to=Bellinzona&direction=S" target="_blank" rel="noopener"
+           style="display:flex;flex-direction:column;padding:14px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);text-decoration:none;transition:box-shadow 0.2s;">
+          <div style="font-size:12px;font-weight:600;color:var(--text-primary);margin-bottom:4px;" id="t-vs-south">↓ Richtung Süden</div>
+          <div style="font-size:11px;color:var(--text-tertiary);">Basel → Bellinzona · Viasuisse</div>
+          <div style="font-size:11px;color:var(--sky);margin-top:8px;font-weight:500;">viasuisse.ch ↗</div>
+        </a>
+        <a href="https://www.viasuisse.ch/de/strecke?from=Bellinzona&to=Basel&direction=N" target="_blank" rel="noopener"
+           style="display:flex;flex-direction:column;padding:14px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);text-decoration:none;transition:box-shadow 0.2s;">
+          <div style="font-size:12px;font-weight:600;color:var(--text-primary);margin-bottom:4px;" id="t-vs-north">↑ Richtung Norden</div>
+          <div style="font-size:11px;color:var(--text-tertiary);">Bellinzona → Basel · Viasuisse</div>
+          <div style="font-size:11px;color:var(--sky);margin-top:8px;font-weight:500;">viasuisse.ch ↗</div>
+        </a>
+      </div>
+      <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;">
+        <a class="ext-link" href="https://www.tcs.ch/de/tools/verkehrsinfo-verkehrslage.php" target="_blank" rel="noopener">TCS Verkehrsinfo ↗</a>
+        <a class="ext-link" href="https://www.astra.admin.ch/astra/de/home/aktuell/veranstaltungen0/baustellen.html" target="_blank" rel="noopener">ASTRA Baustellen ↗</a>
+        <a class="ext-link" href="https://map.geo.admin.ch/?topic=ech&lang=de&bgLayer=ch.swisstopo.pixelkarte-grau&layers=ch.astra.strassenverkehrszaehlung_messstellen-uebergeordnet,ch.astra.astra-Unfaelle&E=2660000&N=1190000&zoom=3" target="_blank" rel="noopener">Swisstopo Verkehr ↗</a>
+      </div>
+      <div style="margin-top:10px;font-size:11px;color:var(--text-tertiary);" id="t-traffic-github-note">
+        Hinweis: Live-Staumeldungen via GitHub Actions Backend in Planung.
+      </div>
+    </div>
+  </div>
+
   <!-- SPERRUNGEN -->
   <div class="section">
     <div class="section-label" id="t-clos-label">Geplante Sperrungen 2026</div>
@@ -621,6 +690,15 @@ const T = {
     camSouthLoc:'A2, Airolo – Blickrichtung Süd (Tessin)',
     camNorthLoc:'A2, Wassen kurz vor Göschenen – Blickrichtung Süd',
     camNote:'Webcams: AFBN.ch · Aktualisierung alle 5 Minuten',
+    trafficLabel:'A2 Verkehrsmeldungen \u2013 Basel bis Bellinzona',
+    trafficLoading:'Staumeldungen werden geladen\u2026',
+    trafficDirSouth:'Richtung S\u00fcden \u2193', trafficDirNorth:'Richtung Norden \u2191',
+    trafficVsSouth:'\u2193 Richtung S\u00fcden', trafficVsNorth:'\u2191 Richtung Norden',
+    trafficFallback:'Echtzeit-Staumeldungen direkt abrufen:',
+    trafficFree:'Frei', trafficJam:'Stau', trafficSlow:'Stockend',
+    trafficUpdated:'Aktualisiert',
+    trafficGithub:'Hinweis: Live-Staumeldungen via GitHub Actions Backend in Planung.',
+    trafficNone:'Keine Meldungen auf dieser Strecke.',
   },
   it: {
     eyebrow:'Alpi Svizzere · Autostrada A2',
@@ -671,6 +749,15 @@ const T = {
     camSouthLoc:'A2, Airolo – direzione Sud (Ticino)',
     camNorthLoc:'A2, Wassen vicino a Göschenen – direzione Sud',
     camNote:'Webcam: AFBN.ch · Aggiornamento ogni 5 minuti',
+    trafficLabel:'A2 Bollettino traffico \u2013 Basilea a Bellinzona',
+    trafficLoading:'Caricamento bollettino traffico\u2026',
+    trafficDirSouth:'Direzione Sud \u2193', trafficDirNorth:'Direzione Nord \u2191',
+    trafficVsSouth:'\u2193 Direzione Sud', trafficVsNorth:'\u2191 Direzione Nord',
+    trafficFallback:'Consultare direttamente il traffico in tempo reale:',
+    trafficFree:'Libero', trafficJam:'Coda', trafficSlow:'Rallentato',
+    trafficUpdated:'Aggiornato',
+    trafficGithub:'Nota: bollettino live via GitHub Actions in programma.',
+    trafficNone:'Nessuna segnalazione su questo percorso.',
   },
   en: {
     eyebrow:'Swiss Alps · A2 Motorway',
@@ -721,6 +808,15 @@ const T = {
     camSouthLoc:'A2, Airolo – looking south (Ticino)',
     camNorthLoc:'A2, Wassen near Göschenen – looking south',
     camNote:'Webcams: AFBN.ch · Updated every 5 minutes',
+    trafficLabel:'A2 Traffic reports \u2013 Basel to Bellinzona',
+    trafficLoading:'Loading traffic reports\u2026',
+    trafficDirSouth:'Southbound \u2193', trafficDirNorth:'Northbound \u2191',
+    trafficVsSouth:'\u2193 Southbound', trafficVsNorth:'\u2191 Northbound',
+    trafficFallback:'Check real-time traffic reports directly:',
+    trafficFree:'Clear', trafficJam:'Congestion', trafficSlow:'Slow traffic',
+    trafficUpdated:'Updated',
+    trafficGithub:'Note: Live traffic reports via GitHub Actions backend planned.',
+    trafficNone:'No reports on this route.',
   }
 };
 
@@ -1085,6 +1181,8 @@ function applyLang(l) {
   set('t-cam-note', t.camNote);
   // Nav
   set('nav-meteo', t.navMeteo); set('nav-rifiuti', t.navRifiuti); set('nav-gotthard', t.navGotthard);
+  // Re-run traffic UI labels when lang changes
+  if(document.getElementById('t-traffic-label')) loadTraffic();
   set('t-est-badge', t.estBadge); set('t-est-badge2', t.estBadge);
   set('t-live-hint', t.liveHint); set('t-live-hint-text', t.liveHintText);
   set('t-cam-label', t.camLabel); set('t-cam-south-name', t.camSouthName); set('t-cam-north-name', t.camNorthName);
@@ -1099,12 +1197,107 @@ document.querySelector('.lang-switcher').addEventListener('click', e=>{
   applyLang(btn.dataset.lang);
 });
 
+// ── A2 TRAFFIC FETCH ──────────────────────────────────────
+async function loadTraffic() {
+  const t = T[lang];
+  const loading = document.getElementById('traffic-loading');
+  const results = document.getElementById('traffic-results');
+  const fallback = document.getElementById('traffic-fallback');
+  const loadTxt = document.getElementById('traffic-loading-text');
+  if (loadTxt) loadTxt.textContent = t.trafficLoading || 'Laden…';
+
+  // Apply translations to static elements
+  const setEl = (id, key) => { const el=document.getElementById(id); if(el&&t[key]) el.textContent=t[key]; };
+  setEl('t-traffic-label','trafficLabel');
+  setEl('t-dir-south','trafficDirSouth'); setEl('t-dir-north','trafficDirNorth');
+  setEl('t-vs-south','trafficVsSouth'); setEl('t-vs-north','trafficVsNorth');
+  setEl('traffic-fallback-text','trafficFallback');
+  setEl('t-traffic-github-note','trafficGithub');
+
+  // Try fetching Viasuisse traffic data via CORS proxy
+  const vsUrl = 'https://www.viasuisse.ch/de/verkehr/strecke/A2';
+  const proxies = [
+    'https://corsproxy.io/?' + encodeURIComponent(vsUrl),
+    'https://api.allorigins.win/get?url=' + encodeURIComponent(vsUrl),
+  ];
+
+  let parsed = null;
+  for (const proxy of proxies) {
+    try {
+      const res = await fetch(proxy, { signal: AbortSignal.timeout(7000) });
+      if (!res.ok) continue;
+      let text = await res.text();
+      if (proxy.includes('allorigins')) {
+        try { text = JSON.parse(text).contents; } catch(_) {}
+      }
+      // Parse traffic incidents from Viasuisse HTML
+      // Look for jam/incident entries with direction and location
+      const incidents = [];
+      const incRegex = /<article[^>]*class="[^"]*incident[^"]*"[^>]*>([\s\S]{0,800}?)<\/article>/gi;
+      let m;
+      while ((m = incRegex.exec(text)) !== null) {
+        const block = m[1].replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+        if (block.length > 20) incidents.push(block.slice(0, 300));
+      }
+      // Alternative: look for structured delay info
+      const delayRegex = /(\d+)\s*(Minuten|min|minutes?)\s*(?:Verz.gerung|delay|ritardo)/gi;
+      const delayMatches = [...text.matchAll(delayRegex)];
+
+      if (incidents.length > 0 || delayMatches.length > 0) {
+        parsed = { incidents, delays: delayMatches.map(dm => parseInt(dm[1])), raw: text };
+        break;
+      }
+    } catch(_) {}
+  }
+
+  if (parsed && parsed.incidents.length > 0) {
+    // Show results
+    loading.style.display = 'none';
+    results.style.display = '';
+    fallback.style.display = 'none';
+
+    const southItems = parsed.incidents.filter(i => /s.den|sud|south|airolo|ticino/i.test(i));
+    const northItems = parsed.incidents.filter(i => /norden|nord|north|basel|z.rich|g.schenen/i.test(i));
+    const otherItems = parsed.incidents.filter(i => !southItems.includes(i) && !northItems.includes(i));
+
+    const renderList = (el, badge, items) => {
+      if (!el) return;
+      if (items.length === 0) {
+        el.innerHTML = `<div style="padding:10px 16px;font-size:12px;color:var(--accent);">${t.trafficNone || 'Keine Meldungen.'}</div>`;
+        if (badge) { badge.textContent = t.trafficFree; badge.style.background='var(--accent-pale)'; badge.style.color='var(--accent)'; }
+      } else {
+        el.innerHTML = items.map(item => {
+          const hasJam = /stau|coda|congestion|km/i.test(item);
+          const color = hasJam ? '#C0392B' : '#E67E22';
+          const bg = hasJam ? '#FDECEA' : '#FEF3E2';
+          return `<div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:11px;line-height:1.5;color:#4A4A4A;">
+            <div style="display:inline-block;padding:2px 6px;border-radius:4px;background:${bg};color:${color};font-size:10px;font-weight:600;margin-bottom:4px;">${hasJam?t.trafficJam:t.trafficSlow}</div>
+            <div>${item.slice(0,200)}</div>
+          </div>`;
+        }).join('');
+        if (badge) { badge.textContent = t.trafficJam; badge.style.background='#FDECEA'; badge.style.color='#C0392B'; }
+      }
+    };
+
+    renderList(document.getElementById('traffic-south-list'), document.getElementById('traffic-south-badge'), [...southItems,...otherItems.slice(0,2)]);
+    renderList(document.getElementById('traffic-north-list'), document.getElementById('traffic-north-badge'), northItems);
+
+    const upd = document.getElementById('traffic-updated');
+    if (upd) upd.textContent = `${t.trafficUpdated}: ${new Date().toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'})} · Viasuisse`;
+  } else {
+    // Show fallback with direct links
+    loading.style.display = 'none';
+    results.style.display = 'none';
+    fallback.style.display = '';
+  }
+}
+
 // Init
 // Detect lang from URL param
 const urlLang = new URLSearchParams(window.location.search).get('lang');
 if (urlLang && T[urlLang]) { applyLang(urlLang); } else { applyLang('de'); }
 // Refresh every 5 minutes
-setInterval(()=>{ renderLive().then(()=>{}); renderTrend(); render5Day(); }, 5 * 60 * 1000);
+setInterval(()=>{ renderLive().then(()=>{}); renderTrend(); render5Day(); loadTraffic(); }, 5 * 60 * 1000);
 // Webcam refresh every 5 minutes
 function refreshCams() {
   ['cam-south','cam-north'].forEach(id => {
@@ -1113,18 +1306,7 @@ function refreshCams() {
   });
 }
 setInterval(refreshCams, 5 * 60 * 1000);
-// Refresh webcams every 5 minutes (add cache-busting timestamp)
-function refreshCams() {
-  const ts = '?t=' + Date.now();
-  ['cam-south','cam-north'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) {
-      const base = el.src.split('?')[0];
-      el.src = base + ts;
-    }
-  });
-}
-setInterval(refreshCams, 300000);
+loadTraffic();
 </script>
 </body>
 </html>
