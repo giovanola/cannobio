@@ -273,16 +273,9 @@ footer a{color:var(--text-secondary);text-decoration:none}
 .wind-stat-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-top:3px}
 .sail-bar{display:flex;align-items:center;gap:10px;padding:12px 18px;border-bottom:none;background:var(--surface)!important}
 .sail-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.sail-status{font-size:13px;font-weight:600;color:var(--text-primary)}
-.sail-note{display:none}
 .sail-info-btn{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;border:1px solid var(--text-tertiary);background:transparent;color:var(--text-tertiary);font-size:9px;font-weight:700;cursor:pointer;flex-shrink:0;transition:all var(--transition);margin-left:4px}
 .sail-info-btn:hover{background:var(--text-tertiary);color:#fff}
-.sail-danger-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)}
-@media(max-width:640px){
-  .sail-danger-grid{grid-template-columns:1fr}
-  #water-danger-block{border-top:1px solid var(--border)}
-  .sail-bar{border-right:none!important}
-}
+
 /* Sail popup */
 .sail-popup-overlay{display:none;position:fixed;inset:0;z-index:499;background:rgba(0,0,0,.3);backdrop-filter:blur(2px)}
 .sail-popup-overlay.open{display:block}
@@ -297,8 +290,8 @@ footer a{color:var(--text-secondary);text-decoration:none}
 .sail-note{font-size:11px;color:var(--text-secondary);margin-top:2px}
 .wind-chart-wrap{padding:16px 22px}
 .wind-chart-label{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:10px}
-.wind-chart{display:flex;align-items:flex-end;gap:3px;height:52px}
-.wind-chart-bar{flex:1;border-radius:2px 2px 0 0;min-height:3px;position:relative;cursor:default}
+.wind-chart{display:flex;align-items:flex-end;gap:3px;height:80px;padding-top:18px}
+.wind-chart-bar{flex:1;border-radius:2px 2px 0 0;min-height:3px;cursor:default;position:relative}
 .wind-chart-labels{display:flex;justify-content:space-between;margin-top:5px}
 .wind-chart-lbl{font-size:10px;color:var(--text-tertiary)}
 .wind-disclaimer{padding:10px 22px 14px;font-size:11px;color:var(--text-tertiary);border-top:1px solid var(--border);line-height:1.5}
@@ -384,15 +377,15 @@ footer a{color:var(--text-secondary);text-decoration:none}
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:16px;color:var(--text-tertiary);font-size:12px;font-weight:400;">
       <span style="white-space:nowrap;">
-        <span id="t-lbl-rise-h">Sonnenaufgang</span>
+        <span id="t-lbl-rise-h">&#x1F305; Sonnenaufgang</span>
         <span id="cur-rise" style="color:var(--text-primary);margin-left:4px;">—:—</span>
       </span>
       <span style="white-space:nowrap;">
-        <span id="t-lbl-set-h">Sonnenuntergang</span>
+        <span id="t-lbl-set-h">&#x1F307; Sonnenuntergang</span>
         <span id="cur-set" style="color:var(--text-primary);margin-left:4px;">—:—</span>
       </span>
       <span style="white-space:nowrap;">
-        <span id="t-lbl-sun-h">Sonne heute</span>
+        <span id="t-lbl-sun-h">&#x2600;&#xFE0F; Sonne heute</span>
         <span id="cur-sun" style="color:var(--text-primary);margin-left:4px;">—h</span>
       </span>
     </div>
@@ -449,7 +442,7 @@ footer a{color:var(--text-secondary);text-decoration:none}
   </div>
 
   <!-- WIND & WELLENBERICHT -->
-  <div class="wind-section" id="wind-section" style="display:none;margin-bottom:32px;">
+  <div class="wind-section" id="wind-section" style="margin-bottom:32px;">
     <div class="section-label" id="t-wind-label">Wind & Wellenbericht</div>
     <div class="wind-card">
 
@@ -489,28 +482,26 @@ footer a{color:var(--text-secondary);text-decoration:none}
         </div>
       </div>
 
-      <!-- SEGELAMPEL + GEFAHRENEINSCHÄTZUNG: 2 Spalten Desktop -->
-      <div class="sail-danger-grid" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);">
-
-        <!-- LINKS: Segelampel -->
-        <div class="sail-bar" id="sail-bar" style="border-right:1px solid var(--border);">
+      <!-- SEGELAMPEL + RISIKO: eine kompakte Zeile -->
+      <div id="sail-danger-row" style="display:flex;align-items:center;justify-content:space-between;padding:11px 22px;border-top:1px solid var(--border);gap:12px;">
+        <div style="display:flex;align-items:center;gap:8px;">
           <div class="sail-dot" id="sail-dot"></div>
-          <div class="sail-status" id="sail-status">—</div>
+          <span class="sail-status" id="sail-status" style="font-size:13px;font-weight:600;color:var(--text-primary);">—</span>
           <button class="sail-info-btn" onclick="openSailPopup()" aria-label="Info">i</button>
         </div>
-
-        <!-- RECHTS: Gefahreneinschätzung -->
-        <div id="water-danger-block" style="padding:14px 18px;display:none;">
-          <div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:10px;" id="t-danger-label">Risiken</div>
-          <div id="danger-badge" style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:var(--radius-md);margin-bottom:10px;font-size:12px;font-weight:600;">
-            <span id="danger-icon">⚠️</span>
+        <div id="water-danger-block" style="display:none;">
+          <div id="danger-badge" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;">
+            <span id="danger-icon" style="font-size:15px;">—</span>
             <span id="danger-level-text">—</span>
           </div>
-          <div id="danger-factors" style="display:flex;flex-direction:column;gap:6px;margin-bottom:10px;"></div>
-          <div id="storm-window" style="display:none;padding:8px 12px;border-radius:var(--radius-sm);margin-bottom:10px;font-size:11px;line-height:1.6;"></div>
-          <div id="danger-disclaimer" style="display:none;"></div>
         </div>
       </div>
+      <!-- Hidden stores needed by renderDanger/openSailPopup -->
+      <span id="sail-note" style="display:none;">—</span>
+      <div id="danger-factors" style="display:none;"></div>
+      <div id="storm-window" style="display:none;"></div>
+      <div id="danger-disclaimer" style="display:none;"></div>
+      <div id="t-danger-label" style="display:none;"></div>
 
       <!-- 12h WIND CHART -->
       <div class="wind-chart-wrap">
@@ -519,7 +510,7 @@ footer a{color:var(--text-secondary);text-decoration:none}
         <div class="wind-chart-labels" id="wind-chart-labels"></div>
       </div>
 
-      <div class="wind-disclaimer" id="t-wind-disc">Wellengang geschätzt aus Windstärke und Fetch-Distanz (Lago Maggiore ~60 km). Kein offizieller Messwert.</div>
+      <div class="wind-disclaimer" id="t-wind-disc">Hinweis: Basierend auf numerischen Wettermodellen aus Windstärke und Fetch-Distanz (Lago Maggiore ~60 km). Kein offizieller Messwert.</div>
     </div>
   </div>
 
@@ -612,7 +603,16 @@ const T = {
     navWetter:'Wetter',navRifiuti:'Abfall',
     windLabel:'Wind & Wellenbericht',windGust:'Böen',windBft:'Beaufort',
     waveHeight:'Wellengang',wavePeriod:'Periode',windChartLabel:'Windprognose 12h',
-    windDisc:'Winddaten: Open-Meteo / MeteoSwiss ICON-CH, Messpunkt Brissago (CH) – beste Annäherung für den See. Wellengang geschätzt aus Windstärke und Fetch-Distanz (Lago Maggiore ≈ 60 km).',
+    windDisc:'Hinweis: Basierend auf numerischen Wettermodellen (MeteoSwiss ICON-CH via Open-Meteo), keine offizielle Warnung. Vor dem Wasserausflug aktuelle Daten prüfen, z. B. bei MeteoSwiss, ARPA Piemonte und lokalen Wetterstationen. Das Wetter am Lago Maggiore kann sich schnell ändern. Im Zweifel nicht aufs Wasser gehen.',
+    sail0:'Windstille (0–1 Bft)',sail0Note:'Zu wenig Wind. Ideal für SUP und Kajak.',
+    sail23:'Schwachwind (2–3 Bft)',sail23Note:'Angenehme Bedingungen für Einsteiger und Segelboote.',
+    sail4:'Mäßiger Wind (4 Bft)',sail4Note:'Erfahrene Segler. Kite/Windsurf günstig. Anfänger nicht empfohlen.',
+    sail5:'Frischer Wind (5 Bft)',sail5Note:'Nur geübte Segler. Wellen und Böen beachten.',
+    sail6:'Starker Wind (6+ Bft)',sail6Note:'Im Hafen bleiben. Gefährliche Bedingungen.',
+    riskLow:'Gering',riskLowNote:'Unkritische Bedingungen',
+    riskMod:'Mäßig',riskModNote:'Aufmerksamkeit erforderlich',
+    riskHigh:'Hoch',riskHighNote:'Nur mit Erfahrung',
+    riskVeryHigh:'Sehr hoch',riskVeryHighNote:'Im Hafen bleiben',
     sailCalm:'Windstille – kein Segeln möglich',
     sailCalmNote:'Wind unter 1 Bft. Zu wenig Wind zum Segeln. Ideal für Stand-up-Paddling oder Kajakfahren.',
     sailGood:'Günstig – angenehme Segelbedingungen',
@@ -684,7 +684,16 @@ const T = {
     navWetter:'Meteo',navRifiuti:'Rifiuti',
     windLabel:'Vento e moto ondoso',windGust:'Raffiche',windBft:'Beaufort',
     waveHeight:'Onde',wavePeriod:'Periodo',windChartLabel:'Previsione vento 12h',
-    windDisc:'Dati vento: Open-Meteo / MeteoSwiss ICON-CH, punto di misura Brissago (CH). Moto ondoso stimato da velocità e fetch (Lago Maggiore ≈ 60 km).',
+    windDisc:'Nota: Basato su modelli meteorologici numerici (MeteoSwiss ICON-CH via Open-Meteo), nessun avviso ufficiale. Prima di ogni uscita sull’acqua verificare i dati aggiornati su MeteoSvizzera, ARPA Piemonte e stazioni meteo locali. Il tempo sul Lago Maggiore può cambiare rapidamente. In caso di dubbio, non andare in acqua.',
+    sail0:'Bonaccia (0–1 Bft)',sail0Note:'Vento insufficiente. Ideale per SUP e kayak.',
+    sail23:'Vento debole (2–3 Bft)',sail23Note:'Condizioni piacevoli per principianti e barche a vela.',
+    sail4:'Vento moderato (4 Bft)',sail4Note:'Navigatori esperti. Kite/windsurf favorevole. Principianti sconsigliato.',
+    sail5:'Vento fresco (5 Bft)',sail5Note:'Solo navigatori esperti. Attenzione a onde e raffiche.',
+    sail6:'Vento forte (6+ Bft)',sail6Note:'Restare in porto. Condizioni pericolose.',
+    riskLow:'Basso',riskLowNote:'Condizioni non critiche',
+    riskMod:'Moderato',riskModNote:'Attenzione richiesta',
+    riskHigh:'Alto',riskHighNote:'Solo con esperienza',
+    riskVeryHigh:'Molto alto',riskVeryHighNote:'Restare in porto',
     sailCalm:'Calma – vento insufficiente per navigare',
     sailCalmNote:'Vento sotto 1 Bft. Troppo calmo per navigare. Ideale per stand-up paddle o kayak.',
     sailGood:'Favorevole – buone condizioni per navigare',
@@ -756,7 +765,16 @@ const T = {
     navWetter:'Weather',navRifiuti:'Waste',
     windLabel:'Wind & Wave Report',windGust:'Gusts',windBft:'Beaufort',
     waveHeight:'Wave height',wavePeriod:'Period',windChartLabel:'12h wind forecast',
-    windDisc:'Wind data: Open-Meteo / MeteoSwiss ICON-CH, measurement point Brissago (CH). Wave height estimated from wind speed and fetch distance (Lake Maggiore ≈ 60 km).',
+    windDisc:'Note: Based on numerical weather models (MeteoSwiss ICON-CH via Open-Meteo), not an official warning. Before any water activity, check current data at MeteoSwiss, ARPA Piemonte and local weather stations. Weather on Lake Maggiore can change quickly. If in doubt, stay off the water.',
+    sail0:'Calm (0–1 Bft)',sail0Note:'Too little wind for sailing. Ideal for SUP and kayaking.',
+    sail23:'Light wind (2–3 Bft)',sail23Note:'Pleasant conditions for beginners and sailing boats.',
+    sail4:'Moderate wind (4 Bft)',sail4Note:'Experienced sailors. Kite/windsurf favourable. Beginners not recommended.',
+    sail5:'Fresh wind (5 Bft)',sail5Note:'Skilled sailors only. Watch for waves and gusts.',
+    sail6:'Strong wind (6+ Bft)',sail6Note:'Stay in harbour. Dangerous conditions.',
+    riskLow:'Low',riskLowNote:'Uncritical conditions',
+    riskMod:'Moderate',riskModNote:'Attention required',
+    riskHigh:'High',riskHighNote:'Experienced only',
+    riskVeryHigh:'Very high',riskVeryHighNote:'Stay in harbour',
     sailCalm:'Calm – no sailing possible',
     sailCalmNote:'Wind below 1 Bft. Too little wind for sailing. Ideal for stand-up paddling or kayaking.',
     sailGood:'Favourable – pleasant sailing conditions',
@@ -946,30 +964,28 @@ function estimateWave(windKmh, windDirDeg) {
   return { hs: hsCm, tp };
 }
 
-function sailCondition(windKmh, gustKmh) {
+function sailCondition(windKmh, gustKmh, waveHsCm) {
   const t = T[lang];
   const bft = kmhToBft(windKmh);
+  const gustBft = kmhToBft(gustKmh);
+  const wave = waveHsCm || 0;
+  if (bft <= 1) return { dot:'#9B9890', windStatus: t.sail0||'Windstille (0–1 Bft)',   note: t.sail0Note||'Zu wenig Wind. Ideal für SUP und Kajak.', risk:'low' };
+  if (bft <= 3) return { dot:'#1B6B45', windStatus: t.sail23||'Schwachwind (2–3 Bft)', note: t.sail23Note||'Angenehme Bedingungen für Einsteiger und Segelboote.', risk:'low' };
+  if (bft === 4) return { dot:'#F0A500', windStatus: t.sail4||'Mäßiger Wind (4 Bft)', note: t.sail4Note||'Erfahrene Segler. Kite/Windsurf günstig. Anfänger nicht empfohlen.', risk: gustBft>=5||wave>40?'high':'moderate' };
+  if (bft === 5) return { dot:'#E67E22', windStatus: t.sail5||'Frischer Wind (5 Bft)',     note: t.sail5Note||'Nur geübte Segler. Wellen und Böen beachten.', risk: gustBft>=6||wave>60?'veryhigh':'high' };
+  return               { dot:'#C0392B', windStatus: t.sail6||'Starker Wind (6+ Bft)',    note: t.sail6Note||'Im Hafen bleiben. Gefährliche Bedingungen.', risk:'veryhigh' };
+}
 
-  // Bft 0–1 (0–5 km/h): Windstille / kaum Wind → kein Segeln
-  if (windKmh < 6) return {
-    dot:'#9B9890', status: t.sailCalm || 'Windstille – kein Segeln möglich',
-    note: t.sailCalmNote || 'Wind unter 1 Bft. Zu wenig Wind zum Segeln. Ideal für Stand-up-Paddling oder Kajakfahren.'
+function riskLevel(risk, hasThunder) {
+  const t = T[lang];
+  if (hasThunder) risk = 'veryhigh';
+  const R = {
+    low:      { icon:'&#x1F7E2;', label: t.riskLow||'Gering',     note: t.riskLowNote||'Unkritische Bedingungen',    color:'#1B6B45', bg:'var(--accent-pale)' },
+    moderate: { icon:'&#x1F7E1;', label: t.riskMod||'Mäßig',    note: t.riskModNote||'Aufmerksamkeit erforderlich', color:'#B7791F', bg:'var(--gold-pale)' },
+    high:     { icon:'&#x1F7E0;', label: t.riskHigh||'Hoch',      note: t.riskHighNote||'Nur mit Erfahrung',          color:'#E67E22', bg:'#FEF3E2' },
+    veryhigh: { icon:'&#x1F534;', label: t.riskVeryHigh||'Sehr hoch', note: t.riskVeryHighNote||'Im Hafen bleiben',  color:'#C0392B', bg:'#FDECEA' },
   };
-  // Bft 2–3 (6–28 km/h): Leichte Brise → angenehm für Anfänger, SUP, Katamarane
-  if (windKmh < 29 && gustKmh < 40) return {
-    dot:'#1B6B45', status: t.sailGood || 'Günstig – angenehme Segelbedingungen',
-    note: t.sailGoodNote || 'Wind 2–3 Bft. Ideale Bedingungen für Einsteiger, Katamarane und Segelboote. Kite erst ab Bft 3.'
-  };
-  // Bft 4–5 (29–49 km/h): Mässige Brise → gut für erfahrene Segler, Kite/Windsurf
-  if (windKmh < 50 && gustKmh < 65) return {
-    dot:'#E67E22', status: t.sailMedium || 'Vorsicht – mässiger Wind',
-    note: t.sailMediumNote || 'Wind 4–5 Bft. Erfahrene Segler. Kite/Windsurf günstig. SUP und Anfänger nicht empfohlen.'
-  };
-  // Bft 6+ (≥50 km/h): Starker Wind → nur sehr erfahrene Segler
-  return {
-    dot:'#C0392B', status: t.sailBad || 'Nicht empfohlen – starker Wind',
-    note: t.sailBadNote || 'Wind 6+ Bft. Nur für sehr erfahrene Segler. Kleine Boote und Anfänger im Hafen lassen.'
-  };
+  return R[risk] || R.low;
 }
 
 function renderDanger(hourly) {
@@ -1116,7 +1132,7 @@ function renderWind(hourly, isBrissago) {
   const dir    = Math.round(hourly.winddirection_10m?.[i] || 0);
   const bft    = kmhToBft(speed);
   const wave   = estimateWave(speed, dir);
-  const sail   = sailCondition(speed, gust);
+  const sail   = sailCondition(speed, gust, wave.hs);
   const t      = T[lang];
 
   // Compass arrow (points in wind direction FROM which wind comes)
@@ -1133,32 +1149,60 @@ function renderWind(hourly, isBrissago) {
   const sl = (id, key) => { const el=document.getElementById(id); if(el&&t[key]) el.textContent=t[key]; };
   sl('t-wind-label','windLabel'); sl('t-wind-gust','windGust'); sl('t-wind-bft','windBft');
   sl('t-wave-height','waveHeight'); sl('t-wave-period','wavePeriod');
-  sl('t-wind-chart-label','windChartLabel'); sl('t-wind-disc','windDisc');
+  sl('t-wind-chart-label','windChartLabel');
+  // Source note and disclaimer
+  const srcNote = document.getElementById('wind-source-note');
+  if(srcNote) srcNote.textContent = isBrissago ? '· Brissago' : '· Cannobio';
+  const windDiscEl = document.getElementById('t-wind-disc');
+  if(windDiscEl) windDiscEl.textContent = t.windDisc || '';
 
   // Sail bar
   const dot = document.getElementById('sail-dot');
   dot.style.background = sail.dot;
-  document.getElementById('sail-status').textContent = sail.status;
+  document.getElementById('sail-status').textContent = sail.windStatus;
   document.getElementById('sail-note').textContent = sail.note;
   // No background color on sail-bar — always white, color only via dot
   document.getElementById('sail-bar').style.background = 'var(--surface)';
+  // Show info btn only when there's a note
+  const infoBtn = document.getElementById('sail-info-btn');
+  if(infoBtn) infoBtn.style.display = sail.note ? '' : 'none';
+  // Risk level
+  const hasThunder = (hourly.weathercode||[]).slice(i,i+13).some(wc=>wc>=95);
+  const risk = riskLevel(sail.risk, hasThunder);
+  const dangerBlock = document.getElementById('water-danger-block');
+  if(dangerBlock) dangerBlock.style.display='';
+  const badge = document.getElementById('danger-badge');
+  if(badge){
+    badge.style.cssText='display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;';
+    document.getElementById('danger-icon').innerHTML=`<span style="font-size:14px;">${risk.icon}</span>`;
+    document.getElementById('danger-level-text').textContent=risk.label;
+    document.getElementById('danger-level-text').style.color=risk.color;
+  }
 
   // 12h wind chart
   const chart = document.getElementById('wind-chart');
   const labelsEl = document.getElementById('wind-chart-labels');
-  const maxSpeed = Math.max(...hourly.windspeed_10m.slice(i, i+13).filter(Boolean), 1);
   let chartHTML = '', labelsHTML = '';
+  const speeds = hourly.windspeed_10m || [];
+  const gusts  = hourly.windgusts_10m || [];
+  const maxSp  = Math.max(...speeds.slice(i, i+13).filter(Boolean), 1);
   for (let j = 0; j < 13; j++) {
-    const s2 = Math.round(hourly.windspeed_10m[i+j] || 0);
-    const g2 = Math.round(hourly.windgusts_10m?.[i+j] || s2);
-    const pct = Math.max(6, Math.round(s2 / maxSpeed * 100));
-    const color = s2 < 20 ? '#1B6B45' : s2 < 35 ? '#E67E22' : '#C0392B';
+    const idx2 = i + j;
+    const s2 = Math.round(speeds[idx2] || 0);
+    const g2 = Math.round(gusts[idx2] || s2);
+    const pct = maxSp > 0 ? Math.max(6, Math.round(s2 / maxSp * 100)) : 6;
+    const bftJ = kmhToBft(s2);
+    const color = bftJ <= 1 ? '#9B9890' : bftJ <= 3 ? '#1B6B45' : bftJ <= 4 ? '#F0A500' : bftJ === 5 ? '#E67E22' : '#C0392B';
     const t2 = new Date(now.getTime() + j*3600000);
     const tStr = t2.toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
-    chartHTML += `<div class="wind-chart-bar" style="height:${pct}%;background:${color};opacity:${j===0?1:0.75}" title="${tStr}: ${s2} km/h, Böen ${g2} km/h"></div>`;
+    const barH = Math.max(4, Math.round(s2 / maxSp * 62));
+    chartHTML += `<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;">
+      <span style="font-size:9px;font-weight:700;color:${color};line-height:1;">${bftJ}</span>
+      <div class="wind-chart-bar" style="height:${barH}px;background:${color};opacity:${j===0?1:0.85};" title="${tStr}: ${s2}\u00a0km/h \u00b7 Bft\u00a0${bftJ} \u00b7 B\u00f6en ${g2}\u00a0km/h"></div>
+    </div>`;
     if (j === 0 || j === 6 || j === 12) labelsHTML += `<span class="wind-chart-lbl">${tStr}</span>`;
   }
-  chart.innerHTML = chartHTML;
+  chart.innerHTML = chartHTML || '<div style="color:var(--text-tertiary);font-size:11px;padding:8px">Keine Daten</div>';
   labelsEl.innerHTML = labelsHTML;
 }
 
@@ -1207,21 +1251,19 @@ async function loadWeather(){
   try{
     const url=`https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}`
       +`&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum,windspeed_10m_max,sunshine_duration,weathercode,uv_index_max,sunrise,sunset`
-      +`&hourly=relativehumidity_2m,temperature_2m,windspeed_10m,windgusts_10m,winddirection_10m&current_weather=true&timezone=${TZ}&forecast_days=7`;
+      +`&hourly=relativehumidity_2m,temperature_2m,windspeed_10m,windgusts_10m,winddirection_10m,cape,weathercode&current_weather=true&timezone=${TZ}&forecast_days=7`;
     const data=await(await fetch(url)).json();
     globalData=data;
     renderCurrent(data); renderCards(data,activeView);
-    // Fetch wind separately for Brissago (closer to open lake, same ICON-CH model as SRF)
+    // Show wind immediately with main data (guaranteed to work)
+    if(data.hourly) { renderWind(data.hourly, false); renderDanger(data.hourly); }
+    // Then try to update with Brissago data for better lake accuracy
     try {
       const windUrl = `https://api.open-meteo.com/v1/forecast?latitude=${LAT_WIND}&longitude=${LON_WIND}`
-        +`&hourly=windspeed_10m,windgusts_10m,winddirection_10m,cape,precipitation,weathercode&timezone=${TZ}&forecast_days=2&models=icon_seamless`;
+        +`&hourly=windspeed_10m,windgusts_10m,winddirection_10m,cape,precipitation,weathercode&timezone=${TZ}&forecast_days=2`;
       const windData = await (await fetch(windUrl)).json();
-      renderWind(windData.hourly, true);
-      renderDanger(windData.hourly);
-    } catch(_) {
-      if(data.hourly) renderWind(data.hourly, false);
-      if(data.hourly) renderDanger(data.hourly);
-    }
+      if(windData.hourly) { renderWind(windData.hourly, true); renderDanger(windData.hourly); }
+    } catch(_) { /* keep main data values */ }
     const now = new Date();
     const timeStr = now.toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
     const dateStr = now.toLocaleDateString(lang==='it'?'it-IT':lang==='en'?'en-GB':'de-CH',{weekday:'long',day:'numeric',month:'long'});
@@ -1607,7 +1649,9 @@ function openSailPopup() {
   const note  = document.getElementById('sail-note')?.textContent || '';
   document.getElementById('sail-popup-title').textContent = title;
   document.getElementById('sail-popup-body').textContent  = note;
-  document.getElementById('sail-popup-disc').textContent  = t.dangerDisc || '';
+  // No disclaimer in popup – it lives in the wind card footer
+  const discEl = document.getElementById('sail-popup-disc');
+  if(discEl) discEl.textContent = '';
   document.getElementById('sail-popup').classList.add('open');
   document.getElementById('sail-overlay').classList.add('open');
 }
