@@ -1699,5 +1699,31 @@ function closeAqiInfo() {
   <div class="aqi-popup-body" id="aqi-popup-body"></div>
   <div class="aqi-popup-source" id="aqi-popup-source"></div>
 </div>
+
+<!-- DEBUG PANEL - REMOVE AFTER TESTING -->
+<div id="debug-panel" style="position:fixed;bottom:0;left:0;right:0;background:#1A1A18;color:#fff;font-size:11px;font-family:monospace;padding:8px 12px;z-index:9999;max-height:120px;overflow:auto;line-height:1.6;">
+  <strong style="color:#28A062;">DEBUG</strong> <span id="dbg-text">Warte auf Daten...</span>
+</div>
+<script>
+function dbg(msg) {
+  const el = document.getElementById('dbg-text');
+  if(el) el.innerHTML += '<br>' + msg;
+}
+// Patch renderWind to log
+const _origRW = renderWind;
+renderWind = function(hourly, isBrissago) {
+  if(!hourly) { dbg('renderWind: hourly=NULL'); return; }
+  const spds = hourly.windspeed_10m;
+  dbg('renderWind called: isBrissago=' + isBrissago 
+    + ' times=' + (hourly.time||[]).length
+    + ' windspeed_count=' + (spds||[]).length
+    + ' first_speed=' + (spds&&spds[0]));
+  const now = new Date();
+  const lh = now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0')+'T'+String(now.getHours()).padStart(2,'0');
+  dbg('localHour=' + lh + ' firstTime=' + ((hourly.time||[])[0]||'none'));
+  _origRW(hourly, isBrissago);
+  dbg('renderWind DONE');
+};
+</script>
 </body>
 </html>
