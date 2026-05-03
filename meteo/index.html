@@ -487,7 +487,7 @@ footer a{color:var(--text-secondary);text-decoration:none}
         <div style="display:flex;align-items:center;gap:8px;">
           <div class="sail-dot" id="sail-dot"></div>
           <span class="sail-status" id="sail-status" style="font-size:13px;font-weight:600;color:var(--text-primary);">—</span>
-          <button class="sail-info-btn" onclick="openSailPopup()" aria-label="Info">i</button>
+          <button class="sail-info-btn" onclick="openSailPopup()" aria-label="Info" title="Mehr Informationen">i</button>
         </div>
         <div id="water-danger-block" style="display:none;">
           <div id="danger-badge" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;">
@@ -1123,8 +1123,12 @@ function renderWind(hourly, isBrissago) {
   section.style.display = '';
 
   const now = new Date();
-  const nowH = now.toISOString().slice(0,13);
-  const idx = hourly.time.findIndex(t => t.startsWith(nowH));
+  // Match time in local timezone (API returns local times, not UTC)
+  const localHour = now.getFullYear()+'-'
+    +String(now.getMonth()+1).padStart(2,'0')+'-'
+    +String(now.getDate()).padStart(2,'0')+'T'
+    +String(now.getHours()).padStart(2,'0');
+  const idx = hourly.time.findIndex(t => t.startsWith(localHour));
   const i = idx >= 0 ? idx : 0;
 
   const speed  = Math.round(hourly.windspeed_10m[i] || 0);
@@ -1646,10 +1650,12 @@ setInterval(() => {
 function openSailPopup() {
   const t = T[lang];
   const title = document.getElementById('sail-status')?.textContent || '—';
-  const note  = document.getElementById('sail-note')?.textContent || '';
+  const note  = document.getElementById('sail-note')?.textContent;
   document.getElementById('sail-popup-title').textContent = title;
-  document.getElementById('sail-popup-body').textContent  = note;
-  // No disclaimer in popup – it lives in the wind card footer
+  // Body: sail note (z.B. "Wind 2–3 Bft. Ideal für...")
+  const body = (note && note !== '—') ? note : '';
+  document.getElementById('sail-popup-body').textContent = body;
+  // Disc: leer — Disclaimer steht im Footer der Wind-Card
   const discEl = document.getElementById('sail-popup-disc');
   if(discEl) discEl.textContent = '';
   document.getElementById('sail-popup').classList.add('open');
