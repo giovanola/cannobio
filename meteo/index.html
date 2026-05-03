@@ -110,7 +110,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary)
 /* UV PROTECTION BLOCK */
 .uv-block{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);padding:16px 20px;margin-bottom:12px}
 .uv-block-title{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:12px}
-.uv-block-grid{display:flex;gap:0;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:10px}
+.uv-block-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:10px}
 .uv-item{flex:1;padding:12px 10px;text-align:center;border-right:1px solid var(--border)}
 .uv-item:last-child{border-right:none}
 .uv-item-val{font-family:var(--font-display);font-size:20px;font-weight:300;letter-spacing:-.02em;line-height:1;margin-bottom:4px}
@@ -357,13 +357,31 @@ footer a{color:var(--text-secondary);text-decoration:none}
   <div class="hero-eyebrow" id="t-eyebrow">Lago Maggiore &middot; 46.06&deg; N</div>
   <h1 id="t-h1">Wettervorhersage<br><em>Cannobio</em></h1>
   <p class="hero-sub" id="t-sub">Prognose, Wind & Segelbedingungen, Luftqualität, UV-Index, Webcams und Unwetterwarnungen für Cannobio am Lago Maggiore.</p>
-  <div id="hero-timestamp" style="margin-top:14px;display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--text-tertiary);font-weight:400;">
-    <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;animation:pulse 2s ease-in-out infinite;"></span>
-    <span id="hero-ts-text">—</span>
+  <div id="hero-timestamp" style="margin-top:14px;font-size:12px;color:var(--text-tertiary);font-weight:400;">
+    <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;">
+      <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;animation:pulse 2s ease-in-out infinite;"></span>
+      <span id="hero-ts-text">—</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;">
+      <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap;">
+        <span style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);" id="t-lbl-rise-h">Sonnenaufgang</span>
+        <span id="cur-rise" style="font-weight:500;color:var(--text-primary);">—:—</span>
+      </span>
+      <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap;">
+        <span style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);" id="t-lbl-set-h">Sonnenuntergang</span>
+        <span id="cur-set" style="font-weight:500;color:var(--text-primary);">—:—</span>
+      </span>
+      <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap;">
+        <span style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);" id="t-lbl-sun-h">Sonne heute</span>
+        <span id="cur-sun" style="font-weight:500;color:var(--text-primary);">—h</span>
+      </span>
+    </div>
   </div>
 </section>
 
 <div class="content">
+
+
 
   <div class="current-card">
     <div class="current-left">
@@ -377,17 +395,25 @@ footer a{color:var(--text-secondary);text-decoration:none}
       <div class="current-meta-item"><div class="val" id="cur-night">—°</div><div class="lbl" id="t-lbl-night">Nachttief</div></div>
       <div class="current-meta-item"><div class="val" id="cur-hum">—%</div><div class="lbl" id="t-lbl-hum">Feuchte</div></div>
       <div class="current-meta-item"><div class="val" id="cur-rain">—%</div><div class="lbl" id="t-lbl-rain">Regenrisiko</div></div>
-      <div class="current-meta-item"><div class="val" id="cur-sun">—h</div><div class="lbl" id="t-lbl-sun">Sonne heute</div></div>
-      <div class="current-meta-item"><div class="val" id="cur-uv">—</div><div class="lbl" id="t-lbl-uv">UV-Index</div></div>
-      <div class="current-meta-item"><div class="val" id="cur-rise">—:—</div><div class="lbl" id="t-lbl-rise">Aufgang</div></div>
-      <div class="current-meta-item"><div class="val" id="cur-set">—:—</div><div class="lbl" id="t-lbl-set">Untergang</div></div>
     </div>
   </div>
 
   <!-- UV PROTECTION BLOCK -->
   <div class="uv-block" id="uv-block">
-    <div class="uv-block-title" id="t-uv-block-title">Sonnenschutz heute</div>
-    <div class="uv-block-grid">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+      <div class="uv-block-title" id="t-uv-block-title" style="margin-bottom:0;">Sonnenschutz heute</div>
+      <div id="uv-insight-header" style="display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:20px;background:var(--sky-pale);font-size:12px;font-weight:600;color:var(--sky);">
+        <span id="uv-insight-val">—</span>
+        <span id="uv-insight-label">—</span>
+      </div>
+    </div>
+    <div class="uv-block-grid" style="grid-template-columns:repeat(4,1fr);">
+      <!-- UV-INDEX: first, with actionable insight -->
+      <div class="uv-item" id="uv-index-card" style="background:var(--sky-pale);position:relative;">
+        <div class="uv-item-val" id="cur-uv" style="color:var(--sky);">—</div>
+        <div class="uv-item-lbl" id="t-uv-index-lbl">UV-Index</div>
+
+      </div>
       <div class="uv-item uv-none">
         <div class="uv-item-val" id="uv-none-val">—</div>
         <div class="uv-item-lbl" id="t-uv-none">Ohne Schutz</div>
@@ -401,7 +427,7 @@ footer a{color:var(--text-secondary);text-decoration:none}
         <div class="uv-item-lbl" id="t-uv-spf50">LSF 50</div>
       </div>
     </div>
-    <div class="uv-block-note" id="t-uv-note">Richtwert für Hauttyp II (hell, gelegentlich Sonnenbrand). Basierend auf WHO-Standard (MED 200 J/m²). Gilt für die Mittagsstunden mit dem höchsten UV-Index.</div>
+    <div class="uv-block-note" id="t-uv-note">Richtwert für Hauttyp II. WHO-Standard MED 200 J/m².</div>
   </div>
 
   <!-- WIND & WELLENBERICHT -->
@@ -573,6 +599,8 @@ const T = {
     windLabel:'Wind & Wellenbericht',windGust:'Böen',windBft:'Beaufort',
     waveHeight:'Wellengang',wavePeriod:'Periode',windChartLabel:'Windprognose 12h',
     windDisc:'Winddaten: Open-Meteo / MeteoSwiss ICON-CH, Messpunkt Brissago (CH) – beste Annäherung für den See. Wellengang geschätzt aus Windstärke und Fetch-Distanz (Lago Maggiore ≈ 60 km).',
+    sailCalm:'Windstille – kein Segeln möglich',
+    sailCalmNote:'Wind unter 1 Bft. Zu wenig Wind zum Segeln. Ideal für Stand-up-Paddling oder Kajakfahren.',
     sailGood:'Günstig – angenehme Segelbedingungen',
     sailGoodNote:'Wind 1–3 Bft. Ideale Bedingungen für Katamarane, SUP und Segelboote.',
     sailMedium:'Vorsicht – mässiger Wind',
@@ -611,8 +639,8 @@ const T = {
     wx:['Klarer Himmel','Leicht bew\u00f6lkt','Bew\u00f6lkt','Neblig','Nieselregen','Regen','Schneefall','Starkregen','Schneeschauer','Gewitter','Wechselhaft'],
     days:['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'],
     today:'Heute',statSun:'Sonne',statRain:'Regen',statHum:'Feuchte',statWind:'Wind',statAcc:'Genauigkeit',lblUv:'UV-Index',
-    lblRise:'Aufgang',lblSet:'Untergang',
-    uvBlockTitle:'Sonnenschutz heute',uvNone:'Ohne Schutz',uvSpf30:'LSF\u00a030',uvSpf50:'LSF\u00a050',
+    lblRise:'Sonnenaufgang',lblSet:'Sonnenuntergang',
+    uvBlockTitle:'Sonnenschutz heute',uvIndexLbl:'UV-Index',uvNone:'Ohne Schutz',uvSpf30:'LSF\u00a030',uvSpf50:'LSF\u00a050',
     uvNote:'Richtwert f\u00fcr Hauttyp II mit korrektem Eincremen (2\u00a0mg/cm\u00b2). LSF\u00a030: max.\u00a02\u00a0h Mittagssonne, dann Nachcremen. LSF\u00a050: max.\u00a03\u00a0h, dann Nachcremen und Schatten suchen. Quelle: WHO, Bundesamt f\u00fcr Strahlenschutz.',
     relNotes:['Kurzzeitprognose, sehr verl\u00e4sslich','Tendenz gesichert, Timing unsicher','Grosswetterlage, Details unsicher'],
     info:'Wetterdaten: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY\u00a04.0), MeteoSwiss ICON-CH. Luftqualit\u00e4t: European AQI, Copernicus CAMS. Warnungen: <a href="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa/allerta/" target="_blank" rel="noopener">ARPA Piemonte</a>, Provinz VCO. Nachrichten: <a href="https://www.ecorisveglio.it/?s=cannobio" target="_blank" rel="noopener">ecorisveglio.it</a>. Webcams: <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a>.',
@@ -632,6 +660,8 @@ const T = {
     windLabel:'Vento e moto ondoso',windGust:'Raffiche',windBft:'Beaufort',
     waveHeight:'Onde',wavePeriod:'Periodo',windChartLabel:'Previsione vento 12h',
     windDisc:'Dati vento: Open-Meteo / MeteoSwiss ICON-CH, punto di misura Brissago (CH). Moto ondoso stimato da velocità e fetch (Lago Maggiore ≈ 60 km).',
+    sailCalm:'Calma – vento insufficiente per navigare',
+    sailCalmNote:'Vento sotto 1 Bft. Troppo calmo per navigare. Ideale per stand-up paddle o kayak.',
     sailGood:'Favorevole – buone condizioni per navigare',
     sailGoodNote:'Vento 1–3 Bft. Condizioni ideali per catamarani, SUP e barche a vela.',
     sailMedium:'Attenzione – vento moderato',
@@ -671,7 +701,7 @@ const T = {
     days:['Domenica','Luned\u00ec','Marted\u00ec','Mercoled\u00ec','Gioved\u00ec','Venerd\u00ec','Sabato'],
     today:'Oggi',statSun:'Sole',statRain:'Pioggia',statHum:'Umidit\u00e0',statWind:'Vento',statAcc:'Attendibilit\u00e0',lblUv:'Indice UV',
     lblRise:'Alba',lblSet:'Tramonto',
-    uvBlockTitle:'Protezione solare oggi',uvNone:'Senza protezione',uvSpf30:'SPF\u00a030',uvSpf50:'SPF\u00a050',
+    uvBlockTitle:'Protezione solare oggi',uvIndexLbl:'Indice UV',uvNone:'Senza protezione',uvSpf30:'SPF\u00a030',uvSpf50:'SPF\u00a050',
     uvNote:'Valori indicativi per fototipo II con applicazione corretta (2\u00a0mg/cm\u00b2). SPF\u00a030: max.\u00a02\u00a0h di sole a picco, poi riapplicare. SPF\u00a050: max.\u00a03\u00a0h, poi riapplicare e cercare ombra. Fonte: WHO, BfS.',
     relNotes:['Previsione a breve termine, molto affidabile','Tendenza sicura, dettagli orari incerti','Quadro sinottico, dettagli poco affidabili'],
     info:'Dati meteo: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY\u00a04.0), modello MeteoSvizzera ICON-CH. Qualit\u00e0 dell\u2019aria: AQI europeo, Copernicus CAMS. Allerte: <a href="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa/allerta/" target="_blank" rel="noopener">ARPA Piemonte</a>, Provincia VCO. Notizie: <a href="https://www.ecorisveglio.it/?s=cannobio" target="_blank" rel="noopener">ecorisveglio.it</a>. Webcam: <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a>.',
@@ -691,6 +721,8 @@ const T = {
     windLabel:'Wind & Wave Report',windGust:'Gusts',windBft:'Beaufort',
     waveHeight:'Wave height',wavePeriod:'Period',windChartLabel:'12h wind forecast',
     windDisc:'Wind data: Open-Meteo / MeteoSwiss ICON-CH, measurement point Brissago (CH). Wave height estimated from wind speed and fetch distance (Lake Maggiore ≈ 60 km).',
+    sailCalm:'Calm – no sailing possible',
+    sailCalmNote:'Wind below 1 Bft. Too little wind for sailing. Ideal for stand-up paddling or kayaking.',
     sailGood:'Favourable – pleasant sailing conditions',
     sailGoodNote:'Wind 1–3 Bft. Ideal for catamarans, SUP and sailing boats.',
     sailMedium:'Caution – moderate wind',
@@ -730,7 +762,7 @@ const T = {
     days:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
     today:'Today',statSun:'Sun',statRain:'Rain',statHum:'Humidity',statWind:'Wind',statAcc:'Reliability',lblUv:'UV index',
     lblRise:'Sunrise',lblSet:'Sunset',
-    uvBlockTitle:'Sun protection today',uvNone:'No protection',uvSpf30:'SPF\u00a030',uvSpf50:'SPF\u00a050',
+    uvBlockTitle:'Sun protection today',uvIndexLbl:'UV Index',uvNone:'No protection',uvSpf30:'SPF\u00a030',uvSpf50:'SPF\u00a050',
     uvNote:'Guideline for skin type II with correct application (2\u00a0mg/cm\u00b2). SPF\u00a030: max.\u00a02\u00a0h midday sun, then reapply. SPF\u00a050: max.\u00a03\u00a0h, then reapply and seek shade. Source: WHO, BfS.',
     relNotes:['Short-range, highly reliable','Trend confirmed, timing uncertain','Synoptic pattern, details unreliable'],
     info:'Weather data: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY\u00a04.0), MeteoSwiss ICON-CH. Air quality: European AQI, Copernicus CAMS. Alerts: <a href="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa/allerta/" target="_blank" rel="noopener">ARPA Piemonte</a>, Province VCO. News: <a href="https://www.ecorisveglio.it/?s=cannobio" target="_blank" rel="noopener">ecorisveglio.it</a>. Webcams: <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a>.',
@@ -769,9 +801,11 @@ function applyT(){
   const id=(id,k,html)=>{ const el=document.getElementById(id); if(el){html?el.innerHTML=tr(k):el.textContent=tr(k);} };
   id('t-brand','brand'); id('t-eyebrow','eyebrow'); id('t-h1','h1',true); id('t-sub','sub');
   id('t-cur-label','curLabel'); id('t-lbl-high','lblHigh'); id('t-lbl-low','lblLow'); id('t-lbl-night','lblNight'); id('t-lbl-hum','lblHum');
-  id('t-lbl-rain','lblRain'); id('t-lbl-sun','lblSun'); id('t-lbl-uv','lblUv');
+  id('t-lbl-rain','lblRain'); id('t-lbl-sun','lblSun'); id('t-uv-index-lbl','lblUv');
   id('t-lbl-rise','lblRise'); id('t-lbl-set','lblSet');
+  id('t-lbl-rise-h','lblRise'); id('t-lbl-set-h','lblSet'); id('t-lbl-sun-h','lblSun');
   id('t-uv-block-title','uvBlockTitle'); id('t-uv-none','uvNone'); id('t-uv-spf30','uvSpf30'); id('t-uv-spf50','uvSpf50');
+  id('t-uv-index-lbl','uvIndexLbl');
   id('t-uv-note','uvNote');
   id('t-forecast-label','forecastLabel'); id('t-btn-3','btn3'); id('t-btn-7','btn7');
   id('t-rel-title','relTitle'); id('t-aqi-label','aqiLabel'); id('t-warn-label','warnLabel');
@@ -867,17 +901,27 @@ function estimateWave(windKmh, windDirDeg) {
 
 function sailCondition(windKmh, gustKmh) {
   const t = T[lang];
-  if (windKmh < 20 && gustKmh < 30) return {
+  const bft = kmhToBft(windKmh);
+
+  // Bft 0–1 (0–5 km/h): Windstille / kaum Wind → kein Segeln
+  if (windKmh < 6) return {
+    dot:'#9B9890', status: t.sailCalm || 'Windstille – kein Segeln möglich',
+    note: t.sailCalmNote || 'Wind unter 1 Bft. Zu wenig Wind zum Segeln. Ideal für Stand-up-Paddling oder Kajakfahren.'
+  };
+  // Bft 2–3 (6–28 km/h): Leichte Brise → angenehm für Anfänger, SUP, Katamarane
+  if (windKmh < 29 && gustKmh < 40) return {
     dot:'#1B6B45', status: t.sailGood || 'Günstig – angenehme Segelbedingungen',
-    note: t.sailGoodNote || 'Wind 1–3 Bft. Ideale Bedingungen für Katamarane, SUP und Segelboote.'
+    note: t.sailGoodNote || 'Wind 2–3 Bft. Ideale Bedingungen für Einsteiger, Katamarane und Segelboote. Kite erst ab Bft 3.'
   };
-  if (windKmh < 35 && gustKmh < 50) return {
+  // Bft 4–5 (29–49 km/h): Mässige Brise → gut für erfahrene Segler, Kite/Windsurf
+  if (windKmh < 50 && gustKmh < 65) return {
     dot:'#E67E22', status: t.sailMedium || 'Vorsicht – mässiger Wind',
-    note: t.sailMediumNote || 'Wind 3–5 Bft. Erfahrene Segler. Kite/Windsurfer günstig. SUP nicht empfohlen.'
+    note: t.sailMediumNote || 'Wind 4–5 Bft. Erfahrene Segler. Kite/Windsurf günstig. SUP und Anfänger nicht empfohlen.'
   };
+  // Bft 6+ (≥50 km/h): Starker Wind → nur sehr erfahrene Segler
   return {
     dot:'#C0392B', status: t.sailBad || 'Nicht empfohlen – starker Wind',
-    note: t.sailBadNote || 'Wind 5+ Bft. Nur für sehr erfahrene Segler. Kleine Boote im Hafen lassen.'
+    note: t.sailBadNote || 'Wind 6+ Bft. Nur für sehr erfahrene Segler. Kleine Boote und Anfänger im Hafen lassen.'
   };
 }
 
@@ -1166,7 +1210,7 @@ function renderCurrent(d){
   document.getElementById('cur-sun').textContent=sH!==null?sH+'h':'—';
   // UV index + sun protection
   const uv=da.uv_index_max?Math.round(da.uv_index_max[0]*10)/10:null;
-  document.getElementById('cur-uv').textContent=uv!==null?uv:'—';
+  const uvEl=document.getElementById('cur-uv'); if(uvEl) uvEl.textContent=uv!==null?uv:'—';
   renderUVProtection(uv);
   // Sunrise / Sunset
   if(da.sunrise&&da.sunrise[0]){
@@ -1186,24 +1230,45 @@ function renderUVProtection(uvi){
   if(!uvi||uvi<0.5){ block.style.display='none'; return; }
   block.style.display='';
 
-  // Basis: MED Hauttyp II = 200 J/m², UV-Dosis pro Stunde = UVI × 25 J/m²/h (WHO)
-  // Ohne Schutz: theoretische Zeit bis Sonnenbrand
   const MED=200, dosePerH=uvi*25;
   const noneMin = Math.round(MED / dosePerH * 60);
-
-  // LSF-Werte: Theoretische Verlängerung × Effizienzfaktor (0.5–0.6)
-  // Grund: LSF-Wert gilt nur bei korrektem Auftrag (2 mg/cm²), der in der Praxis selten erreicht wird.
-  // Quelle: Bundesamt für Strahlenschutz, AAD (American Academy of Dermatology)
-  // Zusätzlich: Maximale Empfehlung für ununterbrochenen Aufenthalt in der Mittagssonne:
-  // LSF 30 → max. 2h, LSF 50 → max. 3h, dann Nachcremen und Schatten suchen
-  const spf30Min = Math.min(Math.round(noneMin * 30 * 0.5), 120); // max 2h
-  const spf50Min = Math.min(Math.round(noneMin * 50 * 0.5), 180); // max 3h
+  const spf30Min = Math.min(Math.round(noneMin * 30 * 0.5), 120);
+  const spf50Min = Math.min(Math.round(noneMin * 50 * 0.5), 180);
 
   const fmtH = mins => {
     if(mins < 60) return Math.round(mins) + '\u00a0min';
     const h = Math.floor(mins/60), m = Math.round(mins%60);
     return m > 0 ? `${h}h\u00a0${m}min` : `${h}h`;
   };
+
+  // UV-Index actionable insight
+  const uvCard = document.getElementById('uv-index-card');
+  const uvInsight = document.getElementById('uv-insight');
+  const uvHeaderVal = document.getElementById('uv-insight-val');
+  const uvHeaderLbl = document.getElementById('uv-insight-label');
+  const uvHeader = document.getElementById('uv-insight-header');
+  let insightText, insightBg, cardBg;
+  if (uvi <= 2) {
+    insightText = lang==='de'?'Niedrig \u2013 kein Schutz n\u00f6tig':lang==='it'?'Basso \u2013 nessuna protezione':'Low \u2013 no protection needed';
+    insightBg = '#1B6B45'; cardBg = 'var(--accent-pale)';
+  } else if (uvi <= 5) {
+    insightText = lang==='de'?'M\u00e4ssig \u2013 LSF\u00a030 empfohlen':lang==='it'?'Moderato \u2013 SPF\u00a030 consigliato':'Moderate \u2013 SPF\u00a030 recommended';
+    insightBg = '#E67E22'; cardBg = '#FEF3E2';
+  } else if (uvi <= 7) {
+    insightText = lang==='de'?'Hoch \u2013 LSF\u00a050 n\u00f6tig':lang==='it'?'Alto \u2013 SPF\u00a050 necessario':'High \u2013 SPF\u00a050 required';
+    insightBg = '#C0392B'; cardBg = '#FDECEA';
+  } else if (uvi <= 10) {
+    insightText = lang==='de'?'Sehr hoch \u2013 Mittag meiden':lang==='it'?'Molto alto \u2013 evitare mezzogiorno':'Very high \u2013 avoid midday sun';
+    insightBg = '#7F0000'; cardBg = '#FDECEA';
+  } else {
+    insightText = lang==='de'?'Extrem \u2013 draussen vermeiden':lang==='it'?'Estremo \u2013 evitare esposizione':'Extreme \u2013 avoid outdoor exposure';
+    insightBg = '#4A0000'; cardBg = '#FDECEA';
+  }
+  if (uvCard) { uvCard.style.background = cardBg; }
+  // Header badge like AQI: "UV 5.6 · Mässig – LSF 30 empfohlen"
+  if (uvHeaderVal) uvHeaderVal.textContent = 'UV\u00a0' + uvi;
+  if (uvHeaderLbl) uvHeaderLbl.textContent = '\u00b7 ' + insightText;
+  if (uvHeader) { uvHeader.style.background = cardBg; uvHeader.style.color = insightBg; }
 
   document.getElementById('uv-none-val').textContent = fmtH(noneMin);
   document.getElementById('uv-spf30-val').textContent = fmtH(spf30Min);
