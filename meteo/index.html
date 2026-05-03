@@ -78,7 +78,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary)
 .data-chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:var(--gold);background:var(--gold-pale);border:1px solid #FDE68A;border-radius:20px;padding:4px 12px}
 
 /* HERO */
-.hero{padding:clamp(24px,5vw,52px) clamp(16px,4vw,24px) clamp(16px,4vw,36px);max-width:var(--max-w);margin:0 auto}
+.hero{padding:clamp(24px,5vw,52px) clamp(16px,4vw,24px) 8px;max-width:var(--max-w);margin:0 auto}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sky);margin-bottom:20px}
 .hero-eyebrow::before{content:'';width:20px;height:1px;background:var(--sky)}
 .hero h1{font-family:var(--font-display);font-size:clamp(32px,6vw,54px);font-weight:300;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;max-width:640px}
@@ -86,7 +86,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary)
 .hero-sub{font-size:16px;color:var(--text-secondary);font-weight:300;max-width:520px;line-height:1.7}
 
 /* CONTENT */
-.content{max-width:var(--max-w);margin:0 auto;padding:0 clamp(16px,4vw,24px) 80px;overflow:hidden}
+.content{max-width:var(--max-w);margin:0 auto;padding:8px clamp(16px,4vw,24px) 80px;overflow:hidden}
 .section-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px}
 .view-toggle-wrap{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
 .view-toggle{display:flex;gap:2px;background:var(--border);border-radius:10px;padding:3px}
@@ -271,7 +271,27 @@ footer a{color:var(--text-secondary);text-decoration:none}
 .wind-stat:last-child{border-right:none}
 .wind-stat-val{font-family:var(--font-display);font-size:20px;font-weight:300;color:var(--text-primary);letter-spacing:-.02em}
 .wind-stat-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-top:3px}
-.sail-bar{display:flex;align-items:center;gap:14px;padding:12px 22px;border-bottom:1px solid var(--border)}
+.sail-bar{display:flex;align-items:center;gap:10px;padding:12px 18px;border-bottom:none;background:var(--surface)!important}
+.sail-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.sail-status{font-size:13px;font-weight:600;color:var(--text-primary)}
+.sail-note{display:none}
+.sail-info-btn{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;border:1px solid var(--text-tertiary);background:transparent;color:var(--text-tertiary);font-size:9px;font-weight:700;cursor:pointer;flex-shrink:0;transition:all var(--transition);margin-left:4px}
+.sail-info-btn:hover{background:var(--text-tertiary);color:#fff}
+.sail-danger-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)}
+@media(max-width:640px){
+  .sail-danger-grid{grid-template-columns:1fr}
+  #water-danger-block{border-top:1px solid var(--border)}
+  .sail-bar{border-right:none!important}
+}
+/* Sail popup */
+.sail-popup-overlay{display:none;position:fixed;inset:0;z-index:499;background:rgba(0,0,0,.3);backdrop-filter:blur(2px)}
+.sail-popup-overlay.open{display:block}
+.sail-popup{display:none;position:fixed;z-index:500;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);box-shadow:var(--shadow-lg);padding:20px;max-width:340px;width:calc(100vw - 48px)}
+.sail-popup.open{display:block}
+.sail-popup-title{font-family:var(--font-display);font-size:18px;font-weight:300;margin-bottom:8px;color:var(--text-primary)}
+.sail-popup-body{font-size:13px;color:var(--text-secondary);line-height:1.65}
+.sail-popup-disc{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:11px;color:var(--text-tertiary);line-height:1.6}
+.sail-popup-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:18px;cursor:pointer;color:var(--text-tertiary)}
 .sail-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
 .sail-status{font-size:13px;font-weight:600;color:var(--text-primary)}
 .sail-note{font-size:11px;color:var(--text-secondary);margin-top:2px}
@@ -357,32 +377,29 @@ footer a{color:var(--text-secondary);text-decoration:none}
   <div class="hero-eyebrow" id="t-eyebrow">Lago Maggiore &middot; 46.06&deg; N</div>
   <h1 id="t-h1">Wettervorhersage<br><em>Cannobio</em></h1>
   <p class="hero-sub" id="t-sub">Prognose, Wind & Segelbedingungen, Luftqualität, UV-Index, Webcams und Unwetterwarnungen für Cannobio am Lago Maggiore.</p>
-  <div id="hero-timestamp" style="margin-top:14px;font-size:12px;color:var(--text-tertiary);font-weight:400;">
-    <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;">
+  <div id="hero-timestamp" style="margin-top:12px;font-size:12px;color:var(--text-tertiary);font-weight:400;line-height:1.8;">
+    <div style="display:inline-flex;align-items:center;gap:8px;">
       <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;animation:pulse 2s ease-in-out infinite;"></span>
       <span id="hero-ts-text">—</span>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;">
-      <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap;">
-        <span style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);" id="t-lbl-rise-h">Sonnenaufgang</span>
-        <span id="cur-rise" style="font-weight:500;color:var(--text-primary);">—:—</span>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;color:var(--text-tertiary);font-size:12px;font-weight:400;">
+      <span style="white-space:nowrap;">
+        <span id="t-lbl-rise-h">Sonnenaufgang</span>
+        <span id="cur-rise" style="color:var(--text-primary);margin-left:4px;">—:—</span>
       </span>
-      <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap;">
-        <span style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);" id="t-lbl-set-h">Sonnenuntergang</span>
-        <span id="cur-set" style="font-weight:500;color:var(--text-primary);">—:—</span>
+      <span style="white-space:nowrap;">
+        <span id="t-lbl-set-h">Sonnenuntergang</span>
+        <span id="cur-set" style="color:var(--text-primary);margin-left:4px;">—:—</span>
       </span>
-      <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap;">
-        <span style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);" id="t-lbl-sun-h">Sonne heute</span>
-        <span id="cur-sun" style="font-weight:500;color:var(--text-primary);">—h</span>
+      <span style="white-space:nowrap;">
+        <span id="t-lbl-sun-h">Sonne heute</span>
+        <span id="cur-sun" style="color:var(--text-primary);margin-left:4px;">—h</span>
       </span>
     </div>
   </div>
 </section>
 
 <div class="content">
-
-
-
   <div class="current-card">
     <div class="current-left">
       <div class="label" id="t-cur-label">Aktuell</div>
@@ -395,6 +412,7 @@ footer a{color:var(--text-secondary);text-decoration:none}
       <div class="current-meta-item"><div class="val" id="cur-night">—°</div><div class="lbl" id="t-lbl-night">Nachttief</div></div>
       <div class="current-meta-item"><div class="val" id="cur-hum">—%</div><div class="lbl" id="t-lbl-hum">Feuchte</div></div>
       <div class="current-meta-item"><div class="val" id="cur-rain">—%</div><div class="lbl" id="t-lbl-rain">Regenrisiko</div></div>
+      <div class="current-meta-item" id="precip-mm-item"><div class="val" id="cur-precip-mm">— mm</div><div class="lbl" id="t-lbl-precip">Niederschlag</div></div>
     </div>
   </div>
 
@@ -471,31 +489,27 @@ footer a{color:var(--text-secondary);text-decoration:none}
         </div>
       </div>
 
-      <!-- SEGELAMPEL -->
-      <div class="sail-bar" id="sail-bar">
-        <div class="sail-dot" id="sail-dot"></div>
-        <div>
-          <div class="sail-status" id="sail-status">—</div>
-          <div class="sail-note" id="sail-note">—</div>
-        </div>
-      </div>
+      <!-- SEGELAMPEL + GEFAHRENEINSCHÄTZUNG: 2 Spalten Desktop -->
+      <div class="sail-danger-grid" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);">
 
-      <!-- GEFAHRENEINSCHÄTZUNG -->
-      <div id="water-danger-block" style="border-top:1px solid var(--border);padding:16px 22px;display:none;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-          <div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);" id="t-danger-label">Gefahreneinschätzung heute</div>
+        <!-- LINKS: Segelampel -->
+        <div class="sail-bar" id="sail-bar" style="border-right:1px solid var(--border);">
+          <div class="sail-dot" id="sail-dot"></div>
+          <div class="sail-status" id="sail-status">—</div>
+          <button class="sail-info-btn" onclick="openSailPopup()" aria-label="Info">i</button>
         </div>
-        <!-- Overall risk badge -->
-        <div id="danger-badge" style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--radius-md);margin-bottom:14px;font-size:13px;font-weight:600;">
-          <span id="danger-icon">⚠️</span>
-          <span id="danger-level-text">—</span>
+
+        <!-- RECHTS: Gefahreneinschätzung -->
+        <div id="water-danger-block" style="padding:14px 18px;display:none;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:10px;" id="t-danger-label">Risiken</div>
+          <div id="danger-badge" style="display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:var(--radius-md);margin-bottom:10px;font-size:12px;font-weight:600;">
+            <span id="danger-icon">⚠️</span>
+            <span id="danger-level-text">—</span>
+          </div>
+          <div id="danger-factors" style="display:flex;flex-direction:column;gap:6px;margin-bottom:10px;"></div>
+          <div id="storm-window" style="display:none;padding:8px 12px;border-radius:var(--radius-sm);margin-bottom:10px;font-size:11px;line-height:1.6;"></div>
+          <div id="danger-disclaimer" style="display:none;"></div>
         </div>
-        <!-- Risk factors -->
-        <div id="danger-factors" style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;"></div>
-        <!-- Hourly storm window -->
-        <div id="storm-window" style="display:none;padding:10px 14px;border-radius:var(--radius-sm);margin-bottom:14px;font-size:12px;line-height:1.6;"></div>
-        <!-- Official disclaimer -->
-        <div style="padding:12px 14px;background:var(--gold-pale);border:1px solid #FDE68A;border-radius:var(--radius-sm);font-size:11px;color:#78350F;line-height:1.65;" id="danger-disclaimer"></div>
       </div>
 
       <!-- 12h WIND CHART -->
@@ -607,7 +621,18 @@ const T = {
     sailMediumNote:'Wind 3–5 Bft. Erfahrene Segler. Kite/Windsurfer günstig. SUP nicht empfohlen.',
     sailBad:'Nicht empfohlen – starker Wind',
     sailBadNote:'Wind 5+ Bft. Nur für sehr erfahrene Segler. Kleine Boote im Hafen lassen.',
-    dangerLabel:'Gefahreneinschätzung aufs Wasser heute',
+    uvLow:'Niedrig – kein Schutz nötig',
+    uvMed:'Mässig – LSF 30 empfohlen',
+    uvHigh:'Hoch – LSF 50 nötig',
+    uvVeryHigh:'Sehr hoch – Mittag meiden',
+    uvExtreme:'Extrem – draussen vermeiden',
+    capeExtreme:'extrem hohes Gewitterpotenzial',
+    capeHigh:'hohes Gewitterpotenzial',
+    capeMed:'mässiges Gewitterpotenzial',
+    thunderForecast:'Gewitter im Tagesverlauf prognostiziert',
+    dangerNoFactors:'Keine kritischen Faktoren identifiziert.',
+    dataFrom:'Daten von ',
+    dangerLabel:'Risiken',
     dangerLow:'Geringes Risiko – günstige Bedingungen',
     dangerMed:'Erhöhtes Risiko – Vorsicht geboten',
     dangerHigh:'Hohes Risiko – Wasserausflug nicht empfohlen',
@@ -619,7 +644,7 @@ const T = {
     stormWindow:'Kritisches Zeitfenster heute: {from} – {to} Uhr – Aktivitäten auf dem See meiden.',
     dangerDisc:'Hinweis: Basierend auf numerischen Wettermodellen (MeteoSwiss ICON-CH via Open-Meteo), keine offizielle Warnung. Vor dem Wasserausflug aktuelle Daten prüfen, z. B. bei MeteoSwiss, ARPA Piemonte und lokalen Wetterstationen. Das Wetter am Lago Maggiore kann sich schnell ändern. Im Zweifel nicht aufs Wasser gehen.',
     navGotthard:'Gotthard',
-    curLabel:'Aktuell',lblHigh:'Tageshoch',lblLow:'Tagestief',lblNight:'Nachttief',lblHum:'Feuchte',lblRain:'Regenrisiko',lblSun:'Sonne heute',
+    curLabel:'Aktuell',lblHigh:'Tageshoch',lblLow:'Tagestief',lblNight:'Nachttief',lblHum:'Feuchte',lblRain:'Regenrisiko',lblPrecip:'Niederschlag',lblSun:'Sonne heute',
     forecastLabel:'Prognose',btn3:'3 Tage',btn7:'7 Tage',
     relTitle:'Prognosegenauigkeit',
     relRows:[
@@ -668,7 +693,18 @@ const T = {
     sailMediumNote:'Vento 3–5 Bft. Navigatori esperti. Kite/windsurf favorevole. SUP sconsigliato.',
     sailBad:'Sconsigliato – vento forte',
     sailBadNote:'Vento 5+ Bft. Solo navigatori molto esperti. Tenere le piccole imbarcazioni in porto.',
-    dangerLabel:'Valutazione del rischio in acqua oggi',
+    uvLow:'Basso – nessuna protezione necessaria',
+    uvMed:'Moderato – SPF 30 consigliato',
+    uvHigh:'Alto – SPF 50 necessario',
+    uvVeryHigh:'Molto alto – evitare mezzogiorno',
+    uvExtreme:'Estremo – evitare l’esposizione',
+    capeExtreme:'potenziale temporali estremo',
+    capeHigh:'alto potenziale temporali',
+    capeMed:'moderato potenziale temporali',
+    thunderForecast:'Temporali previsti nel corso della giornata',
+    dangerNoFactors:'Nessun fattore critico identificato.',
+    dataFrom:'Dati del ',
+    dangerLabel:'Rischi',
     dangerLow:'Rischio basso – condizioni favorevoli',
     dangerMed:'Rischio elevato – prudenza necessaria',
     dangerHigh:'Rischio alto – attività in acqua sconsigliata',
@@ -680,7 +716,7 @@ const T = {
     stormWindow:'Finestra critica oggi: {from} – {to} – evitare attività sul lago.',
     dangerDisc:'Nota: Basato su modelli meteorologici numerici (MeteoSwiss ICON-CH via Open-Meteo), nessun avviso ufficiale. Prima di ogni uscita sull’acqua verificare i dati aggiornati, ad es. su MeteoSvizzera, ARPA Piemonte e stazioni meteo locali. Il tempo sul Lago Maggiore può cambiare rapidamente. In caso di dubbio, non andare in acqua.',
     navGotthard:'Gottardo',
-    curLabel:'Attuale',lblHigh:'Massima',lblLow:'Minima giorno',lblNight:'Minima notte',lblHum:'Umidit\u00e0',lblRain:'Rischio pioggia',lblSun:'Sole oggi',
+    curLabel:'Attuale',lblHigh:'Massima',lblLow:'Minima giorno',lblNight:'Minima notte',lblHum:'Umidit\u00e0',lblRain:'Rischio pioggia',lblPrecip:'Precipitazione',lblSun:'Sole oggi',
     forecastLabel:'Previsioni',btn3:'3 giorni',btn7:'7 giorni',
     relTitle:'Attendibilit\u00e0 previsionale',
     relRows:[
@@ -729,7 +765,18 @@ const T = {
     sailMediumNote:'Wind 3–5 Bft. Experienced sailors. Kite/windsurf favourable. SUP not recommended.',
     sailBad:'Not recommended – strong wind',
     sailBadNote:'Wind 5+ Bft. Experienced sailors only. Keep small boats in harbour.',
-    dangerLabel:'Water safety assessment today',
+    uvLow:'Low – no protection needed',
+    uvMed:'Moderate – SPF 30 recommended',
+    uvHigh:'High – SPF 50 required',
+    uvVeryHigh:'Very high – avoid midday sun',
+    uvExtreme:'Extreme – avoid outdoor exposure',
+    capeExtreme:'extreme thunderstorm potential',
+    capeHigh:'high thunderstorm potential',
+    capeMed:'moderate thunderstorm potential',
+    thunderForecast:'Thunderstorms forecast during the day',
+    dangerNoFactors:'No critical factors identified.',
+    dataFrom:'Updated ',
+    dangerLabel:'Risks',
     dangerLow:'Low risk – favourable conditions',
     dangerMed:'Elevated risk – caution advised',
     dangerHigh:'High risk – water activities not recommended',
@@ -741,7 +788,7 @@ const T = {
     stormWindow:'Critical time window today: {from} – {to} – avoid lake activities.',
     dangerDisc:'Note: Based on numerical weather models (MeteoSwiss ICON-CH via Open-Meteo), not an official warning. Before any water activity, check current data, e.g. at MeteoSwiss, ARPA Piemonte and local weather stations. Weather on Lake Maggiore can change quickly. If in doubt, stay off the water.',
     navGotthard:'Gotthard',
-    curLabel:'Current',lblHigh:'Day high',lblLow:'Day low',lblNight:'Night low',lblHum:'Humidity',lblRain:'Rain risk',lblSun:'Sun today',
+    curLabel:'Current',lblHigh:'Day high',lblLow:'Day low',lblNight:'Night low',lblHum:'Humidity',lblRain:'Rain risk',lblPrecip:'Precipitation',lblSun:'Sun today',
     forecastLabel:'Forecast',btn3:'3 days',btn7:'7 days',
     relTitle:'Forecast reliability',
     relRows:[
@@ -801,7 +848,7 @@ function applyT(){
   const id=(id,k,html)=>{ const el=document.getElementById(id); if(el){html?el.innerHTML=tr(k):el.textContent=tr(k);} };
   id('t-brand','brand'); id('t-eyebrow','eyebrow'); id('t-h1','h1',true); id('t-sub','sub');
   id('t-cur-label','curLabel'); id('t-lbl-high','lblHigh'); id('t-lbl-low','lblLow'); id('t-lbl-night','lblNight'); id('t-lbl-hum','lblHum');
-  id('t-lbl-rain','lblRain'); id('t-lbl-sun','lblSun'); id('t-uv-index-lbl','lblUv');
+  id('t-lbl-rain','lblRain'); id('t-lbl-precip','lblPrecip'); id('t-lbl-sun','lblSun'); id('t-uv-index-lbl','lblUv');
   id('t-lbl-rise','lblRise'); id('t-lbl-set','lblSet');
   id('t-lbl-rise-h','lblRise'); id('t-lbl-set-h','lblSet'); id('t-lbl-sun-h','lblSun');
   id('t-uv-block-title','uvBlockTitle'); id('t-uv-none','uvNone'); id('t-uv-spf30','uvSpf30'); id('t-uv-spf50','uvSpf50');
@@ -960,11 +1007,11 @@ function renderDanger(hourly) {
   // CAPE thresholds (J/kg)
   if (maxCape >= 1500) {
     score = Math.max(score, 3);
-    const desc = lang==='de' ? 'extrem hohes Gewitterpotenzial' : lang==='it' ? 'potenziale temporali estremo' : 'extreme thunderstorm potential';
+    const desc = T[lang].capeExtreme || T.de.capeExtreme;
     factors.push({ icon:'⛈️', text: t.factorThunder.replace('{val}', Math.round(maxCape)).replace('{desc}', desc), level: 3 });
   } else if (maxCape >= 800) {
     score = Math.max(score, 2);
-    const desc = lang==='de' ? 'hohes Gewitterpotenzial' : lang==='it' ? 'alto potenziale temporali' : 'high thunderstorm potential';
+    const desc = T[lang].capeHigh || T.de.capeHigh;
     factors.push({ icon:'⛈️', text: t.factorThunder.replace('{val}', Math.round(maxCape)).replace('{desc}', desc), level: 2 });
   } else if (maxCape >= 300) {
     score = Math.max(score, 1);
@@ -975,7 +1022,7 @@ function renderDanger(hourly) {
   // Thunderstorm weathercode
   if (hasThunder) {
     score = Math.max(score, 3);
-    factors.push({ icon:'⛈️', text: lang==='de'?'Gewitter im Tagesverlauf prognostiziert':lang==='it'?'Temporali previsti nel corso della giornata':'Thunderstorms forecast during the day', level:3 });
+    factors.push({ icon:'⛈️', text: T[lang].thunderForecast || T.de.thunderForecast, level:3 });
   }
 
   // Gusts
@@ -1030,7 +1077,7 @@ function renderDanger(hourly) {
       <span style="flex-shrink:0;">${f.icon}</span><span>${f.text}</span>
     </div>`
   ).join('') :
-    `<div style="font-size:12px;color:var(--accent);padding:8px 12px;background:var(--accent-pale);border-radius:8px;">${lang==='de'?'Keine kritischen Faktoren identifiziert.':lang==='it'?'Nessun fattore critico identificato.':'No critical factors identified.'}</div>`;
+    `<div style="font-size:12px;color:var(--accent);padding:8px 12px;background:var(--accent-pale);border-radius:8px;">${T[lang].dangerNoFactors || T.de.dangerNoFactors}</div>`;
 
   // Storm time window
   const critIdx = hours12.filter(j =>
@@ -1093,9 +1140,8 @@ function renderWind(hourly, isBrissago) {
   dot.style.background = sail.dot;
   document.getElementById('sail-status').textContent = sail.status;
   document.getElementById('sail-note').textContent = sail.note;
-  document.getElementById('sail-bar').style.background =
-    sail.dot === '#1B6B45' ? 'var(--accent-pale)' :
-    sail.dot === '#E67E22' ? '#FEF3E2' : '#FDECEA';
+  // No background color on sail-bar — always white, color only via dot
+  document.getElementById('sail-bar').style.background = 'var(--surface)';
 
   // 12h wind chart
   const chart = document.getElementById('wind-chart');
@@ -1160,7 +1206,7 @@ const LAT_WIND=46.1176,LON_WIND=8.7055; // Brissago – meilleure position pour 
 async function loadWeather(){
   try{
     const url=`https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}`
-      +`&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,windspeed_10m_max,sunshine_duration,weathercode,uv_index_max,sunrise,sunset`
+      +`&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum,windspeed_10m_max,sunshine_duration,weathercode,uv_index_max,sunrise,sunset`
       +`&hourly=relativehumidity_2m,temperature_2m,windspeed_10m,windgusts_10m,winddirection_10m&current_weather=true&timezone=${TZ}&forecast_days=7`;
     const data=await(await fetch(url)).json();
     globalData=data;
@@ -1182,7 +1228,7 @@ async function loadWeather(){
     document.getElementById('update-time').textContent=
       tr('standChip')+' '+timeStr+' '+tr('standUhr');
     const heroTs = document.getElementById('hero-ts-text');
-    if(heroTs) heroTs.textContent = (lang==='de'?'Daten von ':lang==='it'?'Dati del ':' Updated ')+dateStr+', '+timeStr+' · Open-Meteo';
+    if(heroTs) heroTs.textContent = (T[lang].dataFrom||T.de.dataFrom)+dateStr+', '+timeStr+' · Open-Meteo';
   }catch(_){renderFallback();}
 }
 
@@ -1223,6 +1269,17 @@ function renderCurrent(d){
     document.getElementById('cur-hum').textContent=(h.relativehumidity_2m[idx>=0?idx:0]||'—')+'%';
   }
   document.getElementById('cur-rain').textContent=(da.precipitation_probability_max[0]||0)+'%';
+  // Precipitation amount today
+  const precipToday = da.precipitation_sum ? da.precipitation_sum[0] : null;
+  const precipEl = document.getElementById('cur-precip-mm');
+  if(precipEl) {
+    if(precipToday !== null) {
+      precipEl.textContent = precipToday.toFixed(1) + ' mm';
+      precipEl.parentElement.style.display = '';
+    } else {
+      precipEl.parentElement.style.display = 'none';
+    }
+  }
 }
 
 function renderUVProtection(uvi){
@@ -1247,23 +1304,17 @@ function renderUVProtection(uvi){
   const uvHeaderVal = document.getElementById('uv-insight-val');
   const uvHeaderLbl = document.getElementById('uv-insight-label');
   const uvHeader = document.getElementById('uv-insight-header');
-  let insightText, insightBg, cardBg;
-  if (uvi <= 2) {
-    insightText = lang==='de'?'Niedrig \u2013 kein Schutz n\u00f6tig':lang==='it'?'Basso \u2013 nessuna protezione':'Low \u2013 no protection needed';
-    insightBg = '#1B6B45'; cardBg = 'var(--accent-pale)';
-  } else if (uvi <= 5) {
-    insightText = lang==='de'?'M\u00e4ssig \u2013 LSF\u00a030 empfohlen':lang==='it'?'Moderato \u2013 SPF\u00a030 consigliato':'Moderate \u2013 SPF\u00a030 recommended';
-    insightBg = '#E67E22'; cardBg = '#FEF3E2';
-  } else if (uvi <= 7) {
-    insightText = lang==='de'?'Hoch \u2013 LSF\u00a050 n\u00f6tig':lang==='it'?'Alto \u2013 SPF\u00a050 necessario':'High \u2013 SPF\u00a050 required';
-    insightBg = '#C0392B'; cardBg = '#FDECEA';
-  } else if (uvi <= 10) {
-    insightText = lang==='de'?'Sehr hoch \u2013 Mittag meiden':lang==='it'?'Molto alto \u2013 evitare mezzogiorno':'Very high \u2013 avoid midday sun';
-    insightBg = '#7F0000'; cardBg = '#FDECEA';
-  } else {
-    insightText = lang==='de'?'Extrem \u2013 draussen vermeiden':lang==='it'?'Estremo \u2013 evitare esposizione':'Extreme \u2013 avoid outdoor exposure';
-    insightBg = '#4A0000'; cardBg = '#FDECEA';
-  }
+  const UV_LEVELS = [
+    { max:2,  key:'uvLow',      bg:'#1B6B45', card:'var(--accent-pale)' },
+    { max:5,  key:'uvMed',      bg:'#E67E22', card:'#FEF3E2' },
+    { max:7,  key:'uvHigh',     bg:'#C0392B', card:'#FDECEA' },
+    { max:10, key:'uvVeryHigh', bg:'#7F0000', card:'#FDECEA' },
+    { max:99, key:'uvExtreme',  bg:'#4A0000', card:'#FDECEA' },
+  ];
+  const uvLevel = UV_LEVELS.find(l => uvi <= l.max) || UV_LEVELS[UV_LEVELS.length-1];
+  const insightText = T[lang][uvLevel.key] || T.de[uvLevel.key] || '';
+  const insightBg = uvLevel.bg;
+  const cardBg = uvLevel.card;
   if (uvCard) { uvCard.style.background = cardBg; }
   // Header badge like AQI: "UV 5.6 · Mässig – LSF 30 empfohlen"
   if (uvHeaderVal) uvHeaderVal.textContent = 'UV\u00a0' + uvi;
@@ -1285,6 +1336,7 @@ function renderCards(data,numDays){
     const isToday=date===today,dow=dt.getDay();
     const tHigh=Math.round(da.temperature_2m_max[i]),tLow=Math.round(da.temperature_2m_min[i]);
     const rain=da.precipitation_probability_max[i]||0,wind=Math.round(da.windspeed_10m_max[i]);
+    const precipMm = da.precipitation_sum ? (da.precipitation_sum[i]||0) : null;
     const sH=da.sunshine_duration?Math.round(da.sunshine_duration[i]/3600*10)/10:null;
     const icon=getIcon(da.weathercode[i],rain,tHigh);
     const dateStr=dt.toLocaleDateString('de-CH',{day:'2-digit',month:'2-digit'});
@@ -1305,7 +1357,7 @@ function renderCards(data,numDays){
         <div class="temp-row"><span class="temp-high">${tHigh}°</span><span class="temp-low">${tLow}°</span></div>
         <div class="stat-rows">
           ${sH!==null?`<div class="stat-row"><span class="stat-label">${t.statSun}</span><div class="stat-bar-wrap"><div class="stat-bar bar-sun" style="width:${sP}%"></div></div><span class="stat-value">${sH}h</span></div>`:''}
-          <div class="stat-row"><span class="stat-label">${t.statRain}</span><div class="stat-bar-wrap"><div class="stat-bar bar-rain" style="width:${rP}%"></div></div><span class="stat-value">${rain}%</span></div>
+          <div class="stat-row"><span class="stat-label">${t.statRain}</span><div class="stat-bar-wrap"><div class="stat-bar bar-rain" style="width:${rP}%"></div></div><span class="stat-value">${rain}%${precipMm!==null?' · '+precipMm.toFixed(1)+'mm':''}</span></div>
           ${hum!==null?`<div class="stat-row"><span class="stat-label">${t.statHum}</span><div class="stat-bar-wrap"><div class="stat-bar bar-hum" style="width:${hP}%"></div></div><span class="stat-value">${hum}%</span></div>`:''}
           <div class="stat-row"><span class="stat-label">${t.statWind}</span><div class="stat-bar-wrap"><div class="stat-bar bar-wind" style="width:${wP}%"></div></div><span class="stat-value">${wind} km/h</span></div>
         </div>
@@ -1320,7 +1372,7 @@ function renderCards(data,numDays){
 }
 
 function renderFallback(){
-  const fb={current_weather:{temperature:14,weathercode:1},daily:{time:['2026-04-03','2026-04-04','2026-04-05','2026-04-06','2026-04-07','2026-04-08','2026-04-09'],temperature_2m_max:[17,19,19,21,21,18,17],temperature_2m_min:[8,9,10,11,11,9,8],precipitation_probability_max:[0,0,10,10,0,30,40],windspeed_10m_max:[12,14,18,14,11,20,24],sunshine_duration:[32400,36000,25200,21600,36000,14400,10800],weathercode:[0,0,2,2,0,3,61],uv_index_max:[4.2,5.1,3.8,3.2,5.4,2.1,1.8],sunrise:['2026-04-03T06:33','2026-04-04T06:31','2026-04-05T06:29','2026-04-06T06:27','2026-04-07T06:25','2026-04-08T06:23','2026-04-09T06:21'],sunset:['2026-04-03T19:51','2026-04-04T19:53','2026-04-05T19:54','2026-04-06T19:56','2026-04-07T19:57','2026-04-08T19:59','2026-04-09T20:01']},hourly:{time:[],relativehumidity_2m:[]}};
+  const fb={current_weather:{temperature:14,weathercode:1},daily:{time:['2026-04-03','2026-04-04','2026-04-05','2026-04-06','2026-04-07','2026-04-08','2026-04-09'],temperature_2m_max:[17,19,19,21,21,18,17],temperature_2m_min:[8,9,10,11,11,9,8],precipitation_probability_max:[0,0,10,10,0,30,40],precipitation_sum:[0,0,1.2,0.8,0,4.5,8.2],windspeed_10m_max:[12,14,18,14,11,20,24],sunshine_duration:[32400,36000,25200,21600,36000,14400,10800],weathercode:[0,0,2,2,0,3,61],uv_index_max:[4.2,5.1,3.8,3.2,5.4,2.1,1.8],sunrise:['2026-04-03T06:33','2026-04-04T06:31','2026-04-05T06:29','2026-04-06T06:27','2026-04-07T06:25','2026-04-08T06:23','2026-04-09T06:21'],sunset:['2026-04-03T19:51','2026-04-04T19:53','2026-04-05T19:54','2026-04-06T19:56','2026-04-07T19:57','2026-04-08T19:59','2026-04-09T20:01']},hourly:{time:[],relativehumidity_2m:[]}};
   globalData=fb; renderCurrent(fb); renderCards(fb,activeView);
   document.getElementById('cur-hum').textContent='48%';
   document.getElementById('cur-low').textContent='9°';
@@ -1548,6 +1600,23 @@ setInterval(() => {
   loadAirQuality();
   loadWarnings();
 }, 10 * 60 * 1000);
+// ── SAIL POPUP ─────────────────────────────────────────────────
+function openSailPopup() {
+  const t = T[lang];
+  const title = document.getElementById('sail-status')?.textContent || '—';
+  const note  = document.getElementById('sail-note')?.textContent || '';
+  document.getElementById('sail-popup-title').textContent = title;
+  document.getElementById('sail-popup-body').textContent  = note;
+  document.getElementById('sail-popup-disc').textContent  = t.dangerDisc || '';
+  document.getElementById('sail-popup').classList.add('open');
+  document.getElementById('sail-overlay').classList.add('open');
+}
+function closeSailPopup() {
+  document.getElementById('sail-popup').classList.remove('open');
+  document.getElementById('sail-overlay').classList.remove('open');
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape'){ closeSailPopup(); closeAqiInfo(); }});
+
 function showAqiInfo(key) {
   const ln = lang || 'de';
   const info = window._AQI_INFO?.[key];
@@ -1564,8 +1633,15 @@ function closeAqiInfo() {
   document.getElementById('aqi-popup').classList.remove('open');
   document.getElementById('aqi-overlay').classList.remove('open');
 }
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeAqiInfo(); });
 </script>
+<!-- SAIL INFO POPUP -->
+<div class="sail-popup-overlay" id="sail-overlay" onclick="closeSailPopup()"></div>
+<div class="sail-popup" id="sail-popup">
+  <button class="sail-popup-close" onclick="closeSailPopup()">&#x00D7;</button>
+  <div class="sail-popup-title" id="sail-popup-title">—</div>
+  <div class="sail-popup-body" id="sail-popup-body">—</div>
+  <div class="sail-popup-disc" id="sail-popup-disc"></div>
+</div>
 <!-- AQI INFO POPUP -->
 <div class="aqi-popup-overlay" id="aqi-overlay" onclick="closeAqiInfo()"></div>
 <div class="aqi-popup" id="aqi-popup">
