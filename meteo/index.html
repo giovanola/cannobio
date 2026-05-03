@@ -1118,107 +1118,106 @@ function renderDanger(hourly) {
 
 
 function renderWind(hourly, isBrissago) {
-  if (!hourly || !hourly.windspeed_10m) return;
+  if (!hourly || !hourly.windspeed_10m || !hourly.time) return;
   const section = document.getElementById('wind-section');
-  section.style.display = '';
+  if(section) section.style.display = '';
 
+  const t = T[lang];
   const now = new Date();
-  // Match time in local timezone (API returns local times, not UTC)
-  const localHour = now.getFullYear()+'-'
-    +String(now.getMonth()+1).padStart(2,'0')+'-'
-    +String(now.getDate()).padStart(2,'0')+'T'
-    +String(now.getHours()).padStart(2,'0');
-  const idx = hourly.time.findIndex(t => t.startsWith(localHour));
-  const i = idx >= 0 ? idx : 0;
+  // Use local time to match API timezone (Europe/Rome)
+  const localHour = now.getFullYear() + '-'
+    + String(now.getMonth()+1).padStart(2,'0') + '-'
+    + String(now.getDate()).padStart(2,'0') + 'T'
+    + String(now.getHours()).padStart(2,'0');
+  let idx = hourly.time.findIndex(t2 => t2.startsWith(localHour));
+  if (idx < 0) idx = 0;
+  const i = idx;
 
-  const speed  = Math.round(hourly.windspeed_10m[i] || 0);
-  const gust   = Math.round(hourly.windgusts_10m?.[i] || speed * 1.3);
-  const dir    = Math.round(hourly.winddirection_10m?.[i] || 0);
-  const bft    = kmhToBft(speed);
-  const wave   = estimateWave(speed, dir);
-  const sail   = sailCondition(speed, gust, wave.hs);
-  const t      = T[lang];
+  const speed = Math.round(hourly.windspeed_10m[i] || 0);
+  const gust  = Math.round(hourly.windgusts_10m?.[i] || speed * 1.3);
+  const dir   = Math.round(hourly.winddirection_10m?.[i] || 0);
+  const bft   = kmhToBft(speed);
+  const wave  = estimateWave(speed, dir);
+  const sail  = sailCondition(speed, gust, wave.hs);
 
-  // Compass arrow (points in wind direction FROM which wind comes)
+  // ── Compass ──
   document.getElementById('wind-arrow').style.transform =
     `translateX(-50%) translateY(-100%) rotate(${dir}deg)`;
+
+  // ── Speed + direction ──
   document.getElementById('wind-speed-now').textContent = speed;
   document.getElementById('wind-dir-now').textContent = degToCompass(dir) + ' · ' + dir + '°';
+
+  // ── Stats ──
   document.getElementById('wind-gust-now').textContent = gust + ' km/h';
-  document.getElementById('wind-bft-now').textContent = 'Bft ' + bft;
+  document.getElementById('wind-bft-now').textContent  = 'Bft ' + bft;
   document.getElementById('wave-height-now').textContent = wave.hs + ' cm';
   document.getElementById('wave-period-now').textContent = wave.tp + ' s';
 
-  // Labels
-  const sl = (id, key) => { const el=document.getElementById(id); if(el&&t[key]) el.textContent=t[key]; };
+  // ── Sail status ──
+  const dot = document.getElementById('sail-dot');
+  if(dot) dot.style.background = sail.dot;
+  const statusEl = document.getElementById('sail-status');
+  if(statusEl) statusEl.textContent = sail.windStatus;
+  const noteEl = document.getElementById('sail-note');
+  if(noteEl) noteEl.textContent = sail.note;
+
+  // ── Risk level ──
+  const hasThunder = (hourly.weathercode || []).slice(i, i+13).some(wc => wc >= 95);
+  const risk = riskLevel(sail.risk, hasThunder);
+  const dangerBlock = document.getElementById('water-danger-block');
+  if(dangerBlock) dangerBlock.style.display = '';
+  const badge = document.getElementById('danger-badge');
+  if(badge) {
+    badge.style.cssText = 'display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;';
+    const iconEl = document.getElementById('danger-icon');
+    const lblEl  = document.getElementById('danger-level-text');
+    if(iconEl) iconEl.innerHTML = '<span style="font-size:15px;">' + risk.icon + '</span>';
+    if(lblEl)  { lblEl.textContent = risk.label; lblEl.style.color = risk.color; }
+  }
+
+  // ── Source note + disclaimer ──
+  const srcEl = document.getElementById('wind-source-note');
+  if(srcEl) srcEl.textContent = isBrissago ? '· Brissago' : '· Cannobio';
+  const discEl = document.getElementById('t-wind-disc');
+  if(discEl) discEl.textContent = t.windDisc || '';
+
+  // ── Labels ──
+  const sl = (id, key) => { const el=document.getElementById(id); if(el&&t[key])el.textContent=t[key]; };
   sl('t-wind-label','windLabel'); sl('t-wind-gust','windGust'); sl('t-wind-bft','windBft');
   sl('t-wave-height','waveHeight'); sl('t-wave-period','wavePeriod');
   sl('t-wind-chart-label','windChartLabel');
-  // Source note and disclaimer
-  const srcNote = document.getElementById('wind-source-note');
-  if(srcNote) srcNote.textContent = isBrissago ? '· Brissago' : '· Cannobio';
-  const windDiscEl = document.getElementById('t-wind-disc');
-  if(windDiscEl) windDiscEl.textContent = t.windDisc || '';
 
-  // Sail bar
-  const dot = document.getElementById('sail-dot');
-  dot.style.background = sail.dot;
-  document.getElementById('sail-status').textContent = sail.windStatus;
-  document.getElementById('sail-note').textContent = sail.note;
-  // No background color on sail-bar — always white, color only via dot
-  document.getElementById('sail-bar').style.background = 'var(--surface)';
-  // Show info btn only when there's a note
-  const infoBtn = document.getElementById('sail-info-btn');
-  if(infoBtn) infoBtn.style.display = sail.note ? '' : 'none';
-  // Risk level
-  const hasThunder = (hourly.weathercode||[]).slice(i,i+13).some(wc=>wc>=95);
-  const risk = riskLevel(sail.risk, hasThunder);
-  const dangerBlock = document.getElementById('water-danger-block');
-  if(dangerBlock) dangerBlock.style.display='';
-  const badge = document.getElementById('danger-badge');
-  if(badge){
-    badge.style.cssText='display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;';
-    document.getElementById('danger-icon').innerHTML=`<span style="font-size:14px;">${risk.icon}</span>`;
-    document.getElementById('danger-level-text').textContent=risk.label;
-    document.getElementById('danger-level-text').style.color=risk.color;
-  }
-
-  // 12h wind chart
-  const chart = document.getElementById('wind-chart');
+  // ── 12h Bar Chart ──
+  const chart    = document.getElementById('wind-chart');
   const labelsEl = document.getElementById('wind-chart-labels');
-  let chartHTML = '', labelsHTML = '';
-  const speeds = hourly.windspeed_10m || [];
+  if(!chart || !labelsEl) return;
+
+  const speeds = hourly.windspeed_10m;
   const gusts  = hourly.windgusts_10m || [];
-  const maxSp  = Math.max(...speeds.slice(i, i+13).filter(Boolean), 1);
+  const maxSp  = Math.max(...speeds.slice(i, i+13).filter(v => v!=null && v>0), 1);
+
+  let chartHTML = '', labelsHTML = '';
   for (let j = 0; j < 13; j++) {
-    const idx2 = i + j;
-    const s2 = Math.round(speeds[idx2] || 0);
-    const g2 = Math.round(gusts[idx2] || s2);
-    const pct = maxSp > 0 ? Math.max(6, Math.round(s2 / maxSp * 100)) : 6;
+    const s2   = Math.round(speeds[i+j] || 0);
+    const g2   = Math.round(gusts[i+j] || s2);
     const bftJ = kmhToBft(s2);
+    const barH = Math.max(4, Math.round(s2 / maxSp * 60));
     const color = bftJ <= 1 ? '#9B9890' : bftJ <= 3 ? '#1B6B45' : bftJ <= 4 ? '#F0A500' : bftJ === 5 ? '#E67E22' : '#C0392B';
-    const t2 = new Date(now.getTime() + j*3600000);
-    const tStr = t2.toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
-    const barH = Math.max(4, Math.round(s2 / maxSp * 62));
-    chartHTML += `<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;">
-      <span style="font-size:9px;font-weight:700;color:${color};line-height:1;">${bftJ}</span>
-      <div class="wind-chart-bar" style="height:${barH}px;background:${color};opacity:${j===0?1:0.85};" title="${tStr}: ${s2}\u00a0km/h \u00b7 Bft\u00a0${bftJ} \u00b7 B\u00f6en ${g2}\u00a0km/h"></div>
-    </div>`;
-    if (j === 0 || j === 6 || j === 12) labelsHTML += `<span class="wind-chart-lbl">${tStr}</span>`;
+    const t2   = new Date(now.getTime() + j * 3600000);
+    const tStr = t2.toLocaleTimeString('de-CH', {hour:'2-digit', minute:'2-digit'});
+    chartHTML += '<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;">'
+      + '<span style="font-size:9px;font-weight:700;color:' + color + ';line-height:1;">' + bftJ + '</span>'
+      + '<div style="width:100%;height:' + barH + 'px;background:' + color + ';border-radius:2px 2px 0 0;" title="' + tStr + ': ' + s2 + ' km/h · Bft ' + bftJ + '"></div>'
+      + '</div>';
+    if (j === 0 || j === 6 || j === 12) {
+      labelsHTML += '<span style="font-size:10px;color:var(--text-tertiary);">' + tStr + '</span>';
+    }
   }
-  chart.innerHTML = chartHTML || '<div style="color:var(--text-tertiary);font-size:11px;padding:8px">Keine Daten</div>';
+  chart.innerHTML = chartHTML;
   labelsEl.innerHTML = labelsHTML;
 }
 
-
-const SVG={
-  sun:`<svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="4.5"/><line x1="12" y1="19.5" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.99" y2="5.99"/><line x1="18.01" y1="18.01" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4.5" y2="12"/><line x1="19.5" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.99" y2="18.01"/><line x1="18.01" y1="5.99" x2="19.78" y2="4.22"/></svg>`,
-  few:`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="3.5" stroke="#F59E0B"/><line x1="8.5" y1="2" x2="8.5" y2="3.5" stroke="#F59E0B"/><line x1="2" y1="8.5" x2="3.5" y2="8.5" stroke="#F59E0B"/><path d="M19 17H8a5 5 0 0 1 0-10 5 5 0 0 1 .5.03A5.5 5.5 0 0 1 19 11.5a4.5 4.5 0 0 1 0 5.5z" stroke="#90A4AE"/></svg>`,
-  cloud:`<svg viewBox="0 0 24 24" fill="none" stroke="#90A4AE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a5 5 0 0 1-.5-9.97A5.5 5.5 0 0 1 19 13.5a4.5 4.5 0 0 1-1.5 5.5z"/></svg>`,
-  rain:`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 14H9a5 5 0 0 1-.5-9.97A5.5 5.5 0 0 1 19 8.5a4.5 4.5 0 0 1-1.5 5.5z" stroke="#90A4AE"/><line x1="8" y1="19" x2="8" y2="21" stroke="#1E88E5"/><line x1="12" y1="19" x2="12" y2="21" stroke="#1E88E5"/><line x1="16" y1="19" x2="16" y2="21" stroke="#1E88E5"/></svg>`,
-  storm:`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 14H9a5 5 0 0 1-.5-9.97A5.5 5.5 0 0 1 19 8.5a4.5 4.5 0 0 1-1.5 5.5z" stroke="#90A4AE"/><polyline points="13 12 10 18 14 18 11 24" stroke="#F59E0B"/></svg>`,
-  snow:`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 14H9a5 5 0 0 1-.5-9.97A5.5 5.5 0 0 1 19 8.5a4.5 4.5 0 0 1-1.5 5.5z" stroke="#90A4AE"/><line x1="8" y1="19" x2="8" y2="21" stroke="#90CAF9"/><line x1="12" y1="19" x2="12" y2="21" stroke="#90CAF9"/><line x1="16" y1="19" x2="16" y2="21" stroke="#90CAF9"/><line x1="7" y1="20" x2="9" y2="20" stroke="#90CAF9"/><line x1="11" y1="20" x2="13" y2="20" stroke="#90CAF9"/><line x1="15" y1="20" x2="17" y2="20" stroke="#90CAF9"/></svg>`,
-};
 
 function getIcon(code,rain,tHigh){
   if(code<=2&&rain===0&&tHigh>=15)return SVG.sun;
