@@ -124,6 +124,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary)
 .forecast-section{margin-bottom:32px}
 .forecast-grid{display:grid;gap:12px}
 .forecast-grid.view-3{grid-template-columns:repeat(3,1fr)}
+.forecast-grid.view-6{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
 .forecast-grid.view-7{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
 .day-card{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);overflow:hidden;transition:box-shadow var(--transition),transform var(--transition)}
 .day-card.today{border-color:var(--sky);box-shadow:0 0 0 2px rgba(21,101,192,.12)}
@@ -175,7 +176,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary)
 .aqi-badge.very-poor{background:#FEF2F2;color:#7F1D1D}
 .aqi-label-text{font-size:13px;font-weight:500;color:var(--text-secondary)}
 .aqi-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-@media(max-width:640px){.aqi-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.aqi-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.aqi-item{border-right:none;border-bottom:1px solid var(--border)}}
 .aqi-item{padding:14px 18px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
 .aqi-item:last-child{border-right:none}
@@ -519,6 +520,7 @@ footer a{color:var(--text-secondary);text-decoration:none}
       <div class="section-label" id="t-forecast-label" style="margin-bottom:0">Prognose</div>
       <div class="view-toggle">
         <button class="view-btn active" data-days="3" onclick="setView(3)" id="t-btn-3">3 Tage</button>
+        <button class="view-btn" data-days="6" onclick="setView(6)" id="t-btn-6">6 Tage</button>
         <button class="view-btn" data-days="7" onclick="setView(7)" id="t-btn-7">7 Tage</button>
       </div>
     </div>
@@ -528,12 +530,9 @@ footer a{color:var(--text-secondary);text-decoration:none}
   <div class="aqi-section">
     <div class="section-label" id="t-aqi-label">Luftqualität</div>
     <div class="aqi-card">
-      <div class="aqi-header">
-        <div style="display:flex;align-items:center;gap:12px">
-          <span class="aqi-badge good" id="aqi-badge">—</span>
-          <span class="aqi-label-text" id="aqi-sub">…</span>
-        </div>
-        <span style="font-size:11px;color:var(--text-tertiary)">European AQI &middot; Copernicus CAMS</span>
+      <div class="aqi-header" style="flex-direction:column;align-items:flex-start;gap:6px;">
+        <span class="aqi-badge good" id="aqi-badge" style="font-size:14px;padding:5px 14px;">—</span>
+        <span class="aqi-label-text" id="aqi-sub" style="font-size:12px;">…</span>
       </div>
       <div class="aqi-grid" id="aqi-grid"></div>
     </div>
@@ -647,7 +646,8 @@ const T = {
     dangerDisc:'Hinweis: Basierend auf numerischen Wettermodellen (MeteoSwiss ICON-CH via Open-Meteo), keine offizielle Warnung. Vor dem Wasserausflug aktuelle Daten prüfen, z. B. bei MeteoSwiss, ARPA Piemonte und lokalen Wetterstationen. Das Wetter am Lago Maggiore kann sich schnell ändern. Im Zweifel nicht aufs Wasser gehen.',
     navGotthard:'Gotthard',
     curLabel:'Aktuell',lblHigh:'Tageshoch',lblLow:'Tagestief',lblNight:'Nachttief',lblHum:'Feuchte',lblRain:'Regenrisiko',lblPrecip:'Niederschlag',lblSun:'Sonne heute',
-    forecastLabel:'Prognose',btn3:'3 Tage',btn7:'7 Tage',
+    forecastLabel:'Prognose',btn3:'3 Tage',btn6:'6 Tage',
+    btn7:'7 Tage',
     relTitle:'Prognosegenauigkeit',
     relRows:[
       {dot:'var(--rel-high)',text:'<strong>Tag 1\u20132 (90\u201395\u00a0%)</strong>: Sehr zuverl\u00e4ssig. ICON-CH MeteoSwiss erfasst kurzfristige Entwicklungen pr\u00e4zise.'},
@@ -728,7 +728,8 @@ const T = {
     dangerDisc:'Nota: Basato su modelli meteorologici numerici (MeteoSwiss ICON-CH via Open-Meteo), nessun avviso ufficiale. Prima di ogni uscita sull’acqua verificare i dati aggiornati, ad es. su MeteoSvizzera, ARPA Piemonte e stazioni meteo locali. Il tempo sul Lago Maggiore può cambiare rapidamente. In caso di dubbio, non andare in acqua.',
     navGotthard:'Gottardo',
     curLabel:'Attuale',lblHigh:'Massima',lblLow:'Minima giorno',lblNight:'Minima notte',lblHum:'Umidit\u00e0',lblRain:'Rischio pioggia',lblPrecip:'Precipitazione',lblSun:'Sole oggi',
-    forecastLabel:'Previsioni',btn3:'3 giorni',btn7:'7 giorni',
+    forecastLabel:'Previsioni',btn3:'3 giorni',btn6:'6 giorni',
+    btn7:'7 giorni',
     relTitle:'Attendibilit\u00e0 previsionale',
     relRows:[
       {dot:'var(--rel-high)',text:'<strong>Giorno 1\u20132 (90\u201395\u00a0%)</strong>: Molto affidabile. Il modello ICON-CH di MeteoSvizzera cattura gli sviluppi a breve termine con precisione.'},
@@ -809,7 +810,8 @@ const T = {
     dangerDisc:'Note: Based on numerical weather models (MeteoSwiss ICON-CH via Open-Meteo), not an official warning. Before any water activity, check current data, e.g. at MeteoSwiss, ARPA Piemonte and local weather stations. Weather on Lake Maggiore can change quickly. If in doubt, stay off the water.',
     navGotthard:'Gotthard',
     curLabel:'Current',lblHigh:'Day high',lblLow:'Day low',lblNight:'Night low',lblHum:'Humidity',lblRain:'Rain risk',lblPrecip:'Precipitation',lblSun:'Sun today',
-    forecastLabel:'Forecast',btn3:'3 days',btn7:'7 days',
+    forecastLabel:'Forecast',btn3:'3 days',btn6:'6 days',
+    btn7:'7 days',
     relTitle:'Forecast reliability',
     relRows:[
       {dot:'var(--rel-high)',text:'<strong>Day 1\u20132 (90\u201395\u00a0%)</strong>: Very reliable. ICON-CH MeteoSwiss captures short-term developments with high accuracy.'},
@@ -874,7 +876,7 @@ function applyT(){
   id('t-uv-block-title','uvBlockTitle'); id('t-uv-none','uvNone'); id('t-uv-spf30','uvSpf30'); id('t-uv-spf50','uvSpf50');
   id('t-uv-index-lbl','uvIndexLbl');
   id('t-uv-note','uvNote');
-  id('t-forecast-label','forecastLabel'); id('t-btn-3','btn3'); id('t-btn-7','btn7');
+  id('t-forecast-label','forecastLabel'); id('t-btn-3','btn3'); id('t-btn-6','btn6'); id('t-btn-7','btn7');
   id('t-rel-title','relTitle'); id('t-aqi-label','aqiLabel'); id('t-warn-label','warnLabel');
   id('t-news-label','newsLabel'); id('t-cams-label','camsLabel'); id('t-info','info',true);
   const sub=document.getElementById('aqi-sub'); if(sub)sub.textContent=tr('aqiSub');
@@ -1221,6 +1223,14 @@ function renderWind(hourly, isBrissago) {
 }
 
 
+const SVG={
+  sun:`<svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="4.5"/><line x1="12" y1="19.5" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.99" y2="5.99"/><line x1="18.01" y1="18.01" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4.5" y2="12"/><line x1="19.5" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.99" y2="18.01"/><line x1="18.01" y1="5.99" x2="19.78" y2="4.22"/></svg>`,
+  few:`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="3.5" stroke="#F59E0B"/><line x1="8.5" y1="2" x2="8.5" y2="3.5" stroke="#F59E0B"/><line x1="2" y1="8.5" x2="3.5" y2="8.5" stroke="#F59E0B"/><path d="M19 17H8a5 5 0 0 1 0-10 5 5 0 0 1 .5.03A5.5 5.5 0 0 1 19 11.5a4.5 4.5 0 0 1 0 5.5z" stroke="#90A4AE"/></svg>`,
+  cloud:`<svg viewBox="0 0 24 24" fill="none" stroke="#90A4AE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a5 5 0 0 1-.5-9.97A5.5 5.5 0 0 1 19 13.5a4.5 4.5 0 0 1-1.5 5.5z"/></svg>`,
+  rain:`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 14H9a5 5 0 0 1-.5-9.97A5.5 5.5 0 0 1 19 8.5a4.5 4.5 0 0 1-1.5 5.5z" stroke="#90A4AE"/><line x1="8" y1="19" x2="8" y2="21" stroke="#1E88E5"/><line x1="12" y1="19" x2="12" y2="21" stroke="#1E88E5"/><line x1="16" y1="19" x2="16" y2="21" stroke="#1E88E5"/></svg>`,
+  storm:`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 14H9a5 5 0 0 1-.5-9.97A5.5 5.5 0 0 1 19 8.5a4.5 4.5 0 0 1-1.5 5.5z" stroke="#90A4AE"/><polyline points="13 12 10 18 14 18 11 24" stroke="#F59E0B"/></svg>`,
+  snow:`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 14H9a5 5 0 0 1-.5-9.97A5.5 5.5 0 0 1 19 8.5a4.5 4.5 0 0 1-1.5 5.5z" stroke="#90A4AE"/><line x1="8" y1="19" x2="8" y2="21" stroke="#90CAF9"/><line x1="12" y1="19" x2="12" y2="21" stroke="#90CAF9"/><line x1="16" y1="19" x2="16" y2="21" stroke="#90CAF9"/><line x1="7" y1="20" x2="9" y2="20" stroke="#90CAF9"/><line x1="11" y1="20" x2="13" y2="20" stroke="#90CAF9"/><line x1="15" y1="20" x2="17" y2="20" stroke="#90CAF9"/></svg>`,
+};
 function getIcon(code,rain,tHigh){
   if(code<=2&&rain===0&&tHigh>=15)return SVG.sun;
   if(code===3&&rain===0&&tHigh>=18)return SVG.few;
@@ -1431,7 +1441,8 @@ function renderFallback(){
 function setView(days){
   activeView=days;
   document.querySelectorAll('.view-btn').forEach(b=>b.classList.toggle('active',parseInt(b.dataset.days)===days));
-  document.getElementById('forecast-grid').className=`forecast-grid view-${days}`;
+  const cls = days<=3?'view-3':days<=6?'view-6':'view-7';
+  document.getElementById('forecast-grid').className='forecast-grid '+cls;
   if(globalData)renderCards(globalData,days);
 }
 
