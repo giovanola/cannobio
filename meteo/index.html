@@ -870,9 +870,35 @@ function setLang(l){
     renderWind(window._windDataCache.hourly, window._windDataCache.isBrissago);
     renderDanger(window._windDataCache.hourly);
   }
-  // Re-render AQI sub-label
+  // Re-render UV protection
+  if(window._uviCache !== undefined) renderUVProtection(window._uviCache);
+  // Re-render AQI grid and badge
   const aqiSub = document.getElementById('aqi-sub');
   if(aqiSub) aqiSub.textContent = T[lang].aqiSub || T.de.aqiSub;
+  if(window._aqiItemsCache && window._AQI_INFO) {
+    const items = window._aqiItemsCache;
+    const ln = lang||'de';
+    document.getElementById('aqi-grid').innerHTML = items.map(it => {
+      const info = window._AQI_INFO[it.l]?.[ln] || window._AQI_INFO[it.l]?.de;
+      const url = window._AQI_INFO[it.l]?.url || '';
+      return `<div class="aqi-item">
+        <div class="aqi-item-val">${it.v}<span class="aqi-item-unit">${it.u}</span></div>
+        <div class="aqi-item-name-row">
+          <span class="aqi-item-label" style="text-transform:none;letter-spacing:0;font-size:11px;font-weight:600;">${it.l}</span>
+          <button class="aqi-info-btn" onclick="showAqiInfo('${it.l}')" aria-label="Info">i</button>
+        </div>
+        <div class="aqi-item-desc">${info?.name||info?.title||''}</div>
+        <div class="aqi-item-bar"><div class="aqi-item-bar-fill" style="width:${Math.min(it.v/it.m*100,100)}%;background:${it.col}"></div></div>
+      </div>`;
+    }).join('');
+    // Update AQI badge text
+    const badge = document.getElementById('aqi-badge');
+    if(badge && badge.dataset.aqi) {
+      const names = T[lang].aqiNames || T.de.aqiNames;
+      const idx = parseInt(badge.dataset.idx || '0');
+      badge.textContent = `AQI ${badge.dataset.aqi} – ${names[idx]||names[names.length-1]}`;
+    }
+  }
   // Re-render warnings OK message if visible
   const warnOkEl = document.querySelector('.warnings-ok');
   if(warnOkEl) {
@@ -1337,6 +1363,7 @@ function renderCurrent(d){
   // UV index + sun protection
   const uv=da.uv_index_max?Math.round(da.uv_index_max[0]*10)/10:null;
   const uvEl=document.getElementById('cur-uv'); if(uvEl) uvEl.textContent=uv!==null?uv:'—';
+  window._uviCache = uv;
   renderUVProtection(uv);
   // Sunrise / Sunset
   if(da.sunrise&&da.sunrise[0]){
@@ -1484,6 +1511,8 @@ async function loadAirQuality(){
     const names=T[lang].aqiNames;
     const badge=document.getElementById('aqi-badge');
     badge.textContent=`AQI ${aqi} – ${names[idx]||names[names.length-1]}`;
+    badge.dataset.aqi = aqi;
+    badge.dataset.idx = idx;
     badge.className=`aqi-badge ${lvl.cls}`;
     document.getElementById('aqi-sub').textContent=tr('aqiSub');
     const AQI_INFO = {
@@ -1529,6 +1558,9 @@ async function loadAirQuality(){
     }).join('');
     // Store AQI_INFO globally for popup (multilang already in AQI_INFO)
     window._AQI_INFO = AQI_INFO;
+    // Cache items for lang switch re-render
+    window._aqiItemsCache = items;
+    window._aqiLevelCache = { aqi, idx };
     }catch(_){document.getElementById('aqi-sub').textContent='—';}
 }
 
