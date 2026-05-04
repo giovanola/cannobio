@@ -410,38 +410,6 @@ footer a{color:var(--text-secondary);text-decoration:none}
     </div>
   </div>
 
-  <!-- UV PROTECTION BLOCK -->
-  <div class="uv-block" id="uv-block">
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
-      <div class="uv-block-title" id="t-uv-block-title" style="margin-bottom:0;">Sonnenschutz heute</div>
-      <div id="uv-insight-header" style="display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:20px;background:var(--sky-pale);font-size:12px;font-weight:600;color:var(--sky);">
-        <span id="uv-insight-val">—</span>
-        <span id="uv-insight-label">—</span>
-      </div>
-    </div>
-    <div class="uv-block-grid" style="grid-template-columns:repeat(4,1fr);">
-      <!-- UV-INDEX: first, with actionable insight -->
-      <div class="uv-item" id="uv-index-card" style="background:var(--sky-pale);position:relative;">
-        <div class="uv-item-val" id="cur-uv" style="color:var(--sky);">—</div>
-        <div class="uv-item-lbl" id="t-uv-index-lbl">UV-Index</div>
-
-      </div>
-      <div class="uv-item uv-none">
-        <div class="uv-item-val" id="uv-none-val">—</div>
-        <div class="uv-item-lbl" id="t-uv-none">Ohne Schutz</div>
-      </div>
-      <div class="uv-item uv-spf30">
-        <div class="uv-item-val" id="uv-spf30-val">—</div>
-        <div class="uv-item-lbl" id="t-uv-spf30">LSF 30</div>
-      </div>
-      <div class="uv-item uv-spf50">
-        <div class="uv-item-val" id="uv-spf50-val">—</div>
-        <div class="uv-item-lbl" id="t-uv-spf50">LSF 50</div>
-      </div>
-    </div>
-    <div class="uv-block-note" id="t-uv-note">Richtwert für Hauttyp II. WHO-Standard MED 200 J/m².</div>
-  </div>
-
   <!-- WIND & WELLENBERICHT -->
   <div class="wind-section" id="wind-section" style="margin-bottom:32px;">
     <div class="section-label" id="t-wind-label">Wind & Wellenbericht</div>
@@ -515,22 +483,6 @@ footer a{color:var(--text-secondary);text-decoration:none}
     </div>
   </div>
 
-  <div class="forecast-section">
-    <div class="view-toggle-wrap">
-      <div class="section-label" id="t-forecast-label" style="margin-bottom:0">Prognose</div>
-      <div class="view-toggle">
-        <button class="view-btn" data-days="3" onclick="setView(3)" id="t-btn-3">3 Tage</button>
-        <button class="view-btn active" data-days="6" onclick="setView(6)" id="t-btn-6">6 Tage</button>
-      </div>
-    </div>
-    <div class="forecast-grid view-3" id="forecast-grid"></div>
-  </div>
-
-  <div class="warnings-section" id="warnings-section">
-    <div class="section-label" id="t-warn-label">Unwetterwarnungen ARPA Piemonte — Provinz VCO</div>
-    <div id="warnings-grid"></div>
-  </div>
-
   <div class="aqi-section">
     <div class="section-label" id="t-aqi-label">Luftqualität</div>
     <div class="aqi-card">
@@ -543,6 +495,54 @@ footer a{color:var(--text-secondary);text-decoration:none}
   </div>
 
 
+
+  <div class="warnings-section" id="warnings-section">
+    <div class="section-label" id="t-warn-label">Unwetterwarnungen ARPA Piemonte — Provinz VCO</div>
+    <div id="warnings-grid"></div>
+  </div>
+
+  <!-- UV PROTECTION BLOCK -->
+  <div class="uv-block" id="uv-block">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+      <div class="uv-block-title" id="t-uv-block-title" style="margin-bottom:0;">Sonnenschutz heute</div>
+      <div id="uv-insight-header" style="display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:20px;background:var(--sky-pale);font-size:12px;font-weight:600;color:var(--sky);">
+        <span id="uv-insight-val">—</span>
+        <span id="uv-insight-label">—</span>
+      </div>
+    </div>
+    <div class="uv-block-grid" style="grid-template-columns:repeat(4,1fr);">
+      <!-- UV-INDEX: first, with actionable insight -->
+      <div class="uv-item" id="uv-index-card" style="background:var(--sky-pale);position:relative;">
+        <div class="uv-item-val" id="cur-uv" style="color:var(--sky);">—</div>
+        <div class="uv-item-lbl" id="t-uv-index-lbl">UV-Index</div>
+
+      </div>
+      <div class="uv-item uv-none">
+        <div class="uv-item-val" id="uv-none-val">—</div>
+        <div class="uv-item-lbl" id="t-uv-none">Ohne Schutz</div>
+      </div>
+      <div class="uv-item uv-spf30">
+        <div class="uv-item-val" id="uv-spf30-val">—</div>
+        <div class="uv-item-lbl" id="t-uv-spf30">LSF 30</div>
+      </div>
+      <div class="uv-item uv-spf50">
+        <div class="uv-item-val" id="uv-spf50-val">—</div>
+        <div class="uv-item-lbl" id="t-uv-spf50">LSF 50</div>
+      </div>
+    </div>
+    <div class="uv-block-note" id="t-uv-note">Richtwert für Hauttyp II. WHO-Standard MED 200 J/m².</div>
+  </div>
+
+  <div class="forecast-section">
+    <div class="view-toggle-wrap">
+      <div class="section-label" id="t-forecast-label" style="margin-bottom:0">Prognose</div>
+      <div class="view-toggle">
+        <button class="view-btn" data-days="3" onclick="setView(3)" id="t-btn-3">3 Tage</button>
+        <button class="view-btn active" data-days="6" onclick="setView(6)" id="t-btn-6">6 Tage</button>
+      </div>
+    </div>
+    <div class="forecast-grid view-3" id="forecast-grid"></div>
+  </div>
 
   <div class="webcam-section">
     <div class="section-label" id="t-cams-label">Live-Webcams</div>
