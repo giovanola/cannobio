@@ -519,12 +519,16 @@ footer a{color:var(--text-secondary);text-decoration:none}
     <div class="view-toggle-wrap">
       <div class="section-label" id="t-forecast-label" style="margin-bottom:0">Prognose</div>
       <div class="view-toggle">
-        <button class="view-btn active" data-days="3" onclick="setView(3)" id="t-btn-3">3 Tage</button>
-        <button class="view-btn" data-days="6" onclick="setView(6)" id="t-btn-6">6 Tage</button>
-        <button class="view-btn" data-days="7" onclick="setView(7)" id="t-btn-7">7 Tage</button>
+        <button class="view-btn" data-days="3" onclick="setView(3)" id="t-btn-3">3 Tage</button>
+        <button class="view-btn active" data-days="6" onclick="setView(6)" id="t-btn-6">6 Tage</button>
       </div>
     </div>
     <div class="forecast-grid view-3" id="forecast-grid"></div>
+  </div>
+
+  <div class="warnings-section" id="warnings-section">
+    <div class="section-label" id="t-warn-label">Unwetterwarnungen ARPA Piemonte — Provinz VCO</div>
+    <div id="warnings-grid"></div>
   </div>
 
   <div class="aqi-section">
@@ -538,10 +542,7 @@ footer a{color:var(--text-secondary);text-decoration:none}
     </div>
   </div>
 
-  <div class="warnings-section" id="warnings-section">
-    <div class="section-label" id="t-warn-label">Unwetterwarnungen ARPA Piemonte — Provinz VCO</div>
-    <div id="warnings-grid"></div>
-  </div>
+
 
   <div class="webcam-section">
     <div class="section-label" id="t-cams-label">Live-Webcams</div>
@@ -848,7 +849,7 @@ const T = {
 /* =========================================================
    STATE
 ========================================================= */
-let lang='de', globalData=null, activeView=3;
+let lang='de', globalData=null, activeView=6;
 
 /* =========================================================
    LANGUAGE
@@ -876,7 +877,7 @@ function applyT(){
   id('t-uv-block-title','uvBlockTitle'); id('t-uv-none','uvNone'); id('t-uv-spf30','uvSpf30'); id('t-uv-spf50','uvSpf50');
   id('t-uv-index-lbl','uvIndexLbl');
   id('t-uv-note','uvNote');
-  id('t-forecast-label','forecastLabel'); id('t-btn-3','btn3'); id('t-btn-6','btn6'); id('t-btn-7','btn7');
+  id('t-forecast-label','forecastLabel'); id('t-btn-3','btn3'); id('t-btn-6','btn6'); 
   id('t-rel-title','relTitle'); id('t-aqi-label','aqiLabel'); id('t-warn-label','warnLabel');
   id('t-news-label','newsLabel'); id('t-cams-label','camsLabel'); id('t-info','info',true);
   const sub=document.getElementById('aqi-sub'); if(sub)sub.textContent=tr('aqiSub');
@@ -920,6 +921,11 @@ function applyT(){
   const nw=document.getElementById('nav-wetter'); if(nw)nw.textContent=tr('navWetter');
   const nr=document.getElementById('nav-rifiuti'); if(nr)nr.textContent=tr('navRifiuti');
   const ng=document.getElementById('nav-gotthard'); if(ng)ng.textContent=tr('navGotthard')||'Gotthard';
+  // wind section labels (also updated in renderWind, but needed on lang switch)
+  id('t-wind-label','windLabel'); id('t-wind-chart-label','windChartLabel');
+  id('t-wind-gust','windGust'); id('t-wind-bft','windBft');
+  id('t-wave-height','waveHeight'); id('t-wave-period','wavePeriod');
+  id('t-danger-label','dangerLabel');
   // offline chip
   const chip=document.getElementById('data-chip-text');
   if(chip&&chip.dataset.mode==='offline')chip.textContent=tr('offlineChip');
