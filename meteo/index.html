@@ -353,7 +353,7 @@ footer a{color:var(--text-secondary);text-decoration:none}
         <a class="site-nav-link" href="../rifiuti/" id="nav-rifiuti">Rifiuti</a>
         <a class="site-nav-link" href="../gotthard/" id="nav-gotthard">Gotthard</a>
       </nav>
-      <span class="update-chip" id="update-time"></span>
+      
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="de" onclick="setLang('de')">DE</button>
         <button class="lang-btn" data-lang="it" onclick="setLang('it')">IT</button>
@@ -865,6 +865,20 @@ function setLang(l){
   if(globalData)renderCards(globalData,activeView);
   if(window._newsCache)renderNews(window._newsCache);
   rebuildCams();
+  // Re-render wind/danger with cached data on lang switch
+  if(window._windDataCache) {
+    renderWind(window._windDataCache.hourly, window._windDataCache.isBrissago);
+    renderDanger(window._windDataCache.hourly);
+  }
+  // Re-render AQI sub-label
+  const aqiSub = document.getElementById('aqi-sub');
+  if(aqiSub) aqiSub.textContent = T[lang].aqiSub || T.de.aqiSub;
+  // Re-render warnings OK message if visible
+  const warnOkEl = document.querySelector('.warnings-ok');
+  if(warnOkEl) {
+    const ts = warnOkEl.textContent.match(/\d+:\d+/)?.[0] || '';
+    warnOkEl.innerHTML = '<span class="warnings-ok-dot"></span>' + (T[lang].warnOk||T.de.warnOk) + (ts ? ' ('+ts+').' : '');
+  }
 }
 
 function applyT(){
@@ -926,6 +940,9 @@ function applyT(){
   id('t-wind-gust','windGust'); id('t-wind-bft','windBft');
   id('t-wave-height','waveHeight'); id('t-wave-period','wavePeriod');
   id('t-danger-label','dangerLabel');
+  // windDisc always updated on lang switch
+  const windDiscEl2 = document.getElementById('t-wind-disc');
+  if(windDiscEl2) windDiscEl2.textContent = T[lang].windDisc || T.de.windDisc || '';
   // offline chip
   const chip=document.getElementById('data-chip-text');
   if(chip&&chip.dataset.mode==='offline')chip.textContent=tr('offlineChip');
@@ -1129,6 +1146,8 @@ function renderDanger(hourly) {
 
 function renderWind(hourly, isBrissago) {
   if (!hourly || !hourly.windspeed_10m || !hourly.time) return;
+  // Cache for lang switch re-render
+  window._windDataCache = { hourly, isBrissago };
   const section = document.getElementById('wind-section');
   if(section) section.style.display = '';
 
@@ -1288,8 +1307,6 @@ async function loadWeather(){
     const now = new Date();
     const timeStr = now.toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
     const dateStr = now.toLocaleDateString(lang==='it'?'it-IT':lang==='en'?'en-GB':'de-CH',{weekday:'long',day:'numeric',month:'long'});
-    document.getElementById('update-time').textContent=
-      tr('standChip')+' '+timeStr+' '+tr('standUhr');
     const heroTs = document.getElementById('hero-ts-text');
     if(heroTs) heroTs.textContent = (T[lang].dataFrom||T.de.dataFrom)+dateStr+', '+timeStr+' · Open-Meteo';
   }catch(_){renderFallback();}
@@ -1510,9 +1527,9 @@ async function loadAirQuality(){
         <div class="aqi-item-bar"><div class="aqi-item-bar-fill" style="width:${Math.min(it.v/it.m*100,100)}%;background:${it.col}"></div></div>
       </div>`;
     }).join('');
-    // Store AQI_INFO globally for popup
+    // Store AQI_INFO globally for popup (multilang already in AQI_INFO)
     window._AQI_INFO = AQI_INFO;
-  }catch(_){document.getElementById('aqi-sub').textContent='—';}
+    }catch(_){document.getElementById('aqi-sub').textContent='—';}
 }
 
 /* =========================================================
@@ -1689,7 +1706,7 @@ function showAqiInfo(key) {
   const ln = lang || 'de';
   const info = window._AQI_INFO?.[key];
   if (!info) return;
-  const d = info[ln] || info.de;
+  const d = info[ln] || info.de || info;
   document.getElementById('aqi-popup-title').textContent = d.title || key;
   document.getElementById('aqi-popup-body').textContent = d.desc || '';
   const srcLabel = ln==='de' ? 'Datenquelle: Copernicus CAMS · European AQI' : ln==='it' ? 'Fonte: Copernicus CAMS · European AQI' : 'Source: Copernicus CAMS · European AQI';
