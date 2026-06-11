@@ -60,14 +60,14 @@
     --text-secondary: #425466;
     --text-tertiary: #8898AA;
     --accent: #1B6B45;
-    --accent-pale: #ECFDF5;
+    --accent-pale: #EBF7F1;
     --accent-hover: #155534;
     --sky: #0570DE;
-    --sky-pale: #E7F0FD;
+    --sky-pale: #E3F2FD;
     --gold: #C05621;
-    --gold-pale: #FFF8F0;
+    --gold-pale: #FEF3E2;
     --red: #DF1B41;
-    --red-pale: #FFF0F3;
+    --red-pale: #FDECEA;
     --green-pale: #ECFDF5;
     --max-w: 860px;
     --radius-sm: 6px;
@@ -527,9 +527,9 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
   
   
   
-  .lang-switcher{display:flex;gap:2px;}
+  .lang-switcher{display:flex;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:2px;gap:1px;}
   .lang-btn{font-size:11px;font-weight:600;color:#9B9890;background:none;border:none;padding:4px 8px;border-radius:6px;cursor:pointer;transition:all .18s ease;}
-  .lang-btn.active{color:#1B6B45;background:#EBF7F1;}
+  .lang-btn.active{background:var(--surface);color:var(--text-primary);box-shadow:0 1px 3px rgba(0,0,0,.12);}
   @media(max-width:640px){.topbar-name{display:none;}}
 
   /* DROPDOWN */
