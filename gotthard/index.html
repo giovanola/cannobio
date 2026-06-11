@@ -176,6 +176,26 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 
 /* WEBCAM MOBILE */
 @media (max-width:480px) { #webcam-grid { grid-template-columns: 1fr !important; } }
+
+  /* ── DROPDOWN NAVIGATION ──────────────────────────────── */
+  .nav-btn{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;background:none;border:none;cursor:pointer;color:var(--text-secondary);transition:background .15s ease;}
+  .nav-btn:hover{background:var(--border);}
+  .nav-btn svg{width:16px;height:16px;fill:currentColor;}
+  .nav-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:199;} .topbar{z-index:200;}
+  .nav-overlay.open{display:block;}
+  .nav-dropdown{position:fixed;top:56px;right:clamp(12px,4vw,24px);width:240px;background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.13),0 2px 8px rgba(0,0,0,.06);overflow:hidden;z-index:300;transform-origin:top right;animation:navIn .18s cubic-bezier(.16,1,.3,1);}
+  @keyframes navIn{from{opacity:0;transform:scale(.94) translateY(-4px)}to{opacity:1;transform:scale(1) translateY(0)}}
+  .nav-item{display:flex;align-items:center;gap:12px;padding:11px 14px;text-decoration:none;color:var(--text-primary);transition:background .12s ease;border-bottom:1px solid var(--border);}
+  .nav-item:last-child{border-bottom:none;}
+  .nav-item:hover{background:var(--bg);}
+  .nav-item.active{background:var(--accent-pale);}
+  .nav-item-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .nav-item-icon svg{width:14px;height:14px;}
+  .nav-item-text{flex:1;min-width:0;}
+  .nav-item-title{font-size:13px;font-weight:600;color:var(--text-primary);line-height:1.3;}
+  .nav-item.active .nav-item-title{color:var(--accent);}
+  .nav-item-sub{font-size:11px;color:var(--text-tertiary);margin-top:1px;line-height:1.3;}
+  @media(max-width:380px){.nav-dropdown{right:8px;width:calc(100vw - 16px);}}
 </style>
 </head>
 <body>
@@ -195,12 +215,44 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
         <button class="lang-btn" data-lang="it" onclick="setLang('it')">IT</button>
         <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
       </div>
-      <button class="nav-btn" onclick="toggleNav()" aria-label="Menu" aria-expanded="false" id="nav-toggle">
-        <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+      <button class="nav-btn" id="nav-toggle" onclick="toggleNav()" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
       </button>
     </div>
   </div>
 </header>
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()">
+  <div class="nav-dropdown" id="nav-dropdown" onclick="event.stopPropagation()">
+    <a class="nav-item" href="../" id="nav-home">
+      <div class="nav-item-icon" style="background:#EBF7F1;"><svg viewBox="0 0 24 24" fill="#1B6B45"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+      <div class="nav-item-text">
+        <div class="nav-item-title" id="nav-home-label"></div>
+        <div class="nav-item-sub" id="nav-home-sub"></div>
+      </div>
+    </a>
+    <a class="nav-item" href="../meteo/" id="nav-meteo">
+      <div class="nav-item-icon" style="background:#E3F2FD;"><svg viewBox="0 0 24 24" fill="#1565C0"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg></div>
+      <div class="nav-item-text">
+        <div class="nav-item-title" id="nav-meteo-label"></div>
+        <div class="nav-item-sub" id="nav-meteo-sub"></div>
+      </div>
+    </a>
+    <a class="nav-item" href="../rifiuti/" id="nav-rifiuti">
+      <div class="nav-item-icon" style="background:#EBF7F1;"><svg viewBox="0 0 24 24" fill="#1B6B45"><path d="M9 3v1H4v2h1v13a2 2 0 002 2h10a2 2 0 002-2V6h1V4h-5V3H9zm0 5h2v9H9V8zm4 0h2v9h-2V8z"/></svg></div>
+      <div class="nav-item-text">
+        <div class="nav-item-title" id="nav-rifiuti-label"></div>
+        <div class="nav-item-sub" id="nav-rifiuti-sub"></div>
+      </div>
+    </a>
+    <a class="nav-item active" href="../gotthard/" id="nav-gotthard">
+      <div class="nav-item-icon" style="background:#FEF3E2;"><svg viewBox="0 0 24 24" fill="#B7791F"><path d="M1.5 8.5l10.5-7 10.5 7V20a1 1 0 01-1 1H15v-6H9v6H3a1 1 0 01-1-1V8.5z"/></svg></div>
+      <div class="nav-item-text">
+        <div class="nav-item-title" id="nav-gotthard-label"></div>
+        <div class="nav-item-sub" id="nav-gotthard-sub"></div>
+      </div>
+    </a>
+  </div>
+</div>
 
 <!-- NAV DROPDOWN OVERLAY -->
 <div class="nav-overlay" id="nav-overlay" onclick="closeNav()">
@@ -243,11 +295,6 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
     </a>
   </div>
 </div>
-<nav class="breadcrumbs" aria-label="Breadcrumb" id="breadcrumb-nav">
-  <a href="../" id="bc-home">Cannobio</a>
-  <span class="breadcrumbs-sep" aria-hidden="true">›</span>
-  <span class="breadcrumbs-current" id="bc-current">...</span>
-</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -258,68 +305,14 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 
 <div class="content">
 
-  <div class="section">
-    <div class="section-label" id="t-trend-label">Prognose 90 Minuten</div>
-    <div class="trend-section">
-      <div class="trend-head">
-        <span class="trend-title" id="t-trend-title">Nordportal – nächste 90 Minuten</span>
-        <span class="trend-subtitle" id="t-trend-sub">Historisches Muster · Wochentag &amp; Uhrzeit</span>
-      </div>
-      <div class="trend-body">
-
-        <!-- KEY NUMBERS ROW -->
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px;">
-          <div style="text-align:center;padding:14px 10px;background:var(--bg);border-radius:var(--radius-md);border:1px solid var(--border);">
-            <div style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px;" id="t-now-label">Jetzt</div>
-            <div style="font-family:var(--font-display);font-size:32px;font-weight:300;line-height:1;letter-spacing:-0.03em;" id="trend-now-val">—</div>
-            <div style="font-size:11px;color:var(--text-tertiary);margin-top:4px;" id="t-min-unit">min</div>
-          </div>
-          <div style="text-align:center;padding:14px 10px;background:var(--bg);border-radius:var(--radius-md);border:1px solid var(--border);">
-            <div style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px;" id="t-in45-label">In 45 min</div>
-            <div style="font-family:var(--font-display);font-size:32px;font-weight:300;line-height:1;letter-spacing:-0.03em;" id="trend-45-val">—</div>
-            <div style="font-size:11px;color:var(--text-tertiary);margin-top:4px;" id="t-min-unit2">min</div>
-          </div>
-          <div style="text-align:center;padding:14px 10px;background:var(--bg);border-radius:var(--radius-md);border:1px solid var(--border);">
-            <div style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:6px;" id="t-in90-label">In 90 min</div>
-            <div style="font-family:var(--font-display);font-size:32px;font-weight:300;line-height:1;letter-spacing:-0.03em;" id="trend-90-val">—</div>
-            <div style="font-size:11px;color:var(--text-tertiary);margin-top:4px;" id="t-min-unit3">min</div>
-          </div>
-        </div>
-
-        <!-- TREND DIRECTION -->
-        <div id="trend-direction-card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:var(--radius-md);border:1px solid var(--border);margin-bottom:16px;background:var(--surface);">
-          <div id="trend-arrow" style="font-size:28px;flex-shrink:0;">→</div>
-          <div style="flex:1;">
-            <div style="font-size:13px;font-weight:600;color:var(--text-primary);" id="trend-direction-text">—</div>
-            <div style="font-size:12px;color:var(--text-secondary);margin-top:3px;" id="trend-probability-text">—</div>
-          </div>
-          <div style="text-align:right;flex-shrink:0;">
-            <div style="font-family:var(--font-display);font-size:24px;font-weight:300;" id="trend-prob-pct">—%</div>
-            <div style="font-size:10px;color:var(--text-tertiary);font-weight:600;letter-spacing:.06em;text-transform:uppercase;" id="t-prob-label">Wahrscheinlichkeit</div>
-          </div>
-        </div>
-
-        <!-- RECOMMENDATION -->
-        <div id="trend-recommendation" style="padding:12px 16px;border-radius:var(--radius-md);font-size:13px;font-weight:500;display:flex;align-items:center;gap:10px;">
-          <span id="trend-rec-icon" style="font-size:18px;flex-shrink:0;">💡</span>
-          <span id="trend-rec-text">—</span>
-        </div>
-
-        <!-- MINI CHART -->
-        <div style="margin-top:16px;">
-          <div style="font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:8px;" id="t-chart-label">Verlauf</div>
-          <div class="trend-chart" id="trend-chart"></div>
-          <div class="trend-labels" id="trend-labels"></div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
   <!-- LIVE STATUS -->
   <div class="section">
     <div class="section-label" id="t-live-label">Live-Situation</div>
 
+    <!-- LIVE DATA NOTE -->
+    <div style="padding:10px 14px;background:#F3F0FF;border:1px solid #DDD6FE;border-radius:var(--radius-sm);margin-bottom:12px;font-size:12px;color:#5B21B6;" id="t-live-note">
+      Hinweis: Echtzeit-Wartezeiten sind nur bei aktiver Verbindung zu TCS / Viasuisse verfügbar. Bei fehlenden Werten bitte direkt auf den verlinkten Quellen prüfen.
+    </div>
     <!-- PASS STATUS FIRST -->
     <div class="status-banner gold" id="pass-status" style="margin-bottom:16px;">
       <span class="status-icon">⛰️</span>
@@ -327,9 +320,11 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
     </div>
 
     <!-- STATUS BANNER -->
-    <div id="status-banner" class="status-banner gold">
-      <span class="status-icon">⚠️</span>
-      <div id="status-text">Echtzeitdaten: TCS / Viasuisse</div>
+    <div id="status-banner" class="status-banner gold" style="margin-bottom:16px;">
+      <span class="status-icon">📡</span>
+      <div id="status-text">Aktuelle Wartezeiten — bitte direkt prüfen:&nbsp;
+        <a href="https://gotthard-tunnel.com/en/home" target="_blank" rel="noopener" style="font-weight:700;color:inherit;">gotthard-tunnel.com ↗</a>
+      </div>
     </div>
 
     <!-- PORTAL CARDS: SCHÄTZUNG + LIVE LINK -->
@@ -377,7 +372,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
     <div class="status-banner gold" style="margin-bottom:12px;">
       <span class="status-icon">📡</span>
       <div>
-        <strong id="t-live-hint">Echtzeitdaten:</strong>
+        <strong id="t-live-hint">Wartezeiten direkt prüfen:</strong>
         <span id="t-live-hint-text"> Wartezeiten basieren auf historischen Mustern. Für aktuelle Echtzeit-Daten:</span>
         <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:8px;">
           <a class="ext-link" href="https://www.tcs.ch/de/tools/verkehrsinfo-verkehrslage/gotthard-tunnel.php" target="_blank" rel="noopener" style="font-size:12px;">TCS Gotthard ↗</a>
@@ -687,10 +682,12 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 // ── TRANSLATIONS ──────────────────────────────────────────
 const T = {
   de: {
+    navHome:'Portal',navHomeSub:'Cannobio am Lago Maggiore',navMeteo:'Wetter',navMeteoSub:'Prognose, Wind & Segeln',navRifiuti:'Abfall',navRifiutiSub:'Abfallkalender 2026',navGotthard:'Gotthard',navGotthardSub:'Tunnel, Wartezeiten & Pass',brand:'Cannobio',
     bcCurrent:'Gotthard',
     eyebrow:'Schweizer Alpen · A2 Autobahn',
     h1:'Gotthard<br><em>Verkehr</em>',
     sub:'Aktuelle Lage am Tunnel und am Pass. Wartezeiten, Sperrungen und Prognose für die nächsten 5 Tage.',
+    liveNote:'Hinweis: Echtzeit-Wartezeiten sind bei fehlender Verbindung nicht verfügbar. Bitte direkt prüfen.',
     liveLabel:'Live-Situation', northName:'Nordportal', northDir:'in Richtung Süden',
     southName:'Südportal', southDir:'in Richtung Norden',
     minUnit:'min', trendLabel:'Prognose 90 Minuten',
@@ -731,7 +728,7 @@ const T = {
     statusFree:'Kein Stau. Freie Durchfahrt.', statusMed:'Leichte Verzögerungen möglich.', statusHeavy:'Langer Stau. Ausweichroute prüfen.',
     kmJam:'km Stau', updated:'Aktualisiert',
     navHome:'Portal', navMeteo:'Wetter', navRifiuti:'Abfall', navGotthard:'Gotthard',
-    estBadge:'Schätzung', liveHint:'Echtzeitdaten:',
+    estBadge:'Schätzung', liveHint:'Wartezeiten direkt prüfen:',
     liveHintText:' Wartezeiten basieren auf historischen Mustern. Für aktuelle Daten:',
     camLabel:'Live-Webcams', camSouthName:'Südportal Airolo', camNorthName:'Nordportal Göschenen',
     camSouthLoc:'A2, Airolo – Blickrichtung Süd (Tessin)',
@@ -748,10 +745,12 @@ const T = {
     trafficNone:'Keine Meldungen auf dieser Strecke.',
   },
   it: {
+    navHome:'Portale',navHomeSub:'Cannobio sul Lago Maggiore',navMeteo:'Meteo',navMeteoSub:'Previsioni, vento & vela',navRifiuti:'Rifiuti',navRifiutiSub:'Calendario raccolta 2026',navGotthard:'Gottardo',navGotthardSub:'Tunnel, tempi attesa & passo',brand:'Cannobio',
     bcCurrent:'Gottardo',
     eyebrow:'Alpi Svizzere · Autostrada A2',
     h1:'Gottardo<br><em>Traffico</em>',
     sub:'Situazione attuale al tunnel e al passo. Tempi di attesa, chiusure e previsioni per i prossimi 5 giorni.',
+    liveNote:'Nota: I tempi di attesa in tempo reale non sono disponibili senza connessione. Verificare direttamente.',
     liveLabel:'Situazione live', northName:'Portale Nord', northDir:'in direzione Sud',
     southName:'Portale Sud', southDir:'in Richtung Norden',
     minUnit:'min', trendLabel:'Previsione 90 minuti',
@@ -791,7 +790,7 @@ const T = {
     statusFree:'Nessuna coda. Transito libero.', statusMed:'Possibili lievi ritardi.', statusHeavy:'Coda lunga. Verificare percorso alternativo.',
     kmJam:'km di coda', updated:'Aggiornato',
     navHome:'Portale', navMeteo:'Meteo', navRifiuti:'Rifiuti', navGotthard:'Gottardo',
-    estBadge:'Stima', liveHint:'Dati in tempo reale:',
+    estBadge:'Stima', liveHint:'Controllare i tempi di attesa:',
     liveHintText:' I tempi di attesa si basano su schemi storici. Per dati in tempo reale:',
     camLabel:'Webcam live', camSouthName:'Portale Sud Airolo', camNorthName:'Portale Nord Göschenen',
     camSouthLoc:'A2, Airolo – direzione Sud (Ticino)',
@@ -808,10 +807,12 @@ const T = {
     trafficNone:'Nessuna segnalazione su questo percorso.',
   },
   en: {
+    navHome:'Portal',navHomeSub:'Cannobio at Lake Maggiore',navMeteo:'Weather',navMeteoSub:'Forecast, wind & sailing',navRifiuti:'Waste',navRifiutiSub:'Waste calendar 2026',navGotthard:'Gotthard',navGotthardSub:'Tunnel, wait times & pass',brand:'Cannobio',
     bcCurrent:'Gotthard',
     eyebrow:'Swiss Alps · A2 Motorway',
     h1:'Gotthard<br><em>Traffic</em>',
     sub:'Current situation at the tunnel and pass. Waiting times, closures and forecast for the next 5 days.',
+    liveNote:'Note: Real-time wait times are unavailable without a connection. Please check directly.',
     liveLabel:'Live situation', northName:'North Portal', northDir:'southbound',
     southName:'South Portal', southDir:'northbound',
     minUnit:'min', trendLabel:'90-minute forecast',
@@ -874,16 +875,6 @@ let lang = 'de';
 
 // ── TRAFFIC MODEL ─────────────────────────────────────────
 // Historical pattern: wait time estimate in minutes by hour (0-23), 0=Sun
-function getHistoricalWait(dow, hour, isSummer) {
-  // Peak factors by day (0=Sun)
-  const dayFactor = [0.9, 0.4, 0.4, 0.4, 0.5, 1.2, 1.5];
-  // Hour factor (southbound)
-  const hourFactorSB = [0.1,0.1,0.1,0.1,0.1,0.2,0.4,0.7,1.0,1.2,1.3,1.2,1.1,1.0,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1,0.1];
-  const summerMult = isSummer ? 2.2 : 1.0;
-  const base = 45; // max wait in quiet season
-  return Math.round(base * dayFactor[dow] * hourFactorSB[hour] * summerMult);
-}
-
 function getTrafficLevel(minutes) {
   if (minutes < 10) return 'free';
   if (minutes < 40) return 'medium';
@@ -1027,21 +1018,23 @@ async function renderLive() {
     const banner = document.getElementById('status-banner');
     banner.className = 'status-banner gold';
     banner.querySelector('.status-icon').textContent = '📡';
-    const noDataLabel = lang==='de' ? 'Live-Daten nicht verfügbar – aktuelle Wartezeiten direkt abrufen:' :
-                        lang==='it' ? 'Dati live non disponibili – consultare direttamente:' :
-                        'Live data unavailable – check current wait times directly:';
+    const noDataLabel = lang==='de'
+      ? 'Echtzeit-Daten nicht verfügbar. Aktuelle Wartezeiten direkt prüfen:'
+      : lang==='it'
+      ? 'Dati in tempo reale non disponibili. Verificare i tempi di attesa direttamente:'
+      : 'Real-time data unavailable. Check current wait times directly:';
     document.getElementById('status-text').innerHTML =
-      `<div style="margin-bottom:10px;">${noDataLabel}</div>` +
+      `<div style="margin-bottom:10px;font-weight:500;">${noDataLabel}</div>` +
       `<div style="display:flex;flex-wrap:wrap;gap:8px;">` +
-      `<a href="https://gotthard-tunnel.com/en/home" target="_blank" rel="noopener" ` +
+      `<a href="https://gotthard-tunnel.com/en/goeschenen" target="_blank" rel="noopener" ` +
       `style="display:inline-flex;align-items:center;gap:5px;padding:7px 14px;background:#fff;border:1px solid #FDE68A;border-radius:20px;font-size:12px;font-weight:600;color:#78350F;text-decoration:none;">` +
-      `gotthard-tunnel.com ↗</a>` +
+      `Nordportal (Göschenen) ↗</a>` +
+      `<a href="https://gotthard-tunnel.com/en/airolo" target="_blank" rel="noopener" ` +
+      `style="display:inline-flex;align-items:center;gap:5px;padding:7px 14px;background:#fff;border:1px solid #FDE68A;border-radius:20px;font-size:12px;font-weight:600;color:#78350F;text-decoration:none;">` +
+      `Südportal (Airolo) ↗</a>` +
       `<a href="https://www.tcs.ch/de/tools/verkehrsinfo-verkehrslage/gotthard-tunnel.php" target="_blank" rel="noopener" ` +
       `style="display:inline-flex;align-items:center;gap:5px;padding:7px 14px;background:#fff;border:1px solid #FDE68A;border-radius:20px;font-size:12px;font-weight:600;color:#78350F;text-decoration:none;">` +
-      `TCS Gotthard ↗</a>` +
-      `<a href="https://www.viasuisse.ch" target="_blank" rel="noopener" ` +
-      `style="display:inline-flex;align-items:center;gap:5px;padding:7px 14px;background:#fff;border:1px solid #FDE68A;border-radius:20px;font-size:12px;font-weight:600;color:#78350F;text-decoration:none;">` +
-      `Viasuisse ↗</a>` +
+      `TCS ↗</a>` +
       `</div>`;
   }
 
@@ -1066,112 +1059,6 @@ async function renderLive() {
 }
 
 // ── 90-MIN TREND CHART ────────────────────────────────────
-function renderTrend() {
-  const t = T[lang];
-  const now = new Date();
-  const dow = now.getDay();
-  const isSummer = [5,6,7,8].includes(now.getMonth());
-  const colors = { free: '#1B6B45', medium: '#E67E22', heavy: '#C0392B' };
-
-  // Calculate wait times at: now, +45min, +90min, and all 10-min steps
-  const steps = 10; // 0..9 = now..+90min (10-min intervals)
-  const waits = [];
-  for (let i = 0; i < steps; i++) {
-    const t2 = new Date(now.getTime() + i * 10 * 60000);
-    waits.push(getHistoricalWait(dow, t2.getHours(), isSummer));
-  }
-
-  const wNow = waits[0];
-  const w45  = waits[Math.round(4.5)] || waits[4];
-  const w90  = waits[9];
-
-  // Populate key numbers
-  const setVal = (id, val) => { const el=document.getElementById(id); if(el) { el.textContent=val; el.style.color = colors[getTrafficLevel(val)]; } };
-  setVal('trend-now-val', wNow);
-  setVal('trend-45-val', w45);
-  setVal('trend-90-val', w90);
-  document.getElementById('t-min-unit').textContent = t.minUnit;
-  document.getElementById('t-min-unit2').textContent = t.minUnit;
-  document.getElementById('t-min-unit3').textContent = t.minUnit;
-  document.getElementById('t-now-label').textContent = t.trendNow || 'Jetzt';
-  document.getElementById('t-in45-label').textContent = t.trendIn45 || 'In 45 min';
-  document.getElementById('t-in90-label').textContent = t.trendIn90 || 'In 90 min';
-  document.getElementById('t-prob-label').textContent = t.probLabel || 'Wahrscheinlichkeit';
-  document.getElementById('t-chart-label').textContent = t.chartLabel || 'Verlauf';
-
-  // Trend direction: compare now vs +90min
-  const delta = w90 - wNow;
-  const pctChange = wNow > 0 ? Math.abs(delta / wNow) : 0;
-
-  let direction, arrow, prob, arrowColor, recIcon, recText, cardBg;
-
-  if (Math.abs(delta) <= 5) {
-    // Stable
-    direction = t.trendStable || 'Stabile Lage – kaum Veränderung';
-    arrow = '→';
-    prob = 70 + Math.round(Math.random() * 10); // 70–80%
-    arrowColor = '#1565C0';
-    cardBg = 'var(--sky-pale)';
-    recIcon = '✅';
-    recText = t.recStable || 'Aktuelle Bedingungen bleiben voraussichtlich konstant. Gute Zeit zum Fahren.';
-  } else if (delta > 5) {
-    // Increasing
-    prob = Math.min(90, 55 + Math.round(pctChange * 60));
-    direction = t.trendRising || `Zunehmender Stau – +${delta} min erwartet`;
-    arrow = '↗';
-    arrowColor = '#C0392B';
-    cardBg = 'var(--red-pale)';
-    recIcon = '⚠️';
-    recText = t.recRising || 'Wartezeit nimmt zu. Jetzt fahren oder mindestens 2 Stunden warten.';
-  } else {
-    // Decreasing
-    prob = Math.min(85, 55 + Math.round(pctChange * 50));
-    direction = t.trendFalling || `Abnehmender Stau – ${Math.abs(delta)} min weniger erwartet`;
-    arrow = '↘';
-    arrowColor = '#1B6B45';
-    cardBg = 'var(--green-pale)';
-    recIcon = '🕐';
-    recText = t.recFalling || 'Lage verbessert sich. In 45–90 min bessere Bedingungen erwartet.';
-  }
-
-  const dirCard = document.getElementById('trend-direction-card');
-  if (dirCard) dirCard.style.background = cardBg;
-  document.getElementById('trend-arrow').textContent = arrow;
-  document.getElementById('trend-arrow').style.color = arrowColor;
-  document.getElementById('trend-direction-text').textContent = direction;
-  document.getElementById('trend-prob-pct').textContent = prob + '%';
-  document.getElementById('trend-prob-pct').style.color = arrowColor;
-
-  // Probability explanation
-  const probText = lang === 'de' ? `Basierend auf historischen Mustern für ${['So','Mo','Di','Mi','Do','Fr','Sa'][dow]}, ${now.getHours()}:00 Uhr` :
-                   lang === 'it' ? `Basato su schemi storici per ${['Dom','Lun','Mar','Mer','Gio','Ven','Sab'][dow]}, ore ${now.getHours()}:00` :
-                   `Based on historical patterns for ${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dow]}, ${now.getHours()}:00`;
-  document.getElementById('trend-probability-text').textContent = probText;
-
-  // Recommendation
-  const recEl = document.getElementById('trend-recommendation');
-  const recBg = delta > 5 ? 'var(--red-pale)' : delta < -5 ? 'var(--green-pale)' : 'var(--sky-pale)';
-  if (recEl) { recEl.style.background = recBg; recEl.style.border = `1px solid ${delta > 5 ? '#EF9A9A' : delta < -5 ? '#A5D6A7' : '#BBDEFB'}`; }
-  document.getElementById('trend-rec-icon').textContent = recIcon;
-  document.getElementById('trend-rec-text').textContent = recText;
-
-  // Mini chart
-  const chart = document.getElementById('trend-chart');
-  const labels = document.getElementById('trend-labels');
-  let chartHTML = '', labelsHTML = '';
-  for (let i = 0; i < steps; i++) {
-    const t2 = new Date(now.getTime() + i * 10 * 60000);
-    const level = getTrafficLevel(waits[i]);
-    const pct = Math.max(8, getBarPct(waits[i]));
-    const timeStr = t2.toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
-    chartHTML += `<div class="trend-bar${i===0?' now':''}" style="height:${pct}%;background:${colors[level]};" title="${timeStr}: ${waits[i]} min"></div>`;
-    if (i === 0 || i === 4 || i === 9) labelsHTML += `<span class="trend-label">${timeStr}</span>`;
-  }
-  chart.innerHTML = chartHTML;
-  labels.innerHTML = labelsHTML;
-}
-
-// ── 5-DAY FORECAST ────────────────────────────────────────
 function render5Day() {
   const t = T[lang];
   const now = new Date();
@@ -1180,16 +1067,17 @@ function render5Day() {
   for (let i = 0; i < 5; i++) {
     const d = new Date(now.getTime() + i * 86400000);
     const dow = d.getDay();
-    const peakWait = getHistoricalWait(dow, 10, isSummer); // 10:00 as peak
-    const level = getTrafficLevel(peakWait);
-    const pct = getBarPct(peakWait);
+    // No reliable historical model — show days without fake wait estimates
+    const peakWait = null;
+    const level = 'unknown';
+    const pct = 0;
     const colors = { free: '#1B6B45', medium: '#E67E22', heavy: '#C0392B' };
     const dayStr = t.days[dow];
     const dateStr = d.toLocaleDateString('de-CH',{day:'2-digit',month:'2-digit'});
     const levelStr = t.levels[level];
     html += `<div class="forecast-row">
       <div><div class="forecast-day">${i===0?(lang==='de'?'Heute':lang==='it'?'Oggi':'Today'):dayStr}</div><div class="forecast-date">${dateStr}</div></div>
-      <div><div class="forecast-bar-wrap"><div class="forecast-bar" style="width:${pct}%;background:${colors[level]}"></div></div></div>
+      <div><div class="forecast-bar-wrap"><div class="forecast-bar" style="width:${pct||0}%;background:${colors[level]}"></div></div></div>
       <div class="forecast-level ${level}">${levelStr}</div>
     </div>`;
   }
@@ -1198,11 +1086,13 @@ function render5Day() {
 
 // ── APPLY TRANSLATIONS ────────────────────────────────────
 function setLang(l) {
+  closeNav();
   lang = l;
   localStorage.setItem('cannobio-lang', l);
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
   document.documentElement.lang = l==='it'?'it':l==='en'?'en':'de';
   applyLang(l);
+  if(typeof updateNavLabels==="function")updateNavLabels();
 }
 function applyLang(l) {
   lang = l;
@@ -1213,6 +1103,7 @@ function applyLang(l) {
   set('t-h1', t.h1, true);
   set('t-sub', t.sub);
   set('t-live-label', t.liveLabel);
+  set('t-live-note', t.liveNote);
   set('t-north-name', t.northName); set('t-north-dir', t.northDir);
   set('t-south-name', t.southName); set('t-south-dir', t.southDir);
   set('t-min', t.minUnit); set('t-min2', t.minUnit);
@@ -1245,7 +1136,8 @@ function applyLang(l) {
   set('t-cam-south-loc', t.camSouthLoc); set('t-cam-north-loc', t.camNorthLoc); set('t-cam-note', t.camNote);
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
   // Re-render data sections
-  renderLive().then(()=>{}); renderTrend(); render5Day();
+  renderLive().then(()=>{}); render5Day();
+  if(typeof updateNavLabels==="function")updateNavLabels();
 }
 
 document.querySelector('.lang-switcher').addEventListener('click', e=>{
@@ -1325,7 +1217,7 @@ const initLang2 = (urlLang && T[urlLang]) ? urlLang : (storedLang2 && T[storedLa
 applyLang(initLang2);
 loadTrafficJson();
 // Refresh every 5 minutes
-setInterval(()=>{ renderLive().then(()=>{}); renderTrend(); render5Day(); loadTrafficJson(); }, 5 * 60 * 1000);
+setInterval(()=>{ renderLive().then(()=>{}); render5Day(); loadTrafficJson(); }, 5 * 60 * 1000);
 // Webcam refresh every 5 minutes
 function refreshCams() {
   ['cam-south','cam-north'].forEach(id => {
@@ -1336,17 +1228,6 @@ function refreshCams() {
 setInterval(refreshCams, 5 * 60 * 1000);
 
 
-function toggleNav() {
-  const overlay = document.getElementById('nav-overlay');
-  const btn = document.getElementById('nav-toggle');
-  const isOpen = overlay.classList.contains('open');
-  overlay.classList.toggle('open', !isOpen);
-  btn.setAttribute('aria-expanded', String(!isOpen));
-}
-function closeNav() {
-  document.getElementById('nav-overlay').classList.remove('open');
-  document.getElementById('nav-toggle').setAttribute('aria-expanded', 'false');
-}
 // Close on Escape
 document.addEventListener('keydown', e => { if(e.key === 'Escape') closeNav(); });
 
@@ -1377,6 +1258,31 @@ function updateNavLabels() {
 
 // Init nav labels
 if(typeof updateNavLabels === "function") updateNavLabels();
+
+function toggleNav(){
+  const o=document.getElementById('nav-overlay'),b=document.getElementById('nav-toggle');
+  const open=o.classList.toggle('open');
+  b.setAttribute('aria-expanded',String(open));
+}
+function closeNav(){
+  document.getElementById('nav-overlay').classList.remove('open');
+  const b=document.getElementById('nav-toggle');
+  if(b)b.setAttribute('aria-expanded','false');
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav();});
+function updateNavLabels(){
+  const t=T[lang]||T.de;
+  const s=(id,k)=>{const e=document.getElementById(id);if(e&&t[k])e.textContent=t[k];};
+  s('nav-home-label','navHome');s('nav-home-sub','navHomeSub');
+  s('nav-meteo-label','navMeteo');s('nav-meteo-sub','navMeteoSub');
+  s('nav-rifiuti-label','navRifiuti');s('nav-rifiuti-sub','navRifiutiSub');
+  s('nav-gotthard-label','navGotthard');s('nav-gotthard-sub','navGotthardSub');
+  s('t-brand','brand');
+  ['meteo','rifiuti','gotthard'].forEach(k=>{
+    const el=document.getElementById('nav-'+k);
+    if(el){const b=el.href.split('?')[0];el.href=b+(lang!=='de'?'?lang='+lang:'');}
+  });
+}
 </script>
 </body>
 </html>
