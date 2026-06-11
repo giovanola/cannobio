@@ -30,14 +30,14 @@
     --text-secondary: #425466;
     --text-tertiary: #8898AA;
     --accent: #1B6B45;
-    --accent-pale: #EBF7F1;
+    --accent-pale: #ECFDF5;
     --accent-hover: #155534;
     --sky: #0570DE;
-    --sky-pale: #E3F2FD;
+    --sky-pale: #E7F0FD;
     --gold: #C05621;
-    --gold-pale: #FEF3E2;
+    --gold-pale: #FFF8F0;
     --red: #DF1B41;
-    --red-pale: #FDECEA;
+    --red-pale: #FFF0F3;
     --green-pale: #ECFDF5;
     --max-w: 860px;
     --radius-sm: 6px;
@@ -348,8 +348,7 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-left" id="t-footer">Quellen: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> · <a href="https://www.comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a></div>
-  
-<div class="footer-v" title="v3.4: Cannobio-Logo, Stripe-Design, SEO schema.org, dreisprachige Metatags" style="margin-top:6px;font-size:10px;color:var(--text-tertiary);opacity:.7;display:flex;align-items:center;gap:6px;"><span style="font-weight:600;color:var(--accent);">v3.4</span><span>·</span><span id="footer-date-str">11. Juni 2026</span><span>·</span><a href="https://giovanola.github.io/cannobio/" style="color:inherit;text-decoration:none;">giovanola.github.io/cannobio/</a></div>
+  <div class="footer-v">v1.0 · Juni 2026 · giovanola.github.io/cannobio</div>
 </footer>
 
 <script>
@@ -436,10 +435,6 @@ function setLang(l) {
   document.documentElement.lang = l === 'it' ? 'it' : l === 'en' ? 'en' : 'de';
   applyT();
   updateSEO();
-
-  // Footer date per language
-  const _fds = document.getElementById('footer-date-str');
-  if (_fds) _fds.textContent = lang==='it' ? '11 giugno 2026' : lang==='en' ? '11 June 2026' : '11. Juni 2026';
   updateNavLabels();
 }
 
