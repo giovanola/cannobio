@@ -2,1717 +2,478 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wetter &amp; Segelbedingungen Cannobio | Lago Maggiore Wind, Wellen &amp; Webcams</title>
-<meta name="description" content="Aktuelle Wetterprognose für Cannobio am Lago Maggiore mit Temperatur, Niederschlag, UV-Index und Luftqualität. Inklusive 7-Tage-Trend und Live-Webcams.">
-<meta name="keywords" content="Wetter Cannobio, Meteo Cannobio, Lago Maggiore, Wettervorhersage, previsioni meteo">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://giovanola.github.io/cannobio/meteo/">
-<link rel="alternate" hreflang="de" href="https://giovanola.github.io/cannobio/meteo/?lang=de">
-<link rel="alternate" hreflang="it" href="https://giovanola.github.io/cannobio/meteo/?lang=it">
-<link rel="alternate" hreflang="en" href="https://giovanola.github.io/cannobio/meteo/?lang=en">
-<link rel="alternate" hreflang="x-default" href="https://giovanola.github.io/cannobio/meteo/">
-<!-- Open Graph -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title id="t-page-title">Cannobio – Lago Maggiore | Portal</title>
+<meta name="description" id="t-meta-desc" content="Das digitale Portal für Cannobio am Lago Maggiore. Wetter, Abfall, Gotthard-Tunnel und lokale Informationen.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Segelwetter Cannobio am Lago Maggiore">
-<meta property="og:description" content="Previsioni meteo, qualità dell'aria, webcam e allerte per Cannobio sul Lago Maggiore. Katharina ed Ettore avrebbero avuto grande gioia nel vederlo.">
-<meta property="og:url" content="https://giovanola.github.io/cannobio/meteo/">
+<meta property="og:title" id="t-og-title" content="Cannobio – Portal">
+<meta property="og:description" id="t-og-desc" content="Wetter, Abfall, Gotthard-Tunnel und lokale Informationen für Cannobio am Lago Maggiore.">
 <meta property="og:image" content="https://giovanola.github.io/cannobio/cannobio-2026.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="900">
-<meta property="og:image:alt" content="Cannobio, Lago Maggiore">
-<meta property="og:site_name" content="Cannobio">
-<meta property="og:locale" content="de_DE">
-<meta property="og:locale:alternate" content="de_DE">
-<meta property="og:locale:alternate" content="en_GB">
-<!-- Twitter Card -->
+<meta property="og:url" content="https://giovanola.github.io/cannobio/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Segelwetter Cannobio am Lago Maggiore">
-<meta name="twitter:description" content="Katharina und Ettore hätten große Freude daran gehabt. · Previsioni meteo, qualità dell'aria e webcam per Cannobio.">
-<meta name="twitter:image" content="https://giovanola.github.io/cannobio/cannobio-2026.jpg">
-<meta name="twitter:image:alt" content="Cannobio, Lago Maggiore">
+<link rel="canonical" href="https://giovanola.github.io/cannobio/">
+<link rel="alternate" hreflang="de" href="https://giovanola.github.io/cannobio/?lang=de">
+<link rel="alternate" hreflang="it" href="https://giovanola.github.io/cannobio/?lang=it">
+<link rel="alternate" hreflang="en" href="https://giovanola.github.io/cannobio/?lang=en">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#FAFAF9;--surface:#FFFFFF;--border:#E8E6E1;
-  --text-primary:#1A1A18;--text-secondary:#6B6860;--text-tertiary:#9B9890;
-  --accent:#1B6B45;--accent-pale:#EBF7F1;
-  --gold:#B7791F;--gold-pale:#FFFBEB;
-  --sky:#1565C0;--sky-pale:#E3F2FD;
-  --rel-high:#1B6B45;--rel-mid:#B7791F;--rel-low:#C0392B;
-  --radius-sm:6px;--radius-md:12px;--radius-lg:20px;
-  --shadow-sm:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
-  --shadow-md:0 4px 16px rgba(0,0,0,.07),0 2px 6px rgba(0,0,0,.04);
-  --shadow-lg:0 12px 40px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);
-  --font-display:'Fraunces',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;
-  --max-w:900px;--transition:200ms cubic-bezier(.4,0,.2,1)
-}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary);line-height:1.6;min-height:100vh;overflow-x:hidden}
+  :root {
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --bg: #F9F9F8;
+    --surface: #FFFFFF;
+    --border: #E8E7E3;
+    --text-primary: #2C2C28;
+    --text-secondary: #5A5A54;
+    --text-tertiary: #9B9890;
+    --accent: #1B6B45;
+    --accent-pale: #EBF7F1;
+    --sky: #1565C0;
+    --sky-pale: #E3F2FD;
+    --gold: #B7791F;
+    --gold-pale: #FEF3E2;
+    --max-w: 860px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,.07);
+    --shadow-md: 0 4px 16px rgba(0,0,0,.09);
+    --transition: .18s ease;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); background: var(--bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
 
-/* TOPBAR */
-.topbar{position:sticky;top:0;z-index:100;background:rgba(250,250,249,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 clamp(16px,4vw,24px)}
-.topbar-inner{max-width:var(--max-w);margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.topbar-brand{display:flex;align-items:center;gap:10px}
-.topbar-icon{width:28px;height:28px;background:var(--sky);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.topbar-icon svg{width:16px;height:16px;fill:#fff}
-.topbar-name{font-family:var(--font-display);font-size:15px;font-weight:300;color:var(--text-primary);white-space:nowrap}
-.topbar-right{display:flex;align-items:center;gap:8px}
-.update-chip{font-size:11px;font-weight:500;color:var(--text-tertiary);background:var(--border);border-radius:20px;padding:3px 10px;white-space:nowrap}
-.lang-switcher{display:flex;gap:2px;background:var(--border);border-radius:8px;padding:2px}
-.lang-btn{padding:4px 10px;border-radius:6px;border:none;background:transparent;color:var(--text-secondary);font-family:var(--font-body);font-size:12px;font-weight:500;cursor:pointer;transition:all var(--transition);white-space:nowrap}
-.lang-btn.active{background:var(--surface);color:var(--text-primary);box-shadow:var(--shadow-sm)}
+  /* TOPBAR */
+  .topbar { position: sticky; top: 0; z-index: 100; background: rgba(250,250,249,.93); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .topbar-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(16px,4vw,24px); height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .topbar-brand { display: flex; align-items: center; gap: 9px; text-decoration: none; flex-shrink: 0; }
+  .topbar-icon { width: 26px; height: 26px; background: var(--accent); border-radius: 7px; display: flex; align-items: center; justify-content: center; }
+  .topbar-icon svg { width: 15px; height: 15px; fill: #fff; }
+  .topbar-name { font-family: var(--font-display); font-size: 15px; font-weight: 400; color: var(--text-primary); }
+  .topbar-right { display: flex; align-items: center; gap: 14px; }
+  
+  
+  
+  
+  .lang-switcher { display: flex; gap: 2px; }
+  .lang-btn { font-size: 11px; font-weight: 600; color: var(--text-tertiary); background: none; border: none; padding: 4px 8px; border-radius: 6px; cursor: pointer; transition: all var(--transition); }
+  .lang-btn:hover { color: var(--text-primary); background: var(--border); }
+  .lang-btn.active { color: var(--accent); background: var(--accent-pale); }
 
-/* SITE NAV */
-.site-nav{display:flex;gap:2px;background:var(--border);border-radius:8px;padding:2px}
-.site-nav-link{padding:4px 12px;border-radius:6px;font-family:var(--font-body);font-size:12px;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:all var(--transition);white-space:nowrap}
-.site-nav-link:hover{color:var(--text-primary)}
-.site-nav-active{background:var(--surface);color:var(--text-primary);box-shadow:var(--shadow-sm)}
+  /* HERO */
+  .hero { max-width: var(--max-w); margin: 0 auto; padding: clamp(40px,6vw,72px) clamp(16px,4vw,24px) clamp(28px,4vw,48px); }
+  .hero-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .hero-eyebrow::before { content:''; display:inline-block; width:28px; height:2px; background:var(--accent); border-radius:1px; }
+  .hero h1 { font-family: var(--font-display); font-size: clamp(36px,7vw,60px); font-weight: 300; line-height: 1.1; letter-spacing: -.02em; color: var(--text-primary); margin-bottom: 16px; }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero-sub { font-size: clamp(14px,2vw,16px); color: var(--text-secondary); max-width: 560px; line-height: 1.65; }
 
-/* OFFLINE DATA CHIP */
-.data-chip-bar{max-width:var(--max-w);margin:0 auto;padding:10px clamp(16px,4vw,24px) 0;display:none}
-.data-chip-bar.visible{display:block}
-.data-chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:var(--gold);background:var(--gold-pale);border:1px solid #FDE68A;border-radius:20px;padding:4px 12px}
+  /* PORTAL CARDS GRID */
+  .content { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(16px,4vw,24px) 80px; }
+  .portal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+  .portal-card { display: block; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; text-decoration: none; transition: all var(--transition); box-shadow: var(--shadow-sm); position: relative; overflow: hidden; }
+  .portal-card:hover { border-color: var(--accent); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .portal-card-icon { width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .portal-card-icon svg { width: 22px; height: 22px; }
+  .portal-card-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 5px; }
+  .portal-card-title { font-family: var(--font-display); font-size: 22px; font-weight: 300; color: var(--text-primary); margin-bottom: 8px; letter-spacing: -.01em; }
+  .portal-card-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+  .portal-card-arrow { position: absolute; bottom: 20px; right: 20px; width: 28px; height: 28px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; transition: all var(--transition); }
+  .portal-card:hover .portal-card-arrow { background: var(--accent); }
+  .portal-card:hover .portal-card-arrow svg { fill: #fff; }
+  .portal-card-arrow svg { width: 14px; height: 14px; fill: var(--text-tertiary); }
 
-/* HERO */
-.hero{padding:clamp(24px,5vw,52px) clamp(16px,4vw,24px) 8px;max-width:var(--max-w);margin:0 auto}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sky);margin-bottom:20px}
-.hero-eyebrow::before{content:'';width:20px;height:1px;background:var(--sky)}
-.hero h1{font-family:var(--font-display);font-size:clamp(32px,6vw,54px);font-weight:300;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;max-width:640px}
-.hero h1 em{font-style:italic;color:var(--sky)}
-.hero-sub{font-size:16px;color:var(--text-secondary);font-weight:300;max-width:520px;line-height:1.7}
+  /* Color variants */
+  .card-meteo .portal-card-icon { background: var(--sky-pale); }
+  .card-meteo .portal-card-icon svg { fill: var(--sky); }
+  .card-rifiuti .portal-card-icon { background: var(--accent-pale); }
+  .card-rifiuti .portal-card-icon svg { fill: var(--accent); }
+  .card-gotthard .portal-card-icon { background: var(--gold-pale); }
+  .card-gotthard .portal-card-icon svg { fill: var(--gold); }
+  .card-info .portal-card-icon { background: #F3F0FF; }
+  .card-info .portal-card-icon svg { fill: #6D28D9; }
 
-/* CONTENT */
-.content{max-width:var(--max-w);margin:0 auto;padding:8px clamp(16px,4vw,24px) 80px;overflow:hidden}
-.section-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px}
-.view-toggle-wrap{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
-.view-toggle{display:flex;gap:2px;background:var(--border);border-radius:10px;padding:3px}
-.view-btn{padding:6px 18px;border-radius:8px;border:none;background:transparent;color:var(--text-secondary);font-family:var(--font-body);font-size:13px;font-weight:500;cursor:pointer;transition:all var(--transition);white-space:nowrap}
-.view-btn.active{background:var(--sky);color:#fff;font-weight:600;box-shadow:var(--shadow-sm)}
+  /* INFO STRIP */
+  .info-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 32px; }
+  .info-tile { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 18px; }
+  .info-tile-label { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 4px; }
+  .info-tile-val { font-family: var(--font-display); font-size: 22px; font-weight: 300; color: var(--text-primary); }
+  .info-tile-sub { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
 
-/* CURRENT CARD */
-.current-card{background:var(--sky);border-radius:var(--radius-lg);padding:28px 32px;margin-bottom:12px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.current-left .label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.65;margin-bottom:6px}
-.current-left .temp-big{font-family:var(--font-display);font-size:clamp(48px,10vw,72px);font-weight:300;line-height:1;letter-spacing:-.03em}
-.current-left .condition{font-size:15px;font-weight:300;opacity:.8;margin-top:6px}
-.current-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 24px}
-.current-meta-item{text-align:center}
-.current-meta-item .val{font-family:var(--font-display);font-size:22px;font-weight:300;letter-spacing:-.02em}
-.current-meta-item .lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.6;margin-top:2px}
-@media(min-width:640px){
-  .current-meta{grid-template-columns:repeat(4,1fr)}
-  .current-card{flex-wrap:nowrap}
-}
+  /* SEO CONTENT */
+  .seo-section { border-top: 1px solid var(--border); padding: 32px 0 0; }
+  .seo-section h2 { font-family: var(--font-display); font-size: 20px; font-weight: 300; margin-bottom: 8px; }
+  .seo-section p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; }
 
-/* UV PROTECTION BLOCK */
-.uv-block{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);padding:16px 20px;margin-bottom:12px}
-.uv-block-title{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:12px}
-.uv-block-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:10px}
-.uv-item{flex:1;padding:12px 10px;text-align:center;border-right:1px solid var(--border)}
-.uv-item:last-child{border-right:none}
-.uv-item-val{font-family:var(--font-display);font-size:20px;font-weight:300;letter-spacing:-.02em;line-height:1;margin-bottom:4px}
-.uv-item-lbl{font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--text-tertiary)}
-.uv-none{background:#FEF2F2}.uv-none .uv-item-val{color:#C0392B}
-.uv-spf30{background:#FFFBEB}.uv-spf30 .uv-item-val{color:#B7791F}
-.uv-spf50{background:#ECFDF5}.uv-spf50 .uv-item-val{color:#1B6B45}
-.uv-block-note{font-size:11px;color:var(--text-tertiary);line-height:1.55}
+  /* FOOTER */
+  .footer { max-width: var(--max-w); margin: 0 auto; padding: 24px clamp(16px,4vw,24px) 40px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .footer-left { font-size: 11px; color: var(--text-tertiary); }
+  .footer-left a { color: var(--text-tertiary); text-decoration: underline; }
+  .footer-v { font-size: 10px; color: var(--text-tertiary); opacity: .6; }
 
-/* FORECAST */
-.forecast-section{margin-bottom:32px}
-.forecast-grid{display:grid;gap:12px}
-.forecast-grid.view-3{grid-template-columns:repeat(3,1fr)}
-.forecast-grid.view-6{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
-.forecast-grid.view-7{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
-.day-card{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);overflow:hidden;transition:box-shadow var(--transition),transform var(--transition)}
-.day-card.today{border-color:var(--sky);box-shadow:0 0 0 2px rgba(21,101,192,.12)}
-.day-card-top{padding:12px 14px 10px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.day-name-label{font-size:13px;font-weight:600;color:var(--text-primary)}
-.day-date-label{font-size:11px;color:var(--text-tertiary);margin-top:1px}
-.today-badge{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--sky);color:#fff;border-radius:20px;padding:2px 8px}
-.day-card-body{padding:12px 14px 14px}
-.wx-icon{display:flex;align-items:center;margin-bottom:10px}
-.wx-icon svg{width:32px;height:32px}
-.temp-row{display:flex;align-items:baseline;gap:6px;margin-bottom:12px}
-.temp-high{font-family:var(--font-display);font-size:26px;font-weight:300;color:var(--text-primary);letter-spacing:-.02em;line-height:1}
-.temp-low{font-size:13px;color:var(--text-tertiary)}
-.stat-rows{display:flex;flex-direction:column;gap:6px}
-.stat-row{display:flex;align-items:center;justify-content:space-between;gap:6px}
-.stat-label{font-size:10px;color:var(--text-tertiary);font-weight:500;white-space:nowrap}
-.stat-value{font-size:11px;font-weight:600;color:var(--text-primary);white-space:nowrap}
-.stat-bar-wrap{flex:1;height:3px;background:var(--border);border-radius:2px;overflow:hidden}
-.stat-bar{height:100%;border-radius:2px}
-.bar-rain{background:#1E88E5}.bar-wind{background:#78909C}.bar-sun{background:#F59E0B}.bar-hum{background:#26A69A}
-.rel-row{margin-top:10px;padding-top:8px;border-top:1px solid var(--border)}
-.rel-label-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
-.rel-label{font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary)}
-.rel-pct{font-size:11px;font-weight:700}
-.rel-pct.high{color:var(--rel-high)}.rel-pct.mid{color:var(--rel-mid)}.rel-pct.low{color:var(--rel-low)}
-.rel-bar-wrap{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
-.rel-bar{height:100%;border-radius:2px}
-.rel-bar.high{background:var(--rel-high)}.rel-bar.mid{background:var(--rel-mid)}.rel-bar.low{background:var(--rel-low)}
-.rel-note{font-size:9px;color:var(--text-tertiary);margin-top:3px;line-height:1.4}
-
-/* RELIABILITY LEGEND */
-.rel-legend{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);padding:16px 20px;margin-bottom:48px}
-.rel-legend-title{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:10px}
-.rel-legend-rows{display:flex;flex-direction:column;gap:6px}
-.rel-legend-row{display:flex;align-items:baseline;gap:8px}
-.rel-legend-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:3px}
-.rel-legend-text{font-size:12px;color:var(--text-secondary);line-height:1.5}
-.rel-legend-text strong{color:var(--text-primary);font-weight:600}
-
-/* AIR QUALITY */
-.aqi-section{margin-bottom:32px}
-.aqi-card{border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);overflow:hidden;box-shadow:var(--shadow-sm)}
-.aqi-header{padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.aqi-badge{font-size:13px;font-weight:700;padding:4px 12px;border-radius:20px}
-.aqi-badge.good{background:#D1FAE5;color:#065F46}
-.aqi-badge.fair{background:#FEF3C7;color:#92400E}
-.aqi-badge.moderate{background:#FFE4E6;color:#9F1239}
-.aqi-badge.poor{background:#EDE9FE;color:#4C1D95}
-.aqi-badge.very-poor{background:#FEF2F2;color:#7F1D1D}
-.aqi-label-text{font-size:13px;font-weight:500;color:var(--text-secondary)}
-.aqi-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-@media(max-width:640px){.aqi-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.aqi-item{border-right:none;border-bottom:1px solid var(--border)}}
-.aqi-item{padding:14px 18px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
-.aqi-item:last-child{border-right:none}
-.aqi-item-val{font-family:var(--font-display);font-size:22px;font-weight:300;color:var(--text-primary);letter-spacing:-.02em;line-height:1}
-.aqi-item-unit{font-size:10px;color:var(--text-tertiary);margin-left:2px}
-.aqi-item-label{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-top:4px}
-.aqi-item-bar{height:3px;background:var(--border);border-radius:2px;margin-top:6px;overflow:hidden}
-.aqi-item-bar-fill{height:100%;border-radius:2px}
-
-/* WARNINGS */
-.warnings-section{margin-bottom:48px;display:none}
-.warning-card{display:flex;align-items:flex-start;gap:14px;padding:14px 18px;border-radius:var(--radius-md);border:1px solid;margin-bottom:8px}
-.warning-card.level-1{border-color:#FDE68A;background:#FFFBEB}
-.warning-card.level-2{border-color:#FCA5A5;background:#FEF2F2}
-.warning-card.level-3{border-color:#EF4444;background:#FEE2E2}
-.warning-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700}
-.level-1 .warning-icon{background:#FCD34D;color:#78350F}
-.level-2 .warning-icon{background:#F87171;color:#fff}
-.level-3 .warning-icon{background:#EF4444;color:#fff}
-.warning-body{flex:1}
-.warning-title{font-size:13px;font-weight:600;color:var(--text-primary)}
-.warning-detail{font-size:12px;color:var(--text-secondary);margin-top:2px;line-height:1.5}
-.warning-level-label{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);margin-top:4px}
-.warnings-ok{padding:14px 18px;border-radius:var(--radius-md);border:1px solid #A7F3D0;background:#ECFDF5;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--accent);font-weight:500}
-.warnings-ok-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
-.ext-link{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--sky);text-decoration:none;border:1px solid var(--sky-pale);background:var(--sky-pale);padding:5px 12px;border-radius:20px}
-.official-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-
-/* NEWS */
-.news-section{margin-bottom:64px}
-.news-grid{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);background:var(--surface)}
-.news-item{display:block;padding:16px 20px;border-bottom:1px solid var(--border);text-decoration:none;transition:background var(--transition)}
-.news-item:last-of-type{border-bottom:none}
-.news-item-meta{font-size:11px;color:var(--text-tertiary);font-weight:500;margin-bottom:4px;display:flex;align-items:center;gap:6px}
-.news-item-meta::before{content:'';display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0}
-.news-item-title{font-size:14px;font-weight:500;color:var(--text-primary);line-height:1.5}
-.news-item-excerpt{font-size:12px;color:var(--text-secondary);margin-top:4px;line-height:1.55}
-.news-item-source{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);margin-top:6px}
-.news-loading{padding:24px 20px;text-align:center;font-size:13px;color:var(--text-tertiary)}
-.news-footer{padding:12px 20px;background:var(--bg);border-top:1px solid var(--border)}
-.news-more{font-size:12px;color:var(--sky);text-decoration:none;font-weight:500}
-
-/* WEBCAMS */
-.webcam-section{margin-bottom:64px}
-.cam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;width:100%}
-.cam-card{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);overflow:hidden;cursor:pointer;transition:box-shadow var(--transition),transform var(--transition)}
-.cam-img-wrap{position:relative;aspect-ratio:16/9;overflow:hidden;background:#e0e0e0}
-.cam-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform var(--transition)}
-.cam-overlay{position:absolute;inset:0;background:rgba(0,0,0,0);display:flex;align-items:center;justify-content:center;transition:background var(--transition)}
-.cam-zoom-icon{opacity:0;transition:opacity var(--transition)}
-.cam-zoom-icon svg{width:26px;height:26px;fill:#fff;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
-.live-dot{position:absolute;top:8px;left:8px;display:flex;align-items:center;gap:5px;background:rgba(0,0,0,.5);color:#fff;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:20px;backdrop-filter:blur(4px)}
-.live-pulse{width:6px;height:6px;border-radius:50%;background:#F44336;animation:pulse 1.4s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
-.cam-footer{padding:8px 12px;border-top:1px solid var(--border)}
-.cam-name{font-size:12px;font-weight:600;color:var(--text-primary)}
-.cam-location{font-size:11px;color:var(--text-tertiary);margin-top:1px}
-
-/* LIGHTBOX */
-.lightbox{display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
-.lightbox.open{display:flex}
-.lightbox-inner{position:relative;max-width:960px;width:100%;cursor:default}
-.lightbox-img{width:100%;border-radius:var(--radius-md);display:block;box-shadow:var(--shadow-lg)}
-.lightbox-caption{margin-top:12px;text-align:center;font-size:13px;color:rgba(255,255,255,.65)}
-.lightbox-close{position:absolute;top:-16px;right:-16px;width:36px;height:36px;border-radius:50%;border:none;background:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md)}
-
-/* INFO + FOOTER */
-.info-block{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);padding:20px 24px;margin-bottom:64px}
-.info-block p{font-size:13px;color:var(--text-secondary);line-height:1.65}
-.info-block a{color:var(--sky);text-decoration:none}
-footer{border-top:1px solid var(--border);padding:24px;text-align:center}
-footer p{font-size:12px;color:var(--text-tertiary)}
-footer a{color:var(--text-secondary);text-decoration:none}
-
-/* WIND & WAVE SECTION */
-.wind-card{border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);overflow:hidden;box-shadow:var(--shadow-sm)}
-.wind-top{display:flex;align-items:center;gap:24px;padding:20px 22px;border-bottom:1px solid var(--border);flex-wrap:wrap}
-.wind-main{display:flex;align-items:center;gap:16px;flex-shrink:0}
-.wind-compass{position:relative;width:72px;height:72px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;background:var(--bg)}
-.wind-compass-n,.wind-compass-s,.wind-compass-e,.wind-compass-w{position:absolute;font-size:9px;font-weight:700;color:var(--text-tertiary);letter-spacing:.04em}
-.wind-compass-n{top:4px;left:50%;transform:translateX(-50%)}
-.wind-compass-s{bottom:4px;left:50%;transform:translateX(-50%)}
-.wind-compass-e{right:4px;top:50%;transform:translateY(-50%)}
-.wind-compass-w{left:4px;top:50%;transform:translateY(-50%)}
-.wind-arrow{position:absolute;top:50%;left:50%;width:3px;height:26px;background:var(--sky);border-radius:2px;transform-origin:bottom center;transform:translateX(-50%) translateY(-100%) rotate(0deg);transition:transform 0.8s ease}
-.wind-values{flex:1}
-.wind-speed-big{font-family:var(--font-display);font-size:42px;font-weight:300;line-height:1;letter-spacing:-.03em;color:var(--text-primary)}
-.wind-speed-unit{font-size:12px;color:var(--text-tertiary);font-weight:500;margin-top:2px}
-.wind-dir-label{font-size:13px;color:var(--text-secondary);margin-top:4px;font-weight:500}
-.wind-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;flex:1;border-left:1px solid var(--border)}
-@media(max-width:600px){.wind-top{flex-direction:column;align-items:flex-start}.wind-stats{border-left:none;border-top:1px solid var(--border);width:100%;grid-template-columns:repeat(2,1fr)}}
-.wind-stat{padding:12px 16px;border-right:1px solid var(--border);text-align:center}
-.wind-stat:last-child{border-right:none}
-.wind-stat-val{font-family:var(--font-display);font-size:20px;font-weight:300;color:var(--text-primary);letter-spacing:-.02em}
-.wind-stat-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-top:3px}
-.sail-bar{display:flex;align-items:center;gap:10px;padding:12px 18px;border-bottom:none;background:var(--surface)!important}
-.sail-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.sail-info-btn{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;border:1px solid var(--text-tertiary);background:transparent;color:var(--text-tertiary);font-size:9px;font-weight:700;cursor:pointer;flex-shrink:0;transition:all var(--transition);margin-left:4px}
-.sail-info-btn:hover{background:var(--text-tertiary);color:#fff}
-
-/* Sail popup */
-.sail-popup-overlay{display:none;position:fixed;inset:0;z-index:499;background:rgba(0,0,0,.3);backdrop-filter:blur(2px)}
-.sail-popup-overlay.open{display:block}
-.sail-popup{display:none;position:fixed;z-index:500;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);box-shadow:var(--shadow-lg);padding:20px;max-width:340px;width:calc(100vw - 48px)}
-.sail-popup.open{display:block}
-.sail-popup-title{font-family:var(--font-display);font-size:18px;font-weight:300;margin-bottom:8px;color:var(--text-primary)}
-.sail-popup-body{font-size:13px;color:var(--text-secondary);line-height:1.65}
-.sail-popup-disc{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:11px;color:var(--text-tertiary);line-height:1.6}
-.sail-popup-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:18px;cursor:pointer;color:var(--text-tertiary)}
-.sail-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
-.sail-status{font-size:13px;font-weight:600;color:var(--text-primary)}
-.sail-note{font-size:11px;color:var(--text-secondary);margin-top:2px}
-.wind-chart-wrap{padding:16px 22px}
-.wind-chart-label{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:10px}
-.wind-chart{display:flex;align-items:flex-end;gap:3px;height:80px;padding-top:18px}
-.wind-chart-bar{flex:1;border-radius:2px 2px 0 0;min-height:3px;cursor:default;position:relative}
-.wind-chart-labels{display:flex;justify-content:space-between;margin-top:5px}
-.wind-chart-lbl{font-size:10px;color:var(--text-tertiary)}
-.wind-disclaimer{padding:10px 22px 14px;font-size:11px;color:var(--text-tertiary);border-top:1px solid var(--border);line-height:1.5}
-
-/* AQI INFO POPUP */
-.aqi-item { position: relative; }
-.aqi-info-btn { display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1px solid var(--text-tertiary); background: transparent; color: var(--text-tertiary); font-size: 9px; font-weight: 700; cursor: pointer; margin-left: 4px; vertical-align: middle; flex-shrink: 0; transition: all var(--transition); }
-.aqi-info-btn:hover { background: var(--text-tertiary); color: #fff; }
-.aqi-item-name-row { display: flex; align-items: center; margin-top: 4px; }
-.aqi-item-desc { font-size: 10px; color: var(--text-secondary); margin-top: 3px; line-height: 1.4; }
-.aqi-popup { display: none; position: fixed; z-index: 500; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 20px; max-width: 320px; width: calc(100vw - 48px); }
-.aqi-popup.open { display: block; }
-.aqi-popup-overlay { display: none; position: fixed; inset: 0; z-index: 499; background: rgba(0,0,0,0.3); backdrop-filter: blur(2px); }
-.aqi-popup-overlay.open { display: block; }
-.aqi-popup-title { font-family: var(--font-display); font-size: 18px; font-weight: 300; margin-bottom: 8px; color: var(--text-primary); }
-.aqi-popup-body { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
-.aqi-popup-source { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-tertiary); }
-.aqi-popup-source a { color: var(--sky); text-decoration: none; }
-.aqi-popup-close { position: absolute; top: 12px; right: 14px; background: none; border: none; font-size: 18px; cursor: pointer; color: var(--text-tertiary); line-height: 1; }
-/* HOVER */
-@media(hover:hover){
-  .day-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
-  .cam-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
-  .cam-card:hover .cam-img-wrap img{transform:scale(1.03)}
-  .cam-card:hover .cam-overlay{background:rgba(0,0,0,.18)}
-  .cam-card:hover .cam-zoom-icon{opacity:1}
-  .news-item:hover{background:#F7F6F3}
-  .ext-link:hover{background:#BBDEFB}
-  .lang-btn:not(.active):hover{background:rgba(255,255,255,.5);color:var(--text-primary)}
-}
-@media(hover:none){.cam-zoom-icon{opacity:1}.cam-overlay{background:rgba(0,0,0,.08)}}
-
-/* BREAKPOINTS */
-@media(max-width:640px){
-  .update-chip{display:none}
-  .current-card{flex-direction:column}
-  .forecast-grid.view-3{grid-template-columns:repeat(3,1fr)}
-  .forecast-grid.view-7{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:480px){
-  .forecast-grid.view-7{grid-template-columns:repeat(2,1fr)}
-}
+  @media (max-width: 640px) {
+    .portal-grid { grid-template-columns: 1fr; }
+    .info-strip { grid-template-columns: 1fr 1fr; }
+    
+    .topbar-name { display: none; }
+  }
+  @media (max-width: 400px) {
+    .info-strip { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
 
+<!-- TOPBAR -->
 <header class="topbar">
   <div class="topbar-inner">
-    <div class="topbar-brand">
+    <a class="topbar-brand" href="./">
       <div class="topbar-icon">
-        <svg viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
       </div>
-      <span class="topbar-name" id="t-brand">Cannobio Wetter</span>
-    </div>
+      <span class="topbar-name" id="t-brand">Cannobio</span>
+    </a>
     <div class="topbar-right">
-      <nav class="site-nav">
-        <a class="site-nav-link site-nav-active" href="../meteo/" id="nav-wetter">Wetter</a>
-        <a class="site-nav-link" href="../rifiuti/" id="nav-rifiuti">Rifiuti</a>
-        <a class="site-nav-link" href="../gotthard/" id="nav-gotthard">Gotthard</a>
-      </nav>
-      <span class="update-chip" id="update-time"></span>
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="de" onclick="setLang('de')">DE</button>
         <button class="lang-btn" data-lang="it" onclick="setLang('it')">IT</button>
         <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
       </div>
+      <button class="nav-btn" onclick="toggleNav()" aria-label="Menu" aria-expanded="false" id="nav-toggle">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+      </button>
     </div>
   </div>
 </header>
 
-<div class="data-chip-bar" id="data-chip-bar">
-  <span class="data-chip" id="data-chip-text"></span>
+<!-- NAV DROPDOWN OVERLAY -->
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()">
+  <div class="nav-dropdown" id="nav-dropdown" onclick="event.stopPropagation()">
+    <a class="nav-dropdown-item active" href="./" id="nav-home">
+      <div class="nav-dropdown-icon" style="background:#EBF7F1;">
+        <svg viewBox="0 0 24 24" fill="#1B6B45"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-home-label">Portal</span>
+        <span class="nav-dropdown-sub" id="nav-home-sub">Cannobio am Lago Maggiore</span>
+      </div>
+    </a>
+    <a class="nav-dropdown-item" href="./meteo/" id="nav-meteo">
+      <div class="nav-dropdown-icon" style="background:#E3F2FD;">
+        <svg viewBox="0 0 24 24" fill="#1565C0"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-meteo-label">Wetter</span>
+        <span class="nav-dropdown-sub" id="nav-meteo-sub">Prognose, Wind & Segeln</span>
+      </div>
+    </a>
+    <a class="nav-dropdown-item" href="./rifiuti/" id="nav-rifiuti">
+      <div class="nav-dropdown-icon" style="background:#EBF7F1;">
+        <svg viewBox="0 0 24 24" fill="#1B6B45"><path d="M9 3v1H4v2h1v13a2 2 0 002 2h10a2 2 0 002-2V6h1V4h-5V3H9zm0 5h2v9H9V8zm4 0h2v9h-2V8z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-rifiuti-label">Abfall</span>
+        <span class="nav-dropdown-sub" id="nav-rifiuti-sub">Abfallkalender 2026</span>
+      </div>
+    </a>
+    <a class="nav-dropdown-item" href="./gotthard/" id="nav-gotthard">
+      <div class="nav-dropdown-icon" style="background:#FEF3E2;">
+        <svg viewBox="0 0 24 24" fill="#B7791F"><path d="M1.5 8.5l10.5-7 10.5 7V20a1 1 0 01-1 1H15v-6H9v6H3a1 1 0 01-1-1V8.5z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-gotthard-label">Gotthard</span>
+        <span class="nav-dropdown-sub" id="nav-gotthard-sub">Tunnel, Wartezeiten & Pass</span>
+      </div>
+    </a>
+  </div>
 </div>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow" id="t-eyebrow">Lago Maggiore &middot; 46.06&deg; N</div>
-  <h1 id="t-h1">Wettervorhersage<br><em>Cannobio</em></h1>
-  <p class="hero-sub" id="t-sub">Prognose, Wind & Segelbedingungen, Luftqualität, UV-Index, Webcams und Unwetterwarnungen für Cannobio am Lago Maggiore.</p>
-  <div id="hero-timestamp" style="margin-top:12px;font-size:12px;color:var(--text-tertiary);font-weight:400;line-height:1.8;">
-    <div style="display:inline-flex;align-items:center;gap:8px;">
-      <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;animation:pulse 2s ease-in-out infinite;"></span>
-      <span id="hero-ts-text">—</span>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:16px;color:var(--text-tertiary);font-size:12px;font-weight:400;">
-      <span style="white-space:nowrap;">
-        <span id="t-lbl-rise-h">&#x1F305; Sonnenaufgang</span>
-        <span id="cur-rise" style="color:var(--text-primary);margin-left:4px;">—:—</span>
-      </span>
-      <span style="white-space:nowrap;">
-        <span id="t-lbl-set-h">&#x1F307; Sonnenuntergang</span>
-        <span id="cur-set" style="color:var(--text-primary);margin-left:4px;">—:—</span>
-      </span>
-      <span style="white-space:nowrap;">
-        <span id="t-lbl-sun-h">&#x2600;&#xFE0F; Sonne heute</span>
-        <span id="cur-sun" style="color:var(--text-primary);margin-left:4px;">—h</span>
-      </span>
-    </div>
-  </div>
+  <div class="hero-eyebrow" id="t-eyebrow">Lago Maggiore · Piemont · 195 m</div>
+  <h1 id="t-h1">Cannobio<br><em id="t-h1-em">am See</em></h1>
+  <p class="hero-sub" id="t-sub">Wetter, Abfallkalender, Gotthard-Verkehr und lokale Informationen für Cannobio am Lago Maggiore.</p>
 </section>
 
+<!-- CONTENT -->
 <div class="content">
-  <div class="current-card">
-    <div class="current-left">
-      <div class="label" id="t-cur-label">Aktuell</div>
-      <div class="temp-big" id="cur-temp">—°</div>
-      <div class="condition" id="cur-cond">…</div>
+
+  <!-- LIVE TILES (populated by JS) -->
+  <div class="info-strip">
+    <div class="info-tile">
+      <div class="info-tile-label" id="t-tile-temp">Temperatur</div>
+      <div class="info-tile-val" id="tile-temp">—°</div>
+      <div class="info-tile-sub" id="tile-weather">—</div>
     </div>
-    <div class="current-meta">
-      <div class="current-meta-item"><div class="val" id="cur-high">—°</div><div class="lbl" id="t-lbl-high">Tageshoch</div></div>
-      <div class="current-meta-item"><div class="val" id="cur-low">—°</div><div class="lbl" id="t-lbl-low">Tagestief</div></div>
-      <div class="current-meta-item"><div class="val" id="cur-night">—°</div><div class="lbl" id="t-lbl-night">Nachttief</div></div>
-      <div class="current-meta-item"><div class="val" id="cur-hum">—%</div><div class="lbl" id="t-lbl-hum">Feuchte</div></div>
-      <div class="current-meta-item"><div class="val" id="cur-rain">—%</div><div class="lbl" id="t-lbl-rain">Regenrisiko</div></div>
-      <div class="current-meta-item" id="precip-mm-item"><div class="val" id="cur-precip-mm">— mm</div><div class="lbl" id="t-lbl-precip">Niederschlag</div></div>
+    <div class="info-tile">
+      <div class="info-tile-label" id="t-tile-wind">Wind</div>
+      <div class="info-tile-val" id="tile-wind">—</div>
+      <div class="info-tile-sub" id="tile-wind-dir">—</div>
     </div>
-  </div>
-
-  <!-- UV PROTECTION BLOCK -->
-  <div class="uv-block" id="uv-block">
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
-      <div class="uv-block-title" id="t-uv-block-title" style="margin-bottom:0;">Sonnenschutz heute</div>
-      <div id="uv-insight-header" style="display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:20px;background:var(--sky-pale);font-size:12px;font-weight:600;color:var(--sky);">
-        <span id="uv-insight-val">—</span>
-        <span id="uv-insight-label">—</span>
-      </div>
-    </div>
-    <div class="uv-block-grid" style="grid-template-columns:repeat(4,1fr);">
-      <!-- UV-INDEX: first, with actionable insight -->
-      <div class="uv-item" id="uv-index-card" style="background:var(--sky-pale);position:relative;">
-        <div class="uv-item-val" id="cur-uv" style="color:var(--sky);">—</div>
-        <div class="uv-item-lbl" id="t-uv-index-lbl">UV-Index</div>
-
-      </div>
-      <div class="uv-item uv-none">
-        <div class="uv-item-val" id="uv-none-val">—</div>
-        <div class="uv-item-lbl" id="t-uv-none">Ohne Schutz</div>
-      </div>
-      <div class="uv-item uv-spf30">
-        <div class="uv-item-val" id="uv-spf30-val">—</div>
-        <div class="uv-item-lbl" id="t-uv-spf30">LSF 30</div>
-      </div>
-      <div class="uv-item uv-spf50">
-        <div class="uv-item-val" id="uv-spf50-val">—</div>
-        <div class="uv-item-lbl" id="t-uv-spf50">LSF 50</div>
-      </div>
-    </div>
-    <div class="uv-block-note" id="t-uv-note">Richtwert für Hauttyp II. WHO-Standard MED 200 J/m².</div>
-  </div>
-
-  <!-- WIND & WELLENBERICHT -->
-  <div class="wind-section" id="wind-section" style="margin-bottom:32px;">
-    <div class="section-label" id="t-wind-label">Wind & Wellenbericht</div>
-    <div class="wind-card">
-
-      <!-- ROW 1: Current values -->
-      <div class="wind-top">
-        <div class="wind-main">
-          <div class="wind-compass" id="wind-compass">
-            <div class="wind-arrow" id="wind-arrow"></div>
-            <div class="wind-compass-n">N</div>
-            <div class="wind-compass-s">S</div>
-            <div class="wind-compass-e">E</div>
-            <div class="wind-compass-w">W</div>
-          </div>
-          <div class="wind-values">
-            <div class="wind-speed-big" id="wind-speed-now">—</div>
-            <div class="wind-speed-unit">km/h</div>
-            <div class="wind-dir-label" id="wind-dir-now">—</div>
-          </div>
-        </div>
-        <div class="wind-stats">
-          <div class="wind-stat">
-            <div class="wind-stat-val" id="wind-gust-now">—</div>
-            <div class="wind-stat-lbl" id="t-wind-gust">Böen</div>
-          </div>
-          <div class="wind-stat">
-            <div class="wind-stat-val" id="wind-bft-now">—</div>
-            <div class="wind-stat-lbl" id="t-wind-bft">Beaufort</div>
-          </div>
-          <div class="wind-stat">
-            <div class="wind-stat-val" id="wave-height-now">—</div>
-            <div class="wind-stat-lbl" id="t-wave-height">Wellengang</div>
-          </div>
-          <div class="wind-stat">
-            <div class="wind-stat-val" id="wave-period-now">—</div>
-            <div class="wind-stat-lbl" id="t-wave-period">Periode</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SEGELAMPEL + RISIKO: eine kompakte Zeile -->
-      <div id="sail-danger-row" style="display:flex;align-items:center;justify-content:space-between;padding:11px 22px;border-top:1px solid var(--border);gap:12px;">
-        <div style="display:flex;align-items:center;gap:8px;">
-          <div class="sail-dot" id="sail-dot"></div>
-          <span class="sail-status" id="sail-status" style="font-size:13px;font-weight:600;color:var(--text-primary);">—</span>
-          <button class="sail-info-btn" onclick="openSailPopup()" aria-label="Info" title="Mehr Informationen">i</button>
-        </div>
-        <div id="water-danger-block" style="display:none;">
-          <div id="danger-badge" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;">
-            <span id="danger-icon" style="font-size:15px;">—</span>
-            <span id="danger-level-text">—</span>
-          </div>
-        </div>
-      </div>
-      <!-- Hidden stores needed by renderDanger/openSailPopup -->
-      <span id="sail-note" style="display:none;">—</span>
-      <div id="danger-factors" style="display:none;"></div>
-      <div id="storm-window" style="display:none;"></div>
-      <div id="danger-disclaimer" style="display:none;"></div>
-      <div id="t-danger-label" style="display:none;"></div>
-
-      <!-- 12h WIND CHART -->
-      <div class="wind-chart-wrap">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;"><span class="wind-chart-label" id="t-wind-chart-label">Windprognose 12h</span><span style="font-size:10px;color:var(--text-tertiary);" id="wind-source-note">· Brissago</span></div>
-        <div class="wind-chart" id="wind-chart"></div>
-        <div class="wind-chart-labels" id="wind-chart-labels"></div>
-      </div>
-
-      <div class="wind-disclaimer" id="t-wind-disc">Hinweis: Basierend auf numerischen Wettermodellen aus Windstärke und Fetch-Distanz (Lago Maggiore ~60 km). Kein offizieller Messwert.</div>
+    <div class="info-tile">
+      <div class="info-tile-label" id="t-tile-tunnel">Gotthardtunnel</div>
+      <div class="info-tile-val" id="tile-tunnel">—</div>
+      <div class="info-tile-sub" id="t-tile-tunnel-sub">Wartezeit</div>
     </div>
   </div>
 
-  <div class="forecast-section">
-    <div class="view-toggle-wrap">
-      <div class="section-label" id="t-forecast-label" style="margin-bottom:0">Prognose</div>
-      <div class="view-toggle">
-        <button class="view-btn" data-days="3" onclick="setView(3)" id="t-btn-3">3 Tage</button>
-        <button class="view-btn active" data-days="6" onclick="setView(6)" id="t-btn-6">6 Tage</button>
+  <!-- PORTAL CARDS -->
+  <div class="portal-grid">
+
+    <a class="portal-card card-meteo" href="./meteo/" id="card-meteo">
+      <div class="portal-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
       </div>
-    </div>
-    <div class="forecast-grid view-3" id="forecast-grid"></div>
-  </div>
+      <div class="portal-card-eyebrow" id="t-card-meteo-eyebrow">Live · 6 Tage</div>
+      <div class="portal-card-title" id="t-card-meteo-title">Wetter & Segeln</div>
+      <div class="portal-card-desc" id="t-card-meteo-desc">Temperatur, Wind, Wellen, UV-Index und Segelbedingungen für Cannobio.</div>
+      <div class="portal-card-arrow"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></div>
+    </a>
 
-  <div class="warnings-section" id="warnings-section">
-    <div class="section-label" id="t-warn-label">Unwetterwarnungen ARPA Piemonte — Provinz VCO</div>
-    <div id="warnings-grid"></div>
-  </div>
-
-  <div class="aqi-section">
-    <div class="section-label" id="t-aqi-label">Luftqualität</div>
-    <div class="aqi-card">
-      <div class="aqi-header" style="flex-direction:column;align-items:flex-start;gap:6px;">
-        <span class="aqi-badge good" id="aqi-badge" style="font-size:14px;padding:5px 14px;">—</span>
-        <span class="aqi-label-text" id="aqi-sub" style="font-size:12px;">…</span>
+    <a class="portal-card card-gotthard" href="./gotthard/" id="card-gotthard">
+      <div class="portal-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
       </div>
-      <div class="aqi-grid" id="aqi-grid"></div>
-    </div>
+      <div class="portal-card-eyebrow" id="t-card-gott-eyebrow">A2 · Schweiz</div>
+      <div class="portal-card-title" id="t-card-gott-title">Gotthard</div>
+      <div class="portal-card-desc" id="t-card-gott-desc">Wartezeiten, Prognose, Webcams und Sperrkalender für den Gotthardtunnel.</div>
+      <div class="portal-card-arrow"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></div>
+    </a>
+
+    <a class="portal-card card-rifiuti" href="./rifiuti/" id="card-rifiuti">
+      <div class="portal-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 3v1H4v2h1v13a2 2 0 002 2h10a2 2 0 002-2V6h1V4h-5V3H9zm0 5h2v9H9V8zm4 0h2v9h-2V8z"/></svg>
+      </div>
+      <div class="portal-card-eyebrow" id="t-card-rifi-eyebrow">Gemeinde Cannobio</div>
+      <div class="portal-card-title" id="t-card-rifi-title">Abfallkalender</div>
+      <div class="portal-card-desc" id="t-card-rifi-desc">Abholtermine 2026, Recyclinghof und Entsorgungsinfos für Cannobio.</div>
+      <div class="portal-card-arrow"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></div>
+    </a>
+
+    <a class="portal-card card-info" href="https://www.comune.cannobio.vb.it" target="_blank" rel="noopener" id="card-comune">
+      <div class="portal-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="portal-card-eyebrow" id="t-card-info-eyebrow">Gemeinde</div>
+      <div class="portal-card-title" id="t-card-info-title">Comune</div>
+      <div class="portal-card-desc" id="t-card-info-desc">Offizielle Website der Gemeinde Cannobio, Verbano-Cusio-Ossola.</div>
+      <div class="portal-card-arrow"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></div>
+    </a>
+
   </div>
 
-
-
-  <div class="webcam-section">
-    <div class="section-label" id="t-cams-label">Live-Webcams</div>
-    <div class="cam-grid" id="cam-grid"></div>
-  </div>
-
-  <div class="rel-legend">
-    <div class="rel-legend-title" id="t-rel-title">Prognosegenauigkeit</div>
-    <div class="rel-legend-rows" id="t-rel-rows"></div>
-  </div>
-
-  <div class="info-block">
-    <p id="t-info">Wetterdaten: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0), MeteoSwiss ICON-CH. Luftqualität: European AQI, Copernicus CAMS. Warnungen: <a href="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa/allerta/" target="_blank" rel="noopener">ARPA Piemonte</a>, Provinz VCO. Nachrichten: <a href="https://www.ecorisveglio.it/?s=cannobio" target="_blank" rel="noopener">ecorisveglio.it</a>. Webcams: <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a>.</p>
+  <!-- SEO CONTENT -->
+  <div class="seo-section">
+    <h2 id="t-seo-h2">Digitales Portal für Cannobio</h2>
+    <p id="t-seo-p">Cannobio liegt am Westufer des Lago Maggiore in der Provinz Verbano-Cusio-Ossola, Piemont. Mit rund 5’000 Einwohnern ist die Gemeinde ein beliebtes Reiseziel am Lago Maggiore.</p>
   </div>
 
 </div>
 
-<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-  <div class="lightbox-inner">
-    <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">&times;</button>
-    <img class="lightbox-img" id="lightbox-img" src="" alt="">
-    <div class="lightbox-caption" id="lightbox-caption"></div>
-  </div>
-</div>
-
-<section style="border-top:1px solid var(--border);padding:clamp(28px,4vw,48px) clamp(16px,4vw,24px);max-width:var(--max-w);margin:0 auto;">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;">
-    <div>
-      <h2 id="t-seo-m1" style="font-family:var(--font-display);font-size:16px;font-weight:300;margin-bottom:8px;letter-spacing:-0.01em;color:#1A1A18;"></h2>
-      <p id="t-seo-m1p" style="font-size:12px;color:#6B6860;line-height:1.7;"></p>
-    </div>
-    <div>
-      <h2 id="t-seo-m2" style="font-family:var(--font-display);font-size:16px;font-weight:300;margin-bottom:8px;letter-spacing:-0.01em;color:#1A1A18;"></h2>
-      <p id="t-seo-m2p" style="font-size:12px;color:#6B6860;line-height:1.7;"></p>
-    </div>
-    <div>
-      <h2 id="t-seo-m3" style="font-family:var(--font-display);font-size:16px;font-weight:300;margin-bottom:8px;letter-spacing:-0.01em;color:#1A1A18;"></h2>
-      <p id="t-seo-m3p" style="font-size:12px;color:#6B6860;line-height:1.7;"></p>
-    </div>
-  </div>
-</section>
-<footer>
-  <p>Cannobio, Lago Maggiore &mdash; <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">comune.cannobio.vb.it</a> &mdash; <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> &mdash; <a href="https://www.arpa.piemonte.it" target="_blank" rel="noopener">ARPA Piemonte</a></p>
-  <p style="margin-top:6px;font-size:11px;color:var(--text-tertiary);opacity:0.7;">
-    v2.4 &mdash; 2. Mai 2026 &mdash; <a href="https://giovanola.github.io/cannobio/" style="color:var(--text-tertiary);text-decoration:none;" target="_blank" rel="noopener">giovanola.github.io/cannobio</a>
-  </p>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-left" id="t-footer">Quellen: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> · <a href="https://www.comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a></div>
+  <div class="footer-v">v1.0 · Juni 2026 · giovanola.github.io/cannobio</div>
 </footer>
 
 <script>
-
-
-/* =========================================================
-   TRANSLATIONS
-========================================================= */
 const T = {
-  de:{
-    brand:'Cannobio Wetter',eyebrow:'Lago Maggiore \u00b7 46.06\u00b0 N',
-    h1:'Wettervorhersage<br><em>Cannobio</em>',
-    sub:'Prognose, Luftqualit\u00e4t, Warnungen und Nachrichten f\u00fcr Cannobio am Lago Maggiore.',
-    navWetter:'Wetter',navRifiuti:'Abfall',
-    windLabel:'Wind & Wellenbericht',windGust:'Böen',windBft:'Beaufort',
-    waveHeight:'Wellengang',wavePeriod:'Periode',windChartLabel:'Windprognose 12h',
-    windDisc:'Hinweis: Basierend auf numerischen Wettermodellen (MeteoSwiss ICON-CH via Open-Meteo), keine offizielle Warnung. Vor dem Wasserausflug aktuelle Daten prüfen, z. B. bei MeteoSwiss, ARPA Piemonte und lokalen Wetterstationen. Das Wetter am Lago Maggiore kann sich schnell ändern. Im Zweifel nicht aufs Wasser gehen.',
-    sail0:'Windstille (0–1 Bft)',sail0Note:'Zu wenig Wind. Ideal für SUP und Kajak.',
-    sail23:'Schwachwind (2–3 Bft)',sail23Note:'Angenehme Bedingungen für Einsteiger und Segelboote.',
-    sail4:'Mäßiger Wind (4 Bft)',sail4Note:'Erfahrene Segler. Kite/Windsurf günstig. Anfänger nicht empfohlen.',
-    sail5:'Frischer Wind (5 Bft)',sail5Note:'Nur geübte Segler. Wellen und Böen beachten.',
-    sail6:'Starker Wind (6+ Bft)',sail6Note:'Im Hafen bleiben. Gefährliche Bedingungen.',
-    riskLow:'Gering',riskLowNote:'Unkritische Bedingungen',
-    riskMod:'Mäßig',riskModNote:'Aufmerksamkeit erforderlich',
-    riskHigh:'Hoch',riskHighNote:'Nur mit Erfahrung',
-    riskVeryHigh:'Sehr hoch',riskVeryHighNote:'Im Hafen bleiben',
-    sailCalm:'Windstille – kein Segeln möglich',
-    sailCalmNote:'Wind unter 1 Bft. Zu wenig Wind zum Segeln. Ideal für Stand-up-Paddling oder Kajakfahren.',
-    sailGood:'Günstig – angenehme Segelbedingungen',
-    sailGoodNote:'Wind 1–3 Bft. Ideale Bedingungen für Katamarane, SUP und Segelboote.',
-    sailMedium:'Vorsicht – mässiger Wind',
-    sailMediumNote:'Wind 3–5 Bft. Erfahrene Segler. Kite/Windsurfer günstig. SUP nicht empfohlen.',
-    sailBad:'Nicht empfohlen – starker Wind',
-    sailBadNote:'Wind 5+ Bft. Nur für sehr erfahrene Segler. Kleine Boote im Hafen lassen.',
-    uvLow:'Niedrig – kein Schutz nötig',
-    uvMed:'Mässig – LSF 30 empfohlen',
-    uvHigh:'Hoch – LSF 50 nötig',
-    uvVeryHigh:'Sehr hoch – Mittag meiden',
-    uvExtreme:'Extrem – draussen vermeiden',
-    capeExtreme:'extrem hohes Gewitterpotenzial',
-    capeHigh:'hohes Gewitterpotenzial',
-    capeMed:'mässiges Gewitterpotenzial',
-    thunderForecast:'Gewitter im Tagesverlauf prognostiziert',
-    dangerNoFactors:'Keine kritischen Faktoren identifiziert.',
-    dataFrom:'Daten von ',
-    dangerLabel:'Risiken',
-    dangerLow:'Geringes Risiko – günstige Bedingungen',
-    dangerMed:'Erhöhtes Risiko – Vorsicht geboten',
-    dangerHigh:'Hohes Risiko – Wasserausflug nicht empfohlen',
-    dangerExtreme:'Extremes Risiko – NICHT aufs Wasser gehen',
-    factorThunder:'Gewittergefahr: CAPE {val} J/kg – {desc}',
-    factorGusts:'Starke Böen: bis {val} km/h erwartet',
-    factorRain:'Starkregen: bis {val} mm/h möglich',
-    factorWind:'Windstärke: {val} Bft – kritisch für kleine Boote',
-    stormWindow:'Kritisches Zeitfenster heute: {from} – {to} Uhr – Aktivitäten auf dem See meiden.',
-    dangerDisc:'Hinweis: Basierend auf numerischen Wettermodellen (MeteoSwiss ICON-CH via Open-Meteo), keine offizielle Warnung. Vor dem Wasserausflug aktuelle Daten prüfen, z. B. bei MeteoSwiss, ARPA Piemonte und lokalen Wetterstationen. Das Wetter am Lago Maggiore kann sich schnell ändern. Im Zweifel nicht aufs Wasser gehen.',
-    navGotthard:'Gotthard',
-    curLabel:'Aktuell',lblHigh:'Tageshoch',lblLow:'Tagestief',lblNight:'Nachttief',lblHum:'Feuchte',lblRain:'Regenrisiko',lblPrecip:'Niederschlag',lblSun:'Sonne heute',
-    forecastLabel:'Prognose',btn3:'3 Tage',btn6:'6 Tage',
-    btn7:'7 Tage',
-    relTitle:'Prognosegenauigkeit',
-    relRows:[
-      {dot:'var(--rel-high)',text:'<strong>Tag 1\u20132 (90\u201395\u00a0%)</strong>: Sehr zuverl\u00e4ssig. ICON-CH MeteoSwiss erfasst kurzfristige Entwicklungen pr\u00e4zise.'},
-      {dot:'var(--rel-mid)', text:'<strong>Tag 3\u20135 (65\u201380\u00a0%)</strong>: Bedingt verl\u00e4sslich. Temperaturtendenz gesichert, Zeitpunkte unsicher.'},
-      {dot:'var(--rel-low)', text:'<strong>Tag 6\u20137 (40\u201355\u00a0%)</strong>: Orientierungswert. Grosswetterlage erkennbar, Details statistisch wenig belastbar.'},
-    ],
-    aqiLabel:'Luftqualit\u00e4t',aqiSub:'Europ\u00e4ischer Luftqualit\u00e4tsindex f\u00fcr Cannobio',
-    aqiNames:['Sehr gut','Gut','M\u00e4ssig','Schlecht','Sehr schlecht','Extrem schlecht'],
-    warnLabel:'Unwetterwarnungen ARPA Piemonte \u2014 Provinz VCO',
-    warnOk:'Keine aktiven Warnungen f\u00fcr Provinz VCO / Lago Maggiore',
-    warnLevels:{1:'Vorwarnung (Giallo)',2:'Warnung (Arancione)',3:'Unwetterwarnung (Rosso)'},
-    newsLabel:'Nachrichten Cannobio',newsLoading:'Nachrichten werden geladen\u2026',
-    newsMore:'Alle Artikel auf ecorisveglio.it \u2192',
-    camsLabel:'Live-Webcams',
-    offlineChip:'Offline-Daten',standChip:'Stand',standUhr:'Uhr',
-    wx:['Klarer Himmel','Leicht bew\u00f6lkt','Bew\u00f6lkt','Neblig','Nieselregen','Regen','Schneefall','Starkregen','Schneeschauer','Gewitter','Wechselhaft'],
-    days:['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'],
-    today:'Heute',statSun:'Sonne',statRain:'Regen',statHum:'Feuchte',statWind:'Wind',statAcc:'Genauigkeit',lblUv:'UV-Index',
-    lblRise:'Sonnenaufgang',lblSet:'Sonnenuntergang',
-    uvBlockTitle:'Sonnenschutz heute',uvIndexLbl:'UV-Index',uvNone:'Ohne Schutz',uvSpf30:'LSF\u00a030',uvSpf50:'LSF\u00a050',
-    uvNote:'Richtwert f\u00fcr Hauttyp II mit korrektem Eincremen (2\u00a0mg/cm\u00b2). LSF\u00a030: max.\u00a02\u00a0h Mittagssonne, dann Nachcremen. LSF\u00a050: max.\u00a03\u00a0h, dann Nachcremen und Schatten suchen. Quelle: WHO, Bundesamt f\u00fcr Strahlenschutz.',
-    relNotes:['Kurzzeitprognose, sehr verl\u00e4sslich','Tendenz gesichert, Timing unsicher','Grosswetterlage, Details unsicher'],
-    info:'Wetterdaten: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY\u00a04.0), MeteoSwiss ICON-CH. Luftqualit\u00e4t: European AQI, Copernicus CAMS. Warnungen: <a href="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa/allerta/" target="_blank" rel="noopener">ARPA Piemonte</a>, Provinz VCO. Nachrichten: <a href="https://www.ecorisveglio.it/?s=cannobio" target="_blank" rel="noopener">ecorisveglio.it</a>. Webcams: <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a>.',
-    camLocs:{lungolago:'Seepromenade Cannobio',piazza:'Dorfplatz am See',maccagno:'N\u00f6rdlicher Lago Maggiore',castelli:'SeeSchl\u00f6sser Cannero'},
-    seoM1:'Wetter Cannobio heute',
-    seoM1p:'Aktuelle Wetterprognose f\u00fcr Cannobio am Lago Maggiore. Daten von Open-Meteo (CC BY 4.0) und MeteoSwiss ICON-CH. T\u00e4gliche Aktualisierung mit Temperatur, Niederschlag, Sonnenstunden und UV-Index.',
-    seoM2:'Luftqualit\u00e4t Lago Maggiore',
-    seoM2p:'Europ\u00e4ischer Luftqualit\u00e4tsindex (AQI) f\u00fcr Cannobio basierend auf Copernicus CAMS Daten. Echtzeit-Messung von PM2.5, PM10, NO\u2082 und Ozon.',
-    seoM3:'Unwetterwarnungen Provinz VCO',
-    seoM3p:'Aktuelle Warnungen der ARPA Piemonte f\u00fcr die Provinz Verbano-Cusio-Ossola und den Lago Maggiore. Warnstufen Giallo, Arancione und Rosso.',
+  de: {
+    pageTitle: 'Cannobio – Lago Maggiore | Portal',
+    metaDesc: 'Wetter, Abfallkalender, Gotthard-Verkehr und Informationen für Cannobio am Lago Maggiore.',
+    ogTitle: 'Cannobio am Lago Maggiore',
+    ogDesc: 'Wetter, Segeln, Gotthard und Abfallkalender für Cannobio.',
+    brand: 'Cannobio',
+    eyebrow: 'Lago Maggiore · Piemont · 195 m',
+    h1: 'Cannobio', h1Em: 'am See',
+    sub: 'Wetter, Abfallkalender, Gotthard-Verkehr und lokale Informationen für Cannobio am Lago Maggiore.',
+    navHome: 'Portal', navMeteo: 'Wetter', navRifiuti: 'Abfall', navGotthard: 'Gotthard',
+    tileTmp: 'Temperatur', tileWind: 'Wind', tileTunnel: 'Gotthardtunnel', tileTunnelSub: 'Wartezeit',
+    cardMeteoEyebrow: 'Live · 6 Tage', cardMeteoTitle: 'Wetter & Segeln',
+    cardMeteoDesc: 'Temperatur, Wind, Wellen, UV-Index und Segelbedingungen für Cannobio.',
+    cardGottEyebrow: 'A2 · Schweiz', cardGottTitle: 'Gotthard',
+    cardGottDesc: 'Wartezeiten, Prognose, Webcams und Sperrkalender für den Gotthardtunnel.',
+    cardRifiEyebrow: 'Gemeinde Cannobio', cardRifiTitle: 'Abfallkalender',
+    cardRifiDesc: 'Abholtermine 2026, Recyclinghof und Entsorgungsinfos für Cannobio.',
+    cardInfoEyebrow: 'Gemeinde', cardInfoTitle: 'Comune',
+    cardInfoDesc: 'Offizielle Website der Gemeinde Cannobio, Verbano-Cusio-Ossola.',
+    seoH2: 'Digitales Portal für Cannobio',
+    seoP: 'Cannobio liegt am Westufer des Lago Maggiore in der Provinz Verbano-Cusio-Ossola, Piemont.',
+    footer: 'Quellen: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> · <a href="https://www.comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a>',
   },
-  it:{
-    brand:'Meteo Cannobio',eyebrow:'Lago Maggiore \u00b7 46.06\u00b0 N',
-    h1:'Previsioni meteo<br><em>Cannobio</em>',
-    sub:'Previsioni, vento & condizioni vela, qualit\u00e0 dell\u2019aria, indice UV, webcam live e allerte meteo per Cannobio sul Lago Maggiore.',
-    navWetter:'Meteo',navRifiuti:'Rifiuti',
-    windLabel:'Vento e moto ondoso',windGust:'Raffiche',windBft:'Beaufort',
-    waveHeight:'Onde',wavePeriod:'Periodo',windChartLabel:'Previsione vento 12h',
-    windDisc:'Nota: Basato su modelli meteorologici numerici (MeteoSwiss ICON-CH via Open-Meteo), nessun avviso ufficiale. Prima di ogni uscita sull’acqua verificare i dati aggiornati su MeteoSvizzera, ARPA Piemonte e stazioni meteo locali. Il tempo sul Lago Maggiore può cambiare rapidamente. In caso di dubbio, non andare in acqua.',
-    sail0:'Bonaccia (0–1 Bft)',sail0Note:'Vento insufficiente. Ideale per SUP e kayak.',
-    sail23:'Vento debole (2–3 Bft)',sail23Note:'Condizioni piacevoli per principianti e barche a vela.',
-    sail4:'Vento moderato (4 Bft)',sail4Note:'Navigatori esperti. Kite/windsurf favorevole. Principianti sconsigliato.',
-    sail5:'Vento fresco (5 Bft)',sail5Note:'Solo navigatori esperti. Attenzione a onde e raffiche.',
-    sail6:'Vento forte (6+ Bft)',sail6Note:'Restare in porto. Condizioni pericolose.',
-    riskLow:'Basso',riskLowNote:'Condizioni non critiche',
-    riskMod:'Moderato',riskModNote:'Attenzione richiesta',
-    riskHigh:'Alto',riskHighNote:'Solo con esperienza',
-    riskVeryHigh:'Molto alto',riskVeryHighNote:'Restare in porto',
-    sailCalm:'Calma – vento insufficiente per navigare',
-    sailCalmNote:'Vento sotto 1 Bft. Troppo calmo per navigare. Ideale per stand-up paddle o kayak.',
-    sailGood:'Favorevole – buone condizioni per navigare',
-    sailGoodNote:'Vento 1–3 Bft. Condizioni ideali per catamarani, SUP e barche a vela.',
-    sailMedium:'Attenzione – vento moderato',
-    sailMediumNote:'Vento 3–5 Bft. Navigatori esperti. Kite/windsurf favorevole. SUP sconsigliato.',
-    sailBad:'Sconsigliato – vento forte',
-    sailBadNote:'Vento 5+ Bft. Solo navigatori molto esperti. Tenere le piccole imbarcazioni in porto.',
-    uvLow:'Basso – nessuna protezione necessaria',
-    uvMed:'Moderato – SPF 30 consigliato',
-    uvHigh:'Alto – SPF 50 necessario',
-    uvVeryHigh:'Molto alto – evitare mezzogiorno',
-    uvExtreme:'Estremo – evitare l’esposizione',
-    capeExtreme:'potenziale temporali estremo',
-    capeHigh:'alto potenziale temporali',
-    capeMed:'moderato potenziale temporali',
-    thunderForecast:'Temporali previsti nel corso della giornata',
-    dangerNoFactors:'Nessun fattore critico identificato.',
-    dataFrom:'Dati del ',
-    dangerLabel:'Rischi',
-    dangerLow:'Rischio basso – condizioni favorevoli',
-    dangerMed:'Rischio elevato – prudenza necessaria',
-    dangerHigh:'Rischio alto – attività in acqua sconsigliata',
-    dangerExtreme:'Rischio estremo – NON andare in acqua',
-    factorThunder:'Rischio temporali: CAPE {val} J/kg – {desc}',
-    factorGusts:'Raffiche forti: fino a {val} km/h previste',
-    factorRain:'Pioggia intensa: fino a {val} mm/h possibile',
-    factorWind:'Forza vento: {val} Bft – critico per piccole imbarcazioni',
-    stormWindow:'Finestra critica oggi: {from} – {to} – evitare attività sul lago.',
-    dangerDisc:'Nota: Basato su modelli meteorologici numerici (MeteoSwiss ICON-CH via Open-Meteo), nessun avviso ufficiale. Prima di ogni uscita sull’acqua verificare i dati aggiornati, ad es. su MeteoSvizzera, ARPA Piemonte e stazioni meteo locali. Il tempo sul Lago Maggiore può cambiare rapidamente. In caso di dubbio, non andare in acqua.',
-    navGotthard:'Gottardo',
-    curLabel:'Attuale',lblHigh:'Massima',lblLow:'Minima giorno',lblNight:'Minima notte',lblHum:'Umidit\u00e0',lblRain:'Rischio pioggia',lblPrecip:'Precipitazione',lblSun:'Sole oggi',
-    forecastLabel:'Previsioni',btn3:'3 giorni',btn6:'6 giorni',
-    btn7:'7 giorni',
-    relTitle:'Attendibilit\u00e0 previsionale',
-    relRows:[
-      {dot:'var(--rel-high)',text:'<strong>Giorno 1\u20132 (90\u201395\u00a0%)</strong>: Molto affidabile. Il modello ICON-CH di MeteoSvizzera cattura gli sviluppi a breve termine con precisione.'},
-      {dot:'var(--rel-mid)', text:'<strong>Giorno 3\u20135 (65\u201380\u00a0%)</strong>: Parzialmente affidabile. La tendenza delle temperature \u00e8 solida, i dettagli orari meno.'},
-      {dot:'var(--rel-low)', text:'<strong>Giorno 6\u20137 (40\u201355\u00a0%)</strong>: Indicativo. Il quadro sinottico \u00e8 leggibile, ma i dettagli hanno scarso valore statistico.'},
-    ],
-    aqiLabel:'Qualit\u00e0 dell\u2019aria',aqiSub:'Indice europeo della qualit\u00e0 dell\u2019aria per Cannobio',
-    aqiNames:['Molto buona','Buona','Discreta','Scarsa','Molto scarsa','Pessima'],
-    warnLabel:'Allerte meteo ARPA Piemonte \u2014 Provincia VCO',
-    warnOk:'Nessuna allerta attiva per la Provincia VCO / Lago Maggiore',
-    warnLevels:{1:'Vigilanza (Giallo)',2:'Allerta (Arancione)',3:'Allerta forte (Rosso)'},
-    newsLabel:'Notizie Cannobio',newsLoading:'Caricamento notizie\u2026',
-    newsMore:'Tutti gli articoli su ecorisveglio.it \u2192',
-    camsLabel:'Webcam live',
-    offlineChip:'Dati offline',standChip:'Aggiornato alle',standUhr:'',
-    wx:['Cielo sereno','Poco nuvoloso','Nuvoloso','Nebbia','Pioggerella','Pioggia','Neve','Pioggia intensa','Nevicate','Temporale','Variabile'],
-    days:['Domenica','Luned\u00ec','Marted\u00ec','Mercoled\u00ec','Gioved\u00ec','Venerd\u00ec','Sabato'],
-    today:'Oggi',statSun:'Sole',statRain:'Pioggia',statHum:'Umidit\u00e0',statWind:'Vento',statAcc:'Attendibilit\u00e0',lblUv:'Indice UV',
-    lblRise:'Alba',lblSet:'Tramonto',
-    uvBlockTitle:'Protezione solare oggi',uvIndexLbl:'Indice UV',uvNone:'Senza protezione',uvSpf30:'SPF\u00a030',uvSpf50:'SPF\u00a050',
-    uvNote:'Valori indicativi per fototipo II con applicazione corretta (2\u00a0mg/cm\u00b2). SPF\u00a030: max.\u00a02\u00a0h di sole a picco, poi riapplicare. SPF\u00a050: max.\u00a03\u00a0h, poi riapplicare e cercare ombra. Fonte: WHO, BfS.',
-    relNotes:['Previsione a breve termine, molto affidabile','Tendenza sicura, dettagli orari incerti','Quadro sinottico, dettagli poco affidabili'],
-    info:'Dati meteo: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY\u00a04.0), modello MeteoSvizzera ICON-CH. Qualit\u00e0 dell\u2019aria: AQI europeo, Copernicus CAMS. Allerte: <a href="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa/allerta/" target="_blank" rel="noopener">ARPA Piemonte</a>, Provincia VCO. Notizie: <a href="https://www.ecorisveglio.it/?s=cannobio" target="_blank" rel="noopener">ecorisveglio.it</a>. Webcam: <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a>.',
-    camLocs:{lungolago:'Lungolago Cannobio',piazza:'Piazza sul lago',maccagno:'Lago Maggiore nord',castelli:'Castelli di Cannero'},
-    seoM1:"Meteo Cannobio oggi",
-    seoM1p:"Previsioni meteo aggiornate per Cannobio sul Lago Maggiore. Dati basati su Open-Meteo (CC BY 4.0) e modello MeteoSvizzera ICON-CH. Aggiornamento giornaliero con temperatura, precipitazioni, ore di sole e indice UV.",
-    seoM2:"Qualit\u00e0 dell'aria Lago Maggiore",
-    seoM2p:"Indice europeo della qualit\u00e0 dell'aria (AQI) per Cannobio, basato su dati Copernicus CAMS. Misurazione di PM2.5, PM10, biossido di azoto e ozono in tempo reale.",
-    seoM3:"Allerte meteo Provincia VCO",
-    seoM3p:"Allerte meteo attuali di ARPA Piemonte per la Provincia del Verbano-Cusio-Ossola e il Lago Maggiore. Livelli di allerta Giallo, Arancione e Rosso." 
+  it: {
+    pageTitle: 'Cannobio – Lago Maggiore | Portale',
+    metaDesc: 'Meteo, calendario rifiuti, traffico Gottardo e informazioni per Cannobio sul Lago Maggiore.',
+    ogTitle: 'Cannobio sul Lago Maggiore',
+    ogDesc: 'Meteo, vela, Gottardo e calendario rifiuti per Cannobio.',
+    brand: 'Cannobio',
+    eyebrow: 'Lago Maggiore · Piemonte · 195 m',
+    h1: 'Cannobio', h1Em: 'sul lago',
+    sub: 'Meteo, calendario raccolta rifiuti, traffico al Gottardo e informazioni locali per Cannobio sul Lago Maggiore.',
+    navHome: 'Portale', navMeteo: 'Meteo', navRifiuti: 'Rifiuti', navGotthard: 'Gottardo',
+    tileTmp: 'Temperatura', tileWind: 'Vento', tileTunnel: 'Tunnel del Gottardo', tileTunnelSub: 'Tempo attesa',
+    cardMeteoEyebrow: 'Live · 6 giorni', cardMeteoTitle: 'Meteo & Vela',
+    cardMeteoDesc: 'Temperatura, vento, onde, indice UV e condizioni per la vela a Cannobio.',
+    cardGottEyebrow: 'A2 · Svizzera', cardGottTitle: 'Gottardo',
+    cardGottDesc: 'Tempi di attesa, previsioni, webcam e calendario chiusure per il tunnel del Gottardo.',
+    cardRifiEyebrow: 'Comune di Cannobio', cardRifiTitle: 'Calendario rifiuti',
+    cardRifiDesc: 'Raccolta 2026, isola ecologica e informazioni sui rifiuti per Cannobio.',
+    cardInfoEyebrow: 'Comune', cardInfoTitle: 'Comune',
+    cardInfoDesc: 'Sito ufficiale del Comune di Cannobio, Verbano-Cusio-Ossola.',
+    seoH2: 'Portale digitale per Cannobio',
+    seoP: 'Cannobio si trova sulla sponda occidentale del Lago Maggiore nella provincia del Verbano-Cusio-Ossola, Piemonte.',
+    footer: 'Fonti: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> · <a href="https://www.comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a>',
   },
-  en:{
-    brand:'Cannobio Weather',eyebrow:'Lake Maggiore \u00b7 46.06\u00b0 N',
-    h1:'Weather forecast<br><em>Cannobio</em>',
-    sub:'Forecast, wind & sailing conditions, air quality, UV index, live webcams and weather alerts for Cannobio on Lake Maggiore.',
-    navWetter:'Weather',navRifiuti:'Waste',
-    windLabel:'Wind & Wave Report',windGust:'Gusts',windBft:'Beaufort',
-    waveHeight:'Wave height',wavePeriod:'Period',windChartLabel:'12h wind forecast',
-    windDisc:'Note: Based on numerical weather models (MeteoSwiss ICON-CH via Open-Meteo), not an official warning. Before any water activity, check current data at MeteoSwiss, ARPA Piemonte and local weather stations. Weather on Lake Maggiore can change quickly. If in doubt, stay off the water.',
-    sail0:'Calm (0–1 Bft)',sail0Note:'Too little wind for sailing. Ideal for SUP and kayaking.',
-    sail23:'Light wind (2–3 Bft)',sail23Note:'Pleasant conditions for beginners and sailing boats.',
-    sail4:'Moderate wind (4 Bft)',sail4Note:'Experienced sailors. Kite/windsurf favourable. Beginners not recommended.',
-    sail5:'Fresh wind (5 Bft)',sail5Note:'Skilled sailors only. Watch for waves and gusts.',
-    sail6:'Strong wind (6+ Bft)',sail6Note:'Stay in harbour. Dangerous conditions.',
-    riskLow:'Low',riskLowNote:'Uncritical conditions',
-    riskMod:'Moderate',riskModNote:'Attention required',
-    riskHigh:'High',riskHighNote:'Experienced only',
-    riskVeryHigh:'Very high',riskVeryHighNote:'Stay in harbour',
-    sailCalm:'Calm – no sailing possible',
-    sailCalmNote:'Wind below 1 Bft. Too little wind for sailing. Ideal for stand-up paddling or kayaking.',
-    sailGood:'Favourable – pleasant sailing conditions',
-    sailGoodNote:'Wind 1–3 Bft. Ideal for catamarans, SUP and sailing boats.',
-    sailMedium:'Caution – moderate wind',
-    sailMediumNote:'Wind 3–5 Bft. Experienced sailors. Kite/windsurf favourable. SUP not recommended.',
-    sailBad:'Not recommended – strong wind',
-    sailBadNote:'Wind 5+ Bft. Experienced sailors only. Keep small boats in harbour.',
-    uvLow:'Low – no protection needed',
-    uvMed:'Moderate – SPF 30 recommended',
-    uvHigh:'High – SPF 50 required',
-    uvVeryHigh:'Very high – avoid midday sun',
-    uvExtreme:'Extreme – avoid outdoor exposure',
-    capeExtreme:'extreme thunderstorm potential',
-    capeHigh:'high thunderstorm potential',
-    capeMed:'moderate thunderstorm potential',
-    thunderForecast:'Thunderstorms forecast during the day',
-    dangerNoFactors:'No critical factors identified.',
-    dataFrom:'Updated ',
-    dangerLabel:'Risks',
-    dangerLow:'Low risk – favourable conditions',
-    dangerMed:'Elevated risk – caution advised',
-    dangerHigh:'High risk – water activities not recommended',
-    dangerExtreme:'Extreme risk – DO NOT go on the water',
-    factorThunder:'Thunderstorm risk: CAPE {val} J/kg – {desc}',
-    factorGusts:'Strong gusts: up to {val} km/h expected',
-    factorRain:'Heavy rain: up to {val} mm/h possible',
-    factorWind:'Wind force: {val} Bft – critical for small vessels',
-    stormWindow:'Critical time window today: {from} – {to} – avoid lake activities.',
-    dangerDisc:'Note: Based on numerical weather models (MeteoSwiss ICON-CH via Open-Meteo), not an official warning. Before any water activity, check current data, e.g. at MeteoSwiss, ARPA Piemonte and local weather stations. Weather on Lake Maggiore can change quickly. If in doubt, stay off the water.',
-    navGotthard:'Gotthard',
-    curLabel:'Current',lblHigh:'Day high',lblLow:'Day low',lblNight:'Night low',lblHum:'Humidity',lblRain:'Rain risk',lblPrecip:'Precipitation',lblSun:'Sun today',
-    forecastLabel:'Forecast',btn3:'3 days',btn6:'6 days',
-    btn7:'7 days',
-    relTitle:'Forecast reliability',
-    relRows:[
-      {dot:'var(--rel-high)',text:'<strong>Day 1\u20132 (90\u201395\u00a0%)</strong>: Very reliable. ICON-CH MeteoSwiss captures short-term developments with high accuracy.'},
-      {dot:'var(--rel-mid)', text:'<strong>Day 3\u20135 (65\u201380\u00a0%)</strong>: Moderately reliable. Temperature trends are sound; timing details less so.'},
-      {dot:'var(--rel-low)', text:'<strong>Day 6\u20137 (40\u201355\u00a0%)</strong>: Indicative only. Synoptic pattern visible, details statistically unreliable.'},
-    ],
-    aqiLabel:'Air quality',aqiSub:'European Air Quality Index for Cannobio',
-    aqiNames:['Very good','Good','Moderate','Poor','Very poor','Extremely poor'],
-    warnLabel:'Weather alerts ARPA Piemonte \u2014 Province VCO',
-    warnOk:'No active alerts for Province VCO / Lake Maggiore',
-    warnLevels:{1:'Advisory (Giallo)',2:'Warning (Arancione)',3:'Severe warning (Rosso)'},
-    newsLabel:'Cannobio news',newsLoading:'Loading news\u2026',
-    newsMore:'All articles on ecorisveglio.it \u2192',
-    camsLabel:'Live webcams',
-    offlineChip:'Offline data',standChip:'Updated at',standUhr:'',
-    wx:['Clear sky','Partly cloudy','Cloudy','Foggy','Drizzle','Rain','Snowfall','Heavy rain','Snow showers','Thunderstorm','Variable'],
-    days:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
-    today:'Today',statSun:'Sun',statRain:'Rain',statHum:'Humidity',statWind:'Wind',statAcc:'Reliability',lblUv:'UV index',
-    lblRise:'Sunrise',lblSet:'Sunset',
-    uvBlockTitle:'Sun protection today',uvIndexLbl:'UV Index',uvNone:'No protection',uvSpf30:'SPF\u00a030',uvSpf50:'SPF\u00a050',
-    uvNote:'Guideline for skin type II with correct application (2\u00a0mg/cm\u00b2). SPF\u00a030: max.\u00a02\u00a0h midday sun, then reapply. SPF\u00a050: max.\u00a03\u00a0h, then reapply and seek shade. Source: WHO, BfS.',
-    relNotes:['Short-range, highly reliable','Trend confirmed, timing uncertain','Synoptic pattern, details unreliable'],
-    info:'Weather data: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY\u00a04.0), MeteoSwiss ICON-CH. Air quality: European AQI, Copernicus CAMS. Alerts: <a href="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa/allerta/" target="_blank" rel="noopener">ARPA Piemonte</a>, Province VCO. News: <a href="https://www.ecorisveglio.it/?s=cannobio" target="_blank" rel="noopener">ecorisveglio.it</a>. Webcams: <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a>.',
-    camLocs:{lungolago:'Lakeside promenade',piazza:'Village square',maccagno:'Northern Lake Maggiore',castelli:'Cannero lake castles'},
-    seoM1:"Weather in Cannobio today",
-    seoM1p:"Up-to-date weather forecast for Cannobio on Lake Maggiore. Data based on Open-Meteo (CC BY 4.0) and MeteoSwiss ICON-CH model. Daily updates with temperature, precipitation, sunshine hours and UV index.",
-    seoM2:"Air quality Lake Maggiore",
-    seoM2p:"European Air Quality Index (AQI) for Cannobio, based on Copernicus CAMS data. Real-time measurement of PM2.5, PM10, nitrogen dioxide and ozone.",
-    seoM3:"Weather alerts Province VCO",
-    seoM3p:"Current weather alerts from ARPA Piemonte for the Province of Verbano-Cusio-Ossola and Lake Maggiore. Warning levels Giallo, Arancione and Rosso." 
-  },
+  en: {
+    pageTitle: 'Cannobio – Lake Maggiore | Portal',
+    metaDesc: 'Weather, waste calendar, Gotthard traffic and information for Cannobio at Lake Maggiore.',
+    ogTitle: 'Cannobio at Lake Maggiore',
+    ogDesc: 'Weather, sailing, Gotthard and waste calendar for Cannobio.',
+    brand: 'Cannobio',
+    eyebrow: 'Lake Maggiore · Piedmont · 195 m',
+    h1: 'Cannobio', h1Em: 'at the lake',
+    sub: 'Weather, waste calendar, Gotthard traffic and local information for Cannobio at Lake Maggiore.',
+    navHome: 'Portal', navMeteo: 'Weather', navRifiuti: 'Waste', navGotthard: 'Gotthard',
+    tileTmp: 'Temperature', tileWind: 'Wind', tileTunnel: 'Gotthard Tunnel', tileTunnelSub: 'Wait time',
+    cardMeteoEyebrow: 'Live · 6 days', cardMeteoTitle: 'Weather & Sailing',
+    cardMeteoDesc: 'Temperature, wind, waves, UV index and sailing conditions for Cannobio.',
+    cardGottEyebrow: 'A2 · Switzerland', cardGottTitle: 'Gotthard',
+    cardGottDesc: 'Wait times, forecast, webcams and closure calendar for the Gotthard Tunnel.',
+    cardRifiEyebrow: 'Municipality of Cannobio', cardRifiTitle: 'Waste calendar',
+    cardRifiDesc: 'Collection dates 2026, recycling centre and disposal info for Cannobio.',
+    cardInfoEyebrow: 'Municipality', cardInfoTitle: 'Comune',
+    cardInfoDesc: 'Official website of the Municipality of Cannobio, Verbano-Cusio-Ossola.',
+    seoH2: 'Digital portal for Cannobio',
+    seoP: 'Cannobio is located on the western shore of Lake Maggiore in the province of Verbano-Cusio-Ossola, Piedmont.',
+    footer: 'Sources: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> · <a href="https://www.comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a>',
+  }
 };
 
-/* =========================================================
-   STATE
-========================================================= */
-let lang='de', globalData=null, activeView=6;
+let lang = new URLSearchParams(location.search).get('lang')
+  || localStorage.getItem('cannobio-lang') || 'de';
 
-/* =========================================================
-   LANGUAGE
-========================================================= */
-function tr(k){return T[lang][k]??T.de[k]??k}
-
-function setLang(l){
-  lang=l;
-  document.documentElement.lang=l;
-  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+function setLang(l) {
+  lang = l;
+  localStorage.setItem('cannobio-lang', l);
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+  document.documentElement.lang = l === 'it' ? 'it' : l === 'en' ? 'en' : 'de';
   applyT();
-  renderRelLegend();
-  if(globalData)renderCards(globalData,activeView);
-  if(window._newsCache)renderNews(window._newsCache);
-  rebuildCams();
+  updateNavLabels();
 }
 
-function applyT(){
-  const id=(id,k,html)=>{ const el=document.getElementById(id); if(el){html?el.innerHTML=tr(k):el.textContent=tr(k);} };
-  id('t-brand','brand'); id('t-eyebrow','eyebrow'); id('t-h1','h1',true); id('t-sub','sub');
-  id('t-cur-label','curLabel'); id('t-lbl-high','lblHigh'); id('t-lbl-low','lblLow'); id('t-lbl-night','lblNight'); id('t-lbl-hum','lblHum');
-  id('t-lbl-rain','lblRain'); id('t-lbl-precip','lblPrecip'); id('t-lbl-sun','lblSun'); id('t-uv-index-lbl','lblUv');
-  id('t-lbl-rise','lblRise'); id('t-lbl-set','lblSet');
-  id('t-lbl-rise-h','lblRise'); id('t-lbl-set-h','lblSet'); id('t-lbl-sun-h','lblSun');
-  id('t-uv-block-title','uvBlockTitle'); id('t-uv-none','uvNone'); id('t-uv-spf30','uvSpf30'); id('t-uv-spf50','uvSpf50');
-  id('t-uv-index-lbl','uvIndexLbl');
-  id('t-uv-note','uvNote');
-  id('t-forecast-label','forecastLabel'); id('t-btn-3','btn3'); id('t-btn-6','btn6'); 
-  id('t-rel-title','relTitle'); id('t-aqi-label','aqiLabel'); id('t-warn-label','warnLabel');
-  id('t-news-label','newsLabel'); id('t-cams-label','camsLabel'); id('t-info','info',true);
-  const sub=document.getElementById('aqi-sub'); if(sub)sub.textContent=tr('aqiSub');
-  // SEO
-  const sm=(id,k)=>{const el=document.getElementById(id);if(el&&T[lang][k])el.textContent=T[lang][k];};
-  sm('t-seo-m1','seoM1');sm('t-seo-m1p','seoM1p');sm('t-seo-m2','seoM2');sm('t-seo-m2p','seoM2p');sm('t-seo-m3','seoM3');sm('t-seo-m3p','seoM3p');
-  // Dynamic SEO meta per language
-  const SEO = {
-    de: {
-      title: "Wetter & Segelbedingungen Cannobio | Lago Maggiore Wind, Wellen & Webcams",
-      desc:  "Aktuelle Wetterprognose für Cannobio am Lago Maggiore mit Temperatur, Niederschlag, UV-Index und Luftqualität. Inklusive 7-Tage-Trend und Live-Webcams.",
-      ogTitle: "Segelwetter Cannobio am Lago Maggiore",
-      ogDesc:  "Wind, Wetter und Segelbedingungen in Cannobio. Mit Live-Webcams, Wellen und aktueller Lage am Lago Maggiore."
-    },
-    it: {
-      title: "Condizioni vento e meteo Cannobio | Lago Maggiore con webcam live",
-      desc:  "Previsioni meteo per Cannobio sul Lago Maggiore con temperatura, pioggia, indice UV e qualità dell'aria. Include trend 7 giorni e webcam live.",
-      ogTitle: "Meteo vela Cannobio sul Lago Maggiore",
-      ogDesc:  "Vento, onde e condizioni per la vela a Cannobio. Webcam live e panoramica aggiornata sul Lago Maggiore."
-    },
-    en: {
-      title: "Cannobio Weather & Sailing Conditions | Wind, Waves & Live Cams",
-      desc:  "Weather forecast for Cannobio at Lago Maggiore with temperature, precipitation, UV index and air quality. Includes 7-day outlook and live webcams.",
-      ogTitle: "Sailing Weather Cannobio at Lago Maggiore",
-      ogDesc:  "Wind, waves and sailing conditions in Cannobio. Live webcams and real-time overview for Lake Maggiore."
-    }
-  };
-  const s = SEO[lang] || SEO.de;
-  document.title = s.title;
-  const metaDesc = document.querySelector('meta[name="description"]');
-  if(metaDesc) metaDesc.setAttribute('content', s.desc);
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  if(ogTitle) ogTitle.setAttribute('content', s.ogTitle);
-  const ogDesc = document.querySelector('meta[property="og:description"]');
-  if(ogDesc) ogDesc.setAttribute('content', s.ogDesc);
-  const twTitle = document.querySelector('meta[name="twitter:title"]');
-  if(twTitle) twTitle.setAttribute('content', s.ogTitle);
-  const twDesc = document.querySelector('meta[name="twitter:description"]');
-  if(twDesc) twDesc.setAttribute('content', s.ogDesc);
-  // nav labels
-  const nw=document.getElementById('nav-wetter'); if(nw)nw.textContent=tr('navWetter');
-  const nr=document.getElementById('nav-rifiuti'); if(nr)nr.textContent=tr('navRifiuti');
-  const ng=document.getElementById('nav-gotthard'); if(ng)ng.textContent=tr('navGotthard')||'Gotthard';
-  // offline chip
-  const chip=document.getElementById('data-chip-text');
-  if(chip&&chip.dataset.mode==='offline')chip.textContent=tr('offlineChip');
-}
+function tr(key) { return (T[lang]||T.de)[key] || T.de[key] || ''; }
 
-function renderRelLegend(){
-  document.getElementById('t-rel-rows').innerHTML=T[lang].relRows.map(r=>
-    `<div class="rel-legend-row"><div class="rel-legend-dot" style="background:${r.dot}"></div><div class="rel-legend-text">${r.text}</div></div>`
-  ).join('');
-}
-
-/* =========================================================
-   WIND & WAVE
-========================================================= */
-function degToCompass(deg) {
-  const dirs = {
-    de: ['N','NNO','NO','ONO','O','OSO','SO','SSO','S','SSW','SW','WSW','W','WNW','NW','NNW'],
-    it: ['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSO','SO','OSO','O','ONO','NO','NNO'],
-    en: ['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW'],
-  };
-  const idx = Math.round(deg / 22.5) % 16;
-  return (dirs[lang] || dirs.de)[idx];
-}
-
-function kmhToBft(kmh) {
-  const thresholds = [1,6,12,20,29,39,50,62,75,89,103,117];
-  for (let i = 0; i < thresholds.length; i++) {
-    if (kmh < thresholds[i]) return i;
-  }
-  return 12;
-}
-
-// Wave height estimation for Lago Maggiore (fetch ~60km N-S, ~10km E-W)
-// Using simplified SMB method: Hs ≈ 0.0248 × U^2 / g, capped by fetch
-function estimateWave(windKmh, windDirDeg) {
-  const u = windKmh / 3.6; // m/s
-  // Effective fetch based on wind direction (N-S axis longer)
-  const isNS = (windDirDeg >= 315 || windDirDeg < 45) || (windDirDeg >= 135 && windDirDeg < 225);
-  const fetch = isNS ? 55000 : 9000; // metres
-  const g = 9.81;
-  // Significant wave height (m): empirical for inland water
-  const hs = Math.min(0.00178 * u * Math.sqrt(fetch), 0.0248 * u * u / g);
-  const hsCm = Math.round(hs * 100);
-  // Wave period (s)
-  const tp = Math.max(1, Math.round(0.54 * Math.pow(hs, 0.5) * 2));
-  return { hs: hsCm, tp };
-}
-
-function sailCondition(windKmh, gustKmh, waveHsCm) {
-  const t = T[lang];
-  const bft = kmhToBft(windKmh);
-  const gustBft = kmhToBft(gustKmh);
-  const wave = waveHsCm || 0;
-  if (bft <= 1) return { dot:'#9B9890', windStatus: t.sail0||'Windstille (0–1 Bft)',   note: t.sail0Note||'Zu wenig Wind. Ideal für SUP und Kajak.', risk:'low' };
-  if (bft <= 3) return { dot:'#1B6B45', windStatus: t.sail23||'Schwachwind (2–3 Bft)', note: t.sail23Note||'Angenehme Bedingungen für Einsteiger und Segelboote.', risk:'low' };
-  if (bft === 4) return { dot:'#F0A500', windStatus: t.sail4||'Mäßiger Wind (4 Bft)', note: t.sail4Note||'Erfahrene Segler. Kite/Windsurf günstig. Anfänger nicht empfohlen.', risk: gustBft>=5||wave>40?'high':'moderate' };
-  if (bft === 5) return { dot:'#E67E22', windStatus: t.sail5||'Frischer Wind (5 Bft)',     note: t.sail5Note||'Nur geübte Segler. Wellen und Böen beachten.', risk: gustBft>=6||wave>60?'veryhigh':'high' };
-  return               { dot:'#C0392B', windStatus: t.sail6||'Starker Wind (6+ Bft)',    note: t.sail6Note||'Im Hafen bleiben. Gefährliche Bedingungen.', risk:'veryhigh' };
-}
-
-function riskLevel(risk, hasThunder) {
-  const t = T[lang];
-  if (hasThunder) risk = 'veryhigh';
-  const R = {
-    low:      { icon:'&#x1F7E2;', label: t.riskLow||'Gering',     note: t.riskLowNote||'Unkritische Bedingungen',    color:'#1B6B45', bg:'var(--accent-pale)' },
-    moderate: { icon:'&#x1F7E1;', label: t.riskMod||'Mäßig',    note: t.riskModNote||'Aufmerksamkeit erforderlich', color:'#B7791F', bg:'var(--gold-pale)' },
-    high:     { icon:'&#x1F7E0;', label: t.riskHigh||'Hoch',      note: t.riskHighNote||'Nur mit Erfahrung',          color:'#E67E22', bg:'#FEF3E2' },
-    veryhigh: { icon:'&#x1F534;', label: t.riskVeryHigh||'Sehr hoch', note: t.riskVeryHighNote||'Im Hafen bleiben',  color:'#C0392B', bg:'#FDECEA' },
-  };
-  return R[risk] || R.low;
-}
-
-function renderDanger(hourly) {
-  const block = document.getElementById('water-danger-block');
-  if (!block || !hourly || !hourly.windspeed_10m) return;
-  block.style.display = '';
-
-  const t = T[lang];
-  const now = new Date();
-  const nowH = now.toISOString().slice(0,13);
-  const todayStr = now.toISOString().slice(0,10);
-  const idx = hourly.time.findIndex(x => x.startsWith(nowH));
-  const i = idx >= 0 ? idx : 0;
-
-  // Next 12h window for today
-  const hours12 = [];
-  for (let j = i; j < Math.min(i+13, hourly.time.length); j++) {
-    if (!hourly.time[j].startsWith(todayStr)) break;
-    hours12.push(j);
-  }
-
-  // Extract max values over next 12h
-  const maxGust  = Math.max(...hours12.map(j => hourly.windgusts_10m?.[j] || 0));
-  const maxWind  = Math.max(...hours12.map(j => hourly.windspeed_10m?.[j] || 0));
-  const maxCape  = Math.max(...hours12.map(j => hourly.cape?.[j] || 0));
-  const maxRain  = Math.max(...hours12.map(j => hourly.precipitation?.[j] || 0));
-  const wxCodes  = hours12.map(j => hourly.weathercode?.[j] || 0);
-  const hasThunder = wxCodes.some(c => c >= 95);
-  const maxBft   = kmhToBft(maxWind);
-
-  // Score system: 0=low, 1=medium, 2=high, 3=extreme
-  let score = 0;
-  const factors = [];
-
-  // CAPE thresholds (J/kg)
-  if (maxCape >= 1500) {
-    score = Math.max(score, 3);
-    const desc = T[lang].capeExtreme || T.de.capeExtreme;
-    factors.push({ icon:'⛈️', text: t.factorThunder.replace('{val}', Math.round(maxCape)).replace('{desc}', desc), level: 3 });
-  } else if (maxCape >= 800) {
-    score = Math.max(score, 2);
-    const desc = T[lang].capeHigh || T.de.capeHigh;
-    factors.push({ icon:'⛈️', text: t.factorThunder.replace('{val}', Math.round(maxCape)).replace('{desc}', desc), level: 2 });
-  } else if (maxCape >= 300) {
-    score = Math.max(score, 1);
-    const desc = lang==='de' ? 'm\u00e4ssiges Gewitterpotenzial' : lang==='it' ? 'moderato potenziale temporali' : 'moderate thunderstorm potential';
-    factors.push({ icon:'🌩️', text: t.factorThunder.replace('{val}', Math.round(maxCape)).replace('{desc}', desc), level: 1 });
-  }
-
-  // Thunderstorm weathercode
-  if (hasThunder) {
-    score = Math.max(score, 3);
-    factors.push({ icon:'⛈️', text: T[lang].thunderForecast || T.de.thunderForecast, level:3 });
-  }
-
-  // Gusts
-  if (maxGust >= 70) {
-    score = Math.max(score, 3);
-    factors.push({ icon:'💨', text: t.factorGusts.replace('{val}', Math.round(maxGust)), level: 3 });
-  } else if (maxGust >= 50) {
-    score = Math.max(score, 2);
-    factors.push({ icon:'💨', text: t.factorGusts.replace('{val}', Math.round(maxGust)), level: 2 });
-  } else if (maxGust >= 35) {
-    score = Math.max(score, 1);
-    factors.push({ icon:'💨', text: t.factorGusts.replace('{val}', Math.round(maxGust)), level: 1 });
-  }
-
-  // Wind Bft
-  if (maxBft >= 6) {
-    score = Math.max(score, 2);
-    factors.push({ icon:'🌬️', text: t.factorWind.replace('{val}', maxBft), level: 2 });
-  } else if (maxBft >= 5) {
-    score = Math.max(score, 1);
-    factors.push({ icon:'🌬️', text: t.factorWind.replace('{val}', maxBft), level: 1 });
-  }
-
-  // Rain
-  if (maxRain >= 10) {
-    score = Math.max(score, 2);
-    factors.push({ icon:'🌧️', text: t.factorRain.replace('{val}', maxRain.toFixed(1)), level: 2 });
-  } else if (maxRain >= 5) {
-    score = Math.max(score, 1);
-    factors.push({ icon:'🌧️', text: t.factorRain.replace('{val}', maxRain.toFixed(1)), level: 1 });
-  }
-
-  // Badge
-  const badges = [
-    { bg:'#EBF7F1', border:'#A5D6A7', color:'#1B5E20', text: t.dangerLow,     icon:'🟢' },
-    { bg:'#FEF3E2', border:'#FFCC80', color:'#7B3F00', text: t.dangerMed,     icon:'🟡' },
-    { bg:'#FDECEA', border:'#EF9A9A', color:'#7F0000', text: t.dangerHigh,    icon:'🔴' },
-    { bg:'#4A0000', border:'#B71C1C', color:'#FFFFFF', text: t.dangerExtreme, icon:'🚨' },
-  ];
-  const b = badges[score];
-  const badge = document.getElementById('danger-badge');
-  badge.style.cssText = `background:${b.bg};border:1px solid ${b.border};color:${b.color};display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;margin-bottom:14px;font-size:13px;font-weight:600;`;
-  document.getElementById('danger-icon').textContent = b.icon;
-  document.getElementById('danger-level-text').textContent = b.text;
-
-  // Factor list
-  const levelColors = ['#1B6B45','#E67E22','#C0392B','#7F0000'];
-  const levelBgs    = ['#EBF7F1','#FEF3E2','#FDECEA','#4A0000'];
-  const fEl = document.getElementById('danger-factors');
-  fEl.innerHTML = factors.length ? factors.map(f =>
-    `<div style="display:flex;align-items:flex-start;gap:10px;padding:9px 12px;border-radius:8px;background:${levelBgs[f.level]};font-size:12px;color:${levelColors[f.level]};line-height:1.5;">
-      <span style="flex-shrink:0;">${f.icon}</span><span>${f.text}</span>
-    </div>`
-  ).join('') :
-    `<div style="font-size:12px;color:var(--accent);padding:8px 12px;background:var(--accent-pale);border-radius:8px;">${T[lang].dangerNoFactors || T.de.dangerNoFactors}</div>`;
-
-  // Storm time window
-  const critIdx = hours12.filter(j =>
-    (hourly.cape?.[j]||0) >= 300 || (hourly.windgusts_10m?.[j]||0) >= 50 || (hourly.weathercode?.[j]||0) >= 95
-  );
-  const sw = document.getElementById('storm-window');
-  if (critIdx.length >= 2) {
-    sw.style.display = '';
-    const tFrom = new Date(hourly.time[critIdx[0]]).toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
-    const tTo   = new Date(hourly.time[critIdx[critIdx.length-1]]).toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
-    sw.style.cssText = 'display:block;padding:10px 14px;border-radius:8px;background:#FEF3E2;border:1px solid #FFCC80;font-size:12px;color:#7B3F00;line-height:1.6;margin-bottom:14px;font-weight:500;';
-    sw.textContent = '⏰ ' + t.stormWindow.replace('{from}', tFrom).replace('{to}', tTo);
-  } else {
-    sw.style.display = 'none';
-  }
-
-  // Label + disclaimer
-  const lbl = document.getElementById('t-danger-label');
-  if (lbl) lbl.textContent = t.dangerLabel;
-  document.getElementById('danger-disclaimer').textContent = t.dangerDisc;
-}
-
-
-function renderWind(hourly, isBrissago) {
-  if (!hourly || !hourly.windspeed_10m || !hourly.time) return;
-  const section = document.getElementById('wind-section');
-  if(section) section.style.display = '';
-
-  const t = T[lang];
-  const now = new Date();
-  // Use local time to match API timezone (Europe/Rome)
-  const localHour = now.getFullYear() + '-'
-    + String(now.getMonth()+1).padStart(2,'0') + '-'
-    + String(now.getDate()).padStart(2,'0') + 'T'
-    + String(now.getHours()).padStart(2,'0');
-  let idx = hourly.time.findIndex(t2 => t2.startsWith(localHour));
-  if (idx < 0) idx = 0;
-  const i = idx;
-
-  const speed = Math.round(hourly.windspeed_10m[i] || 0);
-  const gust  = Math.round(hourly.windgusts_10m?.[i] || speed * 1.3);
-  const dir   = Math.round(hourly.winddirection_10m?.[i] || 0);
-  const bft   = kmhToBft(speed);
-  const wave  = estimateWave(speed, dir);
-  const sail  = sailCondition(speed, gust, wave.hs);
-
-  // ── Compass ──
-  document.getElementById('wind-arrow').style.transform =
-    `translateX(-50%) translateY(-100%) rotate(${dir}deg)`;
-
-  // ── Speed + direction ──
-  document.getElementById('wind-speed-now').textContent = speed;
-  document.getElementById('wind-dir-now').textContent = degToCompass(dir) + ' · ' + dir + '°';
-
-  // ── Stats ──
-  document.getElementById('wind-gust-now').textContent = gust + ' km/h';
-  document.getElementById('wind-bft-now').textContent  = 'Bft ' + bft;
-  document.getElementById('wave-height-now').textContent = wave.hs + ' cm';
-  document.getElementById('wave-period-now').textContent = wave.tp + ' s';
-
-  // ── Sail status ──
-  const dot = document.getElementById('sail-dot');
-  if(dot) dot.style.background = sail.dot;
-  const statusEl = document.getElementById('sail-status');
-  if(statusEl) statusEl.textContent = sail.windStatus;
-  const noteEl = document.getElementById('sail-note');
-  if(noteEl) noteEl.textContent = sail.note;
-
-  // ── Risk level ──
-  const hasThunder = (hourly.weathercode || []).slice(i, i+13).some(wc => wc >= 95);
-  const risk = riskLevel(sail.risk, hasThunder);
-  const dangerBlock = document.getElementById('water-danger-block');
-  if(dangerBlock) dangerBlock.style.display = '';
-  const badge = document.getElementById('danger-badge');
-  if(badge) {
-    badge.style.cssText = 'display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;';
-    const iconEl = document.getElementById('danger-icon');
-    const lblEl  = document.getElementById('danger-level-text');
-    if(iconEl) iconEl.innerHTML = '<span style="font-size:15px;">' + risk.icon + '</span>';
-    if(lblEl)  { lblEl.textContent = risk.label; lblEl.style.color = risk.color; }
-  }
-
-  // ── Source note + disclaimer ──
-  const srcEl = document.getElementById('wind-source-note');
-  if(srcEl) srcEl.textContent = isBrissago ? '· Brissago' : '· Cannobio';
-  const discEl = document.getElementById('t-wind-disc');
-  if(discEl) discEl.textContent = t.windDisc || '';
-
-  // ── Labels ──
-  const sl = (id, key) => { const el=document.getElementById(id); if(el&&t[key])el.textContent=t[key]; };
-  sl('t-wind-label','windLabel'); sl('t-wind-gust','windGust'); sl('t-wind-bft','windBft');
-  sl('t-wave-height','waveHeight'); sl('t-wave-period','wavePeriod');
-  sl('t-wind-chart-label','windChartLabel');
-
-  // ── 12h Bar Chart ──
-  const chart    = document.getElementById('wind-chart');
-  const labelsEl = document.getElementById('wind-chart-labels');
-  if(!chart || !labelsEl) return;
-
-  const speeds = hourly.windspeed_10m;
-  const gusts  = hourly.windgusts_10m || [];
-  const maxSp  = Math.max(...speeds.slice(i, i+13).filter(v => v!=null && v>0), 1);
-
-  let chartHTML = '', labelsHTML = '';
-  for (let j = 0; j < 13; j++) {
-    const s2   = Math.round(speeds[i+j] || 0);
-    const g2   = Math.round(gusts[i+j] || s2);
-    const bftJ = kmhToBft(s2);
-    const barH = Math.max(4, Math.round(s2 / maxSp * 60));
-    const color = bftJ <= 1 ? '#9B9890' : bftJ <= 3 ? '#1B6B45' : bftJ <= 4 ? '#F0A500' : bftJ === 5 ? '#E67E22' : '#C0392B';
-    const t2   = new Date(now.getTime() + j * 3600000);
-    const tStr = t2.toLocaleTimeString('de-CH', {hour:'2-digit', minute:'2-digit'});
-    chartHTML += '<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;">'
-      + '<span style="font-size:9px;font-weight:700;color:' + color + ';line-height:1;">' + bftJ + '</span>'
-      + '<div style="width:100%;height:' + barH + 'px;background:' + color + ';border-radius:2px 2px 0 0;" title="' + tStr + ': ' + s2 + ' km/h · Bft ' + bftJ + '"></div>'
-      + '</div>';
-    if (j === 0 || j === 6 || j === 12) {
-      labelsHTML += '<span style="font-size:10px;color:var(--text-tertiary);">' + tStr + '</span>';
-    }
-  }
-  chart.innerHTML = chartHTML;
-  labelsEl.innerHTML = labelsHTML;
-}
-
-
-const SVG={
-  sun:`<svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="4.5"/><line x1="12" y1="19.5" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.99" y2="5.99"/><line x1="18.01" y1="18.01" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4.5" y2="12"/><line x1="19.5" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.99" y2="18.01"/><line x1="18.01" y1="5.99" x2="19.78" y2="4.22"/></svg>`,
-  few:`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="3.5" stroke="#F59E0B"/><line x1="8.5" y1="2" x2="8.5" y2="3.5" stroke="#F59E0B"/><line x1="2" y1="8.5" x2="3.5" y2="8.5" stroke="#F59E0B"/><path d="M19 17H8a5 5 0 0 1 0-10 5 5 0 0 1 .5.03A5.5 5.5 0 0 1 19 11.5a4.5 4.5 0 0 1 0 5.5z" stroke="#90A4AE"/></svg>`,
-  cloud:`<svg viewBox="0 0 24 24" fill="none" stroke="#90A4AE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a5 5 0 0 1-.5-9.97A5.5 5.5 0 0 1 19 13.5a4.5 4.5 0 0 1-1.5 5.5z"/></svg>`,
-  rain:`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 14H9a5 5 0 0 1-.5-9.97A5.5 5.5 0 0 1 19 8.5a4.5 4.5 0 0 1-1.5 5.5z" stroke="#90A4AE"/><line x1="8" y1="19" x2="8" y2="21" stroke="#1E88E5"/><line x1="12" y1="19" x2="12" y2="21" stroke="#1E88E5"/><line x1="16" y1="19" x2="16" y2="21" stroke="#1E88E5"/></svg>`,
-  storm:`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 14H9a5 5 0 0 1-.5-9.97A5.5 5.5 0 0 1 19 8.5a4.5 4.5 0 0 1-1.5 5.5z" stroke="#90A4AE"/><polyline points="13 12 10 18 14 18 11 24" stroke="#F59E0B"/></svg>`,
-  snow:`<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 14H9a5 5 0 0 1-.5-9.97A5.5 5.5 0 0 1 19 8.5a4.5 4.5 0 0 1-1.5 5.5z" stroke="#90A4AE"/><line x1="8" y1="19" x2="8" y2="21" stroke="#90CAF9"/><line x1="12" y1="19" x2="12" y2="21" stroke="#90CAF9"/><line x1="16" y1="19" x2="16" y2="21" stroke="#90CAF9"/><line x1="7" y1="20" x2="9" y2="20" stroke="#90CAF9"/><line x1="11" y1="20" x2="13" y2="20" stroke="#90CAF9"/><line x1="15" y1="20" x2="17" y2="20" stroke="#90CAF9"/></svg>`,
-};
-function getIcon(code,rain,tHigh){
-  if(code<=2&&rain===0&&tHigh>=15)return SVG.sun;
-  if(code===3&&rain===0&&tHigh>=18)return SVG.few;
-  if(code===0)return SVG.sun;
-  if(code<=2) return SVG.few;
-  if(code<=3) return SVG.cloud;
-  if(code<=49)return SVG.cloud;
-  if(code<=67)return SVG.rain;
-  if(code<=77)return SVG.snow;
-  if(code<=82)return SVG.rain;
-  if(code<=86)return SVG.snow;
-  if(code<=99)return SVG.storm;
-  return SVG.few;
-}
-function wxLabel(c){const L=T[lang].wx;if(c===0)return L[0];if(c<=2)return L[1];if(c===3)return L[2];if(c<=49)return L[3];if(c<=57)return L[4];if(c<=67)return L[5];if(c<=77)return L[6];if(c<=82)return L[7];if(c<=86)return L[8];if(c<=99)return L[9];return L[10];}
-
-/* =========================================================
-   RELIABILITY
-========================================================= */
-function rel(i){
-  const tbl=[{pct:95,cls:'high',ni:0},{pct:92,cls:'high',ni:0},{pct:80,cls:'high',ni:1},{pct:73,cls:'mid',ni:1},{pct:66,cls:'mid',ni:2},{pct:50,cls:'low',ni:2},{pct:42,cls:'low',ni:2}];
-  const r=tbl[Math.min(i,tbl.length-1)];
-  return{...r,note:T[lang].relNotes[r.ni]};
-}
-
-/* =========================================================
-   WEATHER API
-========================================================= */
-const LAT=46.0624,LON=8.6977,TZ='Europe%2FRome';
-const LAT_WIND=46.1176,LON_WIND=8.7055; // Brissago – meilleure position pour le lac
-
-async function loadWeather(){
-  try{
-    const url=`https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}`
-      +`&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum,windspeed_10m_max,sunshine_duration,weathercode,uv_index_max,sunrise,sunset`
-      +`&hourly=relativehumidity_2m,temperature_2m,windspeed_10m,windgusts_10m,winddirection_10m,cape,weathercode&current_weather=true&timezone=${TZ}&forecast_days=7`;
-    const data=await(await fetch(url)).json();
-    globalData=data;
-    renderCurrent(data); renderCards(data,activeView);
-    // Show wind immediately with main data (guaranteed to work)
-    if(data.hourly) { renderWind(data.hourly, false); renderDanger(data.hourly); }
-    // Then try to update with Brissago data for better lake accuracy
-    try {
-      const windUrl = `https://api.open-meteo.com/v1/forecast?latitude=${LAT_WIND}&longitude=${LON_WIND}`
-        +`&hourly=windspeed_10m,windgusts_10m,winddirection_10m,cape,precipitation,weathercode&timezone=${TZ}&forecast_days=2`;
-      const windData = await (await fetch(windUrl)).json();
-      if(windData.hourly) { renderWind(windData.hourly, true); renderDanger(windData.hourly); }
-    } catch(_) { /* keep main data values */ }
-    const now = new Date();
-    const timeStr = now.toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
-    const dateStr = now.toLocaleDateString(lang==='it'?'it-IT':lang==='en'?'en-GB':'de-CH',{weekday:'long',day:'numeric',month:'long'});
-    document.getElementById('update-time').textContent=
-      tr('standChip')+' '+timeStr+' '+tr('standUhr');
-    const heroTs = document.getElementById('hero-ts-text');
-    if(heroTs) heroTs.textContent = (T[lang].dataFrom||T.de.dataFrom)+dateStr+', '+timeStr+' · Open-Meteo';
-  }catch(_){renderFallback();}
-}
-
-function renderCurrent(d){
-  const cw=d.current_weather,da=d.daily,h=d.hourly;
-  document.getElementById('cur-temp').textContent=Math.round(cw.temperature)+'°';
-  document.getElementById('cur-cond').textContent=wxLabel(cw.weathercode);
-  document.getElementById('cur-high').textContent=Math.round(da.temperature_2m_max[0])+'°';
-  // Day low from daily min
-  document.getElementById('cur-low').textContent=Math.round(da.temperature_2m_min[0])+'°';
-  // Night low: min of hourly temps for tonight 22:00 – tomorrow 06:00
-  if(h&&h.temperature_2m&&h.time){
-    const today=new Date().toISOString().slice(0,10);
-    const tomorrow=new Date(Date.now()+86400000).toISOString().slice(0,10);
-    const nightTemps=h.time.reduce((acc,t,i)=>{
-      const isTonight=(t.startsWith(today)&&parseInt(t.slice(11,13))>=22);
-      const isTomMorn=(t.startsWith(tomorrow)&&parseInt(t.slice(11,13))<=6);
-      if((isTonight||isTomMorn)&&h.temperature_2m[i]!=null) acc.push(h.temperature_2m[i]);
-      return acc;
-    },[]);
-    const nightLow=nightTemps.length?Math.round(Math.min(...nightTemps)):null;
-    document.getElementById('cur-night').textContent=nightLow!==null?nightLow+'°':'—';
-  }
-  const sH=da.sunshine_duration?Math.round(da.sunshine_duration[0]/3600*10)/10:null;
-  document.getElementById('cur-sun').textContent=sH!==null?sH+'h':'—';
-  // UV index + sun protection
-  const uv=da.uv_index_max?Math.round(da.uv_index_max[0]*10)/10:null;
-  const uvEl=document.getElementById('cur-uv'); if(uvEl) uvEl.textContent=uv!==null?uv:'—';
-  renderUVProtection(uv);
-  // Sunrise / Sunset
-  if(da.sunrise&&da.sunrise[0]){
-    document.getElementById('cur-rise').textContent=da.sunrise[0].substring(11,16);
-    document.getElementById('cur-set').textContent=da.sunset[0].substring(11,16);
-  }
-  if(h&&h.relativehumidity_2m){
-    const nowH=new Date().toISOString().slice(0,13);
-    const idx=h.time.findIndex(t=>t.startsWith(nowH));
-    document.getElementById('cur-hum').textContent=(h.relativehumidity_2m[idx>=0?idx:0]||'—')+'%';
-  }
-  document.getElementById('cur-rain').textContent=(da.precipitation_probability_max[0]||0)+'%';
-  // Precipitation amount today
-  const precipToday = da.precipitation_sum ? da.precipitation_sum[0] : null;
-  const precipEl = document.getElementById('cur-precip-mm');
-  if(precipEl) {
-    if(precipToday !== null) {
-      precipEl.textContent = precipToday.toFixed(1) + ' mm';
-      precipEl.parentElement.style.display = '';
-    } else {
-      precipEl.parentElement.style.display = 'none';
-    }
-  }
-}
-
-function renderUVProtection(uvi){
-  const block=document.getElementById('uv-block');
-  if(!uvi||uvi<0.5){ block.style.display='none'; return; }
-  block.style.display='';
-
-  const MED=200, dosePerH=uvi*25;
-  const noneMin = Math.round(MED / dosePerH * 60);
-  const spf30Min = Math.min(Math.round(noneMin * 30 * 0.5), 120);
-  const spf50Min = Math.min(Math.round(noneMin * 50 * 0.5), 180);
-
-  const fmtH = mins => {
-    if(mins < 60) return Math.round(mins) + '\u00a0min';
-    const h = Math.floor(mins/60), m = Math.round(mins%60);
-    return m > 0 ? `${h}h\u00a0${m}min` : `${h}h`;
-  };
-
-  // UV-Index actionable insight
-  const uvCard = document.getElementById('uv-index-card');
-  const uvInsight = document.getElementById('uv-insight');
-  const uvHeaderVal = document.getElementById('uv-insight-val');
-  const uvHeaderLbl = document.getElementById('uv-insight-label');
-  const uvHeader = document.getElementById('uv-insight-header');
-  const UV_LEVELS = [
-    { max:2,  key:'uvLow',      bg:'#1B6B45', card:'var(--accent-pale)' },
-    { max:5,  key:'uvMed',      bg:'#E67E22', card:'#FEF3E2' },
-    { max:7,  key:'uvHigh',     bg:'#C0392B', card:'#FDECEA' },
-    { max:10, key:'uvVeryHigh', bg:'#7F0000', card:'#FDECEA' },
-    { max:99, key:'uvExtreme',  bg:'#4A0000', card:'#FDECEA' },
-  ];
-  const uvLevel = UV_LEVELS.find(l => uvi <= l.max) || UV_LEVELS[UV_LEVELS.length-1];
-  const insightText = T[lang][uvLevel.key] || T.de[uvLevel.key] || '';
-  const insightBg = uvLevel.bg;
-  const cardBg = uvLevel.card;
-  if (uvCard) { uvCard.style.background = cardBg; }
-  // Header badge like AQI: "UV 5.6 · Mässig – LSF 30 empfohlen"
-  if (uvHeaderVal) uvHeaderVal.textContent = 'UV\u00a0' + uvi;
-  if (uvHeaderLbl) uvHeaderLbl.textContent = '\u00b7 ' + insightText;
-  if (uvHeader) { uvHeader.style.background = cardBg; uvHeader.style.color = insightBg; }
-
-  document.getElementById('uv-none-val').textContent = fmtH(noneMin);
-  document.getElementById('uv-spf30-val').textContent = fmtH(spf30Min);
-  document.getElementById('uv-spf50-val').textContent = fmtH(spf50Min);
-}
-
-function renderCards(data,numDays){
-  const da=data.daily,h=data.hourly,grid=document.getElementById('forecast-grid');
-  const today=new Date().toISOString().slice(0,10);
-  grid.innerHTML='';
-  const t=T[lang];
-  for(let i=0;i<Math.min(numDays,da.time.length);i++){
-    const date=da.time[i],dt=new Date(date+'T12:00:00');
-    const isToday=date===today,dow=dt.getDay();
-    const tHigh=Math.round(da.temperature_2m_max[i]),tLow=Math.round(da.temperature_2m_min[i]);
-    const rain=da.precipitation_probability_max[i]||0,wind=Math.round(da.windspeed_10m_max[i]);
-    const precipMm = da.precipitation_sum ? (da.precipitation_sum[i]||0) : null;
-    const sH=da.sunshine_duration?Math.round(da.sunshine_duration[i]/3600*10)/10:null;
-    const icon=getIcon(da.weathercode[i],rain,tHigh);
-    const dateStr=dt.toLocaleDateString('de-CH',{day:'2-digit',month:'2-digit'});
-    const r=rel(i);
-    let hum=null;
-    if(h&&h.relativehumidity_2m){
-      const vs=h.time.map((t2,j)=>({t2,v:h.relativehumidity_2m[j]})).filter(x=>x.t2.startsWith(date)&&x.v!=null).map(x=>x.v);
-      if(vs.length)hum=Math.round(vs.reduce((a,b)=>a+b,0)/vs.length);
-    }
-    const rP=Math.min(rain,100),wP=Math.min(wind/80*100,100),sP=sH!==null?Math.min(sH/12*100,100):0,hP=hum!==null?Math.min(hum,100):0;
-    grid.innerHTML+=`<div class="day-card${isToday?' today':''}">
-      <div class="day-card-top">
-        <div><div class="day-name-label">${isToday?t.today:t.days[dow]}</div><div class="day-date-label">${dateStr}</div></div>
-        ${isToday?`<span class="today-badge">${t.today}</span>`:''}
-      </div>
-      <div class="day-card-body">
-        <div class="wx-icon">${icon}</div>
-        <div class="temp-row"><span class="temp-high">${tHigh}°</span><span class="temp-low">${tLow}°</span></div>
-        <div class="stat-rows">
-          ${sH!==null?`<div class="stat-row"><span class="stat-label">${t.statSun}</span><div class="stat-bar-wrap"><div class="stat-bar bar-sun" style="width:${sP}%"></div></div><span class="stat-value">${sH}h</span></div>`:''}
-          <div class="stat-row"><span class="stat-label">${t.statRain}</span><div class="stat-bar-wrap"><div class="stat-bar bar-rain" style="width:${rP}%"></div></div><span class="stat-value">${rain}%${precipMm!==null?' · '+precipMm.toFixed(1)+'mm':''}</span></div>
-          ${hum!==null?`<div class="stat-row"><span class="stat-label">${t.statHum}</span><div class="stat-bar-wrap"><div class="stat-bar bar-hum" style="width:${hP}%"></div></div><span class="stat-value">${hum}%</span></div>`:''}
-          <div class="stat-row"><span class="stat-label">${t.statWind}</span><div class="stat-bar-wrap"><div class="stat-bar bar-wind" style="width:${wP}%"></div></div><span class="stat-value">${wind} km/h</span></div>
-        </div>
-        <div class="rel-row">
-          <div class="rel-label-row"><span class="rel-label">${t.statAcc}</span><span class="rel-pct ${r.cls}">${r.pct}%</span></div>
-          <div class="rel-bar-wrap"><div class="rel-bar ${r.cls}" style="width:${r.pct}%"></div></div>
-          <div class="rel-note">${r.note}</div>
-        </div>
-      </div>
-    </div>`;
-  }
-}
-
-function renderFallback(){
-  const fb={current_weather:{temperature:14,weathercode:1},daily:{time:['2026-04-03','2026-04-04','2026-04-05','2026-04-06','2026-04-07','2026-04-08','2026-04-09'],temperature_2m_max:[17,19,19,21,21,18,17],temperature_2m_min:[8,9,10,11,11,9,8],precipitation_probability_max:[0,0,10,10,0,30,40],precipitation_sum:[0,0,1.2,0.8,0,4.5,8.2],windspeed_10m_max:[12,14,18,14,11,20,24],sunshine_duration:[32400,36000,25200,21600,36000,14400,10800],weathercode:[0,0,2,2,0,3,61],uv_index_max:[4.2,5.1,3.8,3.2,5.4,2.1,1.8],sunrise:['2026-04-03T06:33','2026-04-04T06:31','2026-04-05T06:29','2026-04-06T06:27','2026-04-07T06:25','2026-04-08T06:23','2026-04-09T06:21'],sunset:['2026-04-03T19:51','2026-04-04T19:53','2026-04-05T19:54','2026-04-06T19:56','2026-04-07T19:57','2026-04-08T19:59','2026-04-09T20:01']},hourly:{time:[],relativehumidity_2m:[]}};
-  globalData=fb; renderCurrent(fb); renderCards(fb,activeView);
-  document.getElementById('cur-hum').textContent='48%';
-  document.getElementById('cur-low').textContent='9°';
-  document.getElementById('cur-night').textContent='6°';
-  const bar=document.getElementById('data-chip-bar'); bar.classList.add('visible');
-  const chip=document.getElementById('data-chip-text'); chip.dataset.mode='offline'; chip.textContent=tr('offlineChip');
-}
-
-function setView(days){
-  activeView=days;
-  document.querySelectorAll('.view-btn').forEach(b=>b.classList.toggle('active',parseInt(b.dataset.days)===days));
-  const cls = days<=3?'view-3':days<=6?'view-6':'view-7';
-  document.getElementById('forecast-grid').className='forecast-grid '+cls;
-  if(globalData)renderCards(globalData,days);
-}
-
-/* =========================================================
-   AIR QUALITY
-========================================================= */
-const AQI_LVLS=[{max:20,cls:'good'},{max:40,cls:'good'},{max:60,cls:'fair'},{max:80,cls:'moderate'},{max:100,cls:'poor'},{max:999,cls:'very-poor'}];
-function aqiLvl(v){return AQI_LVLS.find(l=>v<=l.max)||AQI_LVLS[AQI_LVLS.length-1];}
-
-async function loadAirQuality(){
-  try{
-    const url=`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${LAT}&longitude=${LON}&current=european_aqi,pm10,pm2_5,nitrogen_dioxide,ozone&timezone=${TZ}`;
-    const c=(await(await fetch(url)).json()).current;
-    const aqi=Math.round(c.european_aqi||0),lvl=aqiLvl(aqi);
-    const idx=AQI_LVLS.indexOf(lvl);
-    const names=T[lang].aqiNames;
-    const badge=document.getElementById('aqi-badge');
-    badge.textContent=`AQI ${aqi} – ${names[idx]||names[names.length-1]}`;
-    badge.className=`aqi-badge ${lvl.cls}`;
-    document.getElementById('aqi-sub').textContent=tr('aqiSub');
-    const AQI_INFO = {
-      "PM2.5": {
-        de: { name:"Feinstaub PM2.5", desc:"Partikel unter 2,5 µm – dringen tief in die Lunge ein. WHO-Grenzwert: 15 µg/m³ (Jahresmittel).", title:"Feinstaub PM2.5" },
-        it: { name:"Polveri fini PM2.5", desc:"Particelle sotto 2,5 µm – penetrano in profondità nei polmoni. Limite OMS: 15 µg/m³ (media annua).", title:"Polveri sottili PM2.5" },
-        en: { name:"Fine particulate matter", desc:"Particles under 2.5 µm – penetrate deep into the lungs. WHO limit: 15 µg/m³ (annual mean).", title:"Fine particulate matter PM2.5" },
-        url: "https://atmosphere.copernicus.eu/european-air-quality-index"
-      },
-      "PM10": {
-        de: { name:"Feinstaub PM10", desc:"Partikel unter 10 µm – belasten Atemwege und Herz-Kreislauf. WHO-Grenzwert: 45 µg/m³ (Tagesmittel).", title:"Feinstaub PM10" },
-        it: { name:"Particolato grossolano PM10", desc:"Particelle sotto 10 µm – danneggiano le vie respiratorie e il sistema cardiovascolare. Limite OMS: 45 µg/m³.", title:"Particolato PM10" },
-        en: { name:"Coarse particulate matter", desc:"Particles under 10 µm – affect airways and cardiovascular system. WHO limit: 45 µg/m³ (daily mean).", title:"Particulate matter PM10" },
-        url: "https://atmosphere.copernicus.eu/european-air-quality-index"
-      },
-      "NO₂": {
-        de: { name:"Stickstoffdioxid NO₂", desc:"Entsteht durch Verbrennung (Verkehr, Heizungen). Reizt die Schleimhäute und schwächt die Lungenabwehr. WHO-Grenzwert: 25 µg/m³ (Tagesmittel).", title:"Stickstoffdioxid NO₂" },
-        it: { name:"Biossido di azoto NO₂", desc:"Prodotto dalla combustione (traffico, riscaldamento). Irrita le mucose e indebolisce le difese polmonari. Limite OMS: 25 µg/m³.", title:"Diossido di azoto NO₂" },
-        en: { name:"Nitrogen dioxide NO₂", desc:"Produced by combustion (traffic, heating). Irritates mucous membranes and weakens lung defences. WHO limit: 25 µg/m³ (daily mean).", title:"Nitrogen dioxide NO₂" },
-        url: "https://atmosphere.copernicus.eu/european-air-quality-index"
-      },
-      "O₃": {
-        de: { name:"Bodennahes Ozon O₃", desc:"Entsteht durch Sonnenlicht aus Abgasen. Greift die Atemwege an, besonders an heißen, sonnigen Tagen. WHO-Richtwert: 100 µg/m³ (8h-Mittel).", title:"Bodennahes Ozon O₃" },
-        it: { name:"Ozono troposferico O₃", desc:"Si forma dalla luce solare e dai gas di scarico. Danneggia le vie respiratorie, soprattutto nelle giornate calde e soleggiate. Limite OMS: 100 µg/m³.", title:"Ozono troposferico O₃" },
-        en: { name:"Ground-level ozone O₃", desc:"Forms from sunlight and exhaust gases. Damages airways, especially on hot sunny days. WHO guideline: 100 µg/m³ (8h mean).", title:"Ground-level ozone O₃" },
-        url: "https://atmosphere.copernicus.eu/european-air-quality-index"
-      }
-    };
-    const items=[{l:'PM2.5',v:Math.round(c.pm2_5||0),u:'µg/m³',m:25,col:'#6366F1'},{l:'PM10',v:Math.round(c.pm10||0),u:'µg/m³',m:50,col:'#8B5CF6'},{l:'NO₂',v:Math.round(c.nitrogen_dioxide||0),u:'µg/m³',m:40,col:'#EC4899'},{l:'O₃',v:Math.round(c.ozone||0),u:'µg/m³',m:120,col:'#14B8A6'}];
-    const ln = lang||'de';
-    document.getElementById('aqi-grid').innerHTML=items.map(it=>{
-      const info = AQI_INFO[it.l]?.[ln] || AQI_INFO[it.l]?.de;
-      const url = AQI_INFO[it.l]?.url || '';
-      return `<div class="aqi-item">
-        <div class="aqi-item-val">${it.v}<span class="aqi-item-unit">${it.u}</span></div>
-        <div class="aqi-item-name-row">
-          <span class="aqi-item-label" style="text-transform:none;letter-spacing:0;font-size:11px;font-weight:600;">${it.l}</span>
-          <button class="aqi-info-btn" onclick="showAqiInfo('${it.l}')" aria-label="Info">i</button>
-        </div>
-        <div class="aqi-item-desc">${info?.name||''}</div>
-        <div class="aqi-item-bar"><div class="aqi-item-bar-fill" style="width:${Math.min(it.v/it.m*100,100)}%;background:${it.col}"></div></div>
-      </div>`;
-    }).join('');
-    // Store AQI_INFO globally for popup
-    window._AQI_INFO = AQI_INFO;
-  }catch(_){document.getElementById('aqi-sub').textContent='—';}
-}
-
-/* =========================================================
-   WARNINGS – ARPA PIEMONTE
-========================================================= */
-const ZONES=['Piem-L','Piem-M','Piem-H'];
-
-async function loadWarnings(){
-  const sec=document.getElementById('warnings-section'),grid=document.getElementById('warnings-grid');
-  sec.style.display='block';
-  try{
-    const URL1='https://www.arpa.piemonte.it/export/xmlcap/allerta.xml';
-    const PROXY=`https://corsproxy.io/?${encodeURIComponent(URL1)}`;
-    let xml=null;
-    try{const r=await fetch(URL1,{mode:'cors'});if(r.ok)xml=await r.text();}catch(_){}
-    if(!xml){const r=await fetch(PROXY);if(r.ok)xml=await r.text();}
-    if(!xml)throw new Error('n/a');
-    renderArpa(xml,grid);
-  }catch(_){await fallbackWarnings(grid);}
-  grid.innerHTML+=`<div class="official-links"><a href="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa/allerta/" target="_blank" rel="noopener" class="ext-link">ARPA Piemonte &rarr;</a></div>`;
-}
-
-function renderArpa(xml,grid){
-  const doc=new DOMParser().parseFromString(xml,'application/xml'),now=new Date(),warns=[];
-  doc.querySelectorAll('alert').forEach(a=>{
-    const exp=a.querySelector('expires')?.textContent;
-    if(exp&&new Date(exp)<now)return;
-    const area=a.querySelector('areaDesc')?.textContent||'';
-    if(area&&!ZONES.some(z=>area.includes(z)))return;
-    const sev=a.querySelector('severity')?.textContent||'Minor';
-    const hl=a.querySelector('headline')?.textContent||'';
-    const desc=(a.querySelector('description')?.textContent||'').substring(0,200);
-    let level=1;if(sev==='Moderate')level=2;if(sev==='Severe'||sev==='Extreme')level=3;
-    warns.push({level,hl,desc});
+function applyT() {
+  const t = T[lang] || T.de;
+  // Nav
+  ['home','meteo','rifiuti','gotthard'].forEach(k => {
+    const el = document.getElementById('nav-'+k);
+    if(el) el.textContent = t['nav'+k.charAt(0).toUpperCase()+k.slice(1)] || el.textContent;
   });
-  grid.innerHTML='';
-  if(!warns.length){
-    const x=xml.toLowerCase();
-    if(x.includes('rosso'))grid.innerHTML=wCard(3,'Rosso','');
-    else if(x.includes('arancione'))grid.innerHTML=wCard(2,'Arancione','');
-    else if(x.includes('giallo'))grid.innerHTML=wCard(1,'Giallo','');
-    else grid.innerHTML=okCard();
-  }else{warns.sort((a,b)=>b.level-a.level);warns.forEach(w=>{grid.innerHTML+=wCard(w.level,w.hl,w.desc);});}
-}
-
-function wCard(level,title,detail){
-  const icons={1:'!',2:'!!',3:'!!!'};
-  return`<div class="warning-card level-${level}"><div class="warning-icon">${icons[level]}</div><div class="warning-body"><div class="warning-title">${title}</div>${detail?`<div class="warning-detail">${detail}</div>`:''}<div class="warning-level-label">${T[lang].warnLevels[level]||''}</div></div></div>`;
-}
-function okCard(){
-  return`<div class="warnings-ok"><span class="warnings-ok-dot"></span>${T[lang].warnOk} (${new Date().toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'})}).</div>`;
-}
-
-async function fallbackWarnings(grid){
-  try{
-    const h=(await(await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&hourly=precipitation,windspeed_10m,cape&timezone=${TZ}&forecast_days=2`)).json()).hourly;
-    const times=h.time.map(t=>new Date(t).getTime()),now=Date.now(),h24=now+86400000;
-    let mR=0,mW=0,mC=0;
-    h.precipitation.forEach((v,i)=>{if(times[i]>=now&&times[i]<=h24&&v)mR=Math.max(mR,v);});
-    h.windspeed_10m.forEach((v,i)=>{if(times[i]>=now&&times[i]<=h24&&v)mW=Math.max(mW,v);});
-    h.cape.forEach((v,i)=>{if(times[i]>=now&&times[i]<=h24&&v)mC=Math.max(mC,v);});
-    const ws=[];
-    if(mR>=20)ws.push(wCard(3,'Extremniederschlag',`${Math.round(mR)} mm/h`));
-    else if(mR>=8)ws.push(wCard(2,'Starkniederschlag',`${Math.round(mR)} mm/h`));
-    if(mW>=90)ws.push(wCard(3,'Sturm',`${Math.round(mW)} km/h`));
-    else if(mW>=60)ws.push(wCard(1,'Starker Wind',`${Math.round(mW)} km/h`));
-    if(mC>=500)ws.push(wCard(2,'Gewittergefahr',`CAPE ${Math.round(mC)} J/kg`));
-    grid.innerHTML=ws.length?ws.join(''):okCard();
-  }catch(_){grid.innerHTML=okCard();}
-}
-
-/* =========================================================
-   NEWS – ecorisveglio.it via rss2json
-========================================================= */
-async function loadNews(){
-  const grid=document.getElementById('news-grid');
-  try{
-    const RSS='https://www.ecorisveglio.it/?s=cannobio&feed=rss2';
-    const API=`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS)}&count=3`;
-    const data=await(await fetch(API)).json();
-    if(data.status!=='ok'||!data.items?.length)throw new Error('no items');
-    window._newsCache=data.items;
-    renderNews(data.items);
-  }catch(_){
-    grid.innerHTML=`<a class="news-item" href="https://www.ecorisveglio.it/?s=cannobio" target="_blank" rel="noopener"><div class="news-item-title" style="color:var(--sky)">Artikel auf ecorisveglio.it lesen &rarr;</div><div class="news-item-source">ecorisveglio.it</div></a>`;
-  }
-}
-
-function renderNews(items){
-  const grid=document.getElementById('news-grid');
-  const strip=s=>s.replace(/<[^>]*>/g,'').replace(/&[a-z#0-9]+;/gi,' ').replace(/\s+/g,' ').trim();
-  const locale=lang==='it'?'it-IT':lang==='en'?'en-GB':'de-CH';
-  grid.innerHTML=items.map(item=>{
-    const date=item.pubDate?new Date(item.pubDate).toLocaleDateString(locale,{day:'2-digit',month:'long',year:'numeric'}):'';
-    const excerpt=strip(item.description||'').substring(0,130)+'…';
-    return`<a class="news-item" href="${item.link}" target="_blank" rel="noopener">
-      <div class="news-item-meta">${date}</div>
-      <div class="news-item-title">${strip(item.title||'')}</div>
-      <div class="news-item-excerpt">${excerpt}</div>
-      <div class="news-item-source">ecorisveglio.it</div>
-    </a>`;
-  }).join('')+`<div class="news-footer"><a class="news-more" href="https://www.ecorisveglio.it/?s=cannobio" target="_blank" rel="noopener">${T[lang].newsMore}</a></div>`;
-}
-
-/* =========================================================
-   WEBCAMS
-========================================================= */
-const CAMS=[
-  {src:'https://comune.cannobio.vb.it/wp-content/themes/design-comuni-wordpress-theme-main-child/assets/img/webcam_lungolago.webp', name:'Lungolago',           locKey:'lungolago'},
-  {src:'https://comune.cannobio.vb.it/wp-content/themes/design-comuni-wordpress-theme-main-child/assets/img/webcam_piazzalago.webp',name:'Piazza Lago',         locKey:'piazza'},
-  {src:'https://comune.cannobio.vb.it/wp-content/themes/design-comuni-wordpress-theme-main-child/assets/img/webcam_maccagno.webp',  name:'Maccagno',            locKey:'maccagno'},
-  {src:'https://comune.cannobio.vb.it/wp-content/themes/design-comuni-wordpress-theme-main-child/assets/img/webcam_castelli.webp',  name:'Castelli di Cannero', locKey:'castelli'},
-];
-
-function buildCams(){
-  const grid=document.getElementById('cam-grid');
-  grid.innerHTML='';
-  CAMS.forEach(cam=>{
-    const loc=T[lang].camLocs[cam.locKey]||cam.name;
-    const card=document.createElement('div'); card.className='cam-card';
-    card.innerHTML=`<div class="cam-img-wrap"><img src="${cam.src}" alt="${cam.name}" loading="lazy" onerror="this.style.opacity='.2'"><div class="live-dot"><span class="live-pulse"></span>Live</div><div class="cam-overlay"><span class="cam-zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div></div><div class="cam-footer"><div class="cam-name">${cam.name}</div><div class="cam-location">${loc}</div></div>`;
-    card.addEventListener('click',()=>openLightbox(cam.src,cam.name+' — '+loc));
-    grid.appendChild(card);
+  // Brand
+  const brand = document.getElementById('t-brand'); if(brand) brand.textContent = t.brand;
+  // Hero
+  const ids = {
+    'eyebrow':'eyebrow','h1':'h1','h1-em':'h1Em','sub':'sub',
+    'tile-temp-lbl':'tileTmp','tile-wind-lbl':'tileWind',
+    'tile-tunnel-lbl':'tileTunnel','t-tile-tunnel-sub':'tileTunnelSub',
+    't-tile-temp':'tileTmp','t-tile-wind':'tileWind','t-tile-tunnel':'tileTunnel',
+    't-tile-tunnel-sub':'tileTunnelSub',
+    't-card-meteo-eyebrow':'cardMeteoEyebrow','t-card-meteo-title':'cardMeteoTitle','t-card-meteo-desc':'cardMeteoDesc',
+    't-card-gott-eyebrow':'cardGottEyebrow','t-card-gott-title':'cardGottTitle','t-card-gott-desc':'cardGottDesc',
+    't-card-rifi-eyebrow':'cardRifiEyebrow','t-card-rifi-title':'cardRifiTitle','t-card-rifi-desc':'cardRifiDesc',
+    't-card-info-eyebrow':'cardInfoEyebrow','t-card-info-title':'cardInfoTitle','t-card-info-desc':'cardInfoDesc',
+    't-seo-h2':'seoH2','t-seo-p':'seoP',
+  };
+  Object.entries(ids).forEach(([id, key]) => {
+    const el = document.getElementById(id);
+    if(el && t[key]) el.textContent = t[key];
   });
+  // Footer (has links)
+  const footer = document.getElementById('t-footer');
+  if(footer && t.footer) footer.innerHTML = t.footer;
+  // Eyebrow span
+  const ey = document.getElementById('t-eyebrow'); if(ey && t.eyebrow) ey.textContent = t.eyebrow;
+  // SEO meta
+  document.title = t.pageTitle || document.title;
+  const mDesc = document.querySelector('meta[name="description"]');
+  if(mDesc && t.metaDesc) mDesc.content = t.metaDesc;
+  const ogT = document.querySelector('meta[property="og:title"]');
+  if(ogT && t.ogTitle) ogT.content = t.ogTitle;
+  const ogD = document.querySelector('meta[property="og:description"]');
+  if(ogD && t.ogDesc) ogD.content = t.ogDesc;
 }
-function rebuildCams(){buildCams();}
 
-function openLightbox(src,caption){
-  document.getElementById('lightbox-img').src=src;
-  document.getElementById('lightbox-caption').textContent=caption;
-  document.getElementById('lightbox').classList.add('open');
+// Load live weather tile from Open-Meteo
+async function loadTiles() {
+  try {
+    const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=46.0624&longitude=8.6977&current_weather=true&hourly=windspeed_10m,winddirection_10m&timezone=Europe/Rome&forecast_days=1');
+    const d = await res.json();
+    const cw = d.current_weather;
+    if(cw) {
+      const wc = cw.weathercode;
+      const wDescs = ['Sonnig','Leicht bewölkt','Bewölkt','Bedeckt','','','Neblig','','Regen','Regen','Regen','Schnee','','','','Schauer','','','Gewitter'];
+      const desc = wDescs[Math.min(Math.floor(wc/5),wDescs.length-1)] || 'Wetter';
+      document.getElementById('tile-temp').textContent = Math.round(cw.temperature) + '°';
+      document.getElementById('tile-weather').textContent = desc;
+      const dirs = ['N','NNO','NO','ONO','O','OSO','SO','SSO','S','SSW','SW','WSW','W','WNW','NW','NNW'];
+      const dir = dirs[Math.round(cw.winddirection/22.5)%16];
+      const kmh = Math.round(cw.windspeed);
+      const bft = kmh<2?0:kmh<6?1:kmh<12?2:kmh<20?3:kmh<29?4:kmh<39?5:kmh<50?6:7;
+      document.getElementById('tile-wind').textContent = kmh + ' km/h';
+      document.getElementById('tile-wind-dir').textContent = dir + ' · Bft ' + bft;
+    }
+  } catch(_) {}
+  // Tunnel tile — no live data, show placeholder
+  document.getElementById('tile-tunnel').textContent = '→ Gotthard';
+  document.getElementById('t-tile-tunnel-sub').textContent = T[lang]?.tileTunnelSub || 'Prognose';
 }
-function closeLightbox(e){if(e.target===document.getElementById('lightbox'))document.getElementById('lightbox').classList.remove('open');}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lightbox').classList.remove('open');});
 
-/* =========================================================
-   INIT
-========================================================= */
-applyT();
-renderRelLegend();
-loadWeather();
-loadAirQuality();
-loadWarnings();
-buildCams();
+// Init
+setLang(lang);
+loadTiles();
 
-// Auto-refresh alle 10 Minuten
-setInterval(() => {
-  loadWeather();
-  loadAirQuality();
-  loadWarnings();
-}, 10 * 60 * 1000);
-// ── SAIL POPUP ─────────────────────────────────────────────────
-function openSailPopup() {
-  const t = T[lang];
-  const title = document.getElementById('sail-status')?.textContent || '—';
-  const note  = document.getElementById('sail-note')?.textContent;
-  document.getElementById('sail-popup-title').textContent = title;
-  // Body: sail note (z.B. "Wind 2–3 Bft. Ideal für...")
-  const body = (note && note !== '—') ? note : '';
-  document.getElementById('sail-popup-body').textContent = body;
-  // Disc: leer — Disclaimer steht im Footer der Wind-Card
-  const discEl = document.getElementById('sail-popup-disc');
-  if(discEl) discEl.textContent = '';
-  document.getElementById('sail-popup').classList.add('open');
-  document.getElementById('sail-overlay').classList.add('open');
-}
-function closeSailPopup() {
-  document.getElementById('sail-popup').classList.remove('open');
-  document.getElementById('sail-overlay').classList.remove('open');
-}
-document.addEventListener('keydown', e => { if(e.key==='Escape'){ closeSailPopup(); closeAqiInfo(); }});
 
-function showAqiInfo(key) {
-  const ln = lang || 'de';
-  const info = window._AQI_INFO?.[key];
-  if (!info) return;
-  const d = info[ln] || info.de;
-  document.getElementById('aqi-popup-title').textContent = d.title || key;
-  document.getElementById('aqi-popup-body').textContent = d.desc || '';
-  const srcLabel = ln==='de' ? 'Datenquelle: Copernicus CAMS · European AQI' : ln==='it' ? 'Fonte: Copernicus CAMS · European AQI' : 'Source: Copernicus CAMS · European AQI';
-  document.getElementById('aqi-popup-source').innerHTML = `${srcLabel}<br><a href="${info.url}" target="_blank" rel="noopener">${info.url}</a>`;
-  document.getElementById('aqi-popup').classList.add('open');
-  document.getElementById('aqi-overlay').classList.add('open');
+function toggleNav() {
+  const overlay = document.getElementById('nav-overlay');
+  const btn = document.getElementById('nav-toggle');
+  const isOpen = overlay.classList.contains('open');
+  overlay.classList.toggle('open', !isOpen);
+  btn.setAttribute('aria-expanded', String(!isOpen));
 }
-function closeAqiInfo() {
-  document.getElementById('aqi-popup').classList.remove('open');
-  document.getElementById('aqi-overlay').classList.remove('open');
+function closeNav() {
+  document.getElementById('nav-overlay').classList.remove('open');
+  document.getElementById('nav-toggle').setAttribute('aria-expanded', 'false');
+}
+// Close on Escape
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeNav(); });
+
+function updateNavLabels() {
+  const t = T[lang] || T.de;
+  // Dropdown labels
+  const setT = (id, key) => { const el=document.getElementById(id); if(el&&t[key]) el.textContent=t[key]; };
+  setT('nav-home-label',     'navHome');
+  setT('nav-home-sub',       'navHomeSub');
+  setT('nav-meteo-label',    'navMeteo');
+  setT('nav-meteo-sub',      'navMeteoSub');
+  setT('nav-rifiuti-label',  'navRifiuti');
+  setT('nav-rifiuti-sub',    'navRifiutiSub');
+  setT('nav-gotthard-label', 'navGotthard');
+  setT('nav-gotthard-sub',   'navGotthardSub');
+  // Breadcrumb
+  setT('bc-home', 'bcHome');
+  setT('bc-current', 'bcCurrent');
+  // Dropdown link hrefs with lang param
+  ['meteo','rifiuti','gotthard'].forEach(k => {
+    const el = document.getElementById('nav-'+k);
+    if(el) {
+      const base = el.href.split('?')[0];
+      el.href = base + (lang !== 'de' ? '?lang=' + lang : '');
+    }
+  });
 }
 </script>
-<!-- SAIL INFO POPUP -->
-<div class="sail-popup-overlay" id="sail-overlay" onclick="closeSailPopup()"></div>
-<div class="sail-popup" id="sail-popup">
-  <button class="sail-popup-close" onclick="closeSailPopup()">&#x00D7;</button>
-  <div class="sail-popup-title" id="sail-popup-title">—</div>
-  <div class="sail-popup-body" id="sail-popup-body">—</div>
-  <div class="sail-popup-disc" id="sail-popup-disc"></div>
-</div>
-<!-- AQI INFO POPUP -->
-<div class="aqi-popup-overlay" id="aqi-overlay" onclick="closeAqiInfo()"></div>
-<div class="aqi-popup" id="aqi-popup">
-  <button class="aqi-popup-close" onclick="closeAqiInfo()">&#x00D7;</button>
-  <div class="aqi-popup-title" id="aqi-popup-title"></div>
-  <div class="aqi-popup-body" id="aqi-popup-body"></div>
-  <div class="aqi-popup-source" id="aqi-popup-source"></div>
-</div>
-
 </body>
 </html>
