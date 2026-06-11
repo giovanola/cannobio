@@ -1,0 +1,59 @@
+name: Fetch A2 Gotthard Traffic Data
+
+# Runs every 5 minutes, 24/7
+# Also triggerable manually via GitHub UI for testing
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Print raw XML output'
+        required: false
+        default: 'false'
+
+jobs:
+  fetch-traffic:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # needed to commit traffic.json back to repo
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch A2 traffic data from ASTRA
+        env:
+          OPENTRANSPORT_API_KEY: ${{ secrets.OPENTRANSPORT_API_KEY }}
+        run: python3 fetch_traffic.py
+
+      - name: Print summary (always)
+        run: |
+          echo "=== traffic.json summary ==="
+          python3 -c "
+          import json
+          with open('traffic.json') as f:
+              d = json.load(f)
+          print(f'Updated:  {d[\"updated\"]}')
+          print(f'Incidents:{d[\"total_incidents\"]}')
+          t = d['tunnel']
+          print(f'Tunnel S: delay={t[\"south\"][\"delay_min\"]} min, queue={t[\"south\"][\"queue_km\"]} km, severity={t[\"south\"][\"severity\"]}')
+          print(f'Tunnel N: delay={t[\"north\"][\"delay_min\"]} min, queue={t[\"north\"][\"queue_km\"]} km, severity={t[\"north\"][\"severity\"]}')
+          "
+
+      - name: Commit and push if traffic.json changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name  "github-actions[bot]"
+          git add traffic.json
+          # Only commit if the file actually changed (ignore timestamp-only changes)
+          git diff --staged --quiet || git commit -m "chore: update A2 traffic data [skip ci]"
+          git push
