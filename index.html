@@ -122,6 +122,26 @@
   @media (max-width: 400px) {
     .info-strip { grid-template-columns: 1fr; }
   }
+
+  /* ── DROPDOWN NAVIGATION ──────────────────────────────── */
+  .nav-btn{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;background:none;border:none;cursor:pointer;color:var(--text-secondary);transition:background .15s ease;}
+  .nav-btn:hover{background:var(--border);}
+  .nav-btn svg{width:16px;height:16px;fill:currentColor;}
+  .nav-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:199;} .topbar{z-index:200;}
+  .nav-overlay.open{display:block;}
+  .nav-dropdown{position:fixed;top:56px;right:clamp(12px,4vw,24px);width:240px;background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.13),0 2px 8px rgba(0,0,0,.06);overflow:hidden;z-index:300;transform-origin:top right;animation:navIn .18s cubic-bezier(.16,1,.3,1);}
+  @keyframes navIn{from{opacity:0;transform:scale(.94) translateY(-4px)}to{opacity:1;transform:scale(1) translateY(0)}}
+  .nav-item{display:flex;align-items:center;gap:12px;padding:11px 14px;text-decoration:none;color:var(--text-primary);transition:background .12s ease;border-bottom:1px solid var(--border);}
+  .nav-item:last-child{border-bottom:none;}
+  .nav-item:hover{background:var(--bg);}
+  .nav-item.active{background:var(--accent-pale);}
+  .nav-item-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .nav-item-icon svg{width:14px;height:14px;}
+  .nav-item-text{flex:1;min-width:0;}
+  .nav-item-title{font-size:13px;font-weight:600;color:var(--text-primary);line-height:1.3;}
+  .nav-item.active .nav-item-title{color:var(--accent);}
+  .nav-item-sub{font-size:11px;color:var(--text-tertiary);margin-top:1px;line-height:1.3;}
+  @media(max-width:380px){.nav-dropdown{right:8px;width:calc(100vw - 16px);}}
 </style>
 </head>
 <body>
@@ -141,12 +161,44 @@
         <button class="lang-btn" data-lang="it" onclick="setLang('it')">IT</button>
         <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
       </div>
-      <button class="nav-btn" onclick="toggleNav()" aria-label="Menu" aria-expanded="false" id="nav-toggle">
-        <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+      <button class="nav-btn" id="nav-toggle" onclick="toggleNav()" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
       </button>
     </div>
   </div>
 </header>
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()">
+  <div class="nav-dropdown" id="nav-dropdown" onclick="event.stopPropagation()">
+    <a class="nav-item active" href="./" id="nav-home">
+      <div class="nav-item-icon" style="background:#EBF7F1;"><svg viewBox="0 0 24 24" fill="#1B6B45"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+      <div class="nav-item-text">
+        <div class="nav-item-title" id="nav-home-label"></div>
+        <div class="nav-item-sub" id="nav-home-sub"></div>
+      </div>
+    </a>
+    <a class="nav-item" href="../meteo/" id="nav-meteo">
+      <div class="nav-item-icon" style="background:#E3F2FD;"><svg viewBox="0 0 24 24" fill="#1565C0"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg></div>
+      <div class="nav-item-text">
+        <div class="nav-item-title" id="nav-meteo-label"></div>
+        <div class="nav-item-sub" id="nav-meteo-sub"></div>
+      </div>
+    </a>
+    <a class="nav-item" href="../rifiuti/" id="nav-rifiuti">
+      <div class="nav-item-icon" style="background:#EBF7F1;"><svg viewBox="0 0 24 24" fill="#1B6B45"><path d="M9 3v1H4v2h1v13a2 2 0 002 2h10a2 2 0 002-2V6h1V4h-5V3H9zm0 5h2v9H9V8zm4 0h2v9h-2V8z"/></svg></div>
+      <div class="nav-item-text">
+        <div class="nav-item-title" id="nav-rifiuti-label"></div>
+        <div class="nav-item-sub" id="nav-rifiuti-sub"></div>
+      </div>
+    </a>
+    <a class="nav-item" href="../gotthard/" id="nav-gotthard">
+      <div class="nav-item-icon" style="background:#FEF3E2;"><svg viewBox="0 0 24 24" fill="#B7791F"><path d="M1.5 8.5l10.5-7 10.5 7V20a1 1 0 01-1 1H15v-6H9v6H3a1 1 0 01-1-1V8.5z"/></svg></div>
+      <div class="nav-item-text">
+        <div class="nav-item-title" id="nav-gotthard-label"></div>
+        <div class="nav-item-sub" id="nav-gotthard-sub"></div>
+      </div>
+    </a>
+  </div>
+</div>
 
 <!-- NAV DROPDOWN OVERLAY -->
 <div class="nav-overlay" id="nav-overlay" onclick="closeNav()">
@@ -355,6 +407,7 @@ let lang = new URLSearchParams(location.search).get('lang')
   || localStorage.getItem('cannobio-lang') || 'de';
 
 function setLang(l) {
+  closeNav();
   lang = l;
   localStorage.setItem('cannobio-lang', l);
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
@@ -436,17 +489,6 @@ setLang(lang);
 loadTiles();
 
 
-function toggleNav() {
-  const overlay = document.getElementById('nav-overlay');
-  const btn = document.getElementById('nav-toggle');
-  const isOpen = overlay.classList.contains('open');
-  overlay.classList.toggle('open', !isOpen);
-  btn.setAttribute('aria-expanded', String(!isOpen));
-}
-function closeNav() {
-  document.getElementById('nav-overlay').classList.remove('open');
-  document.getElementById('nav-toggle').setAttribute('aria-expanded', 'false');
-}
 // Close on Escape
 document.addEventListener('keydown', e => { if(e.key === 'Escape') closeNav(); });
 
@@ -472,6 +514,31 @@ function updateNavLabels() {
       const base = el.href.split('?')[0];
       el.href = base + (lang !== 'de' ? '?lang=' + lang : '');
     }
+  });
+}
+
+function toggleNav(){
+  const o=document.getElementById('nav-overlay'),b=document.getElementById('nav-toggle');
+  const open=o.classList.toggle('open');
+  b.setAttribute('aria-expanded',String(open));
+}
+function closeNav(){
+  document.getElementById('nav-overlay').classList.remove('open');
+  const b=document.getElementById('nav-toggle');
+  if(b)b.setAttribute('aria-expanded','false');
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav();});
+function updateNavLabels(){
+  const t=T[lang]||T.de;
+  const s=(id,k)=>{const e=document.getElementById(id);if(e&&t[k])e.textContent=t[k];};
+  s('nav-home-label','navHome');s('nav-home-sub','navHomeSub');
+  s('nav-meteo-label','navMeteo');s('nav-meteo-sub','navMeteoSub');
+  s('nav-rifiuti-label','navRifiuti');s('nav-rifiuti-sub','navRifiutiSub');
+  s('nav-gotthard-label','navGotthard');s('nav-gotthard-sub','navGotthardSub');
+  s('t-brand','brand');
+  ['meteo','rifiuti','gotthard'].forEach(k=>{
+    const el=document.getElementById('nav-'+k);
+    if(el){const b=el.href.split('?')[0];el.href=b+(lang!=='de'?'?lang='+lang:'');}
   });
 }
 </script>
