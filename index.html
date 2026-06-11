@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title id="t-page-title">Cannobio – Lago Maggiore | Portal</title>
-<meta name="description" id="t-meta-desc" content="Das digitale Portal für Cannobio am Lago Maggiore. Wetter, Abfall, Gotthard-Tunnel und lokale Informationen.">
+<title>Cannobio – Lago Maggiore | Wetter, Abfall & Gotthard</title>
+<meta name="description" content="Das digitale Portal für Cannobio am Lago Maggiore. Wetter, Segelwetter, Abfallkalender und Gotthard-Verkehr.">
 <meta property="og:type" content="website">
-<meta property="og:title" id="t-og-title" content="Cannobio – Portal">
-<meta property="og:description" id="t-og-desc" content="Wetter, Abfall, Gotthard-Tunnel und lokale Informationen für Cannobio am Lago Maggiore.">
+<meta property="og:title" content="Cannobio am Lago Maggiore">
+<meta property="og:description" content="Wetter, Segeln, Abfall und Gotthard für Cannobio.">
 <meta property="og:image" content="https://giovanola.github.io/cannobio/cannobio-2026.jpg">
 <meta property="og:url" content="https://giovanola.github.io/cannobio/">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,46 +22,50 @@
   :root {
     --font-display: 'Fraunces', Georgia, serif;
     --font-body: 'Inter', system-ui, sans-serif;
-    --bg: #F9F9F8;
+    --bg: #F6F9FC;
     --surface: #FFFFFF;
-    --border: #E8E7E3;
-    --text-primary: #2C2C28;
-    --text-secondary: #5A5A54;
-    --text-tertiary: #9B9890;
+    --border: #DDE1E8;
+    --border-light: #EEF1F5;
+    --text-primary: #0A2540;
+    --text-secondary: #425466;
+    --text-tertiary: #8898AA;
     --accent: #1B6B45;
-    --accent-pale: #EBF7F1;
-    --sky: #1565C0;
-    --sky-pale: #E3F2FD;
-    --gold: #B7791F;
-    --gold-pale: #FEF3E2;
+    --accent-pale: #ECFDF5;
+    --accent-hover: #155534;
+    --sky: #0570DE;
+    --sky-pale: #E7F0FD;
+    --gold: #C05621;
+    --gold-pale: #FFF8F0;
+    --red: #DF1B41;
+    --red-pale: #FFF0F3;
+    --green-pale: #ECFDF5;
     --max-w: 860px;
-    --radius-sm: 8px;
-    --radius-md: 12px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
     --radius-lg: 16px;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,.07);
-    --shadow-md: 0 4px 16px rgba(0,0,0,.09);
-    --transition: .18s ease;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,.08), 0 2px 4px -1px rgba(0,0,0,.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,.08), 0 4px 6px -2px rgba(0,0,0,.05);
+    --transition: .15s ease;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: var(--font-body); background: var(--bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
 
   /* TOPBAR */
-  .topbar { position: sticky; top: 0; z-index: 100; background: rgba(250,250,249,.93); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-  .topbar-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(16px,4vw,24px); height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-  .topbar-brand { display: flex; align-items: center; gap: 9px; text-decoration: none; flex-shrink: 0; }
-  .topbar-icon { width: 26px; height: 26px; background: var(--accent); border-radius: 7px; display: flex; align-items: center; justify-content: center; }
-  .topbar-icon svg { width: 15px; height: 15px; fill: #fff; }
-  .topbar-name { font-family: var(--font-display); font-size: 15px; font-weight: 400; color: var(--text-primary); }
-  .topbar-right { display: flex; align-items: center; gap: 14px; }
+  .topbar { position:sticky; top:0; z-index:200; background:rgba(255,255,255,.92); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid var(--border); }
+  .topbar-inner { max-width:var(--max-w); margin:0 auto; padding:0 clamp(16px,4vw,24px); height:54px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .topbar-brand { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
+  .topbar-icon { width:28px; height:28px; color:var(--accent); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .topbar-name { font-family:var(--font-display); font-size:15px; font-weight:300; color:var(--text-primary); letter-spacing:-.01em; }
+  .topbar-right { display:flex; align-items:center; gap:10px; }
+  .lang-switcher { display:flex; background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-sm); padding:2px; gap:1px; }
+  .lang-btn { font-size:11px; font-weight:600; color:var(--text-tertiary); background:none; border:none; padding:3px 8px; border-radius:4px; cursor:pointer; transition:all var(--transition); letter-spacing:.04em; }
+  .lang-btn:hover { color:var(--text-primary); }
+  .lang-btn.active { background:var(--surface); color:var(--text-primary); box-shadow:0 1px 3px rgba(0,0,0,.12); }
+  .nav-btn { width:32px; height:32px; display:flex; align-items:center; justify-content:center; background:none; border:none; cursor:pointer; color:var(--text-secondary); border-radius:var(--radius-sm); transition:all var(--transition); }
+  .nav-btn:hover { background:var(--bg); color:var(--text-primary); }
+  .nav-btn svg { width:16px; height:16px; fill:currentColor; }
   
-  
-  
-  
-  .lang-switcher { display: flex; gap: 2px; }
-  .lang-btn { font-size: 11px; font-weight: 600; color: var(--text-tertiary); background: none; border: none; padding: 4px 8px; border-radius: 6px; cursor: pointer; transition: all var(--transition); }
-  .lang-btn:hover { color: var(--text-primary); background: var(--border); }
-  .lang-btn.active { color: var(--accent); background: var(--accent-pale); }
-
   /* HERO */
   .hero { max-width: var(--max-w); margin: 0 auto; padding: clamp(40px,6vw,72px) clamp(16px,4vw,24px) clamp(28px,4vw,48px); }
   .hero-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
@@ -143,6 +147,25 @@
   .nav-item-sub{font-size:11px;color:var(--text-tertiary);margin-top:1px;line-height:1.3;}
   @media(max-width:380px){.nav-dropdown{right:8px;width:calc(100vw - 16px);}}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Cannobio Portal",
+  "url": "https://giovanola.github.io/cannobio/",
+  "description": "Das digitale Portal für Cannobio am Lago Maggiore.",
+  "inLanguage": ["de","it","en"],
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://giovanola.github.io/cannobio/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Cannobio",
+    "url": "https://giovanola.github.io/cannobio/"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -150,9 +173,7 @@
 <header class="topbar">
   <div class="topbar-inner">
     <a class="topbar-brand" href="./">
-      <div class="topbar-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-      </div>
+      <div class="topbar-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" style="width:100%;height:100%;"><text x="250" y="245" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="230" fill="currentColor">C</text><path fill="currentColor" d="M110 305 C175 283,245 283,308 305 C348 318,390 318,430 298 C388 334,323 340,250 322 C183 307,143 307,110 305 Z"/><path fill="currentColor" d="M185 335 C238 318,293 318,346 335 C315 355,260 360,185 335 Z"/></svg></div>
       <span class="topbar-name" id="t-brand">Cannobio</span>
     </a>
     <div class="topbar-right">
@@ -327,7 +348,8 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-left" id="t-footer">Quellen: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> · <a href="https://www.comune.cannobio.vb.it" target="_blank" rel="noopener">Comune di Cannobio</a></div>
-  <div class="footer-v">v1.0 · Juni 2026 · giovanola.github.io/cannobio</div>
+  
+<div class="footer-v" title="v3.4: Cannobio-Logo, Stripe-Design, SEO schema.org, dreisprachige Metatags" style="margin-top:6px;font-size:10px;color:var(--text-tertiary);opacity:.7;display:flex;align-items:center;gap:6px;"><span style="font-weight:600;color:var(--accent);">v3.4</span><span>·</span><span id="footer-date-str">11. Juni 2026</span><span>·</span><a href="https://giovanola.github.io/cannobio/" style="color:inherit;text-decoration:none;">giovanola.github.io/cannobio/</a></div>
 </footer>
 
 <script>
@@ -413,6 +435,11 @@ function setLang(l) {
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
   document.documentElement.lang = l === 'it' ? 'it' : l === 'en' ? 'en' : 'de';
   applyT();
+  updateSEO();
+
+  // Footer date per language
+  const _fds = document.getElementById('footer-date-str');
+  if (_fds) _fds.textContent = lang==='it' ? '11 giugno 2026' : lang==='en' ? '11 June 2026' : '11. Juni 2026';
   updateNavLabels();
 }
 
@@ -541,6 +568,24 @@ function updateNavLabels(){
     if(el){const b=el.href.split('?')[0];el.href=b+(lang!=='de'?'?lang='+lang:'');}
   });
 }
+
+  function updateSEO() {
+  const SEO = {
+    de: { title:'Cannobio – Lago Maggiore | Wetter, Abfall & Gotthard', desc:'Das digitale Portal für Cannobio am Lago Maggiore. Wetter, Segelwetter, Abfallkalender und Gotthard-Verkehr.', ogTitle:'Cannobio am Lago Maggiore', ogDesc:'Wetter, Segeln, Abfall und Gotthard für Cannobio.' },
+    it: { title:'Cannobio – Lago Maggiore | Meteo, Rifiuti & Gottardo', desc:'Il portale digitale per Cannobio sul Lago Maggiore. Meteo, vela, calendario rifiuti e traffico al Gottardo.', ogTitle:'Cannobio sul Lago Maggiore', ogDesc:'Meteo, vela, rifiuti e Gottardo per Cannobio.' },
+    en: { title:'Cannobio – Lake Maggiore | Weather, Waste & Gotthard', desc:'The digital portal for Cannobio at Lake Maggiore. Weather, sailing, waste calendar and Gotthard traffic.', ogTitle:'Cannobio at Lake Maggiore', ogDesc:'Weather, sailing, waste and Gotthard for Cannobio.' },
+  };
+  // updateSEO body follows:
+    const s = SEO[lang] || SEO.de;
+    document.title = s.title;
+    document.documentElement.lang = lang==='it'?'it':lang==='en'?'en':'de';
+    const mDesc = document.querySelector('meta[name="description"]'); if(mDesc) mDesc.content = s.desc;
+    const ogT = document.querySelector('meta[property="og:title"]'); if(ogT) ogT.content = s.ogTitle;
+    const ogD = document.querySelector('meta[property="og:description"]'); if(ogD) ogD.content = s.ogDesc;
+    const ogL = document.querySelector('meta[property="og:locale"]');
+    if(ogL) ogL.content = lang==='it'?'it_IT':lang==='en'?'en_GB':'de_CH';
+  }
+
 </script>
 </body>
 </html>
