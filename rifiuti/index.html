@@ -180,10 +180,10 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 .lang-btn.active { background: var(--surface); color: var(--text-primary); box-shadow: var(--shadow-sm); }
 
 /* ── SITE NAV ── */
-.site-nav { display: flex; gap: 2px; background: var(--border); border-radius: 8px; padding: 2px; }
-.site-nav-link { padding: 4px 12px; border-radius: 6px; font-family: var(--font-body); font-size: 12px; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: all var(--transition); white-space: nowrap; }
-.site-nav-link:hover { color: var(--text-primary); }
-.site-nav-active { background: var(--surface); color: var(--text-primary); box-shadow: var(--shadow-sm); }
+
+
+
+
 
 /* ── HERO ── */
 .hero {
@@ -532,44 +532,93 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 .content > *:nth-child(1) { animation-delay: 0.05s; }
 .content > *:nth-child(2) { animation-delay: 0.1s; }
 .content > *:nth-child(3) { animation-delay: 0.15s; }
+
+  .topbar-inner{max-width:860px;margin:0 auto;padding:0 clamp(16px,4vw,24px);height:52px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .topbar-brand{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0;}
+  .topbar-icon{width:26px;height:26px;background:#1B6B45;border-radius:7px;display:flex;align-items:center;justify-content:center;}
+  .topbar-icon svg{width:15px;height:15px;fill:#fff;}
+  .topbar-name{font-family:'Fraunces',Georgia,serif;font-size:15px;font-weight:400;color:#2C2C28;}
+  .topbar-right{display:flex;align-items:center;gap:14px;}
+  
+  
+  
+  
+  .lang-switcher{display:flex;gap:2px;}
+  .lang-btn{font-size:11px;font-weight:600;color:#9B9890;background:none;border:none;padding:4px 8px;border-radius:6px;cursor:pointer;transition:all .18s ease;}
+  .lang-btn.active{color:#1B6B45;background:#EBF7F1;}
+  @media(max-width:640px){.topbar-name{display:none;}}
 </style>
 </head>
 <body>
 
 <!-- TOPBAR -->
-<header class="topbar" role="banner">
+<header class="topbar">
   <div class="topbar-inner">
-    <div class="topbar-left">
-      <a class="topbar-brand" href="../" aria-label="Home">
-        <div class="topbar-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
-        </div>
-        <span class="topbar-name">Cannobio</span>
-      </a>
-      <nav class="topbar-nav" aria-label="Pages">
-        <a class="topbar-nav-btn active" href="../">
-          <span class="nav-dot" style="background:#1B6B45"></span>
-          <span data-t="nav_rifiuti">Rifiuti</span>
-        </a>
-        <a class="topbar-nav-btn" href="../meteo/">
-          <span class="nav-dot" style="background:#1565C0"></span>
-          <span data-t="nav_meteo">Meteo</span>
-        </a>
-      </nav>
-    </div>
-    <div class="topbar-right">
-      <nav class="site-nav" aria-label="Seitennavigation">
-        <a class="site-nav-link" href="../meteo/" id="nav-wetter">Wetter</a>
-        <a class="site-nav-link site-nav-active" href="../" id="nav-rifiuti">Rifiuti</a>
-      </nav>
-      <div class="lang-switcher" role="group" aria-label="Language">
-        <button class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
-        <button class="lang-btn active" data-lang="it" aria-label="Italiano">IT</button>
-        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+    <a class="topbar-brand" href="../">
+      <div class="topbar-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
       </div>
+      <span class="topbar-name" id="t-brand">Cannobio</span>
+    </a>
+    <div class="topbar-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="de" onclick="setLang('de')">DE</button>
+        <button class="lang-btn" data-lang="it" onclick="setLang('it')">IT</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="nav-btn" onclick="toggleNav()" aria-label="Menu" aria-expanded="false" id="nav-toggle">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+      </button>
     </div>
   </div>
 </header>
+
+<!-- NAV DROPDOWN OVERLAY -->
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()">
+  <div class="nav-dropdown" id="nav-dropdown" onclick="event.stopPropagation()">
+    <a class="nav-dropdown-item" href="../" id="nav-home">
+      <div class="nav-dropdown-icon" style="background:#EBF7F1;">
+        <svg viewBox="0 0 24 24" fill="#1B6B45"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-home-label">Portal</span>
+        <span class="nav-dropdown-sub" id="nav-home-sub">Cannobio am Lago Maggiore</span>
+      </div>
+    </a>
+    <a class="nav-dropdown-item" href="../meteo/" id="nav-meteo">
+      <div class="nav-dropdown-icon" style="background:#E3F2FD;">
+        <svg viewBox="0 0 24 24" fill="#1565C0"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-meteo-label">Wetter</span>
+        <span class="nav-dropdown-sub" id="nav-meteo-sub">Prognose, Wind & Segeln</span>
+      </div>
+    </a>
+    <a class="nav-dropdown-item active" href="../rifiuti/" id="nav-rifiuti">
+      <div class="nav-dropdown-icon" style="background:#EBF7F1;">
+        <svg viewBox="0 0 24 24" fill="#1B6B45"><path d="M9 3v1H4v2h1v13a2 2 0 002 2h10a2 2 0 002-2V6h1V4h-5V3H9zm0 5h2v9H9V8zm4 0h2v9h-2V8z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-rifiuti-label">Abfall</span>
+        <span class="nav-dropdown-sub" id="nav-rifiuti-sub">Abfallkalender 2026</span>
+      </div>
+    </a>
+    <a class="nav-dropdown-item" href="../gotthard/" id="nav-gotthard">
+      <div class="nav-dropdown-icon" style="background:#FEF3E2;">
+        <svg viewBox="0 0 24 24" fill="#B7791F"><path d="M1.5 8.5l10.5-7 10.5 7V20a1 1 0 01-1 1H15v-6H9v6H3a1 1 0 01-1-1V8.5z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-gotthard-label">Gotthard</span>
+        <span class="nav-dropdown-sub" id="nav-gotthard-sub">Tunnel, Wartezeiten & Pass</span>
+      </div>
+    </a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="Breadcrumb" id="breadcrumb-nav">
+  <a href="../" id="bc-home">Cannobio</a>
+  <span class="breadcrumbs-sep" aria-hidden="true">›</span>
+  <span class="breadcrumbs-current" id="bc-current">...</span>
+</nav>
 
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-title">
@@ -734,6 +783,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 // ── TRANSLATIONS ──
 const T = {
   it: {
+    bcCurrent:'Rifiuti',
     brand:"Cannobio · Rifiuti 2026",
     eyebrow:"Comune di Cannobio",
     h1:"Calendario<br><em>Raccolta Rifiuti</em><br>2026",
@@ -782,6 +832,7 @@ const T = {
     seoR3p:"Plastica e metallo: sacchetti trasparenti vuoti e puliti. Organico: sacchetti compostabili. Vetro: sfuso senza coperchi. Carta: asciutta in scatole. Indifferenziato: solo cio che non e separabile.",
   },
   de: {
+    bcCurrent:'Abfall',
     brand:"Cannobio · Abfall 2026",
     eyebrow:"Gemeinde Cannobio",
     h1:"Abfall-<br><em>kalender</em><br>2026",
@@ -830,6 +881,7 @@ const T = {
     seoR3p:"Kunststoff/Metall: durchsichtige Säcke, leer und sauber. Biomüll: kompostierbare Beutel. Glas: lose ohne Deckel. Papier: trocken in Kartons. Restmüll: nur nicht Trennbares.",
   },
   en: {
+    bcCurrent:'Waste',
     brand:"Cannobio · Waste 2026",
     eyebrow:"Municipality of Cannobio",
     h1:"Waste Collection<br><em>Calendar</em><br>2026",
@@ -907,6 +959,39 @@ function isToday(y,m,d){return y===tY&&m===tM&&d===tD;}
 
 let lang='it';
 
+function setLang(lc) {
+  if (!T[lc]) return;
+  lang = lc;
+  localStorage.setItem('cannobio_lang', lc);
+  const url = new URL(window.location);
+  url.searchParams.set('lang', lc);
+  history.replaceState({}, '', url);
+  document.documentElement.lang = lc === 'it' ? 'it' : lc === 'en' ? 'en' : 'de';
+  // Update lang buttons
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lc));
+  // Update nav labels and hrefs
+  const navHomeLabels = {de:'Portal', it:'Portale', en:'Portal'};
+  const nh=document.getElementById('nav-home'); if(nh){nh.textContent=navHomeLabels[lc]||'Portal'; nh.href='../?lang='+lc;}
+  const navMap = {de:['Wetter','Abfall','Gotthard'], it:['Meteo','Rifiuti','Gottardo'], en:['Weather','Waste','Gotthard']};
+  const [m,r,g] = navMap[lc];
+  const nm=document.getElementById('nav-meteo'); if(nm){nm.textContent=m; nm.href='../meteo/?lang='+lc;}
+  const nr=document.getElementById('nav-rifiuti'); if(nr){nr.textContent=r; nr.href='../rifiuti/?lang='+lc;}
+  const ng=document.getElementById('nav-gotthard'); if(ng){ng.textContent=g; ng.href='../gotthard/?lang='+lc;}
+  // Re-render page content via existing lang system
+  if(typeof render === 'function') render();
+  else if(typeof build === 'function') build();
+}
+
+// Init lang from URL or localStorage
+(function(){
+  const stored = localStorage.getItem('cannobio_lang');
+  const urlLang = new URLSearchParams(window.location.search).get('lang');
+  const initLang = (urlLang && T[urlLang]) ? urlLang : (stored && T[stored]) ? stored : 'it';
+  if(initLang !== lang) setLang(initLang);
+  else { document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang)); }
+})();
+
+
 function badge(key,t){
   return'<span class="badge '+CLS[key]+'"><span class="dot"></span>'+t.BADGE[key]+'</span>';
 }
@@ -981,6 +1066,7 @@ function rebuild(){
   // nav labels
   const nw=document.getElementById('nav-wetter'); if(nw)nw.textContent=t.nav_wetter;
   const nr=document.getElementById('nav-rifiuti'); if(nr)nr.textContent=t.nav_rifiuti;
+  const ng=document.getElementById('nav-gotthard'); if(ng)ng.textContent=t.nav_gotthard||'Gotthard';
   // SEO
   document.title=t.docTitle;
   document.querySelector('meta[name="description"]').setAttribute('content',t.docDesc);
@@ -1013,6 +1099,49 @@ const urlLang=new URLSearchParams(window.location.search).get('lang');
 if(urlLang&&T[urlLang])lang=urlLang;
 rebuild();
 if(tY===2026)document.querySelector('.tab-week').click();
+
+
+function toggleNav() {
+  const overlay = document.getElementById('nav-overlay');
+  const btn = document.getElementById('nav-toggle');
+  const isOpen = overlay.classList.contains('open');
+  overlay.classList.toggle('open', !isOpen);
+  btn.setAttribute('aria-expanded', String(!isOpen));
+}
+function closeNav() {
+  document.getElementById('nav-overlay').classList.remove('open');
+  document.getElementById('nav-toggle').setAttribute('aria-expanded', 'false');
+}
+// Close on Escape
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeNav(); });
+
+function updateNavLabels() {
+  const t = T[lang] || T.de;
+  // Dropdown labels
+  const setT = (id, key) => { const el=document.getElementById(id); if(el&&t[key]) el.textContent=t[key]; };
+  setT('nav-home-label',     'navHome');
+  setT('nav-home-sub',       'navHomeSub');
+  setT('nav-meteo-label',    'navMeteo');
+  setT('nav-meteo-sub',      'navMeteoSub');
+  setT('nav-rifiuti-label',  'navRifiuti');
+  setT('nav-rifiuti-sub',    'navRifiutiSub');
+  setT('nav-gotthard-label', 'navGotthard');
+  setT('nav-gotthard-sub',   'navGotthardSub');
+  // Breadcrumb
+  setT('bc-home', 'bcHome');
+  setT('bc-current', 'bcCurrent');
+  // Dropdown link hrefs with lang param
+  ['meteo','rifiuti','gotthard'].forEach(k => {
+    const el = document.getElementById('nav-'+k);
+    if(el) {
+      const base = el.href.split('?')[0];
+      el.href = base + (lang !== 'de' ? '?lang=' + lang : '');
+    }
+  });
+}
+
+// Init nav labels
+if(typeof updateNavLabels === "function") updateNavLabels();
 </script>
 </body>
 </html>
