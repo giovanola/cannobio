@@ -320,6 +320,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
     </div>
 
     <!-- STATUS BANNER -->
+    <div id="traffic-stale-warn" style="display:none;padding:6px 12px;background:#FEF3E2;border:1px solid #FDE68A;border-radius:8px;font-size:11px;color:#92400E;margin-bottom:10px;"></div>
     <div id="status-banner" class="status-banner gold" style="margin-bottom:16px;">
       <span class="status-icon">📡</span>
       <div id="status-text">Aktuelle Wartezeiten — bitte direkt prüfen:&nbsp;
@@ -1195,6 +1196,89 @@ function renderTrafficData(d) {
   if (isSideRoad(tun.north?.text)) { tun.north = {severity:'clear', delay_min:null, queue_km:null, text:null}; tun.status='clear'; }
   if (isSideRoad(tun.south?.text)) { tun.south = {severity:'clear', delay_min:null, queue_km:null, text:null}; }
 
+  // ── Check active planned closures ────────────────────────────
+  // Structured list of all planned Gotthard night closures (CET/CEST)
+  const PLANNED_CLOSURES = [
+    { from:[2026,3,23], to:[2026,3,27], startH:22, endH:5,  desc:{de:'Nachtunterhaltsarbeiten', it:'Lavori notturni', en:'Night maintenance'} },
+    { from:[2026,6,8],  to:[2026,6,12], startH:20, endH:5,  desc:{de:'Nachtunterhaltsarbeiten', it:'Lavori notturni', en:'Night maintenance'} },
+    { from:[2026,6,15], to:[2026,6,19], startH:20, endH:5,  desc:{de:'Nachtunterhaltsarbeiten', it:'Lavori notturni', en:'Night maintenance'} },
+    { from:[2026,6,22], to:[2026,6,26], startH:20, endH:5,  desc:{de:'Nachtunterhaltsarbeiten', it:'Lavori notturni', en:'Night maintenance'} },
+    { from:[2026,9,7],  to:[2026,9,11], startH:22, endH:5,  desc:{de:'Nachtunterhaltsarbeiten', it:'Lavori notturni', en:'Night maintenance'} },
+    { from:[2026,9,14], to:[2026,9,18], startH:20, endH:5,  desc:{de:'Nachtunterhaltsarbeiten', it:'Lavori notturni', en:'Night maintenance'} },
+    { from:[2026,9,21], to:[2026,9,25], startH:20, endH:5,  desc:{de:'Nachtunterhaltsarbeiten', it:'Lavori notturni', en:'Night maintenance'} },
+    { from:[2026,9,28], to:[2026,10,2], startH:20, endH:5,  desc:{de:'Nachtunterhaltsarbeiten', it:'Lavori notturni', en:'Night maintenance'} },
+  ];
+
+  // Check if a given local datetime falls in a closure window
+  // Closure windows can span midnight (e.g. 20:00 today → 05:00 tomorrow)
+  function isClosureActive(closures) {
+    // Use Swiss local time (UTC+2 in summer / CET+1)
+    const now = new Date();
+    // Convert to CET/CEST (UTC+2 in summer)
+    const offsetMs = 2 * 3600 * 1000; // CEST (June = summer time)
+    const local = new Date(now.getTime() + offsetMs);
+    const yr = local.getUTCFullYear(), mo = local.getUTCMonth()+1, dy = local.getUTCDate(), hr = local.getUTCHours();
+
+    for (const cl of closures) {
+      const [fy,fm,fd] = cl.from, [ty,tm,td] = cl.to;
+      const startDate = new Date(Date.UTC(fy,fm-1,fd));
+      const endDate   = new Date(Date.UTC(ty,tm-1,td));
+      const today     = new Date(Date.UTC(yr,mo-1,dy));
+
+      // Is today within the closure date range?
+      if (today < startDate || today > endDate) continue;
+
+      // Check time window (may span midnight)
+      const sh = cl.startH, eh = cl.endH;
+      let inWindow = false;
+      if (sh > eh) {
+        // Crosses midnight: active from sh:00 to next day eh:00
+        inWindow = hr >= sh || hr < eh;
+      } else {
+        inWindow = hr >= sh && hr < eh;
+      }
+
+      if (inWindow) {
+        return { active: true, desc: cl.desc, startH: sh, endH: eh };
+      }
+    }
+    return { active: false };
+  }
+
+  const closureCheck = isClosureActive(PLANNED_CLOSURES);
+
+  // ── Override status if planned closure is active ──────────────
+  if (closureCheck.active) {
+    const descText = closureCheck.desc[lang] || closureCheck.desc.de;
+    const endStr = String(closureCheck.endH).padStart(2,'0') + ':00';
+    tun.status = 'critical';
+    tun.north  = { severity:'critical', delay_min:null, queue_km:null, text:descText };
+    tun.south  = { severity:'critical', delay_min:null, queue_km:null, text:descText };
+    // Will be rendered by fillCard and banner below
+    window._activeClosure = { desc: descText, endH: endStr };
+  } else {
+    window._activeClosure = null;
+  }
+
+
+
+  // ── Stale data warning ────────────────────────────────────────
+  const dataAge = (Date.now() - new Date(d.updated).getTime()) / 60000; // minutes
+  const staleWarn = document.getElementById('traffic-stale-warn');
+  if (staleWarn) {
+    if (dataAge > 15) {
+      const ageRounded = Math.round(dataAge);
+      staleWarn.textContent = (lang==='de' ? 'Daten ' + ageRounded + ' Minuten alt — Aktualisierung läuft...'
+                             : lang==='it' ? 'Dati di ' + ageRounded + ' minuti fa — Aggiornamento in corso...'
+                             : 'Data ' + ageRounded + ' min old — update running...');
+      staleWarn.style.display = '';
+    } else {
+      staleWarn.style.display = 'none';
+    }
+  }
+
+
+
   // ── Remove the old "no data" hint ────────────────────────
   const liveNote = document.getElementById('t-live-note');
   if (liveNote) liveNote.style.display = 'none';
@@ -1212,7 +1296,10 @@ function renderTrafficData(d) {
     const barEl    = document.getElementById(barId);
 
     if (waitEl) {
-      if (data.delay_min !== null && data.delay_min !== undefined) {
+      if (window._activeClosure && sev === 'critical') {
+        waitEl.textContent = '—';
+        waitEl.title = window._activeClosure.desc;
+      } else if (data.delay_min !== null && data.delay_min !== undefined) {
         waitEl.textContent = data.delay_min;
       } else if (sev === 'clear') {
         waitEl.textContent = '0';
@@ -1239,6 +1326,7 @@ function renderTrafficData(d) {
   if (!banner || !statusText) return;
 
   const status = tun.status || 'unknown';
+  const closureOverride = window._activeClosure;
   const statusCfg = {
     clear:    {cls:'status-banner green', icon:'🟢', label: t.statusClear   || 'Tunnel frei · keine aktiven Meldungen'},
     info:     {cls:'status-banner green', icon:'🟢', label: t.statusInfo    || 'Tunnel offen · vereinzelte Hinweise'},
@@ -1263,6 +1351,16 @@ function renderTrafficData(d) {
       const meta = [sDir(i), i.delay_min ? i.delay_min+' min' : '', i.queue_km ? i.queue_km+' km' : ''].filter(Boolean).join(' · ');
       return `<div style="font-size:12px;margin-top:3px;opacity:.9;">${meta ? '<strong>'+meta+':</strong> ' : ''}${i.description.slice(0,110)}</div>`;
     }).join('');
+  }
+  // Override for planned closure
+  if (closureOverride) {
+    const lbl = lang==='de' ? 'Tunnel gesperrt · ' + closureOverride.desc + ' (bis ' + closureOverride.endH + ' Uhr)'
+               : lang==='it' ? 'Tunnel chiuso · ' + closureOverride.desc + ' (fino alle ' + closureOverride.endH + ')'
+               : 'Tunnel closed · ' + closureOverride.desc + ' (until ' + closureOverride.endH + ')';
+    banner.className = 'status-banner red';
+    banner.querySelector('.status-icon').textContent = '🔴';
+    html = `<div style="font-weight:600;">${lbl}</div>`;
+    html += `<div style="font-size:11px;margin-top:6px;opacity:.7;">${lang==='de'?'Geplante Sperre laut ASTRA · ':lang==='it'?'Chiusura pianificata ASTRA · ':'Planned closure ASTRA · '}${dateStr}</div>`;
   }
   html += `<div style="font-size:10px;margin-top:8px;opacity:.6;">ASTRA / opentransportdata.swiss · ${dateStr} ${ts}</div>`;
   statusText.innerHTML = html;
