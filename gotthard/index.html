@@ -1178,6 +1178,23 @@ function renderTrafficData(d) {
   const dateStr = new Date(d.updated).toLocaleDateString(
     lang==='it'?'it-IT':lang==='en'?'en-GB':'de-CH', {day:'numeric',month:'short'});
 
+  // Normalize: handle both old format (south/north/all) and new format (incidents_south/incidents_north/incidents_all)
+  if (!d.incidents_all && d.all)           d.incidents_all   = d.all;
+  if (!d.incidents_south && d.south)       d.incidents_south = d.south;
+  if (!d.incidents_north && d.north)       d.incidents_north = d.north;
+
+  // Derive tunnel.status from incidents if missing (old format compat)
+  if (!tun.status) {
+    const allInc = d.incidents_all || [];
+    const sevOrder = ['critical','high','medium','info'];
+    const worst = allInc.find(i => i.is_tunnel && sevOrder.includes(i.severity))?.severity;
+    tun.status = worst || (allInc.length === 0 ? 'clear' : 'info');
+  }
+  // Old format: if tunnel.north.severity is 'critical' but due to side road — check text
+  const isSideRoad = (text) => text && /göschenenalp|sustenpass|oberalp|furka|grimsel/i.test(text);
+  if (isSideRoad(tun.north?.text)) { tun.north = {severity:'clear', delay_min:null, queue_km:null, text:null}; tun.status='clear'; }
+  if (isSideRoad(tun.south?.text)) { tun.south = {severity:'clear', delay_min:null, queue_km:null, text:null}; }
+
   // ── Remove the old "no data" hint ────────────────────────
   const liveNote = document.getElementById('t-live-note');
   if (liveNote) liveNote.style.display = 'none';
