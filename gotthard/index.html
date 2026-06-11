@@ -739,7 +739,7 @@ const T = {
     trafficDirSouth:'Richtung S\u00fcden \u2193', trafficDirNorth:'Richtung Norden \u2191',
     trafficVsSouth:'\u2193 Richtung S\u00fcden', trafficVsNorth:'\u2191 Richtung Norden',
     trafficFallback:'Echtzeit-Staumeldungen direkt abrufen:',
-    trafficFree:'Frei', trafficJam:'Stau', trafficSlow:'Stockend',
+    trafficClosed:'Gesperrt', trafficFree:'Frei', trafficJam:'Stau', trafficSlow:'Stockend',
     trafficUpdated:'Aktualisiert',
     trafficGithub:'Hinweis: Live-Staumeldungen via GitHub Actions Backend in Planung.',
     trafficNone:'Keine Meldungen auf dieser Strecke.',
@@ -801,7 +801,7 @@ const T = {
     trafficDirSouth:'Direzione Sud \u2193', trafficDirNorth:'Direzione Nord \u2191',
     trafficVsSouth:'\u2193 Direzione Sud', trafficVsNorth:'\u2191 Direzione Nord',
     trafficFallback:'Consultare direttamente il traffico in tempo reale:',
-    trafficFree:'Libero', trafficJam:'Coda', trafficSlow:'Rallentato',
+    trafficClosed:'Chiuso', trafficFree:'Libero', trafficJam:'Coda', trafficSlow:'Rallentato',
     trafficUpdated:'Aggiornato',
     trafficGithub:'Nota: bollettino live via GitHub Actions in programma.',
     trafficNone:'Nessuna segnalazione su questo percorso.',
@@ -864,7 +864,7 @@ const T = {
     trafficDirSouth:'Southbound \u2193', trafficDirNorth:'Northbound \u2191',
     trafficVsSouth:'\u2193 Southbound', trafficVsNorth:'\u2191 Northbound',
     trafficFallback:'Check real-time traffic reports directly:',
-    trafficFree:'Clear', trafficJam:'Congestion', trafficSlow:'Slow traffic',
+    trafficClosed:'Closed', trafficFree:'Clear', trafficJam:'Congestion', trafficSlow:'Slow traffic',
     trafficUpdated:'Updated',
     trafficGithub:'Note: Live traffic reports via GitHub Actions backend planned.',
     trafficNone:'No reports on this route.',
@@ -1206,6 +1206,141 @@ async function loadTrafficJson() {
 
   } catch(_) {
     // traffic.json not yet available – teaser stays visible
+  }
+}
+
+
+// ── READ traffic.json (GitHub Actions output) ─────────────────
+async function loadTrafficJson() {
+  try {
+    const res = await fetch('../traffic.json?t=' + Date.now(), {
+      signal: AbortSignal.timeout(5000)
+    });
+    if (!res.ok) return;
+    const d = await res.json();
+    if (!d || !d.updated) return;
+
+    const t = T[lang] || T.de;
+    const tunnel = d.tunnel || {};
+
+    // ── Portal cards: show real delay if available ──────────
+    const renderPortalWithData = (side, data) => {
+      if (!data) return;
+      const waitEl = document.getElementById('wait-' + side);
+      const updEl  = document.getElementById('update-' + side);
+      if (waitEl) {
+        if (data.delay_min !== null && data.delay_min !== undefined) {
+          waitEl.textContent = data.delay_min;
+          waitEl.style.color = data.severity === 'critical' ? '#C0392B'
+            : data.severity === 'high' ? '#E67E22'
+            : 'var(--text-primary)';
+        } else {
+          waitEl.textContent = '0';
+        }
+      }
+      if (updEl) {
+        const ts = new Date(d.updated).toLocaleTimeString('de-CH', {hour:'2-digit', minute:'2-digit'});
+        updEl.textContent = (t.updated || 'Aktualisiert') + ': ' + ts + ' · ASTRA live';
+      }
+    };
+
+    renderPortalWithData('north', tunnel.south); // north portal → southbound flow
+    renderPortalWithData('south', tunnel.north); // south portal → northbound flow
+
+    // ── Status banner: show real summary ────────────────────
+    const banner = document.getElementById('status-banner');
+    const statusText = document.getElementById('status-text');
+    if (!banner || !statusText) return;
+
+    const hasIncidents = d.total_incidents > 0;
+    const maxSeverity = (['critical','high','medium','low']).find(s =>
+      (d.all || []).some(i => i.severity === s)) || 'low';
+
+    if (hasIncidents) {
+      const colorMap = {
+        critical: { cls: 'status-banner red',  icon: '🔴' },
+        high:     { cls: 'status-banner gold',  icon: '🟠' },
+        medium:   { cls: 'status-banner gold',  icon: '🟡' },
+        low:      { cls: 'status-banner green', icon: '🟢' },
+      };
+      const cfg = colorMap[maxSeverity] || colorMap.low;
+      banner.className = cfg.cls;
+      banner.querySelector('.status-icon').textContent = cfg.icon;
+
+      // Show top incidents
+      const topIncidents = (d.all || []).slice(0, 3).map(i => {
+        const dir = i.direction === 'south' ? (t.northDir || 'Richtung Süden')
+                  : i.direction === 'north' ? (t.southDir || 'Richtung Norden')
+                  : '';
+        const delay = i.delay_min ? i.delay_min + ' min' : '';
+        const queue = i.queue_km ? i.queue_km + ' km' : '';
+        const meta  = [dir, delay, queue].filter(Boolean).join(' · ');
+        return `<div style="margin-bottom:6px;"><span style="font-weight:600;">${meta ? meta + ': ' : ''}</span>${i.description.slice(0,100)}</div>`;
+      }).join('');
+
+      const ts = new Date(d.updated).toLocaleTimeString('de-CH', {hour:'2-digit', minute:'2-digit'});
+      statusText.innerHTML = topIncidents +
+        `<div style="margin-top:8px;font-size:11px;opacity:.7;">ASTRA · ${ts}</div>`;
+    } else {
+      banner.className = 'status-banner green';
+      banner.querySelector('.status-icon').textContent = '🟢';
+      const ts = new Date(d.updated).toLocaleTimeString('de-CH', {hour:'2-digit', minute:'2-digit'});
+      statusText.innerHTML = (t.statusFree || 'Kein Stau. Freie Durchfahrt.') +
+        `<span style="font-size:11px;opacity:.7;margin-left:8px;">ASTRA · ${ts}</span>`;
+    }
+
+    // ── Traffic section: show full incident list ─────────────
+    const trafficNote = document.getElementById('t-traffic-github-note');
+    const southList   = document.getElementById('traffic-south-list');
+    const northList   = document.getElementById('traffic-north-list');
+    const liveDiv     = document.getElementById('traffic-live');
+
+    if (trafficNote) trafficNote.style.display = 'none';
+    if (liveDiv)     liveDiv.style.display = '';
+
+    const renderList = (el, countEl, items) => {
+      if (!el) return;
+      const sevColor = { critical:'#7F0000', high:'#C0392B', medium:'#E67E22', low:'#1B6B45' };
+      const sevBg    = { critical:'#FDECEA', high:'#FDECEA', medium:'#FEF3E2', low:'var(--accent-pale)' };
+      const sevLabel = {
+        critical: t.trafficClosed || 'Gesperrt',
+        high:     t.trafficJam    || 'Stau',
+        medium:   t.trafficSlow   || 'Stockend',
+        low:      t.trafficFree   || 'Frei',
+      };
+      if (!items || items.length === 0) {
+        el.innerHTML = `<div style="padding:10px 14px;font-size:12px;color:var(--accent);">${t.trafficNone || 'Keine Meldungen.'}</div>`;
+        if (countEl) { countEl.textContent = '✓'; countEl.style.color = 'var(--accent)'; }
+        return;
+      }
+      el.innerHTML = items.map(item => {
+        const s = item.severity || 'low';
+        const delay = item.delay_min ? ' · ' + item.delay_min + ' min' : '';
+        const queue = item.queue_km  ? ' · ' + item.queue_km  + ' km'  : '';
+        return `<div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:11px;line-height:1.5;">
+          <div style="display:inline-block;padding:1px 6px;border-radius:4px;background:${sevBg[s]};color:${sevColor[s]};font-size:10px;font-weight:600;margin-bottom:3px;">${sevLabel[s]}${delay}${queue}</div>
+          <div style="color:var(--text-secondary);">${item.description.slice(0,200)}</div>
+        </div>`;
+      }).join('');
+      if (countEl) {
+        countEl.textContent = items.length;
+        const s = items[0]?.severity || 'low';
+        countEl.style.background = sevBg[s];
+        countEl.style.color = sevColor[s];
+      }
+    };
+
+    renderList(southList, document.getElementById('traffic-south-count'), d.south || []);
+    renderList(northList, document.getElementById('traffic-north-count'), d.north || []);
+    const updEl = document.getElementById('traffic-live-updated');
+    if (updEl) {
+      const ts = new Date(d.updated).toLocaleTimeString('de-CH', {hour:'2-digit',minute:'2-digit'});
+      updEl.textContent = (t.trafficUpdated || 'Aktualisiert') + ': ' + ts + ' · ASTRA / opentransportdata.swiss';
+    }
+
+  } catch(e) {
+    // traffic.json not yet available — teaser stays visible
+    console.log('traffic.json not available:', e.message);
   }
 }
 
