@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wetter &amp; Segelbedingungen Cannobio | Lago Maggiore Wind, Wellen &amp; Webcams</title>
-<meta name="description" content="Aktuelle Wetterprognose für Cannobio am Lago Maggiore mit Temperatur, Niederschlag, UV-Index und Luftqualität. Inklusive 7-Tage-Trend und Live-Webcams.">
+<title>Wetter Cannobio – Lago Maggiore | Wind, Wellen & Segeln</title>
+<meta name="description" content="Aktuelles Segelwetter für Cannobio am Lago Maggiore. Temperatur, Wind, Wellen, UV-Index, 6-Tage-Prognose und ARPA-Warnungen.">
 <meta name="keywords" content="Wetter Cannobio, Meteo Cannobio, Lago Maggiore, Wettervorhersage, previsioni meteo">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://giovanola.github.io/cannobio/meteo/">
@@ -14,8 +14,8 @@
 <link rel="alternate" hreflang="x-default" href="https://giovanola.github.io/cannobio/meteo/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Segelwetter Cannobio am Lago Maggiore">
-<meta property="og:description" content="Previsioni meteo, qualità dell'aria, webcam e allerte per Cannobio sul Lago Maggiore. Katharina ed Ettore avrebbero avuto grande gioia nel vederlo.">
+<meta property="og:title" content="Segelwetter Cannobio · Lago Maggiore">
+<meta property="og:description" content="Wind, Wellen und Segelbedingungen in Cannobio. Live-Daten, UV-Index und 6-Tage-Prognose.">
 <meta property="og:url" content="https://giovanola.github.io/cannobio/meteo/">
 <meta property="og:image" content="https://giovanola.github.io/cannobio/cannobio-2026.jpg">
 <meta property="og:image:width" content="1200">
@@ -36,306 +36,53 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#FAFAF9;--surface:#FFFFFF;--border:#E8E6E1;
-  --text-primary:#1A1A18;--text-secondary:#6B6860;--text-tertiary:#9B9890;
-  --accent:#1B6B45;--accent-pale:#EBF7F1;
-  --gold:#B7791F;--gold-pale:#FFFBEB;
-  --sky:#1565C0;--sky-pale:#E3F2FD;
-  --rel-high:#1B6B45;--rel-mid:#B7791F;--rel-low:#C0392B;
-  --radius-sm:6px;--radius-md:12px;--radius-lg:20px;
-  --shadow-sm:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
-  --shadow-md:0 4px 16px rgba(0,0,0,.07),0 2px 6px rgba(0,0,0,.04);
-  --shadow-lg:0 12px 40px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);
-  --font-display:'Fraunces',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;
-  --max-w:900px;--transition:200ms cubic-bezier(.4,0,.2,1)
-}
+:root {
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --bg: #F6F9FC;
+    --surface: #FFFFFF;
+    --border: #DDE1E8;
+    --border-light: #EEF1F5;
+    --text-primary: #0A2540;
+    --text-secondary: #425466;
+    --text-tertiary: #8898AA;
+    --accent: #1B6B45;
+    --accent-pale: #ECFDF5;
+    --accent-hover: #155534;
+    --sky: #0570DE;
+    --sky-pale: #E7F0FD;
+    --gold: #C05621;
+    --gold-pale: #FFF8F0;
+    --red: #DF1B41;
+    --red-pale: #FFF0F3;
+    --green-pale: #ECFDF5;
+    --max-w: 860px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,.08), 0 2px 4px -1px rgba(0,0,0,.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,.08), 0 4px 6px -2px rgba(0,0,0,.05);
+    --transition: .15s ease;
+  }
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary);line-height:1.6;min-height:100vh;overflow-x:hidden}
 
 /* TOPBAR */
-.topbar{position:sticky;top:0;z-index:100;background:rgba(250,250,249,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 clamp(16px,4vw,24px)}
-.topbar-inner{max-width:var(--max-w);margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.topbar-brand{display:flex;align-items:center;gap:10px}
-.topbar-icon{width:28px;height:28px;background:var(--sky);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.topbar-icon svg{width:16px;height:16px;fill:#fff}
-.topbar-name{font-family:var(--font-display);font-size:15px;font-weight:300;color:var(--text-primary);white-space:nowrap}
-.topbar-right{display:flex;align-items:center;gap:8px}
-.update-chip{font-size:11px;font-weight:500;color:var(--text-tertiary);background:var(--border);border-radius:20px;padding:3px 10px;white-space:nowrap}
-.lang-switcher{display:flex;gap:2px;background:var(--border);border-radius:8px;padding:2px}
-.lang-btn{padding:4px 10px;border-radius:6px;border:none;background:transparent;color:var(--text-secondary);font-family:var(--font-body);font-size:12px;font-weight:500;cursor:pointer;transition:all var(--transition);white-space:nowrap}
-.lang-btn.active{background:var(--surface);color:var(--text-primary);box-shadow:var(--shadow-sm)}
-
-/* SITE NAV */
-
-
-
-
-
-/* OFFLINE DATA CHIP */
-.data-chip-bar{max-width:var(--max-w);margin:0 auto;padding:10px clamp(16px,4vw,24px) 0;display:none}
-.data-chip-bar.visible{display:block}
-.data-chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:var(--gold);background:var(--gold-pale);border:1px solid #FDE68A;border-radius:20px;padding:4px 12px}
-
-/* HERO */
-.hero{padding:clamp(24px,5vw,52px) clamp(16px,4vw,24px) 8px;max-width:var(--max-w);margin:0 auto}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sky);margin-bottom:20px}
-.hero-eyebrow::before{content:'';width:20px;height:1px;background:var(--sky)}
-.hero h1{font-family:var(--font-display);font-size:clamp(32px,6vw,54px);font-weight:300;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;max-width:640px}
-.hero h1 em{font-style:italic;color:var(--sky)}
-.hero-sub{font-size:16px;color:var(--text-secondary);font-weight:300;max-width:520px;line-height:1.7}
-
-/* CONTENT */
-.content{max-width:var(--max-w);margin:0 auto;padding:8px clamp(16px,4vw,24px) 80px;overflow:hidden}
-.section-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px}
-.view-toggle-wrap{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
-.view-toggle{display:flex;gap:2px;background:var(--border);border-radius:10px;padding:3px}
-.view-btn{padding:6px 18px;border-radius:8px;border:none;background:transparent;color:var(--text-secondary);font-family:var(--font-body);font-size:13px;font-weight:500;cursor:pointer;transition:all var(--transition);white-space:nowrap}
-.view-btn.active{background:var(--sky);color:#fff;font-weight:600;box-shadow:var(--shadow-sm)}
-
-/* CURRENT CARD */
-.current-card{background:var(--sky);border-radius:var(--radius-lg);padding:28px 32px;margin-bottom:12px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.current-left .label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.65;margin-bottom:6px}
-.current-left .temp-big{font-family:var(--font-display);font-size:clamp(48px,10vw,72px);font-weight:300;line-height:1;letter-spacing:-.03em}
-.current-left .condition{font-size:15px;font-weight:300;opacity:.8;margin-top:6px}
-.current-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 24px}
-.current-meta-item{text-align:center}
-.current-meta-item .val{font-family:var(--font-display);font-size:22px;font-weight:300;letter-spacing:-.02em}
-.current-meta-item .lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.6;margin-top:2px}
-@media(min-width:640px){
-  .current-meta{grid-template-columns:repeat(4,1fr)}
-  .current-card{flex-wrap:nowrap}
-}
-
-/* UV PROTECTION BLOCK */
-.uv-block{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);padding:16px 20px;margin-bottom:12px}
-.uv-block-title{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:12px}
-.uv-block-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:10px}
-.uv-item{flex:1;padding:12px 10px;text-align:center;border-right:1px solid var(--border)}
-.uv-item:last-child{border-right:none}
-.uv-item-val{font-family:var(--font-display);font-size:20px;font-weight:300;letter-spacing:-.02em;line-height:1;margin-bottom:4px}
-.uv-item-lbl{font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--text-tertiary)}
-.uv-none{background:#FEF2F2}.uv-none .uv-item-val{color:#C0392B}
-.uv-spf30{background:#FFFBEB}.uv-spf30 .uv-item-val{color:#B7791F}
-.uv-spf50{background:#ECFDF5}.uv-spf50 .uv-item-val{color:#1B6B45}
-.uv-block-note{font-size:11px;color:var(--text-tertiary);line-height:1.55}
-
-/* FORECAST */
-.forecast-section{margin-bottom:32px}
-.forecast-grid{display:grid;gap:12px}
-.forecast-grid.view-3{grid-template-columns:repeat(3,1fr)}
-.forecast-grid.view-6{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
-.forecast-grid.view-7{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
-.day-card{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);overflow:hidden;transition:box-shadow var(--transition),transform var(--transition)}
-.day-card.today{border-color:var(--sky);box-shadow:0 0 0 2px rgba(21,101,192,.12)}
-.day-card-top{padding:12px 14px 10px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.day-name-label{font-size:13px;font-weight:600;color:var(--text-primary)}
-.day-date-label{font-size:11px;color:var(--text-tertiary);margin-top:1px}
-.today-badge{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--sky);color:#fff;border-radius:20px;padding:2px 8px}
-.day-card-body{padding:12px 14px 14px}
-.wx-icon{display:flex;align-items:center;margin-bottom:10px}
-.wx-icon svg{width:32px;height:32px}
-.temp-row{display:flex;align-items:baseline;gap:6px;margin-bottom:12px}
-.temp-high{font-family:var(--font-display);font-size:26px;font-weight:300;color:var(--text-primary);letter-spacing:-.02em;line-height:1}
-.temp-low{font-size:13px;color:var(--text-tertiary)}
-.stat-rows{display:flex;flex-direction:column;gap:6px}
-.stat-row{display:flex;align-items:center;justify-content:space-between;gap:6px}
-.stat-label{font-size:10px;color:var(--text-tertiary);font-weight:500;white-space:nowrap}
-.stat-value{font-size:11px;font-weight:600;color:var(--text-primary);white-space:nowrap}
-.stat-bar-wrap{flex:1;height:3px;background:var(--border);border-radius:2px;overflow:hidden}
-.stat-bar{height:100%;border-radius:2px}
-.bar-rain{background:#1E88E5}.bar-wind{background:#78909C}.bar-sun{background:#F59E0B}.bar-hum{background:#26A69A}
-.rel-row{margin-top:10px;padding-top:8px;border-top:1px solid var(--border)}
-.rel-label-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
-.rel-label{font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary)}
-.rel-pct{font-size:11px;font-weight:700}
-.rel-pct.high{color:var(--rel-high)}.rel-pct.mid{color:var(--rel-mid)}.rel-pct.low{color:var(--rel-low)}
-.rel-bar-wrap{height:3px;background:var(--border);border-radius:2px;overflow:hidden}
-.rel-bar{height:100%;border-radius:2px}
-.rel-bar.high{background:var(--rel-high)}.rel-bar.mid{background:var(--rel-mid)}.rel-bar.low{background:var(--rel-low)}
-.rel-note{font-size:9px;color:var(--text-tertiary);margin-top:3px;line-height:1.4}
-
-/* RELIABILITY LEGEND */
-.rel-legend{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);padding:16px 20px;margin-bottom:48px}
-.rel-legend-title{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:10px}
-.rel-legend-rows{display:flex;flex-direction:column;gap:6px}
-.rel-legend-row{display:flex;align-items:baseline;gap:8px}
-.rel-legend-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:3px}
-.rel-legend-text{font-size:12px;color:var(--text-secondary);line-height:1.5}
-.rel-legend-text strong{color:var(--text-primary);font-weight:600}
-
-/* AIR QUALITY */
-.aqi-section{margin-bottom:32px}
-.aqi-card{border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);overflow:hidden;box-shadow:var(--shadow-sm)}
-.aqi-header{padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.aqi-badge{font-size:13px;font-weight:700;padding:4px 12px;border-radius:20px}
-.aqi-badge.good{background:#D1FAE5;color:#065F46}
-.aqi-badge.fair{background:#FEF3C7;color:#92400E}
-.aqi-badge.moderate{background:#FFE4E6;color:#9F1239}
-.aqi-badge.poor{background:#EDE9FE;color:#4C1D95}
-.aqi-badge.very-poor{background:#FEF2F2;color:#7F1D1D}
-.aqi-label-text{font-size:13px;font-weight:500;color:var(--text-secondary)}
-.aqi-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-@media(max-width:640px){.aqi-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.aqi-item{border-right:none;border-bottom:1px solid var(--border)}}
-.aqi-item{padding:14px 18px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
-.aqi-item:last-child{border-right:none}
-.aqi-item-val{font-family:var(--font-display);font-size:22px;font-weight:300;color:var(--text-primary);letter-spacing:-.02em;line-height:1}
-.aqi-item-unit{font-size:10px;color:var(--text-tertiary);margin-left:2px}
-.aqi-item-label{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-top:4px}
-.aqi-item-bar{height:3px;background:var(--border);border-radius:2px;margin-top:6px;overflow:hidden}
-.aqi-item-bar-fill{height:100%;border-radius:2px}
-
-/* WARNINGS */
-.warnings-section{margin-bottom:48px;display:none}
-.warning-card{display:flex;align-items:flex-start;gap:14px;padding:14px 18px;border-radius:var(--radius-md);border:1px solid;margin-bottom:8px}
-.warning-card.level-1{border-color:#FDE68A;background:#FFFBEB}
-.warning-card.level-2{border-color:#FCA5A5;background:#FEF2F2}
-.warning-card.level-3{border-color:#EF4444;background:#FEE2E2}
-.warning-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700}
-.level-1 .warning-icon{background:#FCD34D;color:#78350F}
-.level-2 .warning-icon{background:#F87171;color:#fff}
-.level-3 .warning-icon{background:#EF4444;color:#fff}
-.warning-body{flex:1}
-.warning-title{font-size:13px;font-weight:600;color:var(--text-primary)}
-.warning-detail{font-size:12px;color:var(--text-secondary);margin-top:2px;line-height:1.5}
-.warning-level-label{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);margin-top:4px}
-.warnings-ok{padding:14px 18px;border-radius:var(--radius-md);border:1px solid #A7F3D0;background:#ECFDF5;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--accent);font-weight:500}
-.warnings-ok-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
-.ext-link{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--sky);text-decoration:none;border:1px solid var(--sky-pale);background:var(--sky-pale);padding:5px 12px;border-radius:20px}
-.official-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-
-/* NEWS */
-.news-section{margin-bottom:64px}
-.news-grid{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);background:var(--surface)}
-.news-item{display:block;padding:16px 20px;border-bottom:1px solid var(--border);text-decoration:none;transition:background var(--transition)}
-.news-item:last-of-type{border-bottom:none}
-.news-item-meta{font-size:11px;color:var(--text-tertiary);font-weight:500;margin-bottom:4px;display:flex;align-items:center;gap:6px}
-.news-item-meta::before{content:'';display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0}
-.news-item-title{font-size:14px;font-weight:500;color:var(--text-primary);line-height:1.5}
-.news-item-excerpt{font-size:12px;color:var(--text-secondary);margin-top:4px;line-height:1.55}
-.news-item-source{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);margin-top:6px}
-.news-loading{padding:24px 20px;text-align:center;font-size:13px;color:var(--text-tertiary)}
-.news-footer{padding:12px 20px;background:var(--bg);border-top:1px solid var(--border)}
-.news-more{font-size:12px;color:var(--sky);text-decoration:none;font-weight:500}
-
-/* WEBCAMS */
-.webcam-section{margin-bottom:64px}
-.cam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;width:100%}
-.cam-card{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);overflow:hidden;cursor:pointer;transition:box-shadow var(--transition),transform var(--transition)}
-.cam-img-wrap{position:relative;aspect-ratio:16/9;overflow:hidden;background:#e0e0e0}
-.cam-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform var(--transition)}
-.cam-overlay{position:absolute;inset:0;background:rgba(0,0,0,0);display:flex;align-items:center;justify-content:center;transition:background var(--transition)}
-.cam-zoom-icon{opacity:0;transition:opacity var(--transition)}
-.cam-zoom-icon svg{width:26px;height:26px;fill:#fff;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
-.live-dot{position:absolute;top:8px;left:8px;display:flex;align-items:center;gap:5px;background:rgba(0,0,0,.5);color:#fff;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:20px;backdrop-filter:blur(4px)}
-.live-pulse{width:6px;height:6px;border-radius:50%;background:#F44336;animation:pulse 1.4s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
-.cam-footer{padding:8px 12px;border-top:1px solid var(--border)}
-.cam-name{font-size:12px;font-weight:600;color:var(--text-primary)}
-.cam-location{font-size:11px;color:var(--text-tertiary);margin-top:1px}
-
-/* LIGHTBOX */
-.lightbox{display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
-.lightbox.open{display:flex}
-.lightbox-inner{position:relative;max-width:960px;width:100%;cursor:default}
-.lightbox-img{width:100%;border-radius:var(--radius-md);display:block;box-shadow:var(--shadow-lg)}
-.lightbox-caption{margin-top:12px;text-align:center;font-size:13px;color:rgba(255,255,255,.65)}
-.lightbox-close{position:absolute;top:-16px;right:-16px;width:36px;height:36px;border-radius:50%;border:none;background:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md)}
-
-/* INFO + FOOTER */
-.info-block{border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);padding:20px 24px;margin-bottom:64px}
-.info-block p{font-size:13px;color:var(--text-secondary);line-height:1.65}
-.info-block a{color:var(--sky);text-decoration:none}
-footer{border-top:1px solid var(--border);padding:24px;text-align:center}
-footer p{font-size:12px;color:var(--text-tertiary)}
-footer a{color:var(--text-secondary);text-decoration:none}
-
-/* WIND & WAVE SECTION */
-.wind-card{border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);overflow:hidden;box-shadow:var(--shadow-sm)}
-.wind-top{display:flex;align-items:center;gap:24px;padding:20px 22px;border-bottom:1px solid var(--border);flex-wrap:wrap}
-.wind-main{display:flex;align-items:center;gap:16px;flex-shrink:0}
-.wind-compass{position:relative;width:72px;height:72px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;background:var(--bg)}
-.wind-compass-n,.wind-compass-s,.wind-compass-e,.wind-compass-w{position:absolute;font-size:9px;font-weight:700;color:var(--text-tertiary);letter-spacing:.04em}
-.wind-compass-n{top:4px;left:50%;transform:translateX(-50%)}
-.wind-compass-s{bottom:4px;left:50%;transform:translateX(-50%)}
-.wind-compass-e{right:4px;top:50%;transform:translateY(-50%)}
-.wind-compass-w{left:4px;top:50%;transform:translateY(-50%)}
-.wind-arrow{position:absolute;top:50%;left:50%;width:3px;height:26px;background:var(--sky);border-radius:2px;transform-origin:bottom center;transform:translateX(-50%) translateY(-100%) rotate(0deg);transition:transform 0.8s ease}
-.wind-values{flex:1}
-.wind-speed-big{font-family:var(--font-display);font-size:42px;font-weight:300;line-height:1;letter-spacing:-.03em;color:var(--text-primary)}
-.wind-speed-unit{font-size:12px;color:var(--text-tertiary);font-weight:500;margin-top:2px}
-.wind-dir-label{font-size:13px;color:var(--text-secondary);margin-top:4px;font-weight:500}
-.wind-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;flex:1;border-left:1px solid var(--border)}
-@media(max-width:600px){.wind-top{flex-direction:column;align-items:flex-start}.wind-stats{border-left:none;border-top:1px solid var(--border);width:100%;grid-template-columns:repeat(2,1fr)}}
-.wind-stat{padding:12px 16px;border-right:1px solid var(--border);text-align:center}
-.wind-stat:last-child{border-right:none}
-.wind-stat-val{font-family:var(--font-display);font-size:20px;font-weight:300;color:var(--text-primary);letter-spacing:-.02em}
-.wind-stat-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-top:3px}
-.sail-bar{display:flex;align-items:center;gap:10px;padding:12px 18px;border-bottom:none;background:var(--surface)!important}
-.sail-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.sail-info-btn{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;border:1px solid var(--text-tertiary);background:transparent;color:var(--text-tertiary);font-size:9px;font-weight:700;cursor:pointer;flex-shrink:0;transition:all var(--transition);margin-left:4px}
-.sail-info-btn:hover{background:var(--text-tertiary);color:#fff}
-
-/* Sail popup */
-.sail-popup-overlay{display:none;position:fixed;inset:0;z-index:499;background:rgba(0,0,0,.3);backdrop-filter:blur(2px)}
-.sail-popup-overlay.open{display:block}
-.sail-popup{display:none;position:fixed;z-index:500;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);box-shadow:var(--shadow-lg);padding:20px;max-width:340px;width:calc(100vw - 48px)}
-.sail-popup.open{display:block}
-.sail-popup-title{font-family:var(--font-display);font-size:18px;font-weight:300;margin-bottom:8px;color:var(--text-primary)}
-.sail-popup-body{font-size:13px;color:var(--text-secondary);line-height:1.65}
-.sail-popup-disc{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:11px;color:var(--text-tertiary);line-height:1.6}
-.sail-popup-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:18px;cursor:pointer;color:var(--text-tertiary)}
-.sail-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
-.sail-status{font-size:13px;font-weight:600;color:var(--text-primary)}
-.sail-note{font-size:11px;color:var(--text-secondary);margin-top:2px}
-.wind-chart-wrap{padding:16px 22px}
-.wind-chart-label{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:10px}
-.wind-chart{display:flex;align-items:flex-end;gap:3px;height:80px;padding-top:18px}
-.wind-chart-bar{flex:1;border-radius:2px 2px 0 0;min-height:3px;cursor:default;position:relative}
-.wind-chart-labels{display:flex;justify-content:space-between;margin-top:5px}
-.wind-chart-lbl{font-size:10px;color:var(--text-tertiary)}
-.wind-disclaimer{padding:10px 22px 14px;font-size:11px;color:var(--text-tertiary);border-top:1px solid var(--border);line-height:1.5}
-
-/* AQI INFO POPUP */
-.aqi-item { position: relative; }
-.aqi-info-btn { display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1px solid var(--text-tertiary); background: transparent; color: var(--text-tertiary); font-size: 9px; font-weight: 700; cursor: pointer; margin-left: 4px; vertical-align: middle; flex-shrink: 0; transition: all var(--transition); }
-.aqi-info-btn:hover { background: var(--text-tertiary); color: #fff; }
-.aqi-item-name-row { display: flex; align-items: center; margin-top: 4px; }
-.aqi-item-desc { font-size: 10px; color: var(--text-secondary); margin-top: 3px; line-height: 1.4; }
-.aqi-popup { display: none; position: fixed; z-index: 500; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 20px; max-width: 320px; width: calc(100vw - 48px); }
-.aqi-popup.open { display: block; }
-.aqi-popup-overlay { display: none; position: fixed; inset: 0; z-index: 499; background: rgba(0,0,0,0.3); backdrop-filter: blur(2px); }
-.aqi-popup-overlay.open { display: block; }
-.aqi-popup-title { font-family: var(--font-display); font-size: 18px; font-weight: 300; margin-bottom: 8px; color: var(--text-primary); }
-.aqi-popup-body { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
-.aqi-popup-source { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-tertiary); }
-.aqi-popup-source a { color: var(--sky); text-decoration: none; }
-.aqi-popup-close { position: absolute; top: 12px; right: 14px; background: none; border: none; font-size: 18px; cursor: pointer; color: var(--text-tertiary); line-height: 1; }
-/* HOVER */
-@media(hover:hover){
-  .day-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
-  .cam-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
-  .cam-card:hover .cam-img-wrap img{transform:scale(1.03)}
-  .cam-card:hover .cam-overlay{background:rgba(0,0,0,.18)}
-  .cam-card:hover .cam-zoom-icon{opacity:1}
-  .news-item:hover{background:#F7F6F3}
-  .ext-link:hover{background:#BBDEFB}
-  .lang-btn:not(.active):hover{background:rgba(255,255,255,.5);color:var(--text-primary)}
-}
-@media(hover:none){.cam-zoom-icon{opacity:1}.cam-overlay{background:rgba(0,0,0,.08)}}
-
-/* BREAKPOINTS */
-@media(max-width:640px){
-  .update-chip{display:none}
-  .current-card{flex-direction:column}
-  .forecast-grid.view-3{grid-template-columns:repeat(3,1fr)}
-  .forecast-grid.view-7{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:480px){
-  .forecast-grid.view-7{grid-template-columns:repeat(2,1fr)}
-}
-
+  .topbar { position:sticky; top:0; z-index:200; background:rgba(255,255,255,.92); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid var(--border); }
+  .topbar-inner { max-width:var(--max-w); margin:0 auto; padding:0 clamp(16px,4vw,24px); height:54px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .topbar-brand { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
+  .topbar-icon { width:28px; height:28px; color:var(--accent); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .topbar-name { font-family:var(--font-display); font-size:15px; font-weight:300; color:var(--text-primary); letter-spacing:-.01em; }
+  .topbar-right { display:flex; align-items:center; gap:10px; }
+  .lang-switcher { display:flex; background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-sm); padding:2px; gap:1px; }
+  .lang-btn { font-size:11px; font-weight:600; color:var(--text-tertiary); background:none; border:none; padding:3px 8px; border-radius:4px; cursor:pointer; transition:all var(--transition); letter-spacing:.04em; }
+  .lang-btn:hover { color:var(--text-primary); }
+  .lang-btn.active { background:var(--surface); color:var(--text-primary); box-shadow:0 1px 3px rgba(0,0,0,.12); }
+  .nav-btn { width:32px; height:32px; display:flex; align-items:center; justify-content:center; background:none; border:none; cursor:pointer; color:var(--text-secondary); border-radius:var(--radius-sm); transition:all var(--transition); }
+  .nav-btn:hover { background:var(--bg); color:var(--text-primary); }
+  .nav-btn svg { width:16px; height:16px; fill:currentColor; }
+  
   /* ── DROPDOWN NAVIGATION ──────────────────────────────── */
   .nav-btn{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;background:none;border:none;cursor:pointer;color:var(--text-secondary);transition:background .15s ease;}
   .nav-btn:hover{background:var(--border);}
@@ -356,15 +103,36 @@ footer a{color:var(--text-secondary);text-decoration:none}
   .nav-item-sub{font-size:11px;color:var(--text-tertiary);margin-top:1px;line-height:1.3;}
   @media(max-width:380px){.nav-dropdown{right:8px;width:calc(100vw - 16px);}}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Wetter & Segelwetter Cannobio",
+  "url": "https://giovanola.github.io/cannobio/meteo/",
+  "description": "Aktuelles Segelwetter für Cannobio am Lago Maggiore mit Wind, Wellen und UV-Index.",
+  "inLanguage": ["de","it","en"],
+  "about": {
+    "@type": "Place",
+    "name": "Cannobio",
+    "geo": {"@type":"GeoCoordinates","latitude":46.0624,"longitude":8.6977},
+    "containedIn": {"@type":"BodyOfWater","name":"Lago Maggiore"}
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Cannobio","item":"https://giovanola.github.io/cannobio/"},
+      {"@type":"ListItem","position":2,"name":"Wetter","item":"https://giovanola.github.io/cannobio/meteo/"}
+    ]
+  }
+}
+</script>
 </head>
 <body>
 
 <header class="topbar">
   <div class="topbar-inner">
     <a class="topbar-brand" href="../">
-      <div class="topbar-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-      </div>
+      <div class="topbar-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" style="width:100%;height:100%;"><text x="250" y="245" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="230" fill="currentColor">C</text><path fill="currentColor" d="M110 305 C175 283,245 283,308 305 C348 318,390 318,430 298 C388 334,323 340,250 322 C183 307,143 307,110 305 Z"/><path fill="currentColor" d="M185 335 C238 318,293 318,346 335 C315 355,260 360,185 335 Z"/></svg></div>
       <span class="topbar-name" id="t-brand">Cannobio</span>
     </a>
     <div class="topbar-right">
@@ -680,6 +448,7 @@ footer a{color:var(--text-secondary);text-decoration:none}
   <p style="margin-top:6px;font-size:11px;color:var(--text-tertiary);opacity:0.7;">
     v1.0 &mdash; Juni 2026 &mdash; <a href="https://giovanola.github.io/cannobio/" style="color:var(--text-tertiary);text-decoration:none;" target="_blank" rel="noopener">giovanola.github.io/cannobio</a>
   </p>
+<div class="footer-v" title="v3.4: Cannobio-Logo, Stripe-Design, SEO schema.org, vollständige IT/EN-Übersetzungen, ARPA/AQI/UV, Sektions-Reordering" style="margin-top:6px;font-size:10px;color:var(--text-tertiary);opacity:.7;display:flex;align-items:center;gap:6px;"><span style="font-weight:600;color:var(--accent);">v3.4</span><span>·</span><span id="footer-date-str">11. Juni 2026</span><span>·</span><a href="https://giovanola.github.io/cannobio/meteo/" style="color:inherit;text-decoration:none;">giovanola.github.io/cannobio/meteo/</a></div>
 </footer>
 
 <script>
@@ -983,6 +752,11 @@ function setLang(l){
   document.documentElement.lang=l;
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
   applyT();
+  updateSEO();
+
+  // Footer date per language
+  const _fds = document.getElementById('footer-date-str');
+  if (_fds) _fds.textContent = lang==='it' ? '11 giugno 2026' : lang==='en' ? '11 June 2026' : '11. Juni 2026';
   updateNavLabels();
   renderRelLegend();
   if(globalData)renderCards(globalData,activeView);
@@ -1928,6 +1702,24 @@ function updateNavLabels(){
     if(el){const b=el.href.split('?')[0];el.href=b+(lang!=='de'?'?lang='+lang:'');}
   });
 }
+
+  // Dynamic SEO per language
+  const SEO = {
+    de: { title:'Wetter Cannobio – Lago Maggiore | Wind, Wellen & Segeln', desc:'Aktuelles Segelwetter für Cannobio am Lago Maggiore. Temperatur, Wind, Wellen, UV-Index, 6-Tage-Prognose und ARPA-Warnungen.', ogTitle:'Segelwetter Cannobio · Lago Maggiore', ogDesc:'Wind, Wellen und Segelbedingungen in Cannobio. Live-Daten, UV-Index und 6-Tage-Prognose.' },
+    it: { title:'Meteo Cannobio – Lago Maggiore | Vento, Onde & Vela', desc:'Meteo vela per Cannobio sul Lago Maggiore. Temperatura, vento, onde, indice UV, previsioni 6 giorni e allerte ARPA.', ogTitle:'Meteo vela Cannobio · Lago Maggiore', ogDesc:'Vento, onde e condizioni per la vela a Cannobio. Dati live, UV e previsioni 6 giorni.' },
+    en: { title:'Weather Cannobio – Lake Maggiore | Wind, Waves & Sailing', desc:'Sailing weather for Cannobio at Lake Maggiore. Temperature, wind, waves, UV index, 6-day forecast and ARPA alerts.', ogTitle:'Sailing Weather Cannobio · Lake Maggiore', ogDesc:'Wind, waves and sailing conditions in Cannobio. Live data, UV index and 6-day forecast.' },
+  };
+  function updateSEO() {
+    const s = SEO[lang] || SEO.de;
+    document.title = s.title;
+    document.documentElement.lang = lang==='it'?'it':lang==='en'?'en':'de';
+    const mDesc = document.querySelector('meta[name="description"]'); if(mDesc) mDesc.content = s.desc;
+    const ogT = document.querySelector('meta[property="og:title"]'); if(ogT) ogT.content = s.ogTitle;
+    const ogD = document.querySelector('meta[property="og:description"]'); if(ogD) ogD.content = s.ogDesc;
+    const ogL = document.querySelector('meta[property="og:locale"]');
+    if(ogL) ogL.content = lang==='it'?'it_IT':lang==='en'?'en_GB':'de_CH';
+  }
+
 </script>
 <!-- SAIL INFO POPUP -->
 <div class="sail-popup-overlay" id="sail-overlay" onclick="closeSailPopup()"></div>
