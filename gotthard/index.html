@@ -45,14 +45,14 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 .topbar-icon svg { width: 16px; height: 16px; fill: #fff; }
 .topbar-name { font-family: var(--font-display); font-size: 15px; font-weight: 300; color: var(--text-primary); white-space: nowrap; }
 .topbar-right { display: flex; align-items: center; gap: 8px; }
-.site-nav { display: flex; gap: 2px; background: var(--border); border-radius: 8px; padding: 2px; }
-.site-nav-link { padding: 4px 10px; border-radius: 6px; font-family: var(--font-body); font-size: 12px; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: all var(--transition); white-space: nowrap; }
-.site-nav-link:hover { color: var(--text-primary); }
-.site-nav-active { background: var(--surface); color: var(--text-primary); box-shadow: var(--shadow-sm); }
+
+
+
+
 .lang-switcher { display: flex; gap: 2px; background: var(--border); border-radius: 8px; padding: 2px; }
 .lang-btn { padding: 4px 10px; border-radius: 6px; border: none; background: transparent; color: var(--text-secondary); font-family: var(--font-body); font-size: 12px; font-weight: 500; cursor: pointer; transition: all var(--transition); }
 .lang-btn.active { background: var(--surface); color: var(--text-primary); box-shadow: var(--shadow-sm); }
-@media (max-width: 560px) { .topbar-name { display: none; } .site-nav-link { padding: 4px 8px; font-size: 11px; } }
+@media (max-width: 560px) { .topbar-name { display: none; }  }
 
 /* HERO */
 .hero { padding: clamp(40px,5vw,64px) clamp(16px,4vw,24px) 32px; max-width: var(--max-w); margin: 0 auto; }
@@ -77,14 +77,14 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 .status-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
 
 /* PORTAL CARDS */
-.portal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
-@media (max-width: 400px) { .portal-grid { grid-template-columns: 1fr; } }
-.portal-card { border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); overflow: hidden; box-shadow: var(--shadow-sm); }
+.portal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; min-width: 0; }
+@media (max-width: 360px) { .portal-grid { grid-template-columns: 1fr; } }
+.portal-card { border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); overflow: hidden; box-shadow: var(--shadow-sm); min-width: 0; }
 .portal-card-head { padding: 14px 18px 12px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
 .portal-name { font-size: 13px; font-weight: 600; color: var(--text-primary); }
 .portal-direction { font-size: 11px; color: var(--text-tertiary); font-weight: 400; }
 .portal-card-body { padding: 16px 18px 18px; }
-.wait-time { font-family: var(--font-display); font-size: 48px; font-weight: 300; line-height: 1; letter-spacing: -0.03em; color: var(--text-primary); }
+.wait-time { font-family: var(--font-display); font-size: clamp(32px, 8vw, 48px); font-weight: 300; line-height: 1; letter-spacing: -0.03em; color: var(--text-primary); }
 .wait-time.free { color: var(--green); }
 .wait-time.medium { color: var(--orange); }
 .wait-time.heavy { color: var(--red); }
@@ -187,22 +187,67 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
       <div class="topbar-icon">
         <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
       </div>
-      <span class="topbar-name">Cannobio</span>
+      <span class="topbar-name" id="t-brand">Cannobio</span>
     </a>
     <div class="topbar-right">
-      <nav class="site-nav">
-        <a class="site-nav-link" href="../meteo/" id="nav-meteo">Meteo</a>
-        <a class="site-nav-link" href="../rifiuti/" id="nav-rifiuti">Rifiuti</a>
-        <a class="site-nav-link site-nav-active" href="../gotthard/" id="nav-gotthard">Gotthard</a>
-      </nav>
       <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="de">DE</button>
-        <button class="lang-btn" data-lang="it">IT</button>
-        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn active" data-lang="de" onclick="setLang('de')">DE</button>
+        <button class="lang-btn" data-lang="it" onclick="setLang('it')">IT</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
       </div>
+      <button class="nav-btn" onclick="toggleNav()" aria-label="Menu" aria-expanded="false" id="nav-toggle">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+      </button>
     </div>
   </div>
 </header>
+
+<!-- NAV DROPDOWN OVERLAY -->
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()">
+  <div class="nav-dropdown" id="nav-dropdown" onclick="event.stopPropagation()">
+    <a class="nav-dropdown-item" href="../" id="nav-home">
+      <div class="nav-dropdown-icon" style="background:#EBF7F1;">
+        <svg viewBox="0 0 24 24" fill="#1B6B45"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-home-label">Portal</span>
+        <span class="nav-dropdown-sub" id="nav-home-sub">Cannobio am Lago Maggiore</span>
+      </div>
+    </a>
+    <a class="nav-dropdown-item" href="../meteo/" id="nav-meteo">
+      <div class="nav-dropdown-icon" style="background:#E3F2FD;">
+        <svg viewBox="0 0 24 24" fill="#1565C0"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-meteo-label">Wetter</span>
+        <span class="nav-dropdown-sub" id="nav-meteo-sub">Prognose, Wind & Segeln</span>
+      </div>
+    </a>
+    <a class="nav-dropdown-item" href="../rifiuti/" id="nav-rifiuti">
+      <div class="nav-dropdown-icon" style="background:#EBF7F1;">
+        <svg viewBox="0 0 24 24" fill="#1B6B45"><path d="M9 3v1H4v2h1v13a2 2 0 002 2h10a2 2 0 002-2V6h1V4h-5V3H9zm0 5h2v9H9V8zm4 0h2v9h-2V8z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-rifiuti-label">Abfall</span>
+        <span class="nav-dropdown-sub" id="nav-rifiuti-sub">Abfallkalender 2026</span>
+      </div>
+    </a>
+    <a class="nav-dropdown-item active" href="../gotthard/" id="nav-gotthard">
+      <div class="nav-dropdown-icon" style="background:#FEF3E2;">
+        <svg viewBox="0 0 24 24" fill="#B7791F"><path d="M1.5 8.5l10.5-7 10.5 7V20a1 1 0 01-1 1H15v-6H9v6H3a1 1 0 01-1-1V8.5z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-gotthard-label">Gotthard</span>
+        <span class="nav-dropdown-sub" id="nav-gotthard-sub">Tunnel, Wartezeiten & Pass</span>
+      </div>
+    </a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="Breadcrumb" id="breadcrumb-nav">
+  <a href="../" id="bc-home">Cannobio</a>
+  <span class="breadcrumbs-sep" aria-hidden="true">›</span>
+  <span class="breadcrumbs-current" id="bc-current">...</span>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -274,6 +319,12 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
   <!-- LIVE STATUS -->
   <div class="section">
     <div class="section-label" id="t-live-label">Live-Situation</div>
+
+    <!-- PASS STATUS FIRST -->
+    <div class="status-banner gold" id="pass-status" style="margin-bottom:16px;">
+      <span class="status-icon">⛰️</span>
+      <div id="pass-text">Gotthardpass: wird geladen…</div>
+    </div>
 
     <!-- STATUS BANNER -->
     <div id="status-banner" class="status-banner gold">
@@ -374,32 +425,12 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
       <div style="font-size:11px;color:var(--text-tertiary);margin-top:8px;" id="t-cam-note">Webcams: AFBN.ch · Aktualisierung alle 5 Minuten</div>
     </div>
 
-    <!-- PASS STATUS -->
-    <div class="status-banner gold" id="pass-status">
-      <span class="status-icon">⛰️</span>
-      <div id="pass-text">Gotthardpass: Wintersperre bis ca. Mai. Tunnel empfohlen.</div>
-    </div>
-
     <!-- DISRUPTIONS -->
     <div id="disruptions-section" style="display:none;margin-top:12px;">
       <div class="section-label" id="t-disrupt-label" style="margin-top:16px;">Verkehrsstörungen</div>
       <div id="disruptions-list"></div>
     </div>
   </div>
-
-  <!-- 5-TAGE PROGNOSE -->
-  <div class="section">
-    <div class="section-label" id="t-fc-label">Prognose 5 Tage</div>
-    <div style="border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;background:var(--surface);box-shadow:var(--shadow-sm);">
-      <div style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:11px;color:var(--text-tertiary);" id="t-fc-note">Basierend auf historischen Verkehrsmustern (Wochentag, Saison, Ferien). Kein Echtzeitwert.</div>
-      <div id="forecast-5d" style="padding:4px 16px 8px;"></div>
-    </div>
-    <div class="link-row">
-      <a class="ext-link" href="https://gotthard-tunnel.com/en/home" target="_blank" rel="noopener">gotthard-tunnel.com ↗</a>
-      <a class="ext-link" href="https://www.astra.admin.ch" target="_blank" rel="noopener">ASTRA Offiziell ↗</a>
-    </div>
-  </div>
-
 
   <!-- A2 STAUMELDUNGEN -->
   <div class="section">
@@ -469,6 +500,20 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
     </div>
   </div>
 
+  <!-- 5-TAGE PROGNOSE -->
+  <div class="section">
+    <div class="section-label" id="t-fc-label">Prognose 5 Tage</div>
+    <div style="border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;background:var(--surface);box-shadow:var(--shadow-sm);">
+      <div style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:11px;color:var(--text-tertiary);" id="t-fc-note">Basierend auf historischen Verkehrsmustern (Wochentag, Saison, Ferien). Kein Echtzeitwert.</div>
+      <div id="forecast-5d" style="padding:4px 16px 8px;"></div>
+    </div>
+    <div class="link-row">
+      <a class="ext-link" href="https://gotthard-tunnel.com/en/home" target="_blank" rel="noopener">gotthard-tunnel.com ↗</a>
+      <a class="ext-link" href="https://www.tcs.ch/de/tools/verkehrsinfo-verkehrslage/gotthardtunnel-sperrung.php" target="_blank" rel="noopener">Sperrungen &amp; Umfahrungen ↗</a>
+    </div>
+  </div>
+
+
   <!-- SPERRUNGEN -->
   <div class="section">
     <div class="section-label" id="t-clos-label">Geplante Sperrungen 2026</div>
@@ -524,7 +569,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
     </div>
     <div style="font-size:11px;color:var(--text-tertiary);margin-top:10px;" id="t-clos-note">Nachtsperre: Personenwagen werden über den Pass umgeleitet. Schwerverkehr wird 30 Min. vor Sperrung gestoppt.</div>
     <div class="link-row">
-      <a class="ext-link" href="https://www.astra.admin.ch/astra/de/home/themen/nationalstrassen/betrieb-unterhalt/tunnelunterhalt/gotthard-strassentunnel.html" target="_blank" rel="noopener">ASTRA Sperrungen ↗</a>
+      <a class="ext-link" href="https://www.tcs.ch/de/tools/verkehrsinfo-verkehrslage/gotthardtunnel-sperrung.php" target="_blank" rel="noopener" id="t-clos-link">Sperrungen &amp; Umfahrungen Gotthardtunnel ↗</a>
     </div>
   </div>
 
@@ -634,7 +679,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
   <div class="footer-source" id="t-footer">Quellen: <a href="https://www.astra.admin.ch" target="_blank" rel="noopener">ASTRA/FEDRO</a> · <a href="https://gotthard-tunnel.com" target="_blank" rel="noopener">gotthard-tunnel.com</a> · <a href="https://www.tcs.ch" target="_blank" rel="noopener">TCS</a></div>
   <div class="footer-disc" id="t-disc">Keine Gewähr für Richtigkeit und Aktualität. Wartezeiten basieren auf historischen Mustern. Massgeblich sind stets die offiziellen Quellen und die Strassensignalisation.</div>
   <div style="margin-top:6px;font-size:11px;color:var(--text-tertiary);opacity:0.7;">
-    v1.2 &mdash; 2. Mai 2026 &mdash; <a href="https://giovanola.github.io/cannobio/" style="color:var(--text-tertiary);text-decoration:none;">giovanola.github.io/cannobio</a>
+    v1.0 &mdash; Juni 2026 &mdash; <a href="https://giovanola.github.io/cannobio/" style="color:var(--text-tertiary);text-decoration:none;">giovanola.github.io/cannobio</a>
   </div>
 </footer>
 
@@ -642,6 +687,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 // ── TRANSLATIONS ──────────────────────────────────────────
 const T = {
   de: {
+    bcCurrent:'Gotthard',
     eyebrow:'Schweizer Alpen · A2 Autobahn',
     h1:'Gotthard<br><em>Verkehr</em>',
     sub:'Aktuelle Lage am Tunnel und am Pass. Wartezeiten, Sperrungen und Prognose für die nächsten 5 Tage.',
@@ -661,6 +707,7 @@ const T = {
     fcNote:'Basierend auf historischen Verkehrsmustern (Wochentag, Saison, Ferien). Kein Echtzeitwert.',
     closLabel:'Geplante Sperrungen 2026', colDates:'Datum', colDesc:'Beschreibung', colTime:'Uhrzeit',
     maint:'Nachtunterhaltsarbeiten', passClosed:'Gotthardpass Wintersperre',
+    closLink:'Sperrungen & Umfahrungen Gotthardtunnel ↗',
     closNote:'Nachtsperre: Personenwagen werden über den Pass umgeleitet. Schwerverkehr wird 30 Min. vor Sperrung gestoppt.',
     infoLabel:'Wichtige Informationen', tunnelTitle:'Gotthardtunnel', passTitle:'Gotthardpass',
     lengthLabel:'Länge', speedLabel:'Tempolimit', transitLabel:'Durchfahrt',
@@ -683,7 +730,7 @@ const T = {
     levels:{free:'Frei', medium:'Mässig', heavy:'Stau'},
     statusFree:'Kein Stau. Freie Durchfahrt.', statusMed:'Leichte Verzögerungen möglich.', statusHeavy:'Langer Stau. Ausweichroute prüfen.',
     kmJam:'km Stau', updated:'Aktualisiert',
-    navMeteo:'Meteo', navRifiuti:'Rifiuti', navGotthard:'Gotthard',
+    navHome:'Portal', navMeteo:'Wetter', navRifiuti:'Abfall', navGotthard:'Gotthard',
     estBadge:'Schätzung', liveHint:'Echtzeitdaten:',
     liveHintText:' Wartezeiten basieren auf historischen Mustern. Für aktuelle Daten:',
     camLabel:'Live-Webcams', camSouthName:'Südportal Airolo', camNorthName:'Nordportal Göschenen',
@@ -701,6 +748,7 @@ const T = {
     trafficNone:'Keine Meldungen auf dieser Strecke.',
   },
   it: {
+    bcCurrent:'Gottardo',
     eyebrow:'Alpi Svizzere · Autostrada A2',
     h1:'Gottardo<br><em>Traffico</em>',
     sub:'Situazione attuale al tunnel e al passo. Tempi di attesa, chiusure e previsioni per i prossimi 5 giorni.',
@@ -742,7 +790,7 @@ const T = {
     levels:{free:'Libero', medium:'Moderato', heavy:'Coda'},
     statusFree:'Nessuna coda. Transito libero.', statusMed:'Possibili lievi ritardi.', statusHeavy:'Coda lunga. Verificare percorso alternativo.',
     kmJam:'km di coda', updated:'Aggiornato',
-    navMeteo:'Meteo', navRifiuti:'Rifiuti', navGotthard:'Gottardo',
+    navHome:'Portale', navMeteo:'Meteo', navRifiuti:'Rifiuti', navGotthard:'Gottardo',
     estBadge:'Stima', liveHint:'Dati in tempo reale:',
     liveHintText:' I tempi di attesa si basano su schemi storici. Per dati in tempo reale:',
     camLabel:'Webcam live', camSouthName:'Portale Sud Airolo', camNorthName:'Portale Nord Göschenen',
@@ -760,6 +808,7 @@ const T = {
     trafficNone:'Nessuna segnalazione su questo percorso.',
   },
   en: {
+    bcCurrent:'Gotthard',
     eyebrow:'Swiss Alps · A2 Motorway',
     h1:'Gotthard<br><em>Traffic</em>',
     sub:'Current situation at the tunnel and pass. Waiting times, closures and forecast for the next 5 days.',
@@ -779,6 +828,7 @@ const T = {
     fcNote:'Based on historical traffic patterns (weekday, season, holidays). Not a real-time value.',
     closLabel:'Planned closures 2026', colDates:'Date', colDesc:'Description', colTime:'Time',
     maint:'Night maintenance works', passClosed:'Gotthard Pass winter closure',
+    closLink:'Closures & diversions Gotthard Tunnel ↗',
     closNote:'Night closure: passenger vehicles are redirected via the pass. Heavy goods vehicles are stopped 30 min. before closure.',
     infoLabel:'Important information', tunnelTitle:'Gotthard Tunnel', passTitle:'Gotthard Pass',
     lengthLabel:'Length', speedLabel:'Speed limit', transitLabel:'Transit time',
@@ -801,7 +851,7 @@ const T = {
     levels:{free:'Clear', medium:'Moderate', heavy:'Heavy'},
     statusFree:'No queue. Clear passage.', statusMed:'Minor delays possible.', statusHeavy:'Long queue. Check alternative route.',
     kmJam:'km queue', updated:'Updated',
-    navMeteo:'Weather', navRifiuti:'Waste', navGotthard:'Gotthard',
+    navHome:'Portal', navMeteo:'Weather', navRifiuti:'Waste', navGotthard:'Gotthard',
     estBadge:'Estimate', liveHint:'Live data:',
     liveHintText:' Waiting times are based on historical patterns. For real-time data:',
     camLabel:'Live webcams', camSouthName:'South Portal Airolo', camNorthName:'North Portal Göschenen',
@@ -1147,6 +1197,13 @@ function render5Day() {
 }
 
 // ── APPLY TRANSLATIONS ────────────────────────────────────
+function setLang(l) {
+  lang = l;
+  localStorage.setItem('cannobio-lang', l);
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+  document.documentElement.lang = l==='it'?'it':l==='en'?'en':'de';
+  applyLang(l);
+}
 function applyLang(l) {
   lang = l;
   const t = T[l];
@@ -1180,9 +1237,8 @@ function applyLang(l) {
   set('t-cam-north', t.camNorth); set('t-cam-north-dir', t.camNorthDir);
   set('t-cam-note', t.camNote);
   // Nav
-  set('nav-meteo', t.navMeteo); set('nav-rifiuti', t.navRifiuti); set('nav-gotthard', t.navGotthard);
-  // Re-run traffic UI labels when lang changes
-  if(document.getElementById('t-traffic-label')) loadTraffic();
+  set('nav-home', t.navHome||'Portal'); set('nav-meteo', t.navMeteo); set('nav-rifiuti', t.navRifiuti); set('nav-gotthard', t.navGotthard);
+
   set('t-est-badge', t.estBadge); set('t-est-badge2', t.estBadge);
   set('t-live-hint', t.liveHint); set('t-live-hint-text', t.liveHintText);
   set('t-cam-label', t.camLabel); set('t-cam-south-name', t.camSouthName); set('t-cam-north-name', t.camNorthName);
@@ -1197,107 +1253,79 @@ document.querySelector('.lang-switcher').addEventListener('click', e=>{
   applyLang(btn.dataset.lang);
 });
 
-// ── A2 TRAFFIC FETCH ──────────────────────────────────────
-async function loadTraffic() {
-  const t = T[lang];
-  const loading = document.getElementById('traffic-loading');
-  const results = document.getElementById('traffic-results');
-  const fallback = document.getElementById('traffic-fallback');
-  const loadTxt = document.getElementById('traffic-loading-text');
-  if (loadTxt) loadTxt.textContent = t.trafficLoading || 'Laden…';
+// ── LOAD traffic.json (GitHub Actions output) ─────────────────
+async function loadTrafficJson() {
+  try {
+    const res = await fetch('../traffic.json?t=' + Date.now(), { signal: AbortSignal.timeout(4000) });
+    if (!res.ok) return;
+    const data = await res.json();
+    if (!data || !data.updated) return;
 
-  // Apply translations to static elements
-  const setEl = (id, key) => { const el=document.getElementById(id); if(el&&t[key]) el.textContent=t[key]; };
-  setEl('t-traffic-label','trafficLabel');
-  setEl('t-dir-south','trafficDirSouth'); setEl('t-dir-north','trafficDirNorth');
-  setEl('t-vs-south','trafficVsSouth'); setEl('t-vs-north','trafficVsNorth');
-  setEl('traffic-fallback-text','trafficFallback');
-  setEl('t-traffic-github-note','trafficGithub');
+    const t = T[lang];
+    const teaser = document.getElementById('t-traffic-github-note');
+    const liveDiv = document.getElementById('traffic-live');
 
-  // Try fetching Viasuisse traffic data via CORS proxy
-  const vsUrl = 'https://www.viasuisse.ch/de/verkehr/strecke/A2';
-  const proxies = [
-    'https://corsproxy.io/?' + encodeURIComponent(vsUrl),
-    'https://api.allorigins.win/get?url=' + encodeURIComponent(vsUrl),
-  ];
+    // Show live data section
+    if (teaser) teaser.style.display = 'none';
+    if (liveDiv) liveDiv.style.display = '';
 
-  let parsed = null;
-  for (const proxy of proxies) {
-    try {
-      const res = await fetch(proxy, { signal: AbortSignal.timeout(7000) });
-      if (!res.ok) continue;
-      let text = await res.text();
-      if (proxy.includes('allorigins')) {
-        try { text = JSON.parse(text).contents; } catch(_) {}
-      }
-      // Parse traffic incidents from Viasuisse HTML
-      // Look for jam/incident entries with direction and location
-      const incidents = [];
-      const incRegex = /<article[^>]*class="[^"]*incident[^"]*"[^>]*>([\s\S]{0,800}?)<\/article>/gi;
-      let m;
-      while ((m = incRegex.exec(text)) !== null) {
-        const block = m[1].replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
-        if (block.length > 20) incidents.push(block.slice(0, 300));
-      }
-      // Alternative: look for structured delay info
-      const delayRegex = /(\d+)\s*(Minuten|min|minutes?)\s*(?:Verz.gerung|delay|ritardo)/gi;
-      const delayMatches = [...text.matchAll(delayRegex)];
+    const sevColor = { high: '#C0392B', medium: '#E67E22', low: '#1B6B45' };
+    const sevBg    = { high: '#FDECEA', medium: '#FEF3E2', low: '#EBF7F1' };
+    const sevLabel = {
+      high:   t.trafficJam   || 'Stau',
+      medium: t.trafficSlow  || 'Stockend',
+      low:    t.trafficFree  || 'Frei',
+    };
 
-      if (incidents.length > 0 || delayMatches.length > 0) {
-        parsed = { incidents, delays: delayMatches.map(dm => parseInt(dm[1])), raw: text };
-        break;
-      }
-    } catch(_) {}
-  }
-
-  if (parsed && parsed.incidents.length > 0) {
-    // Show results
-    loading.style.display = 'none';
-    results.style.display = '';
-    fallback.style.display = 'none';
-
-    const southItems = parsed.incidents.filter(i => /s.den|sud|south|airolo|ticino/i.test(i));
-    const northItems = parsed.incidents.filter(i => /norden|nord|north|basel|z.rich|g.schenen/i.test(i));
-    const otherItems = parsed.incidents.filter(i => !southItems.includes(i) && !northItems.includes(i));
-
-    const renderList = (el, badge, items) => {
+    const renderList = (containerId, countId, items) => {
+      const el = document.getElementById(containerId);
+      const ct = document.getElementById(countId);
       if (!el) return;
-      if (items.length === 0) {
-        el.innerHTML = `<div style="padding:10px 16px;font-size:12px;color:var(--accent);">${t.trafficNone || 'Keine Meldungen.'}</div>`;
-        if (badge) { badge.textContent = t.trafficFree; badge.style.background='var(--accent-pale)'; badge.style.color='var(--accent)'; }
+      if (!items || items.length === 0) {
+        el.innerHTML = `<div style="padding:10px 14px;font-size:12px;color:var(--accent);">${t.trafficNone || 'Keine Meldungen.'}</div>`;
+        if (ct) { ct.textContent = '✓'; ct.style.background = 'var(--accent-pale)'; ct.style.color = 'var(--accent)'; }
       } else {
         el.innerHTML = items.map(item => {
-          const hasJam = /stau|coda|congestion|km/i.test(item);
-          const color = hasJam ? '#C0392B' : '#E67E22';
-          const bg = hasJam ? '#FDECEA' : '#FEF3E2';
-          return `<div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:11px;line-height:1.5;color:#4A4A4A;">
-            <div style="display:inline-block;padding:2px 6px;border-radius:4px;background:${bg};color:${color};font-size:10px;font-weight:600;margin-bottom:4px;">${hasJam?t.trafficJam:t.trafficSlow}</div>
-            <div>${item.slice(0,200)}</div>
+          const s = item.severity || 'low';
+          const delay = item.delay_min ? ` · ${item.delay_min} min` : '';
+          return `<div style="padding:8px 14px;border-bottom:1px solid var(--border);font-size:11px;line-height:1.5;">
+            <div style="display:inline-block;padding:1px 6px;border-radius:4px;background:${sevBg[s]};color:${sevColor[s]};font-size:10px;font-weight:600;margin-bottom:3px;">${sevLabel[s]}${delay}</div>
+            <div style="color:var(--text-secondary);">${item.text || ''}</div>
           </div>`;
         }).join('');
-        if (badge) { badge.textContent = t.trafficJam; badge.style.background='#FDECEA'; badge.style.color='#C0392B'; }
+        if (ct) { ct.textContent = items.length; ct.style.background = sevBg[items[0]?.severity||'low']; ct.style.color = sevColor[items[0]?.severity||'low']; }
       }
     };
 
-    renderList(document.getElementById('traffic-south-list'), document.getElementById('traffic-south-badge'), [...southItems,...otherItems.slice(0,2)]);
-    renderList(document.getElementById('traffic-north-list'), document.getElementById('traffic-north-badge'), northItems);
+    renderList('traffic-south-list', 'traffic-south-count', data.south || []);
+    renderList('traffic-north-list', 'traffic-north-count', data.north || []);
 
-    const upd = document.getElementById('traffic-updated');
-    if (upd) upd.textContent = `${t.trafficUpdated}: ${new Date().toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'})} · Viasuisse`;
-  } else {
-    // Show fallback with direct links
-    loading.style.display = 'none';
-    results.style.display = 'none';
-    fallback.style.display = '';
+    // Update timestamp
+    const upd = document.getElementById('traffic-live-updated');
+    if (upd) {
+      const ts = new Date(data.updated).toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
+      upd.textContent = `${t.updated || 'Aktualisiert'}: ${ts} · ${data.source || 'opentransportdata.swiss'}`;
+    }
+
+    // Update direction labels
+    const sl = (id, key) => { const el=document.getElementById(id); if(el&&t[key]) el.textContent=t[key]; };
+    sl('t-dir-south-live', 'trafficDirSouth');
+    sl('t-dir-north-live', 'trafficDirNorth');
+
+  } catch(_) {
+    // traffic.json not yet available – teaser stays visible
   }
 }
 
 // Init
 // Detect lang from URL param
 const urlLang = new URLSearchParams(window.location.search).get('lang');
-if (urlLang && T[urlLang]) { applyLang(urlLang); } else { applyLang('de'); }
+const storedLang2 = localStorage.getItem('cannobio-lang');
+const initLang2 = (urlLang && T[urlLang]) ? urlLang : (storedLang2 && T[storedLang2]) ? storedLang2 : 'de';
+applyLang(initLang2);
+loadTrafficJson();
 // Refresh every 5 minutes
-setInterval(()=>{ renderLive().then(()=>{}); renderTrend(); render5Day(); loadTraffic(); }, 5 * 60 * 1000);
+setInterval(()=>{ renderLive().then(()=>{}); renderTrend(); render5Day(); loadTrafficJson(); }, 5 * 60 * 1000);
 // Webcam refresh every 5 minutes
 function refreshCams() {
   ['cam-south','cam-north'].forEach(id => {
@@ -1306,7 +1334,49 @@ function refreshCams() {
   });
 }
 setInterval(refreshCams, 5 * 60 * 1000);
-loadTraffic();
+
+
+function toggleNav() {
+  const overlay = document.getElementById('nav-overlay');
+  const btn = document.getElementById('nav-toggle');
+  const isOpen = overlay.classList.contains('open');
+  overlay.classList.toggle('open', !isOpen);
+  btn.setAttribute('aria-expanded', String(!isOpen));
+}
+function closeNav() {
+  document.getElementById('nav-overlay').classList.remove('open');
+  document.getElementById('nav-toggle').setAttribute('aria-expanded', 'false');
+}
+// Close on Escape
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeNav(); });
+
+function updateNavLabels() {
+  const t = T[lang] || T.de;
+  // Dropdown labels
+  const setT = (id, key) => { const el=document.getElementById(id); if(el&&t[key]) el.textContent=t[key]; };
+  setT('nav-home-label',     'navHome');
+  setT('nav-home-sub',       'navHomeSub');
+  setT('nav-meteo-label',    'navMeteo');
+  setT('nav-meteo-sub',      'navMeteoSub');
+  setT('nav-rifiuti-label',  'navRifiuti');
+  setT('nav-rifiuti-sub',    'navRifiutiSub');
+  setT('nav-gotthard-label', 'navGotthard');
+  setT('nav-gotthard-sub',   'navGotthardSub');
+  // Breadcrumb
+  setT('bc-home', 'bcHome');
+  setT('bc-current', 'bcCurrent');
+  // Dropdown link hrefs with lang param
+  ['meteo','rifiuti','gotthard'].forEach(k => {
+    const el = document.getElementById('nav-'+k);
+    if(el) {
+      const base = el.href.split('?')[0];
+      el.href = base + (lang !== 'de' ? '?lang=' + lang : '');
+    }
+  });
+}
+
+// Init nav labels
+if(typeof updateNavLabels === "function") updateNavLabels();
 </script>
 </body>
 </html>
