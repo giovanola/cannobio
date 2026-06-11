@@ -67,10 +67,10 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary)
 .lang-btn.active{background:var(--surface);color:var(--text-primary);box-shadow:var(--shadow-sm)}
 
 /* SITE NAV */
-.site-nav{display:flex;gap:2px;background:var(--border);border-radius:8px;padding:2px}
-.site-nav-link{padding:4px 12px;border-radius:6px;font-family:var(--font-body);font-size:12px;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:all var(--transition);white-space:nowrap}
-.site-nav-link:hover{color:var(--text-primary)}
-.site-nav-active{background:var(--surface);color:var(--text-primary);box-shadow:var(--shadow-sm)}
+
+
+
+
 
 /* OFFLINE DATA CHIP */
 .data-chip-bar{max-width:var(--max-w);margin:0 auto;padding:10px clamp(16px,4vw,24px) 0;display:none}
@@ -341,27 +341,71 @@ footer a{color:var(--text-secondary);text-decoration:none}
 
 <header class="topbar">
   <div class="topbar-inner">
-    <div class="topbar-brand">
+    <a class="topbar-brand" href="../">
       <div class="topbar-icon">
-        <svg viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
       </div>
-      <span class="topbar-name" id="t-brand">Cannobio Wetter</span>
-    </div>
+      <span class="topbar-name" id="t-brand">Cannobio</span>
+    </a>
     <div class="topbar-right">
-      <nav class="site-nav">
-        <a class="site-nav-link site-nav-active" href="../meteo/" id="nav-wetter">Wetter</a>
-        <a class="site-nav-link" href="../rifiuti/" id="nav-rifiuti">Rifiuti</a>
-        <a class="site-nav-link" href="../gotthard/" id="nav-gotthard">Gotthard</a>
-      </nav>
-      
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="de" onclick="setLang('de')">DE</button>
         <button class="lang-btn" data-lang="it" onclick="setLang('it')">IT</button>
         <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
       </div>
+      <button class="nav-btn" onclick="toggleNav()" aria-label="Menu" aria-expanded="false" id="nav-toggle">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+      </button>
     </div>
   </div>
 </header>
+
+<!-- NAV DROPDOWN OVERLAY -->
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()">
+  <div class="nav-dropdown" id="nav-dropdown" onclick="event.stopPropagation()">
+    <a class="nav-dropdown-item" href="../" id="nav-home">
+      <div class="nav-dropdown-icon" style="background:#EBF7F1;">
+        <svg viewBox="0 0 24 24" fill="#1B6B45"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-home-label">Portal</span>
+        <span class="nav-dropdown-sub" id="nav-home-sub">Cannobio am Lago Maggiore</span>
+      </div>
+    </a>
+    <a class="nav-dropdown-item active" href="../meteo/" id="nav-meteo">
+      <div class="nav-dropdown-icon" style="background:#E3F2FD;">
+        <svg viewBox="0 0 24 24" fill="#1565C0"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-meteo-label">Wetter</span>
+        <span class="nav-dropdown-sub" id="nav-meteo-sub">Prognose, Wind & Segeln</span>
+      </div>
+    </a>
+    <a class="nav-dropdown-item" href="../rifiuti/" id="nav-rifiuti">
+      <div class="nav-dropdown-icon" style="background:#EBF7F1;">
+        <svg viewBox="0 0 24 24" fill="#1B6B45"><path d="M9 3v1H4v2h1v13a2 2 0 002 2h10a2 2 0 002-2V6h1V4h-5V3H9zm0 5h2v9H9V8zm4 0h2v9h-2V8z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-rifiuti-label">Abfall</span>
+        <span class="nav-dropdown-sub" id="nav-rifiuti-sub">Abfallkalender 2026</span>
+      </div>
+    </a>
+    <a class="nav-dropdown-item" href="../gotthard/" id="nav-gotthard">
+      <div class="nav-dropdown-icon" style="background:#FEF3E2;">
+        <svg viewBox="0 0 24 24" fill="#B7791F"><path d="M1.5 8.5l10.5-7 10.5 7V20a1 1 0 01-1 1H15v-6H9v6H3a1 1 0 01-1-1V8.5z"/></svg>
+      </div>
+      <div class="nav-dropdown-label">
+        <span id="nav-gotthard-label">Gotthard</span>
+        <span class="nav-dropdown-sub" id="nav-gotthard-sub">Tunnel, Wartezeiten & Pass</span>
+      </div>
+    </a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="Breadcrumb" id="breadcrumb-nav">
+  <a href="../" id="bc-home">Cannobio</a>
+  <span class="breadcrumbs-sep" aria-hidden="true">›</span>
+  <span class="breadcrumbs-current" id="bc-current">...</span>
+</nav>
 
 <div class="data-chip-bar" id="data-chip-bar">
   <span class="data-chip" id="data-chip-text"></span>
@@ -587,7 +631,7 @@ footer a{color:var(--text-secondary);text-decoration:none}
 <footer>
   <p>Cannobio, Lago Maggiore &mdash; <a href="https://comune.cannobio.vb.it" target="_blank" rel="noopener">comune.cannobio.vb.it</a> &mdash; <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> &mdash; <a href="https://www.arpa.piemonte.it" target="_blank" rel="noopener">ARPA Piemonte</a></p>
   <p style="margin-top:6px;font-size:11px;color:var(--text-tertiary);opacity:0.7;">
-    v2.4 &mdash; 2. Mai 2026 &mdash; <a href="https://giovanola.github.io/cannobio/" style="color:var(--text-tertiary);text-decoration:none;" target="_blank" rel="noopener">giovanola.github.io/cannobio</a>
+    v1.0 &mdash; Juni 2026 &mdash; <a href="https://giovanola.github.io/cannobio/" style="color:var(--text-tertiary);text-decoration:none;" target="_blank" rel="noopener">giovanola.github.io/cannobio</a>
   </p>
 </footer>
 
@@ -599,10 +643,20 @@ footer a{color:var(--text-secondary);text-decoration:none}
 ========================================================= */
 const T = {
   de:{
+    navHome:'Portal',
+    navHomeSub:'Cannobio am Lago Maggiore',
+    navMeteo:'Wetter',
+    navMeteoSub:'Prognose, Wind & Segeln',
+    navRifiuti:'Abfall',
+    navRifiutiSub:'Abfallkalender 2026',
+    navGotthard:'Gotthard',
+    navGotthardSub:'Tunnel, Wartezeiten & Pass',
+    bcHome:'Cannobio',
+    bcCurrent:'Wetter',
     brand:'Cannobio Wetter',eyebrow:'Lago Maggiore \u00b7 46.06\u00b0 N',
     h1:'Wettervorhersage<br><em>Cannobio</em>',
     sub:'Prognose, Luftqualit\u00e4t, Warnungen und Nachrichten f\u00fcr Cannobio am Lago Maggiore.',
-    navWetter:'Wetter',navRifiuti:'Abfall',
+    navHome:'Portal',navMeteo:'Wetter',navRifiuti:'Abfall',
     windLabel:'Wind & Wellenbericht',windGust:'Böen',windBft:'Beaufort',
     waveHeight:'Wellengang',wavePeriod:'Periode',windChartLabel:'Windprognose 12h',
     windDisc:'Hinweis: Basierend auf numerischen Wettermodellen (MeteoSwiss ICON-CH via Open-Meteo), keine offizielle Warnung. Vor dem Wasserausflug aktuelle Daten prüfen, z. B. bei MeteoSwiss, ARPA Piemonte und lokalen Wetterstationen. Das Wetter am Lago Maggiore kann sich schnell ändern. Im Zweifel nicht aufs Wasser gehen.',
@@ -681,10 +735,20 @@ const T = {
     seoM3p:'Aktuelle Warnungen der ARPA Piemonte f\u00fcr die Provinz Verbano-Cusio-Ossola und den Lago Maggiore. Warnstufen Giallo, Arancione und Rosso.',
   },
   it:{
+    navHome:'Portale',
+    navHomeSub:'Cannobio sul Lago Maggiore',
+    navMeteo:'Meteo',
+    navMeteoSub:'Previsioni, vento & vela',
+    navRifiuti:'Rifiuti',
+    navRifiutiSub:'Calendario raccolta 2026',
+    navGotthard:'Gottardo',
+    navGotthardSub:'Tunnel, tempi attesa & passo',
+    bcHome:'Cannobio',
+    bcCurrent:'Meteo',
     brand:'Meteo Cannobio',eyebrow:'Lago Maggiore \u00b7 46.06\u00b0 N',
     h1:'Previsioni meteo<br><em>Cannobio</em>',
     sub:'Previsioni, vento & condizioni vela, qualit\u00e0 dell\u2019aria, indice UV, webcam live e allerte meteo per Cannobio sul Lago Maggiore.',
-    navWetter:'Meteo',navRifiuti:'Rifiuti',
+    navHome:'Portale',navMeteo:'Meteo',navRifiuti:'Rifiuti',
     windLabel:'Vento e moto ondoso',windGust:'Raffiche',windBft:'Beaufort',
     waveHeight:'Onde',wavePeriod:'Periodo',windChartLabel:'Previsione vento 12h',
     windDisc:'Nota: Basato su modelli meteorologici numerici (MeteoSwiss ICON-CH via Open-Meteo), nessun avviso ufficiale. Prima di ogni uscita sull’acqua verificare i dati aggiornati su MeteoSvizzera, ARPA Piemonte e stazioni meteo locali. Il tempo sul Lago Maggiore può cambiare rapidamente. In caso di dubbio, non andare in acqua.',
@@ -763,10 +827,20 @@ const T = {
     seoM3p:"Allerte meteo attuali di ARPA Piemonte per la Provincia del Verbano-Cusio-Ossola e il Lago Maggiore. Livelli di allerta Giallo, Arancione e Rosso." 
   },
   en:{
+    navHome:'Portal',
+    navHomeSub:'Cannobio at Lake Maggiore',
+    navMeteo:'Weather',
+    navMeteoSub:'Forecast, wind & sailing',
+    navRifiuti:'Waste',
+    navRifiutiSub:'Waste calendar 2026',
+    navGotthard:'Gotthard',
+    navGotthardSub:'Tunnel, wait times & pass',
+    bcHome:'Cannobio',
+    bcCurrent:'Weather',
     brand:'Cannobio Weather',eyebrow:'Lake Maggiore \u00b7 46.06\u00b0 N',
     h1:'Weather forecast<br><em>Cannobio</em>',
     sub:'Forecast, wind & sailing conditions, air quality, UV index, live webcams and weather alerts for Cannobio on Lake Maggiore.',
-    navWetter:'Weather',navRifiuti:'Waste',
+    navHome:'Portal',navMeteo:'Weather',navRifiuti:'Waste',
     windLabel:'Wind & Wave Report',windGust:'Gusts',windBft:'Beaufort',
     waveHeight:'Wave height',wavePeriod:'Period',windChartLabel:'12h wind forecast',
     windDisc:'Note: Based on numerical weather models (MeteoSwiss ICON-CH via Open-Meteo), not an official warning. Before any water activity, check current data at MeteoSwiss, ARPA Piemonte and local weather stations. Weather on Lake Maggiore can change quickly. If in doubt, stay off the water.',
@@ -861,6 +935,7 @@ function setLang(l){
   document.documentElement.lang=l;
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
   applyT();
+  updateNavLabels();
   renderRelLegend();
   if(globalData)renderCards(globalData,activeView);
   if(window._newsCache)renderNews(window._newsCache);
@@ -958,7 +1033,8 @@ function applyT(){
   const twDesc = document.querySelector('meta[name="twitter:description"]');
   if(twDesc) twDesc.setAttribute('content', s.ogDesc);
   // nav labels
-  const nw=document.getElementById('nav-wetter'); if(nw)nw.textContent=tr('navWetter');
+  const nh=document.getElementById('nav-home'); if(nh)nh.textContent=tr('navHome') || 'Portal';
+  const nw=document.getElementById('nav-meteo'); if(nw)nw.textContent=tr('navMeteo');
   const nr=document.getElementById('nav-rifiuti'); if(nr)nr.textContent=tr('navRifiuti');
   const ng=document.getElementById('nav-gotthard'); if(ng)ng.textContent=tr('navGotthard')||'Gotthard';
   // wind section labels (also updated in renderWind, but needed on lang switch)
@@ -1749,6 +1825,46 @@ function showAqiInfo(key) {
 function closeAqiInfo() {
   document.getElementById('aqi-popup').classList.remove('open');
   document.getElementById('aqi-overlay').classList.remove('open');
+}
+
+
+function toggleNav() {
+  const overlay = document.getElementById('nav-overlay');
+  const btn = document.getElementById('nav-toggle');
+  const isOpen = overlay.classList.contains('open');
+  overlay.classList.toggle('open', !isOpen);
+  btn.setAttribute('aria-expanded', String(!isOpen));
+}
+function closeNav() {
+  document.getElementById('nav-overlay').classList.remove('open');
+  document.getElementById('nav-toggle').setAttribute('aria-expanded', 'false');
+}
+// Close on Escape
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeNav(); });
+
+function updateNavLabels() {
+  const t = T[lang] || T.de;
+  // Dropdown labels
+  const setT = (id, key) => { const el=document.getElementById(id); if(el&&t[key]) el.textContent=t[key]; };
+  setT('nav-home-label',     'navHome');
+  setT('nav-home-sub',       'navHomeSub');
+  setT('nav-meteo-label',    'navMeteo');
+  setT('nav-meteo-sub',      'navMeteoSub');
+  setT('nav-rifiuti-label',  'navRifiuti');
+  setT('nav-rifiuti-sub',    'navRifiutiSub');
+  setT('nav-gotthard-label', 'navGotthard');
+  setT('nav-gotthard-sub',   'navGotthardSub');
+  // Breadcrumb
+  setT('bc-home', 'bcHome');
+  setT('bc-current', 'bcCurrent');
+  // Dropdown link hrefs with lang param
+  ['meteo','rifiuti','gotthard'].forEach(k => {
+    const el = document.getElementById('nav-'+k);
+    if(el) {
+      const base = el.href.split('?')[0];
+      el.href = base + (lang !== 'de' ? '?lang=' + lang : '');
+    }
+  });
 }
 </script>
 <!-- SAIL INFO POPUP -->
