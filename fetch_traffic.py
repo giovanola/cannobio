@@ -1,276 +1,248 @@
 #!/usr/bin/env python3
 """
-fetch_traffic.py
-================
-Fetches real-time A2 traffic situations (Gotthard corridor, Basel–Chiasso)
-from the ASTRA opentransportdata.swiss DATEX II SOAP API.
-
-Writes two output files:
-  traffic.json       — filtered A2 incidents (Gotthard focus)
-  traffic_raw.xml    — raw DATEX II XML response (for debugging)
-
-Usage (local):
-  export OPENTRANSPORT_API_KEY="your-bearer-token"
-  python3 fetch_traffic.py
-
-GitHub Actions: set OPENTRANSPORT_API_KEY as repository secret.
-
-API key: free registration at https://api-manager.opentransportdata.swiss/
-  → "Traffic Situations" API → "Access with this plan"
+fetch_traffic.py — A2 Gotthard traffic data fetcher
+Source: ASTRA / opentransportdata.swiss · DATEX II SOAP
+Output: traffic.json (cannobio repo root)
 """
 
-import os, sys, json, re, textwrap
+import os, sys, json, re
 from datetime import datetime, timezone
 from xml.etree import ElementTree as ET
 
 try:
     import requests
 except ImportError:
-    print("Missing: pip install requests")
-    sys.exit(1)
+    sys.exit("Missing: pip install requests")
 
-# ── CONFIG ──────────────────────────────────────────────────────
-API_KEY   = os.environ.get("OPENTRANSPORT_API_KEY", "")
-ENDPOINT  = "https://api.opentransportdata.swiss/TDP/Soap_Datex2/TrafficSituations/Pull"
+API_KEY     = os.environ.get("OPENTRANSPORT_API_KEY", "")
+ENDPOINT    = "https://api.opentransportdata.swiss/TDP/Soap_Datex2/TrafficSituations/Pull"
 SOAP_ACTION = "http://opentransportdata.swiss/TDP/Soap_Datex2/Pull/v1/pullTrafficMessages"
+NS_D2       = "http://datex2.eu/schema/2/2_0"
 
-OUT_JSON  = "traffic.json"
-OUT_XML   = "traffic_raw.xml"
+# ── Tunnel-specific keywords (only Göschenen ↔ Airolo on A2) ──
+TUNNEL_KEYWORDS   = ["Gotthard-Strassentunnel", "Gotthard-Tunnel",
+                     "Gotthardtunnel", "Gotthard Tunnel"]
+TUNNEL_PAIR       = ("göschenen", "airolo")   # both must appear → tunnel incident
 
-# A2 / Gotthard corridor keywords (DE/FR/IT)
-A2_KEYWORDS = [
-    "A2", "N2", "Gotthard", "Gotthardtunnel", "Gotthard-Tunnel",
-    "Göschenen", "Airolo", "Amsteg", "Erstfeld", "Flüelen", "Altdorf",
-    "Brunnen", "Schwyz", "Luzern", "Bellinzona", "Lugano", "Mendrisio",
-    "Chiasso", "Basel", "Birsfelden", "Liestal",
-    "Tunnel du Saint-Gothard", "Galleria del San Gottardo",
-]
+# ── A2 corridor but NOT the tunnel (for general A2 list) ──
+A2_KEYWORDS = ["A2 ", "N2 ", "Gotthard", "Göschenen", "Airolo", "Amsteg",
+               "Erstfeld", "Altdorf", "Flüelen", "Brunnen", "Schwyz",
+               "Bellinzona", "Lugano", "Chiasso", "Basel", "Luzern",
+               "Liestal", "Kaiseraugst"]
 
-DIRECTION_SOUTH = [
-    "richtung süd", "richtung airolo", "richtung tessin", "richtung lugano",
-    "richtung chiasso", "richtung mailand", "richtung bellinzona",
-    "verso sud", "direzione sud", "direction sud", "southbound",
-    "göschenen → airolo",
-]
-DIRECTION_NORTH = [
-    "richtung nord", "richtung göschenen", "richtung basel",
-    "richtung zürich", "richtung luzern",
-    "verso nord", "direzione nord", "direction nord", "northbound",
-    "airolo → göschenen",
-]
-
-# SOAP request body (minimal — pulls all current situations)
-SOAP_BODY = textwrap.dedent("""\
-    <?xml version="1.0" encoding="utf-8"?>
-    <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-      <soap:Body>
-        <d2LogicalModel
-          modelBaseVersion="2"
-          xmlns="http://datex2.eu/schema/2/2_0"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <exchange>
-            <supplierIdentification>
-              <country>ch</country>
-              <nationalIdentifier>cannobio-gotthard-monitor</nationalIdentifier>
-            </supplierIdentification>
-          </exchange>
-        </d2LogicalModel>
-      </soap:Body>
-    </soap:Envelope>
-""").encode("utf-8")
-
-NS_SOAP = "http://schemas.xmlsoap.org/soap/envelope/"
-NS_D2   = "http://datex2.eu/schema/2/2_0"
-
-# ── HELPERS ─────────────────────────────────────────────────────
-
-def iter_texts(element, *tag_localnames):
-    """Yield text content of descendant elements matching any of the local names."""
-    for localname in tag_localnames:
-        for el in element.iter(f"{{{NS_D2}}}{localname}"):
-            if el.text and el.text.strip():
-                yield el.text.strip()
+SOAP_BODY = b"""<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <d2LogicalModel modelBaseVersion="2"
+      xmlns="http://datex2.eu/schema/2/2_0">
+      <exchange>
+        <supplierIdentification>
+          <country>ch</country>
+          <nationalIdentifier>cannobio-gotthard</nationalIdentifier>
+        </supplierIdentification>
+      </exchange>
+    </d2LogicalModel>
+  </soap:Body>
+</soap:Envelope>"""
 
 
-def road_number(situation_record):
-    roads = []
-    for rn in situation_record.iter(f"{{{NS_D2}}}roadNumber"):
-        if rn.text:
-            roads.append(rn.text.strip())
-    return ", ".join(dict.fromkeys(roads))  # deduplicated
+def iter_text(el, *localnames):
+    for ln in localnames:
+        for e in el.iter(f"{{{NS_D2}}}{ln}"):
+            if e.text and e.text.strip():
+                yield e.text.strip()
 
 
-def detect_direction(text: str) -> str:
+def road_number(record):
+    return ", ".join(dict.fromkeys(
+        e.text.strip() for e in record.iter(f"{{{NS_D2}}}roadNumber")
+        if e.text
+    ))
+
+
+def detect_direction(text):
     t = text.lower()
-    is_s = any(k in t for k in DIRECTION_SOUTH)
-    is_n = any(k in t for k in DIRECTION_NORTH)
-    if is_s and not is_n:   return "south"
-    if is_n and not is_s:   return "north"
+    s = any(k in t for k in ["→ airolo","richtung airolo","richtung süd","richtung tessin",
+                               "richtung lugano","richtung chiasso","verso sud","southbound"])
+    n = any(k in t for k in ["→ göschenen","richtung göschenen","richtung nord","richtung basel",
+                               "richtung zürich","richtung luzern","verso nord","northbound"])
+    if s and not n: return "south"
+    if n and not s: return "north"
     return "both"
 
 
-def classify_severity(text: str) -> str:
+def severity(text):
     t = text.lower()
-    if any(k in t for k in ["gesperrt", "sperre", "closed", "chiuso", "fermé", "vollsperre"]):
-        return "critical"
-    if any(k in t for k in ["stau", "coda", "bouchon", "congestion", "km", "kilometer"]):
-        return "high"
-    if any(k in t for k in ["stockend", "verlangsamt", "slow", "rallentato", "baustelle", "chantier"]):
-        return "medium"
-    return "low"
+    if "aufgehoben" in t:   return "resolved"
+    if any(k in t for k in ["gesperrt","sperre","closed","chiuso"]): return "critical"
+    if any(k in t for k in ["stau","coda","congestion","km stau"]):  return "high"
+    if any(k in t for k in ["stockend","verlangsamt","slow","lavori"]): return "medium"
+    return "info"
 
 
-def extract_delay_minutes(text: str):
-    m = re.search(r"(\d{1,3})\s*(?:minuten|min(?:utes?)?|minute)", text, re.I)
+def extract_delay(text):
+    m = re.search(r"(\d{1,3})\s*(?:minuten|min)", text, re.I)
     return int(m.group(1)) if m else None
 
 
-def extract_queue_km(text: str):
+def extract_queue(text):
     m = re.search(r"(\d{1,2}(?:[.,]\d)?)\s*km", text, re.I)
     return float(m.group(1).replace(",", ".")) if m else None
 
 
-# ── FETCH ────────────────────────────────────────────────────────
+def is_tunnel_incident(text):
+    t = text.lower()
+    if any(k.lower() in t for k in TUNNEL_KEYWORDS): return True
+    return TUNNEL_PAIR[0] in t and TUNNEL_PAIR[1] in t
 
-def fetch_situations() -> list[dict]:
+
+def is_side_road(text):
+    """Göschenenalp, Sustenpass etc. — not the main tunnel"""
+    t = text.lower()
+    return any(k in t for k in ["göschenenalp","sustenpass","oberalp","furka","grimsel"])
+
+
+def main():
+    now = datetime.now(timezone.utc)
+    print(f"Fetching at {now.isoformat()} ...")
+
     if not API_KEY:
-        print("WARNING: OPENTRANSPORT_API_KEY not set — writing empty result.")
-        return []
+        print("WARNING: no API key — writing empty result")
+        result = empty_result(now)
+    else:
+        result = fetch_and_parse(now)
 
+    with open("traffic.json", "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+
+    t = result["tunnel"]
+    print(f"Done: {result['total_incidents']} A2 incidents "
+          f"({result['tunnel_incidents']} tunnel-specific)")
+    print(f"  Tunnel N: sev={t['north']['severity']}  delay={t['north']['delay_min']} min")
+    print(f"  Tunnel S: sev={t['south']['severity']}  delay={t['south']['delay_min']} min")
+
+
+def empty_result(now):
+    return {
+        "updated": now.isoformat(),
+        "source":  "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
+        "total_incidents": 0,
+        "tunnel_incidents": 0,
+        "tunnel": {
+            "status": "unknown",
+            "north": {"severity":"unknown","delay_min":None,"queue_km":None,"text":None},
+            "south": {"severity":"unknown","delay_min":None,"queue_km":None,"text":None},
+        },
+        "incidents_north": [],
+        "incidents_south": [],
+        "incidents_all":   [],
+    }
+
+
+def fetch_and_parse(now):
     headers = {
         "Authorization": f"Bearer {API_KEY}",
         "SOAPAction":    SOAP_ACTION,
         "Content-Type":  "text/xml; charset=utf-8",
-        "Accept":        "text/xml",
     }
+    try:
+        r = requests.post(ENDPOINT, data=SOAP_BODY, headers=headers, timeout=25)
+        r.raise_for_status()
+    except requests.RequestException as e:
+        print(f"HTTP error: {e}")
+        return empty_result(now)
+
+    with open("traffic_raw.xml", "wb") as f:
+        f.write(r.content)
 
     try:
-        resp = requests.post(
-            ENDPOINT,
-            data=SOAP_BODY,
-            headers=headers,
-            timeout=25,
-        )
-        resp.raise_for_status()
-    except requests.RequestException as exc:
-        print(f"HTTP error: {exc}")
-        return []
+        root = ET.fromstring(r.content)
+    except ET.ParseError as e:
+        print(f"XML error: {e}")
+        return empty_result(now)
 
-    # Save raw XML for debugging
-    with open(OUT_XML, "wb") as f:
-        f.write(resp.content)
-    print(f"Raw XML saved to {OUT_XML} ({len(resp.content):,} bytes)")
+    incidents = []
+    tunnel_north_candidates = []
+    tunnel_south_candidates = []
 
-    try:
-        root = ET.fromstring(resp.content)
-    except ET.ParseError as exc:
-        print(f"XML parse error: {exc}")
-        return []
+    for rec in root.iter(f"{{{NS_D2}}}situationRecord"):
+        texts = list(iter_text(rec, "value", "locationDescription", "comment"))
+        road  = road_number(rec)
+        full  = " | ".join(texts)
+        combined = f"{road} {full}"
 
-    situations = []
-
-    for sit in root.iter(f"{{{NS_D2}}}situationRecord"):
-        # Gather all text content from this record
-        texts = list(iter_texts(sit,
-            "value",                   # multilingual strings
-            "locationDescription",
-            "comment",
-            "nonGeneralPublicComment",
-        ))
-        road = road_number(sit)
-        full_text = " | ".join(texts)
-        combined  = f"{road} {full_text}"
-
-        # ── A2 corridor filter ────────────────────────────────
-        if not any(kw.lower() in combined.lower() for kw in A2_KEYWORDS):
+        # Must be on A2 corridor
+        if not any(k.lower() in combined.lower() for k in A2_KEYWORDS):
             continue
 
-        # ── Extract structured fields ────────────────────────
-        rec_id    = sit.get("id", "")
-        direction = detect_direction(combined)
-        severity  = classify_severity(combined)
-        delay     = extract_delay_minutes(combined)
-        queue_km  = extract_queue_km(combined)
+        # Skip "Aufgehoben" (revoked incidents)
+        if "aufgehoben" in combined.lower():
+            continue
 
-        # Validity period
-        valid_start = next(iter_texts(sit, "overallStartTime"), None)
-        valid_end   = next(iter_texts(sit, "overallEndTime"),   None)
+        sev   = severity(combined)
+        if sev == "resolved":
+            continue
 
-        # Short description (first value text, max 300 chars)
-        description = texts[0][:300] if texts else combined[:300]
+        delay  = extract_delay(combined)
+        queue  = extract_queue(combined)
+        dirn   = detect_direction(combined)
+        is_tun = is_tunnel_incident(combined) and not is_side_road(combined)
+        desc   = texts[0][:300] if texts else combined[:300]
 
-        situations.append({
-            "id":          rec_id,
+        inc = {
             "road":        road or "A2",
-            "description": description,
-            "full_text":   full_text[:500],
-            "direction":   direction,
-            "severity":    severity,
+            "description": desc,
+            "direction":   dirn,
+            "severity":    sev,
             "delay_min":   delay,
-            "queue_km":    queue_km,
-            "valid_from":  valid_start,
-            "valid_to":    valid_end,
-        })
+            "queue_km":    queue,
+            "is_tunnel":   is_tun,
+        }
+        incidents.append(inc)
 
-    # Sort: critical first, then high, medium, low
-    order = {"critical": 0, "high": 1, "medium": 2, "low": 3}
-    situations.sort(key=lambda x: order.get(x["severity"], 4))
-    return situations
+        if is_tun:
+            if dirn in ("north", "both"): tunnel_north_candidates.append(inc)
+            if dirn in ("south", "both"): tunnel_south_candidates.append(inc)
 
+    # ── Derive overall tunnel status ──────────────────────
+    def portal_summary(candidates):
+        if not candidates:
+            return {"severity": "clear", "delay_min": None, "queue_km": None, "text": None}
+        worst = sorted(candidates, key=lambda x: {"critical":0,"high":1,"medium":2,"info":3}.get(x["severity"],4))[0]
+        return {
+            "severity":  worst["severity"],
+            "delay_min": worst["delay_min"],
+            "queue_km":  worst["queue_km"],
+            "text":      worst["description"][:150],
+        }
 
-# ── MAIN ─────────────────────────────────────────────────────────
+    tnorth = portal_summary(tunnel_north_candidates)
+    tsouth = portal_summary(tunnel_south_candidates)
 
-def main():
-    now_utc = datetime.now(timezone.utc)
-    print(f"Fetching A2/Gotthard traffic data at {now_utc.isoformat()} ...")
+    # Overall tunnel status
+    sev_order = ["critical","high","medium","info","clear","unknown"]
+    worst_both = min([tnorth["severity"], tsouth["severity"]],
+                     key=lambda s: sev_order.index(s) if s in sev_order else 9)
+    tunnel_status = "clear" if worst_both == "clear" else worst_both
 
-    situations = fetch_situations()
+    # Sort incidents: critical first, then by direction
+    sev_key = lambda x: {"critical":0,"high":1,"medium":2,"info":3}.get(x["severity"],4)
+    incidents.sort(key=sev_key)
 
-    south  = [s for s in situations if s["direction"] in ("south", "both")]
-    north  = [s for s in situations if s["direction"] in ("north", "both")]
-    tunnel = [s for s in situations if any(k.lower() in (s["description"] + s["road"]).lower()
-                                          for k in ["Gotthard", "Tunnel", "Göschenen", "Airolo"])]
-
-    # ── Derive tunnel wait / queue summary ───────────────────
-    tunnel_south = next((s for s in tunnel if s["direction"] in ("south","both")), None)
-    tunnel_north = next((s for s in tunnel if s["direction"] in ("north","both")), None)
-
-    output = {
-        "updated":        now_utc.isoformat(),
-        "source":         "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-        "total_incidents": len(situations),
-        # Tunnel-specific summary (for the portal cards)
+    return {
+        "updated":          now.isoformat(),
+        "source":           "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
+        "total_incidents":  len(incidents),
+        "tunnel_incidents": len(tunnel_north_candidates) + len(tunnel_south_candidates),
         "tunnel": {
-            "south": {
-                "delay_min": tunnel_south["delay_min"] if tunnel_south else None,
-                "queue_km":  tunnel_south["queue_km"]  if tunnel_south else None,
-                "severity":  tunnel_south["severity"]  if tunnel_south else "unknown",
-                "text":      tunnel_south["description"][:120] if tunnel_south else None,
-            },
-            "north": {
-                "delay_min": tunnel_north["delay_min"] if tunnel_north else None,
-                "queue_km":  tunnel_north["queue_km"]  if tunnel_north else None,
-                "severity":  tunnel_north["severity"]  if tunnel_north else "unknown",
-                "text":      tunnel_north["description"][:120] if tunnel_north else None,
-            },
+            "status": tunnel_status,
+            "north": tnorth,
+            "south": tsouth,
         },
-        # Full filtered incident lists
-        "south":   south,
-        "north":   north,
-        "all":     situations,
+        "incidents_north": [i for i in incidents if i["direction"] in ("north","both")],
+        "incidents_south": [i for i in incidents if i["direction"] in ("south","both")],
+        "incidents_all":   incidents,
     }
-
-    with open(OUT_JSON, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
-
-    print(f"Written {OUT_JSON}: {len(south)} southbound, {len(north)} northbound incidents")
-    print(f"Tunnel south: delay={output['tunnel']['south']['delay_min']} min, "
-          f"queue={output['tunnel']['south']['queue_km']} km")
-    print(f"Tunnel north: delay={output['tunnel']['north']['delay_min']} min, "
-          f"queue={output['tunnel']['north']['queue_km']} km")
-
-    if not situations:
-        print("No A2 incidents found (API returned 0 matches, or no API key set).")
 
 
 if __name__ == "__main__":
