@@ -195,9 +195,7 @@ def main():
               "incidents_south":[i for i in incidents if i["direction"] in ("south","both")],
               "incidents_all":incidents}
 
-    result = enrich_with_counter_data(result)
-
-    # Enrich with Traffic Counter sensor data (if key available)
+    # Enrich with Traffic Counter sensor data (real sensor queue/wait)
     enrich_with_counter_data(result)
 
     # Also commit counter_sites.json if discovered
