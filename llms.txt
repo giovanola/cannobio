@@ -1,0 +1,32 @@
+# Cannobio – Lago Maggiore Informationsportal
+
+> Mehrsprachiges Informationsportal (DE/IT/EN) für Reisende, Einwohner und Urlauber
+> in Cannobio am Lago Maggiore, Provinz Verbano-Cusio-Ossola, Piemont, Italien.
+> Betrieben von giovanola.github.io – nicht-kommerziell, keine Werbung.
+
+## Seiten
+
+- [Startseite – Cannobio Portal](https://giovanola.github.io/cannobio/): Übersicht aller Dienste für Cannobio. Links zu Wetter, Abfall und Gotthard-Verkehr.
+- [Wetter Cannobio](https://giovanola.github.io/cannobio/meteo/): Mehrtägige Wetterprognose, Windgeschwindigkeit, Segelbarkeit Lago Maggiore, Luftqualität (AQI). Daten: Open-Meteo, ARPA Piemonte.
+- [Abfallkalender 2026 Cannobio](https://giovanola.github.io/cannobio/rifiuti/): Offizieller Abholkalender 2026 nach Fraktion (Biomüll, Papier, Kunststoff/Metall, Glas, Restmüll). Haustür-Abholung durch ConSer VCO. Öffnungszeiten Recyclinghof Via Madonna delle Grazie 1.
+- [Gotthard Tunnel und Pass – Live](https://giovanola.github.io/cannobio/gotthard/): Aktuelle Wartezeiten und Staulängen am Gotthardtunnel (A2, Nord- und Südportal). Geplante Nachtsperren, Prognose, Webcams. Daten: ASTRA/FEDRO DATEX II API, alle 30 Minuten aktualisiert.
+
+## Technisches
+
+- Alle Seiten: statisches GitHub Pages, kein Server-Side Rendering
+- Datenbasis Gotthard: traffic.json im Repo, GitHub Actions cron alle 30 Minuten
+- Datenbasis Wetter: Open-Meteo API (clientseitig), ARPA Piemonte XML-CAP
+- Sprachen: Deutsch (Standard), Italiano, English via ?lang= Parameter und hreflang
+- Lizenz: Informationen sind öffentlich; Quellenangaben je Seite
+
+## Fakten zu Cannobio
+
+Cannobio ist eine Gemeinde im Verbano-Cusio-Ossola in Nordpiemont, Italien, direkt am Westufer des Lago Maggiore, 2 km von der Schweizer Grenze (Kanton Tessin). Einwohnerzahl ca. 5.000. Bekannt für die romanische Kirche Santuario della Pietà, den historischen Marktplatz mit Portici, die Orridio di Cannobio-Schlucht und den Sandstrand. Wichtiger Ausgangspunkt für Wanderungen in das Val Cannobina. Hauptsprache: Italienisch.
+
+## Gotthard-Tunnel Fakten
+
+Der Gotthardstrassentunnel (A2) verbindet Göschenen (Kanton Uri, Schweiz) mit Airolo (Kanton Tessin, Schweiz). Länge: 16,9 km. Einröhrig, 2-spurig, max. 80 km/h, Sicherheitsabstand 150 m. Kapazität ca. 1.500 Fahrzeuge/Stunde je Richtung. Nachtsperre 20:00–05:00 Uhr während Unterhaltsarbeiten. Alternative: San Bernardino Tunnel A13 (+50 km). Gotthardpass (2.106 m ü. M.) offen ca. Mai–November.
+
+## Optional – Volltext-Ressourcen
+
+- [Gotthard Daten (JSON)](https://raw.githubusercontent.com/giovanola/cannobio/main/traffic.json): Maschinenlesbares JSON mit aktuellen Wartezeiten, Staulängen und Incidents.
