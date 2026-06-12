@@ -37,8 +37,9 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name  "github-actions[bot]"
           git add traffic.json
+          git add counter_sites.json 2>/dev/null || true
           if git diff --staged --quiet; then
-            echo "No changes to commit"
+            echo "No changes"
           else
             git commit -m "chore: update traffic data [skip ci]"
             git push
