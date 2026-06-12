@@ -175,12 +175,19 @@ def fetch_situations(now, cest_h):
         dirn = detect_dir(combined)
         tun  = is_tunnel(road, combined)
 
-        dm = re.search(r'(\d{1,3})\s*min', combined, re.I)
-        qm = re.search(r'(\d{1,2}(?:[.,]\d)?)\s*km', combined, re.I)
+        # ASTRA format: "30 min" OR "[min] 30"  |  "3 km" OR "[km] 3"
+        dm = re.search(r'\[min\]\s*(\d+(?:\.\d+)?)|(\d{1,3})\s*min', combined, re.I)
+        qm = re.search(r'\[km\]\s*(\d+(?:\.\d+)?)|(\d{1,2}(?:[.,]\d+)?)\s*km', combined, re.I)
+        delay_min, queue_km = None, None
+        if dm:
+            try: delay_min = int(float(dm.group(1) or dm.group(2)))
+            except: pass
+        if qm:
+            try: queue_km = float((qm.group(1) or qm.group(2)).replace(",","."))
+            except: pass
 
         inc = {"road":road or "A2","description":desc,"direction":dirn,"severity":sev,
-               "delay_min":int(dm.group(1)) if dm else None,
-               "queue_km":float(qm.group(1).replace(",",".")) if qm else None,
+               "delay_min":delay_min,"queue_km":queue_km,
                "is_tunnel":tun,"night_only":night}
         incidents.append(inc)
         if tun:
@@ -194,6 +201,15 @@ def fetch_situations(now, cest_h):
     sev_ord = ["critical","high","medium","info","clear","unknown"]
     worst = min([tn["severity"],ts["severity"]],
                 key=lambda s: sev_ord.index(s) if s in sev_ord else 9)
+
+    # Enrich portals with approach queue delay if sensor not available
+    for side, portal in [('north', tn), ('south', ts)]:
+        if portal.get('delay_min') is None and portal.get('queue_km') is None:
+            ap_delay, ap_queue = portal_approach_delay(incidents, side)
+            if ap_delay: portal['delay_min'] = ap_delay
+            if ap_queue: portal['queue_km'] = ap_queue
+            if ap_delay or ap_queue:
+                portal['severity'] = 'high' if (ap_delay or 0) > 10 else 'medium'
 
     return {
         "updated": now.isoformat(),
@@ -372,6 +388,26 @@ def enrich_with_counters(result):
         print(f"Counter enrichment error (non-fatal): {e}")
 
 # ─── Main ─────────────────────────────────────────────────────────────────────
+# Keywords for identifying approach incidents near each portal
+NORTH_APPROACH_KW = ['wassen','göschenen','erstfeld','altdorf','amsteg','lucerne','luzern']
+SOUTH_APPROACH_KW = ['airolo','quinto','faido','biasca','bellinzona','chiasso']
+
+def portal_approach_delay(all_incidents, portal_side):
+    """Find the worst delay/queue for traffic approaching the given portal."""
+    kw = NORTH_APPROACH_KW if portal_side == 'north' else SOUTH_APPROACH_KW
+    best_delay, best_queue = None, None
+    for inc in all_incidents:
+        if inc['severity'] not in ('critical','high'): continue
+        if inc.get('delay_min') is None and inc.get('queue_km') is None: continue
+        t = inc['description'].lower()
+        if any(k in t for k in kw):
+            if inc.get('delay_min') and (best_delay is None or inc['delay_min'] > best_delay):
+                best_delay = inc['delay_min']
+            if inc.get('queue_km') and (best_queue is None or inc['queue_km'] > best_queue):
+                best_queue = inc['queue_km']
+    return best_delay, best_queue
+
+
 def main():
     now    = datetime.now(timezone.utc)
     cest_h = (now.hour + 2) % 24
