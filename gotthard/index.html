@@ -184,7 +184,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
   .nav-btn svg{width:16px;height:16px;fill:currentColor;}
   .nav-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:199;} .topbar{z-index:200;}
   .nav-overlay.open{display:block;}
-  .nav-dropdown{position:fixed;top:56px;right:clamp(12px,4vw,24px);width:240px;background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.13),0 2px 8px rgba(0,0,0,.06);overflow:hidden;z-index:300;transform-origin:top right;animation:navIn .18s cubic-bezier(.16,1,.3,1);}
+  .nav-dropdown{display:none;position:fixed;top:56px;right:clamp(12px,4vw,24px);width:240px;background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.13),0 2px 8px rgba(0,0,0,.06);overflow:hidden;z-index:300;transform-origin:top right;animation:navIn .18s cubic-bezier(.16,1,.3,1);}
   @keyframes navIn{from{opacity:0;transform:scale(.94) translateY(-4px)}to{opacity:1;transform:scale(1) translateY(0)}}
   .nav-item{display:flex;align-items:center;gap:12px;padding:11px 14px;text-decoration:none;color:var(--text-primary);transition:background .12s ease;border-bottom:1px solid var(--border);}
   .nav-item:last-child{border-bottom:none;}
@@ -1244,14 +1244,19 @@ function updateNavLabels() {
 if(typeof updateNavLabels === "function") updateNavLabels();
 
 function toggleNav(){
-  const o=document.getElementById('nav-overlay'),b=document.getElementById('nav-toggle');
+  const o=document.getElementById('nav-overlay');
+  const d=document.getElementById('nav-dropdown');
+  const b=document.getElementById('nav-toggle') || document.querySelector('.nav-toggle');
   const open=o.classList.toggle('open');
-  b.setAttribute('aria-expanded',String(open));
+  if(d) d.style.display = open ? 'block' : 'none';
+  if(b) b.setAttribute('aria-expanded',String(open));
 }
 function closeNav(){
   document.getElementById('nav-overlay').classList.remove('open');
-  const b=document.getElementById('nav-toggle');
-  if(b)b.setAttribute('aria-expanded','false');
+  const d=document.getElementById('nav-dropdown');
+  const b=document.getElementById('nav-toggle') || document.querySelector('.nav-toggle');
+  if(d) d.style.display='none';
+  if(b) b.setAttribute('aria-expanded','false');
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav();});
 function updateNavLabels(){
