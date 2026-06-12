@@ -1,22 +1,18 @@
 name: Fetch A2 Gotthard Traffic Data
 
-# Runs every 5 minutes, 24/7
-# Also triggerable manually via GitHub UI for testing
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
-    inputs:
-      debug:
-        description: 'Print raw XML output'
-        required: false
-        default: 'false'
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   fetch-traffic:
     runs-on: ubuntu-latest
     permissions:
-      contents: write        # needed to commit traffic.json back to repo
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -26,6 +22,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Install dependencies
         run: pip install requests
@@ -33,27 +30,13 @@ jobs:
       - name: Fetch A2 traffic data from ASTRA
         env:
           OPENTRANSPORT_API_KEY: ${{ secrets.OPENTRANSPORT_API_KEY }}
+          TRAFFIC_COUNTER_KEY:   ${{ secrets.TRAFFIC_COUNTER_KEY }}
         run: python3 fetch_traffic.py
 
-      - name: Print summary (always)
-        run: |
-          echo "=== traffic.json summary ==="
-          python3 -c "
-          import json
-          with open('traffic.json') as f:
-              d = json.load(f)
-          print(f'Updated:  {d[\"updated\"]}')
-          print(f'Incidents:{d[\"total_incidents\"]}')
-          t = d['tunnel']
-          print(f'Tunnel S: delay={t[\"south\"][\"delay_min\"]} min, queue={t[\"south\"][\"queue_km\"]} km, severity={t[\"south\"][\"severity\"]}')
-          print(f'Tunnel N: delay={t[\"north\"][\"delay_min\"]} min, queue={t[\"north\"][\"queue_km\"]} km, severity={t[\"north\"][\"severity\"]}')
-          "
-
-      - name: Commit and push if traffic.json changed
+      - name: Commit and push if changed
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name  "github-actions[bot]"
           git add traffic.json
-          # Only commit if the file actually changed (ignore timestamp-only changes)
-          git diff --staged --quiet || git commit -m "chore: update A2 traffic data [skip ci]"
+          git diff --staged --quiet || git commit -m "chore: update traffic data [skip ci]"
           git push
