@@ -1103,18 +1103,25 @@ function renderTrafficData(d) {
     const sev = data.severity || 'unknown';
     const col = SEV_COLOR[sev] || 'var(--text-primary)';
 
-    // Zeitverlust — nur anzeigen wenn Sensor-Daten vorhanden
+    // Zeitverlust
     if (waitEl) {
       const dm = data.delay_min;
-      waitEl.textContent = (dm != null) ? dm : '—';
-      waitEl.style.color = (dm != null) ? col : 'var(--text-tertiary)';
+      const free = sev === 'clear' || sev === 'info';
+      waitEl.textContent = (dm != null) ? dm : free ? '0' : '—';
+      waitEl.style.color = (dm != null || free) ? col : 'var(--text-tertiary)';
     }
-    // Staulänge — nur anzeigen wenn Sensor-Daten vorhanden
+    // Staulänge
     if (queueEl) {
-      const qM = data.queue_m || (data.queue_km ? Math.round(data.queue_km * 1000) : null);
+      const qM = (data.queue_m != null) ? data.queue_m
+               : data.queue_km ? Math.round(data.queue_km * 1000) : null;
+      const free = sev === 'clear' || sev === 'info';
       if (qM != null) {
         if (qM >= 1000) { queueEl.textContent = (qM/1000).toFixed(1); if (meterEl) meterEl.textContent = 'km'; }
         else            { queueEl.textContent = qM;                    if (meterEl) meterEl.textContent = 'm'; }
+        queueEl.style.color = col;
+      } else if (free) {
+        queueEl.textContent = '0';
+        if (meterEl) meterEl.textContent = 'm';
         queueEl.style.color = col;
       } else {
         queueEl.textContent = '—';
