@@ -1,23 +1,25 @@
 {
-  "updated": "2026-06-12T09:06:12.707924+00:00",
+  "updated": "2026-06-12T09:13:40.509880+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 208,
+  "total_incidents": 209,
   "tunnel_incidents": 2,
   "tunnel": {
     "status": "info",
     "north": {
-      "severity": "info",
-      "delay_min": null,
+      "severity": "high",
+      "delay_min": 40,
       "queue_m": null,
       "wait_min": null,
-      "text": "Verkehrsbehinderung (ab 15.06.2026)"
+      "text": "Verkehrsbehinderung (ab 15.06.2026)",
+      "queue_km": 4.0
     },
     "south": {
-      "severity": "info",
-      "delay_min": null,
+      "severity": "medium",
+      "delay_min": 10,
       "queue_m": null,
       "wait_min": null,
-      "text": "Verkehrsbehinderung (ab 15.06.2026)"
+      "text": "Verkehrsbehinderung (ab 15.06.2026)",
+      "queue_km": 1.0
     }
   },
   "incidents_north": [
@@ -106,8 +108,8 @@
       "description": "Stau Länge [km] 1 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: ",
       "direction": "north",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 10,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -126,8 +128,8 @@
       "description": "Stau Länge [km] 1 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso et Poste de douane Chiasso-Brogeda Situation: ",
       "direction": "both",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 10,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -193,11 +195,21 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40.0 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situatio",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Göschenen <-> Flüelen entre Localité Erstfeld et Jonction autoroutière Göschenen Situa",
       "direction": "north",
       "severity": "high",
       "delay_min": null,
       "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 4 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situation: b",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": 40,
+      "queue_km": 4.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -247,7 +259,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -257,7 +269,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 20.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -267,7 +279,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -277,7 +289,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.3,
       "is_tunnel": false,
       "night_only": false
     },
@@ -287,7 +299,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -307,7 +319,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -327,7 +339,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -337,7 +349,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -347,7 +359,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -357,7 +369,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -367,7 +379,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -377,7 +389,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -387,7 +399,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 6.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -397,7 +409,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -407,7 +419,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -447,7 +459,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -457,7 +469,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -467,7 +479,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -477,7 +489,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -487,7 +499,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -497,7 +509,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": false
     },
@@ -507,7 +519,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -537,7 +549,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -547,7 +559,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 10.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -557,7 +569,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -567,7 +579,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -577,7 +589,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -587,7 +599,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": false
     },
@@ -607,7 +619,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -617,7 +629,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -637,7 +649,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -647,7 +659,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -657,7 +669,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -667,7 +679,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -677,7 +689,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -687,7 +699,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -697,7 +709,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -707,7 +719,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.55,
       "is_tunnel": false,
       "night_only": false
     },
@@ -717,7 +729,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -727,7 +739,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -737,7 +749,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -747,7 +759,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -757,7 +769,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": false
     },
@@ -767,7 +779,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -777,7 +789,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -787,7 +799,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -797,7 +809,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -807,7 +819,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -817,7 +829,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.12,
       "is_tunnel": false,
       "night_only": false
     },
@@ -827,7 +839,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.12,
       "is_tunnel": false,
       "night_only": false
     },
@@ -837,7 +849,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.12,
       "is_tunnel": false,
       "night_only": false
     },
@@ -847,7 +859,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -857,7 +869,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 16.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -867,7 +879,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 16.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -877,7 +889,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 6.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -907,7 +919,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -917,7 +929,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -927,7 +939,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -937,7 +949,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -947,7 +959,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -957,7 +969,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -967,7 +979,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -977,7 +989,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -997,7 +1009,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1007,7 +1019,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1017,7 +1029,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1027,7 +1039,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1087,7 +1099,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1097,7 +1109,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1107,7 +1119,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1117,7 +1129,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1127,7 +1139,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1137,7 +1149,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1147,7 +1159,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1157,7 +1169,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1167,7 +1179,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1177,7 +1189,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1187,7 +1199,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1197,7 +1209,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1207,7 +1219,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1237,7 +1249,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1247,7 +1259,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1257,7 +1269,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1267,7 +1279,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1277,7 +1289,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1287,7 +1299,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1297,7 +1309,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 9.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1307,7 +1319,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 9.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1317,7 +1329,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1337,7 +1349,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.6,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1347,7 +1359,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.25,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1367,7 +1379,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1377,7 +1389,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.6,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1387,7 +1399,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1417,7 +1429,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.3,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1427,7 +1439,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1437,7 +1449,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1447,7 +1459,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1457,7 +1469,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1467,7 +1479,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1477,7 +1489,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 8.6,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1487,7 +1499,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 8.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1497,7 +1509,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1507,7 +1519,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1517,7 +1529,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1527,7 +1539,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.6,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1537,7 +1549,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1547,7 +1559,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1557,7 +1569,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1567,7 +1579,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1587,7 +1599,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 9.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1597,7 +1609,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 9.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1607,7 +1619,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.9,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1617,7 +1629,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1627,7 +1639,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1637,7 +1649,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1647,7 +1659,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1667,7 +1679,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1677,7 +1689,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1687,7 +1699,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1697,7 +1709,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1707,7 +1719,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1717,7 +1729,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1727,7 +1739,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.15,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1737,7 +1749,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1747,7 +1759,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1757,7 +1769,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1767,7 +1779,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.9,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1797,7 +1809,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.75,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1837,7 +1849,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1847,7 +1859,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1857,7 +1869,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1867,7 +1879,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1877,7 +1889,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1887,7 +1899,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1907,7 +1919,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.8,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1927,7 +1939,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.45,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1947,7 +1959,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1957,7 +1969,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 14.9,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1967,7 +1979,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1977,7 +1989,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1987,7 +1999,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 10.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1997,7 +2009,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2007,7 +2019,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2017,7 +2029,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.41,
       "is_tunnel": true,
       "night_only": false
     },
@@ -2037,7 +2049,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     }
@@ -2098,8 +2110,8 @@
       "description": "Stau Länge [km] 1 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: bou",
       "direction": "south",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 10,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2128,8 +2140,8 @@
       "description": "Stau Länge [km] 1 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso et Poste de douane Chiasso-Brogeda Situation: ",
       "direction": "both",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 10,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2239,7 +2251,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2249,7 +2261,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 20.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2259,7 +2271,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2269,7 +2281,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.3,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2279,7 +2291,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2299,7 +2311,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2319,7 +2331,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2329,7 +2341,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2339,7 +2351,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2349,7 +2361,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2359,7 +2371,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2369,7 +2381,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2379,7 +2391,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 6.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2389,7 +2401,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2399,7 +2411,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2439,7 +2451,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2449,7 +2461,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2459,7 +2471,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2469,7 +2481,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2479,7 +2491,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2489,7 +2501,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2499,7 +2511,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2529,7 +2541,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2539,7 +2551,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 10.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2549,7 +2561,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2559,7 +2571,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2569,7 +2581,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2579,7 +2591,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2599,7 +2611,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2609,7 +2621,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2629,7 +2641,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2639,7 +2651,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2649,7 +2661,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2659,7 +2671,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2669,7 +2681,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2679,7 +2691,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2689,7 +2701,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2699,7 +2711,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.55,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2709,7 +2721,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2719,7 +2731,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2729,7 +2741,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2739,7 +2751,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2749,7 +2761,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2759,7 +2771,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2769,7 +2781,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2779,7 +2791,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2789,7 +2801,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2799,7 +2811,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2809,7 +2821,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.12,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2819,7 +2831,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.12,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2829,7 +2841,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.12,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2839,7 +2851,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2849,7 +2861,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 16.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2859,7 +2871,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 16.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2869,7 +2881,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 6.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2899,7 +2911,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2909,7 +2921,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2919,7 +2931,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2929,7 +2941,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2939,7 +2951,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2949,7 +2961,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2959,7 +2971,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2969,7 +2981,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2989,7 +3001,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2999,7 +3011,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3009,7 +3021,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3019,7 +3031,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3079,7 +3091,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3089,7 +3101,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3099,7 +3111,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3109,7 +3121,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3119,7 +3131,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3129,7 +3141,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3139,7 +3151,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3149,7 +3161,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3159,7 +3171,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3169,7 +3181,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3179,7 +3191,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3189,7 +3201,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3199,7 +3211,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3229,7 +3241,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3239,7 +3251,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3249,7 +3261,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3259,7 +3271,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3269,7 +3281,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3279,7 +3291,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3289,7 +3301,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 9.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3299,7 +3311,7 @@
       "direction": "south",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 26.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3309,7 +3321,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 9.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3319,7 +3331,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3339,7 +3351,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.6,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3349,7 +3361,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.25,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3369,7 +3381,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3379,7 +3391,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.6,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3389,7 +3401,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3419,7 +3431,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.3,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3429,7 +3441,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3439,7 +3451,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3449,7 +3461,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3459,7 +3471,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3469,7 +3481,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3479,7 +3491,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 8.6,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3489,7 +3501,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 8.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3499,7 +3511,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3509,7 +3521,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3519,7 +3531,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3529,7 +3541,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.6,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3539,7 +3551,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3549,7 +3561,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3559,7 +3571,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3569,7 +3581,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3589,7 +3601,7 @@
       "direction": "south",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3599,7 +3611,7 @@
       "direction": "south",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3609,7 +3621,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 9.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3619,7 +3631,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 9.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3629,7 +3641,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.9,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3639,7 +3651,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3649,7 +3661,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3659,7 +3671,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3669,7 +3681,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3689,7 +3701,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3699,7 +3711,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3709,7 +3721,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3719,7 +3731,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3729,7 +3741,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3739,7 +3751,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3749,7 +3761,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.15,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3759,7 +3771,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3769,7 +3781,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3779,7 +3791,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3789,7 +3801,7 @@
       "direction": "south",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3799,7 +3811,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.9,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3829,7 +3841,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.75,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3869,7 +3881,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3879,7 +3891,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3889,7 +3901,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3899,7 +3911,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3909,7 +3921,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3919,7 +3931,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3939,7 +3951,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.8,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3959,7 +3971,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.45,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3979,7 +3991,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3989,7 +4001,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 14.9,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3999,7 +4011,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4009,7 +4021,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4019,7 +4031,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 10.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4029,7 +4041,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4039,7 +4051,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4049,7 +4061,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.41,
       "is_tunnel": true,
       "night_only": false
     },
@@ -4069,7 +4081,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     }
@@ -4150,8 +4162,8 @@
       "description": "Stau Länge [km] 1 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: bou",
       "direction": "south",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 10,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4180,8 +4192,8 @@
       "description": "Stau Länge [km] 1 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: ",
       "direction": "north",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 10,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4200,8 +4212,8 @@
       "description": "Stau Länge [km] 1 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso et Poste de douane Chiasso-Brogeda Situation: ",
       "direction": "both",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 10,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4267,11 +4279,21 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40.0 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situatio",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Göschenen <-> Flüelen entre Localité Erstfeld et Jonction autoroutière Göschenen Situa",
       "direction": "north",
       "severity": "high",
       "delay_min": null,
       "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 4 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situation: b",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": 40,
+      "queue_km": 4.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4321,7 +4343,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4331,7 +4353,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 20.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4341,7 +4363,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4351,7 +4373,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.3,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4361,7 +4383,7 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4381,7 +4403,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4401,7 +4423,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4411,7 +4433,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4421,7 +4443,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4431,7 +4453,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4441,7 +4463,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4451,7 +4473,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4461,7 +4483,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 6.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4471,7 +4493,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4481,7 +4503,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4521,7 +4543,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4531,7 +4553,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4541,7 +4563,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4551,7 +4573,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4561,7 +4583,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4571,7 +4593,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4581,7 +4603,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4611,7 +4633,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4621,7 +4643,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 10.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4631,7 +4653,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4641,7 +4663,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4651,7 +4673,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4661,7 +4683,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4681,7 +4703,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4691,7 +4713,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4711,7 +4733,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4721,7 +4743,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4731,7 +4753,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4741,7 +4763,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4751,7 +4773,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4761,7 +4783,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4771,7 +4793,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4781,7 +4803,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.55,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4791,7 +4813,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4801,7 +4823,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4811,7 +4833,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4821,7 +4843,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4831,7 +4853,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4841,7 +4863,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4851,7 +4873,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4861,7 +4883,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4871,7 +4893,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4881,7 +4903,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4891,7 +4913,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.12,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4901,7 +4923,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.12,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4911,7 +4933,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.12,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4921,7 +4943,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4931,7 +4953,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 16.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4941,7 +4963,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 16.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4951,7 +4973,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 6.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4981,7 +5003,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4991,7 +5013,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5001,7 +5023,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5011,7 +5033,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5021,7 +5043,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5031,7 +5053,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5041,7 +5063,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5051,7 +5073,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5071,7 +5093,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5081,7 +5103,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5091,7 +5113,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5101,7 +5123,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5161,7 +5183,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5171,7 +5193,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5181,7 +5203,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5191,7 +5213,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5201,7 +5223,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5211,7 +5233,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5221,7 +5243,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5231,7 +5253,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5241,7 +5263,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5251,7 +5273,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5261,7 +5283,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5271,7 +5293,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5281,7 +5303,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5311,7 +5333,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5321,7 +5343,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5331,7 +5353,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5341,7 +5363,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5351,7 +5373,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5361,7 +5383,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5371,7 +5393,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 9.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5381,7 +5403,7 @@
       "direction": "south",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 26.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5391,7 +5413,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 9.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5401,7 +5423,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5421,7 +5443,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.6,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5431,7 +5453,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.25,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5451,7 +5473,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5461,7 +5483,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.6,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5471,7 +5493,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5501,7 +5523,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.3,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5511,7 +5533,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5521,7 +5543,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5531,7 +5553,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5541,7 +5563,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5551,7 +5573,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5561,7 +5583,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 8.6,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5571,7 +5593,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 8.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5581,7 +5603,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5591,7 +5613,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5601,7 +5623,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5611,7 +5633,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.6,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5621,7 +5643,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5631,7 +5653,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5641,7 +5663,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5651,7 +5673,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5671,7 +5693,7 @@
       "direction": "south",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5681,7 +5703,7 @@
       "direction": "south",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 7.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5691,7 +5713,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 9.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5701,7 +5723,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 9.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5711,7 +5733,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.9,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5721,7 +5743,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5731,7 +5753,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5741,7 +5763,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5751,7 +5773,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5771,7 +5793,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5781,7 +5803,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5791,7 +5813,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5801,7 +5823,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5811,7 +5833,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5821,7 +5843,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5831,7 +5853,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.15,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5841,7 +5863,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5851,7 +5873,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5861,7 +5883,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5871,7 +5893,7 @@
       "direction": "south",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5881,7 +5903,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.9,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5911,7 +5933,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.75,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5951,7 +5973,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 4.5,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5961,7 +5983,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5971,7 +5993,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5981,7 +6003,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5991,7 +6013,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -6001,7 +6023,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -6021,7 +6043,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.8,
       "is_tunnel": false,
       "night_only": true
     },
@@ -6041,7 +6063,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.45,
       "is_tunnel": false,
       "night_only": false
     },
@@ -6061,7 +6083,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -6071,7 +6093,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 14.9,
       "is_tunnel": false,
       "night_only": false
     },
@@ -6081,7 +6103,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -6091,7 +6113,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
     },
@@ -6101,7 +6123,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 10.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -6111,7 +6133,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -6121,7 +6143,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -6131,7 +6153,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.41,
       "is_tunnel": true,
       "night_only": false
     },
@@ -6151,7 +6173,7 @@
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.7,
       "is_tunnel": false,
       "night_only": true
     }
