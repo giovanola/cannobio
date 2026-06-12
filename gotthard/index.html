@@ -1163,7 +1163,7 @@ function applyLang(l) {
   set('t-cam-south-loc', t.camSouthLoc); set('t-cam-north-loc', t.camNorthLoc); set('t-cam-note', t.camNote);
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
   // Re-render data sections
-  renderLive().then(()=>{}); render5Day();
+  render5Day();
   if(typeof updateNavLabels==="function")updateNavLabels();
 }
 
@@ -1239,12 +1239,17 @@ function renderTrafficData(d) {
   if (!banner || !statusText) return;
 
   const status = tun.status || 'unknown';
+  // Smart label: append upcoming closure note on green banner
+  const _upcoming = (d.incidents_all||[]).find(i=>i.is_tunnel&&i.night_only&&i.severity==='info');
+  const _upcomingLbl = _upcoming
+    ? (lang==='de'?' · Nachtsperre geplant':lang==='it'?' · Chiusura notturna prevista':' · Night closure planned')
+    : '';
   const statusCfg = {
-    clear:    {cls:'status-banner green', icon:'🟢', label: t.statusClear   || 'Tunnel frei · keine aktiven Meldungen'},
-    info:     {cls:'status-banner green', icon:'🟢', label: t.statusInfo    || 'Tunnel offen · vereinzelte Hinweise'},
+    clear:    {cls:'status-banner green', icon:'🟢', label: (t.statusClear||'Tunnel frei') + _upcomingLbl},
+    info:     {cls:'status-banner green', icon:'🟢', label: (t.statusInfo||'Tunnel frei') + _upcomingLbl},
     medium:   {cls:'status-banner gold',  icon:'🟡', label: t.statusMedium  || 'Beeinträchtigungen möglich'},
     high:     {cls:'status-banner gold',  icon:'🟠', label: t.statusHigh    || 'Stau am Gotthard'},
-    critical: {cls:'status-banner red',   icon:'🔴', label: t.statusCrit    || 'Erhebliche Störung am Gotthard'},
+    critical: {cls:'status-banner red',   icon:'🔴', label: t.statusCrit    || 'Tunnel gesperrt'},
     unknown:  {cls:'status-banner gold',  icon:'📡', label: t.statusUnknown || 'Daten werden geladen…'},
   };
   const cfg = statusCfg[status] || statusCfg.unknown;
@@ -1254,8 +1259,8 @@ function renderTrafficData(d) {
   // Build status content
   let html = `<div style="font-weight:600;margin-bottom:4px;">${cfg.label}</div>`;
 
-  // Show top 3 tunnel-specific incidents
-  const tunnelIncs = (d.incidents_all || []).filter(i => i.is_tunnel).slice(0,3);
+  // Show top 3 tunnel-specific incidents (skip info-only for clean status)
+  const tunnelIncs = (d.incidents_all || []).filter(i => i.is_tunnel && i.severity !== 'info').slice(0,3);
   if (tunnelIncs.length) {
     const sDir = (i) => i.direction === 'south' ? (t.dirSouth||'→ Airolo')
                       : i.direction === 'north'  ? (t.dirNorth||'→ Göschenen') : '';
@@ -1321,7 +1326,7 @@ applyLang(initLang2);
 render5Day();
 loadTrafficJson();
 // Refresh every 5 minutes
-setInterval(()=>{ renderLive().then(()=>{}); render5Day(); loadTrafficJson(); }, 5 * 60 * 1000);
+setInterval(()=>{ render5Day(); loadTrafficJson(); }, 5 * 60 * 1000);
 // Webcam refresh every 5 minutes
 function refreshCams() {
   ['cam-south','cam-north'].forEach(id => {
