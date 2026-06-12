@@ -2,7 +2,8 @@ name: Fetch A2 Gotthard Traffic Data
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    # Offset from :00/:30 to avoid GitHub Actions peak load at exact half-hours
+    - cron: '8,38 * * * *'
   workflow_dispatch:
 
 env:
@@ -39,7 +40,7 @@ jobs:
           git add traffic.json
           git add counter_sites.json 2>/dev/null || true
           if git diff --staged --quiet; then
-            echo "No changes"
+            echo "No changes to commit"
           else
             git commit -m "chore: update traffic data [skip ci]"
             git push
