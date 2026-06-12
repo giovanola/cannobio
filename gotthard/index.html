@@ -309,7 +309,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 <section class="hero">
   <div class="hero-eyebrow" id="t-eyebrow">Schweizer Alpen · A2 Autobahn</div>
   <h1 id="t-h1">Gotthard<br><em>Verkehr</em></h1>
-  <p class="hero-sub" id="t-sub">Aktuelle Lage am Tunnel und am Pass. Wartezeiten, Sperrungen und Prognose für die nächsten 5 Tage.</p>
+  <p class="hero-sub" id="t-sub">Aktuelle Lage am Tunnel und am Pass. Wartezeiten, Sperrungen und Prognose für die nächsten 3 Tage.</p>
 </section>
 
 <div class="content">
@@ -319,9 +319,6 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
     <div class="section-label" id="t-live-label">Live-Situation</div>
 
     <!-- LIVE DATA NOTE -->
-    <div style="padding:10px 14px;background:#F3F0FF;border:1px solid #DDD6FE;border-radius:var(--radius-sm);margin-bottom:12px;font-size:12px;color:#5B21B6;" id="t-live-note">
-      Hinweis: Echtzeit-Wartezeiten sind nur bei aktiver Verbindung zu TCS / Viasuisse verfügbar. Bei fehlenden Werten bitte direkt auf den verlinkten Quellen prüfen.
-    </div>
     <!-- PASS STATUS FIRST -->
     <div class="status-banner gold" id="pass-status" style="margin-bottom:16px;">
       <span class="status-icon">⛰️</span>
@@ -336,14 +333,53 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
       </div>
     </div>
 
-    <!-- PORTAL CARDS: SCHÄTZUNG + LIVE LINK -->
-    <div class="portal-grid">
-      <div class="portal-card">
-        <div class="portal-card-head">
+    <!-- PORTAL TABLE: Zeitverlust + Staulänge -->
+    <div style="border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;margin-bottom:16px;background:var(--surface);box-shadow:var(--shadow-sm);">
+      <!-- NORD → SÜD -->
+      <div style="padding:12px 16px;border-bottom:1px solid var(--border);">
+        <div style="font-size:11px;font-weight:600;color:var(--text-tertiary);letter-spacing:.05em;margin-bottom:10px;" id="t-north-dir">↓ NORD → SÜD</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
           <div>
-            <div class="portal-name" id="t-north-name">Nordportal Göschenen</div>
-            <div class="portal-direction" id="t-north-dir">in Richtung Süden</div>
+            <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;" id="t-label-delay-n">Zeitverlust</div>
+            <div style="display:flex;align-items:baseline;gap:5px;">
+              <span style="font-size:28px;font-weight:300;font-family:var(--font-display);color:var(--text-primary);" id="wait-north">—</span>
+              <span style="font-size:13px;color:var(--text-secondary);" id="t-min">min</span>
+            </div>
           </div>
+          <div>
+            <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;" id="t-label-queue-n">Staulänge</div>
+            <div style="display:flex;align-items:baseline;gap:5px;">
+              <span style="font-size:28px;font-weight:300;font-family:var(--font-display);color:var(--text-primary);" id="queue-north">—</span>
+              <span style="font-size:13px;color:var(--text-secondary);" id="t-meter-n">m</span>
+            </div>
+          </div>
+        </div>
+        <div class="wait-bar-wrap" style="margin-top:8px;"><div class="wait-bar bar-free" id="bar-north" style="width:0%"></div></div>
+        <div style="font-size:10px;color:var(--text-tertiary);margin-top:4px;" id="update-north"></div>
+      </div>
+      <!-- SÜD → NORD -->
+      <div style="padding:12px 16px;">
+        <div style="font-size:11px;font-weight:600;color:var(--text-tertiary);letter-spacing:.05em;margin-bottom:10px;" id="t-south-dir">↑ SÜD → NORD</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div>
+            <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;" id="t-label-delay-s">Zeitverlust</div>
+            <div style="display:flex;align-items:baseline;gap:5px;">
+              <span style="font-size:28px;font-weight:300;font-family:var(--font-display);color:var(--text-primary);" id="wait-south">—</span>
+              <span style="font-size:13px;color:var(--text-secondary);" id="t-min2">min</span>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;" id="t-label-queue-s">Staulänge</div>
+            <div style="display:flex;align-items:baseline;gap:5px;">
+              <span style="font-size:28px;font-weight:300;font-family:var(--font-display);color:var(--text-primary);" id="queue-south">—</span>
+              <span style="font-size:13px;color:var(--text-secondary);" id="t-meter-s">m</span>
+            </div>
+          </div>
+        </div>
+        <div class="wait-bar-wrap" style="margin-top:8px;"><div class="wait-bar bar-free" id="bar-south" style="width:0%"></div></div>
+        <div style="font-size:10px;color:var(--text-tertiary);margin-top:4px;" id="update-south"></div>
+      </div>
+    </div>
 
         </div>
         <div class="portal-card-body">
@@ -436,73 +472,6 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
     </div>
   </div>
 
-  <!-- A2 STAUMELDUNGEN -->
-  <div class="section">
-    <div class="section-label" id="t-traffic-label">A2 Verkehrsmeldungen – Basel bis Bellinzona</div>
-
-    <!-- FETCH ATTEMPT -->
-    <div id="traffic-loading" style="padding:16px;text-align:center;font-size:13px;color:var(--text-tertiary);">
-      <span id="traffic-loading-text">Staumeldungen werden geladen…</span>
-    </div>
-
-    <!-- RESULTS -->
-    <div id="traffic-results" style="display:none;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
-        <!-- RICHTUNG SÜD -->
-        <div style="border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);overflow:hidden;box-shadow:var(--shadow-sm);">
-          <div style="padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
-            <div>
-              <div style="font-size:13px;font-weight:600;color:var(--text-primary);" id="t-dir-south">Richtung Süden ↓</div>
-              <div style="font-size:11px;color:var(--text-tertiary);">Basel → Bellinzona</div>
-            </div>
-            <div id="traffic-south-badge" style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;background:var(--accent-pale);color:var(--accent);">—</div>
-          </div>
-          <div id="traffic-south-list" style="padding:8px 0;min-height:60px;"></div>
-        </div>
-        <!-- RICHTUNG NORD -->
-        <div style="border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);overflow:hidden;box-shadow:var(--shadow-sm);">
-          <div style="padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
-            <div>
-              <div style="font-size:13px;font-weight:600;color:var(--text-primary);" id="t-dir-north">Richtung Norden ↑</div>
-              <div style="font-size:11px;color:var(--text-tertiary);">Bellinzona → Basel</div>
-            </div>
-            <div id="traffic-north-badge" style="font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;background:var(--accent-pale);color:var(--accent);">—</div>
-          </div>
-          <div id="traffic-north-list" style="padding:8px 0;min-height:60px;"></div>
-        </div>
-      </div>
-      <div style="font-size:11px;color:var(--text-tertiary);margin-top:4px;" id="traffic-updated"></div>
-    </div>
-
-    <!-- FALLBACK: Direct links when fetch fails -->
-    <div id="traffic-fallback" style="display:none;">
-      <div style="padding:14px 16px;background:var(--sky-pale);border:1px solid #BBDEFB;border-radius:var(--radius-md);margin-bottom:12px;font-size:13px;color:var(--sky);" id="traffic-fallback-text">
-        Echtzeit-Staumeldungen direkt abrufen:
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-        <a href="https://www.viasuisse.ch/de/strecke?from=Basel&to=Bellinzona&direction=S" target="_blank" rel="noopener"
-           style="display:flex;flex-direction:column;padding:14px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);text-decoration:none;transition:box-shadow 0.2s;">
-          <div style="font-size:12px;font-weight:600;color:var(--text-primary);margin-bottom:4px;" id="t-vs-south">↓ Richtung Süden</div>
-          <div style="font-size:11px;color:var(--text-tertiary);">Basel → Bellinzona · Viasuisse</div>
-          <div style="font-size:11px;color:var(--sky);margin-top:8px;font-weight:500;">viasuisse.ch ↗</div>
-        </a>
-        <a href="https://www.viasuisse.ch/de/strecke?from=Bellinzona&to=Basel&direction=N" target="_blank" rel="noopener"
-           style="display:flex;flex-direction:column;padding:14px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);text-decoration:none;transition:box-shadow 0.2s;">
-          <div style="font-size:12px;font-weight:600;color:var(--text-primary);margin-bottom:4px;" id="t-vs-north">↑ Richtung Norden</div>
-          <div style="font-size:11px;color:var(--text-tertiary);">Bellinzona → Basel · Viasuisse</div>
-          <div style="font-size:11px;color:var(--sky);margin-top:8px;font-weight:500;">viasuisse.ch ↗</div>
-        </a>
-      </div>
-      <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;">
-        <a class="ext-link" href="https://www.tcs.ch/de/tools/verkehrsinfo-verkehrslage.php" target="_blank" rel="noopener">TCS Verkehrsinfo ↗</a>
-        <a class="ext-link" href="https://www.astra.admin.ch/astra/de/home/aktuell/veranstaltungen0/baustellen.html" target="_blank" rel="noopener">ASTRA Baustellen ↗</a>
-        <a class="ext-link" href="https://map.geo.admin.ch/?topic=ech&lang=de&bgLayer=ch.swisstopo.pixelkarte-grau&layers=ch.astra.strassenverkehrszaehlung_messstellen-uebergeordnet,ch.astra.astra-Unfaelle&E=2660000&N=1190000&zoom=3" target="_blank" rel="noopener">Swisstopo Verkehr ↗</a>
-      </div>
-      <div style="margin-top:10px;font-size:11px;color:var(--text-tertiary);" id="t-traffic-github-note">
-        Hinweis: Live-Staumeldungen via GitHub Actions Backend in Planung.
-      </div>
-    </div>
-  </div>
 
   <!-- 5-TAGE PROGNOSE -->
   <div class="section">
@@ -513,57 +482,9 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
   <!-- SPERRUNGEN -->
   <div class="section">
     <div class="section-label" id="t-clos-label">Geplante Sperrungen 2026</div>
-    <div class="closure-list">
-      <div class="closure-item" style="background:var(--bg);font-size:11px;font-weight:600;color:var(--text-tertiary);letter-spacing:0.06em;text-transform:uppercase;">
-        <div id="t-col-dates">Datum</div><div id="t-col-desc">Beschreibung</div><div id="t-col-time">Uhrzeit</div>
-      </div>
-      <div class="closure-item">
-        <div class="closure-dates">23.–27. März</div>
-        <div class="closure-desc" id="t-maint">Nachtunterhaltsarbeiten</div>
-        <div class="closure-time">22:00–05:00</div>
-      </div>
-      <div class="closure-item">
-        <div class="closure-dates">8.–12. Juni</div>
-        <div class="closure-desc" id="t-maint2">Nachtunterhaltsarbeiten</div>
-        <div class="closure-time">20:00–05:00</div>
-      </div>
-      <div class="closure-item">
-        <div class="closure-dates">15.–19. Juni</div>
-        <div class="closure-desc" id="t-maint3">Nachtunterhaltsarbeiten</div>
-        <div class="closure-time">20:00–05:00</div>
-      </div>
-      <div class="closure-item">
-        <div class="closure-dates">22.–26. Juni</div>
-        <div class="closure-desc" id="t-maint4">Nachtunterhaltsarbeiten</div>
-        <div class="closure-time">20:00–05:00</div>
-      </div>
-      <div class="closure-item">
-        <div class="closure-dates">7.–11. Sept.</div>
-        <div class="closure-desc" id="t-maint5">Nachtunterhaltsarbeiten</div>
-        <div class="closure-time">22:00–05:00</div>
-      </div>
-      <div class="closure-item">
-        <div class="closure-dates">14.–18. Sept.</div>
-        <div class="closure-desc" id="t-maint6">Nachtunterhaltsarbeiten</div>
-        <div class="closure-time">20:00–05:00</div>
-      </div>
-      <div class="closure-item">
-        <div class="closure-dates">21.–25. Sept.</div>
-        <div class="closure-desc" id="t-maint7">Nachtunterhaltsarbeiten</div>
-        <div class="closure-time">20:00–05:00</div>
-      </div>
-      <div class="closure-item">
-        <div class="closure-dates">28. Sept.–2. Okt.</div>
-        <div class="closure-desc" id="t-maint8">Nachtunterhaltsarbeiten</div>
-        <div class="closure-time">20:00–05:00</div>
-      </div>
-      <div class="closure-item" style="background:var(--gold-pale);">
-        <div class="closure-dates" style="color:var(--gold);">Nov.–Mai</div>
-        <div class="closure-desc" id="t-pass-closed" style="color:#78350F;">Gotthardpass Wintersperre</div>
-        <div class="closure-time" style="color:var(--gold);">ganztags</div>
-      </div>
-    </div>
-    <div style="font-size:11px;color:var(--text-tertiary);margin-top:10px;" id="t-clos-note">Nachtsperre: Personenwagen werden über den Pass umgeleitet. Schwerverkehr wird 30 Min. vor Sperrung gestoppt.</div>
+    <div id="closure-list-container"></div>
+    <div style="font-size:11px;color:var(--text-tertiary);margin-top:10px;" id="t-clos-note">Nachtsperre Gotthardtunnel · Quelle: ASTRA</div>
+
     <div class="link-row">
       <a class="ext-link" href="https://www.tcs.ch/de/tools/verkehrsinfo-verkehrslage/gotthardtunnel-sperrung.php" target="_blank" rel="noopener" id="t-clos-link">Sperrungen &amp; Umfahrungen Gotthardtunnel ↗</a>
     </div>
@@ -689,7 +610,7 @@ const T = {
     bcCurrent:'Gotthard',
     eyebrow:'Schweizer Alpen · A2 Autobahn',
     h1:'Gotthard<br><em>Verkehr</em>',
-    sub:'Aktuelle Lage am Tunnel und am Pass. Wartezeiten, Sperrungen und Prognose für die nächsten 5 Tage.',
+    sub:'Aktuelle Lage am Tunnel und am Pass. Wartezeiten, Sperrungen und Prognose für die nächsten 3 Tage.',
     liveNote:'Hinweis: Echtzeit-Wartezeiten sind bei fehlender Verbindung nicht verfügbar. Bitte direkt prüfen.',
     liveLabel:'Live-Situation', northName:'Nordportal', northDir:'in Richtung Süden',
     southName:'Südportal', southDir:'in Richtung Norden',
@@ -703,7 +624,7 @@ const T = {
     recStable:'Aktuelle Bedingungen bleiben voraussichtlich konstant. Jetzt fahren ist sinnvoll.',
     recRising:'Wartezeit nimmt zu. Jetzt fahren oder mindestens 2 Stunden warten.',
     recFalling:'Lage verbessert sich. In 45–90 min sind bessere Bedingungen zu erwarten.',
-    fcLabel:'Prognose 5 Tage',
+    fcLabel:'Prognose 3 Tage',
     fcNote:'Basierend auf historischen Verkehrsmustern (Wochentag, Saison, Ferien). Kein Echtzeitwert.',
     closLabel:'Geplante Sperrungen 2026', colDates:'Datum', colDesc:'Beschreibung', colTime:'Uhrzeit',
     maint:'Nachtunterhaltsarbeiten', passClosed:'Gotthardpass Wintersperre',
@@ -753,7 +674,7 @@ const T = {
     bcCurrent:'Gottardo',
     eyebrow:'Alpi Svizzere · Autostrada A2',
     h1:'Gottardo<br><em>Traffico</em>',
-    sub:'Situazione attuale al tunnel e al passo. Tempi di attesa, chiusure e previsioni per i prossimi 5 giorni.',
+    sub:'Situazione attuale al tunnel e al passo. Tempi di attesa, chiusure e previsioni per i prossimi 3 giorni.',
     liveNote:'Nota: I tempi di attesa in tempo reale non sono disponibili senza connessione. Verificare direttamente.',
     liveLabel:'Situazione live', northName:'Portale Nord', northDir:'in direzione Sud',
     southName:'Portale Sud', southDir:'in Richtung Norden',
@@ -816,7 +737,7 @@ const T = {
     bcCurrent:'Gotthard',
     eyebrow:'Swiss Alps · A2 Motorway',
     h1:'Gotthard<br><em>Traffic</em>',
-    sub:'Current situation at the tunnel and pass. Waiting times, closures and forecast for the next 5 days.',
+    sub:'Current situation at the tunnel and pass. Waiting times, closures and forecast for the next 3 days.',
     liveNote:'Note: Real-time wait times are unavailable without a connection. Please check directly.',
     liveLabel:'Live situation', northName:'North Portal', northDir:'southbound',
     southName:'South Portal', southDir:'northbound',
@@ -1189,141 +1110,209 @@ async function loadTrafficJson() {
 
 function renderTrafficData(d) {
   window._trafficLoaded = true;
-  const t = T[lang] || T.de;
-  const tun = d.tunnel || {};
-  const ts  = new Date(d.updated).toLocaleTimeString('de-CH',{hour:'2-digit',minute:'2-digit'});
-  const dateStr = new Date(d.updated).toLocaleDateString(
-    lang==='it'?'it-IT':lang==='en'?'en-GB':'de-CH', {day:'numeric',month:'short'});
+  const t    = T[lang] || T.de;
+  const tun  = d.tunnel || {};
+  const ts   = new Date(d.updated).toLocaleTimeString(
+    lang==='it'?'it-IT':lang==='en'?'en-GB':'de-CH',
+    {hour:'2-digit',minute:'2-digit'});
+  if (!d || !tun) return;
 
-  // ── Remove the old "no data" hint ────────────────────────
-  const liveNote = document.getElementById('t-live-note');
-  if (liveNote) liveNote.style.display = 'none';
+  const SEV_COLOR = {
+    critical: '#C0392B', high: '#E67E22', medium: '#D4AC0D',
+    info: 'var(--text-secondary)', clear: '#1B6B45', unknown: 'var(--text-tertiary)'
+  };
 
-  // ── Portal cards ──────────────────────────────────────────
-  const SEV_COLOR = {critical:'#C0392B',high:'#E67E22',medium:'#B7791F',info:'var(--text-secondary)',clear:'#1B6B45',unknown:'var(--text-tertiary)'};
-  const SEV_BG    = {critical:'var(--red-pale)',high:'#FEF3E2',medium:'#FEF3E2',info:'var(--bg)',clear:'var(--accent-pale)',unknown:'var(--bg)'};
-
-  function fillCard(waitId, kmId, updateId, barId, data) {
+  // ── Fill portal cards ───────────────────────────────────────
+  function fillCard(side, data) {
+    const waitEl  = document.getElementById('wait-' + side);
+    const queueEl = document.getElementById('queue-' + side);
+    const meterEl = document.getElementById('t-meter-' + (side==='north'?'n':'s'));
+    const barEl   = document.getElementById('bar-' + side);
+    const upEl    = document.getElementById('update-' + side);
     if (!data) return;
     const sev = data.severity || 'unknown';
-    const waitEl   = document.getElementById(waitId);
-    const kmEl     = document.getElementById(kmId);
-    const updateEl = document.getElementById(updateId);
-    const barEl    = document.getElementById(barId);
+    const col = SEV_COLOR[sev] || 'var(--text-primary)';
 
+    // Zeitverlust
     if (waitEl) {
-      if (data.delay_min !== null && data.delay_min !== undefined) {
-        waitEl.textContent = data.delay_min;
-      } else if (sev === 'clear') {
-        waitEl.textContent = '0';
-      } else {
-        waitEl.textContent = '—';
-      }
-      waitEl.style.color = SEV_COLOR[sev] || 'var(--text-primary)';
+      const dm = data.delay_min;
+      waitEl.textContent = (dm != null) ? dm : (sev === 'clear' || sev === 'info') ? '0' : '—';
+      waitEl.style.color = col;
     }
-    if (kmEl)     kmEl.textContent = data.queue_km ? data.queue_km + ' km' : '';
-    if (updateEl) updateEl.textContent = (t.liveUpdated || 'ASTRA') + ' · ' + ts;
+    // Staulänge
+    if (queueEl) {
+      const qM = data.queue_m || (data.queue_km ? Math.round(data.queue_km * 1000) : null);
+      if (qM != null) {
+        if (qM >= 1000) { queueEl.textContent = (qM/1000).toFixed(1); if (meterEl) meterEl.textContent = 'km'; }
+        else            { queueEl.textContent = qM;                    if (meterEl) meterEl.textContent = 'm'; }
+      } else {
+        queueEl.textContent = (sev === 'clear' || sev === 'info') ? '0' : '—';
+        if (meterEl) meterEl.textContent = 'm';
+      }
+      queueEl.style.color = col;
+    }
     if (barEl) {
       const pct = data.delay_min ? Math.min(data.delay_min / 60 * 100, 100) : 0;
       barEl.style.width = pct + '%';
-      barEl.style.background = SEV_COLOR[sev] || 'var(--accent)';
+      barEl.style.background = col;
     }
+    if (upEl) upEl.textContent = (t.liveUpdated || 'ASTRA live') + ' · ' + ts;
   }
 
-  fillCard('wait-north','wait-north-km','update-north','bar-north', tun.north);
-  fillCard('wait-south','wait-south-km','update-south','bar-south', tun.south);
+  fillCard('north', tun.north);
+  fillCard('south', tun.south);
 
-  // ── Main status banner ─────────────────────────────────────
+  // ── Main status banner ──────────────────────────────────────
   const banner     = document.getElementById('status-banner');
   const statusText = document.getElementById('status-text');
   if (!banner || !statusText) return;
 
   const status = tun.status || 'unknown';
-  // Smart label: append upcoming closure note on green banner
-  const _upcoming = (d.incidents_all||[]).find(i=>i.is_tunnel&&i.night_only&&i.severity==='info');
+  const _upcoming = (d.incidents_all||[]).find(i => i.is_tunnel && i.night_only && i.severity === 'info');
   const _upcomingLbl = _upcoming
-    ? (lang==='de'?' · Nachtsperre geplant':lang==='it'?' · Chiusura notturna prevista':' · Night closure planned')
+    ? (lang==='de' ? ' · Nachtsperre geplant' : lang==='it' ? ' · Chiusura notturna prevista' : ' · Night closure planned')
     : '';
+
   const statusCfg = {
-    clear:    {cls:'status-banner green', icon:'🟢', label: (t.statusClear||'Tunnel frei') + _upcomingLbl},
-    info:     {cls:'status-banner green', icon:'🟢', label: (t.statusInfo||'Tunnel frei') + _upcomingLbl},
-    medium:   {cls:'status-banner gold',  icon:'🟡', label: t.statusMedium  || 'Beeinträchtigungen möglich'},
-    high:     {cls:'status-banner gold',  icon:'🟠', label: t.statusHigh    || 'Stau am Gotthard'},
-    critical: {cls:'status-banner red',   icon:'🔴', label: t.statusCrit    || 'Tunnel gesperrt'},
-    unknown:  {cls:'status-banner gold',  icon:'📡', label: t.statusUnknown || 'Daten werden geladen…'},
+    clear:    {cls:'status-banner green', icon:'🟢', label: (t.statusClear   || 'Tunnel frei')  + _upcomingLbl},
+    info:     {cls:'status-banner green', icon:'🟢', label: (t.statusInfo    || 'Tunnel frei')  + _upcomingLbl},
+    medium:   {cls:'status-banner gold',  icon:'🟡', label:  t.statusMedium  || 'Beeinträchtigungen möglich'},
+    high:     {cls:'status-banner gold',  icon:'🟠', label:  t.statusHigh    || 'Stau am Gotthard'},
+    critical: {cls:'status-banner red',   icon:'🔴', label:  t.statusCrit    || 'Tunnel gesperrt'},
+    unknown:  {cls:'status-banner gold',  icon:'📡', label:  t.statusUnknown || 'Daten werden geladen…'},
   };
   const cfg = statusCfg[status] || statusCfg.unknown;
   banner.className = cfg.cls;
   banner.querySelector('.status-icon').textContent = cfg.icon;
 
-  // Build status content
-  let html = `<div style="font-weight:600;margin-bottom:4px;">${cfg.label}</div>`;
+  // Show active tunnel incidents (skip info-only)
+  const tunnelIncs = (d.incidents_all || [])
+    .filter(i => i.is_tunnel && i.severity !== 'info')
+    .slice(0, 3);
 
-  // Show top 3 tunnel-specific incidents (skip info-only for clean status)
-  const tunnelIncs = (d.incidents_all || []).filter(i => i.is_tunnel && i.severity !== 'info').slice(0,3);
+  let html = `<div style="font-weight:600;margin-bottom:4px;">${cfg.label}</div>`;
   if (tunnelIncs.length) {
-    const sDir = (i) => i.direction === 'south' ? (t.dirSouth||'→ Airolo')
-                      : i.direction === 'north'  ? (t.dirNorth||'→ Göschenen') : '';
     html += tunnelIncs.map(i => {
-      const meta = [sDir(i), i.delay_min ? i.delay_min+' min' : '', i.queue_km ? i.queue_km+' km' : ''].filter(Boolean).join(' · ');
-      return `<div style="font-size:12px;margin-top:3px;opacity:.9;">${meta ? '<strong>'+meta+':</strong> ' : ''}${i.description.slice(0,110)}</div>`;
+      const meta = [
+        i.direction === 'south' ? (t.dirSouth || '→ Airolo')   : '',
+        i.direction === 'north' ? (t.dirNorth || '→ Göschenen') : '',
+        i.delay_min  ? i.delay_min  + ' min' : '',
+        i.queue_km   ? i.queue_km   + ' km'  : '',
+      ].filter(Boolean).join(' · ');
+      return `<div style="font-size:12px;margin-top:3px;opacity:.9;">${meta ? '<strong>' + meta + '</strong>: ' : ''}${i.description.slice(0,110)}</div>`;
     }).join('');
   }
-  html += `<div style="font-size:10px;margin-top:8px;opacity:.6;">ASTRA / opentransportdata.swiss · ${dateStr} ${ts}</div>`;
+  html += `<div style="font-size:11px;margin-top:6px;color:var(--text-tertiary);">ASTRA / opentransportdata.swiss · ${ts}</div>`;
   statusText.innerHTML = html;
 
-  // ── A2 incident list ──────────────────────────────────────
-  const southList  = document.getElementById('traffic-south-list');
-  const northList  = document.getElementById('traffic-north-list');
-  const liveDiv    = document.getElementById('traffic-live');
-  const noDataDiv  = document.getElementById('traffic-github-note');
-
-  if (liveDiv)   liveDiv.style.display   = '';
-  if (noDataDiv) noDataDiv.style.display = 'none';
-
-  const SEV_LABEL = {
-    critical: t.sevCritical || 'Gesperrt',
-    high:     t.sevHigh     || 'Stau',
-    medium:   t.sevMedium   || 'Stockend',
-    info:     t.sevInfo     || 'Meldung',
-  };
-
-  function renderList(el, countEl, items) {
-    if (!el) return;
-    if (!items || items.length === 0) {
-      el.innerHTML = `<div style="padding:12px 14px;font-size:12px;color:var(--accent);">✓ ${t.noIncidents||'Keine Meldungen'}</div>`;
-      if (countEl) { countEl.textContent='✓'; countEl.style.color='var(--accent)'; }
-      return;
-    }
-    el.innerHTML = items.map(i => {
-      const sev = i.severity;
-      const delay = i.delay_min ? ' · '+i.delay_min+' min' : '';
-      const queue = i.queue_km  ? ' · '+i.queue_km+' km'   : '';
-      const badge = `<span style="display:inline-block;padding:1px 7px;border-radius:4px;background:${SEV_BG[sev]||'var(--border)'};color:${SEV_COLOR[sev]||'inherit'};font-size:10px;font-weight:600;margin-bottom:3px;">${SEV_LABEL[sev]||sev}${delay}${queue}</span>`;
-      return `<div style="padding:9px 14px;border-bottom:1px solid var(--border);font-size:12px;line-height:1.5;">${badge}<br><span style="color:var(--text-secondary);">${i.description.slice(0,160)}</span></div>`;
-    }).join('');
-    if (countEl) {
-      countEl.textContent = items.length;
-      const s = items[0]?.severity;
-      countEl.style.background = SEV_BG[s] || 'var(--border)';
-      countEl.style.color = SEV_COLOR[s] || 'inherit';
-    }
+  // Pass status
+  const passEl = document.getElementById('pass-text');
+  if (passEl) {
+    const passOpen = (d.incidents_all || []).every(i => !i.is_tunnel || i.severity !== 'critical');
+    passEl.textContent = passOpen
+      ? (t.passOpen || 'Gotthardpass: Geöffnet. Alternative zum Tunnel verfügbar.')
+      : (t.passClosed || 'Gotthardpass: Gesperrt.');
+    document.getElementById('pass-status').className = passOpen ? 'status-banner green' : 'status-banner gold';
   }
 
-  renderList(southList, document.getElementById('traffic-south-count'), d.incidents_south||[]);
-  renderList(northList, document.getElementById('traffic-north-count'), d.incidents_north||[]);
-  const updEl = document.getElementById('traffic-live-updated');
-  if (updEl) updEl.textContent = 'ASTRA / opentransportdata.swiss · ' + dateStr + ' ' + ts;
+  // Live section
+  const liveDiv = document.getElementById('traffic-live');
+  if (liveDiv) liveDiv.style.display = 'none';
+
+  // Disruptions (non-tunnel A2 incidents)
+  const dispEl = document.getElementById('disruption-list');
+  if (dispEl) {
+    const disp = (d.incidents_all || [])
+      .filter(i => !i.is_tunnel && i.severity !== 'info')
+      .slice(0, 5);
+    if (disp.length) {
+      dispEl.innerHTML = disp.map(i =>
+        `<div class="disruption-item"><span class="disruption-icon">${i.severity==='critical'?'🔴':i.severity==='high'?'🟠':'🟡'}</span>
+         <div><div style="font-weight:600;font-size:12px;">${i.description.slice(0,100)}</div>
+         <div style="font-size:11px;color:var(--text-tertiary);">${i.road||'A2'}</div></div></div>`
+      ).join('');
+    } else {
+      dispEl.innerHTML = `<div style="padding:12px;font-size:13px;color:var(--text-tertiary);">${t.noDisruptions||'Keine weiteren A2-Meldungen.'}</div>`;
+    }
+  }
+}
+// ── Build smart closure list (show upcoming, collapse past) ──────
+function buildClosureList() {
+  const el = document.getElementById('closure-list-container');
+  if (!el) return;
+  const t = T[lang] || T.de;
+
+  const CLOSURES = [
+    {start:[2026,3,23], end:[2026,3,27], time:'22:00–05:00'},
+    {start:[2026,6,8],  end:[2026,6,12], time:'20:00–05:00'},
+    {start:[2026,6,15], end:[2026,6,19], time:'20:00–05:00'},
+    {start:[2026,6,22], end:[2026,6,26], time:'20:00–05:00'},
+    {start:[2026,9,7],  end:[2026,9,11], time:'22:00–05:00'},
+    {start:[2026,9,14], end:[2026,9,18], time:'20:00–05:00'},
+    {start:[2026,9,21], end:[2026,9,25], time:'20:00–05:00'},
+    {start:[2026,9,28], end:[2026,10,2], time:'20:00–05:00'},
+  ];
+
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const fmt = (arr) => {
+    const d = new Date(arr[0], arr[1]-1, arr[2]);
+    return d.toLocaleDateString(lang==='it'?'it-IT':lang==='en'?'en-GB':'de-CH', {day:'numeric', month:'short'});
+  };
+  const label = lang==='de'?'Nachtunterhaltsarbeiten':lang==='it'?'Lavori notturni':'Night maintenance';
+
+  const upcoming = [], past = [];
+  for (const cl of CLOSURES) {
+    const endDate = new Date(cl.end[0], cl.end[1]-1, cl.end[2]);
+    const startDate = new Date(cl.start[0], cl.start[1]-1, cl.start[2]);
+    const isActive = today >= startDate && today <= endDate;
+    const isFuture = startDate > today;
+    if (isActive || isFuture) upcoming.push({...cl, active: isActive});
+    else past.push(cl);
+  }
+
+  const rowHtml = (cl, highlight) => {
+    const bgStyle = highlight ? 'background:var(--accent-pale);' : '';
+    const startFmt = fmt(cl.start);
+    const endFmt   = fmt(cl.end);
+    const dateStr  = `${startFmt}–${endFmt}`;
+    return `<div class="closure-item" style="${bgStyle}">
+      <div class="closure-dates"${highlight?' style="color:var(--accent);font-weight:600;"':''}>${dateStr}</div>
+      <div class="closure-desc">${label}</div>
+      <div class="closure-time">${cl.time}</div>
+    </div>`;
+  };
+
+  let html = '<div class="closure-list">';
+  // Header
+  html += `<div class="closure-item" style="background:var(--bg);font-size:11px;font-weight:600;color:var(--text-tertiary);letter-spacing:.04em;">
+    <div id="t-col-dates">${lang==='de'?'Datum':lang==='it'?'Data':'Date'}</div>
+    <div id="t-col-desc">${lang==='de'?'Beschreibung':lang==='it'?'Descrizione':'Description'}</div>
+    <div id="t-col-time">${lang==='de'?'Uhrzeit':lang==='it'?'Orario':'Time'}</div>
+  </div>`;
+
+  for (const cl of upcoming) html += rowHtml(cl, cl.active);
+
+  if (past.length > 0) {
+    const detailsLbl = lang==='de'?'Vergangene Sperren anzeigen':lang==='it'?'Mostra chiusure passate':'Show past closures';
+    html += `<details style="border-top:1px solid var(--border);">
+      <summary style="padding:10px 14px;font-size:12px;color:var(--text-tertiary);cursor:pointer;list-style:none;display:flex;align-items:center;gap:6px;">
+        <span>▸</span>${detailsLbl} (${past.length})
+      </summary>`;
+    for (const cl of past) html += rowHtml(cl, false);
+    html += `</details>`;
+  }
+
+  html += '</div>';
+  el.innerHTML = html;
 }
 
-
-// Init
-// Detect lang from URL param
-const urlLang = new URLSearchParams(window.location.search).get('lang');
-const storedLang2 = localStorage.getItem('cannobio-lang');
-const initLang2 = (urlLang && T[urlLang]) ? urlLang : (storedLang2 && T[storedLang2]) ? storedLang2 : 'de';
+const urlLang     = new URLSearchParams(location.hash.slice(1)).get('lang');
+const storedLang2 = (typeof localStorage !== 'undefined') ? localStorage.getItem('lang') : null;
+const initLang2   = (urlLang && T[urlLang]) ? urlLang : (storedLang2 && T[storedLang2]) ? storedLang2 : 'de';
 applyLang(initLang2);
 render5Day();
+buildClosureList();
 loadTrafficJson();
 // Refresh every 5 minutes
 setInterval(()=>{ render5Day(); loadTrafficJson(); }, 5 * 60 * 1000);
