@@ -422,8 +422,7 @@ def auto_discover_msrs():
             return sid
         return dists[0][0] if dists else None
 
-    print(f"
-Total MSR sites: {len(sites)}")
+    print(f"Total MSR sites: {len(sites)}")
     print("Finding nearest to Göschenen (north):")
     north_msr = nearest(*PORTAL_NORTH)
     print(f"→ North MSR: {north_msr}")
