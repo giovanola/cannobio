@@ -319,20 +319,6 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
     <div class="section-label" id="t-live-label">Live-Situation</div>
 
     <!-- LIVE DATA NOTE -->
-    <!-- PASS STATUS FIRST -->
-    <div class="status-banner gold" id="pass-status" style="margin-bottom:16px;">
-      <span class="status-icon">⛰️</span>
-      <div id="pass-text">Gotthardpass: wird geladen…</div>
-    </div>
-
-    <!-- STATUS BANNER -->
-    <div id="status-banner" class="status-banner gold" style="margin-bottom:16px;">
-      <span class="status-icon">📡</span>
-      <div id="status-text">Aktuelle Wartezeiten — bitte direkt prüfen:&nbsp;
-        <a href="https://gotthard-tunnel.com/en/home" target="_blank" rel="noopener" style="font-weight:700;color:inherit;">gotthard-tunnel.com ↗</a>
-      </div>
-    </div>
-
     <!-- PORTAL TABLE: Zeitverlust + Staulänge -->
     <div style="border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;margin-bottom:16px;background:var(--surface);box-shadow:var(--shadow-sm);">
       <!-- NORD → SÜD -->
@@ -381,37 +367,21 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
       </div>
     </div>
 
-        </div>
-        <div class="portal-card-body">
-          <div style="display:flex;align-items:baseline;gap:6px;">
-            <span class="wait-time free" id="wait-north">—</span>
-            <span class="wait-unit" id="t-min">min</span>
-          </div>
-          <div class="wait-sub" id="wait-north-km"></div>
-          <div class="wait-bar-wrap"><div class="wait-bar bar-free" id="bar-north" style="width:0%"></div></div>
-          <div class="update-note" id="update-north"></div>
-        </div>
-      </div>
+<!-- PASS STATUS FIRST -->
+    <div class="status-banner gold" id="pass-status" style="margin-bottom:16px;">
+      <span class="status-icon">⛰️</span>
+      <div id="pass-text">Gotthardpass: wird geladen…</div>
+    </div>
 
-      <div class="portal-card">
-        <div class="portal-card-head">
-          <div>
-            <div class="portal-name" id="t-south-name">Südportal Airolo</div>
-            <div class="portal-direction" id="t-south-dir">in Richtung Norden</div>
-          </div>
-
-        </div>
-        <div class="portal-card-body">
-          <div style="display:flex;align-items:baseline;gap:6px;">
-            <span class="wait-time free" id="wait-south">—</span>
-            <span class="wait-unit" id="t-min2">min</span>
-          </div>
-          <div class="wait-sub" id="wait-south-km"></div>
-          <div class="wait-bar-wrap"><div class="wait-bar bar-free" id="bar-south" style="width:0%"></div></div>
-          <div class="update-note" id="update-south"></div>
-        </div>
+    <!-- STATUS BANNER -->
+    <div id="status-banner" class="status-banner gold" style="margin-bottom:16px;">
+      <span class="status-icon">📡</span>
+      <div id="status-text">Aktuelle Wartezeiten — bitte direkt prüfen:&nbsp;
+        <a href="https://gotthard-tunnel.com/en/home" target="_blank" rel="noopener" style="font-weight:700;color:inherit;">gotthard-tunnel.com ↗</a>
       </div>
     </div>
+
+    
 
     <!-- ECHTZEIT-HINWEIS -->
     <div class="status-banner gold" style="margin-bottom:12px;">
@@ -1133,23 +1103,24 @@ function renderTrafficData(d) {
     const sev = data.severity || 'unknown';
     const col = SEV_COLOR[sev] || 'var(--text-primary)';
 
-    // Zeitverlust
+    // Zeitverlust — nur anzeigen wenn Sensor-Daten vorhanden
     if (waitEl) {
       const dm = data.delay_min;
-      waitEl.textContent = (dm != null) ? dm : (sev === 'clear' || sev === 'info') ? '0' : '—';
-      waitEl.style.color = col;
+      waitEl.textContent = (dm != null) ? dm : '—';
+      waitEl.style.color = (dm != null) ? col : 'var(--text-tertiary)';
     }
-    // Staulänge
+    // Staulänge — nur anzeigen wenn Sensor-Daten vorhanden
     if (queueEl) {
       const qM = data.queue_m || (data.queue_km ? Math.round(data.queue_km * 1000) : null);
       if (qM != null) {
         if (qM >= 1000) { queueEl.textContent = (qM/1000).toFixed(1); if (meterEl) meterEl.textContent = 'km'; }
         else            { queueEl.textContent = qM;                    if (meterEl) meterEl.textContent = 'm'; }
+        queueEl.style.color = col;
       } else {
-        queueEl.textContent = (sev === 'clear' || sev === 'info') ? '0' : '—';
+        queueEl.textContent = '—';
         if (meterEl) meterEl.textContent = 'm';
+        queueEl.style.color = 'var(--text-tertiary)';
       }
-      queueEl.style.color = col;
     }
     if (barEl) {
       const pct = data.delay_min ? Math.min(data.delay_min / 60 * 100, 100) : 0;
