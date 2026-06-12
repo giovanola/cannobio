@@ -2,8 +2,8 @@ name: Fetch A2 Gotthard Traffic Data
 
 on:
   schedule:
-    # Offset from :00/:30 to avoid GitHub Actions peak load at exact half-hours
-    - cron: '8,38 * * * *'
+    # Every 8 minutes, offset by 3 to avoid GitHub peak load at :00
+    - cron: '3,11,19,27,35,43,51,59 * * * *'
   workflow_dispatch:
 
 env:
