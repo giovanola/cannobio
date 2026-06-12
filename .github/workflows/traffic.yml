@@ -22,7 +22,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
 
       - name: Install dependencies
         run: pip install requests
@@ -37,6 +36,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name  "github-actions[bot]"
-          git add traffic.json
+          git add traffic.json counter_sites.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "chore: update traffic data [skip ci]"
           git push
