@@ -257,6 +257,30 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 .cat-vetro .cat-dot { background: #2E7D32; }
 .cat-ind .cat-dot   { background: #7A7A7A; }
 
+.seo-rifiuti {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 24px) 48px;
+}
+.seo-rifiuti-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+.seo-rifiuti-col h2 {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.seo-rifiuti-col p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* ── CALENDAR SECTION ── */
 .calendar-section { margin-bottom: 64px; }
 
