@@ -68,6 +68,14 @@ def is_side_road(road, text):
 
 def severity(sit, raw, night, cest_h):
     if night and 5 <= cest_h < 20: return "info"
+    # Future events ("ab DD.MM.YYYY" or "voraussichtlich DD.MM.YYYY") → info
+    dm = re.search(r'(\d{2})\.(\d{2})\.(\d{4})', sit)
+    if dm:
+        try:
+            from datetime import datetime as _dt, timezone as _tz
+            ev_date = _dt(int(dm.group(3)),int(dm.group(2)),int(dm.group(1)),tzinfo=_tz.utc)
+            if ev_date > _dt.now(_tz.utc): return "info"
+        except: pass
     t = sit.lower()
     if any(k in t for k in ['gesperrt','sperre','closed']): return "critical"
     if any(k in raw.lower() for k in ['stau','coda','congestion']): return "high"
