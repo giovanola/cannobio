@@ -1,1 +1,154 @@
+# 260614-cannobio-logistics-workflow-v1.0.yml
+# Ablage: .github/workflows/check-logistics-update.yml
+#
+# Muster nach supplementcheck-Projektdokumentation v1.0 (260612):
+#   Playwright → Download → Magic Bytes → SHA-256 → Parse → Commit → Issue
+#
+# Repo-Einstellungen erforderlich:
+#   Settings → Actions → General → Workflow permissions → Read and write permissions
+
+name: Cannobio Logistics – Fahrplan prüfen und aktualisieren
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"   # Montag 07:00 CEST / 06:00 CET
+  workflow_dispatch:        # Manueller Start jederzeit möglich
+
+jobs:
+  check-and-update:
+    name: PDFs prüfen · parsen · committen
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues:   write
+
+    steps:
+
+    # ── 1. Checkout ──────────────────────────────────────────────────────────
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    # ── 2. Node.js 20 + Playwright ───────────────────────────────────────────
+    - name: Node.js 20
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Playwright-Abhängigkeiten installieren
+      run: |
+        cd .github/scripts
+        npm install
+        npx playwright install chromium --with-deps
+
+    # ── 3. PDFs prüfen und herunterladen (Playwright) ────────────────────────
+    #   · Besucht jede Site mit Chromium (Bot-Check / Session-Cookies)
+    #   · Lädt PDFs via context.request.get() (teilt Cookie-Store)
+    #   · Prüft Magic Bytes (%PDF) – kein HEAD-Request, kein Content-Type-Vertrauen
+    #   · Vergleicht SHA-256 mit .github/cannobio-logistics-versions.json
+    #   · Entdeckt neue Dateinamen dynamisch (FART: jährlicher Datumspfad, SAF: Jahres-Suffix)
+    - name: PDFs prüfen und herunterladen
+      id: check
+      run: node .github/scripts/check_logistics.js
+
+    # ── 4. Abbruch wenn keine Änderungen ─────────────────────────────────────
+    - name: Abbruch wenn keine Änderungen
+      if: steps.check.outputs.changed != 'true'
+      run: |
+        echo "✓ Alle PDFs unverändert. Kein Update nötig."
+        exit 0
+
+    # ── 5. Python + pdfplumber ────────────────────────────────────────────────
+    - name: Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: pip
+
+    - name: pdfplumber installieren
+      run: pip install --quiet pdfplumber
+
+    # ── 6. Fahrplan parsen ────────────────────────────────────────────────────
+    - name: Fahrplan parsen
+      id: parse
+      run: python .github/scripts/parse_logistics.py
+      continue-on-error: true
+
+    # ── 7. JSON und Versions-Datei committen ──────────────────────────────────
+    - name: Committen
+      if: steps.parse.outcome == 'success'
+      run: |
+        git config user.name  "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add cannobio/logistics/data/fahrplan.json \
+                .github/cannobio-logistics-versions.json
+        if git diff --staged --quiet; then
+          echo "JSON unverändert – kein Commit."
+        else
+          DATE=$(date -u +%Y-%m-%d)
+          git commit -m "chore(logistics): Fahrplan aktualisiert [$DATE]"
+          git push
+          echo "✓ fahrplan.json und versions.json gepusht."
+        fi
+
+    # ── 8. GitHub Issue bei Parse-Fehler → automatische E-Mail ───────────────
+    - name: GitHub Issue erstellen (manuelle Prüfung nötig)
+      if: steps.parse.outcome == 'failure'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const today = new Date().toISOString().slice(0, 10);
+          const title = `Logistics-Fahrplan: PDF geändert – manuelle Prüfung nötig (${today})`;
+
+          // Kein Duplikat wenn offenes Issue vorhanden
+          const { data: open } = await github.rest.issues.listForRepo({
+            owner: context.repo.owner, repo: context.repo.repo,
+            state: 'open', labels: 'logistics-fahrplan'
+          });
+          if (open.some(i => i.title.startsWith('Logistics-Fahrplan:'))) {
+            console.log('Offenes Issue existiert – keines erstellt.'); return;
+          }
+
+          await github.rest.issues.create({
+            owner: context.repo.owner, repo: context.repo.repo,
+            title, labels: ['logistics-fahrplan', 'needs-review'],
+            body: [
+              '## Automatische Fahrplan-Aktualisierung fehlgeschlagen',
+              '',
+              'Mindestens ein Fahrplan-PDF hat sich geändert, der Parser konnte',
+              'die Daten aber nicht mit ausreichender Konfidenz extrahieren.',
+              '**`fahrplan.json` wurde nicht überschrieben.**',
+              '',
+              '### Einzige manuelle Aufgabe',
+              '> PDFs öffnen, Änderungen identifizieren, `cannobio/logistics/data/fahrplan.json`',
+              '> anpassen und per PR einspielen. Dauer: 5–15 Minuten.',
+              '',
+              '### Quellen',
+              '- [FART 316](https://www.fartiamo.ch/orari/linea-316/)',
+              '- [VCO Linie 3](https://www.vcotrasporti.it/userdata/banner/VERBANIA-BRISSAGO.pdf)',
+              '- [VCO Linie 1](https://www.vcotrasporti.it/userdata/banner/VERBANIA%20-%20OMEGNA.pdf)',
+              '- [SAF Alibus](https://www.safduemila.com/linee/alibus-malpensa-lago-maggiore/)',
+              '',
+              '### Diagnose',
+              '`cannobio/logistics/data/parse-diagnostic.json` enthält den fehlgeschlagenen',
+              'Parse-Versuch mit Konfidenzwert und Fehlermeldungen.',
+              '',
+              `_Automatisch erstellt am ${today}_`,
+            ].join('\n')
+          });
+
+    # ── 9. Job-Zusammenfassung ────────────────────────────────────────────────
+    - name: Job-Zusammenfassung
+      if: always()
+      run: |
+        echo "## Cannobio Logistics – Fahrplan Update" >> "$GITHUB_STEP_SUMMARY"
+        echo "" >> "$GITHUB_STEP_SUMMARY"
+        CHANGED="${{ steps.check.outputs.changed }}"
+        PARSE="${{ steps.parse.outcome }}"
+        if [ "$CHANGED" != "true" ]; then
+          echo "✅ Keine Änderungen in allen PDF-Quellen." >> "$GITHUB_STEP_SUMMARY"
+        elif [ "$PARSE" = "success" ]; then
+          echo "✅ PDF(s) geändert · fahrplan.json aktualisiert und gepusht." >> "$GITHUB_STEP_SUMMARY"
+        else
+          echo "⚠️ PDF(s) geändert · Parse fehlgeschlagen → GitHub Issue erstellt." >> "$GITHUB_STEP_SUMMARY"
+        fi
 
