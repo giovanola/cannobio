@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T16:09:34.001048+00:00",
+  "updated": "2026-06-14T17:44:26.004748+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
   "total_incidents": 207,
   "tunnel_incidents": 2,
@@ -7,7 +7,7 @@
     "status": "info",
     "north": {
       "severity": "high",
-      "delay_min": 30,
+      "delay_min": 20,
       "queue_m": null,
       "wait_min": null,
       "text": "Verkehrsbehinderung (ab 15.06.2026)",
@@ -56,6 +56,16 @@
     {
       "road": "A2",
       "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard Tunnel Tunnel de Pardorea Situation: trafic perturbé Raison: véhicule en p",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso -> St-Gothard Tunnel Tunnel de Stalvedro Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 Chiasso -> S. Gottardo Galleria ",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -205,50 +215,40 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: vorausgegangener Unfall | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Lucerne-Horw et Jonction autoroutière Hergiswil Nord, au kilomètre 99.7 Situation: bouchon Raison:",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Unfall Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Carrefour Croisement pour Morschach Situation: bouchon Raison: accident ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau in der Ausfahrt | Révoqué: A2 St-Gothard -> Lucerne Echangeur Echangeur d'Altdorf Situation: bouchon dans la sortie | Revocato: A2 S. Gottardo -> Lucerna Raccordo autostradale Raccordo di Altdorf",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 St-Gothard -> Lucerne entre Jonction autoroutière Erstfeld et Jonction autoroutière Beckenried Situation: bouchon Raison: tra",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10.0 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur du Lopper et Jonction autoroutière Lucerne-Kriens Situation: boucho",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 St-Gothard -> Lucerne entre Jonction autoroutière Hergiswil Nord et Jonction autoroutière Lucerne-Kriens Situation: ",
       "direction": "both",
       "severity": "high",
       "delay_min": 10,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert Empfehlung: Gasse für Rettungs- und Einsatzfahrzeuge bilden | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Bâle-Breite et",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20.0 | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 20,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Jonction autoroutière Beckenried Situation: bouchon Rais",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 20,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -310,16 +310,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A4 Altdorf -> Brunnen entre Localité Sisikon et Jonction autoroutière Brunnen-Sud Situation: trafic perturbé Raison: véhicule en panne | Revocato",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2067,6 +2057,26 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: traf",
+      "direction": "south",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso -> St-Gothard Tunnel Tunnel de Stalvedro Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 Chiasso -> S. Gottardo Galleria ",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -2207,50 +2217,40 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: vorausgegangener Unfall | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Lucerne-Horw et Jonction autoroutière Hergiswil Nord, au kilomètre 99.7 Situation: bouchon Raison:",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Unfall Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Carrefour Croisement pour Morschach Situation: bouchon Raison: accident ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau in der Ausfahrt | Révoqué: A2 St-Gothard -> Lucerne Echangeur Echangeur d'Altdorf Situation: bouchon dans la sortie | Revocato: A2 S. Gottardo -> Lucerna Raccordo autostradale Raccordo di Altdorf",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 St-Gothard -> Lucerne entre Jonction autoroutière Erstfeld et Jonction autoroutière Beckenried Situation: bouchon Raison: tra",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10.0 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur du Lopper et Jonction autoroutière Lucerne-Kriens Situation: boucho",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 St-Gothard -> Lucerne entre Jonction autoroutière Hergiswil Nord et Jonction autoroutière Lucerne-Kriens Situation: ",
       "direction": "both",
       "severity": "high",
       "delay_min": 10,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert Empfehlung: Gasse für Rettungs- und Einsatzfahrzeuge bilden | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Bâle-Breite et",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20.0 | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 20,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Jonction autoroutière Beckenried Situation: bouchon Rais",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 20,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -2312,16 +2312,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A4 Altdorf -> Brunnen entre Localité Sisikon et Jonction autoroutière Brunnen-Sud Situation: trafic perturbé Raison: véhicule en panne | Revocato",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4119,6 +4109,26 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: traf",
+      "direction": "south",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso -> St-Gothard Tunnel Tunnel de Stalvedro Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 Chiasso -> S. Gottardo Galleria ",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -4279,50 +4289,40 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: vorausgegangener Unfall | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Lucerne-Horw et Jonction autoroutière Hergiswil Nord, au kilomètre 99.7 Situation: bouchon Raison:",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Unfall Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Carrefour Croisement pour Morschach Situation: bouchon Raison: accident ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau in der Ausfahrt | Révoqué: A2 St-Gothard -> Lucerne Echangeur Echangeur d'Altdorf Situation: bouchon dans la sortie | Revocato: A2 S. Gottardo -> Lucerna Raccordo autostradale Raccordo di Altdorf",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 St-Gothard -> Lucerne entre Jonction autoroutière Erstfeld et Jonction autoroutière Beckenried Situation: bouchon Raison: tra",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10.0 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur du Lopper et Jonction autoroutière Lucerne-Kriens Situation: boucho",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 St-Gothard -> Lucerne entre Jonction autoroutière Hergiswil Nord et Jonction autoroutière Lucerne-Kriens Situation: ",
       "direction": "both",
       "severity": "high",
       "delay_min": 10,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert Empfehlung: Gasse für Rettungs- und Einsatzfahrzeuge bilden | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Bâle-Breite et",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20.0 | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 20,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Jonction autoroutière Beckenried Situation: bouchon Rais",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 20,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -4384,16 +4384,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A4 Altdorf -> Brunnen entre Localité Sisikon et Jonction autoroutière Brunnen-Sud Situation: trafic perturbé Raison: véhicule en panne | Revocato",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
