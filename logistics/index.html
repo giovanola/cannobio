@@ -1,1 +1,696 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anreise · Cannobio</title>
+<meta name="description" content="Busverbindungen nach Cannobio: FART 316, VCO Linie 1 und 3, SAF Alibus ab Malpensa. Locarno, Verbania Ferrovia, Intra. Fahrplan und Taxi-Optionen.">
+<link rel="canonical" href="https://giovanola.github.io/cannobio/logistics/">
+<link rel="alternate" hreflang="de"        href="https://giovanola.github.io/cannobio/logistics/?lang=de">
+<link rel="alternate" hreflang="it"        href="https://giovanola.github.io/cannobio/logistics/?lang=it">
+<link rel="alternate" hreflang="en"        href="https://giovanola.github.io/cannobio/logistics/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://giovanola.github.io/cannobio/logistics/">
+<meta property="og:title"       content="Anreise · Cannobio | Lago Maggiore">
+<meta property="og:description" content="Busverbindungen nach Cannobio: FART 316, VCO, SAF Alibus ab Malpensa.">
+<meta property="og:url"         content="https://giovanola.github.io/cannobio/logistics/">
+<meta property="og:type"        content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAFAF9;--surface:#FFFFFF;--border:#E8E6E1;--border-hover:#C8C4BC;
+  --text-primary:#1A1A18;--text-secondary:#6B6860;--text-tertiary:#9B9890;
+  --accent:#1B6B45;--accent-pale:#EBF7F1;
+  --sky:#1565C0;--sky-pale:#E3F2FD;--sky-mid:rgba(21,101,192,.12);
+  --gold:#B7791F;--gold-pale:#FFFBEB;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.06);--shadow-md:0 4px 16px rgba(0,0,0,.07);
+  --font-display:'Fraunces',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;
+  --max-w:900px;--transition:200ms cubic-bezier(.4,0,.2,1);--r6:6px;--r12:12px;--r20:20px
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text-primary);line-height:1.6;min-height:100vh}
+/* ── TOPBAR ─────────── */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(250,250,249,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 clamp(16px,4vw,24px)}
+.topbar-inner{max-width:var(--max-w);margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.topbar-brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.topbar-icon{width:28px;height:28px;background:var(--accent);border-radius:7px;display:flex;align-items:center;justify-content:center}
+.topbar-icon svg{width:16px;height:16px;fill:#fff}
+.topbar-name{font-family:var(--font-display);font-size:15px;font-weight:300;color:var(--text-primary);white-space:nowrap}
+.topbar-right{display:flex;align-items:center;gap:8px}
+.site-nav{display:flex;gap:2px;background:var(--border);border-radius:8px;padding:2px}
+.site-nav-link{padding:4px 10px;border-radius:var(--r6);font-family:var(--font-body);font-size:12px;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:all var(--transition);white-space:nowrap}
+.site-nav-link:hover{color:var(--text-primary)}
+.site-nav-active{background:var(--surface);color:var(--text-primary);box-shadow:var(--shadow-sm)}
+.lang-switcher{display:flex;gap:2px;background:var(--border);border-radius:8px;padding:2px}
+.lang-btn{padding:4px 10px;border-radius:var(--r6);border:none;background:transparent;color:var(--text-secondary);font-family:var(--font-body);font-size:12px;font-weight:500;cursor:pointer;transition:all var(--transition)}
+.lang-btn.active{background:var(--surface);color:var(--text-primary);box-shadow:var(--shadow-sm)}
+@media(max-width:560px){.topbar-name{display:none}.site-nav-link{padding:4px 8px;font-size:11px}}
+/* ── HERO ─────────────────────── */
+.hero{padding:clamp(36px,5vw,60px) clamp(16px,4vw,24px) 24px;max-width:var(--max-w);margin:0 auto}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.hero-eyebrow::before{content:'';width:20px;height:1px;background:var(--accent)}
+.hero h1{font-family:var(--font-display);font-size:clamp(26px,5vw,46px);font-weight:300;line-height:1.1;letter-spacing:-.02em;margin-bottom:10px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero-sub{font-size:15px;color:var(--text-secondary);font-weight:300;max-width:520px;line-height:1.6}
+/* ── DATA FRESHNESS ───────────── */
+.data-bar{max-width:var(--max-w);margin:0 auto;padding:0 clamp(16px,4vw,24px) 0;display:none}
+.data-bar.visible{display:block}
+.data-chip{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;border-radius:20px;padding:3px 11px;border:1px solid}
+.data-chip.ok{color:var(--accent);background:var(--accent-pale);border-color:rgba(27,107,69,.22)}
+.data-chip.warn{color:var(--gold);background:var(--gold-pale);border-color:#FDE68A}
+.data-chip::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor;display:inline-block;opacity:.7}
+/* ── CONTENT ──────────────────── */
+.content{max-width:var(--max-w);margin:0 auto;padding:0 clamp(16px,4vw,24px) 80px}
+/* ── TABS ─────────────────────── */
+.tab-row{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-bottom:20px;margin-top:20px}
+.tab-row::-webkit-scrollbar{display:none}
+.tab-btn{flex-shrink:0;padding:6px 14px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--text-secondary);font-family:var(--font-body);font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap;transition:all var(--transition)}
+.tab-btn:hover{color:var(--text-primary);border-color:var(--border-hover)}
+.tab-btn.active{background:var(--sky);border-color:var(--sky);color:#fff;font-weight:600}
+.tab-panel{display:none}.tab-panel.active{display:block}
+/* ── DIRECTION TOGGLE ─────────── */
+.dir-row{display:flex;align-items:center;gap:6px;border:1px solid var(--border);border-radius:var(--r12);padding:10px 14px;background:var(--surface);box-shadow:var(--shadow-sm);margin-bottom:12px}
+.dir-lbl{font-size:13px;font-weight:500;color:var(--text-primary);flex:1;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dir-swap{color:var(--sky);font-size:16px;cursor:pointer;user-select:none;padding:2px 8px;border-radius:var(--r6);transition:background var(--transition);flex-shrink:0}
+.dir-swap:hover{background:var(--sky-pale)}
+/* ── CONTROLS ─────────────────── */
+.ctrls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.ctrls-1{display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:14px}
+.ctrl-wrap{display:flex;flex-direction:column;gap:4px}
+.ctrl-lbl{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--text-tertiary)}
+.sw{position:relative}
+select.ctl,input.ctl{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:var(--r6);padding:8px 28px 8px 10px;color:var(--text-primary);font-family:var(--font-body);font-size:14px;appearance:none;transition:border-color var(--transition)}
+select.ctl:focus,input.ctl:focus{outline:none;border-color:var(--sky)}
+.sw::after{content:'▾';position:absolute;right:9px;top:50%;transform:translateY(-50%);color:var(--text-tertiary);pointer-events:none;font-size:11px}
+input[type="time"]{padding-right:10px}
+input[type="time"]::-webkit-calendar-picker-indicator{filter:opacity(.35);cursor:pointer}
+/* ── RESULT HEADING ───────────── */
+.rh{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:10px}
+/* ── CONNECTION CARDS ─────────── */
+.cc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r12);padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow-sm)}
+.cc:last-child{margin-bottom:0}
+.cc.first{border-color:rgba(21,101,192,.35);box-shadow:0 0 0 2px var(--sky-mid),var(--shadow-sm)}
+.cc-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.cc-dep,.cc-arr{font-family:var(--font-display);font-size:24px;font-weight:300;letter-spacing:-.02em;color:var(--text-primary);line-height:1}
+.cc-dir{font-size:11px;color:var(--text-tertiary);flex:1;text-align:center;padding:0 6px;line-height:1.4}
+.cc-body{border-top:1px solid var(--border);padding-top:10px}
+.cc-leg{display:flex;align-items:baseline;gap:7px;margin-bottom:5px;font-size:12px;color:var(--text-secondary);line-height:1.5}
+.cc-leg:last-child{margin-bottom:0}
+.cc-line{display:inline-block;background:var(--sky);color:#fff;border-radius:4px;padding:1px 7px;font-size:10px;font-weight:600;letter-spacing:.04em;flex-shrink:0}
+.cc-xfer{display:inline-block;background:var(--border);color:var(--text-tertiary);border-radius:4px;padding:1px 6px;font-size:9px;flex-shrink:0}
+.cc-note{margin-top:7px;font-size:11px;color:var(--gold);background:var(--gold-pale);border:1px solid #FDE68A;border-radius:var(--r6);padding:4px 9px;line-height:1.55}
+.cc-note.sky{color:var(--sky);background:var(--sky-pale);border-color:rgba(21,101,192,.2)}
+.cc-footer{margin-top:10px;padding-top:8px;border-top:1px solid var(--border);display:flex;justify-content:flex-end}
+.ical-btn{background:none;border:1px solid var(--border-hover);border-radius:var(--r6);padding:4px 10px;color:var(--text-tertiary);font-size:11px;font-weight:500;font-family:var(--font-body);cursor:pointer;transition:all var(--transition)}
+.ical-btn:hover{border-color:var(--sky);color:var(--sky)}
+.ical-sm{padding:3px 7px;font-size:10px}
+/* ── NO RESULTS ───────────────── */
+.no-res{background:var(--surface);border:1px solid var(--border);border-radius:var(--r12);padding:18px;text-align:center;color:var(--text-tertiary);font-size:13px;box-shadow:var(--shadow-sm)}
+/* ── DEP GRID (VF-Intra) ──────── */
+.dep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.dc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r12);padding:12px 8px;text-align:center;box-shadow:var(--shadow-sm)}
+.dc.next{border-color:rgba(21,101,192,.4);box-shadow:0 0 0 2px var(--sky-mid),var(--shadow-sm)}
+.dc-time{font-family:var(--font-display);font-size:20px;font-weight:300;color:var(--text-primary);line-height:1}
+.dc-arr{font-size:11px;color:var(--text-tertiary);margin-top:3px}
+.dc-badge{font-size:10px;color:var(--sky);margin-top:2px}
+/* ── BADGES ───────────────────── */
+.badge{display:inline-block;font-size:10px;font-weight:600;padding:1px 5px;border-radius:3px;background:var(--accent-pale);color:var(--accent);border:1px solid rgba(27,107,69,.2)}
+.badge.scol{background:#FFFBEB;color:#92400E;border-color:#FDE68A}
+.badge.fest{background:#EDE9FE;color:#5B21B6;border-color:#C4B5FD}
+.badge.sab{background:var(--sky-pale);color:var(--sky);border-color:rgba(21,101,192,.25)}
+/* ── ACCORDION ────────────────── */
+.acc{margin-top:12px;border:1px solid var(--border);border-radius:var(--r12);overflow:hidden;box-shadow:var(--shadow-sm)}
+.acc-btn{width:100%;background:var(--surface);border:none;padding:11px 14px;display:flex;justify-content:space-between;align-items:center;color:var(--text-secondary);font-size:12px;font-weight:500;cursor:pointer;font-family:var(--font-body);transition:background var(--transition)}
+.acc-btn:hover{background:#F5F4F2}
+.acc-btn .ch{transition:transform .2s;color:var(--text-tertiary);font-size:11px;flex-shrink:0}
+.acc-btn.open .ch{transform:rotate(180deg)}
+.acc-body{display:none;background:var(--bg);padding:14px 16px;border-top:1px solid var(--border)}
+.acc-body.open{display:block}
+.tt-label{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:8px}
+table.tt{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:10px}
+.tt th{text-align:left;color:var(--text-tertiary);font-weight:600;font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border-bottom:1px solid var(--border)}
+.tt td{padding:5px 7px;color:var(--text-primary);border-bottom:1px solid var(--border)}
+.tt tr:last-child td{border-bottom:none}
+.tt tr:hover td{background:#F7F6F4}
+.tt-note{font-size:11px;color:var(--text-tertiary);line-height:1.6;margin-top:4px}
+/* ── NOTE BOX ─────────────────── */
+.nb{background:var(--accent-pale);border:1px solid rgba(27,107,69,.2);border-radius:var(--r12);padding:12px 14px;font-size:12px;color:var(--text-secondary);line-height:1.7;margin-top:14px}
+.nb strong{color:var(--text-primary);font-weight:600}
+/* ── SOURCES ──────────────────── */
+.srcs{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
+.sl{font-size:11px;color:var(--sky);text-decoration:none;padding:3px 9px;border:1px solid rgba(21,101,192,.25);border-radius:4px;background:var(--sky-pale);transition:border-color var(--transition)}
+.sl:hover{border-color:var(--sky)}
+/* ── SAF ALIBUS BANNER ────────── */
+.saf-banner{background:var(--gold-pale);border:1px solid #FDE68A;border-radius:var(--r12);padding:10px 14px;font-size:12px;color:#92400E;margin-bottom:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:space-between}
+.saf-banner p{line-height:1.55;flex:1}
+.book-btn{display:inline-flex;align-items:center;padding:6px 13px;border-radius:var(--r6);font-size:12px;font-weight:600;text-decoration:none;background:var(--sky);color:#fff;transition:background var(--transition);white-space:nowrap;flex-shrink:0}
+.book-btn:hover{background:#0D47A1}
+/* ── TAXI ─────────────────────── */
+.taxi-group-label{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin:20px 0 10px;display:flex;align-items:center;gap:8px}
+.taxi-group-label::after{content:'';flex:1;height:1px;background:var(--border)}
+.taxi-grid{display:flex;flex-direction:column;gap:7px}
+.tc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r12);padding:12px 14px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;box-shadow:var(--shadow-sm)}
+.tc-info h3{font-size:14px;font-weight:500;color:var(--text-primary);margin-bottom:2px}
+.tc-info p{font-size:12px;color:var(--text-secondary);line-height:1.5}
+.tc-price{font-size:11px;color:var(--gold);font-weight:500;margin-top:3px}
+.tc-btns{display:flex;gap:5px;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end}
+.tc-btn{display:inline-flex;align-items:center;padding:5px 10px;border-radius:var(--r6);font-size:12px;text-decoration:none;font-family:var(--font-body);border:1px solid;transition:all var(--transition);white-space:nowrap}
+.tc-btn.call{background:var(--accent-pale);border-color:rgba(27,107,69,.3);color:var(--accent)}
+.tc-btn.wa{background:#F0FFF4;border-color:rgba(37,211,102,.35);color:#16A34A}
+.tc-btn.web{background:var(--sky-pale);border-color:rgba(21,101,192,.3);color:var(--sky)}
+/* ── FOOTER ───────────────────── */
+.footer{margin-top:40px;padding:18px 0;border-top:1px solid var(--border);text-align:center;font-size:11px;color:var(--text-tertiary);line-height:1.9}
+@media(min-width:500px){.taxi-grid{display:grid;grid-template-columns:1fr 1fr}}
+@media(max-width:360px){.cc-dep,.cc-arr{font-size:20px}.dep-grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
 
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="../">
+      <div class="topbar-icon"><svg viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 2c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6 2.69-6 6-6zm-.5 3v5l4 2.4-.75-1.2L11 11.5V7h-1.5z"/></svg></div>
+      <span class="topbar-name">Cannobio</span>
+    </a>
+    <div class="topbar-right">
+      <nav class="site-nav">
+        <a class="site-nav-link" href="../meteo/"    id="nav-meteo">Meteo</a>
+        <a class="site-nav-link" href="../rifiuti/"  id="nav-rifiuti">Abfall</a>
+        <a class="site-nav-link" href="../gotthard/" id="nav-gotthard">Gotthard</a>
+        <a class="site-nav-link site-nav-active" href="../logistics/" id="nav-logistics">Anreise</a>
+      </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="de">DE</button>
+        <button class="lang-btn"        data-lang="it">IT</button>
+        <button class="lang-btn"        data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="data-bar" id="data-bar"><span class="data-chip" id="data-chip"></span></div>
+
+<section class="hero">
+  <div class="hero-eyebrow">Cannobio &middot; Lago Maggiore &middot; 195 m</div>
+  <h1><span id="t-h1a">Anreise</span> <em id="t-h1b">nach Cannobio</em></h1>
+  <p class="hero-sub" id="t-sub">FART 316, VCO Linie 1 und 3, SAF Alibus Malpensa &middot; Locarno, Verbania Ferrovia, Intra</p>
+</section>
+
+<div class="content">
+  <!-- Tabs -->
+  <div class="tab-row">
+    <button class="tab-btn active" data-tab="locarno"  id="tb-locarno">Locarno</button>
+    <button class="tab-btn"        data-tab="verbania" id="tb-verbania">Verbania Fs.</button>
+    <button class="tab-btn"        data-tab="intra"    id="tb-intra">VF &harr; Intra</button>
+    <button class="tab-btn"        data-tab="malpensa" id="tb-malpensa">Malpensa</button>
+    <button class="tab-btn"        data-tab="taxi"     id="tb-taxi">Taxi</button>
+  </div>
+
+  <!-- ── LOCARNO ── -->
+  <div class="tab-panel active" id="tab-locarno">
+    <div class="dir-row"><span class="dir-lbl" id="da-locarno">Locarno, Stazione</span><span class="dir-swap" onclick="flipDir('locarno')">&#8646;</span><span class="dir-lbl" id="db-locarno">Cannobio</span></div>
+    <div class="ctrls">
+      <div class="ctrl-wrap"><span class="ctrl-lbl" id="t-lbl-day1">Tag</span><div class="sw"><select class="ctl" id="day-locarno" onchange="update('locarno')"></select></div></div>
+      <div class="ctrl-wrap"><span class="ctrl-lbl" id="t-lbl-from1">Ab</span><input type="time" class="ctl" id="time-locarno" oninput="update('locarno')"></div>
+    </div>
+    <div class="rh" id="t-rh-locarno">Nächste Verbindungen</div>
+    <div id="res-locarno"></div>
+    <div class="acc"><button class="acc-btn" onclick="toggleAcc('locarno',this)"><span id="t-fulltts">Vollständiger Fahrplan</span> <span class="ch">&#9660;</span></button><div class="acc-body" id="accb-locarno"></div></div>
+    <div class="nb" id="note-locarno"></div>
+    <div class="srcs"><a class="sl" href="https://fartiamo.ch/wp-content/uploads/2025/12/62316.pdf" target="_blank" rel="noopener">FART 316 (PDF)</a><a class="sl" href="https://www.vcotrasporti.it/userdata/banner/VERBANIA-BRISSAGO.pdf" target="_blank" rel="noopener">VCO L.3 (PDF)</a><a class="sl" href="https://www.vcotrasporti.it/it/orari.php" target="_blank" rel="noopener">VCO Orari</a></div>
+  </div>
+
+  <!-- ── VERBANIA ── -->
+  <div class="tab-panel" id="tab-verbania">
+    <div class="dir-row"><span class="dir-lbl" id="da-verbania">Verbania Ferrovia</span><span class="dir-swap" onclick="flipDir('verbania')">&#8646;</span><span class="dir-lbl" id="db-verbania">Cannobio</span></div>
+    <div class="ctrls">
+      <div class="ctrl-wrap"><span class="ctrl-lbl" id="t-lbl-day2">Tag</span><div class="sw"><select class="ctl" id="day-verbania" onchange="update('verbania')"></select></div></div>
+      <div class="ctrl-wrap"><span class="ctrl-lbl" id="t-lbl-from2">Ab</span><input type="time" class="ctl" id="time-verbania" oninput="update('verbania')"></div>
+    </div>
+    <div class="rh" id="t-rh-verbania">Nächste Verbindungen</div>
+    <div id="res-verbania"></div>
+    <div class="acc"><button class="acc-btn" onclick="toggleAcc('verbania',this)"><span id="t-fulltts2">Vollständiger Fahrplan</span> <span class="ch">&#9660;</span></button><div class="acc-body" id="accb-verbania"></div></div>
+    <div class="nb" id="note-verbania"></div>
+    <div class="srcs"><a class="sl" href="https://www.vcotrasporti.it/userdata/banner/VERBANIA-BRISSAGO.pdf" target="_blank" rel="noopener">VCO L.3 (PDF)</a><a class="sl" href="https://www.vcotrasporti.it/it/orari.php" target="_blank" rel="noopener">VCO Orari</a></div>
+  </div>
+
+  <!-- ── VF ↔ INTRA ── -->
+  <div class="tab-panel" id="tab-intra">
+    <div class="dir-row"><span class="dir-lbl" id="da-intra">Verbania Ferrovia</span><span class="dir-swap" onclick="flipDir('intra')">&#8646;</span><span class="dir-lbl" id="db-intra">Intra</span></div>
+    <div class="ctrls">
+      <div class="ctrl-wrap"><span class="ctrl-lbl" id="t-lbl-day3">Tag</span><div class="sw"><select class="ctl" id="day-intra" onchange="update('intra')"></select></div></div>
+      <div class="ctrl-wrap"><span class="ctrl-lbl" id="t-lbl-from3">Ab</span><input type="time" class="ctl" id="time-intra" oninput="update('intra')"></div>
+    </div>
+    <div class="rh" id="t-rh-intra">Nächste Abfahrten</div>
+    <div id="res-intra"></div>
+    <div class="acc"><button class="acc-btn" onclick="toggleAcc('intra',this)"><span id="t-fulltts3">Vollständiger Fahrplan</span> <span class="ch">&#9660;</span></button><div class="acc-body" id="accb-intra"></div></div>
+    <div class="nb" id="note-intra"></div>
+    <div class="srcs"><a class="sl" href="https://www.vcotrasporti.it/it/orari.php" target="_blank" rel="noopener">VCO Orari</a></div>
+  </div>
+
+  <!-- ── MALPENSA ── -->
+  <div class="tab-panel" id="tab-malpensa">
+    <div class="saf-banner">
+      <p><strong id="t-saf-season">S.A.F. Alibus · 01.04.–31.10.2026</strong><br><span id="t-saf-note">Pflicht-Vorausbuchung bis 11:00 Uhr des Vortages (Fr für Sa/So/Mo).</span></p>
+      <a href="https://www.safbooking.com/" target="_blank" rel="noopener" class="book-btn" id="t-saf-book">Online buchen</a>
+    </div>
+    <div class="dir-row"><span class="dir-lbl" id="da-malpensa">Malpensa</span><span class="dir-swap" onclick="flipDir('malpensa')">&#8646;</span><span class="dir-lbl" id="db-malpensa">Cannobio</span></div>
+    <div class="ctrls-1"><div class="ctrl-wrap"><span class="ctrl-lbl" id="t-lbl-from4">Ab</span><input type="time" class="ctl" id="time-malpensa" oninput="update('malpensa')"></div></div>
+    <div class="rh" id="t-rh-malpensa">Nächste Verbindungen</div>
+    <div id="res-malpensa"></div>
+    <div class="acc"><button class="acc-btn" onclick="toggleAcc('malpensa',this)"><span id="t-fulltts4">Vollständiger Fahrplan</span> <span class="ch">&#9660;</span></button><div class="acc-body" id="accb-malpensa"></div></div>
+    <div class="nb" id="note-malpensa"></div>
+    <div class="srcs"><a class="sl" href="https://www.safduemila.com/linee/alibus-malpensa-lago-maggiore/" target="_blank" rel="noopener">SAF Alibus</a><a class="sl" href="https://www.safduemila.com/wp-content/uploads/2019/01/alibus-2026-web.pdf" target="_blank" rel="noopener">Fahrplan (PDF)</a><a class="sl" href="https://www.safbooking.com/" target="_blank" rel="noopener">safbooking.com</a></div>
+  </div>
+
+  <!-- ── TAXI ── -->
+  <div class="tab-panel" id="tab-taxi">
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px" id="t-taxi-ch-intro">Anbieter für grenzüberschreitende Transfers Cannobio &#8596; Locarno:</p>
+    <div class="taxi-group-label" id="t-taxi-ch-lbl">Schweiz</div>
+    <div class="taxi-grid">
+      <div class="tc"><div class="tc-info"><h3>Brissago Centrale / Claudio Prato</h3><p>Brissago (TI) &middot; <span id="t-taxi-nearest">Nächstgelegen zu Cannobio</span></p><p class="tc-price" id="t-taxi-prato-price">Richtpreis Cannobio &rarr; Locarno: ca. CHF 60</p></div><div class="tc-btns"><a href="https://wa.me/41793313333" class="tc-btn wa" target="_blank" rel="noopener">WA</a><a href="tel:+41793313333" class="tc-btn call" id="t-call1">Anrufen</a><a href="https://pratotaximinibus.ch/" class="tc-btn web" target="_blank" rel="noopener">Web</a></div></div>
+      <div class="tc"><div class="tc-info"><h3>Taxi Dome</h3><p>Losone / Locarno (TI)</p><p class="tc-price" id="t-taxi-dome-price">Richtpreis Cannobio &rarr; Locarno: ca. CHF 90</p></div><div class="tc-btns"><a href="https://wa.me/41796249460" class="tc-btn wa" target="_blank" rel="noopener">WA</a><a href="tel:+41796249460" class="tc-btn call" id="t-call2">Anrufen</a><a href="https://taxidome.ch/" class="tc-btn web" target="_blank" rel="noopener">Web</a></div></div>
+    </div>
+    <div class="taxi-group-label" id="t-taxi-it-lbl">Italien</div>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:10px" id="t-taxi-it-intro">Lokale Anbieter im Raum Verbania für Transfers nach Intra oder Cannobio:</p>
+    <div class="taxi-grid">
+      <div class="tc"><div class="tc-info"><h3>Taxi Bruno Verbania</h3><p id="t-taxi-many-rev">Viele Bewertungen</p></div><div class="tc-btns"><a href="https://wa.me/393774647803" class="tc-btn wa" target="_blank" rel="noopener">WA</a><a href="tel:+393774647803" class="tc-btn call" id="t-call3">Anrufen</a></div></div>
+      <div class="tc"><div class="tc-info"><h3>Taxi Verde Verbania</h3><p id="t-taxi-classic">Klassischer Taxiservice</p></div><div class="tc-btns"><a href="tel:+393482637871" class="tc-btn call" id="t-call4">Anrufen</a></div></div>
+      <div class="tc"><div class="tc-info"><h3>NCC Pallanza (G. Mezzano)</h3><p>NCC / Transfer / <span id="t-taxi-airport">Flughafen</span></p></div><div class="tc-btns"><a href="tel:+393389674324" class="tc-btn call" id="t-call5">Anrufen</a></div></div>
+      <div class="tc"><div class="tc-info"><h3>Easy Taxi Verbania</h3><p id="t-taxi-top">Sehr gute Bewertungen</p></div><div class="tc-btns"><a href="tel:+393481654994" class="tc-btn call" id="t-call6">Anrufen</a></div></div>
+      <div class="tc"><div class="tc-info"><h3>Taxi Soufiane</h3><p>24/7</p></div><div class="tc-btns"><a href="tel:+393284536858" class="tc-btn call" id="t-call7">Anrufen</a></div></div>
+      <div class="tc"><div class="tc-info"><h3>Taxi CAB / NCC Verbania</h3><p><span id="t-taxi-airport2">Flughafen</span> &amp; <span id="t-taxi-long">Langstrecke</span></p></div><div class="tc-btns"><a href="tel:+393929253007" class="tc-btn call" id="t-call8">Anrufen</a></div></div>
+    </div>
+  </div>
+
+  <div class="footer" id="t-footer">Fahrplandaten: VCO Trasporti SRL, FART Autolinee, SAF Duemila &middot; G&uuml;ltig ab 10. September 2025 &middot; Angaben ohne Gew&auml;hr</div>
+</div><!-- /content -->
+
+<script>
+// ════════════════════════════════════════════════════════
+// FAHRPLANDATEN
+// ════════════════════════════════════════════════════════
+const FART_LC=['05:51','06:21','06:51','07:21','07:51','08:21','08:51','09:21','09:51','10:21','10:51','11:21','11:51','12:21','12:51','13:21','13:51','14:21','14:51','15:21','15:51','16:21','16:51','17:21','17:51','18:21','18:51','19:21','19:51','20:21','20:50','21:50','22:50','23:50'],FART_LC_T=21;
+const FART_BR=['05:08','06:08','06:38','07:08','07:38','08:08','08:38','09:08','09:38','10:08','10:38','11:08','11:38','12:08','12:38','13:08','13:38','14:08','14:38','15:08','15:38','16:08','16:38','17:08','17:38','18:08','18:38','19:08','19:38','20:08','21:13','21:43','22:13','22:43','23:13','00:13'],FART_BR_T=30;
+const VCO3_BR_CAN=[{dep:'05:55',arr:'06:10',svc:'fer',trip:'302'},{dep:'07:00',arr:'07:15',svc:'fer',trip:'304'},{dep:'07:18',arr:'07:33',svc:'fer',trip:'306'},{dep:'07:56',arr:'08:10',svc:'fest',trip:'308'},{dep:'08:50',arr:'09:05',svc:'fer',trip:'310'},{dep:'10:00',arr:'10:15',svc:'all',trip:'312'},{dep:'12:10',arr:'12:25',svc:'all',trip:'316'},{dep:'13:00',arr:'13:15',svc:'fer',trip:'318'},{dep:'14:55',arr:'15:10',svc:'all',trip:'324'},{dep:'15:20',arr:'15:35',svc:'scol',trip:'SCOL'},{dep:'16:00',arr:'16:15',svc:'fer_mofr',trip:'326'},{dep:'17:00',arr:'17:15',svc:'fer',trip:'328'},{dep:'18:05',arr:'18:20',svc:'all',trip:'330'},{dep:'19:50',arr:'20:05',svc:'fer',trip:'332'}];
+const VCO3_CAN_BR=[{dep:'05:40',arr:'05:55',svc:'fer',trip:'301'},{dep:'06:45',arr:'07:00',svc:'fer',trip:'303'},{dep:'06:50',arr:'07:05',svc:'all',trip:'305'},{dep:'08:35',arr:'08:50',svc:'fer',trip:'307'},{dep:'09:30',arr:'09:45',svc:'all',trip:'309'},{dep:'11:25',arr:'11:40',svc:'all',trip:'313'},{dep:'12:45',arr:'13:00',svc:'fer',trip:'315'},{dep:'14:40',arr:'14:55',svc:'all',trip:'323'},{dep:'14:50',arr:'15:05',svc:'scol',trip:'SCOL'},{dep:'15:40',arr:'15:55',svc:'fer_mofr',trip:'325'},{dep:'16:35',arr:'16:50',svc:'fer',trip:'327'},{dep:'17:45',arr:'18:00',svc:'all',trip:'329'},{dep:'19:35',arr:'19:50',svc:'fer',trip:'331'}];
+const VCO3_IN_CAN=[{dep:'06:20',arr:'06:50',svc:'all',trip:'305'},{dep:'08:05',arr:'08:35',svc:'fer',trip:'307'},{dep:'09:00',arr:'09:30',svc:'all',trip:'309'},{dep:'10:00',arr:'10:30',svc:'fer',trip:'311'},{dep:'10:55',arr:'11:25',svc:'all',trip:'313'},{dep:'12:15',arr:'12:45',svc:'fer',trip:'315'},{dep:'13:05',arr:'13:35',svc:'fest',trip:'317'},{dep:'13:20',arr:'13:50',svc:'fer',trip:'319'},{dep:'13:30',arr:'14:00',svc:'sab',trip:'321'},{dep:'14:10',arr:'14:40',svc:'all',trip:'323'},{dep:'14:15',arr:'14:45',svc:'scol',trip:'SCOL'},{dep:'14:20',arr:'14:50',svc:'scol',trip:'SCOL'},{dep:'15:10',arr:'15:40',svc:'fer_mofr',trip:'325'},{dep:'16:05',arr:'16:35',svc:'fer',trip:'327'},{dep:'17:15',arr:'17:45',svc:'all',trip:'329'},{dep:'19:05',arr:'19:35',svc:'all',trip:'331'},{dep:'20:45',arr:'21:15',svc:'fer',trip:'333'}];
+const VCO3_CAN_IN=[{dep:'06:10',arr:'06:40',svc:'all',trip:'302'},{dep:'07:15',arr:'07:45',svc:'fer',trip:'304'},{dep:'07:20',arr:'07:50',svc:'scol',trip:'SCOL'},{dep:'07:33',arr:'08:03',svc:'fer',trip:'306'},{dep:'08:10',arr:'08:40',svc:'fest',trip:'308'},{dep:'09:05',arr:'09:35',svc:'fer',trip:'310'},{dep:'10:15',arr:'10:45',svc:'all',trip:'312'},{dep:'11:30',arr:'12:00',svc:'fer',trip:'314'},{dep:'12:25',arr:'12:55',svc:'all',trip:'316'},{dep:'13:30',arr:'14:00',svc:'all',trip:'320'},{dep:'14:00',arr:'14:30',svc:'fer',trip:'322'},{dep:'15:10',arr:'15:40',svc:'all',trip:'324'},{dep:'15:35',arr:'16:10',svc:'scol',trip:'SCOL'},{dep:'16:15',arr:'16:45',svc:'fer_mofr',trip:'326'},{dep:'17:15',arr:'17:45',svc:'fer',trip:'328'},{dep:'18:20',arr:'18:50',svc:'all',trip:'330'},{dep:'20:05',arr:'20:35',svc:'all',trip:'332'}];
+const VCO1_VF_IN=[{dep:'05:53',arr:'06:11',svc:'fer',trip:'3'},{dep:'06:47',arr:'07:06',svc:'fer',trip:'4'},{dep:'07:25',arr:'07:47',svc:'fer',trip:'5'},{dep:'08:00',arr:'08:22',svc:'fer',trip:'6'},{dep:'08:30',arr:'08:52',svc:'all',trip:'7'},{dep:'09:00',arr:'09:21',svc:'fer',trip:'8'},{dep:'09:30',arr:'09:52',svc:'all',trip:'9'},{dep:'10:00',arr:'10:22',svc:'fer',trip:'10'},{dep:'10:30',arr:'10:52',svc:'sab',trip:'11'},{dep:'11:00',arr:'11:22',svc:'fer',trip:'12'},{dep:'11:30',arr:'11:52',svc:'all',trip:'13'},{dep:'12:00',arr:'12:22',svc:'fer',trip:'14'},{dep:'12:32',arr:'12:54',svc:'all',trip:'15'},{dep:'13:00',arr:'13:22',svc:'fer',trip:'16'},{dep:'13:30',arr:'13:52',svc:'all',trip:'17'},{dep:'14:00',arr:'14:22',svc:'fer',trip:'18'},{dep:'14:30',arr:'14:52',svc:'all',trip:'19'},{dep:'15:00',arr:'15:22',svc:'fer',trip:'20'},{dep:'15:30',arr:'15:52',svc:'all',trip:'21'},{dep:'16:00',arr:'16:22',svc:'fer',trip:'22'},{dep:'16:30',arr:'16:52',svc:'fer',trip:'23'},{dep:'17:00',arr:'17:23',svc:'all',trip:'24'},{dep:'17:30',arr:'17:52',svc:'fer',trip:'25'},{dep:'18:00',arr:'18:22',svc:'all',trip:'26'},{dep:'18:45',arr:'19:07',svc:'fer',trip:'27'},{dep:'19:00',arr:'19:22',svc:'all',trip:'28'},{dep:'19:45',arr:'20:07',svc:'all',trip:'29'},{dep:'20:02',arr:'20:21',svc:'fer',trip:'30'},{dep:'20:48',arr:'21:05',svc:'all',trip:'31'},{dep:'21:53',arr:'22:15',svc:'all',trip:'32'},{dep:'23:00',arr:'23:20',svc:'all',trip:'33'}];
+const VCO1_IN_VF=[{dep:'05:39',arr:'05:59',svc:'all',trip:'1'},{dep:'06:05',arr:'06:25',svc:'fer',trip:'2'},{dep:'06:38',arr:'06:55',svc:'fer',trip:'501'},{dep:'06:45',arr:'07:04',svc:'fer',trip:'3'},{dep:'07:30',arr:'07:49',svc:'fer',trip:'4'},{dep:'08:11',arr:'08:33',svc:'fer',trip:'5'},{dep:'08:46',arr:'09:08',svc:'fer',trip:'6'},{dep:'09:17',arr:'09:39',svc:'all',trip:'7'},{dep:'09:47',arr:'10:09',svc:'fer',trip:'8'},{dep:'10:16',arr:'10:38',svc:'all',trip:'9'},{dep:'10:46',arr:'11:08',svc:'fer',trip:'10'},{dep:'11:15',arr:'11:38',svc:'sab',trip:'11'},{dep:'11:46',arr:'12:08',svc:'fer',trip:'12'},{dep:'12:17',arr:'12:40',svc:'all',trip:'13'},{dep:'12:46',arr:'13:08',svc:'fer',trip:'14'},{dep:'13:04',arr:'13:26',svc:'all',trip:'15'},{dep:'13:46',arr:'14:08',svc:'fer',trip:'16'},{dep:'14:16',arr:'14:38',svc:'all',trip:'17'},{dep:'14:46',arr:'15:08',svc:'fer',trip:'18'},{dep:'15:16',arr:'15:36',svc:'all',trip:'19'},{dep:'15:46',arr:'16:08',svc:'fer',trip:'20'},{dep:'16:14',arr:'16:37',svc:'all',trip:'21'},{dep:'16:46',arr:'17:08',svc:'fer',trip:'22'},{dep:'17:19',arr:'17:43',svc:'fer',trip:'23'},{dep:'17:48',arr:'18:13',svc:'all',trip:'24'},{dep:'18:17',arr:'18:40',svc:'fer',trip:'25'},{dep:'18:46',arr:'19:08',svc:'all',trip:'26'},{dep:'19:31',arr:'19:53',svc:'fer',trip:'27'},{dep:'19:46',arr:'20:08',svc:'all',trip:'28'},{dep:'20:31',arr:'20:53',svc:'all',trip:'29'},{dep:'21:26',arr:'21:45',svc:'all',trip:'31'},{dep:'22:39',arr:'23:00',svc:'all',trip:'32'}];
+const SAF_MXP_DEP=['10:00','12:00','14:00','16:00','18:00','20:00'],SAF_MXP_T=100;
+const SAF_INTRA_DEP=['06:00','09:00','11:00','13:00','15:00','17:00'],SAF_INTRA_T=100,SAF_XFER=10;
+
+// ════════════════════════════════════════════════════════
+// ÜBERSETZUNGEN (exakt wie Gotthard-Muster: pro Sprache)
+// ════════════════════════════════════════════════════════
+const T={
+  de:{
+    pageTitle:'Anreise · Cannobio',
+    pageDesc:'Busverbindungen nach Cannobio: FART 316, VCO Linie 1 und 3, SAF Alibus ab Malpensa.',
+    navMeteo:'Meteo',navRifiuti:'Abfall',navGotthard:'Gotthard',navLogistics:'Anreise',
+    h1a:'Anreise',h1b:'nach Cannobio',
+    sub:'FART 316, VCO Linie 1 und 3, SAF Alibus Malpensa \u00b7 Locarno, Verbania Ferrovia, Intra',
+    tbLocarno:'Locarno',tbVerbania:'Verbania Fs.',tbIntra:'VF \u2194 Intra',tbMalpensa:'Malpensa',tbTaxi:'Taxi',
+    lblDay:'Tag',lblFrom:'Ab',
+    dayMofr:'Mo\u2013Fr',daySa:'Samstag',daySo:'So\u202f/\u202fFeiertag',
+    rhConn:'N\u00e4chste Verbindungen',rhDep:'N\u00e4chste Abfahrten',
+    fullTt:'Vollst\u00e4ndiger Fahrplan',
+    noConn:'Keine Verbindungen gefunden.',noDep:'Keine Abfahrten gefunden.',
+    icalBtn:'Als iCal herunterladen',icalSm:'iCal',
+    from:'ab',to:'an',
+    safSeason:'S.A.F. Alibus \u00b7 01.04.\u201331.10.2026',
+    safNote:'Pflicht-Vorausbuchung bis 11:00 Uhr des Vortages (Fr f\u00fcr Sa/So/Mo).',
+    safBook:'Online buchen',
+    safTotal:'Gesamtdauer',safApprox:'ca.',
+    safXfer:'\u223c10 Min. Fussweg zur VCO-Haltestelle',
+    safTaxiAlt:'Alternative ab Intra: Taxi \u2192 Cannobio ca. 20\u201325 Min., \u223c\u20ac25\u201340. Taxi Bruno Verbania +39\u202f377\u202f464\u202f7803 \u00b7 Easy Taxi +39\u202f348\u202f165\u202f4994',
+    dirLcFwd:'Locarno \u2192 Cannobio',dirLcRev:'Cannobio \u2192 Locarno',
+    dirVbFwd:'Verbania Fs. \u2192 Cannobio',dirVbRev:'Cannobio \u2192 Verbania Fs.',
+    dirMxpCan:'Malpensa \u2192 Cannobio',dirCanMxp:'Cannobio \u2192 Malpensa',
+    thDep:'Abfahrt',thArr:'Ankunft',thTrip:'Kurs',thDays:'Tage',
+    bMoSa:'Mo\u2013Sa',bMoFr:'Mo\u2013Fr',bSa:'nur Sa',bSo:'So/Ft',bScol:'Schultage',
+    taxiChLbl:'Schweiz',taxiItLbl:'Italien',
+    taxiChIntro:'Anbieter f\u00fcr grenz\u00fcberschreitende Transfers Cannobio \u2194 Locarno:',
+    taxiItIntro:'Lokale Anbieter im Raum Verbania f\u00fcr Transfers nach Intra oder Cannobio:',
+    taxiNearest:'N\u00e4chstgelegen zu Cannobio',
+    taxiPratoPr:'Richtpreis Cannobio \u2192 Locarno: ca. CHF 60',
+    taxiDomePr:'Richtpreis Cannobio \u2192 Locarno: ca. CHF 90',
+    taxiAirport:'Flughafen',taxiLong:'Langstrecke',taxiTop:'Sehr gute Bewertungen',
+    taxiClassic:'Klassischer Taxiservice',taxiManyRev:'Viele Bewertungen',
+    callBtn:'Anrufen',
+    icalVerify:'Quellen zur \u00dcberpr\u00fcfung:',icalDate:'Datum ggf. in der Kalender-App anpassen.',
+    dataFresh:'Fahrplandaten aktualisiert am',dataConf:'Konfidenz',
+    dataBuiltin:'Eingebaute Fahrplandaten (Stand Sep. 2025)',
+    dataStale:'Fahrplan evtl. veraltet \u2013 Quellen pr\u00fcfen',
+    noteLocarno:'<strong>Umstieg Brissago:</strong> FART 316 h\u00e4lt an der Piazza del Sole. VCO-Haltestelle ca. 3\u20135 Gehminuten entfernt, Mindestumstieg 5 Min.<br><strong>FART-Fahrplan:</strong> Vereinfachte Darstellung; offiziellen Fahrplan vor Reiseantritt pr\u00fcfen.<br><strong>Schweizer Feiertage (FART):</strong> 25.12. \u00b7 26.12. \u00b7 01.01. \u00b7 02.01. \u00b7 03.04. \u00b7 06.04. \u00b7 14.05. \u00b7 25.05. \u00b7 01.08. \u2014 VCO-Fahrplan richtet sich nach <em>italienischen</em> Feiertagen.',
+    noteVerbania:'<strong>Umstieg Intra:</strong> VCO Linie 1 von Verbania Ferrovia nach Intra (ca. 18 Min.), dann VCO Linie 3 nach Cannobio (ca. 30 Min.).<br><strong>Treno Chiama Bus (\u25d9):</strong> Kurse 31/32/33 verkehren So\u2013Do nur auf Voranmeldung (0323\u202f518611).<br><strong>Feiertage:</strong> Kurs 15 f\u00e4hrt an Feiertagen 8 Min. sp\u00e4ter. Kurs 320 (L.3) an Feiertagen 5 Min. sp\u00e4ter ab Cannobio.',
+    noteIntra:'<strong>VCO Linie 1 \u00b7 Verbania Ferrovia \u2194 Intra \u00b7 Fahrzeit ca. 18 Min.</strong><br>Nur Sa (#): Kurs 11 samstags. Treno Chiama Bus (\u25d9): Kurse 31/32/33 So\u2013Do auf Anfrage. Mo\u2013Fr via Zona Industriale (\u25c4): Kurse 3, 5, 22.',
+    noteMalpensa:'<strong>Buchung:</strong> Alle Fahrten m\u00fcssen online vorab gebucht werden \u2013 <a href="https://www.safbooking.com/" target="_blank" rel="noopener" style="color:var(--sky)">safbooking.com</a>. GLI ORARI SONO TASSATIVI \u2013 der Bus wartet nicht.<br><strong>Malpensa T.1:</strong> Arrivi Ebene -1, Bus Stop 6 (Porta 5, Lift oder Rolltreppe, Richtung BUS, links). <strong>T.2:</strong> Ausgang Porta 7, links, Bus Stop 6.<br><strong>Verbania-Intra:</strong> Ankunft am Imbarcadero Vecchio. Abfahrt ab Bar Lucini (ca. 10 Min. Fussweg zwischen beiden Haltestellen).<br><strong>Taxi ab Intra:</strong> Intra Imbarcadero Vecchio \u2192 Cannobio ca. 20\u201325 Min., \u223c\u20ac25\u201340 (empfohlen bei unpassenden Buszeiten).<br><strong>Saison:</strong> 01.04.2026 \u2013 31.10.2026 \u00b7 +39 0323 552172 \u00b7 alibus@safduemila.com',
+    footer:'Fahrplandaten: VCO Trasporti SRL, FART Autolinee, SAF Duemila \u00b7 G\u00fcltig ab 10. September 2025 \u00b7 Angaben ohne Gew\u00e4hr'
+  },
+  it:{
+    pageTitle:'Come arrivare \u00b7 Cannobio',
+    pageDesc:'Connessioni bus per Cannobio: FART 316, VCO Linea 1 e 3, SAF Alibus da Malpensa.',
+    navMeteo:'Meteo',navRifiuti:'Rifiuti',navGotthard:'Gottardo',navLogistics:'Arrivo',
+    h1a:'Come arrivare',h1b:'a Cannobio',
+    sub:'FART 316, VCO Linea 1 e 3, SAF Alibus Malpensa \u00b7 Locarno, Verbania Ferrovia, Intra',
+    tbLocarno:'Locarno',tbVerbania:'Verbania Fs.',tbIntra:'VF \u2194 Intra',tbMalpensa:'Malpensa',tbTaxi:'Taxi',
+    lblDay:'Giorno',lblFrom:'Da',
+    dayMofr:'Lun\u2013Ven',daySa:'Sabato',daySo:'Dom\u202f/\u202fFest.',
+    rhConn:'Prossime coincidenze',rhDep:'Prossime partenze',
+    fullTt:'Orario completo',
+    noConn:'Nessuna coincidenza trovata.',noDep:'Nessuna partenza trovata.',
+    icalBtn:'Scarica iCal',icalSm:'iCal',
+    from:'partenza',to:'arrivo',
+    safSeason:'S.A.F. Alibus \u00b7 01.04.\u201331.10.2026',
+    safNote:'Prenotazione obbligatoria entro le 11:00 del giorno precedente (ven. per sab/dom/lun).',
+    safBook:'Prenota online',
+    safTotal:'Durata totale',safApprox:'ca.',
+    safXfer:'\u223c10 min. a piedi alla fermata VCO',
+    safTaxiAlt:'Alternativa da Intra: Taxi \u2192 Cannobio ca. 20\u201325 min., \u223c\u20ac25\u201340. Taxi Bruno Verbania +39\u202f377\u202f464\u202f7803 \u00b7 Easy Taxi +39\u202f348\u202f165\u202f4994',
+    dirLcFwd:'Locarno \u2192 Cannobio',dirLcRev:'Cannobio \u2192 Locarno',
+    dirVbFwd:'Verbania Fs. \u2192 Cannobio',dirVbRev:'Cannobio \u2192 Verbania Fs.',
+    dirMxpCan:'Malpensa \u2192 Cannobio',dirCanMxp:'Cannobio \u2192 Malpensa',
+    thDep:'Partenza',thArr:'Arrivo',thTrip:'Corsa',thDays:'Giorni',
+    bMoSa:'Lun\u2013Sab',bMoFr:'Lun\u2013Ven',bSa:'solo Sab',bSo:'Dom/Fest',bScol:'Scolastico',
+    taxiChLbl:'Svizzera',taxiItLbl:'Italia',
+    taxiChIntro:'Fornitori per trasferimenti transfrontalieri Cannobio \u2194 Locarno:',
+    taxiItIntro:'Fornitori locali nell\'area di Verbania per trasferimenti a Intra o Cannobio:',
+    taxiNearest:'Pi\u00f9 vicino a Cannobio',
+    taxiPratoPr:'Prezzo indicativo Cannobio \u2192 Locarno: ca. CHF 60',
+    taxiDomePr:'Prezzo indicativo Cannobio \u2192 Locarno: ca. CHF 90',
+    taxiAirport:'Aeroporto',taxiLong:'Lunga distanza',taxiTop:'Ottime recensioni',
+    taxiClassic:'Servizio taxi classico',taxiManyRev:'Molte recensioni',
+    callBtn:'Chiama',
+    icalVerify:'Fonti per verifica:',icalDate:'Adattare eventualmente la data nell\'app calendario.',
+    dataFresh:'Dati aggiornati al',dataConf:'Affidabilit\u00e0',
+    dataBuiltin:'Dati integrati (set. 2025)',
+    dataStale:'Orario potenzialmente non aggiornato',
+    noteLocarno:'<strong>Cambio a Brissago:</strong> FART 316 ferma in Piazza del Sole. Fermata VCO ca. 3\u20135 min. a piedi, tempo minimo di coincidenza 5 min.<br><strong>Orario FART:</strong> Rappresentazione semplificata; verificare l\'orario ufficiale prima del viaggio.<br><strong>Festivi svizzeri (FART):</strong> 25.12. \u00b7 26.12. \u00b7 01.01. \u00b7 02.01. \u00b7 03.04. \u00b7 06.04. \u00b7 14.05. \u00b7 25.05. \u00b7 01.08. \u2014 L\'orario VCO segue i festivi <em>italiani</em>.',
+    noteVerbania:'<strong>Cambio Intra:</strong> VCO Linea 1 da Verbania Ferrovia a Intra (ca. 18 min.), poi VCO Linea 3 per Cannobio (ca. 30 min.).<br><strong>Treno Chiama Bus (\u25d9):</strong> Corse 31/32/33 dom\u2013gio su prenotazione (0323\u202f518611).<br><strong>Festivi:</strong> Corsa 15 ritardata di 8 min. nei festivi. Corsa 320 (L.3) ritardata di 5 min. nei festivi.',
+    noteIntra:'<strong>VCO Linea 1 \u00b7 Verbania Ferrovia \u2194 Intra \u00b7 Durata ca. 18 min.</strong><br>Solo Sab (#): Corsa 11. Treno Chiama Bus (\u25d9): Corse 31/32/33 dom\u2013gio su prenotazione. Lun\u2013Ven via ZI (\u25c4): Corse 3, 5, 22.',
+    noteMalpensa:'<strong>Prenotazione:</strong> Tutte le corse vanno prenotate su <a href="https://www.safbooking.com/" target="_blank" rel="noopener" style="color:var(--sky)">safbooking.com</a>. GLI ORARI SONO TASSATIVI.<br><strong>Malpensa T.1:</strong> Arrivi piano -1, bus stop 6 (porta 5, ascensore o scala mobile, seguire BUS, svoltare a sinistra). <strong>T.2:</strong> uscita porta 7, sinistra, bus stop 6.<br><strong>Verbania-Intra:</strong> Arrivo all\'Imbarcadero Vecchio. Partenza da Bar Lucini (ca. 10 min. a piedi tra le due fermate).<br><strong>Taxi da Intra:</strong> Imbarcadero Vecchio \u2192 Cannobio ca. 20\u201325 min., \u223c\u20ac25\u201340.<br><strong>Stagione:</strong> 01.04.2026 \u2013 31.10.2026 \u00b7 +39 0323 552172',
+    footer:'Dati orari: VCO Trasporti SRL, FART Autolinee, SAF Duemila \u00b7 In vigore dal 10 settembre 2025 \u00b7 Dati senza garanzia'
+  },
+  en:{
+    pageTitle:'Getting here \u00b7 Cannobio',
+    pageDesc:'Bus connections to Cannobio: FART 316, VCO Lines 1 and 3, SAF Alibus from Malpensa.',
+    navMeteo:'Weather',navRifiuti:'Waste',navGotthard:'Gotthard',navLogistics:'Getting here',
+    h1a:'Getting here',h1b:'to Cannobio',
+    sub:'FART 316, VCO Lines 1 & 3, SAF Alibus Malpensa \u00b7 Locarno, Verbania Station, Intra',
+    tbLocarno:'Locarno',tbVerbania:'Verbania Stn.',tbIntra:'VS \u2194 Intra',tbMalpensa:'Malpensa',tbTaxi:'Taxi',
+    lblDay:'Day',lblFrom:'From',
+    dayMofr:'Mon\u2013Fri',daySa:'Saturday',daySo:'Sun\u202f/\u202fHoliday',
+    rhConn:'Next connections',rhDep:'Next departures',
+    fullTt:'Full timetable',
+    noConn:'No connections found.',noDep:'No departures found.',
+    icalBtn:'Download iCal',icalSm:'iCal',
+    from:'dep',to:'arr',
+    safSeason:'S.A.F. Alibus \u00b7 1 Apr.\u201331 Oct. 2026',
+    safNote:'Mandatory pre-booking by 11:00 the day before (Fri for Sat/Sun/Mon).',
+    safBook:'Book online',
+    safTotal:'Total journey',safApprox:'approx.',
+    safXfer:'\u223c10 min. walk to VCO stop',
+    safTaxiAlt:'Alternative from Intra: Taxi \u2192 Cannobio approx. 20\u201325 min., \u223c\u20ac25\u201340. Taxi Bruno Verbania +39\u202f377\u202f464\u202f7803 \u00b7 Easy Taxi +39\u202f348\u202f165\u202f4994',
+    dirLcFwd:'Locarno \u2192 Cannobio',dirLcRev:'Cannobio \u2192 Locarno',
+    dirVbFwd:'Verbania Stn. \u2192 Cannobio',dirVbRev:'Cannobio \u2192 Verbania Stn.',
+    dirMxpCan:'Malpensa \u2192 Cannobio',dirCanMxp:'Cannobio \u2192 Malpensa',
+    thDep:'Departure',thArr:'Arrival',thTrip:'Trip',thDays:'Days',
+    bMoSa:'Mon\u2013Sat',bMoFr:'Mon\u2013Fri',bSa:'Sat only',bSo:'Sun/Hol',bScol:'School days',
+    taxiChLbl:'Switzerland',taxiItLbl:'Italy',
+    taxiChIntro:'Providers for cross-border transfers Cannobio \u2194 Locarno:',
+    taxiItIntro:'Local providers in the Verbania area for transfers to Intra or Cannobio:',
+    taxiNearest:'Closest to Cannobio',
+    taxiPratoPr:'Approx. price Cannobio \u2192 Locarno: ca. CHF 60',
+    taxiDomePr:'Approx. price Cannobio \u2192 Locarno: ca. CHF 90',
+    taxiAirport:'Airport',taxiLong:'Long distance',taxiTop:'Top-rated',
+    taxiClassic:'Classic taxi service',taxiManyRev:'Many reviews',
+    callBtn:'Call',
+    icalVerify:'Sources for verification:',icalDate:'Adjust date in calendar app if needed.',
+    dataFresh:'Schedule data updated',dataConf:'Confidence',
+    dataBuiltin:'Built-in schedule data (Sep. 2025)',
+    dataStale:'Schedule may be outdated \u2013 check sources',
+    noteLocarno:'<strong>Transfer Brissago:</strong> FART 316 stops at Piazza del Sole. VCO stop approx. 3\u20135 min. on foot, minimum transfer 5 min.<br><strong>FART schedule:</strong> Simplified representation; check official timetable before travelling.<br><strong>Swiss public holidays (FART):</strong> 25 Dec \u00b7 26 Dec \u00b7 1 Jan \u00b7 2 Jan \u00b7 3 Apr \u00b7 6 Apr \u00b7 14 May \u00b7 25 May \u00b7 1 Aug \u2014 VCO timetable follows <em>Italian</em> public holidays.',
+    noteVerbania:'<strong>Transfer Intra:</strong> VCO Line 1 from Verbania Station to Intra (ca. 18 min.), then VCO Line 3 to Cannobio (ca. 30 min.).<br><strong>Treno Chiama Bus (\u25d9):</strong> Trips 31/32/33 run Sun\u2013Thu on request (0323\u202f518611).<br><strong>Public holidays:</strong> Trip 15 delayed 8 min. on holidays. Trip 320 (L.3) delayed 5 min. on holidays.',
+    noteIntra:'<strong>VCO Line 1 \u00b7 Verbania Station \u2194 Intra \u00b7 Journey ca. 18 min.</strong><br>Sat only (#): Trip 11. Treno Chiama Bus (\u25d9): Trips 31/32/33 Sun\u2013Thu on request. Mon\u2013Fri via Industrial Zone (\u25c4): Trips 3, 5, 22.',
+    noteMalpensa:'<strong>Booking:</strong> All journeys must be pre-booked at <a href="https://www.safbooking.com/" target="_blank" rel="noopener" style="color:var(--sky)">safbooking.com</a>. Buses will not wait for late passengers.<br><strong>Malpensa T.1:</strong> Arrivals level -1, bus stop 6 (door 5, lift or escalator, follow BUS signs, turn left). <strong>T.2:</strong> exit door 7, turn left, bus stop 6.<br><strong>Verbania-Intra:</strong> Arrival at Imbarcadero Vecchio. Departure from Bar Lucini (approx. 10 min. walk between stops).<br><strong>Taxi from Intra:</strong> Imbarcadero Vecchio \u2192 Cannobio approx. 20\u201325 min., \u223c\u20ac25\u201340 (recommended when bus times don\'t align).<br><strong>Season:</strong> 1 Apr. \u2013 31 Oct. 2026 \u00b7 +39 0323 552172',
+    footer:'Schedule data: VCO Trasporti SRL, FART Autolinee, SAF Duemila \u00b7 Valid from 10 September 2025 \u00b7 Data without guarantee'
+  }
+};
+
+// ════════════════════════════════════════════════════════
+// HILFSFUNKTIONEN
+// ════════════════════════════════════════════════════════
+let lang='de';
+const t=k=>T[lang][k]??T['de'][k]??k;
+const toMin=s=>{if(!s)return-1;const[h,m]=s.split(':').map(Number);return h*60+m};
+const fromMin=n=>{n=((n%1440)+1440)%1440;return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0')};
+function runsOn(svc,day){if(svc==='all')return true;if(svc==='fer')return day==='mofr'||day==='sa';if(svc==='fer_mofr')return day==='mofr';if(svc==='sab')return day==='sa';if(svc==='fest')return day==='so';if(svc==='scol')return day==='mofr';return false}
+function badge(svc){if(svc==='fer')return`<span class="badge">${t('bMoSa')}</span>`;if(svc==='fer_mofr')return`<span class="badge">${t('bMoFr')}</span>`;if(svc==='sab')return`<span class="badge sab">${t('bSa')}</span>`;if(svc==='fest')return`<span class="badge fest">${t('bSo')}</span>`;if(svc==='scol')return`<span class="badge scol">${t('bScol')}</span>`;return''}
+function dur(dep,arr){let d=toMin(arr)-toMin(dep);if(d<0)d+=1440;const h=Math.floor(d/60),m=d%60;return h>0?(h+'h'+(m>0?' '+m+' Min.':'')):m+' Min.'}
+function nextDeps(list,tMin,day,n){const el=list.filter(x=>runsOn(x.svc,day)).sort((a,b)=>toMin(a.dep)-toMin(b.dep));const res=[];for(const x of el){if(toMin(x.dep)>=tMin%1440)res.push(x);if(res.length>=n)break}if(res.length<n)for(const x of el){if(res.length>=n)break;res.push({...x,nd:true})}return res.slice(0,n)}
+
+// ════════════════════════════════════════════════════════
+// VERBINDUNGSLOGIK
+// ════════════════════════════════════════════════════════
+function connLC_CAN(tMin,day){const vco=VCO3_BR_CAN.filter(x=>runsOn(x.svc,day)).sort((a,b)=>toMin(a.dep)-toMin(b.dep));const fl=FART_LC.map(toMin).sort((a,b)=>a-b);const res=[];const minV=tMin+FART_LC_T+5;for(let p=0;p<2&&res.length<3;p++){for(const v of vco){if(res.length>=3)break;const vm=toMin(v.dep)+(p?1440:0);if(vm<minV&&!p)continue;const lf=vm-5-FART_LC_T;let bf=-1;for(const f of fl){const fa=f+(p?1440:0);if(fa<=lf&&fa>=(p?0:tMin%1440))bf=f}if(bf<0)continue;res.push({fartDep:fromMin(bf),brissagoArr:fromMin(bf+FART_LC_T+(p?1440:0)),vcoDep:v.dep,cannobioArr:v.arr,svc:v.svc,trip:v.trip})}}return res}
+function connCAN_LC(tMin,day){const vco=VCO3_CAN_BR.filter(x=>runsOn(x.svc,day)).sort((a,b)=>toMin(a.dep)-toMin(b.dep));const fl=FART_BR.map(toMin).sort((a,b)=>a-b);const res=[];for(let p=0;p<2&&res.length<3;p++){for(const v of vco){if(res.length>=3)break;const vm=toMin(v.dep)+(p?1440:0);if(vm<tMin&&!p)continue;const ba=vm+15;const mf=ba+5;let nf=-1;for(const f of fl){const fa=f+(p?1440:0);if(fa>=mf){nf=f;break}}if(nf<0)nf=fl[0];res.push({canDep:v.dep,brissagoArr:fromMin(ba),fartDep:fromMin(nf),lcArr:fromMin(nf+FART_BR_T+(p?1440:0)),svc:v.svc,trip:v.trip})}}return res}
+function connVF_CAN(tMin,day){const l1=VCO1_VF_IN.filter(x=>runsOn(x.svc,day)).sort((a,b)=>toMin(a.dep)-toMin(b.dep));const l3=VCO3_IN_CAN.filter(x=>runsOn(x.svc,day)).sort((a,b)=>toMin(a.dep)-toMin(b.dep));const res=[];const used=new Set();for(let p=0;p<2&&res.length<3;p++){for(const a of l1){if(res.length>=3)break;const am=toMin(a.dep)+(p?1440:0);if(am<tMin&&!p)continue;const ia=toMin(a.arr)+(p?1440:0);const ml=ia+3;let b=null;for(const x of l3){const xm=toMin(x.dep)+(p?1440:0);if(xm>=ml&&!used.has(x.dep)){b=x;break}}if(!b){for(const x of l3){if(!used.has(x.dep)){b={...x,nd:true};break}}}if(!b)continue;used.add(b.dep);res.push({vfDep:a.dep,intraArr:a.arr,l3Dep:b.dep,cannobioArr:b.arr,l1Svc:a.svc,l1Trip:a.trip,l3Svc:b.svc,l3Trip:b.trip})}}return res}
+function connCAN_VF(tMin,day){const l3=VCO3_CAN_IN.filter(x=>runsOn(x.svc,day)).sort((a,b)=>toMin(a.dep)-toMin(b.dep));const l1=VCO1_IN_VF.filter(x=>runsOn(x.svc,day)&&x.arr!=='—').sort((a,b)=>toMin(a.dep)-toMin(b.dep));const res=[];for(let p=0;p<2&&res.length<3;p++){for(const a of l3){if(res.length>=3)break;const am=toMin(a.dep)+(p?1440:0);if(am<tMin&&!p)continue;const ia=toMin(a.arr)+(p?1440:0);const ml=ia+3;let b=null;for(const x of l1){const xm=toMin(x.dep)+(p?1440:0);if(xm>=ml){b=x;break}}if(!b&&l1.length)b=l1[0];if(!b)continue;res.push({canDep:a.dep,intraArr:a.arr,l1Dep:b.dep,vfArr:b.arr,l3Svc:a.svc,l3Trip:a.trip,l1Svc:b.svc,l1Trip:b.trip})}}return res}
+function connMXP_CAN(tMin){const l3=VCO3_IN_CAN.sort((a,b)=>toMin(a.dep)-toMin(b.dep));const res=[];const used=new Set();for(let p=0;p<2&&res.length<3;p++){for(const sd of SAF_MXP_DEP){if(res.length>=3)break;const sm=toMin(sd)+(p?1440:0);if(sm<tMin&&!p)continue;const ia=sm+SAF_MXP_T;const ml=ia+SAF_XFER;let vco=null;for(const x of l3){const xm=toMin(x.dep)+(p?1440:0);if(xm>=ml&&!used.has(x.dep)){vco=x;break}}if(!vco){for(const x of l3){if(!used.has(x.dep)){vco={...x,nd:true};break}}}if(!vco)continue;used.add(vco.dep);res.push({safDep:sd,t2:fromMin(toMin(sd)+10),intraArr:fromMin(ia),vcoDep:vco.dep,cannobioArr:vco.arr,svc:vco.svc})}}return res}
+function connCAN_MXP(tMin,day){const l3=VCO3_CAN_IN.filter(x=>runsOn(x.svc,day)).sort((a,b)=>toMin(a.dep)-toMin(b.dep));const res=[];for(let p=0;p<2&&res.length<3;p++){for(const a of l3){if(res.length>=3)break;const am=toMin(a.dep)+(p?1440:0);if(am<tMin&&!p)continue;const ia=toMin(a.arr)+(p?1440:0);const ml=ia+SAF_XFER;let sd=null;for(const s of SAF_INTRA_DEP){const sm=toMin(s)+(p?1440:0);if(sm>=ml){sd=s;break}}if(!sd&&SAF_INTRA_DEP.length)sd=SAF_INTRA_DEP[0];if(!sd)continue;res.push({canDep:a.dep,intraArr:a.arr,l3Svc:a.svc,safDep:sd,mxpArr:fromMin(toMin(sd)+SAF_INTRA_T+(p?1440:0))})}}return res}
+
+// ════════════════════════════════════════════════════════
+// ICAL
+// ════════════════════════════════════════════════════════
+const _CR={};let _ci=0;
+function reg(d){const id='r'+(++_ci);_CR[id]=d;return id}
+const URLS={fart:'https://fartiamo.ch/wp-content/uploads/2025/12/62316.pdf',vco3:'https://www.vcotrasporti.it/userdata/banner/VERBANIA-BRISSAGO.pdf',vco:'https://www.vcotrasporti.it/it/orari.php'};
+function icalDl(rid){
+  const e=_CR[rid];if(!e)return;const{type:tp,c}=e;
+  const dt=d=>{const now=new Date();const[h,m]=d.split(':').map(Number);const x=new Date(now);x.setHours(h,m,0,0);if(x<now-3600000)x.setDate(x.getDate()+1);return x.toISOString().slice(0,10).replace(/-/g,'')};
+  const dts=(date,ts)=>date+'T'+ts.replace(':','')+'00';
+  const esc=s=>s.replace(/\\/g,'\\\\').replace(/,/g,'\\,').replace(/;/g,'\\;');
+  const vfy=t('icalVerify');const dn=t('icalDate');
+  let sum,dep,end,desc,loc;
+  if(tp==='lc_fwd'){const d=dt(c.fartDep);sum='Bus Locarno → Cannobio';dep=dts(d,c.fartDep);end=dts(d,c.cannobioArr);loc='Locarno, Stazione';desc=['FART 316',`  ${t('from')} Locarno, Stazione: ${c.fartDep}`,`  ${t('to')} Brissago: ${c.brissagoArr}`,'','VCO Linea 3 ('+c.trip+')',`  ${t('from')} Brissago: ${c.vcoDep}`,`  ${t('to')} Cannobio: ${c.cannobioArr}`,``,vfy,`FART 316: ${URLS.fart}`,`VCO L.3: ${URLS.vco3}`,`VCO: ${URLS.vco}`,``,dn].join('\n')}
+  else if(tp==='lc_rev'){const d=dt(c.canDep);sum='Bus Cannobio → Locarno, Stazione';dep=dts(d,c.canDep);end=dts(d,c.lcArr);loc='Cannobio';desc=[`VCO Linea 3 (${c.trip})`,`  ${t('from')} Cannobio: ${c.canDep}`,`  ${t('to')} Brissago: ${c.brissagoArr}`,'',`FART 316`,`  ${t('from')} Brissago: ${c.fartDep}`,`  ${t('to')} Locarno, Stazione: ${c.lcArr}`,``,vfy,`VCO L.3: ${URLS.vco3}`,`FART 316: ${URLS.fart}`,``,dn].join('\n')}
+  else if(tp==='vb_fwd'){const d=dt(c.vfDep);sum='Bus Verbania Ferrovia → Cannobio';dep=dts(d,c.vfDep);end=dts(d,c.cannobioArr);loc='Verbania Ferrovia';desc=[`VCO Linea 1 (${c.l1Trip})`,`  ${t('from')} Verbania Ferrovia: ${c.vfDep}`,`  ${t('to')} Intra: ${c.intraArr}`,``,`VCO Linea 3 (${c.l3Trip})`,`  ${t('from')} Intra: ${c.l3Dep}`,`  ${t('to')} Cannobio: ${c.cannobioArr}`,``,vfy,`VCO L.3: ${URLS.vco3}`,`VCO: ${URLS.vco}`,``,dn].join('\n')}
+  else if(tp==='vb_rev'){const d=dt(c.canDep);sum='Bus Cannobio → Verbania Ferrovia';dep=dts(d,c.canDep);end=dts(d,c.vfArr);loc='Cannobio';desc=[`VCO Linea 3 (${c.l3Trip})`,`  ${t('from')} Cannobio: ${c.canDep}`,`  ${t('to')} Intra: ${c.intraArr}`,``,`VCO Linea 1 (${c.l1Trip})`,`  ${t('from')} Intra: ${c.l1Dep}`,`  ${t('to')} Verbania Ferrovia: ${c.vfArr}`,``,vfy,`VCO: ${URLS.vco}`,``,dn].join('\n')}
+  else if(tp==='saf_fwd'){const d=dt(c.safDep);sum='SAF Alibus + VCO L.3 → Cannobio';dep=dts(d,c.safDep);end=dts(d,c.cannobioArr);loc='Malpensa T.1 Bus Stop 6';desc=[`SAF Alibus`,`  ${t('from')} Malpensa T.1: ${c.safDep} · T.2: ${c.t2}`,`  ${t('to')} Verbania-Intra Imbarcadero Vecchio: ${c.intraArr}`,`  (${t('safXfer')})`,``,`VCO Linea 3`,`  ${t('from')} Intra: ${c.vcoDep}`,`  ${t('to')} Cannobio: ${c.cannobioArr}`,``,`Prenotazione: https://www.safbooking.com/`,vfy,`SAF Alibus: https://www.safduemila.com/linee/alibus-malpensa-lago-maggiore/`,``,dn].join('\n')}
+  else if(tp==='saf_rev'){const d=dt(c.canDep);sum='VCO L.3 + SAF Alibus → Malpensa';dep=dts(d,c.canDep);end=dts(d,c.mxpArr);loc='Cannobio';desc=[`VCO Linea 3`,`  ${t('from')} Cannobio: ${c.canDep}`,`  ${t('to')} Intra: ${c.intraArr}`,`  (${t('safXfer')})`,``,`SAF Alibus`,`  ${t('from')} Verbania-Intra Bar Lucini: ${c.safDep}`,`  ${t('to')} Malpensa T.1 ${t('safApprox')}: ${c.mxpArr}`,``,`Prenotazione: https://www.safbooking.com/`,vfy,`SAF Alibus: https://www.safduemila.com/linee/alibus-malpensa-lago-maggiore/`,``,dn].join('\n')}
+  else if(tp==='in_fwd'||tp==='in_rev'){const isF=tp==='in_fwd';const d=dt(c.dep);sum=isF?`VCO L.1 (${c.trip}) Verbania → Intra`:`VCO L.1 (${c.trip}) Intra → Verbania`;dep=dts(d,c.dep);end=dts(d,c.arr);loc=isF?'Verbania Ferrovia':'Intra';desc=[`VCO Linea 1 (${c.trip})`,`  ${t('from')} ${isF?'Verbania Ferrovia':'Intra'}: ${c.dep}`,`  ${t('to')} ${isF?'Intra':'Verbania Ferrovia'}: ${c.arr}`,``,vfy,`VCO: ${URLS.vco}`,``,dn].join('\n')}
+  else return;
+  const uid=Date.now()+'@cannobio-logistics';
+  const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Cannobio//Logistics//'+lang.toUpperCase(),'CALSCALE:GREGORIAN','BEGIN:VEVENT',`UID:${uid}`,`DTSTART:${dep}`,`DTEND:${end}`,`SUMMARY:${esc(sum)}`,`DESCRIPTION:${esc(desc).replace(/\n/g,'\\n')}`,`LOCATION:${esc(loc||'')}`,`LANGUAGE:${lang}`,'END:VEVENT','END:VCALENDAR'].join('\r\n');
+  const blob=new Blob([ics],{type:'text/calendar;charset=utf-8'});
+  const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;
+  a.download=sum.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'.ics';
+  document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
+}
+
+// ════════════════════════════════════════════════════════
+// RENDER: VERBINDUNGSKARTE
+// ════════════════════════════════════════════════════════
+function card(dep,arr,dir,legs,note,noteClass,rid,first){
+  return`<div class="cc${first?' first':''}"><div class="cc-header"><span class="cc-dep">${dep}</span><span class="cc-dir">${dir}</span><span class="cc-arr">${arr}</span></div><div class="cc-body">${legs}${note?`<div class="cc-note${noteClass?' '+noteClass:''}">${note}</div>`:''}</div><div class="cc-footer"><button class="ical-btn" onclick="icalDl('${rid}')">${t('icalBtn')}</button></div></div>`;
+}
+function leg(line,text){return`<div class="cc-leg"><span class="cc-line">${line}</span><span>${text}</span></div>`}
+function xfer(txt){return`<div class="cc-leg"><span class="cc-xfer">${txt}</span></div>`}
+
+// ════════════════════════════════════════════════════════
+// RENDER: TABS
+// ════════════════════════════════════════════════════════
+const STATE={locarno:{dir:0,day:'mofr'},verbania:{dir:0,day:'mofr'},intra:{dir:0,day:'mofr'},malpensa:{dir:0}};
+const LABELS={locarno:['Locarno, Stazione','Cannobio'],verbania:['Verbania Ferrovia','Cannobio'],intra:['Verbania Ferrovia','Intra'],malpensa:['Malpensa','Cannobio']};
+
+function renderLocarno(ts,day){
+  const dir=STATE.locarno.dir,tMin=toMin(ts);
+  if(dir===0){
+    const cs=connLC_CAN(tMin,day);if(!cs.length)return`<div class="no-res">${t('noConn')}</div>`;
+    return cs.map((c,i)=>card(c.fartDep,c.cannobioArr,`${t('dirLcFwd')}<br><span style="font-size:10px;color:var(--sky)">${t('safTotal')}: ${dur(c.fartDep,c.cannobioArr)}</span>`,leg('FART 316',`Locarno, Stazione ${t('from')} ${c.fartDep} → Brissago ${t('to')} ${c.brissagoArr}`)+leg('VCO L.3',`Brissago ${t('from')} ${c.vcoDep} → Cannobio ${t('to')} ${c.cannobioArr} ${badge(c.svc)}`),null,'',reg({type:'lc_fwd',c}),i===0)).join('');
+  }else{
+    const cs=connCAN_LC(tMin,day);if(!cs.length)return`<div class="no-res">${t('noConn')}</div>`;
+    return cs.map((c,i)=>card(c.canDep,c.lcArr,`${t('dirLcRev')}<br><span style="font-size:10px;color:var(--sky)">${t('safTotal')}: ${dur(c.canDep,c.lcArr)}</span>`,leg('VCO L.3',`Cannobio ${t('from')} ${c.canDep} → Brissago ${t('to')} ${c.brissagoArr} ${badge(c.svc)}`)+leg('FART 316',`Brissago ${t('from')} ${c.fartDep} → Locarno, Stazione ${t('to')} ${c.lcArr}`),null,'',reg({type:'lc_rev',c}),i===0)).join('');
+  }
+}
+function renderVerbania(ts,day){
+  const dir=STATE.verbania.dir,tMin=toMin(ts);
+  if(dir===0){
+    const cs=connVF_CAN(tMin,day);if(!cs.length)return`<div class="no-res">${t('noConn')}</div>`;
+    return cs.map((c,i)=>card(c.vfDep,c.cannobioArr,`${t('dirVbFwd')}<br><span style="font-size:10px;color:var(--sky)">${t('safTotal')}: ${dur(c.vfDep,c.cannobioArr)}</span>`,leg('VCO L.1',`Verbania Fs. ${t('from')} ${c.vfDep} → Intra ${t('to')} ${c.intraArr} ${badge(c.l1Svc)}`)+leg('VCO L.3',`Intra ${t('from')} ${c.l3Dep} → Cannobio ${t('to')} ${c.cannobioArr} ${badge(c.l3Svc)}`),null,'',reg({type:'vb_fwd',c}),i===0)).join('');
+  }else{
+    const cs=connCAN_VF(tMin,day);if(!cs.length)return`<div class="no-res">${t('noConn')}</div>`;
+    return cs.map((c,i)=>card(c.canDep,c.vfArr,`${t('dirVbRev')}<br><span style="font-size:10px;color:var(--sky)">${t('safTotal')}: ${dur(c.canDep,c.vfArr)}</span>`,leg('VCO L.3',`Cannobio ${t('from')} ${c.canDep} → Intra ${t('to')} ${c.intraArr} ${badge(c.l3Svc)}`)+leg('VCO L.1',`Intra ${t('from')} ${c.l1Dep} → Verbania Fs. ${t('to')} ${c.vfArr} ${badge(c.l1Svc)}`),null,'',reg({type:'vb_rev',c}),i===0)).join('');
+  }
+}
+function renderIntra(ts,day){
+  const dir=STATE.intra.dir,tMin=toMin(ts);
+  const list=dir===0?VCO1_VF_IN:VCO1_IN_VF;
+  const trps=nextDeps(list,tMin,day,3);
+  if(!trps.length)return`<div class="no-res">${t('noDep')}</div>`;
+  return'<div class="dep-grid">'+trps.map((x,i)=>{const rid=reg({type:dir===0?'in_fwd':'in_rev',c:x});return`<div class="dc${i===0?' next':''}"><div class="dc-time">${x.dep}</div><div class="dc-arr">${t('to')} ${x.arr}</div><div class="dc-badge">${badge(x.svc)||`<span style="font-size:10px;color:var(--text-tertiary)">${lang==='de'?'tägl.':lang==='it'?'giorn.':'daily'}</span>`}</div><div style="margin-top:5px"><button class="ical-btn ical-sm" onclick="icalDl('${rid}')">${t('icalSm')}</button></div></div>`}).join('')+'</div>'}
+function renderMalpensa(ts){
+  const dir=STATE.malpensa.dir,tMin=toMin(ts);
+  if(dir===0){
+    const cs=connMXP_CAN(tMin);if(!cs.length)return`<div class="no-res">${t('noConn')}</div>`;
+    return cs.map((c,i)=>card(c.safDep,c.cannobioArr,`${t('dirMxpCan')}<br><span style="font-size:10px;color:var(--sky)">${t('safTotal')}: ${dur(c.safDep,c.cannobioArr)}</span>`,leg('SAF Alibus',`Malpensa T.1 ${t('from')} ${c.safDep} \u00b7 T.2 ${t('from')} ${c.t2} → Verbania-Intra ${t('to')} ${c.intraArr}`)+xfer('\u223c10 Min')+leg('VCO L.3',`Intra ${t('from')} ${c.vcoDep} → Cannobio ${t('to')} ${c.cannobioArr} ${badge(c.svc)}`),t('safTaxiAlt'),'sky',reg({type:'saf_fwd',c}),i===0)).join('');
+  }else{
+    const cs=connCAN_MXP(tMin,'mofr');if(!cs.length)return`<div class="no-res">${t('noConn')}</div>`;
+    return cs.map((c,i)=>card(c.canDep,c.mxpArr,`${t('dirCanMxp')}<br><span style="font-size:10px;color:var(--sky)">${t('safTotal')}: ${dur(c.canDep,c.mxpArr)} <em style="font-weight:300">(${t('safApprox')})</em></span>`,leg('VCO L.3',`Cannobio ${t('from')} ${c.canDep} → Intra ${t('to')} ${c.intraArr} ${badge(c.l3Svc)}`)+xfer('\u223c10 Min')+leg('SAF Alibus',`Verbania-Intra Bar Lucini ${t('from')} ${c.safDep} → Malpensa T.1 ${t('to')} ${c.mxpArr} <em style="font-size:10px;color:var(--text-tertiary)">(${t('safApprox')})</em>`),null,'',reg({type:'saf_rev',c}),i===0)).join('');
+  }
+}
+
+// ── Accordion-Inhalte ──────────────────────────────────
+function ttHead(){return`<tr><th>${t('thDep')}</th><th>${t('thArr')}</th><th>${t('thTrip')}</th><th>${t('thDays')}</th></tr>`}
+function ttRows(list,day){const el=list.filter(x=>runsOn(x.svc,day)).sort((a,b)=>toMin(a.dep)-toMin(b.dep));if(!el.length)return`<tr><td colspan="4" style="color:var(--text-tertiary);padding:8px 7px">${t('noDep')}</td></tr>`;return el.map(x=>`<tr><td>${x.dep}</td><td>${x.arr}</td><td>${x.trip}</td><td>${badge(x.svc)||'<span style="color:var(--text-tertiary)">—</span>'}</td></tr>`).join('')}
+const Ln=()=>lang==='de'?'Linie':lang==='it'?'Linea':'Line';
+function accLocarno(dir,day){if(dir===0)return`<div class="tt-label">VCO ${Ln()} 3 · Brissago → Cannobio</div><table class="tt">${ttHead()}${ttRows(VCO3_BR_CAN,day)}</table><p class="tt-note">FART 316 ${t('from')} Locarno, Stazione ca. alle 30 Min. 05:51–19:51, danach 20:21 20:50 21:50 22:50 23:50.</p>`;return`<div class="tt-label">VCO ${Ln()} 3 · Cannobio → Brissago</div><table class="tt">${ttHead()}${ttRows(VCO3_CAN_BR,day)}</table><p class="tt-note">FART 316 ${t('from')} Brissago: 05:08 06:08 06:38, dann ca. alle 30 Min. bis 20:08, danach 21:13–23:13, 00:13. ${t('safTotal')} → Locarno ${t('safApprox')} 30 Min.</p>`}
+function accVerbania(dir,day){if(dir===0)return`<div class="tt-label">VCO ${Ln()} 1 · Verbania Ferrovia → Intra</div><table class="tt">${ttHead()}${ttRows(VCO1_VF_IN,day)}</table><div class="tt-label" style="margin-top:12px">VCO ${Ln()} 3 · Intra → Cannobio</div><table class="tt">${ttHead()}${ttRows(VCO3_IN_CAN,day)}</table>`;return`<div class="tt-label">VCO ${Ln()} 3 · Cannobio → Intra</div><table class="tt">${ttHead()}${ttRows(VCO3_CAN_IN,day)}</table><div class="tt-label" style="margin-top:12px">VCO ${Ln()} 1 · Intra → Verbania Ferrovia</div><table class="tt">${ttHead()}${ttRows(VCO1_IN_VF,day)}</table>`}
+function accIntra(dir,day){const l=dir===0?VCO1_VF_IN:VCO1_IN_VF;const fr=dir===0?'Verbania Fs.':'Intra';const to=dir===0?'Intra':'Verbania Fs.';return`<div class="tt-label">VCO ${Ln()} 1 · ${fr} → ${to}</div><table class="tt">${ttHead()}${ttRows(l,day)}</table>`}
+function accMalpensa(dir){if(dir===0)return`<div class="tt-label">SAF Alibus · Malpensa → Verbania-Intra</div><table class="tt"><tr><th>${t('thDep')} T.1</th><th>${t('thDep')} T.2</th><th>${t('thArr')} Intra (${t('safApprox')})</th></tr>${SAF_MXP_DEP.map(d=>`<tr><td>${d}</td><td>${fromMin(toMin(d)+10)}</td><td>${fromMin(toMin(d)+SAF_MXP_T)}</td></tr>`).join('')}</table><p class="tt-note">${t('safXfer')}. Ankunft Imbarcadero Vecchio.</p><div class="tt-label" style="margin-top:12px">VCO ${Ln()} 3 · Intra → Cannobio</div><table class="tt">${ttHead()}${ttRows(VCO3_IN_CAN,'mofr')}</table>`;return`<div class="tt-label">VCO ${Ln()} 3 · Cannobio → Intra</div><table class="tt">${ttHead()}${ttRows(VCO3_CAN_IN,'mofr')}</table><p class="tt-note">${t('safXfer')}. Abfahrt Bar Lucini.</p><div class="tt-label" style="margin-top:12px">SAF Alibus · Verbania-Intra → Malpensa</div><table class="tt"><tr><th>${t('thDep')} Bar Lucini</th><th>${t('thArr')} Malpensa T.1 (${t('safApprox')})</th></tr>${SAF_INTRA_DEP.map(d=>`<tr><td>${d}</td><td>${fromMin(toMin(d)+SAF_INTRA_T)}</td></tr>`).join('')}</table>`}
+
+// ════════════════════════════════════════════════════════
+// UI-STEUERUNG
+// ════════════════════════════════════════════════════════
+const getNow=()=>{const d=new Date();return String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')};
+const getDefaultDay=()=>{const d=new Date().getDay();return d===0?'so':d===6?'sa':'mofr'};
+
+function toggleAcc(tab,btn){btn.classList.toggle('open');const body=document.getElementById('accb-'+tab);body.classList.toggle('open');if(body.classList.contains('open'))fillAcc(tab)}
+function fillAcc(tab){const body=document.getElementById('accb-'+tab);const day=STATE[tab]?.day||'mofr';const dir=STATE[tab]?.dir||0;if(tab==='locarno')body.innerHTML=accLocarno(dir,day);else if(tab==='verbania')body.innerHTML=accVerbania(dir,day);else if(tab==='intra')body.innerHTML=accIntra(dir,day);else if(tab==='malpensa')body.innerHTML=accMalpensa(dir)}
+
+function update(tab){
+  if(tab==='taxi')return;
+  const resEl=document.getElementById('res-'+tab);if(!resEl)return;
+  const timeEl=document.getElementById('time-'+tab);
+  const ts=timeEl?timeEl.value||getNow():getNow();
+  if(tab==='malpensa'){resEl.innerHTML=renderMalpensa(ts);const accb=document.getElementById('accb-malpensa');if(accb&&accb.classList.contains('open'))fillAcc('malpensa');return}
+  const dayEl=document.getElementById('day-'+tab);
+  const day=dayEl?dayEl.value:STATE[tab]?.day||'mofr';
+  if(STATE[tab])STATE[tab].day=day;
+  if(tab==='locarno')resEl.innerHTML=renderLocarno(ts,day);
+  else if(tab==='verbania')resEl.innerHTML=renderVerbania(ts,day);
+  else if(tab==='intra')resEl.innerHTML=renderIntra(ts,day);
+  const accb=document.getElementById('accb-'+tab);if(accb&&accb.classList.contains('open'))fillAcc(tab);
+}
+
+function flipDir(tab){STATE[tab].dir=1-STATE[tab].dir;const[a,b]=LABELS[tab];const d=STATE[tab].dir;document.getElementById('da-'+tab).textContent=d===0?a:b;document.getElementById('db-'+tab).textContent=d===0?b:a;update(tab)}
+
+document.querySelector('.tab-row').addEventListener('click',e=>{
+  const btn=e.target.closest('.tab-btn');if(!btn)return;
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  const tab=btn.dataset.tab;
+  document.getElementById('tab-'+tab).classList.add('active');
+  update(tab);
+});
+
+// ─ updateDayOptions ───────────────────────────────────
+function updateDayOptions(){
+  ['locarno','verbania','intra'].forEach(tab=>{
+    const sel=document.getElementById('day-'+tab);if(!sel)return;
+    const val=sel.value;
+    sel.innerHTML=`<option value="mofr">${t('dayMofr')}</option><option value="sa">${t('daySa')}</option><option value="so">${t('daySo')}</option>`;
+    sel.value=val;
+  });
+}
+
+// ════════════════════════════════════════════════════════
+// SPRACHE ANWENDEN (exakt wie Gotthard-Muster)
+// ════════════════════════════════════════════════════════
+function set(id,text,isHtml=false){const el=document.getElementById(id);if(!el)return;if(isHtml)el.innerHTML=text;else el.textContent=text}
+
+function applyLang(l){
+  lang=l;document.documentElement.lang=l;
+  const tk=T[l];
+  document.title=tk.pageTitle;
+  document.querySelector('meta[name="description"]').setAttribute('content',tk.pageDesc);
+  // Nav
+  set('nav-meteo',tk.navMeteo);set('nav-rifiuti',tk.navRifiuti);set('nav-gotthard',tk.navGotthard);set('nav-logistics',tk.navLogistics);
+  // Hero
+  set('t-h1a',tk.h1a);set('t-h1b',tk.h1b);set('t-sub',tk.sub);
+  // Tabs
+  set('tb-locarno',tk.tbLocarno);set('tb-verbania',tk.tbVerbania);set('tb-intra',tk.tbIntra);set('tb-malpensa',tk.tbMalpensa);set('tb-taxi',tk.tbTaxi);
+  // Controls labels
+  ['t-lbl-day1','t-lbl-day2','t-lbl-day3'].forEach(id=>set(id,tk.lblDay));
+  ['t-lbl-from1','t-lbl-from2','t-lbl-from3','t-lbl-from4'].forEach(id=>set(id,tk.lblFrom));
+  // Result headings
+  set('t-rh-locarno',tk.rhConn);set('t-rh-verbania',tk.rhConn);set('t-rh-intra',tk.rhDep);set('t-rh-malpensa',tk.rhConn);
+  // Accordion labels
+  ['t-fulltts','t-fulltts2','t-fulltts3','t-fulltts4'].forEach(id=>set(id,tk.fullTt));
+  // Notes
+  set('note-locarno',tk.noteLocarno,true);set('note-verbania',tk.noteVerbania,true);set('note-intra',tk.noteIntra,true);set('note-malpensa',tk.noteMalpensa,true);
+  // SAF
+  set('t-saf-season',tk.safSeason);set('t-saf-note',tk.safNote);set('t-saf-book',tk.safBook);
+  // Taxi
+  set('t-taxi-ch-lbl',tk.taxiChLbl);set('t-taxi-it-lbl',tk.taxiItLbl);
+  set('t-taxi-ch-intro',tk.taxiChIntro);set('t-taxi-it-intro',tk.taxiItIntro);
+  set('t-taxi-nearest',tk.taxiNearest);
+  set('t-taxi-prato-price',tk.taxiPratoPr,false);set('t-taxi-dome-price',tk.taxiDomePr,false);
+  set('t-taxi-many-rev',tk.taxiManyRev);set('t-taxi-classic',tk.taxiClassic);set('t-taxi-top',tk.taxiTop);
+  ['t-taxi-airport','t-taxi-airport2'].forEach(id=>set(id,tk.taxiAirport));set('t-taxi-long',tk.taxiLong);
+  ['t-call1','t-call2','t-call3','t-call4','t-call5','t-call6','t-call7','t-call8'].forEach(id=>set(id,tk.callBtn));
+  // Footer
+  set('t-footer',tk.footer);
+  // Lang buttons
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  // Day selectors + re-render
+  updateDayOptions();
+  ['locarno','verbania','intra','malpensa'].forEach(tab=>update(tab));
+}
+
+// ════════════════════════════════════════════════════════
+// EXTERNE FAHRPLANDATEN (fahrplan.json)
+// ════════════════════════════════════════════════════════
+async function loadExternal(){
+  try{
+    const r=await fetch('./data/fahrplan.json',{cache:'no-cache'});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const d=await r.json();
+    const rep=(tgt,src)=>{if(Array.isArray(src)&&src.length){tgt.length=0;tgt.push(...src)}};
+    rep(FART_LC,d.FART_LC);rep(FART_BR,d.FART_BR);
+    rep(VCO3_BR_CAN,d.VCO3_BR_CAN);rep(VCO3_CAN_BR,d.VCO3_CAN_BR);
+    rep(VCO3_IN_CAN,d.VCO3_IN_CAN);rep(VCO3_CAN_IN,d.VCO3_CAN_IN);
+    rep(VCO1_VF_IN,d.VCO1_VF_IN);rep(VCO1_IN_VF,d.VCO1_IN_VF);
+    rep(SAF_MXP_DEP,d.SAF_MXP_DEP);rep(SAF_INTRA_DEP,d.SAF_INTRA_DEP);
+    showFreshness(d.meta||{});
+    console.log('[logistics] Externe Daten geladen:',d.meta?.generated);
+  }catch(e){showBuiltin();console.info('[logistics] Eingebaute Daten aktiv. ('+e.message+')')}
+}
+function showFreshness(meta){
+  const bar=document.getElementById('data-bar');const chip=document.getElementById('data-chip');if(!bar||!chip)return;
+  const age=(Date.now()-new Date(meta.generated||0).getTime())/86400000;
+  const isStale=age>90||(meta.confidence||1)<0.7;
+  chip.className='data-chip '+(isStale?'warn':'ok');
+  if(isStale){chip.textContent=t('dataStale')}else{const d=new Date(meta.generated);const fmt=d.toLocaleDateString(lang==='de'?'de-CH':lang==='it'?'it-IT':'en-GB',{day:'2-digit',month:'2-digit',year:'numeric'});chip.textContent=`${t('dataFresh')} ${fmt} · ${t('dataConf')}: ${Math.round((meta.confidence||1)*100)} %`}
+  bar.classList.add('visible');
+}
+function showBuiltin(){const bar=document.getElementById('data-bar');const chip=document.getElementById('data-chip');if(!bar||!chip)return;chip.className='data-chip ok';chip.textContent=t('dataBuiltin');bar.classList.add('visible')}
+
+// ════════════════════════════════════════════════════════
+// INIT
+// ════════════════════════════════════════════════════════
+document.querySelector('.lang-switcher').addEventListener('click',e=>{
+  const btn=e.target.closest('.lang-btn');if(!btn)return;
+  applyLang(btn.dataset.lang);
+});
+
+(async()=>{
+  const now=getNow();const day=getDefaultDay();
+  ['locarno','verbania','intra'].forEach(tab=>{
+    const tEl=document.getElementById('time-'+tab);if(tEl)tEl.value=now;
+    if(STATE[tab])STATE[tab].day=day;
+  });
+  const tm=document.getElementById('time-malpensa');if(tm)tm.value=now;
+  // ?lang= Parameter lesen, Fallback auf Deutsch (Standard-Portal-Muster)
+  const lp=new URLSearchParams(location.search).get('lang');
+  applyLang(['de','it','en'].includes(lp)?lp:'de');
+  await loadExternal();
+  ['locarno','verbania','intra','malpensa'].forEach(tab=>update(tab));
+})();
+</script>
+</body>
+</html>
