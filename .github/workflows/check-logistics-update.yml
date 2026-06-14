@@ -36,9 +36,8 @@ jobs:
 
     - name: Playwright-Abhängigkeiten installieren
       run: |
-        cd .github/scripts
-        npm install
-        npx playwright install chromium --with-deps
+        npm install --prefix .github/scripts
+        .github/scripts/node_modules/.bin/playwright install chromium --with-deps
 
     # ── 3. PDFs prüfen und herunterladen (Playwright) ────────────────────────
     #   · Besucht jede Site mit Chromium (Bot-Check / Session-Cookies)
@@ -48,6 +47,8 @@ jobs:
     #   · Entdeckt neue Dateinamen dynamisch (FART: jährlicher Datumspfad, SAF: Jahres-Suffix)
     - name: PDFs prüfen und herunterladen
       id: check
+      env:
+        NODE_PATH: .github/scripts/node_modules
       run: node .github/scripts/check_logistics.js
 
     # ── 4. Abbruch wenn keine Änderungen ─────────────────────────────────────
@@ -59,16 +60,19 @@ jobs:
 
     # ── 5. Python + pdfplumber ────────────────────────────────────────────────
     - name: Python 3.12
+      if: steps.check.outputs.changed == 'true'
       uses: actions/setup-python@v5
       with:
         python-version: '3.12'
         cache: pip
 
     - name: pdfplumber installieren
+      if: steps.check.outputs.changed == 'true'
       run: pip install --quiet pdfplumber
 
     # ── 6. Fahrplan parsen ────────────────────────────────────────────────────
     - name: Fahrplan parsen
+      if: steps.check.outputs.changed == 'true'
       id: parse
       run: python .github/scripts/parse_logistics.py
       continue-on-error: true
@@ -151,4 +155,3 @@ jobs:
         else
           echo "⚠️ PDF(s) geändert · Parse fehlgeschlagen → GitHub Issue erstellt." >> "$GITHUB_STEP_SUMMARY"
         fi
-
