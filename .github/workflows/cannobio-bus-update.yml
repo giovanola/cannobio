@@ -1,1 +1,389 @@
+# 260614-cannobio-bus-gh-action-v2.0.yml
+# Ablage: .github/workflows/cannobio-bus-update.yml
+#
+# Muster analog zu giovanola/integratori:
+#   – Jeden Montag automatisch
+#   – Session-Cookies für jede Quelle holen, dann PDF laden
+#   – Magic-Byte-Check (%PDF) pro Datei
+#   – SHA-256-Vergleich; bei Änderung: parsen → committen → Issue
+#   – Bei niedriger Konfidenz: kein Überschreiben, Issue mit manueller Aufgabe
+
+name: Cannobio Bus – Fahrplan prüfen und aktualisieren
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"   # Montag 07:00 CEST / 06:00 CET
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Erzwingener Parse (auch ohne Checksummenänderung)"
+        type: boolean
+        default: false
+
+env:
+  DATA_DIR:  cannobio/anreise/data
+  CACHE_DIR: cannobio/anreise/data/_cache
+  JSON_OUT:  cannobio/anreise/data/fahrplan.json
+  DIAG_OUT:  cannobio/anreise/data/parse-diagnostic.json
+  SAF_KNOWN: "https://www.safduemila.com/wp-content/uploads/2019/01/alibus-2026-web.pdf"
+  SAF_PAGE:  "https://www.safduemila.com/linee/alibus-malpensa-lago-maggiore/"
+  UA: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+
+jobs:
+  update-schedules:
+    name: PDFs prüfen · parsen · committen
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues:   write
+
+    steps:
+    # ── 1. Checkout ──────────────────────────────────────────────────────────
+    - uses: actions/checkout@v4
+
+    # ── 2. Verzeichnisse anlegen ──────────────────────────────────────────────
+    - name: Verzeichnisse anlegen
+      run: mkdir -p "$CACHE_DIR"
+
+    # ── 3. FART 316 laden ─────────────────────────────────────────────────────
+    - name: FART 316 laden
+      id: fart316
+      run: |
+        set -euo pipefail
+        SITE="https://www.fartiamo.ch"
+        ORARI_PAGE="https://www.fartiamo.ch/orari/linea-316/"
+        COOKIES=/tmp/fart_cookies.txt
+        OUT=/tmp/fart316.pdf
+
+        echo "→ Session-Cookie holen: $SITE"
+        curl -s -c "$COOKIES" -o /dev/null --max-time 20 \
+          -H "User-Agent: $UA" "$SITE" || true
+
+        # Kandidaten-URLs: bekannte + dynamisch von der Orari-Seite
+        KNOWN_URL="https://fartiamo.ch/wp-content/uploads/2025/12/62316.pdf"
+
+        echo "→ Aktuelle PDF-URL von Orari-Seite suchen..."
+        DISCOVERED=$(curl -s "$ORARI_PAGE" --max-time 20 \
+          -H "User-Agent: $UA" \
+          | grep -oP 'https://fartiamo\.ch/wp-content/uploads/\d+/\d+/62316\.pdf' \
+          | head -1 || echo "")
+        [ -n "$DISCOVERED" ] && echo "   Gefunden: $DISCOVERED" || echo "   Nichts gefunden, nutze bekannte URL"
+
+        PDF_URL="${DISCOVERED:-$KNOWN_URL}"
+        echo "→ Lade: $PDF_URL"
+
+        curl -L --max-time 120 --retry 2 --retry-delay 5 \
+          --fail-with-body \
+          -b "$COOKIES" -c "$COOKIES" \
+          -H "User-Agent: $UA" \
+          -H "Referer: $ORARI_PAGE" \
+          -H "Accept: application/pdf,*/*;q=0.9" \
+          "$PDF_URL" -o "$OUT" 2>&1 | tail -3 || {
+            echo "fart316_ok=false" >> "$GITHUB_OUTPUT"; exit 0
+          }
+
+        # Magic-Byte-Prüfung
+        if ! head -c 4 "$OUT" | grep -q "%PDF"; then
+          echo "⚠ Kein PDF (Magic Bytes fehlen). Erste 200 Bytes:"
+          head -c 200 "$OUT" | cat -v
+          echo "fart316_ok=false" >> "$GITHUB_OUTPUT"; exit 0
+        fi
+
+        SIZE=$(du -sh "$OUT" | cut -f1)
+        echo "✓ PDF $SIZE verifiziert."
+        echo "fart316_url=$PDF_URL" >> "$GITHUB_OUTPUT"
+
+        # SHA-256-Vergleich
+        NEW=$(sha256sum "$OUT" | cut -d' ' -f1)
+        OLD=$(python3 -c "import json,sys; d=json.load(open('$JSON_OUT')) if __import__('os').path.exists('$JSON_OUT') else {}; print(d.get('sources',{}).get('fart316',{}).get('sha256',''))" 2>/dev/null || echo "")
+        echo "   Neu:  $NEW"
+        echo "   Alt:  ${OLD:-<keiner>}"
+
+        if [ "$NEW" = "$OLD" ] && [ "${{ inputs.force }}" != "true" ]; then
+          echo "   → unverändert"
+          echo "fart316_ok=true" >> "$GITHUB_OUTPUT"
+          echo "fart316_changed=false" >> "$GITHUB_OUTPUT"
+        else
+          echo "   → GEÄNDERT"
+          cp "$OUT" "$CACHE_DIR/fart316.pdf"
+          echo "fart316_ok=true" >> "$GITHUB_OUTPUT"
+          echo "fart316_changed=true" >> "$GITHUB_OUTPUT"
+          echo "fart316_sha=$NEW" >> "$GITHUB_OUTPUT"
+        fi
+
+    # ── 4. VCO Linie 3 laden ──────────────────────────────────────────────────
+    - name: VCO Linie 3 laden
+      id: vco3
+      run: |
+        set -euo pipefail
+        SITE="https://www.vcotrasporti.it"
+        REFERER="https://www.vcotrasporti.it/it/orari.php"
+        COOKIES=/tmp/vco_cookies.txt
+        OUT=/tmp/vco3.pdf
+        PDF_URL="https://www.vcotrasporti.it/userdata/banner/VERBANIA-BRISSAGO.pdf"
+
+        echo "→ Session-Cookie holen: $SITE"
+        curl -s -c "$COOKIES" -o /dev/null --max-time 20 \
+          -H "User-Agent: $UA" "$REFERER" || true
+
+        echo "→ Lade: $PDF_URL"
+        curl -L --max-time 120 --retry 2 --retry-delay 5 \
+          --fail-with-body \
+          -b "$COOKIES" -c "$COOKIES" \
+          -H "User-Agent: $UA" \
+          -H "Referer: $REFERER" \
+          -H "Accept: application/pdf,*/*;q=0.9" \
+          "$PDF_URL" -o "$OUT" 2>&1 | tail -3 || {
+            echo "vco3_ok=false" >> "$GITHUB_OUTPUT"; exit 0
+          }
+
+        if ! head -c 4 "$OUT" | grep -q "%PDF"; then
+          echo "⚠ Kein PDF."
+          head -c 200 "$OUT" | cat -v
+          echo "vco3_ok=false" >> "$GITHUB_OUTPUT"; exit 0
+        fi
+
+        SIZE=$(du -sh "$OUT" | cut -f1); echo "✓ PDF $SIZE verifiziert."
+        NEW=$(sha256sum "$OUT" | cut -d' ' -f1)
+        OLD=$(python3 -c "import json,os; d=json.load(open('$JSON_OUT')) if os.path.exists('$JSON_OUT') else {}; print(d.get('sources',{}).get('vco3',{}).get('sha256',''))" 2>/dev/null || echo "")
+
+        if [ "$NEW" = "$OLD" ] && [ "${{ inputs.force }}" != "true" ]; then
+          echo "   → unverändert"
+          echo "vco3_ok=true" >> "$GITHUB_OUTPUT"
+          echo "vco3_changed=false" >> "$GITHUB_OUTPUT"
+        else
+          echo "   → GEÄNDERT"
+          cp "$OUT" "$CACHE_DIR/vco3.pdf"
+          echo "vco3_ok=true" >> "$GITHUB_OUTPUT"
+          echo "vco3_changed=true" >> "$GITHUB_OUTPUT"
+          echo "vco3_sha=$NEW" >> "$GITHUB_OUTPUT"
+        fi
+
+    # ── 5. VCO Linie 1 laden ──────────────────────────────────────────────────
+    - name: VCO Linie 1 laden
+      id: vco1
+      run: |
+        set -euo pipefail
+        REFERER="https://www.vcotrasporti.it/it/orari.php"
+        COOKIES=/tmp/vco_cookies.txt   # Session aus Schritt 4 wiederverwenden
+        OUT=/tmp/vco1.pdf
+        PDF_URL="https://www.vcotrasporti.it/userdata/banner/VERBANIA%20-%20OMEGNA.pdf"
+
+        echo "→ Lade: $PDF_URL"
+        curl -L --max-time 120 --retry 2 --retry-delay 5 \
+          --fail-with-body \
+          -b "$COOKIES" \
+          -H "User-Agent: $UA" \
+          -H "Referer: $REFERER" \
+          -H "Accept: application/pdf,*/*;q=0.9" \
+          "$PDF_URL" -o "$OUT" 2>&1 | tail -3 || {
+            echo "vco1_ok=false" >> "$GITHUB_OUTPUT"; exit 0
+          }
+
+        if ! head -c 4 "$OUT" | grep -q "%PDF"; then
+          echo "⚠ Kein PDF."
+          head -c 200 "$OUT" | cat -v
+          echo "vco1_ok=false" >> "$GITHUB_OUTPUT"; exit 0
+        fi
+
+        SIZE=$(du -sh "$OUT" | cut -f1); echo "✓ PDF $SIZE verifiziert."
+        NEW=$(sha256sum "$OUT" | cut -d' ' -f1)
+        OLD=$(python3 -c "import json,os; d=json.load(open('$JSON_OUT')) if os.path.exists('$JSON_OUT') else {}; print(d.get('sources',{}).get('vco1',{}).get('sha256',''))" 2>/dev/null || echo "")
+
+        if [ "$NEW" = "$OLD" ] && [ "${{ inputs.force }}" != "true" ]; then
+          echo "   → unverändert"
+          echo "vco1_ok=true" >> "$GITHUB_OUTPUT"
+          echo "vco1_changed=false" >> "$GITHUB_OUTPUT"
+        else
+          echo "   → GEÄNDERT"
+          cp "$OUT" "$CACHE_DIR/vco1.pdf"
+          echo "vco1_ok=true" >> "$GITHUB_OUTPUT"
+          echo "vco1_changed=true" >> "$GITHUB_OUTPUT"
+          echo "vco1_sha=$NEW" >> "$GITHUB_OUTPUT"
+        fi
+
+    # ── 5b. SAF Alibus laden ─────────────────────────────────────────────────
+    - name: SAF Alibus laden
+      id: saf
+      run: |
+        set -euo pipefail
+        COOKIES=/tmp/vco_cookies.txt   # Cookies aus Schritt 4/5 wiederverwenden
+        OUT=/tmp/saf.pdf
+
+        echo "→ Aktuelle SAF-PDF-URL von Linee-Seite suchen..."
+        curl -s "$SAF_PAGE" --max-time 20 \
+          -H "User-Agent: $UA" -o /tmp/saf_page.html || true
+
+        DISCOVERED=$(grep -oP 'https://www\.safduemila\.com/wp-content/uploads/[^"]+alibus-\d{4}-web\.pdf' \
+          /tmp/saf_page.html | head -1 || echo "")
+        [ -n "$DISCOVERED" ] && echo "   Gefunden: $DISCOVERED" || echo "   Nutze bekannte URL"
+        PDF_URL="${DISCOVERED:-$SAF_KNOWN}"
+        echo "→ Lade: $PDF_URL"
+        echo "saf_url=$PDF_URL" >> "$GITHUB_OUTPUT"
+
+        curl -L --max-time 90 --retry 2 --retry-delay 5 \
+          --fail-with-body \
+          -b "$COOKIES" \
+          -H "User-Agent: $UA" \
+          -H "Referer: $SAF_PAGE" \
+          -H "Accept: application/pdf,*/*;q=0.9" \
+          "$PDF_URL" -o "$OUT" 2>&1 | tail -3 || {
+            echo "saf_ok=false" >> "$GITHUB_OUTPUT"; exit 0
+          }
+
+        if ! head -c 4 "$OUT" | grep -q "%PDF"; then
+          echo "⚠ Kein PDF."
+          head -c 200 "$OUT" | cat -v
+          echo "saf_ok=false" >> "$GITHUB_OUTPUT"; exit 0
+        fi
+
+        SIZE=$(du -sh "$OUT" | cut -f1); echo "✓ PDF $SIZE verifiziert."
+        NEW=$(sha256sum "$OUT" | cut -d' ' -f1)
+        OLD=$(python3 -c "import json,os; d=json.load(open('$JSON_OUT')) if os.path.exists('$JSON_OUT') else {}; print(d.get('sources',{}).get('saf',{}).get('sha256',''))" 2>/dev/null || echo "")
+
+        if [ "$NEW" = "$OLD" ] && [ "${{ inputs.force }}" != "true" ]; then
+          echo "   → unverändert"
+          echo "saf_ok=true" >> "$GITHUB_OUTPUT"
+          echo "saf_changed=false" >> "$GITHUB_OUTPUT"
+        else
+          echo "   → GEÄNDERT"
+          cp "$OUT" "$CACHE_DIR/saf.pdf"
+          echo "saf_ok=true" >> "$GITHUB_OUTPUT"
+          echo "saf_changed=true" >> "$GITHUB_OUTPUT"
+          echo "saf_sha=$NEW" >> "$GITHUB_OUTPUT"
+        fi
+
+    # ── 6. Abbruch wenn keine Änderung ────────────────────────────────────────
+    - name: Abbruch wenn keine Änderungen
+      if: |
+        steps.fart316.outputs.fart316_changed != 'true' &&
+        steps.vco3.outputs.vco3_changed      != 'true' &&
+        steps.vco1.outputs.vco1_changed      != 'true' &&
+        steps.saf.outputs.saf_changed         != 'true'
+      run: |
+        echo "✓ Keine Änderungen in allen drei Quellen. Kein Update nötig."
+        exit 0
+
+    # ── 7. Python + pdfplumber ────────────────────────────────────────────────
+    - name: Python + pdfplumber einrichten
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+        cache: pip
+
+    - name: pdfplumber installieren
+      run: pip install --quiet pdfplumber
+
+    # ── 8. Fahrplan parsen ────────────────────────────────────────────────────
+    - name: Fahrplan parsen
+      id: parse
+      run: |
+        # SHA-256-Werte und URLs in Umgebungsvariablen übergeben
+        export FART316_SHA="${{ steps.fart316.outputs.fart316_sha }}"
+        export SAF_SHA="${{ steps.saf.outputs.saf_sha }}"
+        export SAF_URL="${{ steps.saf.outputs.saf_url }}"
+        export FART316_URL="${{ steps.fart316.outputs.fart316_url }}"
+        export VCO3_SHA="${{ steps.vco3.outputs.vco3_sha }}"
+        export VCO1_SHA="${{ steps.vco1.outputs.vco1_sha }}"
+
+        python3 scripts/cannobio_parse_fahrplan.py
+        echo "parse_exit=$?" >> "$GITHUB_OUTPUT"
+      continue-on-error: true
+
+    # ── 9. JSON committen ─────────────────────────────────────────────────────
+    - name: JSON committen
+      if: steps.parse.outcome == 'success'
+      run: |
+        git config user.name  "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add "$JSON_OUT"
+        if git diff --staged --quiet; then
+          echo "JSON unverändert – kein Commit."
+        else
+          DATE=$(date -u +%Y-%m-%d)
+          git commit -m "chore(bus): Fahrplan aktualisiert [$DATE]"
+          git push
+          echo "✓ fahrplan.json gepusht."
+        fi
+
+    # ── 10. Issue erstellen (Konfidenz zu niedrig oder Download-Fehler) ───────
+    - name: Issue erstellen (manuelle Prüfung nötig)
+      if: steps.parse.outcome == 'failure'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const today  = new Date().toISOString().slice(0, 10);
+          const title  = `Bus-Fahrplan: PDF geändert – manuelle Prüfung nötig (${today})`;
+          const fartOk = "${{ steps.fart316.outputs.fart316_ok }}" === "true";
+          const vco3Ok = "${{ steps.vco3.outputs.vco3_ok }}"   === "true";
+          const vco1Ok = "${{ steps.vco1.outputs.vco1_ok }}"   === "true";
+
+          // Kein Duplikat wenn bereits offenes Issue vorhanden
+          const { data: open } = await github.rest.issues.listForRepo({
+            owner: context.repo.owner, repo: context.repo.repo,
+            state: 'open', labels: 'bus-fahrplan'
+          });
+          if (open.some(i => i.title.startsWith('Bus-Fahrplan:'))) {
+            console.log('Offenes Issue existiert – keines erstellt.'); return;
+          }
+
+          const statusTable = [
+            `| Quelle       | Status |`,
+            `|:-------------|:-------|`,
+            `| FART 316     | ${fartOk ? '✅ geladen' : '❌ Fehler/unverändert'} |`,
+            `| VCO Linie 3  | ${vco3Ok ? '✅ geladen' : '❌ Fehler/unverändert'} |`,
+            `| VCO Linie 1  | ${vco1Ok ? '✅ geladen' : '❌ Fehler/unverändert'} |
+            `| SAF Alibus   | ${"${{ steps.saf.outputs.saf_ok }}" === "true" ? '✅ geladen' : '❌ Fehler/unverändert'} |`,
+          ].join('\n');
+
+          await github.rest.issues.create({
+            owner: context.repo.owner, repo: context.repo.repo,
+            title, labels: ['bus-fahrplan', 'needs-review'],
+            body: [
+              '## Bus-Fahrplan: automatische Aktualisierung fehlgeschlagen',
+              '',
+              'Mindestens ein Fahrplan-PDF wurde geändert, der Parser konnte die Daten',
+              'aber nicht mit ausreichender Konfidenz extrahieren.',
+              '**`fahrplan.json` wurde nicht überschrieben.**',
+              '',
+              statusTable,
+              '',
+              '### Einzige manuelle Aufgabe',
+              '> PDFs prüfen, `cannobio/anreise/data/fahrplan.json` anpassen, PR erstellen.',
+              '',
+              '### Quellen',
+              '- [FART 316](https://fartiamo.ch/orari/linea-316/)',
+              '- [VCO Linie 3](https://www.vcotrasporti.it/userdata/banner/VERBANIA-BRISSAGO.pdf)',
+              '- [VCO Linie 1](https://www.vcotrasporti.it/userdata/banner/VERBANIA%20-%20OMEGNA.pdf)',
+              '',
+              '### Diagnose',
+              '`cannobio/anreise/data/parse-diagnostic.json` enthält den letzten Parse-Versuch.',
+              '',
+              `_Automatisch erstellt am ${today}_`,
+            ].join('\n')
+          });
+          console.log(`Issue erstellt: "${title}"`);
+
+    # ── 11. Job-Zusammenfassung ───────────────────────────────────────────────
+    - name: Job-Zusammenfassung
+      if: always()
+      run: |
+        echo "## Cannobio Bus – Fahrplan Update" >> "$GITHUB_STEP_SUMMARY"
+        F="${{ steps.fart316.outputs.fart316_changed }}"
+        V3="${{ steps.vco3.outputs.vco3_changed }}"
+        V1="${{ steps.vco1.outputs.vco1_changed }}"
+        echo "| PDF | Geändert |" >> "$GITHUB_STEP_SUMMARY"
+        echo "|:----|:---------|" >> "$GITHUB_STEP_SUMMARY"
+        echo "| FART 316    | ${F:-nein} |" >> "$GITHUB_STEP_SUMMARY"
+        echo "| VCO Linie 3 | ${V3:-nein} |" >> "$GITHUB_STEP_SUMMARY"
+        echo "| VCO Linie 1 | ${V1:-nein} |" >> "$GITHUB_STEP_SUMMARY"
+        SAF="${{ steps.saf.outputs.saf_changed }}"
+        echo "| SAF Alibus  | ${SAF:-nein} |" >> "$GITHUB_STEP_SUMMARY"
+        if [ "${{ steps.parse.outcome }}" = "success" ]; then
+          echo "**Ergebnis: ✅ fahrplan.json aktualisiert oder keine Änderung nötig.**" >> "$GITHUB_STEP_SUMMARY"
+        elif [ "${{ steps.parse.outcome }}" = "failure" ]; then
+          echo "**Ergebnis: ⚠️ Konfidenz zu niedrig – GitHub-Issue erstellt.**" >> "$GITHUB_STEP_SUMMARY"
+        else
+          echo "**Ergebnis: ✅ Keine PDF-Änderungen.**" >> "$GITHUB_STEP_SUMMARY"
+        fi
 
