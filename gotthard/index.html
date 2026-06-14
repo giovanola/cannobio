@@ -249,7 +249,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 
 <!-- ══ TOPBAR ══════════════════════════════════════════════════════ -->
 <header class="topbar">
-  <a href="/cannobio/" class="topbar-brand">
+  <a href="../" class="topbar-brand">
     <div class="topbar-icon">
       <svg viewBox="0 0 24 24"><path fill="#fff" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
     </div>
@@ -270,19 +270,19 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
 <!-- ══ NAV ════════════════════════════════════════════════════════ -->
 <div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
 <nav class="nav-dropdown" id="nav-dropdown" role="navigation">
-  <a href="/cannobio/"          class="nav-item" id="nav-home">
+  <a href="../"          class="nav-item" id="nav-home">
     <span class="nav-item-label" id="nav-home-label">Portal</span>
     <span class="nav-item-sub"   id="nav-home-sub">Cannobio am Lago Maggiore</span>
   </a>
-  <a href="/cannobio/meteo/"    class="nav-item" id="nav-meteo">
+  <a href="../meteo/"    class="nav-item" id="nav-meteo">
     <span class="nav-item-label" id="nav-meteo-label">Wetter</span>
     <span class="nav-item-sub"   id="nav-meteo-sub">Prognose, Wind &amp; Segeln</span>
   </a>
-  <a href="/cannobio/rifiuti/"  class="nav-item" id="nav-rifiuti">
+  <a href="../rifiuti/"  class="nav-item" id="nav-rifiuti">
     <span class="nav-item-label" id="nav-rifiuti-label">Abfall</span>
     <span class="nav-item-sub"   id="nav-rifiuti-sub">Abfallkalender 2026</span>
   </a>
-  <a href="/cannobio/gotthard/" class="nav-item nav-item-active" id="nav-gotthard">
+  <a href="../gotthard/" class="nav-item nav-item-active" id="nav-gotthard">
     <span class="nav-item-label" id="nav-gotthard-label">Gotthard</span>
     <span class="nav-item-sub"   id="nav-gotthard-sub">Tunnel &amp; Pass</span>
   </a>
@@ -387,7 +387,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
       <div>
         <strong id="t-live-hint">Wartezeiten direkt prüfen:</strong>
         <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:8px;">
-          <a class="ext-link" href="https://www.tcs.ch/de/tools/verkehrsinfo-verkehrslage/gotthardtunnel.php" target="_blank" rel="noopener" id="t-ext-tcs">TCS Gotthard ↗</a>
+          <a class="ext-link" href="https://www.tcs.ch/de/tools/verkehrsinfo-verkehrslage/gotthard-tunnel.php" target="_blank" rel="noopener" id="t-ext-tcs">TCS Gotthard ↗</a>
           <a class="ext-link" href="https://gotthard-tunnel.com/en/home" target="_blank" rel="noopener" id="t-ext-gt">gotthard-tunnel.com ↗</a>
           <a class="ext-link" href="https://www.viasuisse.ch" target="_blank" rel="noopener" id="t-ext-via">Viasuisse ↗</a>
         </div>
@@ -424,7 +424,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
     <div style="background:var(--gold-pale);border:1px solid #FDE68A;border-radius:var(--radius-md);padding:12px 16px;margin-bottom:14px;font-size:12px;line-height:1.6;color:#78350F;">
       <strong>Was diese Prognose ist:</strong> Statistische Muster aus historischen Verkehrsdaten (Wochentag, Uhrzeit, Sommer/Winter). Kein Live-Forecast, keine Wetterdaten, kein Ereigniskalender.<br>
       <strong>Eintrittswahrscheinlichkeit:</strong> Richtung "stärker/schwächer als üblich" ~65–70%. Exakte Wartezeiten sind nicht vorhersagbar.<br>
-      <strong>Nutzung:</strong> Abfahrtszeit grob planen (grüne Fenster bevorzugen). Für aktuelle Lage immer <a href="https://gotthard-tunnel.com/en/home" target="_blank" rel="noopener" style="color:#92400E;font-weight:600;">gotthard-tunnel.com</a> oder <a href="https://www.tcs.ch/de/tools/verkehrsinfo-verkehrslage/gotthardtunnel.php" target="_blank" rel="noopener" style="color:#92400E;font-weight:600;">TCS</a> prüfen.
+      <strong>Nutzung:</strong> Abfahrtszeit grob planen (grüne Fenster bevorzugen). Für aktuelle Lage immer <a href="https://gotthard-tunnel.com/en/home" target="_blank" rel="noopener" style="color:#92400E;font-weight:600;">gotthard-tunnel.com</a> oder <a href="https://www.tcs.ch/de/tools/verkehrsinfo-verkehrslage/gotthard-tunnel.php" target="_blank" rel="noopener" style="color:#92400E;font-weight:600;">TCS</a> prüfen.
     </div>
     <div id="forecast-5day" style="margin-top:4px;"></div>
   </div>
@@ -435,7 +435,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--text-p
     <div id="closure-list-container"></div>
     <div style="font-size:11px;color:var(--text-tertiary);margin-top:10px;" id="t-clos-note">Nachtsperre Gotthardtunnel · Quelle: ASTRA</div>
     <div class="link-row">
-      <a class="ext-link" href="https://www.tcs.ch/de/tools/verkehrsinfo-verkehrslage/gotthardtunnel.php" target="_blank" rel="noopener" id="t-clos-link">Sperrungen &amp; Umfahrungen ↗</a>
+      <a class="ext-link" href="https://www.tcs.ch/de/tools/verkehrsinfo-verkehrslage/gotthard-tunnel.php" target="_blank" rel="noopener" id="t-clos-link">Sperrungen &amp; Umfahrungen ↗</a>
     </div>
   </div>
 
