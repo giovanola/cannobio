@@ -94,6 +94,8 @@
   .card-gotthard .portal-card-icon svg { fill: var(--gold); }
   .card-info .portal-card-icon { background: #F3F0FF; }
   .card-info .portal-card-icon svg { fill: #6D28D9; }
+  .card-logistics .portal-card-icon { background: #E3F2FD; }
+  .card-logistics .portal-card-icon svg { fill: #1565C0; }
 
   /* INFO STRIP */
   .info-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 32px; }
@@ -190,7 +192,7 @@
         <div class="nav-item-sub" id="nav-rifiuti-sub"></div>
       </div>
     </a>
-    <a class="nav-item" href="../gotthard/" id="nav-gotthard">
+    <a class="nav-item" href="" id="nav-gotthard">../gotthard/" id="nav-gotthard">
       <div class="nav-item-icon" style="background:#FEF3E2;"><svg viewBox="0 0 24 24" fill="#B7791F"><path d="M1.5 8.5l10.5-7 10.5 7V20a1 1 0 01-1 1H15v-6H9v6H3a1 1 0 01-1-1V8.5z"/></svg></div>
       <div class="nav-item-text">
         <div class="nav-item-title" id="nav-gotthard-label"></div>
@@ -354,6 +356,7 @@ const T = {
     navLogistics: 'Logistics', navLogisticsSub: 'Anreise, Fähre & Verkehr',
     tileTmp: 'Temperatur', tileWind: 'Wind', tileTunnel: 'Gotthardtunnel', tileTunnelSub: 'Wartezeit',
     cardMeteoEyebrow: 'Live · 6 Tage', cardMeteoTitle: 'Wetter & Segeln',
+    cardLogisticsEyebrow: 'Bus & SAF Alibus', cardLogisticsTitle: 'Anreise', cardLogisticsDesc: 'Busverbindungen nach Cannobio: Locarno, Verbania, Malpensa Airport.',
     cardMeteoDesc: 'Temperatur, Wind, Wellen, UV-Index und Segelbedingungen für Cannobio.',
     cardGottEyebrow: 'A2 · Schweiz', cardGottTitle: 'Gotthard',
     cardGottDesc: 'Wartezeiten, Prognose, Webcams und Sperrkalender für den Gotthardtunnel.',
@@ -377,6 +380,7 @@ const T = {
     navHome: 'Portale', navMeteo: 'Meteo', navRifiuti: 'Rifiuti', navGotthard: 'Gottardo',
     navLogistics: 'Logistics', navLogisticsSub: 'Arrivo, traghetto & traffico',
     tileTmp: 'Temperatura', tileWind: 'Vento', tileTunnel: 'Tunnel del Gottardo', tileTunnelSub: 'Tempo attesa',
+    cardLogisticsEyebrow: 'Bus & SAF Alibus', cardLogisticsTitle: 'Arrivo', cardLogisticsDesc: 'Connessioni bus per Cannobio: Locarno, Verbania, Malpensa.',
     cardMeteoEyebrow: 'Live · 6 giorni', cardMeteoTitle: 'Meteo & Vela',
     cardMeteoDesc: 'Temperatura, vento, onde, indice UV e condizioni per la vela a Cannobio.',
     cardGottEyebrow: 'A2 · Svizzera', cardGottTitle: 'Gottardo',
@@ -401,6 +405,7 @@ const T = {
     navHome: 'Portal', navMeteo: 'Weather', navRifiuti: 'Waste', navGotthard: 'Gotthard',
     navLogistics: 'Logistics', navLogisticsSub: 'Getting here, ferry & traffic',
     tileTmp: 'Temperature', tileWind: 'Wind', tileTunnel: 'Gotthard Tunnel', tileTunnelSub: 'Wait time',
+    cardLogisticsEyebrow: 'Bus & SAF Alibus', cardLogisticsTitle: 'Getting here', cardLogisticsDesc: 'Bus connections to Cannobio: Locarno, Verbania, Malpensa Airport.',
     cardMeteoEyebrow: 'Live · 6 days', cardMeteoTitle: 'Weather & Sailing',
     cardMeteoDesc: 'Temperature, wind, waves, UV index and sailing conditions for Cannobio.',
     cardGottEyebrow: 'A2 · Switzerland', cardGottTitle: 'Gotthard',
@@ -447,6 +452,7 @@ function applyT() {
     't-tile-temp':'tileTmp','t-tile-wind':'tileWind','t-tile-tunnel':'tileTunnel',
     't-tile-tunnel-sub':'tileTunnelSub',
     't-card-meteo-eyebrow':'cardMeteoEyebrow','t-card-meteo-title':'cardMeteoTitle','t-card-meteo-desc':'cardMeteoDesc',
+    't-card-logistics-eyebrow':'cardLogisticsEyebrow','t-card-logistics-title':'cardLogisticsTitle','t-card-logistics-desc':'cardLogisticsDesc',
     't-card-gott-eyebrow':'cardGottEyebrow','t-card-gott-title':'cardGottTitle','t-card-gott-desc':'cardGottDesc',
     't-card-rifi-eyebrow':'cardRifiEyebrow','t-card-rifi-title':'cardRifiTitle','t-card-rifi-desc':'cardRifiDesc',
     't-card-info-eyebrow':'cardInfoEyebrow','t-card-info-title':'cardInfoTitle','t-card-info-desc':'cardInfoDesc',
