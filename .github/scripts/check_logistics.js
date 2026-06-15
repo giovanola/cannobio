@@ -93,18 +93,24 @@ async function main() {
       try {
         const page = await context.newPage();
 
-        // 1. Site besuchen: Bot-Check bestehen + Session-Cookies holen
+        // 1. Site besuchen: 'load' abwarten (robuster als domcontentloaded bei Weiterleitungen)
         console.log(`→ Besuche: ${src.referer}`);
-        await page.goto(src.referer, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+        await page.goto(src.referer, { waitUntil: 'load', timeout: 30_000 });
 
         // 2. Aktuelle PDF-URL aus Seiteninhalt entdecken (bei jährlich wechselnden Dateinamen)
+        //    page.content() in try/catch: schlägt fehl wenn Seite noch navigiert
         let pdfUrl = src.url;
         if (src.discover) {
-          const html  = await page.content();
-          const match = html.match(src.discover);
-          if (match && match[0] !== src.url) {
-            console.log(`   Neue URL entdeckt: ${match[0]}`);
-            pdfUrl = match[0];
+          try {
+            await page.waitForLoadState('networkidle', { timeout: 8_000 }).catch(() => {});
+            const html  = await page.content();
+            const match = html.match(src.discover);
+            if (match && match[0] !== src.url) {
+              console.log(`   Neue URL entdeckt: ${match[0]}`);
+              pdfUrl = match[0];
+            }
+          } catch (e) {
+            console.log(`   URL-Discovery übersprungen (${e.message.slice(0, 60)}) – nutze bekannte URL`);
           }
         }
 
@@ -179,4 +185,3 @@ main().catch(err => {
   console.error('[FATAL]', err);
   process.exit(1);
 });
-
