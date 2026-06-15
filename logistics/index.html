@@ -34,10 +34,18 @@ body{font-family:var(--fb);background:var(--bg);color:var(--text);line-height:1.
 .topbar-icon svg{width:16px;height:16px;fill:#fff}
 .topbar-name{font-family:var(--fd);font-size:15px;font-weight:300;color:var(--text)}
 .topbar-right{display:flex;align-items:center;gap:8px}
-.site-nav{display:flex;gap:2px;background:var(--border);border-radius:8px;padding:2px}
-.site-nav-link{padding:4px 10px;border-radius:var(--r6);font-size:12px;font-weight:500;color:var(--text-s);text-decoration:none;transition:all var(--tr);white-space:nowrap}
-.site-nav-link:hover{color:var(--text)}
-.site-nav-active{background:var(--surface);color:var(--text);box-shadow:var(--sh)}
+.nav-dd{position:relative}
+.nav-dd-btn{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text-s);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--tr)}
+.nav-dd-btn:hover{background:var(--surface);color:var(--text);border-color:var(--border-h)}
+.nav-dd-icon{font-size:15px;line-height:1;color:var(--text-t)}
+.nav-dd-menu{display:none;position:absolute;right:0;top:calc(100% + 6px);background:var(--surface);border:1px solid var(--border);border-radius:var(--r12);box-shadow:var(--sh2);min-width:240px;overflow:hidden;z-index:200}
+.nav-dd-menu.open{display:block}
+.nav-dd-link{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;font-family:var(--fb);font-size:16px;font-weight:400;color:var(--text);text-decoration:none;transition:background var(--tr)}
+.nav-dd-link:hover{background:#F5F4F2;color:var(--text)}
+.nav-dd-link.active{background:var(--accent-pale);color:var(--accent)}
+.nav-dd-sub{font-size:11px;color:var(--text-t)}
+.nav-dd-link.active .nav-dd-sub{color:rgba(27,107,69,.6)}
+.nav-dd-div{height:1px;background:var(--border)}
 .lang-switcher{display:flex;gap:2px;background:var(--border);border-radius:8px;padding:2px}
 .lang-btn{padding:4px 10px;border-radius:var(--r6);border:none;background:transparent;color:var(--text-s);font-family:var(--fb);font-size:12px;font-weight:500;cursor:pointer;transition:all var(--tr)}
 .lang-btn.active{background:var(--surface);color:var(--text);box-shadow:var(--sh)}
@@ -173,16 +181,27 @@ table.tt{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:10px}
       <span class="topbar-name">Cannobio</span>
     </a>
     <div class="topbar-right">
-      <nav class="site-nav">
-        <a class="site-nav-link" href="../meteo/"    id="nav-meteo">Meteo</a>
-        <a class="site-nav-link" href="../rifiuti/"  id="nav-rifiuti">Abfall</a>
-        <a class="site-nav-link" href="../gotthard/" id="nav-gotthard">Gotthard</a>
-        <a class="site-nav-link site-nav-active" href="../logistics/" id="nav-logistics">Anreise</a>
-      </nav>
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="de">DE</button>
         <button class="lang-btn"        data-lang="it">IT</button>
         <button class="lang-btn"        data-lang="en">EN</button>
+      </div>
+      <div class="nav-dd">
+        <button class="nav-dd-btn" onclick="toggleNavDd()" aria-expanded="false" id="nav-dd-trigger">&#9776;</button>
+        <div class="nav-dd-menu" id="nav-dd-menu" role="menu">
+          <a class="nav-dd-link" href="../"          id="nav-portal">Portal</a>
+          <div class="nav-dd-div"></div>
+          <a class="nav-dd-link" href="../meteo/"    id="nav-meteo">Meteo</a>
+          <div class="nav-dd-div"></div>
+          <a class="nav-dd-link" href="../rifiuti/"  id="nav-rifiuti">Abfall</a>
+          <div class="nav-dd-div"></div>
+          <a class="nav-dd-link" href="../gotthard/" id="nav-gotthard">Gotthard</a>
+          <div class="nav-dd-div"></div>
+          <a class="nav-dd-link active" href="../logistics/" id="nav-logistics">
+            <span id="nav-logistics-label">Logistics</span>
+            <span class="nav-dd-sub" id="nav-logistics-sub">Anreise &amp; Verbindungen</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -297,7 +316,7 @@ const SAF_IN=['06:00','09:00','11:00','13:00','15:00','17:00'],SAF_IN_T=100,SAF_
 const T={
 de:{
   pageTitle:'Anreise \u00b7 Cannobio',
-  navMeteo:'Meteo',navRifiuti:'Abfall',navGotthard:'Gotthard',navLogistics:'Anreise',
+  navPortal:'Portal',navMeteo:'Meteo',navRifiuti:'Abfall',navGotthard:'Gotthard',navLogistics:'Logistics',navLogisticsSub:'Anreise & Verbindungen',
   h1a:'Anreise',h1b:'nach Cannobio',sub:'Busverbindungen: FART 316, VCO Linie 1 &amp; 3, SAF Alibus Malpensa',
   lblFrom:'Von',lblTo:'Nach',lblDay:'Tag',lblTime:'Ab',
   dayMofr:'Mo\u2013Fr',daySa:'Samstag',daySo:'So\u202f/\u202fFeiertag',
@@ -337,7 +356,7 @@ de:{
 },
 it:{
   pageTitle:'Come arrivare \u00b7 Cannobio',
-  navMeteo:'Meteo',navRifiuti:'Rifiuti',navGotthard:'Gottardo',navLogistics:'Arrivo',
+  navPortal:'Portal',navMeteo:'Meteo',navRifiuti:'Rifiuti',navGotthard:'Gottardo',navLogistics:'Logistics',navLogisticsSub:'Arrivo & Connessioni',
   h1a:'Come arrivare',h1b:'a Cannobio',sub:'Linee bus: FART 316, VCO Linea 1 &amp; 3, SAF Alibus Malpensa',
   lblFrom:'Da',lblTo:'A',lblDay:'Giorno',lblTime:'Da',
   dayMofr:'Lun\u2013Ven',daySa:'Sabato',daySo:'Dom\u202f/\u202fFestivi',
@@ -377,7 +396,7 @@ it:{
 },
 en:{
   pageTitle:'Getting here \u00b7 Cannobio',
-  navMeteo:'Weather',navRifiuti:'Waste',navGotthard:'Gotthard',navLogistics:'Getting here',
+  navPortal:'Portal',navMeteo:'Weather',navRifiuti:'Waste',navGotthard:'Gotthard',navLogistics:'Logistics',navLogisticsSub:'Getting here',
   h1a:'Getting here',h1b:'to Cannobio',sub:'Bus connections: FART 316, VCO Lines 1 &amp; 3, SAF Alibus Malpensa',
   lblFrom:'From',lblTo:'To',lblDay:'Day',lblTime:'Depart',
   dayMofr:'Mon\u2013Fri',daySa:'Saturday',daySo:'Sun\u202f/\u202fHoliday',
@@ -874,7 +893,7 @@ function applyLang(l){
   const tk=T[l];
   document.title=tk.pageTitle;
   document.querySelector('meta[name="description"]').setAttribute('content',tk.pageTitle);
-  set('nav-meteo',tk.navMeteo);set('nav-rifiuti',tk.navRifiuti);set('nav-gotthard',tk.navGotthard);set('nav-logistics',tk.navLogistics);
+  set('nav-portal',tk.navPortal);set('nav-meteo',tk.navMeteo);set('nav-rifiuti',tk.navRifiuti);set('nav-gotthard',tk.navGotthard);set('nav-logistics-label',tk.navLogistics);set('nav-logistics-sub',tk.navLogisticsSub);
   set('t-h1a',tk.h1a);set('t-h1b',tk.h1b);set('t-sub',tk.sub,true);
   set('t-lbl-from',tk.lblFrom);set('t-lbl-to',tk.lblTo);set('t-lbl-day',tk.lblDay);set('t-lbl-time',tk.lblTime);
   set('t-rh',tk.rhConn);set('t-fullt',tk.fullTt);
@@ -931,8 +950,32 @@ T.it.noteMalpensa='<strong>Prenotazione:</strong> Tutte le corse vanno prenotate
 T.en.noteMalpensa='<strong>Booking:</strong> All journeys must be pre-booked at <a href="https://www.safbooking.com/" target="_blank" rel="noopener" style="color:var(--sky)">safbooking.com</a>. Buses do not wait.<br><strong>Malpensa T.1:</strong> Arrivals -1, bus stop 6 (door 5). <strong>T.2:</strong> door 7, left, bus stop 6.<br><strong>Verbania-Intra:</strong> Arrival Imbarcadero Vecchio. Departure to Malpensa: Bar Lucini (approx. 10 min. walk).<br><strong>Season:</strong> 1 Apr.\u201331 Oct. 2026';
 
 // ════════════════════════════════════════════════════════
+// NAV DROPDOWN
+// ════════════════════════════════════════════════════════
+function toggleNavDd(){
+  const menu=document.getElementById('nav-dd-menu');
+  const btn=document.getElementById('nav-dd-trigger');
+  const open=menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+
+// ════════════════════════════════════════════════════════
 // INIT
 // ════════════════════════════════════════════════════════
+document.addEventListener('click',e=>{
+  if(!e.target.closest('.nav-dd')){
+    document.getElementById('nav-dd-menu')?.classList.remove('open');
+    document.getElementById('nav-dd-trigger')?.setAttribute('aria-expanded','false');
+  }
+});
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    document.getElementById('nav-dd-menu')?.classList.remove('open');
+    document.getElementById('nav-dd-trigger')?.setAttribute('aria-expanded','false');
+  }
+});
+
 document.querySelector('.lang-switcher').addEventListener('click',e=>{
   const btn=e.target.closest('.lang-btn');if(!btn)return;
   applyLang(btn.dataset.lang);
