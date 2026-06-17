@@ -1,13 +1,13 @@
 {
-  "updated": "2026-06-17T11:23:38.735604+00:00",
+  "updated": "2026-06-17T14:31:01.712849+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 215,
+  "total_incidents": 218,
   "tunnel_incidents": 1,
   "tunnel": {
     "status": "clear",
     "north": {
-      "severity": "high",
-      "delay_min": 15,
+      "severity": "medium",
+      "delay_min": 10,
       "queue_m": null,
       "wait_min": null,
       "text": null,
@@ -36,6 +36,16 @@
     {
       "road": "A2",
       "description": "Stau Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Sud et Tunnel Tunnel de S. Nicolao Situation: bouchon",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt Ursache: Unfall | Révoqué: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Pian San Giacomo et Jonction autoroutière San Bernardino Situation: fermé Raison: accident | Rev",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -185,20 +195,20 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: ",
-      "direction": "north",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> Lucerne entre Poste de douane Basel-Weil et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: surcharge",
+      "direction": "both",
       "severity": "high",
       "delay_min": 10,
-      "queue_km": 1.0,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15.0 | Libéré: A2 Bâle -> Lucerne entre Poste de douane Basel-Weil et Jonction autoroutière Bâle-Breite Situation: bouchon Raison: su",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Echangeur Echangeur de Wiese Situation: bouchon Raison: surchar",
       "direction": "both",
       "severity": "high",
-      "delay_min": 15,
+      "delay_min": 10,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -289,16 +299,6 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 31.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.06.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
       "queue_km": 0.25,
       "is_tunnel": false,
       "night_only": false
@@ -325,8 +325,8 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen blockiert | Révoqué: A2 Chiasso -> St-Gothard entre Parking al Motto et Jonction autoroutière Bellinzone-Sud Situation",
-      "direction": "both",
+      "description": "Verkehrsbehinderung in der Ausfahrt Ursache: Pannenfahrzeug | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: trafic perturbé dans la sortie Raison: véhicule en panne | App",
+      "direction": "north",
       "severity": "medium",
       "delay_min": null,
       "queue_km": null,
@@ -335,11 +335,11 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: wechselseitige Verkehrsführung | Libéré: H2 Airolo <-> Göschenen entre Localité Göschenen et Localité Andermatt Situation: trafic perturbé Raison: ",
+      "description": "Verkehrsbehinderung (ab 17.06.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 31.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2062,6 +2062,36 @@
       "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 02.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 24.06.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 10.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.06.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.4,
+      "is_tunnel": false,
+      "night_only": false
     }
   ],
   "incidents_south": [
@@ -2089,6 +2119,16 @@
       "road": "A2",
       "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
       "direction": "south",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt Ursache: Unfall | Révoqué: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Pian San Giacomo et Jonction autoroutière San Bernardino Situation: fermé Raison: accident | Rev",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -2227,21 +2267,31 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: bou",
-      "direction": "south",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> Lucerne entre Poste de douane Basel-Weil et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: surcharge",
+      "direction": "both",
       "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
+      "delay_min": 10,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15.0 | Libéré: A2 Bâle -> Lucerne entre Poste de douane Basel-Weil et Jonction autoroutière Bâle-Breite Situation: bouchon Raison: su",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Echangeur Echangeur de Wiese Situation: bouchon Raison: surchar",
       "direction": "both",
       "severity": "high",
-      "delay_min": 15,
+      "delay_min": 10,
       "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20.0 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: ",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": 20,
+      "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2331,16 +2381,6 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 31.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.06.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
       "queue_km": 0.25,
       "is_tunnel": false,
       "night_only": false
@@ -2367,21 +2407,11 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen blockiert | Révoqué: A2 Chiasso -> St-Gothard entre Parking al Motto et Jonction autoroutière Bellinzone-Sud Situation",
+      "description": "Verkehrsbehinderung (ab 17.06.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: wechselseitige Verkehrsführung | Libéré: H2 Airolo <-> Göschenen entre Localité Göschenen et Localité Andermatt Situation: trafic perturbé Raison: ",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
+      "queue_km": 31.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4172,6 +4202,36 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 02.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 24.06.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 10.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.06.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": false
     }
@@ -4219,6 +4279,16 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt Ursache: Unfall | Révoqué: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Pian San Giacomo et Jonction autoroutière San Bernardino Situation: fermé Raison: accident | Rev",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -4369,31 +4439,31 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: ",
-      "direction": "north",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> Lucerne entre Poste de douane Basel-Weil et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: surcharge",
+      "direction": "both",
       "severity": "high",
       "delay_min": 10,
-      "queue_km": 1.0,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: bou",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Echangeur Echangeur de Wiese Situation: bouchon Raison: surchar",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 10,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20.0 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: ",
       "direction": "south",
       "severity": "high",
       "delay_min": 20,
       "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15.0 | Libéré: A2 Bâle -> Lucerne entre Poste de douane Basel-Weil et Jonction autoroutière Bâle-Breite Situation: bouchon Raison: su",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4483,16 +4553,6 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 31.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.06.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
       "queue_km": 0.25,
       "is_tunnel": false,
       "night_only": false
@@ -4519,8 +4579,8 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen blockiert | Révoqué: A2 Chiasso -> St-Gothard entre Parking al Motto et Jonction autoroutière Bellinzone-Sud Situation",
-      "direction": "both",
+      "description": "Verkehrsbehinderung in der Ausfahrt Ursache: Pannenfahrzeug | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: trafic perturbé dans la sortie Raison: véhicule en panne | App",
+      "direction": "north",
       "severity": "medium",
       "delay_min": null,
       "queue_km": null,
@@ -4529,11 +4589,11 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: wechselseitige Verkehrsführung | Libéré: H2 Airolo <-> Göschenen entre Localité Göschenen et Localité Andermatt Situation: trafic perturbé Raison: ",
+      "description": "Verkehrsbehinderung (ab 17.06.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 31.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -6324,6 +6384,36 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 02.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 24.06.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 10.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.06.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": false
     }
