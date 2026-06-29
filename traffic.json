@@ -1,13 +1,13 @@
 {
-  "updated": "2026-06-29T19:23:55.218825+00:00",
+  "updated": "2026-06-29T21:02:20.968719+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 202,
+  "total_incidents": 204,
   "tunnel_incidents": 1,
   "tunnel": {
     "status": "medium",
     "north": {
-      "severity": "medium",
-      "delay_min": 10,
+      "severity": "high",
+      "delay_min": 15,
       "queue_m": null,
       "wait_min": null,
       "text": "Verkehrsbehinderung (ab 29.06.2026)",
@@ -115,6 +115,16 @@
     },
     {
       "road": "A2",
+      "description": "Ausfahrt gesperrt Ursache: Unterhaltsarbeiten | Révoqué: A2 St-Gothard -> Chiasso Jonction autoroutière Melide/Bissone Situation: sortie fermée Raison: travaux de maintenance | Revocato: A2 S. Gottard",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -255,7 +265,27 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 L",
+      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 15.0 | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: tr",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: Fahrbahnverengung auf einen Fahrstreifen verengt | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Tunnel Tunnel Schweizerhalle Situation: ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: Fahrbahnverengung auf einen Fahrstreifen verengt | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Pratteln et Tunnel Tunnel Schweizerhalle Situation:",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -1992,16 +2022,6 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Gefahr Ursache: Personen auf der Fahrbahn | Libéré: A2 Chiasso <-> St-Gothard entre Jonction autoroutière Bellinzona-Centre et Echangeur Echangeur de Bellinzone-Nord Situation: danger Raison: piétons ",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ],
   "incidents_south": [
@@ -2088,6 +2108,16 @@
     {
       "road": "A2",
       "description": "Strecke gesperrt (ab 29.06.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Ausfahrt gesperrt Ursache: Unterhaltsarbeiten | Révoqué: A2 St-Gothard -> Chiasso Jonction autoroutière Melide/Bissone Situation: sortie fermée Raison: travaux de maintenance | Revocato: A2 S. Gottard",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -2227,7 +2257,27 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 L",
+      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 15.0 | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: tr",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: Fahrbahnverengung auf einen Fahrstreifen verengt | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Tunnel Tunnel Schweizerhalle Situation: ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: Fahrbahnverengung auf einen Fahrstreifen verengt | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Pratteln et Tunnel Tunnel Schweizerhalle Situation:",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -3982,16 +4032,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Gefahr Ursache: Personen auf der Fahrbahn | Libéré: A2 Chiasso <-> St-Gothard entre Jonction autoroutière Bellinzona-Centre et Echangeur Echangeur de Bellinzone-Nord Situation: danger Raison: piétons ",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
@@ -4099,6 +4139,16 @@
     },
     {
       "road": "A2",
+      "description": "Ausfahrt gesperrt Ursache: Unterhaltsarbeiten | Révoqué: A2 St-Gothard -> Chiasso Jonction autoroutière Melide/Bissone Situation: sortie fermée Raison: travaux de maintenance | Revocato: A2 S. Gottard",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -4249,7 +4299,27 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 L",
+      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 15.0 | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: tr",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: Fahrbahnverengung auf einen Fahrstreifen verengt | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Tunnel Tunnel Schweizerhalle Situation: ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: Fahrbahnverengung auf einen Fahrstreifen verengt | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Pratteln et Tunnel Tunnel Schweizerhalle Situation:",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -6004,16 +6074,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Gefahr Ursache: Personen auf der Fahrbahn | Libéré: A2 Chiasso <-> St-Gothard entre Jonction autoroutière Bellinzona-Centre et Echangeur Echangeur de Bellinzone-Nord Situation: danger Raison: piétons ",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
