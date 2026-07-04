@@ -1,17 +1,17 @@
 {
-  "updated": "2026-07-04T16:17:35.951864+00:00",
+  "updated": "2026-07-04T17:29:53.735589+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
   "total_incidents": 197,
   "tunnel_incidents": 0,
   "tunnel": {
     "status": "clear",
     "north": {
-      "severity": "high",
-      "delay_min": 20,
+      "severity": "medium",
+      "delay_min": 10,
       "queue_m": null,
       "wait_min": null,
       "text": null,
-      "queue_km": 2.0
+      "queue_km": 1.0
     },
     "south": {
       "severity": "medium",
@@ -36,6 +36,16 @@
     {
       "road": "A2",
       "description": "Stau Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Sud et Tunnel Tunnel de S. Nicolao Situation: bouchon",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 St-Gothard -> Chiasso Tunnel Tunnel de S. Nicolao Situation: trafic perturbé Raison: véhicule en",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -185,16 +195,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: ",
-      "direction": "north",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Biasca et Parking Moleno Situation: trafic pe",
       "direction": "both",
       "severity": "medium",
@@ -250,16 +250,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Bellinzone-Sud et null al Sasso Situation: trafic perturbé Raison: objets sur ",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1987,6 +1977,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 St-Gothard -> Chiasso Tunnel Tunnel de S. Nicolao Situation: trafic perturbé Raison: véhicule en",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -2172,16 +2172,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Bellinzone-Sud et null al Sasso Situation: trafic perturbé Raison: objets sur ",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3894,6 +3884,16 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Reiden et Jonction autoroutière Dagmersellen Situation: danger Raison: objets sur la chaussée | R",
+      "direction": "south",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     }
   ],
   "incidents_all": [
@@ -3921,6 +3921,16 @@
       "road": "A2",
       "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
       "direction": "south",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 St-Gothard -> Chiasso Tunnel Tunnel de S. Nicolao Situation: trafic perturbé Raison: véhicule en",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -4079,16 +4089,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: ",
-      "direction": "north",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Biasca et Parking Moleno Situation: trafic pe",
       "direction": "both",
       "severity": "medium",
@@ -4144,16 +4144,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Bellinzone-Sud et null al Sasso Situation: trafic perturbé Raison: objets sur ",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5861,6 +5851,16 @@
       "road": "A2",
       "description": "Einfahrt gesperrt (ab 12.07.2026)",
       "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Reiden et Jonction autoroutière Dagmersellen Situation: danger Raison: objets sur la chaussée | R",
+      "direction": "south",
       "severity": "info",
       "delay_min": null,
       "queue_km": null,
