@@ -1,7 +1,7 @@
 {
-  "updated": "2026-07-04T12:19:26.365615+00:00",
+  "updated": "2026-07-04T14:04:36.428722+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 204,
+  "total_incidents": 203,
   "tunnel_incidents": 0,
   "tunnel": {
     "status": "clear",
@@ -14,12 +14,12 @@
       "queue_km": 3.0
     },
     "south": {
-      "severity": "high",
-      "delay_min": 20,
+      "severity": "medium",
+      "delay_min": 10,
       "queue_m": null,
       "wait_min": null,
       "text": null,
-      "queue_km": 2.0
+      "queue_km": 1.0
     }
   },
   "incidents_north": [
@@ -37,6 +37,16 @@
       "road": "A2",
       "description": "Stau Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Sud et Tunnel Tunnel de S. Nicolao Situation: bouchon",
       "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
+      "direction": "north",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -185,37 +195,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et null Echangeur de Härkingen Situation: trafic en accordéon Raison: surcharge de t",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et null Echangeur de Wiese Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Luzern -> Ba",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 3 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: b",
-      "direction": "north",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et null Chiasso-Brogeda Situation: bo",
+      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et null Chiasso-Brogeda Situation: b",
       "direction": "both",
       "severity": "high",
       "delay_min": 10,
@@ -225,7 +205,17 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Bâle-Kleinhüningen Nord et Jonction autoroutière Bâle-Wettstein Situation: trafic en accordéon ",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": 30,
+      "queue_km": 3.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Lucerne-Horw et Tunnel Tunnel de Kirchenwald Situation: trafic en accordéon Raison: surc",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -235,7 +225,17 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Nord et Jonction autoroutière Lucerne-Kriens Situation: trafic en accordéon Raison: su",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Sud et Jonction autoroutière Lucerne-Kriens Situation: trafic en accordéon Raison: su",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Nord et null Echangeur du Lopper Situation: trafic en accordéon Raison: surcharge de ",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -300,16 +300,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Bauarbeiten | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Buochs et Jonction autoroutière Beckenried Situation: trafic en accordéon Raison: travaux de cons",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2177,27 +2167,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et null Echangeur de Härkingen Situation: trafic en accordéon Raison: surcharge de t",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et null Echangeur de Wiese Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Luzern -> Ba",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et null Chiasso-Brogeda Situation: bo",
+      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et null Chiasso-Brogeda Situation: b",
       "direction": "both",
       "severity": "high",
       "delay_min": 10,
@@ -2207,7 +2177,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Bâle-Kleinhüningen Nord et Jonction autoroutière Bâle-Wettstein Situation: trafic en accordéon ",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Lucerne-Horw et Tunnel Tunnel de Kirchenwald Situation: trafic en accordéon Raison: surc",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2217,21 +2187,31 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Sud et Jonction autoroutière Lucerne-Kriens Situation: trafic en accordéon Raison: su",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Nord et null Echangeur du Lopper Situation: trafic en accordéon Raison: surcharge de ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
       "direction": "south",
       "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Nord et Jonction autoroutière Lucerne-Kriens Situation: trafic en accordéon Raison: su",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 10,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2292,16 +2272,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Bauarbeiten | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Buochs et Jonction autoroutière Beckenried Situation: trafic en accordéon Raison: travaux de cons",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4049,6 +4019,16 @@
     },
     {
       "road": "A2",
+      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
+      "direction": "north",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
       "direction": "south",
       "severity": "critical",
@@ -4209,37 +4189,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et null Echangeur de Härkingen Situation: trafic en accordéon Raison: surcharge de t",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et null Echangeur de Wiese Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Luzern -> Ba",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 3 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: b",
-      "direction": "north",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et null Chiasso-Brogeda Situation: bo",
+      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et null Chiasso-Brogeda Situation: b",
       "direction": "both",
       "severity": "high",
       "delay_min": 10,
@@ -4249,7 +4199,17 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Bâle-Kleinhüningen Nord et Jonction autoroutière Bâle-Wettstein Situation: trafic en accordéon ",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": 30,
+      "queue_km": 3.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Lucerne-Horw et Tunnel Tunnel de Kirchenwald Situation: trafic en accordéon Raison: surc",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4259,21 +4219,31 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Sud et Jonction autoroutière Lucerne-Kriens Situation: trafic en accordéon Raison: su",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Nord et null Echangeur du Lopper Situation: trafic en accordéon Raison: surcharge de ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
       "direction": "south",
       "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Nord et Jonction autoroutière Lucerne-Kriens Situation: trafic en accordéon Raison: su",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 10,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4334,16 +4304,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Bauarbeiten | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Buochs et Jonction autoroutière Beckenried Situation: trafic en accordéon Raison: travaux de cons",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
