@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T11:55:45.797280+00:00",
+  "updated": "2026-07-05T13:13:55.955187+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
   "total_incidents": 204,
   "tunnel_incidents": 0,
@@ -57,6 +57,16 @@
       "road": "A2",
       "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
       "direction": "north",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de la Biaschina et Jonction autoroutière Faido Situat",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -225,6 +235,16 @@
     },
     {
       "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et null Echangeur de Härkingen Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Base",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre null Echangeur de Wiese et null Basel-Weil Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Luzern -> Basel tra null ",
       "direction": "both",
       "severity": "high",
@@ -235,27 +255,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: vorausgegangener Unfall | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Diegten et Tunnel Tunnel du Belchen Situation: bouchon Raison: accident précédent | Approvato: A2 Basel -",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Buochs et Jonction autoroutière Beckenried Situation: bouchon Raison: surcharge de trafic | Revocato: ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et null Echangeur de Härkingen Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Base",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A4 Altdorf -> Brunnen entre null Echangeur d'Altdorf et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic | Approvat",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2057,6 +2057,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de la Biaschina et Jonction autoroutière Faido Situat",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -2187,16 +2197,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre null Echangeur de Wiese et null Basel-Weil Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Luzern -> Basel tra null ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
       "direction": "south",
       "severity": "high",
@@ -2207,7 +2207,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: vorausgegangener Unfall | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Diegten et Tunnel Tunnel du Belchen Situation: bouchon Raison: accident précédent | Approvato: A2 Basel -",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et null Echangeur de Härkingen Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Base",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2217,7 +2217,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Buochs et Jonction autoroutière Beckenried Situation: bouchon Raison: surcharge de trafic | Revocato: ",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre null Echangeur de Wiese et null Basel-Weil Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Luzern -> Basel tra null ",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2227,7 +2227,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et null Echangeur de Härkingen Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Base",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A4 Altdorf -> Brunnen entre null Echangeur d'Altdorf et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic | Approvat",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4059,6 +4059,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de la Biaschina et Jonction autoroutière Faido Situat",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -4229,16 +4239,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre null Echangeur de Wiese et null Basel-Weil Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Luzern -> Basel tra null ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
       "direction": "south",
       "severity": "high",
@@ -4249,7 +4249,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: vorausgegangener Unfall | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Diegten et Tunnel Tunnel du Belchen Situation: bouchon Raison: accident précédent | Approvato: A2 Basel -",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et null Echangeur de Härkingen Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Base",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4259,7 +4259,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Buochs et Jonction autoroutière Beckenried Situation: bouchon Raison: surcharge de trafic | Revocato: ",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre null Echangeur de Wiese et null Basel-Weil Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Luzern -> Basel tra null ",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4269,7 +4269,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et null Echangeur de Härkingen Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Base",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A4 Altdorf -> Brunnen entre null Echangeur d'Altdorf et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic | Approvat",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
