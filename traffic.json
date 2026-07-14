@@ -1,13 +1,13 @@
 {
-  "updated": "2026-07-14T17:58:15.663892+00:00",
+  "updated": "2026-07-14T19:18:03.197081+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 198,
+  "total_incidents": 192,
   "tunnel_incidents": 1,
   "tunnel": {
     "status": "medium",
     "north": {
-      "severity": "high",
-      "delay_min": 20,
+      "severity": "medium",
+      "delay_min": 10,
       "queue_m": null,
       "wait_min": null,
       "text": "Verkehrsbehinderung (ab 14.07.2026)",
@@ -45,13 +45,23 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Unfall | Libéré: Via Arnaldo Bolla, Bellinzona dans les deux sens  Situation: fermé Raison: accident | Approvato: Via Arnaldo Bolla, Bellinzona in tutte le direzioni  Situazi",
+      "description": "Strecke gesperrt (ab 13.07.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.3,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 12.07.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": 2.1,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -195,7 +205,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et null Chiasso-Brogeda Situation: trafic en accordéon Raison: surcharge d",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Arisdorf et null Echangeur d'Augst Situation: bouchon Raison: travaux de construction | Approvato: A2 Luzern -> Basel",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -205,33 +215,13 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: vorausgegangener Unfall Zusatz 1: Zeitverlust Anz. [min] 20 | Révoqué: A2 St-Gothard -> Bâle entre Jonction autoroutière Lucerne-Horw et Jonction autoroutière Rothenburg Situation: bouch",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Lucerne entre Jonction autoroutière Lucerne-Horw et Tunnel Tunnel du Sonnenberg Situation: trafic en accordéon Raison: surch",
-      "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 St-Gothard -> Chiasso entre null Echangeur de Lugano-Nord et Jonction autoroutière Melide/Bissone Situation: bouchon",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -275,6 +265,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung Länge [km] 0.2 (ab 09.03.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "stockender Verkehr Länge [km] 7.0 Ursache: Pannenfahrzeug | Libéré: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Grono et Jonction autoroutière Lostallo Situation: trafic en accordéon l",
       "direction": "both",
       "severity": "medium",
@@ -295,22 +295,72 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 16.06.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 2.9,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 3.7,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 06.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 12.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 14.07.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: vorausgegangener Unfall | Révoqué: A2 Lucerne -> Bâle entre null Echangeur de Gellert et Jonction autoroutière Bâle-Badischer Bahnhof Situation: trafic en accordéon Raison:",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -322,16 +372,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -632,16 +672,6 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Länge [km] 0.2 (ab 09.03.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -905,16 +935,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 13.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 5.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Strecke gesperrt (ab 04.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -960,16 +980,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 16.06.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1135,16 +1145,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 12.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Strecke gesperrt (ab 23.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -1202,16 +1202,6 @@
       "queue_km": 1.8,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 13.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 3.7,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -1276,16 +1266,6 @@
     {
       "road": "A2",
       "description": "Verkehrsbehinderung (ab 19.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 06.07.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
@@ -1545,16 +1525,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 13.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.5,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 19.07.2026)",
       "direction": "both",
       "severity": "info",
@@ -1662,16 +1632,6 @@
       "queue_km": 8.1,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 13.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.5,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -1815,16 +1775,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 12.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.6,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 22.07.2026)",
       "direction": "both",
       "severity": "info",
@@ -1962,16 +1912,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "((TIC/Accident : 3027-275/244))accident | Via Arnaldo Bolla, Bellinzona",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ],
   "incidents_south": [
@@ -1987,6 +1927,16 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt (ab 13.07.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": 5.3,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
       "direction": "south",
       "severity": "critical",
@@ -1997,13 +1947,13 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Unfall | Libéré: Via Arnaldo Bolla, Bellinzona dans les deux sens  Situation: fermé Raison: accident | Approvato: Via Arnaldo Bolla, Bellinzona in tutte le direzioni  Situazi",
+      "description": "Strecke gesperrt (ab 12.07.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.1,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -2137,7 +2087,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et null Chiasso-Brogeda Situation: trafic en accordéon Raison: surcharge d",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Arisdorf et null Echangeur d'Augst Situation: bouchon Raison: travaux de construction | Approvato: A2 Luzern -> Basel",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2147,33 +2097,13 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: vorausgegangener Unfall Zusatz 1: Zeitverlust Anz. [min] 20 | Révoqué: A2 St-Gothard -> Bâle entre Jonction autoroutière Lucerne-Horw et Jonction autoroutière Rothenburg Situation: bouch",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Lucerne entre Jonction autoroutière Lucerne-Horw et Tunnel Tunnel du Sonnenberg Situation: trafic en accordéon Raison: surch",
-      "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 St-Gothard -> Chiasso entre null Echangeur de Lugano-Nord et Jonction autoroutière Melide/Bissone Situation: bouchon",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -2217,6 +2147,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung Länge [km] 0.2 (ab 09.03.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "stockender Verkehr Länge [km] 7.0 Ursache: Pannenfahrzeug | Libéré: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Grono et Jonction autoroutière Lostallo Situation: trafic en accordéon l",
       "direction": "both",
       "severity": "medium",
@@ -2237,22 +2177,72 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 16.06.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 2.9,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 3.7,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 06.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 12.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 14.07.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: vorausgegangener Unfall | Révoqué: A2 Lucerne -> Bâle entre null Echangeur de Gellert et Jonction autoroutière Bâle-Badischer Bahnhof Situation: trafic en accordéon Raison:",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -2264,16 +2254,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -2574,16 +2554,6 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Länge [km] 0.2 (ab 09.03.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -2857,16 +2827,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 13.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 5.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Strecke gesperrt (ab 04.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -2912,16 +2872,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 16.06.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3087,16 +3037,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 12.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Strecke gesperrt (ab 23.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -3154,16 +3094,6 @@
       "queue_km": 1.8,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 13.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 3.7,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -3228,16 +3158,6 @@
     {
       "road": "A2",
       "description": "Verkehrsbehinderung (ab 19.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 06.07.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
@@ -3497,16 +3417,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 13.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.5,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 19.07.2026)",
       "direction": "both",
       "severity": "info",
@@ -3614,16 +3524,6 @@
       "queue_km": 8.1,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 13.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.5,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -3754,16 +3654,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 12.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.6,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -3904,16 +3794,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "((TIC/Accident : 3027-275/244))accident | Via Arnaldo Bolla, Bellinzona",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ],
   "incidents_all": [
@@ -3939,6 +3819,16 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt (ab 13.07.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": 5.3,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
       "direction": "south",
       "severity": "critical",
@@ -3949,13 +3839,13 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Unfall | Libéré: Via Arnaldo Bolla, Bellinzona dans les deux sens  Situation: fermé Raison: accident | Approvato: Via Arnaldo Bolla, Bellinzona in tutte le direzioni  Situazi",
+      "description": "Strecke gesperrt (ab 12.07.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.1,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -4109,7 +3999,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et null Chiasso-Brogeda Situation: trafic en accordéon Raison: surcharge d",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Arisdorf et null Echangeur d'Augst Situation: bouchon Raison: travaux de construction | Approvato: A2 Luzern -> Basel",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4119,33 +4009,13 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: vorausgegangener Unfall Zusatz 1: Zeitverlust Anz. [min] 20 | Révoqué: A2 St-Gothard -> Bâle entre Jonction autoroutière Lucerne-Horw et Jonction autoroutière Rothenburg Situation: bouch",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Lucerne entre Jonction autoroutière Lucerne-Horw et Tunnel Tunnel du Sonnenberg Situation: trafic en accordéon Raison: surch",
-      "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 St-Gothard -> Chiasso entre null Echangeur de Lugano-Nord et Jonction autoroutière Melide/Bissone Situation: bouchon",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -4189,6 +4059,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung Länge [km] 0.2 (ab 09.03.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "stockender Verkehr Länge [km] 7.0 Ursache: Pannenfahrzeug | Libéré: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Grono et Jonction autoroutière Lostallo Situation: trafic en accordéon l",
       "direction": "both",
       "severity": "medium",
@@ -4209,22 +4089,72 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 16.06.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 2.9,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 3.7,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 06.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 12.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 14.07.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: vorausgegangener Unfall | Révoqué: A2 Lucerne -> Bâle entre null Echangeur de Gellert et Jonction autoroutière Bâle-Badischer Bahnhof Situation: trafic en accordéon Raison:",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -4236,16 +4166,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -4549,16 +4469,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Länge [km] 0.2 (ab 09.03.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Ausfahrt gesperrt (ab 14.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -4829,16 +4739,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 13.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 5.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Strecke gesperrt (ab 04.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -4884,16 +4784,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 16.06.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.9,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5059,16 +4949,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 12.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Strecke gesperrt (ab 23.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -5126,16 +5006,6 @@
       "queue_km": 1.8,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 13.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 3.7,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -5200,16 +5070,6 @@
     {
       "road": "A2",
       "description": "Verkehrsbehinderung (ab 19.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 06.07.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
@@ -5469,16 +5329,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 13.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.5,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 19.07.2026)",
       "direction": "both",
       "severity": "info",
@@ -5586,16 +5436,6 @@
       "queue_km": 8.1,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 13.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.5,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -5739,16 +5579,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 12.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.6,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 22.07.2026)",
       "direction": "both",
       "severity": "info",
@@ -5886,16 +5716,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "((TIC/Accident : 3027-275/244))accident | Via Arnaldo Bolla, Bellinzona",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ]
 }
