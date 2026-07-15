@@ -1,17 +1,17 @@
 {
-  "updated": "2026-07-15T07:55:15.190159+00:00",
+  "updated": "2026-07-15T09:50:40.951155+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 198,
+  "total_incidents": 203,
   "tunnel_incidents": 2,
   "tunnel": {
     "status": "critical",
     "north": {
-      "severity": "medium",
-      "delay_min": 10,
+      "severity": "high",
+      "delay_min": 40,
       "queue_m": null,
       "wait_min": null,
       "text": "Tunnel gesperrt Ursache: Ausnahmetransport (ab 15.07.2026)",
-      "queue_km": 1.0
+      "queue_km": 4.0
     },
     "south": {
       "severity": "medium",
@@ -55,7 +55,17 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug defekter LKW Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 St-Gothard -> Lucerne Tunnel Tunnel Schlund Situation: trafic perturbé Raison: véh",
+      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
+      "direction": "north",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre null Centre de poids lourds Gornico et Tunnel Tunnel de la Biaschina",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -205,16 +215,6 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre null Echangeur de Wiese et Jonction autoroutière Bâle-Wettstein Situation: trafic en accordéon Raison: surcharge de t",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau für LKW Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Douane commercial et null Chiasso-Douane commercial Situation: bouchon pour poids lourd",
       "direction": "both",
       "severity": "high",
@@ -225,7 +225,17 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et null Chiasso-Brogeda Situation: trafic en accordéon Raison: surcharge d",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Göschenen <-> Flüelen entre Localité Erstfeld et Jonction autoroutière Göschenen Situa",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr im",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -235,11 +245,11 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situation:",
       "direction": "north",
       "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
+      "delay_min": 40,
+      "queue_km": 4.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1965,13 +1975,53 @@
     },
     {
       "road": "A2",
-      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Libéré: A2 Chiasso <-> St-Gothard Tunnel Tunnel du Dosso di Taverne Situation: danger Raison: objets sur la chaussée | Approvato: A2 Chiasso <-> S. Gotta",
+      "description": "Verkehrsbehinderung (ab 19.07.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 20.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 23.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 26.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 27.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
     }
   ],
   "incidents_south": [
@@ -2007,7 +2057,7 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug defekter LKW Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 St-Gothard -> Lucerne Tunnel Tunnel Schlund Situation: trafic perturbé Raison: véh",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre null Centre de poids lourds Gornico et Tunnel Tunnel de la Biaschina",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -2147,16 +2197,6 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre null Echangeur de Wiese et Jonction autoroutière Bâle-Wettstein Situation: trafic en accordéon Raison: surcharge de t",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau für LKW Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Douane commercial et null Chiasso-Douane commercial Situation: bouchon pour poids lourd",
       "direction": "both",
       "severity": "high",
@@ -2167,7 +2207,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et null Chiasso-Brogeda Situation: trafic en accordéon Raison: surcharge d",
+      "description": "stockender Verkehr im",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -3897,13 +3937,53 @@
     },
     {
       "road": "A2",
-      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Libéré: A2 Chiasso <-> St-Gothard Tunnel Tunnel du Dosso di Taverne Situation: danger Raison: objets sur la chaussée | Approvato: A2 Chiasso <-> S. Gotta",
+      "description": "Verkehrsbehinderung (ab 19.07.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 20.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 23.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 26.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 27.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
     }
   ],
   "incidents_all": [
@@ -3949,7 +4029,17 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug defekter LKW Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 St-Gothard -> Lucerne Tunnel Tunnel Schlund Situation: trafic perturbé Raison: véh",
+      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
+      "direction": "north",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre null Centre de poids lourds Gornico et Tunnel Tunnel de la Biaschina",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -4109,16 +4199,6 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre null Echangeur de Wiese et Jonction autoroutière Bâle-Wettstein Situation: trafic en accordéon Raison: surcharge de t",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau für LKW Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Douane commercial et null Chiasso-Douane commercial Situation: bouchon pour poids lourd",
       "direction": "both",
       "severity": "high",
@@ -4129,7 +4209,17 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et null Chiasso-Brogeda Situation: trafic en accordéon Raison: surcharge d",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Göschenen <-> Flüelen entre Localité Erstfeld et Jonction autoroutière Göschenen Situa",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr im",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4139,11 +4229,11 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situation:",
       "direction": "north",
       "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
+      "delay_min": 40,
+      "queue_km": 4.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5879,13 +5969,53 @@
     },
     {
       "road": "A2",
-      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Libéré: A2 Chiasso <-> St-Gothard Tunnel Tunnel du Dosso di Taverne Situation: danger Raison: objets sur la chaussée | Approvato: A2 Chiasso <-> S. Gotta",
+      "description": "Verkehrsbehinderung (ab 19.07.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.5,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 20.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 23.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 26.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 27.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.5,
+      "is_tunnel": false,
+      "night_only": true
     }
   ]
 }
