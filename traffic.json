@@ -1,7 +1,7 @@
 {
-  "updated": "2026-07-18T20:31:16.699544+00:00",
+  "updated": "2026-07-18T21:26:37.353612+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 200,
+  "total_incidents": 199,
   "tunnel_incidents": 1,
   "tunnel": {
     "status": "critical",
@@ -10,16 +10,16 @@
       "delay_min": 30,
       "queue_m": null,
       "wait_min": null,
-      "text": "Tunnel gesperrt Ursache: Pannenfahrzeug | Libéré: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en pa",
+      "text": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en p",
       "queue_km": 3.0
     },
     "south": {
-      "severity": "medium",
-      "delay_min": 10,
+      "severity": "high",
+      "delay_min": 20,
       "queue_m": null,
       "wait_min": null,
-      "text": "Tunnel gesperrt Ursache: Pannenfahrzeug | Libéré: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en pa",
-      "queue_km": 1.0
+      "text": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en p",
+      "queue_km": 2.0
     }
   },
   "incidents_north": [
@@ -55,7 +55,7 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Libéré: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Approvato: A2 Chiasso <-> S. Gottardo Galler",
+      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 Chiasso <-> S. Gottardo Galler",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -322,16 +322,6 @@
       "queue_km": 2.3,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> Bâle entre Tunnel Tunnel d'Arisdorf et Echangeur Echangeur d'Augst Situation: trafic perturbé Raison: travaux de construction | Revoca",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     },
     {
       "road": "A2",
@@ -2007,7 +1997,7 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Libéré: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Approvato: A2 Chiasso <-> S. Gottardo Galler",
+      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 Chiasso <-> S. Gottardo Galler",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -2147,6 +2137,16 @@
     },
     {
       "road": "A2",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": 20,
+      "queue_km": 2.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
       "severity": "medium",
@@ -2234,26 +2234,6 @@
       "queue_km": 2.3,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: wechselseitige Verkehrsführung | Révoqué: H2 Bellinzone <-> Airolo Localité Claro Situation: trafic perturbé Raison: accident Gestion du trafic: ci",
-      "direction": "south",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> Bâle entre Tunnel Tunnel d'Arisdorf et Echangeur Echangeur d'Augst Situation: trafic perturbé Raison: travaux de construction | Revoca",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     },
     {
       "road": "A2",
@@ -3949,7 +3929,7 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Libéré: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Approvato: A2 Chiasso <-> S. Gottardo Galler",
+      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 Chiasso <-> S. Gottardo Galler",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -4139,6 +4119,16 @@
     },
     {
       "road": "A2",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": 20,
+      "queue_km": 2.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
       "severity": "medium",
@@ -4226,26 +4216,6 @@
       "queue_km": 2.3,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: wechselseitige Verkehrsführung | Révoqué: H2 Bellinzone <-> Airolo Localité Claro Situation: trafic perturbé Raison: accident Gestion du trafic: ci",
-      "direction": "south",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> Bâle entre Tunnel Tunnel d'Arisdorf et Echangeur Echangeur d'Augst Situation: trafic perturbé Raison: travaux de construction | Revoca",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     },
     {
       "road": "A2",
