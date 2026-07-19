@@ -1,17 +1,17 @@
 {
-  "updated": "2026-07-19T14:02:34.772152+00:00",
+  "updated": "2026-07-19T15:05:03.322421+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 207,
+  "total_incidents": 211,
   "tunnel_incidents": 0,
   "tunnel": {
     "status": "clear",
     "north": {
       "severity": "high",
-      "delay_min": 140,
+      "delay_min": 130,
       "queue_m": null,
       "wait_min": null,
       "text": null,
-      "queue_km": 14.0
+      "queue_km": 13.0
     },
     "south": {
       "severity": "high",
@@ -55,7 +55,7 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Aire de service Centre de poids lourds Gornico et Tunnel Tunnel de l",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Chiasso -> St-Gothard entre Aire de service Centre de poids lourds Gornico et Tunnel Tunnel de ",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -66,6 +66,16 @@
     {
       "road": "A2",
       "description": "stockender Verkehr Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt (ab 19.07.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 St-Gothard -> Chiasso entre Tunnel Tunnel de Casletto et Tunnel Tunnel de Piumogna Situation: t",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -255,7 +265,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A13 Coire -> Bellinzone entre Jonction autoroutière Hinterrhein et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | Approvato: ",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A13 Coire -> Bellinzone entre Jonction autoroutière Hinterrhein et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | Revocato: ",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -265,40 +275,30 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 14.0 Zusatz 1: Zeitverlust Anz. [min] 140 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Erstfeld et Jonction autoroutière Göschenen Situation: bouchon longueur [km] 14",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Tunnel Tunnel de Flüelen Situation: trafic en accordéon Raison: surcharge de traf",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 13.0 Zusatz 1: Zeitverlust Anz. [min] 130 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Erstfeld et Jonction autoroutière Göschenen Situation: bouchon longueur [km] 13",
       "direction": "north",
       "severity": "high",
-      "delay_min": 140,
-      "queue_km": 14.0,
+      "delay_min": 130,
+      "queue_km": 13.0,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Breite Situation: trafic en accordéon Raison: surcharge ",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A13 S. Bernardino -> Bellinzone entre Jonction autoroutière Passstrasse et Jonction autoroutière Mesocco-Nord Situation: trafic en accordéon R",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Passstrasse et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | Re",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Révoqué: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Passstrasse et Tunnel San Bernardino-Tunnel Situation: bouc",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 20,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -360,6 +360,16 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen blockiert | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Bellinzone-Sud et Parking al Sasso Situation",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2042,6 +2052,36 @@
       "queue_km": 7.9,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 26.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 10.08.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 12.08.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 2.4,
+      "is_tunnel": false,
+      "night_only": true
     }
   ],
   "incidents_south": [
@@ -2077,7 +2117,7 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Aire de service Centre de poids lourds Gornico et Tunnel Tunnel de l",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Chiasso -> St-Gothard entre Aire de service Centre de poids lourds Gornico et Tunnel Tunnel de ",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -2088,6 +2128,16 @@
     {
       "road": "A2",
       "description": "stockender Verkehr Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt (ab 19.07.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 St-Gothard -> Chiasso entre Tunnel Tunnel de Casletto et Tunnel Tunnel de Piumogna Situation: t",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -2257,16 +2307,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A13 Coire -> Bellinzone entre Jonction autoroutière Hinterrhein et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | Approvato: ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
       "direction": "south",
       "severity": "high",
@@ -2277,7 +2317,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Breite Situation: trafic en accordéon Raison: surcharge ",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A13 Coire -> Bellinzone entre Jonction autoroutière Hinterrhein et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | Revocato: ",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2287,7 +2327,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Passstrasse et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | Re",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Tunnel Tunnel de Flüelen Situation: trafic en accordéon Raison: surcharge de traf",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2297,10 +2337,10 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Révoqué: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Passstrasse et Tunnel San Bernardino-Tunnel Situation: bouc",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A13 S. Bernardino -> Bellinzone entre Jonction autoroutière Passstrasse et Jonction autoroutière Mesocco-Nord Situation: trafic en accordéon R",
       "direction": "both",
       "severity": "high",
-      "delay_min": 20,
+      "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -2362,6 +2402,16 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen blockiert | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Bellinzone-Sud et Parking al Sasso Situation",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4042,6 +4092,36 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 7.9,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 26.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 10.08.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 12.08.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 2.4,
       "is_tunnel": false,
       "night_only": true
     }
@@ -4099,7 +4179,7 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Aire de service Centre de poids lourds Gornico et Tunnel Tunnel de l",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Chiasso -> St-Gothard entre Aire de service Centre de poids lourds Gornico et Tunnel Tunnel de ",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -4110,6 +4190,16 @@
     {
       "road": "A2",
       "description": "stockender Verkehr Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt (ab 19.07.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 St-Gothard -> Chiasso entre Tunnel Tunnel de Casletto et Tunnel Tunnel de Piumogna Situation: t",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -4309,16 +4399,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A13 Coire -> Bellinzone entre Jonction autoroutière Hinterrhein et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | Approvato: ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
       "direction": "south",
       "severity": "high",
@@ -4329,40 +4409,40 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 14.0 Zusatz 1: Zeitverlust Anz. [min] 140 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Erstfeld et Jonction autoroutière Göschenen Situation: bouchon longueur [km] 14",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A13 Coire -> Bellinzone entre Jonction autoroutière Hinterrhein et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | Revocato: ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Tunnel Tunnel de Flüelen Situation: trafic en accordéon Raison: surcharge de traf",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 13.0 Zusatz 1: Zeitverlust Anz. [min] 130 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Erstfeld et Jonction autoroutière Göschenen Situation: bouchon longueur [km] 13",
       "direction": "north",
       "severity": "high",
-      "delay_min": 140,
-      "queue_km": 14.0,
+      "delay_min": 130,
+      "queue_km": 13.0,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Breite Situation: trafic en accordéon Raison: surcharge ",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A13 S. Bernardino -> Bellinzone entre Jonction autoroutière Passstrasse et Jonction autoroutière Mesocco-Nord Situation: trafic en accordéon R",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Passstrasse et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | Re",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Révoqué: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Passstrasse et Tunnel San Bernardino-Tunnel Situation: bouc",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 20,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -4424,6 +4504,16 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen blockiert | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Bellinzone-Sud et Parking al Sasso Situation",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -6114,6 +6204,36 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 7.9,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 26.07.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 10.08.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 12.08.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 2.4,
       "is_tunnel": false,
       "night_only": true
     }
