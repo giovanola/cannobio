@@ -1,7 +1,7 @@
 {
-  "updated": "2026-07-30T20:20:29.825120+00:00",
+  "updated": "2026-07-30T21:36:55.917797+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 187,
+  "total_incidents": 188,
   "tunnel_incidents": 0,
   "tunnel": {
     "status": "clear",
@@ -55,10 +55,20 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Bauarbeiten | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Beckenried et Tunnel Tunnel du Seelisberg Situation: fermé Raison: travaux de construction | Approv",
+      "description": "Strecke gesperrt Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Beckenried et Tunnel Tunnel du Seelisberg Situation: fermé Raison: travaux de construction | Revoc",
       "direction": "both",
       "severity": "critical",
       "delay_min": 30,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Lucerne -> Bâle Tunnel Tunnel Eich Situation: trafic perturbé Raison: véhicule en panne Gestion",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -215,6 +225,26 @@
     },
     {
       "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: travaux de construction | Approvato: A2 Basel -> L",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> Bâle entre Jonction autoroutière Pratteln et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: travaux de construction | Revocato: A2 Luzern ->",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
       "severity": "medium",
@@ -362,16 +392,6 @@
       "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Bauarbeiten | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur d'Augst et Jonction autoroutière Arisdorf Situation: trafic en accordéon Raison: travaux de construction",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     },
     {
       "road": "A2",
@@ -1887,10 +1907,20 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Bauarbeiten | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Beckenried et Tunnel Tunnel du Seelisberg Situation: fermé Raison: travaux de construction | Approv",
+      "description": "Strecke gesperrt Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Beckenried et Tunnel Tunnel du Seelisberg Situation: fermé Raison: travaux de construction | Revoc",
       "direction": "both",
       "severity": "critical",
       "delay_min": 30,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Lucerne -> Bâle Tunnel Tunnel Eich Situation: trafic perturbé Raison: véhicule en panne Gestion",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -2037,11 +2067,21 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: bo",
-      "direction": "south",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: travaux de construction | Approvato: A2 Basel -> L",
+      "direction": "both",
       "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> Bâle entre Jonction autoroutière Pratteln et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: travaux de construction | Revocato: A2 Luzern ->",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2194,16 +2234,6 @@
       "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Bauarbeiten | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur d'Augst et Jonction autoroutière Arisdorf Situation: trafic en accordéon Raison: travaux de construction",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     },
     {
       "road": "A2",
@@ -3729,10 +3759,20 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Bauarbeiten | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Beckenried et Tunnel Tunnel du Seelisberg Situation: fermé Raison: travaux de construction | Approv",
+      "description": "Strecke gesperrt Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Beckenried et Tunnel Tunnel du Seelisberg Situation: fermé Raison: travaux de construction | Revoc",
       "direction": "both",
       "severity": "critical",
       "delay_min": 30,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Lucerne -> Bâle Tunnel Tunnel Eich Situation: trafic perturbé Raison: véhicule en panne Gestion",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -3899,11 +3939,21 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: bo",
-      "direction": "south",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: travaux de construction | Approvato: A2 Basel -> L",
+      "direction": "both",
       "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> Bâle entre Jonction autoroutière Pratteln et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: travaux de construction | Revocato: A2 Luzern ->",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4056,16 +4106,6 @@
       "queue_km": 0.5,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Bauarbeiten | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur d'Augst et Jonction autoroutière Arisdorf Situation: trafic en accordéon Raison: travaux de construction",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     },
     {
       "road": "A2",
