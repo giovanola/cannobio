@@ -1,24 +1,24 @@
 {
-  "updated": "2026-07-30T14:37:42.095937+00:00",
+  "updated": "2026-07-30T16:12:10.847702+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
   "total_incidents": 199,
-  "tunnel_incidents": 1,
+  "tunnel_incidents": 3,
   "tunnel": {
-    "status": "medium",
+    "status": "critical",
     "north": {
       "severity": "high",
-      "delay_min": 50,
+      "delay_min": 15,
       "queue_m": null,
       "wait_min": null,
-      "text": "stockender Verkehr Ursache: Bauarbeiten | Libéré: H2 Bellinzone <-> Göschenen entre Localité Airolo et Col Col du St-Gothard Situation: trafic en acco",
-      "queue_km": 5.0
+      "text": "Tunnel gesperrt Ursache: Pannenfahrzeug | Libéré: A2 St-Gothard -> Chiasso Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en pan",
+      "queue_km": 3.0
     },
     "south": {
       "severity": "high",
       "delay_min": 60,
       "queue_m": null,
       "wait_min": null,
-      "text": "stockender Verkehr Ursache: Bauarbeiten | Libéré: H2 Bellinzone <-> Göschenen entre Localité Airolo et Col Col du St-Gothard Situation: trafic en acco",
+      "text": "Tunnel gesperrt Ursache: Pannenfahrzeug | Libéré: A2 St-Gothard -> Chiasso Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en pan",
       "queue_km": 6.0
     }
   },
@@ -51,6 +51,16 @@
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Libéré: A2 St-Gothard -> Chiasso Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Approvato: A2 S. Gottardo -> Chiasso Galleria",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
       "night_only": false
     },
     {
@@ -205,46 +215,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon Raison: surcharge de trafic | Appro",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: mehrfach kurzfristige Sperrungen Zusatz 2: Zeitverlust Anz. [min] 15 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Tunnel Tunnel",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 5.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 50 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situation:",
-      "direction": "north",
-      "severity": "high",
-      "delay_min": 50,
-      "queue_km": 5.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Länge [km] 6.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 60 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
       "direction": "both",
       "severity": "high",
@@ -265,7 +235,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Diegten et Jonction autoroutière Eptingen Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Base",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Douane commercial et Poste de douane Chiasso-Brogeda Situation: bouchon Raison: surcharge de tr",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -275,7 +245,37 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Jonction autoroutière Lugano-Sud Situation: trafic en accordéon Raison: su",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Bâle entre Jonction autoroutière Hergiswil Nord et Jonction autoroutière Emmen-Sud Situat",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 10,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Badischer Bahnhof Situation: boucho",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Unfall Verkehrsführung: Überholstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Sursee et Jonction autoroutière Sempach Sit",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison:",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -285,7 +285,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Bâle entre Jonction autoroutière Lucerne-Horw et Jonction autoroutière Emmen-Sud Situation: trafic en accordéon Raison: surch",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et Echangeur Echangeur de Härkingen en direction A1 Oensingen Situation: bouchon Raison: surcharg",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -295,12 +295,32 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de trafic | Approvato: A4 Altdorf -> Brun",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: mehrfach kurzfristige Sperrungen Zusatz 2: es ist mit grossem Zeitverlust zu rechnen | Libéré: A2 St-Gothard -> Lucerne entre Jonction autoroutière Erstfeld",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon Raison: surcharge de trafic | Revo",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: bouchon longueur [km] 3.0 Raison: s",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": 3.0,
+      "is_tunnel": true,
       "night_only": false
     },
     {
@@ -375,32 +395,12 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Bauarbeiten | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur d'Augst et Jonction autoroutière Arisdorf Situation: trafic en accordéon Raison: travaux de construction ",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "stockender Verkehr Ursache: Bauarbeiten | Libéré: H2 Bellinzone <-> Göschenen entre Localité Airolo et Col Col du St-Gothard Situation: trafic en accordéon Raison: travaux de construction | Approvato:",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Unfall | Révoqué: A2 Chiasso -> St-Gothard entre Tunnel Tunnel du Dosso di Taverne et Jonction autoroutière Rivera Situation: trafic en accordéon Raison: accident | Revocat",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -2007,6 +2007,16 @@
     },
     {
       "road": "A2",
+      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Libéré: A2 St-Gothard -> Chiasso Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Approvato: A2 S. Gottardo -> Chiasso Galleria",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -2137,36 +2147,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon Raison: surcharge de trafic | Appro",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: mehrfach kurzfristige Sperrungen Zusatz 2: Zeitverlust Anz. [min] 15 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Tunnel Tunnel",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Länge [km] 6.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 60 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
       "direction": "both",
       "severity": "high",
@@ -2187,7 +2167,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Diegten et Jonction autoroutière Eptingen Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Base",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Douane commercial et Poste de douane Chiasso-Brogeda Situation: bouchon Raison: surcharge de tr",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2197,7 +2177,37 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Jonction autoroutière Lugano-Sud Situation: trafic en accordéon Raison: su",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Bâle entre Jonction autoroutière Hergiswil Nord et Jonction autoroutière Emmen-Sud Situat",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 10,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Badischer Bahnhof Situation: boucho",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Unfall Verkehrsführung: Überholstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Sursee et Jonction autoroutière Sempach Sit",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison:",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2207,7 +2217,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Bâle entre Jonction autoroutière Lucerne-Horw et Jonction autoroutière Emmen-Sud Situation: trafic en accordéon Raison: surch",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et Echangeur Echangeur de Härkingen en direction A1 Oensingen Situation: bouchon Raison: surcharg",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2217,7 +2227,17 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de trafic | Approvato: A4 Altdorf -> Brun",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: mehrfach kurzfristige Sperrungen Zusatz 2: es ist mit grossem Zeitverlust zu rechnen | Libéré: A2 St-Gothard -> Lucerne entre Jonction autoroutière Erstfeld",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon Raison: surcharge de trafic | Revo",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2297,32 +2317,12 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Bauarbeiten | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur d'Augst et Jonction autoroutière Arisdorf Situation: trafic en accordéon Raison: travaux de construction ",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "stockender Verkehr Ursache: Bauarbeiten | Libéré: H2 Bellinzone <-> Göschenen entre Localité Airolo et Col Col du St-Gothard Situation: trafic en accordéon Raison: travaux de construction | Approvato:",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Unfall | Révoqué: A2 Chiasso -> St-Gothard entre Tunnel Tunnel du Dosso di Taverne et Jonction autoroutière Rivera Situation: trafic en accordéon Raison: accident | Revocat",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -3949,6 +3949,16 @@
     },
     {
       "road": "A2",
+      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Libéré: A2 St-Gothard -> Chiasso Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Approvato: A2 S. Gottardo -> Chiasso Galleria",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -4109,46 +4119,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon Raison: surcharge de trafic | Appro",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: mehrfach kurzfristige Sperrungen Zusatz 2: Zeitverlust Anz. [min] 15 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Tunnel Tunnel",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 5.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 50 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situation:",
-      "direction": "north",
-      "severity": "high",
-      "delay_min": 50,
-      "queue_km": 5.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Länge [km] 6.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 60 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
       "direction": "both",
       "severity": "high",
@@ -4169,7 +4139,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Diegten et Jonction autoroutière Eptingen Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Base",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Douane commercial et Poste de douane Chiasso-Brogeda Situation: bouchon Raison: surcharge de tr",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4179,7 +4149,37 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Jonction autoroutière Lugano-Sud Situation: trafic en accordéon Raison: su",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Bâle entre Jonction autoroutière Hergiswil Nord et Jonction autoroutière Emmen-Sud Situat",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 10,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Badischer Bahnhof Situation: boucho",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Unfall Verkehrsführung: Überholstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Sursee et Jonction autoroutière Sempach Sit",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison:",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4189,7 +4189,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Bâle entre Jonction autoroutière Lucerne-Horw et Jonction autoroutière Emmen-Sud Situation: trafic en accordéon Raison: surch",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et Echangeur Echangeur de Härkingen en direction A1 Oensingen Situation: bouchon Raison: surcharg",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4199,12 +4199,32 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de trafic | Approvato: A4 Altdorf -> Brun",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: mehrfach kurzfristige Sperrungen Zusatz 2: es ist mit grossem Zeitverlust zu rechnen | Libéré: A2 St-Gothard -> Lucerne entre Jonction autoroutière Erstfeld",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon Raison: surcharge de trafic | Revo",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: bouchon longueur [km] 3.0 Raison: s",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": 3.0,
+      "is_tunnel": true,
       "night_only": false
     },
     {
@@ -4279,32 +4299,12 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Bauarbeiten | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur d'Augst et Jonction autoroutière Arisdorf Situation: trafic en accordéon Raison: travaux de construction ",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "stockender Verkehr Ursache: Bauarbeiten | Libéré: H2 Bellinzone <-> Göschenen entre Localité Airolo et Col Col du St-Gothard Situation: trafic en accordéon Raison: travaux de construction | Approvato:",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Unfall | Révoqué: A2 Chiasso -> St-Gothard entre Tunnel Tunnel du Dosso di Taverne et Jonction autoroutière Rivera Situation: trafic en accordéon Raison: accident | Revocat",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
       "night_only": false
     },
     {
