@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T20:38:05.172758+00:00",
+  "updated": "2026-07-31T21:43:00.102043+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
   "total_incidents": 184,
   "tunnel_incidents": 1,
@@ -14,12 +14,12 @@
       "queue_km": 2.0
     },
     "south": {
-      "severity": "medium",
-      "delay_min": 10,
+      "severity": "high",
+      "delay_min": 40,
       "queue_m": null,
       "wait_min": null,
       "text": "Tunnel gesperrt (ab 10.08.2026)",
-      "queue_km": 6.0
+      "queue_km": 4.0
     }
   },
   "incidents_north": [
@@ -60,6 +60,16 @@
       "severity": "critical",
       "delay_min": null,
       "queue_km": 0.12,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt Ursache: Steinschlag | Révoqué: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: chutes de pierres | Revocato: A4 Altdorf <-> Brunnen tra Luo",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -220,16 +230,6 @@
       "severity": "high",
       "delay_min": 20,
       "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 6 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [h] 1 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: boucho",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": 6.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1815,7 +1815,7 @@
     },
     {
       "road": "A2",
-      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Libéré: A2 Lucerne -> Bâle entre Parking Knutwil-Nord et Jonction autoroutière Dagmersellen, au kilomètre 64.0 Situation: danger Raison: objets sur la ch",
+      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 Lucerne -> Bâle entre Parking Knutwil-Nord et Jonction autoroutière Dagmersellen, au kilomètre 65.0 Situation: danger Raison: objets sur la c",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
@@ -1859,6 +1859,16 @@
       "road": "A2",
       "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
       "direction": "south",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt Ursache: Steinschlag | Révoqué: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: chutes de pierres | Revocato: A4 Altdorf <-> Brunnen tra Luo",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -2007,21 +2017,11 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: wechselseitige Verkehrsführung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: H2 Bellinzone -> Airolo entre Localité Piotta et Localité Madrano Situation: bou",
+      "description": "Stau Länge [km] 4 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: bou",
       "direction": "south",
       "severity": "high",
-      "delay_min": 10,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 6 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [h] 1 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: boucho",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": 6.0,
+      "delay_min": 40,
+      "queue_km": 4.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3607,7 +3607,7 @@
     },
     {
       "road": "A2",
-      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Libéré: A2 Lucerne -> Bâle entre Parking Knutwil-Nord et Jonction autoroutière Dagmersellen, au kilomètre 64.0 Situation: danger Raison: objets sur la ch",
+      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 Lucerne -> Bâle entre Parking Knutwil-Nord et Jonction autoroutière Dagmersellen, au kilomètre 65.0 Situation: danger Raison: objets sur la c",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
@@ -3669,6 +3669,16 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt Ursache: Steinschlag | Révoqué: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: chutes de pierres | Revocato: A4 Altdorf <-> Brunnen tra Luo",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -3829,16 +3839,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: wechselseitige Verkehrsführung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: H2 Bellinzone -> Airolo entre Localité Piotta et Localité Madrano Situation: bou",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
       "direction": "north",
       "severity": "high",
@@ -3849,11 +3849,11 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 6 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [h] 1 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: boucho",
-      "direction": "both",
+      "description": "Stau Länge [km] 4 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: bou",
+      "direction": "south",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": 6.0,
+      "delay_min": 40,
+      "queue_km": 4.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -5449,7 +5449,7 @@
     },
     {
       "road": "A2",
-      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Libéré: A2 Lucerne -> Bâle entre Parking Knutwil-Nord et Jonction autoroutière Dagmersellen, au kilomètre 64.0 Situation: danger Raison: objets sur la ch",
+      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 Lucerne -> Bâle entre Parking Knutwil-Nord et Jonction autoroutière Dagmersellen, au kilomètre 65.0 Situation: danger Raison: objets sur la c",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
