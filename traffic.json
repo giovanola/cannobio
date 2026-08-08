@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-08T22:42:16.909597+00:00",
+  "updated": "2026-08-08T23:03:33.360200+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 196,
+  "total_incidents": 197,
   "tunnel_incidents": 1,
   "tunnel": {
     "status": "info",
@@ -15,11 +15,11 @@
     },
     "south": {
       "severity": "high",
-      "delay_min": 30,
+      "delay_min": 40,
       "queue_m": null,
       "wait_min": null,
       "text": "Tunnel gesperrt (ab 10.08.2026)",
-      "queue_km": 2.0
+      "queue_km": 4.0
     }
   },
   "incidents_north": [
@@ -195,30 +195,30 @@
     },
     {
       "road": "A2",
-      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard Aire de service Bellinzone-Sud Situation: bouchon dans la sortie Raison: surcharge de trafic | Approvato: A2 Chiass",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Lugano-Sud et Jonction autoroutière Bellinzona-Centre Situation: bo",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard entre Tunnel Tunnel du Monte Ceneri et Jonction autoroutière Bellinzona-Centre Situation: trafic en accordéon Raison",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard Aire de service Bellinzone-Sud Situation: bouchon dans la sortie Raison: surcharge de trafic | Revocato: A2 Chiass",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Lugano-Nord et Jonction autoroutière Bellinzona-Centre Situation: ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -312,6 +312,16 @@
       "queue_km": 2.9,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Aire de service San Gottardo Sud, au kilomè",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     },
     {
       "road": "A2",
@@ -2107,26 +2117,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard Aire de service Bellinzone-Sud Situation: bouchon dans la sortie Raison: surcharge de trafic | Approvato: A2 Chiass",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Lugano-Sud et Jonction autoroutière Bellinzona-Centre Situation: bo",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard entre Tunnel Tunnel du Monte Ceneri et Jonction autoroutière Bellinzona-Centre Situation: trafic en accordéon Raison",
       "direction": "both",
       "severity": "high",
@@ -2137,11 +2127,31 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
       "direction": "south",
       "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
+      "delay_min": 40,
+      "queue_km": 4.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard Aire de service Bellinzone-Sud Situation: bouchon dans la sortie Raison: surcharge de trafic | Revocato: A2 Chiass",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Lugano-Nord et Jonction autoroutière Bellinzona-Centre Situation: ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2234,6 +2244,16 @@
       "queue_km": 2.9,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Aire de service San Gottardo Sud, au kilomè",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     },
     {
       "road": "A2",
@@ -4059,26 +4079,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard Aire de service Bellinzone-Sud Situation: bouchon dans la sortie Raison: surcharge de trafic | Approvato: A2 Chiass",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Lugano-Sud et Jonction autoroutière Bellinzona-Centre Situation: bo",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard entre Tunnel Tunnel du Monte Ceneri et Jonction autoroutière Bellinzona-Centre Situation: trafic en accordéon Raison",
       "direction": "both",
       "severity": "high",
@@ -4089,11 +4089,31 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
       "direction": "south",
       "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
+      "delay_min": 40,
+      "queue_km": 4.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard Aire de service Bellinzone-Sud Situation: bouchon dans la sortie Raison: surcharge de trafic | Revocato: A2 Chiass",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Lugano-Nord et Jonction autoroutière Bellinzona-Centre Situation: ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4186,6 +4206,16 @@
       "queue_km": 2.9,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Aire de service San Gottardo Sud, au kilomè",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     },
     {
       "road": "A2",
