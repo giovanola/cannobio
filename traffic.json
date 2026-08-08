@@ -1,16 +1,16 @@
 {
-  "updated": "2026-08-08T18:15:04.538574+00:00",
+  "updated": "2026-08-08T18:59:16.142769+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 199,
-  "tunnel_incidents": 2,
+  "total_incidents": 194,
+  "tunnel_incidents": 1,
   "tunnel": {
-    "status": "high",
+    "status": "info",
     "north": {
       "severity": "medium",
       "delay_min": 10,
       "queue_m": null,
       "wait_min": null,
-      "text": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: H2 Airolo -> Flüelen entre Col Col du St-Gothard et Jonction autoroutière Göschenen Situati",
+      "text": "Tunnel gesperrt (ab 10.08.2026)",
       "queue_km": 1.0
     },
     "south": {
@@ -18,8 +18,8 @@
       "delay_min": 10,
       "queue_m": null,
       "wait_min": null,
-      "text": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: H2 Airolo -> Flüelen entre Col Col du St-Gothard et Jonction autoroutière Göschenen Situati",
-      "queue_km": 11.0
+      "text": "Tunnel gesperrt (ab 10.08.2026)",
+      "queue_km": 1.0
     }
   },
   "incidents_north": [
@@ -36,6 +36,16 @@
     {
       "road": "A2",
       "description": "Stau Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Sud et Tunnel Tunnel de S. Nicolao Situation: bouchon",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt Ursache: Unfall Aufräumarbeiten | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel du Dosso di Taverne et Jonction autoroutière Rivera Situation: fermé Raison: accident travaux de",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -195,7 +205,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Mendrisio et Jonction autoroutière Rivera Situation: trafic en accordéon Raison: surchar",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Bâle entre Jonction autoroutière Lucerne-Horw et Jonction autoroutière Emmen-Sud Situation: trafic en accordéon Raison: surc",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -205,47 +215,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Bâle entre Jonction autoroutière Stansstad et Jonction autoroutière Emmen-Sud Situation: bouchon Raison",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: H2 Airolo -> Flüelen entre Col Col du St-Gothard et Jonction autoroutière Göschenen Situation: trafic en accordéon Raison: surcharge de trafi",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: vorausgegangener Unfall Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Melide/Bissone et Jonction autoroutière Rivera ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 11.0 Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Melide/Bissone et Tunnel Tunnel du Dosso di Taverne Situation: bouchon longueur [km] 1",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": 11.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A4 Altdorf -> Brunnen entre Localité Flüelen et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic | Revocato: A4 Al",
+      "description": "Stau Ursache: vorausgegangener Unfall Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Melide/Bissone et Tunnel Tunnel du Dosso di Tav",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -1987,8 +1957,8 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Révoqué: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Revocato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
+      "description": "Strecke gesperrt Ursache: Unfall Aufräumarbeiten | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel du Dosso di Taverne et Jonction autoroutière Rivera Situation: fermé Raison: accident travaux de",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -2137,7 +2107,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Mendrisio et Jonction autoroutière Rivera Situation: trafic en accordéon Raison: surchar",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Bâle entre Jonction autoroutière Lucerne-Horw et Jonction autoroutière Emmen-Sud Situation: trafic en accordéon Raison: surc",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2147,57 +2117,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Bâle entre Jonction autoroutière Stansstad et Jonction autoroutière Emmen-Sud Situation: bouchon Raison",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: H2 Airolo -> Flüelen entre Col Col du St-Gothard et Jonction autoroutière Göschenen Situation: trafic en accordéon Raison: surcharge de trafi",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: vorausgegangener Unfall Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Melide/Bissone et Jonction autoroutière Rivera ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 11.0 Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Melide/Bissone et Tunnel Tunnel du Dosso di Taverne Situation: bouchon longueur [km] 1",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": 11.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: ",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A4 Altdorf -> Brunnen entre Localité Flüelen et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic | Revocato: A4 Al",
+      "description": "Stau Ursache: vorausgegangener Unfall Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Melide/Bissone et Tunnel Tunnel du Dosso di Tav",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -3949,8 +3869,8 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Révoqué: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Revocato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
+      "description": "Strecke gesperrt Ursache: Unfall Aufräumarbeiten | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel du Dosso di Taverne et Jonction autoroutière Rivera Situation: fermé Raison: accident travaux de",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -4119,7 +4039,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Mendrisio et Jonction autoroutière Rivera Situation: trafic en accordéon Raison: surchar",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Bâle entre Jonction autoroutière Lucerne-Horw et Jonction autoroutière Emmen-Sud Situation: trafic en accordéon Raison: surc",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4129,57 +4049,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Bâle entre Jonction autoroutière Stansstad et Jonction autoroutière Emmen-Sud Situation: bouchon Raison",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: H2 Airolo -> Flüelen entre Col Col du St-Gothard et Jonction autoroutière Göschenen Situation: trafic en accordéon Raison: surcharge de trafi",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: vorausgegangener Unfall Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Melide/Bissone et Jonction autoroutière Rivera ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 11.0 Ursache: Verkehrsüberlastung | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Melide/Bissone et Tunnel Tunnel du Dosso di Taverne Situation: bouchon longueur [km] 1",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": 11.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: ",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A4 Altdorf -> Brunnen entre Localité Flüelen et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic | Revocato: A4 Al",
+      "description": "Stau Ursache: vorausgegangener Unfall Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Melide/Bissone et Tunnel Tunnel du Dosso di Tav",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
