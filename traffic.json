@@ -1,13 +1,13 @@
 {
-  "updated": "2026-08-09T18:16:44.745923+00:00",
+  "updated": "2026-08-09T19:03:33.849852+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 202,
+  "total_incidents": 200,
   "tunnel_incidents": 1,
   "tunnel": {
     "status": "info",
     "north": {
-      "severity": "high",
-      "delay_min": 15,
+      "severity": "medium",
+      "delay_min": 10,
       "queue_m": null,
       "wait_min": null,
       "text": "Tunnel gesperrt (ab 10.08.2026)",
@@ -15,11 +15,11 @@
     },
     "south": {
       "severity": "high",
-      "delay_min": 30,
+      "delay_min": 20,
       "queue_m": null,
       "wait_min": null,
       "text": "Tunnel gesperrt (ab 10.08.2026)",
-      "queue_km": 3.0
+      "queue_km": 2.0
     }
   },
   "incidents_north": [
@@ -55,7 +55,7 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A13 Bellinzone <-> S. Bernardino Tunnel San Bernardino-Tunnel Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A13 ",
+      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 St-Gothard <-> Lucerne Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 S. Gottar",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -65,10 +65,10 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Technische Probleme | Libéré: A2 St-Gothard <-> Lucerne Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Approvato: A2 S. Gottar",
+      "description": "Stau Ursache: Unterhaltsarbeiten Verkehrsführung: rechter Fahrstreifen gesperrt Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Egerkingen et Jonction auto",
       "direction": "both",
       "severity": "critical",
-      "delay_min": null,
+      "delay_min": 10,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -225,7 +225,7 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Tunnel Tunnel du Schwarzwald Situation: trafic en accordéon Raison: surcharge de t",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Passstrasse et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | Re",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -235,17 +235,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de tr",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Tunnel Tunnel de Ebenrain et Jonction autoroutière Eptingen Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Basel ->",
+      "description": "stockender Verkehr | Révoqué: A2 St-Gothard -> Lucerne entre Jonction autoroutière Hergiswil Nord et Tunnel Tunnel du Sonnenberg Situation: trafic en accordéon | Revocato: A2 S. Gottardo -> Luzern tra",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -255,30 +245,20 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Lucerne entre Aire de service St-Gothard et Echangeur Echangeur d'Altdorf Situation: bouchon Raison: surcharge de trafic | Revocato: A2 S.",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Passstrasse et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | App",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur du Lopper et Tunnel Tunnel du Sonnenberg Situation: bouchon Complément 1: retards Nbre. [min] 10 |",
+      "description": "Stau Ursache: Unterhaltsarbeiten Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur d'Augst et Jonction autoroutière Arisdorf Situation: bouchon Raison: travaux",
       "direction": "both",
       "severity": "high",
       "delay_min": 10,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A4 Altdorf -> Brunnen entre Tunnel Tunnel de Flüelen et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic | Revocat",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -2037,7 +2017,7 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A13 Bellinzone <-> S. Bernardino Tunnel San Bernardino-Tunnel Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A13 ",
+      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 St-Gothard <-> Lucerne Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 S. Gottar",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -2047,10 +2027,10 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Technische Probleme | Libéré: A2 St-Gothard <-> Lucerne Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Approvato: A2 S. Gottar",
+      "description": "Stau Ursache: Unterhaltsarbeiten Verkehrsführung: rechter Fahrstreifen gesperrt Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Egerkingen et Jonction auto",
       "direction": "both",
       "severity": "critical",
-      "delay_min": null,
+      "delay_min": 10,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -2197,17 +2177,27 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 3 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bouc",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Passstrasse et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | Re",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
       "direction": "south",
       "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
+      "delay_min": 20,
+      "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Tunnel Tunnel du Schwarzwald Situation: trafic en accordéon Raison: surcharge de t",
+      "description": "stockender Verkehr | Révoqué: A2 St-Gothard -> Lucerne entre Jonction autoroutière Hergiswil Nord et Tunnel Tunnel du Sonnenberg Situation: trafic en accordéon | Revocato: A2 S. Gottardo -> Luzern tra",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2217,50 +2207,20 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de tr",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Tunnel Tunnel de Ebenrain et Jonction autoroutière Eptingen Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Basel ->",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Lucerne entre Aire de service St-Gothard et Echangeur Echangeur d'Altdorf Situation: bouchon Raison: surcharge de trafic | Revocato: A2 S.",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Passstrasse et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | App",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur du Lopper et Tunnel Tunnel du Sonnenberg Situation: bouchon Complément 1: retards Nbre. [min] 10 |",
+      "description": "Stau Ursache: Unterhaltsarbeiten Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur d'Augst et Jonction autoroutière Arisdorf Situation: bouchon Raison: travaux",
       "direction": "both",
       "severity": "high",
       "delay_min": 10,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A4 Altdorf -> Brunnen entre Tunnel Tunnel de Flüelen et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic | Revocat",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -4029,7 +3989,7 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A13 Bellinzone <-> S. Bernardino Tunnel San Bernardino-Tunnel Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A13 ",
+      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 St-Gothard <-> Lucerne Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 S. Gottar",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -4039,10 +3999,10 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Technische Probleme | Libéré: A2 St-Gothard <-> Lucerne Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Approvato: A2 S. Gottar",
+      "description": "Stau Ursache: Unterhaltsarbeiten Verkehrsführung: rechter Fahrstreifen gesperrt Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Egerkingen et Jonction auto",
       "direction": "both",
       "severity": "critical",
-      "delay_min": null,
+      "delay_min": 10,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -4209,17 +4169,27 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 3 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bouc",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Passstrasse et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | Re",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
       "direction": "south",
       "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
+      "delay_min": 20,
+      "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Tunnel Tunnel du Schwarzwald Situation: trafic en accordéon Raison: surcharge de t",
+      "description": "stockender Verkehr | Révoqué: A2 St-Gothard -> Lucerne entre Jonction autoroutière Hergiswil Nord et Tunnel Tunnel du Sonnenberg Situation: trafic en accordéon | Revocato: A2 S. Gottardo -> Luzern tra",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4229,50 +4199,20 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de tr",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Tunnel Tunnel de Ebenrain et Jonction autoroutière Eptingen Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Basel ->",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Lucerne entre Aire de service St-Gothard et Echangeur Echangeur d'Altdorf Situation: bouchon Raison: surcharge de trafic | Revocato: A2 S.",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Passstrasse et Tunnel San Bernardino-Tunnel Situation: bouchon Raison: surcharge de trafic | App",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur du Lopper et Tunnel Tunnel du Sonnenberg Situation: bouchon Complément 1: retards Nbre. [min] 10 |",
+      "description": "Stau Ursache: Unterhaltsarbeiten Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur d'Augst et Jonction autoroutière Arisdorf Situation: bouchon Raison: travaux",
       "direction": "both",
       "severity": "high",
       "delay_min": 10,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A4 Altdorf -> Brunnen entre Tunnel Tunnel de Flüelen et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic | Revocat",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
