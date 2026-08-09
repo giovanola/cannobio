@@ -1,17 +1,17 @@
 {
-  "updated": "2026-08-09T10:47:59.073088+00:00",
+  "updated": "2026-08-09T11:13:50.870902+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 202,
+  "total_incidents": 203,
   "tunnel_incidents": 1,
   "tunnel": {
     "status": "info",
     "north": {
       "severity": "high",
-      "delay_min": 30,
+      "delay_min": 40,
       "queue_m": null,
       "wait_min": null,
       "text": "Tunnel gesperrt (ab 10.08.2026)",
-      "queue_km": 3.0
+      "queue_km": 4.0
     },
     "south": {
       "severity": "high",
@@ -37,6 +37,16 @@
       "road": "A2",
       "description": "Stau Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Sud et Tunnel Tunnel de S. Nicolao Situation: bouchon",
       "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
+      "direction": "north",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -235,16 +245,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A4 Zurich -> Altdorf entre Jonction autoroutière Brunnen et Localité Sisikon Situation: bouchon Raison: surcharge de trafic | Approvato: A4 Zürich -> Altdor",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Tunnel Tunnel du Schwarzwald Situation: bouchon Raison: surcha",
       "direction": "both",
       "severity": "high",
@@ -265,18 +265,28 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Flüelen -> Göschenen entre Localité Erstfeld et Jonction autoroutière Göschenen Situat",
       "direction": "north",
       "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Flüelen -> Göschenen entre Localité Erstfeld et Jonction autoroutière Göschenen Situat",
+      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situation:",
       "direction": "north",
+      "severity": "high",
+      "delay_min": 40,
+      "queue_km": 4.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A4 Zurich -> Altdorf entre Jonction autoroutière Brunnen et Localité Sisikon Situation: bouchon Raison: surcharge de trafic | Revocato: A4 Zürich -> Altdor",
+      "direction": "both",
       "severity": "high",
       "delay_min": null,
       "queue_km": null,
@@ -2217,16 +2227,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A4 Zurich -> Altdorf entre Jonction autoroutière Brunnen et Localité Sisikon Situation: bouchon Raison: surcharge de trafic | Approvato: A4 Zürich -> Altdor",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Tunnel Tunnel du Schwarzwald Situation: bouchon Raison: surcha",
       "direction": "both",
       "severity": "high",
@@ -2238,6 +2238,16 @@
     {
       "road": "A2",
       "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Lugano-Nord et Tunnel Tunnel du Dosso di Taverne Situation: trafic en accordéon Raison: s",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A4 Zurich -> Altdorf entre Jonction autoroutière Brunnen et Localité Sisikon Situation: bouchon Raison: surcharge de trafic | Revocato: A4 Zürich -> Altdor",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -3999,6 +4009,16 @@
     },
     {
       "road": "A2",
+      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
+      "direction": "north",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -4209,16 +4229,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A4 Zurich -> Altdorf entre Jonction autoroutière Brunnen et Localité Sisikon Situation: bouchon Raison: surcharge de trafic | Approvato: A4 Zürich -> Altdor",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Tunnel Tunnel du Schwarzwald Situation: bouchon Raison: surcha",
       "direction": "both",
       "severity": "high",
@@ -4239,18 +4249,28 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Flüelen -> Göschenen entre Localité Erstfeld et Jonction autoroutière Göschenen Situat",
       "direction": "north",
       "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Flüelen -> Göschenen entre Localité Erstfeld et Jonction autoroutière Göschenen Situat",
+      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situation:",
       "direction": "north",
+      "severity": "high",
+      "delay_min": 40,
+      "queue_km": 4.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A4 Zurich -> Altdorf entre Jonction autoroutière Brunnen et Localité Sisikon Situation: bouchon Raison: surcharge de trafic | Revocato: A4 Zürich -> Altdor",
+      "direction": "both",
       "severity": "high",
       "delay_min": null,
       "queue_km": null,
