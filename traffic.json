@@ -1,25 +1,25 @@
 {
-  "updated": "2026-08-11T09:37:57.602371+00:00",
+  "updated": "2026-08-11T10:29:20.474149+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 216,
-  "tunnel_incidents": 3,
+  "total_incidents": 215,
+  "tunnel_incidents": 2,
   "tunnel": {
-    "status": "critical",
+    "status": "medium",
     "north": {
-      "severity": "medium",
-      "delay_min": 10,
+      "severity": "high",
+      "delay_min": 20,
       "queue_m": null,
       "wait_min": null,
-      "text": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en pa",
-      "queue_km": 1.0
+      "text": "Verkehrsbehinderung (ab 10.08.2026)",
+      "queue_km": 2.0
     },
     "south": {
       "severity": "high",
-      "delay_min": 30,
+      "delay_min": 40,
       "queue_m": null,
       "wait_min": null,
-      "text": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en pa",
-      "queue_km": 3.0
+      "text": "Verkehrsbehinderung (ab 10.08.2026)",
+      "queue_km": 4.0
     }
   },
   "incidents_north": [
@@ -45,12 +45,12 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 S. Gottardo -> Chiasso Galleria",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de Pardorea et Tunnel Tunnel du Piottino Situation: tr",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": true,
+      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -205,11 +205,11 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
       "direction": "north",
       "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
+      "delay_min": 20,
+      "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -291,16 +291,6 @@
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 11.08.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 6.0,
-      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -2167,12 +2157,12 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 S. Gottardo -> Chiasso Galleria",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de Pardorea et Tunnel Tunnel du Piottino Situation: tr",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": true,
+      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -2307,21 +2297,21 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Badischer Bahnhof Situation: trafic en accordéon Raison:",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
       "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": 40,
+      "queue_km": 4.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2413,16 +2403,6 @@
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 11.08.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 6.0,
-      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -4289,12 +4269,12 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 S. Gottardo -> Chiasso Galleria",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de Pardorea et Tunnel Tunnel du Piottino Situation: tr",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": true,
+      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -4449,16 +4429,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Badischer Bahnhof Situation: trafic en accordéon Raison:",
       "direction": "both",
       "severity": "high",
@@ -4469,11 +4439,21 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
       "direction": "north",
       "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
+      "delay_min": 20,
+      "queue_km": 2.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bo",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": 40,
+      "queue_km": 4.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4565,16 +4545,6 @@
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 11.08.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 6.0,
-      "is_tunnel": false,
       "night_only": false
     },
     {
