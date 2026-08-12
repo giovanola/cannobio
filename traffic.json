@@ -1,13 +1,13 @@
 {
-  "updated": "2026-08-12T03:30:14.454905+00:00",
+  "updated": "2026-08-12T05:14:47.105958+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 212,
+  "total_incidents": 215,
   "tunnel_incidents": 1,
   "tunnel": {
     "status": "clear",
     "north": {
-      "severity": "medium",
-      "delay_min": 10,
+      "severity": "high",
+      "delay_min": 15,
       "queue_m": null,
       "wait_min": null,
       "text": null,
@@ -45,7 +45,7 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 Lucerne <-> Bâle Tunnel Tunnel Schweizerhalle Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 Luzern <-> Bas",
+      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 Lucerne -> St-Gothard Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 Luzern -> ",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -195,7 +195,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Basel ",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Breite Situation: trafic en accordéon Raison: surcharge de",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -205,7 +205,17 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Pratteln et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Luzer",
+      "description": "Stau Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 St-Gothard -> Lucerne entre Jonction autoroutière Stansstad et Jonction autoroutiè",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Pratteln et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon Raison: surcharge de trafic | App",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -290,6 +300,16 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 33.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Nord et Tunnel Tunnel de la Collina d'Oro Situation: trafic perturbé Raison: véhicule",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2132,6 +2152,16 @@
       "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 08.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.5,
+      "is_tunnel": false,
+      "night_only": false
     }
   ],
   "incidents_south": [
@@ -2147,7 +2177,7 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 Lucerne <-> Bâle Tunnel Tunnel Schweizerhalle Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 Luzern <-> Bas",
+      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 Lucerne -> St-Gothard Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 Luzern -> ",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -2287,7 +2317,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Basel ",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Breite Situation: trafic en accordéon Raison: surcharge de",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2297,7 +2327,17 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Pratteln et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Luzer",
+      "description": "Stau Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 St-Gothard -> Lucerne entre Jonction autoroutière Stansstad et Jonction autoroutiè",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Pratteln et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon Raison: surcharge de trafic | App",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2382,6 +2422,16 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 33.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Nord et Tunnel Tunnel de la Collina d'Oro Situation: trafic perturbé Raison: véhicule",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4214,6 +4264,16 @@
       "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 08.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.5,
+      "is_tunnel": false,
+      "night_only": false
     }
   ],
   "incidents_all": [
@@ -4239,7 +4299,7 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 Lucerne <-> Bâle Tunnel Tunnel Schweizerhalle Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 Luzern <-> Bas",
+      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 Lucerne -> St-Gothard Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 Luzern -> ",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -4399,7 +4459,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Basel ",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Breite Situation: trafic en accordéon Raison: surcharge de",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4409,7 +4469,17 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Pratteln et Tunnel Tunnel Schweizerhalle Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Luzer",
+      "description": "Stau Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 St-Gothard -> Lucerne entre Jonction autoroutière Stansstad et Jonction autoroutiè",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Pratteln et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon Raison: surcharge de trafic | App",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4494,6 +4564,16 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 33.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Nord et Tunnel Tunnel de la Collina d'Oro Situation: trafic perturbé Raison: véhicule",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -6336,6 +6416,16 @@
       "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 08.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.5,
+      "is_tunnel": false,
+      "night_only": false
     }
   ]
 }
