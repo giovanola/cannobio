@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-12T15:35:52.464557+00:00",
+  "updated": "2026-08-12T16:31:20.227026+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 232,
+  "total_incidents": 230,
   "tunnel_incidents": 2,
   "tunnel": {
     "status": "info",
@@ -15,11 +15,11 @@
     },
     "south": {
       "severity": "high",
-      "delay_min": 30,
+      "delay_min": 20,
       "queue_m": null,
       "wait_min": null,
       "text": "Verkehrsbehinderung (ab 31.08.2026)",
-      "queue_km": 3.0
+      "queue_km": 2.0
     }
   },
   "incidents_north": [
@@ -195,10 +195,40 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Tunnel Tunnel du Seelisberg Situation: bouchon Raison: travaux d",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: H17 Altdorf <-> Uznach entre Localité Glaris et Jonction autoroutière Näfels Situation: trafic en accordéon Raison: surcharge de trafic | Appr",
       "direction": "both",
       "severity": "high",
-      "delay_min": 20,
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Unfall Verkehrsführung: mittlerer Fahrstreifen blockiert | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Echangeur Echangeur de Gellert Situation: bouchon Raison: ac",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Echangeur Echangeur d'Augst Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Basel -",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Tunnel Tunnel du Seelisberg Situation: bouchon Raison: travaux d",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -215,37 +245,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Unfall Verkehrsführung: mittlerer Fahrstreifen blockiert | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Echangeur Echangeur de Gellert Situation: bouchon Raison: acc",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Pratteln et Echangeur Echangeur d'Augst Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Basel ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de trafic | Approvato: A4 Altdorf -> Brun",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: H17 Altdorf <-> Uznach entre Localité Glaris et Jonction autoroutière Näfels Situation: trafic en accordéon Raison: surcharge de trafic | Appr",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -310,16 +310,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 12.08.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 33.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2302,16 +2292,6 @@
       "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 Lucerne -> Bâle entre Jonction autoroutière Dagmersellen et Jonction autoroutière Reiden Situation: danger Raison: objets sur la chaussée | R",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ],
   "incidents_south": [
@@ -2477,10 +2457,40 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Tunnel Tunnel du Seelisberg Situation: bouchon Raison: travaux d",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: H17 Altdorf <-> Uznach entre Localité Glaris et Jonction autoroutière Näfels Situation: trafic en accordéon Raison: surcharge de trafic | Appr",
       "direction": "both",
       "severity": "high",
-      "delay_min": 20,
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Unfall Verkehrsführung: mittlerer Fahrstreifen blockiert | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Echangeur Echangeur de Gellert Situation: bouchon Raison: ac",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Echangeur Echangeur d'Augst Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Basel -",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Tunnel Tunnel du Seelisberg Situation: bouchon Raison: travaux d",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -2497,21 +2507,11 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Unfall Verkehrsführung: mittlerer Fahrstreifen blockiert | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Echangeur Echangeur de Gellert Situation: bouchon Raison: acc",
-      "direction": "both",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "direction": "south",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Pratteln et Echangeur Echangeur d'Augst Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Basel ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 20,
+      "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2522,26 +2522,6 @@
       "severity": "high",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: H17 Altdorf <-> Uznach entre Localité Glaris et Jonction autoroutière Näfels Situation: trafic en accordéon Raison: surcharge de trafic | Appr",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2602,16 +2582,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 12.08.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 33.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4582,16 +4552,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 Lucerne -> Bâle entre Jonction autoroutière Dagmersellen et Jonction autoroutière Reiden Situation: danger Raison: objets sur la chaussée | R",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
@@ -4789,10 +4749,40 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Tunnel Tunnel du Seelisberg Situation: bouchon Raison: travaux d",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: H17 Altdorf <-> Uznach entre Localité Glaris et Jonction autoroutière Näfels Situation: trafic en accordéon Raison: surcharge de trafic | Appr",
       "direction": "both",
       "severity": "high",
-      "delay_min": 20,
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Unfall Verkehrsführung: mittlerer Fahrstreifen blockiert | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Echangeur Echangeur de Gellert Situation: bouchon Raison: ac",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Echangeur Echangeur d'Augst Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Basel -",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Tunnel Tunnel du Seelisberg Situation: bouchon Raison: travaux d",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -4809,21 +4799,11 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Unfall Verkehrsführung: mittlerer Fahrstreifen blockiert | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Echangeur Echangeur de Gellert Situation: bouchon Raison: acc",
-      "direction": "both",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "direction": "south",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Pratteln et Echangeur Echangeur d'Augst Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Basel ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 20,
+      "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4834,26 +4814,6 @@
       "severity": "high",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: H17 Altdorf <-> Uznach entre Localité Glaris et Jonction autoroutière Näfels Situation: trafic en accordéon Raison: surcharge de trafic | Appr",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4914,16 +4874,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 12.08.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 33.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -6904,16 +6854,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 Lucerne -> Bâle entre Jonction autoroutière Dagmersellen et Jonction autoroutière Reiden Situation: danger Raison: objets sur la chaussée | R",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
