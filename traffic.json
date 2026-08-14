@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-14T17:29:59.372939+00:00",
+  "updated": "2026-08-14T18:25:09.395412+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 236,
+  "total_incidents": 232,
   "tunnel_incidents": 2,
   "tunnel": {
     "status": "info",
@@ -14,12 +14,12 @@
       "queue_km": 2.0
     },
     "south": {
-      "severity": "high",
-      "delay_min": 20,
+      "severity": "medium",
+      "delay_min": 10,
       "queue_m": null,
       "wait_min": null,
       "text": "Verkehrsbehinderung (ab 31.08.2026)",
-      "queue_km": 2.0
+      "queue_km": 1.0
     }
   },
   "incidents_north": [
@@ -55,17 +55,27 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Pannenfahrzeug defekter LKW Verkehrsführung: rechter Fahrstreifen gesperrt Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Beckenried e",
+      "description": "Tunnel gesperrt (ab 10.08.2026)",
       "direction": "both",
       "severity": "critical",
-      "delay_min": 15,
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 St-Gothard -> Lucerne Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 S. Gottard",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 St-Gothard -> Lucerne Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 S. Gottard",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug defekter LKW Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Beckenried et Tunnel Tunnel du Se",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -225,56 +235,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
-      "direction": "north",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke blockiert Ursache: Verkehrsüberlastung ausgenommen Lokalverkehr | Révoqué: Gotthardstrasse 78, 6410 Arth, Switzerland <-> Gotthardstrasse 99, 6410 Arth, Switzerland  Situation: bloqué Raison: ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "((TIC/TrafficCongestion : 3026-270/220))other | Gotthardstrasse 99, 6410 Arth, Switzerland | Gotthardstrasse 78, 6410 Arth, Switzerland",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Lucerne Echangeur Echangeur d'Altdorf Situation: bouchon dans la sortie Raison: surcharge de trafic | Revocato: A2 S. Gott",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> St-Gothard entre Echangeur Echangeur du Rotsee et Jonction autoroutière Lucerne-Kriens Situation: trafic en accordéon Raison: surc",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon",
       "direction": "both",
       "severity": "high",
@@ -285,17 +245,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Unfall Verkehrsführung: linker Fahrstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Sursee et Jonction autoroutière Reiden ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A4 Brunnen -> Altdorf entre Jonction autoroutière Brunnen-Sud et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic |",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A4 Brunnen -> Altdorf entre Jonction autoroutière Brunnen-Sud et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic ",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -305,7 +255,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 St-Gothard -> Bâle entre Jonction autoroutière Stans-Sud et Jonction autoroutière Emmen-Sud Situation: bouchon Raison",
+      "description": "Stau Ursache: Unfall Verkehrsführung: linker Fahrstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Sursee et Jonction autoroutière Reiden ",
       "direction": "both",
       "severity": "high",
       "delay_min": 20,
@@ -315,13 +265,53 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de tr",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Révoqué: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de t",
       "direction": "both",
       "severity": "high",
       "delay_min": 15,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": 10,
+      "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": 20,
+      "queue_km": 2.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Bâle entre Jonction autoroutière Hergiswil Nord et Jonction autoroutière Emmen-Sud Situation: trafic en accordéon Raison: su",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -365,6 +355,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung Länge [km] 0.2 (ab 09.03.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "stockender Verkehr Länge [km] 7.0 Ursache: Pannenfahrzeug | Libéré: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Grono et Jonction autoroutière Lostallo Situation: trafic en accordéon l",
       "direction": "both",
       "severity": "medium",
@@ -385,6 +385,26 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 20.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 2.9,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 1.9,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
       "direction": "both",
       "severity": "info",
@@ -392,16 +412,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -682,16 +692,6 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Länge [km] 0.2 (ab 09.03.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -1405,16 +1405,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 20.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.9,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 31.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -1681,16 +1671,6 @@
       "delay_min": null,
       "queue_km": 0.55,
       "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 10.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
       "night_only": true
     },
     {
@@ -2305,16 +2285,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.9,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 17.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -2342,16 +2312,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "((TIC/TrafficType : for local traffic : 6002-514/387))other | Gotthardstrasse 99, 6410 Arth, Switzerland | Gotthardstrasse 78, 6410 Arth, Switzerland",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ],
   "incidents_south": [
@@ -2377,6 +2337,16 @@
     },
     {
       "road": "A2",
+      "description": "Tunnel gesperrt (ab 10.08.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
       "direction": "south",
       "severity": "critical",
@@ -2387,17 +2357,17 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Pannenfahrzeug defekter LKW Verkehrsführung: rechter Fahrstreifen gesperrt Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Beckenried e",
+      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 St-Gothard -> Lucerne Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 S. Gottard",
       "direction": "both",
       "severity": "critical",
-      "delay_min": 15,
+      "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 St-Gothard -> Lucerne Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 S. Gottard",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug defekter LKW Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Beckenried et Tunnel Tunnel du Se",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -2547,46 +2517,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke blockiert Ursache: Verkehrsüberlastung ausgenommen Lokalverkehr | Révoqué: Gotthardstrasse 78, 6410 Arth, Switzerland <-> Gotthardstrasse 99, 6410 Arth, Switzerland  Situation: bloqué Raison: ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "((TIC/TrafficCongestion : 3026-270/220))other | Gotthardstrasse 99, 6410 Arth, Switzerland | Gotthardstrasse 78, 6410 Arth, Switzerland",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Lucerne Echangeur Echangeur d'Altdorf Situation: bouchon dans la sortie Raison: surcharge de trafic | Revocato: A2 S. Gott",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> St-Gothard entre Echangeur Echangeur du Rotsee et Jonction autoroutière Lucerne-Kriens Situation: trafic en accordéon Raison: surc",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon",
       "direction": "both",
       "severity": "high",
@@ -2597,27 +2527,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Unfall Verkehrsführung: linker Fahrstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Sursee et Jonction autoroutière Reiden ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A4 Brunnen -> Altdorf entre Jonction autoroutière Brunnen-Sud et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic |",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A4 Brunnen -> Altdorf entre Jonction autoroutière Brunnen-Sud et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic ",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2627,7 +2537,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 St-Gothard -> Bâle entre Jonction autoroutière Stans-Sud et Jonction autoroutière Emmen-Sud Situation: bouchon Raison",
+      "description": "Stau Ursache: Unfall Verkehrsführung: linker Fahrstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Sursee et Jonction autoroutière Reiden ",
       "direction": "both",
       "severity": "high",
       "delay_min": 20,
@@ -2637,13 +2547,43 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de tr",
+      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": 10,
+      "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Révoqué: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de t",
       "direction": "both",
       "severity": "high",
       "delay_min": 15,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Bâle entre Jonction autoroutière Hergiswil Nord et Jonction autoroutière Emmen-Sud Situation: trafic en accordéon Raison: su",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -2687,6 +2627,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung Länge [km] 0.2 (ab 09.03.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "stockender Verkehr Länge [km] 7.0 Ursache: Pannenfahrzeug | Libéré: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Grono et Jonction autoroutière Lostallo Situation: trafic en accordéon l",
       "direction": "both",
       "severity": "medium",
@@ -2707,6 +2657,26 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 20.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 2.9,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 1.9,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
       "direction": "both",
       "severity": "info",
@@ -2714,16 +2684,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -3004,16 +2964,6 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Länge [km] 0.2 (ab 09.03.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -3717,16 +3667,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 20.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.9,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 31.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -3993,16 +3933,6 @@
       "delay_min": null,
       "queue_km": 0.55,
       "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 10.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
       "night_only": true
     },
     {
@@ -4617,16 +4547,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.9,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 17.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -4654,16 +4574,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "((TIC/TrafficType : for local traffic : 6002-514/387))other | Gotthardstrasse 99, 6410 Arth, Switzerland | Gotthardstrasse 78, 6410 Arth, Switzerland",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ],
   "incidents_all": [
@@ -4699,6 +4609,16 @@
     },
     {
       "road": "A2",
+      "description": "Tunnel gesperrt (ab 10.08.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
       "direction": "south",
       "severity": "critical",
@@ -4709,17 +4629,17 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Pannenfahrzeug defekter LKW Verkehrsführung: rechter Fahrstreifen gesperrt Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Beckenried e",
+      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 St-Gothard -> Lucerne Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 S. Gottard",
       "direction": "both",
       "severity": "critical",
-      "delay_min": 15,
+      "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Technische Probleme | Révoqué: A2 St-Gothard -> Lucerne Tunnel Tunnel du Seelisberg Situation: tunnel fermé Raison: en raison de problèmes techniques | Revocato: A2 S. Gottard",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug defekter LKW Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Beckenried et Tunnel Tunnel du Se",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -4889,56 +4809,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
-      "direction": "north",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke blockiert Ursache: Verkehrsüberlastung ausgenommen Lokalverkehr | Révoqué: Gotthardstrasse 78, 6410 Arth, Switzerland <-> Gotthardstrasse 99, 6410 Arth, Switzerland  Situation: bloqué Raison: ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "((TIC/TrafficCongestion : 3026-270/220))other | Gotthardstrasse 99, 6410 Arth, Switzerland | Gotthardstrasse 78, 6410 Arth, Switzerland",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Lucerne Echangeur Echangeur d'Altdorf Situation: bouchon dans la sortie Raison: surcharge de trafic | Revocato: A2 S. Gott",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> St-Gothard entre Echangeur Echangeur du Rotsee et Jonction autoroutière Lucerne-Kriens Situation: trafic en accordéon Raison: surc",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon",
       "direction": "both",
       "severity": "high",
@@ -4949,27 +4819,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Unfall Verkehrsführung: linker Fahrstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Sursee et Jonction autoroutière Reiden ",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A4 Brunnen -> Altdorf entre Jonction autoroutière Brunnen-Sud et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic |",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A4 Brunnen -> Altdorf entre Jonction autoroutière Brunnen-Sud et Localité Sisikon Situation: trafic en accordéon Raison: surcharge de trafic ",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4979,7 +4829,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 St-Gothard -> Bâle entre Jonction autoroutière Stans-Sud et Jonction autoroutière Emmen-Sud Situation: bouchon Raison",
+      "description": "Stau Ursache: Unfall Verkehrsführung: linker Fahrstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Sursee et Jonction autoroutière Reiden ",
       "direction": "both",
       "severity": "high",
       "delay_min": 20,
@@ -4989,13 +4839,63 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de tr",
+      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": 10,
+      "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Révoqué: A4 Altdorf -> Brunnen entre Echangeur Echangeur d'Altdorf et Localité Sisikon Situation: bouchon Raison: surcharge de t",
       "direction": "both",
       "severity": "high",
       "delay_min": 15,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": 10,
+      "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": 20,
+      "queue_km": 2.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Bâle entre Jonction autoroutière Hergiswil Nord et Jonction autoroutière Emmen-Sud Situation: trafic en accordéon Raison: su",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -5039,6 +4939,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung Länge [km] 0.2 (ab 09.03.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "stockender Verkehr Länge [km] 7.0 Ursache: Pannenfahrzeug | Libéré: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière Grono et Jonction autoroutière Lostallo Situation: trafic en accordéon l",
       "direction": "both",
       "severity": "medium",
@@ -5059,6 +4969,26 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 20.07.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 2.9,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 1.9,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
       "direction": "both",
       "severity": "info",
@@ -5066,16 +4996,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -5356,16 +5276,6 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Länge [km] 0.2 (ab 09.03.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -6079,16 +5989,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 20.07.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.9,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 31.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -6355,16 +6255,6 @@
       "delay_min": null,
       "queue_km": 0.55,
       "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 10.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
       "night_only": true
     },
     {
@@ -6979,16 +6869,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.9,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 17.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -7016,16 +6896,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "((TIC/TrafficType : for local traffic : 6002-514/387))other | Gotthardstrasse 99, 6410 Arth, Switzerland | Gotthardstrasse 78, 6410 Arth, Switzerland",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ]
 }
