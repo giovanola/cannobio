@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-15T09:26:57.936882+00:00",
+  "updated": "2026-08-15T09:48:34.791405+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 230,
+  "total_incidents": 233,
   "tunnel_incidents": 2,
   "tunnel": {
     "status": "info",
@@ -50,6 +50,16 @@
       "severity": "critical",
       "delay_min": null,
       "queue_km": 0.12,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
+      "direction": "north",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -245,16 +255,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Wassen Situation: bouchon dans la sortie Raison: surcharge de trafic | Approvato: A2 Luzern -",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière San Vittore et Jonction autoroutière Lostallo Situation: bouchon Raison: surcharge de trafic | A",
       "direction": "both",
       "severity": "high",
@@ -275,7 +275,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> St-Gothard entre Echangeur Echangeur du Rotsee et Jonction autoroutière Hergiswil Nord Situation: bouchon Rai",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Sud et Jonction autoroutière Hergiswil Nord Situation: bouchon R",
       "direction": "both",
       "severity": "high",
       "delay_min": 10,
@@ -285,8 +285,38 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Unfall Verkehrsführung: Überholstreifen blockiert | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Emmen-Nord et Echangeur Echangeur du Rotsee Situation: bouchon Raison: accident",
+      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> St-Gothard entre Parking Wassen, Dieden et Jonction autoroutière Wassen Situation: bouchon dans la sortie Raison: surcharge de",
       "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Unfall Verkehrsführung: Überholstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Rothenburg et Echangeur Echangeur du Rotsee",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Bellinzone <-> Göschenen entre Localité Faido et Jonction autoroutière Airolo-Nufenen ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen",
+      "direction": "north",
       "severity": "high",
       "delay_min": null,
       "queue_km": null,
@@ -2507,16 +2537,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Wassen Situation: bouchon dans la sortie Raison: surcharge de trafic | Approvato: A2 Luzern -",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière San Vittore et Jonction autoroutière Lostallo Situation: bouchon Raison: surcharge de trafic | A",
       "direction": "both",
       "severity": "high",
@@ -2537,7 +2557,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> St-Gothard entre Echangeur Echangeur du Rotsee et Jonction autoroutière Hergiswil Nord Situation: bouchon Rai",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Sud et Jonction autoroutière Hergiswil Nord Situation: bouchon R",
       "direction": "both",
       "severity": "high",
       "delay_min": 10,
@@ -2547,7 +2567,27 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Unfall Verkehrsführung: Überholstreifen blockiert | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Emmen-Nord et Echangeur Echangeur du Rotsee Situation: bouchon Raison: accident",
+      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> St-Gothard entre Parking Wassen, Dieden et Jonction autoroutière Wassen Situation: bouchon dans la sortie Raison: surcharge de",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Unfall Verkehrsführung: Überholstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Rothenburg et Echangeur Echangeur du Rotsee",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Bellinzone <-> Göschenen entre Localité Faido et Jonction autoroutière Airolo-Nufenen ",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4589,6 +4629,16 @@
     },
     {
       "road": "A2",
+      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
+      "direction": "north",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -4799,16 +4849,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Wassen Situation: bouchon dans la sortie Raison: surcharge de trafic | Approvato: A2 Luzern -",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A13 Bellinzone -> S. Bernardino entre Jonction autoroutière San Vittore et Jonction autoroutière Lostallo Situation: bouchon Raison: surcharge de trafic | A",
       "direction": "both",
       "severity": "high",
@@ -4829,7 +4869,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> St-Gothard entre Echangeur Echangeur du Rotsee et Jonction autoroutière Hergiswil Nord Situation: bouchon Rai",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Sud et Jonction autoroutière Hergiswil Nord Situation: bouchon R",
       "direction": "both",
       "severity": "high",
       "delay_min": 10,
@@ -4839,8 +4879,38 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Unfall Verkehrsführung: Überholstreifen blockiert | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Emmen-Nord et Echangeur Echangeur du Rotsee Situation: bouchon Raison: accident",
+      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> St-Gothard entre Parking Wassen, Dieden et Jonction autoroutière Wassen Situation: bouchon dans la sortie Raison: surcharge de",
       "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Unfall Verkehrsführung: Überholstreifen blockiert Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Rothenburg et Echangeur Echangeur du Rotsee",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Bellinzone <-> Göschenen entre Localité Faido et Jonction autoroutière Airolo-Nufenen ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen",
+      "direction": "north",
       "severity": "high",
       "delay_min": null,
       "queue_km": null,
