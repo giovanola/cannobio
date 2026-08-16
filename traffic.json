@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-16T10:01:08.563120+00:00",
+  "updated": "2026-08-16T10:29:33.410909+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
   "total_incidents": 224,
   "tunnel_incidents": 2,
@@ -7,11 +7,11 @@
     "status": "info",
     "north": {
       "severity": "high",
-      "delay_min": 20,
+      "delay_min": 30,
       "queue_m": null,
       "wait_min": null,
       "text": "Verkehrsbehinderung (ab 31.08.2026)",
-      "queue_km": 2.0
+      "queue_km": 3.0
     },
     "south": {
       "severity": "high",
@@ -55,8 +55,8 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Unfall Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Lugano-Sud et Jonction autoroutière Lugano-Nord Situation: bouchon Ra",
-      "direction": "both",
+      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
+      "direction": "north",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -65,8 +65,8 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
-      "direction": "north",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de la Collina d'Oro et Jonction autoroutière Lugano-Nord Situa",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -225,11 +225,21 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
       "direction": "north",
       "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
+      "delay_min": 30,
+      "queue_km": 3.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Göschenen <-> Flüelen entre Localité Erstfeld et Jonction autoroutière Göschenen Situa",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -290,16 +300,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Faido et Tunnel Tunnel de Piumogna Situation: trafic perturbé Raison: véhicule en panne | Re",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2267,7 +2267,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Unfall Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Lugano-Sud et Jonction autoroutière Lugano-Nord Situation: bouchon Ra",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de la Collina d'Oro et Jonction autoroutière Lugano-Nord Situa",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -2482,16 +2482,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Faido et Tunnel Tunnel de Piumogna Situation: trafic perturbé Raison: véhicule en panne | Re",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4459,8 +4449,8 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Unfall Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Lugano-Sud et Jonction autoroutière Lugano-Nord Situation: bouchon Ra",
-      "direction": "both",
+      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
+      "direction": "north",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -4469,8 +4459,8 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
-      "direction": "north",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de la Collina d'Oro et Jonction autoroutière Lugano-Nord Situa",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -4639,21 +4629,31 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
-      "direction": "north",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Länge [km] 6.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 60 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
       "direction": "south",
       "severity": "high",
       "delay_min": 60,
       "queue_km": 6.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": 30,
+      "queue_km": 3.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Göschenen <-> Flüelen entre Localité Erstfeld et Jonction autoroutière Göschenen Situa",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4714,16 +4714,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 20.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Faido et Tunnel Tunnel de Piumogna Situation: trafic perturbé Raison: véhicule en panne | Re",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
