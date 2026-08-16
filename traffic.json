@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-16T19:17:44.729559+00:00",
+  "updated": "2026-08-16T19:37:03.588938+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 222,
+  "total_incidents": 223,
   "tunnel_incidents": 2,
   "tunnel": {
     "status": "info",
@@ -14,12 +14,12 @@
       "queue_km": 1.0
     },
     "south": {
-      "severity": "high",
-      "delay_min": 20,
+      "severity": "medium",
+      "delay_min": 10,
       "queue_m": null,
       "wait_min": null,
       "text": "Verkehrsbehinderung (ab 31.08.2026)",
-      "queue_km": 2.0
+      "queue_km": 1.0
     }
   },
   "incidents_north": [
@@ -215,6 +215,16 @@
     },
     {
       "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 Lu",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur d'Augst et Tunnel Tunnel d'Arisdorf Situation: bouchon Raison: surcharge de",
       "direction": "both",
       "severity": "high",
@@ -225,17 +235,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Sissach et Tunnel Tunnel d'Arisdorf Situation: bouchon Raison: travaux de construction | Approvato: A2 Luzern -> Base",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 Lu",
+      "description": "Stau Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> Bâle entre Jonction autoroutière Sissach et Tunnel Tunnel d'Arisdorf Situation: bouchon Raison: travaux de construction | Revocato: A2 Luzern -> Base",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -365,7 +365,7 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Biasca et Parking Moleno Situation: trafic perturbé Raison: véhicule en panne | Approvato: A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Biasca et Parking Moleno Situation: trafic perturbé Raison: véhicule en panne | Revocato: A2",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
@@ -2212,6 +2212,16 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Tiere auf der Fahrbahn | Révoqué: A2 Chiasso <-> St-Gothard entre Echangeur Echangeur de Bellinzone-Nord et Aire de service Bellinzone-Sud Situation: danger Raison: animaux sur la rout",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     }
   ],
   "incidents_south": [
@@ -2397,6 +2407,16 @@
     },
     {
       "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 Lu",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur d'Augst et Tunnel Tunnel d'Arisdorf Situation: bouchon Raison: surcharge de",
       "direction": "both",
       "severity": "high",
@@ -2407,7 +2427,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Sissach et Tunnel Tunnel d'Arisdorf Situation: bouchon Raison: travaux de construction | Approvato: A2 Luzern -> Base",
+      "description": "Stau Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> Bâle entre Jonction autoroutière Sissach et Tunnel Tunnel d'Arisdorf Situation: bouchon Raison: travaux de construction | Revocato: A2 Luzern -> Base",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2417,21 +2437,11 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
       "direction": "south",
       "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 Lu",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 10,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2557,7 +2567,7 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Biasca et Parking Moleno Situation: trafic perturbé Raison: véhicule en panne | Approvato: A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Biasca et Parking Moleno Situation: trafic perturbé Raison: véhicule en panne | Revocato: A2",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
@@ -4394,6 +4404,16 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Tiere auf der Fahrbahn | Révoqué: A2 Chiasso <-> St-Gothard entre Echangeur Echangeur de Bellinzone-Nord et Aire de service Bellinzone-Sud Situation: danger Raison: animaux sur la rout",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     }
   ],
   "incidents_all": [
@@ -4609,6 +4629,16 @@
     },
     {
       "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 Lu",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur d'Augst et Tunnel Tunnel d'Arisdorf Situation: bouchon Raison: surcharge de",
       "direction": "both",
       "severity": "high",
@@ -4619,7 +4649,7 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Sissach et Tunnel Tunnel d'Arisdorf Situation: bouchon Raison: travaux de construction | Approvato: A2 Luzern -> Base",
+      "description": "Stau Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> Bâle entre Jonction autoroutière Sissach et Tunnel Tunnel d'Arisdorf Situation: bouchon Raison: travaux de construction | Revocato: A2 Luzern -> Base",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -4629,21 +4659,11 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
       "direction": "south",
       "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 Lu",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 10,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4769,7 +4789,7 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Biasca et Parking Moleno Situation: trafic perturbé Raison: véhicule en panne | Approvato: A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Biasca et Parking Moleno Situation: trafic perturbé Raison: véhicule en panne | Revocato: A2",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
@@ -6616,6 +6636,16 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Tiere auf der Fahrbahn | Révoqué: A2 Chiasso <-> St-Gothard entre Echangeur Echangeur de Bellinzone-Nord et Aire de service Bellinzone-Sud Situation: danger Raison: animaux sur la rout",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     }
   ]
 }
