@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-18T23:48:54.730659+00:00",
+  "updated": "2026-08-19T00:00:51.849765+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 210,
-  "tunnel_incidents": 5,
+  "total_incidents": 206,
+  "tunnel_incidents": 4,
   "tunnel": {
     "status": "critical",
     "north": {
@@ -55,11 +55,31 @@
     },
     {
       "road": "A2",
+      "description": "Einfahrt gesperrt (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Strecke gesperrt (ab 16.08.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": 1.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -365,11 +385,41 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 1.1,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 18.08.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
       "queue_km": 4.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 3.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -395,23 +445,13 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.08.2026)",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 6.8,
+      "queue_km": 0.8,
       "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.08.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 17.0,
-      "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -435,12 +475,12 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.08.2026)",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 0.52,
-      "is_tunnel": true,
+      "queue_km": 16.2,
+      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -935,16 +975,6 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Parkplatz geschlossen (ab 30.09.2026)",
       "direction": "both",
       "severity": "info",
@@ -1075,26 +1105,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.1,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.6,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 24.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -1175,16 +1185,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 3.4,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 26.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -1242,16 +1242,6 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -1602,16 +1592,6 @@
       "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.8,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -1995,16 +1975,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 16.2,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Strecke gesperrt (ab 07.09.2026)",
       "direction": "both",
       "severity": "info",
@@ -2012,16 +1982,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Parkplatz geschlossen (ab 17.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": false
     },
     {
       "road": "A2",
@@ -2137,11 +2097,31 @@
     },
     {
       "road": "A2",
+      "description": "Einfahrt gesperrt (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Strecke gesperrt (ab 16.08.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": 1.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2437,11 +2417,41 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 1.1,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 18.08.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
       "queue_km": 4.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 3.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2467,23 +2477,13 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.08.2026)",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 6.8,
+      "queue_km": 0.8,
       "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.08.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 17.0,
-      "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -2507,12 +2507,12 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.08.2026)",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 0.52,
-      "is_tunnel": true,
+      "queue_km": 16.2,
+      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -3007,16 +3007,6 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Parkplatz geschlossen (ab 30.09.2026)",
       "direction": "both",
       "severity": "info",
@@ -3137,26 +3127,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.1,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.6,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 24.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -3237,16 +3207,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 3.4,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 26.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -3304,16 +3264,6 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -3664,16 +3614,6 @@
       "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.8,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -4057,16 +3997,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 16.2,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Strecke gesperrt (ab 07.09.2026)",
       "direction": "both",
       "severity": "info",
@@ -4074,16 +4004,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Parkplatz geschlossen (ab 17.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": false
     },
     {
       "road": "A2",
@@ -4209,11 +4129,31 @@
     },
     {
       "road": "A2",
+      "description": "Einfahrt gesperrt (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Strecke gesperrt (ab 16.08.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": 1.2,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4529,11 +4469,41 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 1.1,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 18.08.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
       "queue_km": 4.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 3.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4559,23 +4529,13 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.08.2026)",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 6.8,
+      "queue_km": 0.8,
       "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.08.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 17.0,
-      "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -4599,12 +4559,12 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.08.2026)",
+      "description": "Verkehrsbehinderung (ab 19.08.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 0.52,
-      "is_tunnel": true,
+      "queue_km": 16.2,
+      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -5099,16 +5059,6 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Parkplatz geschlossen (ab 30.09.2026)",
       "direction": "both",
       "severity": "info",
@@ -5239,26 +5189,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.1,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.6,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 24.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -5339,16 +5269,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 3.4,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 26.08.2026)",
       "direction": "both",
       "severity": "info",
@@ -5406,16 +5326,6 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -5766,16 +5676,6 @@
       "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.8,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -6159,16 +6059,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 16.2,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Strecke gesperrt (ab 07.09.2026)",
       "direction": "both",
       "severity": "info",
@@ -6176,16 +6066,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Parkplatz geschlossen (ab 17.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": false
     },
     {
       "road": "A2",
