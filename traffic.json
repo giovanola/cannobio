@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T04:01:16.691796+00:00",
+  "updated": "2026-08-21T04:46:52.697750+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
   "total_incidents": 188,
   "tunnel_incidents": 3,
@@ -45,6 +45,16 @@
     },
     {
       "road": "A2",
+      "description": "Stau Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Tunnel Tunnel Schweizerhalle, au kilomètre 8.3 Situatio",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -185,6 +195,16 @@
     },
     {
       "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 45 Empfehlung: Gasse für Rettungs- und Einsatzfahrzeuge bilden | Libéré: A1 Zurich -> Berne entre Echangeur Echangeur de Härkingen et",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 45,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Biasca et Parking Moleno Situation: trafic pe",
       "direction": "both",
       "severity": "medium",
@@ -1872,32 +1892,22 @@
       "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 16.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 20.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
     }
   ],
   "incidents_south": [
     {
       "road": "A2",
       "description": "Stau Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Sud et Tunnel Tunnel de S. Nicolao Situation: bouchon",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Tunnel Tunnel Schweizerhalle, au kilomètre 8.3 Situatio",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -2037,6 +2047,16 @@
     },
     {
       "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 45 Empfehlung: Gasse für Rettungs- und Einsatzfahrzeuge bilden | Libéré: A1 Zurich -> Berne entre Echangeur Echangeur de Härkingen et",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 45,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Biasca et Parking Moleno Situation: trafic pe",
       "direction": "both",
       "severity": "medium",
@@ -3724,26 +3744,6 @@
       "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 16.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 20.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
     }
   ],
   "incidents_all": [
@@ -3769,6 +3769,16 @@
     },
     {
       "road": "A2",
+      "description": "Stau Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur de Hagnau et Tunnel Tunnel Schweizerhalle, au kilomètre 8.3 Situatio",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -3913,6 +3923,16 @@
       "direction": "both",
       "severity": "high",
       "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 45 Empfehlung: Gasse für Rettungs- und Einsatzfahrzeuge bilden | Libéré: A1 Zurich -> Berne entre Echangeur Echangeur de Härkingen et",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 45,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -5606,26 +5626,6 @@
       "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 16.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 20.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
     }
   ]
 }
