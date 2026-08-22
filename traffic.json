@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T14:55:11.480359+00:00",
+  "updated": "2026-08-22T15:11:01.956827+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
   "total_incidents": 195,
   "tunnel_incidents": 3,
@@ -7,11 +7,11 @@
     "status": "info",
     "north": {
       "severity": "high",
-      "delay_min": 40,
+      "delay_min": 30,
       "queue_m": null,
       "wait_min": null,
       "text": "Verkehrsbehinderung (ab 31.08.2026)",
-      "queue_km": 4.0
+      "queue_km": 3.0
     },
     "south": {
       "severity": "high",
@@ -235,21 +235,21 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon Raison: surcharge de trafic | Appr",
       "direction": "both",
       "severity": "high",
-      "delay_min": 10,
+      "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situation:",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
       "direction": "north",
       "severity": "high",
-      "delay_min": 40,
-      "queue_km": 4.0,
+      "delay_min": 30,
+      "queue_km": 3.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2127,21 +2127,21 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Länge [km] 3 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bouc",
       "direction": "south",
       "severity": "high",
       "delay_min": 30,
       "queue_km": 3.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon Raison: surcharge de trafic | Appr",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4069,16 +4069,6 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Stau Länge [km] 3 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: bouc",
       "direction": "south",
       "severity": "high",
@@ -4089,11 +4079,21 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situation:",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Badischer Bahnhof Situation: bouchon Raison: surcharge de trafic | Appr",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
       "direction": "north",
       "severity": "high",
-      "delay_min": 40,
-      "queue_km": 4.0,
+      "delay_min": 30,
+      "queue_km": 3.0,
       "is_tunnel": false,
       "night_only": false
     },
