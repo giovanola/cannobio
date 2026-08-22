@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T17:33:14.876538+00:00",
+  "updated": "2026-08-22T17:50:47.679978+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
   "total_incidents": 192,
   "tunnel_incidents": 3,
@@ -55,6 +55,16 @@
     },
     {
       "road": "A2",
+      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Libéré: A13 Bellinzone <-> S. Bernardino Tunnel San Bernardino-Tunnel Situation: tunnel fermé Raison: véhicule en panne | Approvato: A13 Bellinzona <-> S. Ber",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -186,16 +196,6 @@
     {
       "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Lucerne entre Jonction autoroutière Wassen et Jonction autoroutière Amsteg Situation: bouchon Raison: surcharge de trafic | Approvato: A2 S",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Jonction autoroutière Beckenried Situation: trafic en accordéon Raison: surch",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -1912,6 +1912,16 @@
       "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Personen auf der Fahrbahn | Libéré: A2 Chiasso <-> St-Gothard entre Parking Moleno et Echangeur Echangeur de Bellinzone-Nord Situation: danger Raison: piétons sur la chaussée | Approva",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     }
   ],
   "incidents_south": [
@@ -1927,8 +1937,8 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Révoqué: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Revocato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Chiasso -> St-Gothard entre Aire de service Centre de poids lourds Gornico et Tunnel Tunnel de ",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -1937,7 +1947,7 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Chiasso -> St-Gothard entre Aire de service Centre de poids lourds Gornico et Tunnel Tunnel de ",
+      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Libéré: A13 Bellinzone <-> S. Bernardino Tunnel San Bernardino-Tunnel Situation: tunnel fermé Raison: véhicule en panne | Approvato: A13 Bellinzona <-> S. Ber",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -2068,16 +2078,6 @@
     {
       "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Lucerne entre Jonction autoroutière Wassen et Jonction autoroutière Amsteg Situation: bouchon Raison: surcharge de trafic | Approvato: A2 S",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Jonction autoroutière Beckenried Situation: trafic en accordéon Raison: surch",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -3802,6 +3802,16 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Personen auf der Fahrbahn | Libéré: A2 Chiasso <-> St-Gothard entre Parking Moleno et Echangeur Echangeur de Bellinzone-Nord Situation: danger Raison: piétons sur la chaussée | Approva",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
@@ -3829,8 +3839,8 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Révoqué: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Revocato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Chiasso -> St-Gothard entre Aire de service Centre de poids lourds Gornico et Tunnel Tunnel de ",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -3839,7 +3849,7 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Chiasso -> St-Gothard entre Aire de service Centre de poids lourds Gornico et Tunnel Tunnel de ",
+      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Libéré: A13 Bellinzone <-> S. Bernardino Tunnel San Bernardino-Tunnel Situation: tunnel fermé Raison: véhicule en panne | Approvato: A13 Bellinzona <-> S. Ber",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -3990,16 +4000,6 @@
     {
       "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Lucerne entre Jonction autoroutière Wassen et Jonction autoroutière Amsteg Situation: bouchon Raison: surcharge de trafic | Approvato: A2 S",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Lucerne entre Echangeur Echangeur d'Altdorf et Jonction autoroutière Beckenried Situation: trafic en accordéon Raison: surch",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -5724,6 +5724,16 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Personen auf der Fahrbahn | Libéré: A2 Chiasso <-> St-Gothard entre Parking Moleno et Echangeur Echangeur de Bellinzone-Nord Situation: danger Raison: piétons sur la chaussée | Approva",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
