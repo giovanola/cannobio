@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-25T04:18:06.049030+00:00",
+  "updated": "2026-08-25T04:56:44.247562+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 190,
+  "total_incidents": 192,
   "tunnel_incidents": 3,
   "tunnel": {
     "status": "info",
@@ -14,8 +14,8 @@
       "queue_km": 1.0
     },
     "south": {
-      "severity": "medium",
-      "delay_min": 10,
+      "severity": "high",
+      "delay_min": 15,
       "queue_m": null,
       "wait_min": null,
       "text": "Verkehrsbehinderung (ab 31.08.2026)",
@@ -45,6 +45,16 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt Ursache: umgestürzte Bäume | Libéré: Via Ceresio di Suvigliana, Lugano dans les deux sens  Situation: fermé Raison: arbres renversés | Approvato: Via Ceresio di Suvigliana, Lugano in ",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -195,20 +205,20 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Jonction autoroutière Melide/Bissone Situation: trafic en accordéon Raison:",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Jonction autoroutière Melide/Bissone Situation: bouch",
       "direction": "both",
       "severity": "high",
-      "delay_min": null,
+      "delay_min": 15,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Emmen-Nord et Echangeur Echangeur du Rotsee Situation: trafic en accordéon Raison: surcharge de",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> Lucerne entre Aire de service Neuenkirch et Echangeur Echangeur du Rotsee Situation: bouchon Raison: surcharg",
       "direction": "both",
       "severity": "high",
-      "delay_min": null,
+      "delay_min": 10,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -315,7 +325,7 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Bellinzone-Sud et Parking al Sasso Situation: trafic ",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Bellinzone-Sud et Parking al Sasso Situation: trafic",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
@@ -1912,12 +1922,32 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "((TIC/FallenTrees : 3006-237/188))fallenTrees | Via Ceresio di Suvigliana, Lugano",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     }
   ],
   "incidents_south": [
     {
       "road": "A2",
       "description": "Stau Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Sud et Tunnel Tunnel de S. Nicolao Situation: bouchon",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt Ursache: umgestürzte Bäume | Libéré: Via Ceresio di Suvigliana, Lugano dans les deux sens  Situation: fermé Raison: arbres renversés | Approvato: Via Ceresio di Suvigliana, Lugano in ",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -2067,20 +2097,20 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Jonction autoroutière Melide/Bissone Situation: trafic en accordéon Raison:",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Jonction autoroutière Melide/Bissone Situation: bouch",
       "direction": "both",
       "severity": "high",
-      "delay_min": null,
+      "delay_min": 15,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Emmen-Nord et Echangeur Echangeur du Rotsee Situation: trafic en accordéon Raison: surcharge de",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> Lucerne entre Aire de service Neuenkirch et Echangeur Echangeur du Rotsee Situation: bouchon Raison: surcharg",
       "direction": "both",
       "severity": "high",
-      "delay_min": null,
+      "delay_min": 10,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -2187,7 +2217,7 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Bellinzone-Sud et Parking al Sasso Situation: trafic ",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Bellinzone-Sud et Parking al Sasso Situation: trafic",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
@@ -3782,6 +3812,16 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "((TIC/FallenTrees : 3006-237/188))fallenTrees | Via Ceresio di Suvigliana, Lugano",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
@@ -3809,6 +3849,16 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt Ursache: umgestürzte Bäume | Libéré: Via Ceresio di Suvigliana, Lugano dans les deux sens  Situation: fermé Raison: arbres renversés | Approvato: Via Ceresio di Suvigliana, Lugano in ",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -3969,20 +4019,20 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Jonction autoroutière Melide/Bissone Situation: trafic en accordéon Raison:",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Jonction autoroutière Melide/Bissone Situation: bouch",
       "direction": "both",
       "severity": "high",
-      "delay_min": null,
+      "delay_min": 15,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Emmen-Nord et Echangeur Echangeur du Rotsee Situation: trafic en accordéon Raison: surcharge de",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Bâle -> Lucerne entre Aire de service Neuenkirch et Echangeur Echangeur du Rotsee Situation: bouchon Raison: surcharg",
       "direction": "both",
       "severity": "high",
-      "delay_min": null,
+      "delay_min": 10,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -4089,7 +4139,7 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Bellinzone-Sud et Parking al Sasso Situation: trafic ",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Bellinzone-Sud et Parking al Sasso Situation: trafic",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
@@ -5684,6 +5734,16 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "((TIC/FallenTrees : 3006-237/188))fallenTrees | Via Ceresio di Suvigliana, Lugano",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
