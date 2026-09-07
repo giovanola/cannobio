@@ -1,24 +1,24 @@
 {
-  "updated": "2026-09-07T00:27:00.103299+00:00",
+  "updated": "2026-09-07T05:00:11.222735+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 181,
+  "total_incidents": 185,
   "tunnel_incidents": 4,
   "tunnel": {
-    "status": "critical",
+    "status": "medium",
     "north": {
       "severity": "medium",
       "delay_min": 10,
       "queue_m": null,
       "wait_min": null,
-      "text": "Tunnel gesperrt (ab 07.09.2026)",
+      "text": "Verkehrsbehinderung (ab 07.09.2026)",
       "queue_km": 1.0
     },
     "south": {
-      "severity": "medium",
-      "delay_min": 10,
+      "severity": "high",
+      "delay_min": 15,
       "queue_m": null,
       "wait_min": null,
-      "text": "Tunnel gesperrt (ab 07.09.2026)",
+      "text": "Verkehrsbehinderung (ab 07.09.2026)",
       "queue_km": 1.0
     }
   },
@@ -42,86 +42,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 4.5,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 4.5,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 2.6,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "north",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 0.6,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 06.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 1.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Einfahrt gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -275,13 +195,53 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Emmen-Nord et Echangeur Echangeur du Rotsee Situation: trafic en accordéon Raison: surcharge de",
       "direction": "both",
-      "severity": "medium",
+      "severity": "high",
       "delay_min": null,
-      "queue_km": 0.2,
+      "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A4 Altdorf -> Brunnen entre Localité Flüelen et Localité Sisikon Situation: bouchon Raison: surcharge de trafic | Revocato: A4 Altdorf -> Brunnen tra Luogo",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Poste de douane Basel-Weil et Echangeur Echangeur de Gellert Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Basel -",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et Echangeur Echangeur de Härkingen Situation: bouchon Raison: surcharge de trafic | Approvato: A2",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Tunnel Tunnel de Grancia Situation: bouchon Raison: s",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     },
     {
       "road": "A2",
@@ -345,36 +305,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.7,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 07.09.2026)",
       "direction": "both",
       "severity": "medium",
@@ -382,26 +312,6 @@
       "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 06.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 06.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 5.5,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -425,16 +335,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
       "direction": "both",
       "severity": "info",
@@ -442,6 +342,16 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -815,6 +725,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.7,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 11.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -1095,6 +1015,26 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.3,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 4.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 12.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -1102,6 +1042,16 @@
       "queue_km": 25.5,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 4.5,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -1140,6 +1090,16 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1315,6 +1275,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 09.09.2026)",
       "direction": "both",
       "severity": "info",
@@ -1365,12 +1335,32 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Strecke gesperrt (ab 15.09.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
       "queue_km": 2.5,
       "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Tunnel gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
       "night_only": true
     },
     {
@@ -1505,6 +1495,16 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "north",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 15.09.2026)",
       "direction": "both",
       "severity": "info",
@@ -1532,6 +1532,16 @@
       "queue_km": 0.9,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 06.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 5.5,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -1805,11 +1815,41 @@
     },
     {
       "road": "A2",
+      "description": "Einfahrt gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 09.09.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.8,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     }
@@ -1824,76 +1864,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 4.5,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 4.5,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 2.6,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 06.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 1.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Einfahrt gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -2027,13 +1997,53 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Emmen-Nord et Echangeur Echangeur du Rotsee Situation: trafic en accordéon Raison: surcharge de",
       "direction": "both",
-      "severity": "medium",
+      "severity": "high",
       "delay_min": null,
-      "queue_km": 0.2,
+      "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A4 Altdorf -> Brunnen entre Localité Flüelen et Localité Sisikon Situation: bouchon Raison: surcharge de trafic | Revocato: A4 Altdorf -> Brunnen tra Luogo",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Poste de douane Basel-Weil et Echangeur Echangeur de Gellert Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Basel -",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et Echangeur Echangeur de Härkingen Situation: bouchon Raison: surcharge de trafic | Approvato: A2",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Tunnel Tunnel de Grancia Situation: bouchon Raison: s",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     },
     {
       "road": "A2",
@@ -2097,36 +2107,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.7,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 07.09.2026)",
       "direction": "both",
       "severity": "medium",
@@ -2134,26 +2114,6 @@
       "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 06.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 06.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 5.5,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -2177,16 +2137,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
       "direction": "both",
       "severity": "info",
@@ -2194,6 +2144,16 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -2567,6 +2527,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.7,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 11.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -2847,6 +2817,26 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.3,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 4.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 12.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -2854,6 +2844,16 @@
       "queue_km": 25.5,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 4.5,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -2892,6 +2892,16 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3067,6 +3077,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 09.09.2026)",
       "direction": "both",
       "severity": "info",
@@ -3117,12 +3137,32 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Strecke gesperrt (ab 15.09.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
       "queue_km": 2.5,
       "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Tunnel gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
       "night_only": true
     },
     {
@@ -3274,6 +3314,16 @@
       "queue_km": 0.9,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 06.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 5.5,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -3557,11 +3607,41 @@
     },
     {
       "road": "A2",
+      "description": "Einfahrt gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 09.09.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.8,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     }
@@ -3589,86 +3669,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 4.5,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 4.5,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 2.6,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 07.09.2026)",
-      "direction": "north",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 0.6,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 06.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 1.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Einfahrt gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -3829,13 +3829,53 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Emmen-Nord et Echangeur Echangeur du Rotsee Situation: trafic en accordéon Raison: surcharge de",
       "direction": "both",
-      "severity": "medium",
+      "severity": "high",
       "delay_min": null,
-      "queue_km": 0.2,
+      "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A4 Altdorf -> Brunnen entre Localité Flüelen et Localité Sisikon Situation: bouchon Raison: surcharge de trafic | Revocato: A4 Altdorf -> Brunnen tra Luogo",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Poste de douane Basel-Weil et Echangeur Echangeur de Gellert Situation: bouchon Raison: surcharge de trafic | Approvato: A2 Basel -",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et Echangeur Echangeur de Härkingen Situation: bouchon Raison: surcharge de trafic | Approvato: A2",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Tunnel Tunnel de Grancia Situation: bouchon Raison: s",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     },
     {
       "road": "A2",
@@ -3899,36 +3939,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.7,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 07.09.2026)",
       "direction": "both",
       "severity": "medium",
@@ -3936,26 +3946,6 @@
       "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 06.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 06.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 5.5,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -3979,16 +3969,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
       "direction": "both",
       "severity": "info",
@@ -3996,6 +3976,16 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -4369,6 +4359,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.7,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 11.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -4649,6 +4649,26 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.3,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 4.5,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 12.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -4656,6 +4676,16 @@
       "queue_km": 25.5,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 4.5,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -4694,6 +4724,16 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4869,6 +4909,16 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 09.09.2026)",
       "direction": "both",
       "severity": "info",
@@ -4919,12 +4969,32 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Strecke gesperrt (ab 15.09.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
       "queue_km": 2.5,
       "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Tunnel gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
       "night_only": true
     },
     {
@@ -5059,6 +5129,16 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt (ab 07.09.2026)",
+      "direction": "north",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 15.09.2026)",
       "direction": "both",
       "severity": "info",
@@ -5086,6 +5166,16 @@
       "queue_km": 0.9,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 06.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 5.5,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -5369,11 +5459,41 @@
     },
     {
       "road": "A2",
+      "description": "Einfahrt gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 09.09.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.8,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": true
     }
