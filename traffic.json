@@ -1,25 +1,25 @@
 {
-  "updated": "2026-09-11T05:40:37.852002+00:00",
+  "updated": "2026-09-11T09:59:41.028343+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 182,
+  "total_incidents": 186,
   "tunnel_incidents": 6,
   "tunnel": {
     "status": "info",
     "north": {
-      "severity": "medium",
-      "delay_min": 10,
+      "severity": "high",
+      "delay_min": 50,
       "queue_m": null,
       "wait_min": null,
       "text": "Verkehrsbehinderung (ab 14.09.2026)",
-      "queue_km": 1.0
+      "queue_km": 5.0
     },
     "south": {
-      "severity": "medium",
-      "delay_min": 10,
+      "severity": "high",
+      "delay_min": 40,
       "queue_m": null,
       "wait_min": null,
       "text": "Verkehrsbehinderung (ab 14.09.2026)",
-      "queue_km": 1.0
+      "queue_km": 4.0
     }
   },
   "incidents_north": [
@@ -46,6 +46,26 @@
     {
       "road": "A2",
       "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Erstfeld et Jonction autoroutière Wassen Situation: bouchon Rai",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Giornico et Tunnel Tunnel de la Biaschina Sit",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -205,21 +225,11 @@
     },
     {
       "road": "A2",
-      "description": "Stau für LKW Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Parking Chiasso-Douane commercial Situation: bouchon pour poids lourd Raison:",
-      "direction": "both",
+      "description": "Stau Länge [km] 5.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 50 | Libéré: A2 Lucerne -> St-Gothard entre Echangeur Echangeur d'Altdorf et Jonction autoroutière Göschenen Situation",
+      "direction": "north",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Tunnel Tunnel de S. Nicolao Situation: trafic en accordéon Raison: surcharg",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 50,
+      "queue_km": 5.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -512,16 +522,6 @@
       "queue_km": 1.55,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 28.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -1822,6 +1822,26 @@
       "queue_km": 17.0,
       "is_tunnel": true,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 28.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
     }
   ],
   "incidents_south": [
@@ -1838,6 +1858,36 @@
     {
       "road": "A2",
       "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
+      "direction": "south",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Erstfeld et Jonction autoroutière Wassen Situation: bouchon Rai",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Giornico et Tunnel Tunnel de la Biaschina Sit",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -1977,21 +2027,11 @@
     },
     {
       "road": "A2",
-      "description": "Stau für LKW Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Parking Chiasso-Douane commercial Situation: bouchon pour poids lourd Raison:",
-      "direction": "both",
+      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "direction": "south",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Tunnel Tunnel de S. Nicolao Situation: trafic en accordéon Raison: surcharg",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 40,
+      "queue_km": 4.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2284,16 +2324,6 @@
       "queue_km": 1.55,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 28.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -3593,6 +3623,26 @@
       "delay_min": null,
       "queue_km": 17.0,
       "is_tunnel": true,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 28.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
       "night_only": true
     }
   ],
@@ -3629,6 +3679,36 @@
     },
     {
       "road": "A2",
+      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
+      "direction": "south",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Erstfeld et Jonction autoroutière Wassen Situation: bouchon Rai",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Giornico et Tunnel Tunnel de la Biaschina Sit",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Localité Balerna et Jonction autoroutière Chiasso Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bellinzona -",
       "direction": "both",
       "severity": "high",
@@ -3789,21 +3869,21 @@
     },
     {
       "road": "A2",
-      "description": "Stau für LKW Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Parking Chiasso-Douane commercial Situation: bouchon pour poids lourd Raison:",
-      "direction": "both",
+      "description": "Stau Länge [km] 5.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 50 | Libéré: A2 Lucerne -> St-Gothard entre Echangeur Echangeur d'Altdorf et Jonction autoroutière Göschenen Situation",
+      "direction": "north",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 50,
+      "queue_km": 5.0,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Tunnel Tunnel de S. Nicolao Situation: trafic en accordéon Raison: surcharg",
-      "direction": "both",
+      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "direction": "south",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
+      "delay_min": 40,
+      "queue_km": 4.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -4096,16 +4176,6 @@
       "queue_km": 1.55,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 28.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -5415,6 +5485,26 @@
       "delay_min": null,
       "queue_km": 17.0,
       "is_tunnel": true,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 28.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.09.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
       "night_only": true
     }
   ]
