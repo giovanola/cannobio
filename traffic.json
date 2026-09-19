@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-19T17:25:19.672824+00:00",
+  "updated": "2026-09-19T19:25:23.098947+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 141,
+  "total_incidents": 139,
   "tunnel_incidents": 5,
   "tunnel": {
     "status": "info",
@@ -13,15 +13,24 @@
       "text": "Verkehrsbehinderung (ab 28.09.2026)"
     },
     "south": {
-      "severity": "medium",
-      "delay_min": 10,
+      "severity": "info",
+      "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Verkehrsbehinderung (ab 28.09.2026)",
-      "queue_km": 1.0
+      "text": "Verkehrsbehinderung (ab 28.09.2026)"
     }
   },
   "incidents_north": [
+    {
+      "road": "A2",
+      "description": "Tunnel gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
+      "night_only": true
+    },
     {
       "road": "A2",
       "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
@@ -44,6 +53,26 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 1.7,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 18.09.2026)",
       "direction": "both",
       "severity": "medium",
@@ -61,16 +90,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -381,16 +400,6 @@
       "queue_km": 9.0,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.7,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -761,16 +770,6 @@
       "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -1416,18 +1415,18 @@
   "incidents_south": [
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
+      "description": "Tunnel gesperrt (ab 07.09.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
+      "is_tunnel": true,
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Révoqué: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Revocato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
+      "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -1446,13 +1445,23 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: b",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 1.7,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -1473,16 +1482,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -1793,16 +1792,6 @@
       "queue_km": 9.0,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.7,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -2173,16 +2162,6 @@
       "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -2818,18 +2797,18 @@
   "incidents_all": [
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
+      "description": "Tunnel gesperrt (ab 07.09.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
+      "is_tunnel": true,
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Révoqué: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Revocato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
+      "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -2848,13 +2827,23 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Jonction autoroutière Airolo Situation: b",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 1.7,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -2875,16 +2864,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -3195,16 +3174,6 @@
       "queue_km": 9.0,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.7,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -3575,16 +3544,6 @@
       "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": true
     },
     {
       "road": "A2",
