@@ -1,27 +1,46 @@
 {
-  "updated": "2026-09-22T15:36:31.422934+00:00",
+  "updated": "2026-09-22T19:06:41.563901+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 170,
-  "tunnel_incidents": 5,
+  "total_incidents": 165,
+  "tunnel_incidents": 6,
   "tunnel": {
-    "status": "info",
+    "status": "critical",
     "north": {
-      "severity": "high",
-      "delay_min": 15,
+      "severity": "critical",
+      "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Verkehrsbehinderung (ab 28.09.2026)"
+      "text": "Tunnel gesperrt Ursache: Unterhaltsarbeiten (ab 22.09.2026)"
     },
     "south": {
-      "severity": "high",
-      "delay_min": 20,
+      "severity": "critical",
+      "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Verkehrsbehinderung (ab 28.09.2026)",
-      "queue_km": 2.0
+      "text": "Tunnel gesperrt Ursache: Unterhaltsarbeiten (ab 22.09.2026)"
     }
   },
   "incidents_north": [
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 21.09.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": 2.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Tunnel gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
+      "night_only": true
+    },
     {
       "road": "A2",
       "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
@@ -34,73 +53,53 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Echangeur Echangeur de Hagnau Situation: trafic en accordéon Raison: surcharge de tra",
+      "description": "Strecke gesperrt (ab 22.09.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "critical",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Nord et Jonction autoroutière Melide/Bissone Situation: trafic en accordéon Raison",
+      "description": "Tunnel gesperrt Ursache: Unterhaltsarbeiten (ab 22.09.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "critical",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": false,
+      "is_tunnel": true,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Poste de douane Chiasso-Brogeda Situation: trafic en accordéon Raison: ",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 St-Gothard -> Bâle entre Echangeur Echangeur du Lopper et Jonction autoroutière Emmen-Sud Situation: bouchon Raison: ",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
       "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Echangeur Echangeur de Wiese Situation: bouchon Raison: surchar",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A14 Walterswil -> Echangeur de Blegi entre Jonction autoroutière Zoug et Echangeur Echangeur de Blegi Situation: bouchon Raison: surcharge de trafic | Appro",
-      "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.7,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: H17 Altdorf <-> Uznach entre Localité Glaris et Jonction autoroutière Näfels Situation: trafic en accordéon Raison: surcharge de trafic | Appr",
+      "description": "Verkehrsbehinderung (ab 21.09.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -138,6 +137,16 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
+      "queue_km": 4.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 22.09.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
@@ -164,11 +173,11 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 22.09.2026)",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug defekter LKW Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Arisdorf et Echangeur Echangeur d'Augs",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 0.15,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -181,16 +190,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -504,16 +503,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.7,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 11.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -649,16 +638,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.8,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 21.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -810,26 +789,6 @@
       "delay_min": null,
       "queue_km": 1.6,
       "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 21.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
       "night_only": true
     },
     {
@@ -1134,16 +1093,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 22.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 05.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -1179,16 +1128,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.5,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 22.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 4.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1689,6 +1628,36 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.8,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 08.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.4,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Falschfahrer | Libéré: A2 Lucerne <-> Bâle entre Echangeur Echangeur d'Augst et Echangeur Echangeur de Hagnau Situation: véhicule à contresens | Approvato: A2 Luzern <-> Basel tra Raccordo autostradal",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 30.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     }
@@ -1696,6 +1665,26 @@
   "incidents_south": [
     {
       "road": "A2",
+      "description": "Strecke gesperrt (ab 21.09.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": 2.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Tunnel gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
       "direction": "both",
       "severity": "critical",
@@ -1706,93 +1695,53 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
+      "description": "Strecke gesperrt (ab 22.09.2026)",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Echangeur Echangeur de Hagnau Situation: trafic en accordéon Raison: surcharge de tra",
+      "description": "Tunnel gesperrt Ursache: Unterhaltsarbeiten (ab 22.09.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "critical",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": false,
+      "is_tunnel": true,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Nord et Jonction autoroutière Melide/Bissone Situation: trafic en accordéon Raison",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Poste de douane Chiasso-Brogeda Situation: trafic en accordéon Raison: ",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.7,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 St-Gothard -> Bâle entre Echangeur Echangeur du Lopper et Jonction autoroutière Emmen-Sud Situation: bouchon Raison: ",
+      "description": "Verkehrsbehinderung (ab 21.09.2026)",
       "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Echangeur Echangeur de Wiese Situation: bouchon Raison: surchar",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A14 Walterswil -> Echangeur de Blegi entre Jonction autoroutière Zoug et Echangeur Echangeur de Blegi Situation: bouchon Raison: surcharge de trafic | Appro",
-      "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: H17 Altdorf <-> Uznach entre Localité Glaris et Jonction autoroutière Näfels Situation: trafic en accordéon Raison: surcharge de trafic | Appr",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 2.0 Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: bouchon longueur [km] 2.0 Comp",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -1830,6 +1779,16 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
+      "queue_km": 4.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 22.09.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
@@ -1856,11 +1815,11 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 22.09.2026)",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug defekter LKW Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Arisdorf et Echangeur Echangeur d'Augs",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 0.15,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1873,16 +1832,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -2196,16 +2145,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.7,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 11.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -2341,16 +2280,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.8,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 21.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2502,26 +2431,6 @@
       "delay_min": null,
       "queue_km": 1.6,
       "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 21.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
       "night_only": true
     },
     {
@@ -2816,16 +2725,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 22.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 05.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -2861,16 +2760,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.5,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 22.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 4.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3383,9 +3272,59 @@
       "queue_km": 0.8,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 08.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.4,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Falschfahrer | Libéré: A2 Lucerne <-> Bâle entre Echangeur Echangeur d'Augst et Echangeur Echangeur de Hagnau Situation: véhicule à contresens | Approvato: A2 Luzern <-> Basel tra Raccordo autostradal",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 30.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.4,
+      "is_tunnel": false,
+      "night_only": true
     }
   ],
   "incidents_all": [
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 21.09.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": 2.6,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Tunnel gesperrt (ab 07.09.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
+      "night_only": true
+    },
     {
       "road": "A2",
       "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
@@ -3398,93 +3337,53 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
+      "description": "Strecke gesperrt (ab 22.09.2026)",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Echangeur Echangeur de Hagnau Situation: trafic en accordéon Raison: surcharge de tra",
+      "description": "Tunnel gesperrt Ursache: Unterhaltsarbeiten (ab 22.09.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "critical",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": false,
+      "is_tunnel": true,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Nord et Jonction autoroutière Melide/Bissone Situation: trafic en accordéon Raison",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Poste de douane Chiasso-Brogeda Situation: trafic en accordéon Raison: ",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.7,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 St-Gothard -> Bâle entre Echangeur Echangeur du Lopper et Jonction autoroutière Emmen-Sud Situation: bouchon Raison: ",
+      "description": "Verkehrsbehinderung (ab 21.09.2026)",
       "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Echangeur Echangeur de Wiese Situation: bouchon Raison: surchar",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 15,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A14 Walterswil -> Echangeur de Blegi entre Jonction autoroutière Zoug et Echangeur Echangeur de Blegi Situation: bouchon Raison: surcharge de trafic | Appro",
-      "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: H17 Altdorf <-> Uznach entre Localité Glaris et Jonction autoroutière Näfels Situation: trafic en accordéon Raison: surcharge de trafic | Appr",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 2.0 Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: bouchon longueur [km] 2.0 Comp",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -3522,6 +3421,16 @@
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
+      "queue_km": 4.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 22.09.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
@@ -3548,11 +3457,11 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 22.09.2026)",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug defekter LKW Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Arisdorf et Echangeur Echangeur d'Augs",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 0.15,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3565,16 +3474,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -3888,16 +3787,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.7,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 11.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -4033,16 +3922,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.8,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 21.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.6,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4194,26 +4073,6 @@
       "delay_min": null,
       "queue_km": 1.6,
       "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 21.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 07.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
       "night_only": true
     },
     {
@@ -4518,16 +4377,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 22.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 05.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -4563,16 +4412,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.5,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 22.09.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 4.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5083,6 +4922,36 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.8,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 08.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.4,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Falschfahrer | Libéré: A2 Lucerne <-> Bâle entre Echangeur Echangeur d'Augst et Echangeur Echangeur de Hagnau Situation: véhicule à contresens | Approvato: A2 Luzern <-> Basel tra Raccordo autostradal",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 30.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     }
