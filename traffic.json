@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T18:32:30.492664+00:00",
+  "updated": "2026-09-26T21:26:04.773856+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
   "total_incidents": 163,
   "tunnel_incidents": 4,
@@ -7,7 +7,7 @@
     "status": "info",
     "north": {
       "severity": "high",
-      "delay_min": 45,
+      "delay_min": 20,
       "queue_m": null,
       "wait_min": null,
       "text": "Verkehrsbehinderung (ab 28.09.2026)"
@@ -33,7 +33,7 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Veranstaltung | Libéré: Via Sonvico, Lugano dans les deux sens  Situation: fermé Raison: événement majeur | Approvato: Via Sonvico, Lugano in tutte le direzioni  Situazione: ",
+      "description": "Strecke gesperrt Ursache: Veranstaltung | Révoqué: Lugano <-> Bolla entre Stade Cornaredo et Localité Ressiga Situation: fermé Raison: événement majeur | Revocato: Lugano <-> Bolla tra Stadio Cornared",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -43,10 +43,20 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 45 | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travau",
+      "description": "Stau Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Revocato: A2 L",
       "direction": "both",
       "severity": "high",
-      "delay_min": 45,
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Bâle -> Lucerne entre Poste de douane Basel-Weil et Jonction autoroutière Bâle-Rheinhafen Situation: bouchon Raison: travaux ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 20,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -1630,16 +1640,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "((TIC/MajorEvent : 3043-325/261))majorEvent | Via Sonvico, Lugano",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ],
   "incidents_south": [
@@ -1655,7 +1655,7 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Veranstaltung | Libéré: Via Sonvico, Lugano dans les deux sens  Situation: fermé Raison: événement majeur | Approvato: Via Sonvico, Lugano in tutte le direzioni  Situazione: ",
+      "description": "Strecke gesperrt Ursache: Veranstaltung | Révoqué: Lugano <-> Bolla entre Stade Cornaredo et Localité Ressiga Situation: fermé Raison: événement majeur | Revocato: Lugano <-> Bolla tra Stadio Cornared",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -1665,10 +1665,20 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 45 | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travau",
+      "description": "Stau Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Revocato: A2 L",
       "direction": "both",
       "severity": "high",
-      "delay_min": 45,
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Bâle -> Lucerne entre Poste de douane Basel-Weil et Jonction autoroutière Bâle-Rheinhafen Situation: bouchon Raison: travaux ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 20,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -3252,16 +3262,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "((TIC/MajorEvent : 3043-325/261))majorEvent | Via Sonvico, Lugano",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ],
   "incidents_all": [
@@ -3277,7 +3277,7 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Veranstaltung | Libéré: Via Sonvico, Lugano dans les deux sens  Situation: fermé Raison: événement majeur | Approvato: Via Sonvico, Lugano in tutte le direzioni  Situazione: ",
+      "description": "Strecke gesperrt Ursache: Veranstaltung | Révoqué: Lugano <-> Bolla entre Stade Cornaredo et Localité Ressiga Situation: fermé Raison: événement majeur | Revocato: Lugano <-> Bolla tra Stadio Cornared",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -3287,10 +3287,20 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 45 | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travau",
+      "description": "Stau Ursache: Bauarbeiten | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Revocato: A2 L",
       "direction": "both",
       "severity": "high",
-      "delay_min": 45,
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Bâle -> Lucerne entre Poste de douane Basel-Weil et Jonction autoroutière Bâle-Rheinhafen Situation: bouchon Raison: travaux ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 20,
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
@@ -4884,16 +4894,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "((TIC/MajorEvent : 3043-325/261))majorEvent | Via Sonvico, Lugano",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ]
 }
