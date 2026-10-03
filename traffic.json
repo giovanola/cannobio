@@ -1,25 +1,25 @@
 {
-  "updated": "2026-10-03T08:01:57.198193+00:00",
+  "updated": "2026-10-03T13:16:36.640850+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 163,
-  "tunnel_incidents": 3,
+  "total_incidents": 166,
+  "tunnel_incidents": 4,
   "tunnel": {
-    "status": "info",
+    "status": "medium",
     "north": {
       "severity": "high",
-      "delay_min": 60,
+      "delay_min": 20,
       "queue_m": null,
       "wait_min": null,
-      "text": "Verkehrsbehinderung (ab 05.10.2026)",
-      "queue_km": 6.0
+      "text": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: linker Fahrstreifen blockiert | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de S",
+      "queue_km": 2.0
     },
     "south": {
-      "severity": "medium",
-      "delay_min": 10,
+      "severity": "high",
+      "delay_min": 40,
       "queue_m": null,
       "wait_min": null,
-      "text": "Verkehrsbehinderung (ab 05.10.2026)",
-      "queue_km": 1.0
+      "text": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: linker Fahrstreifen blockiert | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de S",
+      "queue_km": 4.0
     }
   },
   "incidents_north": [
@@ -45,7 +45,7 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
+      "description": "Einfahrt gesperrt | Révoqué: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Revocato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
       "direction": "north",
       "severity": "critical",
       "delay_min": null,
@@ -55,17 +55,7 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Flüelen -> Göschenen entre Localité Erstfeld et Jonction autoroutière Göschenen Situat",
-      "direction": "north",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: Verkehr wird über die Gegenfahrbahn geleitet | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Bâle-Kleinhüningen Nord et Jonction autoroutière Bâle-W",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Poste de douane Chiasso-Brogeda Situation: trafic en accordéon Raison: ",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -75,17 +65,37 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 6.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 60 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situation:",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Révoqué: H2 Flüelen -> Göschenen entre Localité Erstfeld et Jonction autoroutière Göschenen Situa",
       "direction": "north",
       "severity": "high",
-      "delay_min": 60,
-      "queue_km": 6.0,
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Aire de service Coldrerio et Poste de douane Chiasso-Brogeda Situation: trafic en accordéon Raison: surcharge d",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": 20,
+      "queue_km": 2.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: Verkehr wird über die Gegenfahrbahn geleitet Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Bâle-Rheinhafen et ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Jonction autoroutière Melide/Bissone Situation: trafic en accordéon Raison:",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -105,7 +115,27 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen blockiert | Révoqué: A2 Chiasso -> St-Gothard entre Aire de service Centre de poids lourds Gornico et Tunnel Tunnel de",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: linker Fahrstreifen blockiert | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de Stalvedro et Tunnel Tunnel du St-Gothard Situation:",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Lugano-Nord et Tunnel Tunnel du Dosso di Taverne Situation: trafic perturbé Raison: véhicule",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Bâle-Wettstein et Tunnel Tunnel du Schwarzwald Situation: trafic en accordéon Raison: travaux de constr",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
@@ -1657,7 +1687,17 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: Verkehr wird über die Gegenfahrbahn geleitet | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Bâle-Kleinhüningen Nord et Jonction autoroutière Bâle-W",
+      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": 40,
+      "queue_km": 4.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Poste de douane Chiasso-Brogeda Situation: trafic en accordéon Raison: ",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -1667,17 +1707,17 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
-      "direction": "south",
+      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: Verkehr wird über die Gegenfahrbahn geleitet Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Bâle-Rheinhafen et ",
+      "direction": "both",
       "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
+      "delay_min": 15,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Aire de service Coldrerio et Poste de douane Chiasso-Brogeda Situation: trafic en accordéon Raison: surcharge d",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Jonction autoroutière Melide/Bissone Situation: trafic en accordéon Raison:",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -1697,7 +1737,27 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen blockiert | Révoqué: A2 Chiasso -> St-Gothard entre Aire de service Centre de poids lourds Gornico et Tunnel Tunnel de",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: linker Fahrstreifen blockiert | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de Stalvedro et Tunnel Tunnel du St-Gothard Situation:",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Lugano-Nord et Tunnel Tunnel du Dosso di Taverne Situation: trafic perturbé Raison: véhicule",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Bâle-Wettstein et Tunnel Tunnel du Schwarzwald Situation: trafic en accordéon Raison: travaux de constr",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
@@ -3249,16 +3309,6 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Libéré: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Approvato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
-      "direction": "north",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
       "direction": "south",
       "severity": "critical",
@@ -3269,9 +3319,9 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Libéré: H2 Flüelen -> Göschenen entre Localité Erstfeld et Jonction autoroutière Göschenen Situat",
+      "description": "Einfahrt gesperrt | Révoqué: A2 Lucerne -> St-Gothard Jonction autoroutière Göschenen Situation: entrée fermée | Revocato: A2 Luzern -> S. Gottardo Svincolo autostradale Göschenen Situazione: raccordo",
       "direction": "north",
-      "severity": "high",
+      "severity": "critical",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
@@ -3279,7 +3329,17 @@
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: Verkehr wird über die Gegenfahrbahn geleitet | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Bâle-Kleinhüningen Nord et Jonction autoroutière Bâle-W",
+      "description": "Stau Länge [km] 4.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 40 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": 40,
+      "queue_km": 4.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Poste de douane Chiasso-Brogeda Situation: trafic en accordéon Raison: ",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -3289,27 +3349,37 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 6.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 60 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Amsteg et Jonction autoroutière Göschenen Situation:",
+      "description": "Verkehrsbehinderung Ursache: Verkehrsüberlastung Zusatz 1: es ist mit grossem Zeitverlust zu rechnen | Révoqué: H2 Flüelen -> Göschenen entre Localité Erstfeld et Jonction autoroutière Göschenen Situa",
       "direction": "north",
       "severity": "high",
-      "delay_min": 60,
-      "queue_km": 6.0,
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
-      "direction": "south",
+      "description": "Stau Länge [km] 2.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "direction": "north",
       "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
+      "delay_min": 20,
+      "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Aire de service Coldrerio et Poste de douane Chiasso-Brogeda Situation: trafic en accordéon Raison: surcharge d",
+      "description": "Stau Ursache: Bauarbeiten Verkehrsführung: Verkehr wird über die Gegenfahrbahn geleitet Zusatz 1: Zeitverlust Anz. [min] 15 | Libéré: A2 Bâle -> Lucerne entre Jonction autoroutière Bâle-Rheinhafen et ",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 15,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Mendrisio et Jonction autoroutière Melide/Bissone Situation: trafic en accordéon Raison:",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -3329,7 +3399,27 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen blockiert | Révoqué: A2 Chiasso -> St-Gothard entre Aire de service Centre de poids lourds Gornico et Tunnel Tunnel de",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: linker Fahrstreifen blockiert | Libéré: A2 Chiasso -> St-Gothard entre Tunnel Tunnel de Stalvedro et Tunnel Tunnel du St-Gothard Situation:",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": true,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Libéré: A2 Chiasso -> St-Gothard entre Echangeur Echangeur de Lugano-Nord et Tunnel Tunnel du Dosso di Taverne Situation: trafic perturbé Raison: véhicule",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Bâle-Wettstein et Tunnel Tunnel du Schwarzwald Situation: trafic en accordéon Raison: travaux de constr",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
