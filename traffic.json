@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-04T01:59:20.079542+00:00",
+  "updated": "2026-10-04T07:53:34.226235+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 154,
+  "total_incidents": 155,
   "tunnel_incidents": 3,
   "tunnel": {
     "status": "info",
@@ -10,29 +10,19 @@
       "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Tunnel gesperrt (ab 05.10.2026)"
+      "text": "Verkehrsbehinderung (ab 05.10.2026)"
     },
     "south": {
       "severity": "info",
       "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Tunnel gesperrt (ab 05.10.2026)"
+      "text": "Verkehrsbehinderung (ab 05.10.2026)"
     }
   },
   "incidents_north": [
     {
       "road": "A2",
-      "description": "Ausfahrt gesperrt (ab 03.10.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
       "direction": "both",
       "severity": "critical",
@@ -43,43 +33,23 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 L",
       "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 03.10.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 04.10.2026)",
-      "direction": "both",
-      "severity": "medium",
+      "severity": "high",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 Bas",
       "direction": "both",
-      "severity": "medium",
+      "severity": "high",
       "delay_min": null,
-      "queue_km": 1.7,
+      "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
     },
     {
       "road": "A2",
@@ -90,6 +60,16 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -318,6 +298,26 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 04.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1543,28 +1543,28 @@
     },
     {
       "road": "A2",
-      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Reiden et Echangeur Echangeur de Wiggertal, au kilomètre 56.4 Situation: danger Raison: objets sur",
+      "description": "Ausfahrt gesperrt (ab 03.10.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 03.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": true
     }
   ],
   "incidents_south": [
     {
       "road": "A2",
-      "description": "Ausfahrt gesperrt (ab 03.10.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
       "direction": "both",
       "severity": "critical",
@@ -1575,43 +1575,23 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 L",
       "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 03.10.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 04.10.2026)",
-      "direction": "both",
-      "severity": "medium",
+      "severity": "high",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 Bas",
       "direction": "both",
-      "severity": "medium",
+      "severity": "high",
       "delay_min": null,
-      "queue_km": 1.7,
+      "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
     },
     {
       "road": "A2",
@@ -1622,6 +1602,16 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -1850,6 +1840,26 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 04.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3085,28 +3095,28 @@
     },
     {
       "road": "A2",
-      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Reiden et Echangeur Echangeur de Wiggertal, au kilomètre 56.4 Situation: danger Raison: objets sur",
+      "description": "Ausfahrt gesperrt (ab 03.10.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 03.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": true
     }
   ],
   "incidents_all": [
     {
       "road": "A2",
-      "description": "Ausfahrt gesperrt (ab 03.10.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
       "direction": "both",
       "severity": "critical",
@@ -3117,43 +3127,23 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Gellert et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 L",
       "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 03.10.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 04.10.2026)",
-      "direction": "both",
-      "severity": "medium",
+      "severity": "high",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "description": "Stau Ursache: Bauarbeiten | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Wettstein Situation: bouchon Raison: travaux de construction | Approvato: A2 Bas",
       "direction": "both",
-      "severity": "medium",
+      "severity": "high",
       "delay_min": null,
-      "queue_km": 1.7,
+      "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
     },
     {
       "road": "A2",
@@ -3164,6 +3154,16 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -3392,6 +3392,26 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 04.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4627,13 +4647,23 @@
     },
     {
       "road": "A2",
-      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Reiden et Echangeur Echangeur de Wiggertal, au kilomètre 56.4 Situation: danger Raison: objets sur",
+      "description": "Ausfahrt gesperrt (ab 03.10.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 03.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": true
     }
   ]
 }
