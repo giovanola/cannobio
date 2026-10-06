@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-06T13:19:36.614243+00:00",
+  "updated": "2026-10-06T18:56:35.140987+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 161,
-  "tunnel_incidents": 4,
+  "total_incidents": 158,
+  "tunnel_incidents": 3,
   "tunnel": {
     "status": "critical",
     "north": {
@@ -10,15 +10,14 @@
       "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en p"
+      "text": "Tunnel gesperrt (ab 05.10.2026)"
     },
     "south": {
-      "severity": "high",
-      "delay_min": 30,
+      "severity": "critical",
+      "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en p",
-      "queue_km": 3.0
+      "text": "Tunnel gesperrt (ab 05.10.2026)"
     }
   },
   "incidents_north": [
@@ -34,33 +33,63 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 Chiasso <-> S. Gottardo Galler",
+      "description": "Tunnel gesperrt (ab 05.10.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 17.0,
       "is_tunnel": true,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Wettstein Situation: trafic en accordéon Raison: surcharg",
+      "description": "Strecke gesperrt (ab 05.10.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "critical",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.4,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: bouchon Raison: surcharge de trafic | Revocato: A",
-      "direction": "north",
-      "severity": "high",
+      "description": "Strecke gesperrt (ab 05.10.2026)",
+      "direction": "both",
+      "severity": "critical",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.8,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 1.7,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 05.10.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 3.1,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -84,9 +113,9 @@
     },
     {
       "road": "A2",
-      "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A2 Bâle -> Lucerne entre Parking Mühlematt et Tunnel Tunnel de Oberburg, au kilomètre 30.0 Situation: trafic perturbé Raison: véhicule en panne |",
       "direction": "both",
-      "severity": "info",
+      "severity": "medium",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
@@ -94,13 +123,13 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": 0.2,
+      "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
     },
     {
       "road": "A2",
@@ -329,16 +358,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -620,16 +639,6 @@
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 17.0,
-      "is_tunnel": true,
       "night_only": true
     },
     {
@@ -984,16 +993,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 3.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 15.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -1099,16 +1098,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 5.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1424,16 +1413,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.8,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 20.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -1601,6 +1580,16 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 18.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.5,
+      "is_tunnel": false,
+      "night_only": true
     }
   ],
   "incidents_south": [
@@ -1616,43 +1605,63 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 Chiasso <-> S. Gottardo Galler",
+      "description": "Tunnel gesperrt (ab 05.10.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 17.0,
       "is_tunnel": true,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Wettstein Situation: trafic en accordéon Raison: surcharg",
+      "description": "Strecke gesperrt (ab 05.10.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "critical",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.4,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Strecke gesperrt (ab 05.10.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": 1.8,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 1.7,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 05.10.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 3.1,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -1676,9 +1685,9 @@
     },
     {
       "road": "A2",
-      "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A2 Bâle -> Lucerne entre Parking Mühlematt et Tunnel Tunnel de Oberburg, au kilomètre 30.0 Situation: trafic perturbé Raison: véhicule en panne |",
       "direction": "both",
-      "severity": "info",
+      "severity": "medium",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
@@ -1686,13 +1695,13 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": 0.2,
+      "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
     },
     {
       "road": "A2",
@@ -1921,16 +1930,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2212,16 +2211,6 @@
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 17.0,
-      "is_tunnel": true,
       "night_only": true
     },
     {
@@ -2576,16 +2565,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 3.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 15.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -2691,16 +2670,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 5.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3016,16 +2985,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.8,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 20.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -3193,6 +3152,16 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 18.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.5,
+      "is_tunnel": false,
+      "night_only": true
     }
   ],
   "incidents_all": [
@@ -3208,53 +3177,63 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 Chiasso <-> St-Gothard Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 Chiasso <-> S. Gottardo Galler",
+      "description": "Tunnel gesperrt (ab 05.10.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 17.0,
       "is_tunnel": true,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Wettstein Situation: trafic en accordéon Raison: surcharg",
+      "description": "Strecke gesperrt (ab 05.10.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "critical",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 5.4,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: bouchon Raison: surcharge de trafic | Revocato: A",
-      "direction": "north",
-      "severity": "high",
+      "description": "Strecke gesperrt (ab 05.10.2026)",
+      "direction": "both",
+      "severity": "critical",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.8,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 1.7,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 05.10.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 3.1,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -3278,9 +3257,9 @@
     },
     {
       "road": "A2",
-      "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug | Révoqué: A2 Bâle -> Lucerne entre Parking Mühlematt et Tunnel Tunnel de Oberburg, au kilomètre 30.0 Situation: trafic perturbé Raison: véhicule en panne |",
       "direction": "both",
-      "severity": "info",
+      "severity": "medium",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
@@ -3288,13 +3267,13 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": 0.2,
+      "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
     },
     {
       "road": "A2",
@@ -3523,16 +3502,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3814,16 +3783,6 @@
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Tunnel gesperrt (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 17.0,
-      "is_tunnel": true,
       "night_only": true
     },
     {
@@ -4178,16 +4137,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 3.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 15.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -4293,16 +4242,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 5.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4618,16 +4557,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.8,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 20.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -4805,6 +4734,16 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 18.10.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.5,
+      "is_tunnel": false,
+      "night_only": true
     }
   ]
 }
