@@ -1,23 +1,23 @@
 {
-  "updated": "2026-10-07T20:12:26.832662+00:00",
+  "updated": "2026-10-08T00:12:04.822797+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 155,
-  "tunnel_incidents": 3,
+  "total_incidents": 153,
+  "tunnel_incidents": 1,
   "tunnel": {
-    "status": "critical",
+    "status": "info",
     "north": {
-      "severity": "critical",
+      "severity": "info",
       "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Tunnel gesperrt Ursache: Ausnahmetransport (ab 07.10.2026)"
+      "text": "Strecke gesperrt (ab 21.10.2026)"
     },
     "south": {
-      "severity": "critical",
+      "severity": "info",
       "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Tunnel gesperrt Ursache: Ausnahmetransport (ab 07.10.2026)"
+      "text": "Strecke gesperrt (ab 21.10.2026)"
     }
   },
   "incidents_north": [
@@ -63,16 +63,6 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Ausnahmetransport (ab 07.10.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
       "severity": "medium",
@@ -103,11 +93,31 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 08.10.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.6,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 05.10.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
       "queue_km": 3.1,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 08.10.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -120,16 +130,6 @@
       "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung zu erwarten Ursache: Ausnahmetransport (ab 07.10.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": false
     },
     {
       "road": "A2",
@@ -853,16 +853,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 08.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.6,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 15.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -1038,16 +1028,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.8,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 08.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1605,16 +1585,6 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Ausnahmetransport (ab 07.10.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
       "severity": "medium",
@@ -1645,11 +1615,31 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 08.10.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.6,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 05.10.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
       "queue_km": 3.1,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 08.10.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1662,16 +1652,6 @@
       "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung zu erwarten Ursache: Ausnahmetransport (ab 07.10.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": false
     },
     {
       "road": "A2",
@@ -2395,16 +2375,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 08.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.6,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 15.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -2580,16 +2550,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.8,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 08.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3147,16 +3107,6 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Ausnahmetransport (ab 07.10.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
       "severity": "medium",
@@ -3187,11 +3137,31 @@
     },
     {
       "road": "A2",
+      "description": "Verkehrsbehinderung (ab 08.10.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.6,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Verkehrsbehinderung (ab 05.10.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
       "queue_km": 3.1,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 08.10.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3204,16 +3174,6 @@
       "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung zu erwarten Ursache: Ausnahmetransport (ab 07.10.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": true,
-      "night_only": false
     },
     {
       "road": "A2",
@@ -3937,16 +3897,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 08.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.6,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 15.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -4122,16 +4072,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.8,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 08.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.4,
       "is_tunnel": false,
       "night_only": true
     },
