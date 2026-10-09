@@ -1,25 +1,23 @@
 {
-  "updated": "2026-10-09T17:05:59.373441+00:00",
+  "updated": "2026-10-09T21:37:00.455827+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 170,
+  "total_incidents": 157,
   "tunnel_incidents": 1,
   "tunnel": {
     "status": "info",
     "north": {
-      "severity": "high",
-      "delay_min": 20,
+      "severity": "info",
+      "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Strecke gesperrt (ab 21.10.2026)",
-      "queue_km": 1.0
+      "text": "Strecke gesperrt (ab 21.10.2026)"
     },
     "south": {
-      "severity": "high",
-      "delay_min": 30,
+      "severity": "info",
+      "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Strecke gesperrt (ab 21.10.2026)",
-      "queue_km": 3.0
+      "text": "Strecke gesperrt (ab 21.10.2026)"
     }
   },
   "incidents_north": [
@@ -35,103 +33,53 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Erdrutsch | Libéré: H13 Locarno <-> Bellinzone entre Localité Sementina et Localité Gudo Situation: fermé Raison: glissements de terrain | Approvato: H13 Locarno <-> Bellinzo",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
-      "severity": "critical",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Jonction autoroutière Bellinzone-Sud et Localité Cadenazzo Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bel",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.7,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Aire de service Coldrerio et Poste de douane Chiasso-Brogeda Situation: bouchon Raison: surcharge de trafic | Approvato: A2 S",
+      "description": "Verkehrsbehinderung (ab 05.10.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.1,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
-      "direction": "north",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Pratteln et Echangeur Echangeur d'Augst Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Basel ",
+      "description": "Verkehrsbehinderung (ab 09.10.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.0,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau im Anschluss Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle Echangeur Echangeur d'Augst Situation: bouchon dans la jonction Raison: surcharge de trafic | Revocato: A2 Luzern -> Basel ",
+      "description": "Verkehrsbehinderung (ab 09.10.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.0,
       "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Echangeur Echangeur de Lugano-Nord et Jonction autoroutière Melide/Bissone Situation: bouchon Raison: surcharge de trafic | A",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et Echangeur Echangeur de Härkingen en direction A1 Oensingen Situation: bouchon Raison: surcharg",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A18 Grellingen -> Echangeur de Hagnau entre Jonction autoroutière Muttenz-Nord et Echangeur Echangeur de Hagnau en direction A2 Echangeur de Gellert Situat",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Tunnel Tunnel du Schwarzwald Situation: bouchon Raison: surchar",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -142,16 +90,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -380,16 +318,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -980,16 +908,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 3.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1635,26 +1553,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 09.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 09.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 25.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -1682,16 +1580,6 @@
       "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Gefahr Ursache: Personen auf der Fahrbahn | Libéré: A13 Bellinzone <-> S. Bernardino entre Jonction autoroutière Bellinzone-Nord et Parking Campagnola Situation: danger Raison: piétons sur la chaussée",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ],
   "incidents_south": [
@@ -1707,113 +1595,53 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt Ursache: Erdrutsch | Libéré: H13 Locarno <-> Bellinzone entre Localité Sementina et Localité Gudo Situation: fermé Raison: glissements de terrain | Approvato: H13 Locarno <-> Bellinzo",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
-      "severity": "critical",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Jonction autoroutière Bellinzone-Sud et Localité Cadenazzo Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bel",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.7,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Aire de service Coldrerio et Poste de douane Chiasso-Brogeda Situation: bouchon Raison: surcharge de trafic | Approvato: A2 S",
+      "description": "Verkehrsbehinderung (ab 05.10.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.1,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Pratteln et Echangeur Echangeur d'Augst Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Basel ",
+      "description": "Verkehrsbehinderung (ab 09.10.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.0,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau im Anschluss Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle Echangeur Echangeur d'Augst Situation: bouchon dans la jonction Raison: surcharge de trafic | Revocato: A2 Luzern -> Basel ",
+      "description": "Verkehrsbehinderung (ab 09.10.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.0,
       "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Echangeur Echangeur de Lugano-Nord et Jonction autoroutière Melide/Bissone Situation: bouchon Raison: surcharge de trafic | A",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et Echangeur Echangeur de Härkingen en direction A1 Oensingen Situation: bouchon Raison: surcharg",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A18 Grellingen -> Echangeur de Hagnau entre Jonction autoroutière Muttenz-Nord et Echangeur Echangeur de Hagnau en direction A2 Echangeur de Gellert Situat",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Tunnel Tunnel du Schwarzwald Situation: bouchon Raison: surchar",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -1824,16 +1652,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -2062,16 +1880,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2662,16 +2470,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 3.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3317,26 +3115,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 09.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 09.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 25.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -3364,16 +3142,6 @@
       "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Gefahr Ursache: Personen auf der Fahrbahn | Libéré: A13 Bellinzone <-> S. Bernardino entre Jonction autoroutière Bellinzone-Nord et Parking Campagnola Situation: danger Raison: piétons sur la chaussée",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ],
   "incidents_all": [
@@ -3389,123 +3157,53 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt Ursache: Erdrutsch | Libéré: H13 Locarno <-> Bellinzone entre Localité Sementina et Localité Gudo Situation: fermé Raison: glissements de terrain | Approvato: H13 Locarno <-> Bellinzo",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
       "direction": "both",
-      "severity": "critical",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 0.2,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: H2 Bellinzone -> Chiasso entre Jonction autoroutière Bellinzone-Sud et Localité Cadenazzo Situation: bouchon Raison: surcharge de trafic | Approvato: H2 Bel",
+      "description": "Verkehrsbehinderung (ab 25.08.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 1.7,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Aire de service Coldrerio et Poste de douane Chiasso-Brogeda Situation: bouchon Raison: surcharge de trafic | Approvato: A2 S",
+      "description": "Verkehrsbehinderung (ab 05.10.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 3.1,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
-      "direction": "south",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
-      "direction": "north",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Pratteln et Echangeur Echangeur d'Augst Situation: bouchon Raison: surcharge de trafic | Revocato: A2 Basel ",
+      "description": "Verkehrsbehinderung (ab 09.10.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.0,
       "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
-      "description": "Stau im Anschluss Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle Echangeur Echangeur d'Augst Situation: bouchon dans la jonction Raison: surcharge de trafic | Revocato: A2 Luzern -> Basel ",
+      "description": "Verkehrsbehinderung (ab 09.10.2026)",
       "direction": "both",
-      "severity": "high",
+      "severity": "medium",
       "delay_min": null,
-      "queue_km": null,
+      "queue_km": 2.0,
       "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Libéré: A2 St-Gothard -> Chiasso entre Echangeur Echangeur de Lugano-Nord et Jonction autoroutière Melide/Bissone Situation: bouchon Raison: surcharge de trafic | A",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Egerkingen et Echangeur Echangeur de Härkingen en direction A1 Oensingen Situation: bouchon Raison: surcharg",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung | Révoqué: A18 Grellingen -> Echangeur de Hagnau entre Jonction autoroutière Muttenz-Nord et Echangeur Echangeur de Hagnau en direction A2 Echangeur de Gellert Situat",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 20 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Tunnel Tunnel du Schwarzwald Situation: bouchon Raison: surchar",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 20,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
+      "night_only": true
     },
     {
       "road": "A2",
@@ -3516,16 +3214,6 @@
       "queue_km": null,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -3754,16 +3442,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.08.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.7,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4354,16 +4032,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.1,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 05.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 3.1,
       "is_tunnel": false,
       "night_only": true
     },
@@ -5019,26 +4687,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 09.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 09.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 25.10.2026)",
       "direction": "both",
       "severity": "info",
@@ -5066,16 +4714,6 @@
       "queue_km": 2.0,
       "is_tunnel": false,
       "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Gefahr Ursache: Personen auf der Fahrbahn | Libéré: A13 Bellinzone <-> S. Bernardino entre Jonction autoroutière Bellinzone-Nord et Parking Campagnola Situation: danger Raison: piétons sur la chaussée",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
     }
   ]
 }
