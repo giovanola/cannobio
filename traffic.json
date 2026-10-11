@@ -1,23 +1,25 @@
 {
-  "updated": "2026-10-11T05:49:57.515137+00:00",
+  "updated": "2026-10-11T11:37:58.002676+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
   "total_incidents": 156,
   "tunnel_incidents": 1,
   "tunnel": {
     "status": "info",
     "north": {
-      "severity": "info",
-      "delay_min": null,
+      "severity": "medium",
+      "delay_min": 10,
       "queue_m": null,
       "wait_min": null,
-      "text": "Strecke gesperrt (ab 21.10.2026)"
+      "text": "Strecke gesperrt (ab 21.10.2026)",
+      "queue_km": 1.0
     },
     "south": {
-      "severity": "info",
-      "delay_min": null,
+      "severity": "high",
+      "delay_min": 30,
       "queue_m": null,
       "wait_min": null,
-      "text": "Strecke gesperrt (ab 21.10.2026)"
+      "text": "Strecke gesperrt (ab 21.10.2026)",
+      "queue_km": 3.0
     }
   },
   "incidents_north": [
@@ -33,11 +35,11 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Unfall Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A4 Zurich -> Brunnen entre Jonction autoroutière Rotkreuz et Jonction autoroutière Küssnacht Situation: fermé ",
+      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
       "direction": "north",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
+      "severity": "high",
+      "delay_min": 10,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -278,16 +280,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 10.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1558,16 +1550,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Ein- und Ausfahrt gesperrt (ab 10.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     }
@@ -1585,6 +1567,26 @@
     },
     {
       "road": "A2",
+      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
+      "direction": "south",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": 30,
+      "queue_km": 3.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
       "direction": "both",
       "severity": "info",
@@ -1820,16 +1822,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 10.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -3100,16 +3092,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Ein- und Ausfahrt gesperrt (ab 10.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     }
@@ -3127,11 +3109,31 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Unfall Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A4 Zurich -> Brunnen entre Jonction autoroutière Rotkreuz et Jonction autoroutière Küssnacht Situation: fermé ",
-      "direction": "north",
+      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
+      "direction": "south",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": 30,
+      "queue_km": 3.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 1.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation:",
+      "direction": "north",
+      "severity": "high",
+      "delay_min": 10,
+      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3372,16 +3374,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 10.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 1.0,
       "is_tunnel": false,
       "night_only": true
     },
@@ -4662,16 +4654,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 2.0,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Ein- und Ausfahrt gesperrt (ab 10.10.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.3,
       "is_tunnel": false,
       "night_only": true
     }
