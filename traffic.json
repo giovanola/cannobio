@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-30T06:02:31.056715+00:00",
+  "updated": "2026-10-30T12:40:13.240206+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 120,
+  "total_incidents": 127,
   "tunnel_incidents": 0,
   "tunnel": {
     "status": "clear",
@@ -13,11 +13,12 @@
       "text": null
     },
     "south": {
-      "severity": "clear",
-      "delay_min": null,
+      "severity": "high",
+      "delay_min": 30,
       "queue_m": null,
       "wait_min": null,
-      "text": null
+      "text": null,
+      "queue_km": 3.0
     }
   },
   "incidents_north": [
@@ -33,27 +34,7 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 29.10.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Breite Situation: trafic en accordéon Raison: surcharge de",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Mendrisio et Jonction autoroutière Melide/Bissone Situation: trafic en accordéon Raison: ",
+      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle Jonction autoroutière Sissach Situation: bouchon dans la sortie Raison: surcharge de trafic | Approvato: A2 Luzern -> Bas",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -68,6 +49,16 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: vorausgegangener Unfall | Révoqué: A2 Lucerne -> Bâle entre Jonction autoroutière Diegten et Tunnel Tunnel d'Arisdorf Situation: trafic en accordéon Raison: accident précéd",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1200,6 +1191,56 @@
       "queue_km": 0.8,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 03.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 16.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 03.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.5,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Pannenfahrzeug Verkehrsführung: Pannenstreifen blockiert | Révoqué: A2 Bâle -> Lucerne entre Tunnel Tunnel de Ebenrain et Jonction autoroutière Diegten Situation: danger Raison: véhicu",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     }
   ],
   "incidents_south": [
@@ -1215,16 +1256,6 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 29.10.2026)",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Strecke gesperrt Ursache: Wintersperre | Libéré: Tremola, Airolo dans les deux sens  Situation: fermé Raison: fermeture hivernale | Approvato: Tremola, Airolo in tutte le direzioni  Situazione: chiusa",
       "direction": "south",
       "severity": "critical",
@@ -1245,9 +1276,9 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Breite Situation: trafic en accordéon Raison: surcharge de",
-      "direction": "both",
-      "severity": "high",
+      "description": "Einfahrt gesperrt | Libéré: Bretella autostradale Passo del S. Gottardo Airolo-Nufenen -> Airolo Jonction autoroutière Airolo Situation: entrée fermée | Approvato: Bretella autostradale Passo del S. G",
+      "direction": "south",
+      "severity": "critical",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
@@ -1255,7 +1286,27 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Mendrisio et Jonction autoroutière Melide/Bissone Situation: trafic en accordéon Raison: ",
+      "description": "Strecke gesperrt Ursache: Unfall | Libéré: H2 Bellinzone -> Airolo entre Localité Arbedo et Jonction autoroutière Bellinzone-Nord Situation: fermé Raison: accident | Approvato: H2 Bellinzona -> Airolo",
+      "direction": "south",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": 30,
+      "queue_km": 3.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle Jonction autoroutière Sissach Situation: bouchon dans la sortie Raison: surcharge de trafic | Approvato: A2 Luzern -> Bas",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -1270,6 +1321,16 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: vorausgegangener Unfall | Révoqué: A2 Lucerne -> Bâle entre Jonction autoroutière Diegten et Tunnel Tunnel d'Arisdorf Situation: trafic en accordéon Raison: accident précéd",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2392,22 +2453,62 @@
       "queue_km": 0.8,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 03.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 16.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 03.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.5,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Pannenfahrzeug Verkehrsführung: Pannenstreifen blockiert | Révoqué: A2 Bâle -> Lucerne entre Tunnel Tunnel de Ebenrain et Jonction autoroutière Diegten Situation: danger Raison: véhicu",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     }
   ],
   "incidents_all": [
     {
       "road": "A2",
       "description": "Strecke gesperrt Ursache: Technische Probleme | Libéré: A4 Altdorf <-> Brunnen entre Localité Flüelen et Localité Sisikon Situation: fermé Raison: en raison de problèmes techniques | Approvato: A4 Alt",
-      "direction": "both",
-      "severity": "critical",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 29.10.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
@@ -2437,9 +2538,9 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Jonction autoroutière Bâle-Breite Situation: trafic en accordéon Raison: surcharge de",
-      "direction": "both",
-      "severity": "high",
+      "description": "Einfahrt gesperrt | Libéré: Bretella autostradale Passo del S. Gottardo Airolo-Nufenen -> Airolo Jonction autoroutière Airolo Situation: entrée fermée | Approvato: Bretella autostradale Passo del S. G",
+      "direction": "south",
+      "severity": "critical",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
@@ -2447,7 +2548,27 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Mendrisio et Jonction autoroutière Melide/Bissone Situation: trafic en accordéon Raison: ",
+      "description": "Strecke gesperrt Ursache: Unfall | Libéré: H2 Bellinzone -> Airolo entre Localité Arbedo et Jonction autoroutière Bellinzone-Nord Situation: fermé Raison: accident | Approvato: H2 Bellinzona -> Airolo",
+      "direction": "south",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": 30,
+      "queue_km": 3.0,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau in der Ausfahrt Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle Jonction autoroutière Sissach Situation: bouchon dans la sortie Raison: surcharge de trafic | Approvato: A2 Luzern -> Bas",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2462,6 +2583,16 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: vorausgegangener Unfall | Révoqué: A2 Lucerne -> Bâle entre Jonction autoroutière Diegten et Tunnel Tunnel d'Arisdorf Situation: trafic en accordéon Raison: accident précéd",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3594,6 +3725,56 @@
       "queue_km": 0.8,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 03.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 16.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 03.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.5,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 13.11.2026)",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": 1.0,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Pannenfahrzeug Verkehrsführung: Pannenstreifen blockiert | Révoqué: A2 Bâle -> Lucerne entre Tunnel Tunnel de Ebenrain et Jonction autoroutière Diegten Situation: danger Raison: véhicu",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     }
   ]
 }
