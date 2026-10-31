@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-31T13:47:49.324699+00:00",
+  "updated": "2026-10-31T17:57:35.348550+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 131,
+  "total_incidents": 129,
   "tunnel_incidents": 0,
   "tunnel": {
     "status": "clear",
@@ -13,12 +13,11 @@
       "text": null
     },
     "south": {
-      "severity": "high",
-      "delay_min": 30,
+      "severity": "clear",
+      "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": null,
-      "queue_km": 3.0
+      "text": null
     }
   },
   "incidents_north": [
@@ -44,7 +43,27 @@
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Badischer Bahnhof Situation: trafic en accordéon Raison: ",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard Tunnel Tunnel de Piumogna Situation: trafic perturbé Raison: véhicule en p",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Echangeur Echangeur de Hagnau Situation: trafic en accordéon Raison: surcharge de tr",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Badischer Bahnhof Situation: trafic en accordéon Raison:",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -59,26 +78,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Bellinzone-Sud Situation: trafic perturbé Raison: accident | Approvato: A2 Chiasso -> S. Gottardo Svincolo ",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Biasca et Jonction autoroutière Giornico Situation: t",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1316,8 +1315,8 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard Tunnel Tunnel de Piumogna Situation: trafic perturbé Raison: véhicule en p",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -1326,17 +1325,17 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
-      "direction": "south",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Echangeur Echangeur de Hagnau Situation: trafic en accordéon Raison: surcharge de tr",
+      "direction": "both",
       "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Badischer Bahnhof Situation: trafic en accordéon Raison: ",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Badischer Bahnhof Situation: trafic en accordéon Raison:",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -1351,26 +1350,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Bellinzone-Sud Situation: trafic perturbé Raison: accident | Approvato: A2 Chiasso -> S. Gottardo Svincolo ",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Biasca et Jonction autoroutière Giornico Situation: t",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2618,8 +2597,8 @@
     },
     {
       "road": "A2",
-      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
-      "direction": "south",
+      "description": "Verkehrsbehinderung Ursache: Pannenfahrzeug Verkehrsführung: rechter Fahrstreifen gesperrt | Libéré: A2 Chiasso -> St-Gothard Tunnel Tunnel de Piumogna Situation: trafic perturbé Raison: véhicule en p",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -2628,17 +2607,17 @@
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: b",
-      "direction": "south",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur de Wiese et Echangeur Echangeur de Hagnau Situation: trafic en accordéon Raison: surcharge de tr",
+      "direction": "both",
       "severity": "high",
-      "delay_min": 30,
-      "queue_km": 3.0,
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Libéré: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Badischer Bahnhof Situation: trafic en accordéon Raison: ",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Jonction autoroutière Bâle-Badischer Bahnhof Situation: trafic en accordéon Raison:",
       "direction": "both",
       "severity": "high",
       "delay_min": null,
@@ -2653,26 +2632,6 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Bellinzone-Sud Situation: trafic perturbé Raison: accident | Approvato: A2 Chiasso -> S. Gottardo Svincolo ",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Biasca et Jonction autoroutière Giornico Situation: t",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
