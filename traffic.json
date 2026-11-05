@@ -1,23 +1,23 @@
 {
-  "updated": "2026-11-05T03:42:54.667616+00:00",
+  "updated": "2026-11-05T11:30:14.155531+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
   "total_incidents": 105,
-  "tunnel_incidents": 1,
+  "tunnel_incidents": 2,
   "tunnel": {
-    "status": "info",
+    "status": "critical",
     "north": {
-      "severity": "info",
+      "severity": "critical",
       "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Verkehrsbehinderung (ab 10.11.2026)"
+      "text": "Strecke gesperrt Ursache: Wintersperre | Libéré: H2 Airolo <-> Göschenen Col Col du St-Gothard Situation: fermé Raison: fermeture hivernale | Approvat"
     },
     "south": {
-      "severity": "info",
+      "severity": "critical",
       "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Verkehrsbehinderung (ab 10.11.2026)"
+      "text": "Strecke gesperrt Ursache: Wintersperre | Libéré: H2 Airolo <-> Göschenen Col Col du St-Gothard Situation: fermé Raison: fermeture hivernale | Approvat"
     }
   },
   "incidents_north": [
@@ -33,12 +33,12 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 04.11.2026)",
+      "description": "Strecke gesperrt Ursache: Wintersperre | Libéré: H2 Airolo <-> Göschenen Col Col du St-Gothard Situation: fermé Raison: fermeture hivernale | Approvato: H2 Airolo <-> Göschenen Passo Passo del S. Gott",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": false,
+      "is_tunnel": true,
       "night_only": false
     },
     {
@@ -450,16 +450,6 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 04.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.3,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -1008,6 +998,16 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 3.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Libéré: A2 Lucerne -> St-Gothard entre Echangeur Echangeur d'Altdorf et Jonction autoroutière Erstfeld, au kilomètre 145.5 Situation: danger Raison: obje",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
@@ -1045,18 +1045,18 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Schneefall | Libéré: Ulrichen <-> Airolo entre Localité All'Acqua et Localité Ulrichen Situation: fermé Raison: chutes de neige | Approvato: Ulrichen <-> Airolo tra Luogo All",
-      "direction": "south",
+      "description": "Strecke gesperrt Ursache: Wintersperre | Libéré: H2 Airolo <-> Göschenen Col Col du St-Gothard Situation: fermé Raison: fermeture hivernale | Approvato: H2 Airolo <-> Göschenen Passo Passo del S. Gott",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": false,
+      "is_tunnel": true,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 04.11.2026)",
-      "direction": "both",
+      "description": "Strecke gesperrt Ursache: Schneefall (ab 05.11.2026)",
+      "direction": "south",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -1472,16 +1472,6 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 04.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.3,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -2060,6 +2050,16 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 3.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Libéré: A2 Lucerne -> St-Gothard entre Echangeur Echangeur d'Altdorf et Jonction autoroutière Erstfeld, au kilomètre 145.5 Situation: danger Raison: obje",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
@@ -2097,18 +2097,18 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt Ursache: Schneefall | Libéré: Ulrichen <-> Airolo entre Localité All'Acqua et Localité Ulrichen Situation: fermé Raison: chutes de neige | Approvato: Ulrichen <-> Airolo tra Luogo All",
-      "direction": "south",
+      "description": "Strecke gesperrt Ursache: Wintersperre | Libéré: H2 Airolo <-> Göschenen Col Col du St-Gothard Situation: fermé Raison: fermeture hivernale | Approvato: H2 Airolo <-> Göschenen Passo Passo del S. Gott",
+      "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": false,
+      "is_tunnel": true,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt (ab 04.11.2026)",
-      "direction": "both",
+      "description": "Strecke gesperrt Ursache: Schneefall (ab 05.11.2026)",
+      "direction": "south",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
@@ -2524,16 +2524,6 @@
       "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 04.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.3,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -3112,6 +3102,16 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 3.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Libéré: A2 Lucerne -> St-Gothard entre Echangeur Echangeur d'Altdorf et Jonction autoroutière Erstfeld, au kilomètre 145.5 Situation: danger Raison: obje",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
