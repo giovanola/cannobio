@@ -1,17 +1,16 @@
 {
-  "updated": "2026-11-06T11:40:30.451163+00:00",
+  "updated": "2026-11-06T18:26:35.674025+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 109,
-  "tunnel_incidents": 4,
+  "total_incidents": 110,
+  "tunnel_incidents": 2,
   "tunnel": {
     "status": "critical",
     "north": {
       "severity": "medium",
-      "delay_min": null,
+      "delay_min": 10,
       "queue_m": null,
       "wait_min": null,
-      "text": "Strecke gesperrt Ursache: Wintersperre | Libéré: H2 Airolo <-> Göschenen Col Col du St-Gothard Situation: fermé Raison: fermeture hivernale | Approvat",
-      "queue_km": 1.0
+      "text": "Strecke gesperrt Ursache: Wintersperre | Libéré: H2 Airolo <-> Göschenen Col Col du St-Gothard Situation: fermé Raison: fermeture hivernale | Approvat"
     },
     "south": {
       "severity": "critical",
@@ -34,6 +33,16 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt (ab 02.11.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": 2.95,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Strecke gesperrt Ursache: Wintersperre | Libéré: H2 Airolo <-> Göschenen Col Col du St-Gothard Situation: fermé Raison: fermeture hivernale | Approvato: H2 Airolo <-> Göschenen Passo Passo del S. Gott",
       "direction": "both",
       "severity": "critical",
@@ -44,9 +53,9 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Liestal et Echangeur Echangeur d'Augst Situation: trafic pe",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Poste de douane Chiasso-Brogeda Situation: trafic en accordéon Raison:",
       "direction": "both",
-      "severity": "critical",
+      "severity": "high",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
@@ -54,23 +63,33 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 S. Gottardo -> Chiasso Galleria",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur de Gellert et Tunnel Tunnel Schweizerhalle Situation: trafic en accordéon Raison: surcharge de t",
       "direction": "both",
-      "severity": "critical",
+      "severity": "high",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": true,
+      "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1.0 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: bouchon longueur [km] 1.0 | Approvato: A2 Luzern -> S. Gottardo ",
-      "direction": "north",
+      "description": "Stau Ursache: vorausgegangener Unfall Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Tunnel Tunnel du Schwarzwald Situation: bouchon Raison: acc",
+      "direction": "both",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": 1.0,
-      "is_tunnel": true,
+      "delay_min": 10,
+      "queue_km": null,
+      "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -94,9 +113,9 @@
     },
     {
       "road": "A2",
-      "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
+      "description": "stockender Verkehr Ursache: vorausgegangener Unfall | Révoqué: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Nord et Jonction autoroutière Lucerne-Centre Situation: trafic en accordéon Raiso",
       "direction": "both",
-      "severity": "info",
+      "severity": "medium",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
@@ -104,13 +123,13 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": 0.2,
+      "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
     },
     {
       "road": "A2",
@@ -601,16 +620,6 @@
       "queue_km": 3.0,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 02.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.95,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -1076,6 +1085,16 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt (ab 02.11.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": 2.95,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Strecke gesperrt Ursache: Wintersperre | Libéré: Tremola, Airolo dans les deux sens  Situation: fermé Raison: fermeture hivernale | Approvato: Tremola, Airolo in tutte le direzioni  Situazione: chiusa",
       "direction": "south",
       "severity": "critical",
@@ -1106,9 +1125,9 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Liestal et Echangeur Echangeur d'Augst Situation: trafic pe",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Poste de douane Chiasso-Brogeda Situation: trafic en accordéon Raison:",
       "direction": "both",
-      "severity": "critical",
+      "severity": "high",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
@@ -1116,13 +1135,33 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 S. Gottardo -> Chiasso Galleria",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur de Gellert et Tunnel Tunnel Schweizerhalle Situation: trafic en accordéon Raison: surcharge de t",
       "direction": "both",
-      "severity": "critical",
+      "severity": "high",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": true,
+      "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Ursache: vorausgegangener Unfall Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Tunnel Tunnel du Schwarzwald Situation: bouchon Raison: acc",
+      "direction": "both",
+      "severity": "high",
+      "delay_min": 10,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -1146,9 +1185,9 @@
     },
     {
       "road": "A2",
-      "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
+      "description": "stockender Verkehr Ursache: vorausgegangener Unfall | Révoqué: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Nord et Jonction autoroutière Lucerne-Centre Situation: trafic en accordéon Raiso",
       "direction": "both",
-      "severity": "info",
+      "severity": "medium",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
@@ -1156,13 +1195,13 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": 0.2,
+      "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
     },
     {
       "road": "A2",
@@ -1653,16 +1692,6 @@
       "queue_km": 3.0,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 02.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.95,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -2158,6 +2187,16 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt (ab 02.11.2026)",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": 2.95,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
       "description": "Strecke gesperrt Ursache: Wintersperre | Libéré: Tremola, Airolo dans les deux sens  Situation: fermé Raison: fermeture hivernale | Approvato: Tremola, Airolo in tutte le direzioni  Situazione: chiusa",
       "direction": "south",
       "severity": "critical",
@@ -2188,9 +2227,9 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen gesperrt | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Liestal et Echangeur Echangeur d'Augst Situation: trafic pe",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Poste de douane Chiasso-Brogeda Situation: trafic en accordéon Raison:",
       "direction": "both",
-      "severity": "critical",
+      "severity": "high",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
@@ -2198,23 +2237,33 @@
     },
     {
       "road": "A2",
-      "description": "Tunnel gesperrt Ursache: Pannenfahrzeug | Révoqué: A2 St-Gothard -> Chiasso Tunnel Tunnel du St-Gothard Situation: tunnel fermé Raison: véhicule en panne | Revocato: A2 S. Gottardo -> Chiasso Galleria",
+      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Echangeur Echangeur de Gellert et Tunnel Tunnel Schweizerhalle Situation: trafic en accordéon Raison: surcharge de t",
       "direction": "both",
-      "severity": "critical",
+      "severity": "high",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": true,
+      "is_tunnel": false,
       "night_only": false
     },
     {
       "road": "A2",
-      "description": "Stau Länge [km] 1.0 | Libéré: A2 Lucerne -> St-Gothard entre Jonction autoroutière Wassen et Jonction autoroutière Göschenen Situation: bouchon longueur [km] 1.0 | Approvato: A2 Luzern -> S. Gottardo ",
-      "direction": "north",
+      "description": "Stau Ursache: vorausgegangener Unfall Zusatz 1: Zeitverlust Anz. [min] 10 | Libéré: A2 Lucerne -> Bâle entre Tunnel Tunnel Schweizerhalle et Tunnel Tunnel du Schwarzwald Situation: bouchon Raison: acc",
+      "direction": "both",
       "severity": "high",
-      "delay_min": null,
-      "queue_km": 1.0,
-      "is_tunnel": true,
+      "delay_min": 10,
+      "queue_km": null,
+      "is_tunnel": false,
       "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": true
     },
     {
       "road": "A2",
@@ -2238,9 +2287,9 @@
     },
     {
       "road": "A2",
-      "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
+      "description": "stockender Verkehr Ursache: vorausgegangener Unfall | Révoqué: A2 Bâle -> St-Gothard entre Jonction autoroutière Emmen-Nord et Jonction autoroutière Lucerne-Centre Situation: trafic en accordéon Raiso",
       "direction": "both",
-      "severity": "info",
+      "severity": "medium",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": false,
@@ -2248,13 +2297,13 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 14.08.2023)",
+      "description": "((TIC/ConstructionWork : 3057-342/274)) | Via Nodivra 11, 6914 Lugano, Switzerland | Via Nodivra 28, 6914 Carona, Switzerland",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": 0.2,
+      "queue_km": null,
       "is_tunnel": false,
-      "night_only": true
+      "night_only": false
     },
     {
       "road": "A2",
@@ -2745,16 +2794,6 @@
       "queue_km": 3.0,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 02.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 2.95,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
