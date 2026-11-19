@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-18T18:13:25.286837+00:00",
+  "updated": "2026-11-19T00:23:10.580397+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 118,
+  "total_incidents": 110,
   "tunnel_incidents": 2,
   "tunnel": {
     "status": "critical",
@@ -13,8 +13,8 @@
       "text": "Strecke gesperrt Ursache: Wintersperre | Libéré: H2 Airolo <-> Göschenen Col Col du St-Gothard Situation: fermé Raison: fermeture hivernale | Approvat"
     },
     "south": {
-      "severity": "high",
-      "delay_min": 30,
+      "severity": "critical",
+      "delay_min": null,
       "queue_m": null,
       "wait_min": null,
       "text": "Strecke gesperrt Ursache: Wintersperre | Libéré: H2 Airolo <-> Göschenen Col Col du St-Gothard Situation: fermé Raison: fermeture hivernale | Approvat"
@@ -63,72 +63,22 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt Ursache: Tiere auf der Fahrbahn | Révoqué: A2 Chiasso <-> St-Gothard entre Tunnel Tunnel du Dosso di Taverne et Echangeur Echangeur de Lugano-Nord Situation: fermé Raison: animaux sur",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Tunnel gesperrt Ursache: Ausnahmetransport (ab 18.11.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Nord et Jonction autoroutière Melide/Bissone Situation: bouc",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Poste de douane Chiasso-Brogeda Situation: bouch",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Bâle-Wettstein et Jonction autoroutière Pratteln Situation: trafic en accordéon Raison: surcha",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Tunnel Tunnel du Schwarzwald Situation: trafic en accordéon Raison: surcharge de tr",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: H2 Chiasso <-> Bellinzone entre Localité Cadenazzo et Jonction autoroutière Bellinzone-Sud Situation: trafic en accordéon Raison: surcharge d",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Bâle entre Tunnel Tunnel du Sonnenberg et Jonction autoroutière Emmen-Sud Situation: trafic en accordéon Raison: surcharge d",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -183,16 +133,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.11.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.4,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 09.11.2026)",
       "direction": "both",
       "severity": "medium",
@@ -233,11 +173,41 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.11.2026)",
+      "description": "Verkehrsbehinderung (ab 19.11.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 2.5,
+      "queue_km": 0.3,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.11.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.11.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.11.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -433,16 +403,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 01.12.2026)",
       "direction": "both",
       "severity": "info",
@@ -458,26 +418,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -658,16 +598,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.05,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1158,16 +1088,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 3.55,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Gefahr Ursache: Pannenfahrzeug | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Egerkingen et Parking Eggberg Situation: danger Raison: véhicule en panne | Approvato: A2 Luzern -> Basel tra Sv",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
@@ -1235,72 +1155,22 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt Ursache: Tiere auf der Fahrbahn | Révoqué: A2 Chiasso <-> St-Gothard entre Tunnel Tunnel du Dosso di Taverne et Echangeur Echangeur de Lugano-Nord Situation: fermé Raison: animaux sur",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Tunnel gesperrt Ursache: Ausnahmetransport (ab 18.11.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Nord et Jonction autoroutière Melide/Bissone Situation: bouc",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Poste de douane Chiasso-Brogeda Situation: bouch",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Bâle-Wettstein et Jonction autoroutière Pratteln Situation: trafic en accordéon Raison: surcha",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Tunnel Tunnel du Schwarzwald Situation: trafic en accordéon Raison: surcharge de tr",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: H2 Chiasso <-> Bellinzone entre Localité Cadenazzo et Jonction autoroutière Bellinzone-Sud Situation: trafic en accordéon Raison: surcharge d",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Bâle entre Tunnel Tunnel du Sonnenberg et Jonction autoroutière Emmen-Sud Situation: trafic en accordéon Raison: surcharge d",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -1355,16 +1225,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.11.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.4,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 09.11.2026)",
       "direction": "both",
       "severity": "medium",
@@ -1405,11 +1265,41 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.11.2026)",
+      "description": "Verkehrsbehinderung (ab 19.11.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 2.5,
+      "queue_km": 0.3,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.11.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.11.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.11.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1615,16 +1505,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 01.12.2026)",
       "direction": "both",
       "severity": "info",
@@ -1640,26 +1520,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1840,16 +1700,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.05,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2340,16 +2190,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 3.55,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Gefahr Ursache: Pannenfahrzeug | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Egerkingen et Parking Eggberg Situation: danger Raison: véhicule en panne | Approvato: A2 Luzern -> Basel tra Sv",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
@@ -2417,72 +2257,22 @@
     },
     {
       "road": "A2",
+      "description": "Strecke gesperrt Ursache: Tiere auf der Fahrbahn | Révoqué: A2 Chiasso <-> St-Gothard entre Tunnel Tunnel du Dosso di Taverne et Echangeur Echangeur de Lugano-Nord Situation: fermé Raison: animaux sur",
+      "direction": "both",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
       "description": "Tunnel gesperrt Ursache: Ausnahmetransport (ab 18.11.2026)",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
       "is_tunnel": true,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 30 | Libéré: A2 St-Gothard -> Chiasso entre Jonction autoroutière Lugano-Nord et Jonction autoroutière Melide/Bissone Situation: bouc",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 30,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Stau Ursache: Verkehrsüberlastung Zusatz 1: Zeitverlust Anz. [min] 10 | Révoqué: A2 St-Gothard -> Chiasso entre Jonction autoroutière Chiasso-Centro et Poste de douane Chiasso-Brogeda Situation: bouch",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": 10,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Bâle -> Lucerne entre Jonction autoroutière Bâle-Wettstein et Jonction autoroutière Pratteln Situation: trafic en accordéon Raison: surcha",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 Lucerne -> Bâle entre Echangeur Echangeur de Hagnau et Tunnel Tunnel du Schwarzwald Situation: trafic en accordéon Raison: surcharge de tr",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: H2 Chiasso <-> Bellinzone entre Localité Cadenazzo et Jonction autoroutière Bellinzone-Sud Situation: trafic en accordéon Raison: surcharge d",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "stockender Verkehr Ursache: Verkehrsüberlastung | Révoqué: A2 St-Gothard -> Bâle entre Tunnel Tunnel du Sonnenberg et Jonction autoroutière Emmen-Sud Situation: trafic en accordéon Raison: surcharge d",
-      "direction": "both",
-      "severity": "high",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
       "night_only": false
     },
     {
@@ -2537,16 +2327,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.11.2026)",
-      "direction": "both",
-      "severity": "medium",
-      "delay_min": null,
-      "queue_km": 1.4,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 09.11.2026)",
       "direction": "both",
       "severity": "medium",
@@ -2587,11 +2367,41 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 17.11.2026)",
+      "description": "Verkehrsbehinderung (ab 19.11.2026)",
       "direction": "both",
       "severity": "medium",
       "delay_min": null,
-      "queue_km": 2.5,
+      "queue_km": 0.3,
+      "is_tunnel": false,
+      "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.11.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.11.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.2,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung (ab 19.11.2026)",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -2797,16 +2607,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 01.12.2026)",
       "direction": "both",
       "severity": "info",
@@ -2822,26 +2622,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3022,16 +2802,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 0.05,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 19.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.1,
       "is_tunnel": false,
       "night_only": false
     },
@@ -3522,16 +3292,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 3.55,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Gefahr Ursache: Pannenfahrzeug | Libéré: A2 Lucerne -> Bâle entre Jonction autoroutière Egerkingen et Parking Eggberg Situation: danger Raison: véhicule en panne | Approvato: A2 Luzern -> Basel tra Sv",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     }
