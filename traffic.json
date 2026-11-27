@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-27T03:00:15.106510+00:00",
+  "updated": "2026-11-27T11:54:31.132582+00:00",
   "source": "ASTRA / opentransportdata.swiss · DATEX II · A2 Gotthard",
-  "total_incidents": 87,
-  "tunnel_incidents": 1,
+  "total_incidents": 89,
+  "tunnel_incidents": 2,
   "tunnel": {
     "status": "critical",
     "north": {
@@ -13,11 +13,12 @@
       "text": "Strecke gesperrt Ursache: Wintersperre | Libéré: H2 Airolo <-> Göschenen Col Col du St-Gothard Situation: fermé Raison: fermeture hivernale | Approvat"
     },
     "south": {
-      "severity": "critical",
+      "severity": "medium",
       "delay_min": null,
       "queue_m": null,
       "wait_min": null,
-      "text": "Strecke gesperrt Ursache: Wintersperre | Libéré: H2 Airolo <-> Göschenen Col Col du St-Gothard Situation: fermé Raison: fermeture hivernale | Approvat"
+      "text": "Strecke gesperrt Ursache: Wintersperre | Libéré: H2 Airolo <-> Göschenen Col Col du St-Gothard Situation: fermé Raison: fermeture hivernale | Approvat",
+      "queue_km": 3.0
     }
   },
   "incidents_north": [
@@ -43,12 +44,12 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt für LKW Ursache: Schneefall ausgenommen Fahrzeuge mit Allradantrieb | Révoqué: A13 Bellinzone <-> Coire entre Jonction autoroutière Thusis-Sud et Echangeur Echangeur de Bellinzone-Nor",
+      "description": "Strecke gesperrt Ursache: Unfall | Libéré: A2 Chiasso -> St-Gothard Tunnel Tunnel du St-Gothard Situation: fermé Raison: accident | Approvato: A2 Chiasso -> S. Gottardo Galleria Galleria San Gottardo ",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
-      "is_tunnel": false,
+      "is_tunnel": true,
       "night_only": false
     },
     {
@@ -58,6 +59,16 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 Bâle -> Lucerne Echangeur Echangeur d'Augst Situation: trafic perturbé Raison: accident Gestion du traf",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -158,16 +169,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.4,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 25.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 5.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -573,16 +574,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 29.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 07.12.2026)",
       "direction": "both",
       "severity": "info",
@@ -650,16 +641,6 @@
       "queue_km": 3.55,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -823,16 +804,6 @@
     },
     {
       "road": "A2",
-      "description": "alle Parkplätze besetzt für LKW | Libéré: A13 Coire -> S. Bernardino Jonction autoroutière Rothenbrunnen Situation: toutes les places de parking sont prises pour poids lourd | Approvato: A13 Chur -> S",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 03.12.2026)",
       "direction": "both",
       "severity": "info",
@@ -853,13 +824,43 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 26.11.2026)",
+      "description": "Verkehrsbehinderung (ab 10.12.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": 18.0,
+      "queue_km": 6.0,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Veranstaltung Verkehrsführung: veränderte Verkehrsführung (ab 28.11.2026)",
+      "direction": "north",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Personen auf der Fahrbahn | Libéré: A2 Lucerne <-> Bâle Echangeur Echangeur d'Augst Situation: danger Raison: piétons sur la chaussée | Approvato: A2 Luzern <-> Basel Raccordo autostra",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 Bâle -> Lucerne entre Tunnel Tunnel Eich et Jonction autoroutière Sempach, au kilomètre 80.2 Situation: danger Raison: objets sur la chaussée",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     }
   ],
   "incidents_south": [
@@ -905,11 +906,31 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt für LKW Ursache: Schneefall ausgenommen Fahrzeuge mit Allradantrieb | Révoqué: A13 Bellinzone <-> Coire entre Jonction autoroutière Thusis-Sud et Echangeur Echangeur de Bellinzone-Nor",
+      "description": "Strecke gesperrt Ursache: Unfall | Libéré: A2 Chiasso -> St-Gothard Tunnel Tunnel du St-Gothard Situation: fermé Raison: accident | Approvato: A2 Chiasso -> S. Gottardo Galleria Galleria San Gottardo ",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
+      "is_tunnel": true,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
+      "direction": "south",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: bouchon longueur [km] 3.0 Raison: sur",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": 3.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -920,6 +941,16 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 Bâle -> Lucerne Echangeur Echangeur d'Augst Situation: trafic perturbé Raison: accident Gestion du traf",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1020,16 +1051,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.4,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 25.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 5.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -1445,16 +1466,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 29.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 07.12.2026)",
       "direction": "both",
       "severity": "info",
@@ -1522,16 +1533,6 @@
       "queue_km": 3.55,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -1695,16 +1696,6 @@
     },
     {
       "road": "A2",
-      "description": "alle Parkplätze besetzt für LKW | Libéré: A13 Coire -> S. Bernardino Jonction autoroutière Rothenbrunnen Situation: toutes les places de parking sont prises pour poids lourd | Approvato: A13 Chur -> S",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 03.12.2026)",
       "direction": "both",
       "severity": "info",
@@ -1725,13 +1716,33 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 26.11.2026)",
+      "description": "Verkehrsbehinderung (ab 10.12.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": 18.0,
+      "queue_km": 6.0,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Personen auf der Fahrbahn | Libéré: A2 Lucerne <-> Bâle Echangeur Echangeur d'Augst Situation: danger Raison: piétons sur la chaussée | Approvato: A2 Luzern <-> Basel Raccordo autostra",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 Bâle -> Lucerne entre Tunnel Tunnel Eich et Jonction autoroutière Sempach, au kilomètre 80.2 Situation: danger Raison: objets sur la chaussée",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     }
   ],
   "incidents_all": [
@@ -1777,11 +1788,31 @@
     },
     {
       "road": "A2",
-      "description": "Strecke gesperrt für LKW Ursache: Schneefall ausgenommen Fahrzeuge mit Allradantrieb | Révoqué: A13 Bellinzone <-> Coire entre Jonction autoroutière Thusis-Sud et Echangeur Echangeur de Bellinzone-Nor",
+      "description": "Strecke gesperrt Ursache: Unfall | Libéré: A2 Chiasso -> St-Gothard Tunnel Tunnel du St-Gothard Situation: fermé Raison: accident | Approvato: A2 Chiasso -> S. Gottardo Galleria Galleria San Gottardo ",
       "direction": "both",
       "severity": "critical",
       "delay_min": null,
       "queue_km": null,
+      "is_tunnel": true,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Einfahrt gesperrt | Libéré: A2 Chiasso -> St-Gothard Jonction autoroutière Airolo Situation: entrée fermée | Approvato: A2 Chiasso -> S. Gottardo Svincolo autostradale Airolo Situazione: raccordo auto",
+      "direction": "south",
+      "severity": "critical",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Stau Länge [km] 3.0 Ursache: Verkehrsüberlastung | Libéré: A2 Chiasso -> St-Gothard entre Jonction autoroutière Quinto et Parking Aire de dosage Airolo Situation: bouchon longueur [km] 3.0 Raison: sur",
+      "direction": "south",
+      "severity": "high",
+      "delay_min": null,
+      "queue_km": 3.0,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1792,6 +1823,16 @@
       "severity": "medium",
       "delay_min": null,
       "queue_km": 0.1,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Unfall Verkehrsführung: rechter Fahrstreifen blockiert | Libéré: A2 Bâle -> Lucerne Echangeur Echangeur d'Augst Situation: trafic perturbé Raison: accident Gestion du traf",
+      "direction": "both",
+      "severity": "medium",
+      "delay_min": null,
+      "queue_km": null,
       "is_tunnel": false,
       "night_only": false
     },
@@ -1892,16 +1933,6 @@
       "severity": "info",
       "delay_min": null,
       "queue_km": 1.4,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
-      "description": "Strecke gesperrt (ab 25.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 5.3,
       "is_tunnel": false,
       "night_only": true
     },
@@ -2317,16 +2348,6 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 29.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.3,
-      "is_tunnel": false,
-      "night_only": true
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 07.12.2026)",
       "direction": "both",
       "severity": "info",
@@ -2394,16 +2415,6 @@
       "queue_km": 3.55,
       "is_tunnel": false,
       "night_only": false
-    },
-    {
-      "road": "A2",
-      "description": "Verkehrsbehinderung (ab 25.11.2026)",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": 0.2,
-      "is_tunnel": false,
-      "night_only": true
     },
     {
       "road": "A2",
@@ -2567,16 +2578,6 @@
     },
     {
       "road": "A2",
-      "description": "alle Parkplätze besetzt für LKW | Libéré: A13 Coire -> S. Bernardino Jonction autoroutière Rothenbrunnen Situation: toutes les places de parking sont prises pour poids lourd | Approvato: A13 Chur -> S",
-      "direction": "both",
-      "severity": "info",
-      "delay_min": null,
-      "queue_km": null,
-      "is_tunnel": false,
-      "night_only": false
-    },
-    {
-      "road": "A2",
       "description": "Verkehrsbehinderung (ab 03.12.2026)",
       "direction": "both",
       "severity": "info",
@@ -2597,13 +2598,43 @@
     },
     {
       "road": "A2",
-      "description": "Verkehrsbehinderung (ab 26.11.2026)",
+      "description": "Verkehrsbehinderung (ab 10.12.2026)",
       "direction": "both",
       "severity": "info",
       "delay_min": null,
-      "queue_km": 18.0,
+      "queue_km": 6.0,
       "is_tunnel": false,
       "night_only": true
+    },
+    {
+      "road": "A2",
+      "description": "Verkehrsbehinderung Ursache: Veranstaltung Verkehrsführung: veränderte Verkehrsführung (ab 28.11.2026)",
+      "direction": "north",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Personen auf der Fahrbahn | Libéré: A2 Lucerne <-> Bâle Echangeur Echangeur d'Augst Situation: danger Raison: piétons sur la chaussée | Approvato: A2 Luzern <-> Basel Raccordo autostra",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
+    },
+    {
+      "road": "A2",
+      "description": "Gefahr Ursache: Gegenstände auf der Fahrbahn | Révoqué: A2 Bâle -> Lucerne entre Tunnel Tunnel Eich et Jonction autoroutière Sempach, au kilomètre 80.2 Situation: danger Raison: objets sur la chaussée",
+      "direction": "both",
+      "severity": "info",
+      "delay_min": null,
+      "queue_km": null,
+      "is_tunnel": false,
+      "night_only": false
     }
   ]
 }
